@@ -1,0 +1,19 @@
+package Message.Server.BattleManager.Protocol.BM2CM;
+module Server.BattleManager.Protocol BM2CM 0x02010000;
+
+//===================================================================
+//======================== battle manager -> cluster manager ========
+//===================================================================
+
+message MSG_BM2CM_HEARTBEAT 0x02010001
+{
+	required int32 serverId = 1;
+	required int32 subId = 2;
+}
+
+message MSG_BM2CM_REGISTER 0x02010002
+{
+	required int32 areaId = 1;
+	required int32 serverId = 2;
+	required int32 subId = 3;
+}

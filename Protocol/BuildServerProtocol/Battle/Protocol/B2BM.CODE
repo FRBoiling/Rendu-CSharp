@@ -1,0 +1,19 @@
+package Message.Server.Battle.Protocol.B2BM;
+module Server.Battle.Protocol B2BM 0x03020000;
+
+//===================================================================
+//======================== battle -> battle manager ========
+//===================================================================
+
+message MSG_B2BM_HEARTBEAT 0x03020001
+{
+	required int32 serverId = 1;
+	required int32 subId = 2;
+}
+
+message MSG_B2BM_REGISTER 0x03020002
+{
+	required int32 areaId = 1;
+	required int32 serverId = 2;
+	required int32 subId = 3;
+}

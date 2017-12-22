@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="BattleManager">
+      <UniqueIdentifier>{7f19a96c-69df-4cdf-8aef-ce08ab08d8b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Battle">
+      <UniqueIdentifier>{2dbbbe3d-18d2-40e1-a416-557fcc6b4c65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ClusterManager">
+      <UniqueIdentifier>{898742ab-f571-46cc-bfef-47b67625da19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BattleManager\Protocol">
+      <UniqueIdentifier>{96cbf8eb-5b63-4a3e-94e8-cff913efea36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ClusterManager\Protocol">
+      <UniqueIdentifier>{3e337e1d-d974-44f0-b538-1003ac27e149}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Battle\Protocol">
+      <UniqueIdentifier>{7cdafb77-13bc-47d2-b35d-fb0cd51318d9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="BattleManager\Protocol\BM2CM.CODE">
+      <Filter>BattleManager\Protocol</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ClusterManager\Protocol\CM2BM.CODE">
+      <Filter>ClusterManager\Protocol</Filter>
+    </CustomBuild>
+    <CustomBuild Include="BattleManager\Protocol\BM2B.CODE">
+      <Filter>BattleManager\Protocol</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Battle\Protocol\B2BM.CODE">
+      <Filter>Battle\Protocol</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ClusterManager\Protocol\CM2B.CODE">
+      <Filter>ClusterManager\Protocol</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Battle\Protocol\B2CM.CODE">
+      <Filter>Battle\Protocol</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,19 @@
+package Message.Server.ClusterManager.Protocol.CM2BM;
+module Server.ClusterManager.Protocol CM2BM 0x01020000;
+
+//===================================================================
+//======================== cluster manager -> battle manager ========
+//===================================================================
+
+message MSG_CM2BM_HEARTBEAT 0x01020001
+{
+	required int32 serverId = 1;
+	required int32 subId = 2;
+}
+
+message MSG_CM2BM_RETRUN_REGISTER 0x01020002
+{
+	required int32 areaId = 1;
+	required int32 serverId = 2;
+	required int32 subId =3;
+}

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8527C418-6BB1-4DD8-8244-97DADE836F22}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BattleManagerServerLib</RootNamespace>
+    <AssemblyName>BattleManagerServerLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\Protocol\Protobuf-net\ProtoGen\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\Api.cs" />
+    <Compile Include="Api\Api_Init.cs" />
+    <Compile Include="BattleServer\BattleServer.cs" />
+    <Compile Include="BattleServer\BattleServerManager.cs" />
+    <Compile Include="ClusterManagerServer\CMServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommonLibs\IOCPLib\IOCPLib.csproj">
+      <Project>{2f41665b-0c8d-424b-b73f-d7ad81c7d4a1}</Project>
+      <Name>IOCPLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonLibs\ServerFrameWork\ServerFrameWork.csproj">
+      <Project>{47ae13b1-3343-45e5-bcb4-3728995c1e95}</Project>
+      <Name>ServerFrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonLibs\TcpLib\TcpLib.csproj">
+      <Project>{faeba880-aece-48bf-9510-af712a0bf80c}</Project>
+      <Name>TcpLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Protocol\ServerProtocol\ServerProtocol.csproj">
+      <Project>{94623506-6c6c-4a20-b93f-97bb1fd872de}</Project>
+      <Name>ServerProtocol</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

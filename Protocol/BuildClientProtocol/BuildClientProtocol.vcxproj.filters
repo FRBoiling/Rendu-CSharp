@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Gate">
+      <UniqueIdentifier>{61d54a5b-c7e7-43a0-8b21-260e2935fff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gate\Protocol">
+      <UniqueIdentifier>{5735b709-1d30-4499-9970-e7ace1b8673d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Client">
+      <UniqueIdentifier>{88d70fd3-52b4-4224-a22b-5ba73ffb9c68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Client\Protocol">
+      <UniqueIdentifier>{b2dce149-a40e-468d-b669-8da5351b47cc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Gate\Protocol\GateC.code">
+      <Filter>Gate\Protocol</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Client\Protocol\CGate.code" />
+  </ItemGroup>
+</Project>
