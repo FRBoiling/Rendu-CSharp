@@ -22,7 +22,7 @@ namespace DataParserLib
             _attributes = new Dictionary<string, Attribute>();
         }
 
-        public static bool IsNull(string value)
+        public static bool StringIsNull(string value)
         {
             if (string.IsNullOrWhiteSpace(value)||string.Empty == value)
             {
