@@ -37,9 +37,9 @@ namespace DataParserLib
             return _dataList.GetEnumerator();
         }
 
+        public string Id { get => _id; }
+        public Data Header { get => _header; }
         public int Count { get => _dataList.Count; }
-
-        public Data Header { get => _header; set => _header = value; }
 
         public bool Add(Data data)
         {

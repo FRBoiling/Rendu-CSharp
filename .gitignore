@@ -286,3 +286,8 @@ __pycache__/
 /Protocol/BuildServerProtocol/ClusterManager/Protocol/CM2B.CODE.cs
 /Protocol/BuildServerProtocol/ClusterManager/Protocol/CM2BM.CODE.proto
 /Protocol/BuildServerProtocol/ClusterManager/Protocol/CM2BM.CODE.hpp
+/Protocol/BuildClientProtocol/Gate/Protocol/GateC.code.cs
+/Protocol/BuildClientProtocol/Client/Protocol/CGate.code.cs
+/Protocol/BuildServerProtocol/ClusterManager/Protocol/CM2BM.CODE.proto.cs
+/Protocol/BuildServerProtocol/ClusterManager/Protocol/CM2BM.CODE.cs
+/Protocol/BuildServerProtocol/ClusterManager/Protocol/CM2B.CODE.proto.cs
