@@ -58,7 +58,7 @@ namespace DataParserLib
                 return false;
             }
 
-            if (Data.StringIsNull(data.Name))
+            if (string.IsNullOrWhiteSpace(data.Name))
             {
             }
             else
@@ -77,7 +77,7 @@ namespace DataParserLib
 
             _dataList.Add(data.Id, data);
 
-            if (Data.StringIsNull(data.Group))
+            if (string.IsNullOrWhiteSpace(data.Group))
             {
             }
             else

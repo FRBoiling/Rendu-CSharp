@@ -22,15 +22,6 @@ namespace DataParserLib
             _attributes = new Dictionary<string, Attribute>();
         }
 
-        public static bool StringIsNull(string value)
-        {
-            if (string.IsNullOrWhiteSpace(value)||string.Empty == value)
-            {
-                return true;
-            }
-            return false;
-        }
-
         internal bool SetAttribute(Attribute attr)
         {
             Attribute temp;

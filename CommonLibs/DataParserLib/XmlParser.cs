@@ -21,7 +21,7 @@ namespace DataParserLib
             XmlDocument xmlDoc = new XmlDocument();
             try
             {
-                if (Data.StringIsNull(_filename))
+                if (string.IsNullOrWhiteSpace(_filename))
                 {
                 }
                 else
@@ -53,7 +53,7 @@ namespace DataParserLib
             XmlDocument xmlDoc = new XmlDocument();
             try
             {
-                if (Data.StringIsNull(xmlstring))
+                if (string.IsNullOrWhiteSpace(xmlstring))
                 {
                 }
                 else
@@ -150,7 +150,7 @@ namespace DataParserLib
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                if (Data.StringIsNull(_filename))
+                if (string.IsNullOrWhiteSpace(_filename))
                 {
                     Console.WriteLine("idspace '{0}' has more than one header node .", _idspace);
                 }
