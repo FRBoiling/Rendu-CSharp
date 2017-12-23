@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8527C418-6BB1-4DD8-8244-97DADE836F22}</ProjectGuid>
+    <ProjectGuid>{455CF84C-300B-4B27-A29B-2FE3DE49FDCB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BattleManagerServerLib</RootNamespace>
-    <AssemblyName>BattleManagerServerLib</AssemblyName>
+    <RootNamespace>BattleServerLib</RootNamespace>
+    <AssemblyName>BattleServerLib</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,14 +24,14 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Bin\Release\</OutputPath>
+    <OutputPath>..\..\..\Bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\Protocol\Protobuf-net\ProtoGen\protobuf-net.dll</HintPath>
+      <HintPath>..\..\..\Protocol\Protobuf-net\ProtoGen\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,25 +44,20 @@
   <ItemGroup>
     <Compile Include="Api\Api.cs" />
     <Compile Include="Api\Api_Init.cs" />
-    <Compile Include="BattleServer\BattleServer.cs" />
-    <Compile Include="BattleServer\BattleServerManager.cs" />
+    <Compile Include="BattleManagerServer\BMServer.cs" />
     <Compile Include="ClusterManagerServer\CMServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CommonLibs\IOCPLib\IOCPLib.csproj">
-      <Project>{2f41665b-0c8d-424b-b73f-d7ad81c7d4a1}</Project>
-      <Name>IOCPLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\CommonLibs\ServerFrameWork\ServerFrameWork.csproj">
+    <ProjectReference Include="..\..\..\CommonLibs\ServerFrameWork\ServerFrameWork.csproj">
       <Project>{47ae13b1-3343-45e5-bcb4-3728995c1e95}</Project>
       <Name>ServerFrameWork</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\CommonLibs\TcpLib\TcpLib.csproj">
+    <ProjectReference Include="..\..\..\CommonLibs\TcpLib\TcpLib.csproj">
       <Project>{faeba880-aece-48bf-9510-af712a0bf80c}</Project>
       <Name>TcpLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Protocol\ServerProtocol\ServerProtocol.csproj">
+    <ProjectReference Include="..\..\..\Protocol\ServerProtocol\ServerProtocol.csproj">
       <Project>{94623506-6c6c-4a20-b93f-97bb1fd872de}</Project>
       <Name>ServerProtocol</Name>
     </ProjectReference>

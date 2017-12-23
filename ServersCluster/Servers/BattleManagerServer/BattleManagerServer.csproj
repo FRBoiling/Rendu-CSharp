@@ -4,35 +4,34 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BF8D6746-D28A-44CD-849D-C11BC34C2614}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{1D2F39AC-9060-4127-A373-E6813981BADC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClusterManagerServerLib</RootNamespace>
-    <AssemblyName>ClusterManagerServerLib</AssemblyName>
+    <RootNamespace>BattleManagerServer</RootNamespace>
+    <AssemblyName>BattleManagerServer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Bin\Release\</OutputPath>
+    <OutputPath>..\..\..\Bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="protobuf-net">
-      <HintPath>..\..\Protocol\Protobuf-net\ProtoGen\protobuf-net.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,24 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api\Api.cs" />
-    <Compile Include="Api\Api_Init.cs" />
-    <Compile Include="BattleManagerServer\BMServer.cs" />
-    <Compile Include="BattleServer\BattleServer.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CommonLibs\ServerFrameWork\ServerFrameWork.csproj">
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\CommonLibs\ServerFrameWork\ServerFrameWork.csproj">
       <Project>{47ae13b1-3343-45e5-bcb4-3728995c1e95}</Project>
       <Name>ServerFrameWork</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\CommonLibs\TcpLib\TcpLib.csproj">
-      <Project>{faeba880-aece-48bf-9510-af712a0bf80c}</Project>
-      <Name>TcpLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Protocol\ServerProtocol\ServerProtocol.csproj">
-      <Project>{94623506-6c6c-4a20-b93f-97bb1fd872de}</Project>
-      <Name>ServerProtocol</Name>
+    <ProjectReference Include="..\BattleManagerServerLib\BattleManagerServerLib.csproj">
+      <Project>{8527c418-6bb1-4dd8-8244-97dade836f22}</Project>
+      <Name>BattleManagerServerLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
