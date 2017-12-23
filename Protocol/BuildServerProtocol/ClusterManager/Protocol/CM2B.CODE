@@ -1,19 +1,18 @@
-package Message.Server.ClusterManager.Protocol.CM2B;
-module Server.ClusterManager.Protocol CM2B 0x01030000;
+package Message.ClusterManager.Battle.Protocol.CM2B;
+module ClusterManager.Battle.Protocol CM2B 0x16000000;
 
 //===================================================================
 //======================== cluster manager -> battle ================
 //===================================================================
 
-message MSG_CM2B_HEARTBEAT 0x01030001
+message MSG_CM2B_HEARTBEAT 0x16000001
 {
-	required int32 serverId = 1;
-	required int32 subId = 2;
+	required int32 GroupId = 1;
+	required int32 SubId =2;
 }
 
-message MSG_CM2B_RETRUN_REGISTER 0x01030002
+message MSG_CM2B_RETRUN_REGISTER 0x16000002
 {
-	required int32 areaId = 1;
-	required int32 serverId = 2;
-	required int32 subId =3;
+	required int32 GroupId = 1;
+	required int32 SubId =2;
 }

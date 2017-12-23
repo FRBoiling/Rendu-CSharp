@@ -1,4 +1,4 @@
-﻿using Message.Server.Battle.Protocol.B2CM;
+﻿using Message.Battle.ClusterManager.Protocol.B2CM;
 using ServerFrameWork;
 using System;
 using System.Collections.Generic;
@@ -21,7 +21,7 @@ namespace BattleServerLib
             : base(ip, port)
         {
             _api = api;
-            _serverTag.ServerName = "ClusterManager";
+            _serverTag.ServerType = "ClusterManager";
             BindResponser();
             InitTcp();
         }
@@ -30,21 +30,19 @@ namespace BattleServerLib
         {
             if (ret)
             {
-                Console.WriteLine("connected to {0}"
-                    , ServerTag.ServerName);
+                Console.WriteLine("connected to {{0} ip {1} port {2} again", ServerTag.ServerType, Ip, Port);
                 RequsetRegister();
             }
             else
             {
-                Console.WriteLine("connect failed, connect to {0} ip {4} port {5} again"
-                    , ServerTag.ServerName, ServerTag.AreaId, ServerTag.ServerId, ServerTag.SubId,Ip,Port);
+                Console.WriteLine("connect failed, connect to {0} ip {1} port {2} again", ServerTag.ServerType, Ip, Port);
             }
         }
 
         protected override void DisconnectComplete()
         {
             Console.WriteLine("switch off from {0}" 
-                , ServerTag.ServerName);
+                , ServerTag.ServerType);
         }
 
         public void Update()
@@ -69,8 +67,8 @@ namespace BattleServerLib
             }
             else
             {
-                Console.WriteLine("got unsupported packet {0} from {1} {2}-{3}-{4}",
-                    id, ServerTag.ServerName, ServerTag.AreaId, ServerTag.ServerId, ServerTag.SubId);
+                Console.WriteLine("got unsupported packet {0} from {1}",
+                    id, ServerTag.GetServerTagString());
             }
         }
 
@@ -80,12 +78,11 @@ namespace BattleServerLib
 
         public void RequsetRegister()
         {
-            Console.WriteLine("Requst Register to {0}"
-               , ServerTag.ServerName);
+            Console.WriteLine("Requst Register to {0}", ServerTag.ServerType);
+
             MSG_B2CM_REGISTER requset = new MSG_B2CM_REGISTER();
-            requset.areaId = _api.ApiTag.AreaId;
-            requset.serverId = _api.ApiTag.ServerId;
-            requset.subId = _api.ApiTag.SubId;
+            requset.GroupId = _api.ApiTag.GroupId;
+            requset.SubId = _api.ApiTag.SubId;
             Send(requset);
         }
 

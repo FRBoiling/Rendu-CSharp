@@ -9,7 +9,7 @@ namespace BattleServerLib
             if (args.Length == 3)
             {
                 ApiTag.AreaId = ushort.Parse(args[0]);
-                ApiTag.ServerId = ushort.Parse(args[1]);
+                ApiTag.GroupId = ushort.Parse(args[1]);
                 ApiTag.SubId = ushort.Parse(args[2]);
             }
             else

@@ -1,5 +1,5 @@
 ﻿using Engine.Foundation;
-using Message.Server.BattleManager.Protocol.BM2CM;
+using Message.BattleManager.ClusterManager.Protocol.BM2CM;
 using ServerFrameWork;
 using System;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ namespace ClusterManagerServerLib.Server
         public BMServer(Api server, ushort port)
             : base(port)
         {
-            _clientTag.ServerName = "BattleManager";
+            _clientTag.ServerType = "BattleManager";
             BindResponser();
             InitTcp();
         }
@@ -30,13 +30,13 @@ namespace ClusterManagerServerLib.Server
             //Console.WriteLine("{0}-{1}-{2}-{3} switch in"
             //    , ClientTag.ServerName, ClientTag.AreaId, ClientTag.ServerId, ClientTag.SubId);
             Console.WriteLine("{0} switch in"
-                , ClientTag.ServerName);
+                , ClientTag.ServerType);
         }
 
         protected override void DisconnectComplete()
         {
-            Console.WriteLine("{0}-{1}-{2}-{3} switch off"
-                , ClientTag.ServerName, ClientTag.AreaId, ClientTag.ServerId, ClientTag.SubId);
+            Console.WriteLine("{0}-{1}-{2} switch off"
+                , ClientTag.ServerType, ClientTag.GroupId, ClientTag.SubId);
         }
 
         public void Update()
@@ -61,8 +61,8 @@ namespace ClusterManagerServerLib.Server
             }
             else
             {
-                Console.WriteLine("got unsupported packet {0} from {1} {2}-{3}-{4}",
-                    id, ClientTag.ServerName, ClientTag.AreaId, ClientTag.ServerId, ClientTag.SubId);
+                Console.WriteLine("got unsupported packet {0} from {1}-{2}-{3}",
+                    id, ClientTag.ServerType, ClientTag.GroupId, ClientTag.SubId);
             }
         }
 
@@ -74,10 +74,9 @@ namespace ClusterManagerServerLib.Server
         private void OnResponse_Regist(MemoryStream stream)
         {
             MSG_BM2CM_REGISTER msg = ProtoBuf.Serializer.Deserialize<MSG_BM2CM_REGISTER>(stream);
-            _clientTag.AreaId = (ushort)msg.areaId;
-            _clientTag.ServerId = (ushort)msg.serverId;
-            _clientTag.SubId = (ushort)msg.subId;
-            Console.WriteLine("{0}-{1}-{2}-{3} regist succese", ClientTag.ServerName,ClientTag.AreaId,ClientTag.ServerId,ClientTag.SubId);
+            _clientTag.GroupId = (ushort)msg.GroupId;
+            _clientTag.SubId = (ushort)msg.SubId;
+            Console.WriteLine("{0}-{1}-{2} regist succese", ClientTag.ServerType,ClientTag.GroupId,ClientTag.SubId);
         }
 
     }

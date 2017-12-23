@@ -8,25 +8,18 @@ namespace ServerFrameWork
 {
     public class ServerTag
     {
-        private string _serverName;
-        public string ServerName
+        private string _serverType;
+        public string ServerType
         {
-            get { return _serverName; }
-            set { _serverName = value; }
+            get { return _serverType; }
+            set { _serverType = value; }
         }
 
-        private ushort _areaId = 0;
-        public ushort AreaId
+        private ushort _groupId = 0;
+        public ushort GroupId
         {
-            get { return _areaId; }
-            set { _areaId = value; }
-        }
-
-        private ushort _serverId = 0;
-        public ushort ServerId
-        {
-            get { return _serverId; }
-            set { _serverId = value; }
+            get { return _groupId; }
+            set { _groupId = value; }
         }
 
         private ushort _subId = 0;
@@ -46,7 +39,7 @@ namespace ServerFrameWork
 
         public string GetServerTagString()
         {
-            string tag = string.Format("{0}_{1}_{2}_{3}", _serverName, _areaId, _serverId, _subId);
+            string tag = string.Format("{0}_{1}_{2}", _serverType, _groupId, _subId);
             return tag;
         }
     }

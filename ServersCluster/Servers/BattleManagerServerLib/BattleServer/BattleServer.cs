@@ -24,7 +24,7 @@ namespace BattleManagerServerLib
             : base(port,1024)
         {
             _api = server;
-            _clientTag.ServerName = "Battle";
+            _clientTag.ServerType = "Battle";
             BindResponser();
         }
 
@@ -46,7 +46,7 @@ namespace BattleManagerServerLib
             else
             {
                 Console.WriteLine("got unsupported packet {0} from {1} {2}-{3}-{4}",
-                    id, ClientTag.ServerName, ClientTag.AreaId, ClientTag.ServerId, ClientTag.SubId);
+                    id, ClientTag.ServerType, ClientTag.AreaId, ClientTag.GroupId, ClientTag.SubId);
             }
         }
 
@@ -77,9 +77,9 @@ namespace BattleManagerServerLib
         {
             MSG_B2BM_REGISTER msg = ProtoBuf.Serializer.Deserialize<MSG_B2BM_REGISTER>(stream);
             _clientTag.AreaId = (ushort)msg.areaId;
-            _clientTag.ServerId = (ushort)msg.serverId;
+            _clientTag.GroupId = (ushort)msg.serverId;
             _clientTag.SubId = (ushort)msg.subId;
-            Console.WriteLine("{0}-{1}-{2}-{3} regist succese", ClientTag.ServerName, ClientTag.AreaId, ClientTag.ServerId, ClientTag.SubId);
+            Console.WriteLine("{0}-{1}-{2}-{3} regist succese", ClientTag.ServerType, ClientTag.AreaId, ClientTag.GroupId, ClientTag.SubId);
 
             MSG_BM2B_RETRUN_REGISTER ret = new MSG_BM2B_RETRUN_REGISTER();
             ret.areaId = msg.areaId;

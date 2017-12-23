@@ -8,26 +8,26 @@
 //------------------------------------------------------------------------------
 
 // Generated from: BM2CM.CODE.proto
-namespace Message.Server.BattleManager.Protocol.BM2CM
+namespace Message.BattleManager.ClusterManager.Protocol.BM2CM
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_BM2CM_HEARTBEAT")]
   public partial class MSG_BM2CM_HEARTBEAT : global::ProtoBuf.IExtensible
   {
     public MSG_BM2CM_HEARTBEAT() {}
     
-    private int _serverId;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"serverId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    public int serverId
+    private int _GroupId;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"GroupId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int GroupId
     {
-      get { return _serverId; }
-      set { _serverId = value; }
+      get { return _GroupId; }
+      set { _GroupId = value; }
     }
-    private int _subId;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"subId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    public int subId
+    private int _SubId;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"SubId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int SubId
     {
-      get { return _subId; }
-      set { _subId = value; }
+      get { return _SubId; }
+      set { _SubId = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
@@ -39,26 +39,19 @@ namespace Message.Server.BattleManager.Protocol.BM2CM
   {
     public MSG_BM2CM_REGISTER() {}
     
-    private int _areaId;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"areaId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    public int areaId
+    private int _GroupId;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"GroupId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int GroupId
     {
-      get { return _areaId; }
-      set { _areaId = value; }
+      get { return _GroupId; }
+      set { _GroupId = value; }
     }
-    private int _serverId;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"serverId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    public int serverId
+    private int _SubId;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"SubId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int SubId
     {
-      get { return _serverId; }
-      set { _serverId = value; }
-    }
-    private int _subId;
-    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"subId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    public int subId
-    {
-      get { return _subId; }
-      set { _subId = value; }
+      get { return _SubId; }
+      set { _SubId = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)

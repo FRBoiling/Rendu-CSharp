@@ -1,5 +1,5 @@
 ﻿using Engine.Foundation;
-using Message.Server.Battle.Protocol.B2CM;
+using Message.Battle.ClusterManager.Protocol.B2CM;
 using ServerFrameWork;
 using System;
 using System.Collections.Generic;
@@ -17,26 +17,29 @@ namespace ClusterManagerServerLib.Server
             get { return _clientTag; }
         }
 
-        public BattleServer(Api server, ushort port)
+        private BServerMgr _manager;
+
+        public BattleServer(BServerMgr manager , ushort port)
             : base(port)
         {
-            _clientTag.ServerName = "Battle";
+            _manager = manager;
+            _clientTag.ServerType = "Battle";
             BindResponser();
             InitTcp();
         }
 
         protected override void AccpetComplete()
         {
-            //Console.WriteLine("{0}-{1}-{2}-{3} switch in"
-            //    , ClientTag.ServerName, ClientTag.AreaId, ClientTag.ServerId, ClientTag.SubId);
+
             Console.WriteLine("{0} switch in"
-                , ClientTag.ServerName);
+                , ClientTag.GetServerTagString());
+            
         }
 
         protected override void DisconnectComplete()
         {
-            Console.WriteLine("{0}-{1}-{2}-{3} switch off"
-                , ClientTag.ServerName, ClientTag.AreaId, ClientTag.ServerId, ClientTag.SubId);
+            Console.WriteLine("{0} switch off"
+                , ClientTag.GetServerTagString());
         }
 
         public void Update()
@@ -61,8 +64,8 @@ namespace ClusterManagerServerLib.Server
             }
             else
             {
-                Console.WriteLine("got unsupported packet {0} from {1} {2}-{3}-{4}",
-                    id, ClientTag.ServerName, ClientTag.AreaId, ClientTag.ServerId, ClientTag.SubId);
+                Console.WriteLine("got unsupported packet {0} from {1}",
+                    id, ClientTag.GetServerTagString());
             }
         }
 
@@ -74,10 +77,9 @@ namespace ClusterManagerServerLib.Server
         private void OnResponse_Regist(MemoryStream stream)
         {
             MSG_B2CM_REGISTER msg = ProtoBuf.Serializer.Deserialize<MSG_B2CM_REGISTER>(stream);
-            _clientTag.AreaId = (ushort)msg.areaId;
-            _clientTag.ServerId = (ushort)msg.serverId;
-            _clientTag.SubId = (ushort)msg.subId;
-            Console.WriteLine("{0}-{1}-{2}-{3} regist succese", ClientTag.ServerName,ClientTag.AreaId,ClientTag.ServerId,ClientTag.SubId);
+            _clientTag.GroupId = (ushort)msg.GroupId;
+            _clientTag.SubId = (ushort)msg.SubId;
+            Console.WriteLine("{0} regist succese", ClientTag.GetServerTagString());
         }
 
     }

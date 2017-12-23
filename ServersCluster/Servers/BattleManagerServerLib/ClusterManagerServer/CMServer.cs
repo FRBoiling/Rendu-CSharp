@@ -21,7 +21,7 @@ namespace BattleManagerServerLib
             : base(ip, port)
         {
             _api = api;
-            _serverTag.ServerName = "ClusterManager";
+            _serverTag.ServerType = "ClusterManager";
             BindResponser();
             InitTcp();
         }
@@ -31,20 +31,20 @@ namespace BattleManagerServerLib
             if (ret)
             {
                 Console.WriteLine("connected to {0}"
-                    , ServerTag.ServerName);
+                    , ServerTag.ServerType);
                 RequsetRegister();
             }
             else
             {
                 Console.WriteLine("connect failed, connect to {0} ip {4} port {5} again"
-                    , ServerTag.ServerName, ServerTag.AreaId, ServerTag.ServerId, ServerTag.SubId,Ip,Port);
+                    , ServerTag.ServerType, ServerTag.AreaId, ServerTag.GroupId, ServerTag.SubId,Ip,Port);
             }
         }
 
         protected override void DisconnectComplete()
         {
             Console.WriteLine("switch off from {0}" 
-                , ServerTag.ServerName);
+                , ServerTag.ServerType);
         }
 
         public void Update()
@@ -70,7 +70,7 @@ namespace BattleManagerServerLib
             else
             {
                 Console.WriteLine("got unsupported packet {0} from {1} {2}-{3}-{4}",
-                    id, ServerTag.ServerName, ServerTag.AreaId, ServerTag.ServerId, ServerTag.SubId);
+                    id, ServerTag.ServerType, ServerTag.AreaId, ServerTag.GroupId, ServerTag.SubId);
             }
         }
 
@@ -81,10 +81,10 @@ namespace BattleManagerServerLib
         public void RequsetRegister()
         {
             Console.WriteLine("Requst Register to {0}"
-               , ServerTag.ServerName);
+               , ServerTag.ServerType);
             MSG_BM2CM_REGISTER requset = new MSG_BM2CM_REGISTER();
             requset.areaId = _api.ApiTag.AreaId;
-            requset.serverId = _api.ApiTag.ServerId;
+            requset.serverId = _api.ApiTag.GroupId;
             requset.subId = _api.ApiTag.SubId;
             Send(requset);
         }

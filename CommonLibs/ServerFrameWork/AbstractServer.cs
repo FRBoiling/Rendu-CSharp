@@ -28,8 +28,8 @@ namespace ServerFrameWork
         /// </summary>
         public string ServerName
         {
-            get { return _apiTag.ServerName; }
-            set { _apiTag.ServerName = value; }
+            get { return _apiTag.ServerType; }
+            set { _apiTag.ServerType = value; }
         }
 
         //private Mode _startMode;
