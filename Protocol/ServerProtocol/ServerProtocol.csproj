@@ -54,8 +54,20 @@
     <Compile Include="ClusterManager\Protocol\CM2B.CODE.proto.cs" />
     <Compile Include="ClusterManager\Protocol\CM2BM.CODE.cs" />
     <Compile Include="ClusterManager\Protocol\CM2BM.CODE.proto.cs" />
+    <Compile Include="ClusterManager\Protocol\CM2W.CODE.cs" />
+    <Compile Include="ClusterManager\Protocol\CM2W.CODE.proto.cs" />
+    <Compile Include="ClusterManager\Protocol\CM2WM.CODE.cs" />
+    <Compile Include="ClusterManager\Protocol\CM2WM.CODE.proto.cs" />
     <Compile Include="Id.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorldManager\Protocol\WM2CM.CODE.cs" />
+    <Compile Include="WorldManager\Protocol\WM2CM.CODE.proto.cs" />
+    <Compile Include="WorldManager\Protocol\WM2W.CODE.cs" />
+    <Compile Include="WorldManager\Protocol\WM2W.CODE.proto.cs" />
+    <Compile Include="World\Protocol\W2CM.CODE.cs" />
+    <Compile Include="World\Protocol\W2CM.CODE.proto.cs" />
+    <Compile Include="World\Protocol\W2WM.CODE.cs" />
+    <Compile Include="World\Protocol\W2WM.CODE.proto.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

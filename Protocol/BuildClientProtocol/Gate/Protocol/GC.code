@@ -1,5 +1,5 @@
-package Message.Client.Gate.Protocol.GateC;
-module Client.Gate.Protocol.GateC 0x89000000;
+package Message.Gate.Client.Protocol.GC;
+module Gate.Client.Protocol.GC 0x2F000000;
 //===================================================================
 //===========================Gate=>Client============================
 //===================================================================

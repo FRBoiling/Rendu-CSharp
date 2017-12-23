@@ -1,0 +1,5 @@
+package Message.World.ClusterManager.Protocol.W2CM;
+module WorldManager.ClusterManager.Protocol.W2CM 0x41000000;
+//===================================================================
+//========================World=>ClusterManager======================
+//===================================================================

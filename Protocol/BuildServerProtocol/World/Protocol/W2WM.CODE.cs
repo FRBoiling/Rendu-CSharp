@@ -1,5 +1,5 @@
 using System;
-namespace Message.Client.Gate.Protocol.GateC {
+namespace Message.World.WorldManager.Protocol.W2WM {
 
 	public class Api {
 		static public void GenerateId() {

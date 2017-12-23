@@ -1,0 +1,18 @@
+name												   num
+Client													F
+
+ClusterManager											1		
+Gate													2
+WorldManager											3
+World													4
+
+如：
+
+协议文件:
+CG.code // from client to gate
+GC.code // from gate to client
+
+协议id
+
+0xF2000000  表示 from client to gate			
+0x2F000000  表示 from gate to client

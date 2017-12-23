@@ -15,9 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="Gate\Protocol\GateC.code">
+    <CustomBuild Include="Client\Protocol\CG.code">
+      <Filter>Client\Protocol</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Gate\Protocol\GC.code">
       <Filter>Gate\Protocol</Filter>
     </CustomBuild>
-    <CustomBuild Include="Client\Protocol\CGate.code" />
   </ItemGroup>
 </Project>

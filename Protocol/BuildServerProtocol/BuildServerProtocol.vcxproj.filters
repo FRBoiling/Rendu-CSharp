@@ -7,17 +7,29 @@
     <Filter Include="Battle">
       <UniqueIdentifier>{2dbbbe3d-18d2-40e1-a416-557fcc6b4c65}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ClusterManager">
-      <UniqueIdentifier>{898742ab-f571-46cc-bfef-47b67625da19}</UniqueIdentifier>
-    </Filter>
     <Filter Include="BattleManager\Protocol">
       <UniqueIdentifier>{96cbf8eb-5b63-4a3e-94e8-cff913efea36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Battle\Protocol">
+      <UniqueIdentifier>{7cdafb77-13bc-47d2-b35d-fb0cd51318d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World">
+      <UniqueIdentifier>{080490a4-7bb8-444d-a822-cb2a2a10f09c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WorldManager">
+      <UniqueIdentifier>{f6924a1e-a246-4125-8e2f-1078716ff407}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ClusterManager">
+      <UniqueIdentifier>{898742ab-f571-46cc-bfef-47b67625da19}</UniqueIdentifier>
     </Filter>
     <Filter Include="ClusterManager\Protocol">
       <UniqueIdentifier>{3e337e1d-d974-44f0-b538-1003ac27e149}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Battle\Protocol">
-      <UniqueIdentifier>{7cdafb77-13bc-47d2-b35d-fb0cd51318d9}</UniqueIdentifier>
+    <Filter Include="World\Protocol">
+      <UniqueIdentifier>{4f502110-d527-43d4-befd-9331eae95e4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WorldManager\Protocol">
+      <UniqueIdentifier>{3f13c501-0cb2-436a-9076-5fa5e28b1dc7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -39,5 +51,25 @@
     <CustomBuild Include="Battle\Protocol\B2CM.CODE">
       <Filter>Battle\Protocol</Filter>
     </CustomBuild>
+    <CustomBuild Include="World\Protocol\W2WM.CODE">
+      <Filter>World\Protocol</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WorldManager\Protocol\WM2CM.CODE">
+      <Filter>WorldManager\Protocol</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WorldManager\Protocol\WM2W.CODE">
+      <Filter>WorldManager\Protocol</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ClusterManager\Protocol\CM2W.CODE">
+      <Filter>ClusterManager\Protocol</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ClusterManager\Protocol\CM2WM.CODE">
+      <Filter>ClusterManager\Protocol</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="World\Protocol\W2CM.CODE">
+      <Filter>World\Protocol</Filter>
+    </None>
   </ItemGroup>
 </Project>

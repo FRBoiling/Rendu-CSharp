@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="Gate\Protocol\GateC.code">
+    <CustomBuild Include="Gate\Protocol\GC.code">
       <FileType>Document</FileType>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).code.cs</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).code.cs</Outputs>
@@ -20,7 +20,7 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="Client\Protocol\CGate.code">
+    <CustomBuild Include="Client\Protocol\CG.code">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>

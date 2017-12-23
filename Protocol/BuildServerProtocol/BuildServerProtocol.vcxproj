@@ -60,6 +60,52 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="WorldManager\Protocol\WM2CM.CODE">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="WorldManager\Protocol\WM2W.CODE">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="World\Protocol\W2CM.CODE">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="World\Protocol\W2WM.CODE">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ClusterManager\Protocol\CM2W.CODE">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ClusterManager\Protocol\CM2WM.CODE">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D49CB2D4-4689-466A-98FC-FB1C6C02CFF4}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>

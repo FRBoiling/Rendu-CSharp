@@ -123,10 +123,11 @@ namespace ServerFrameWork
         public void SetFrameBegin()
         {
             _now = DateTime.Now;
-            while (_now < _nextFrameBeginStamp)
+            TimeSpan deltaMillisecond = _nextFrameBeginStamp - _now;
+            if (deltaMillisecond.TotalMilliseconds>0)
             {
-                _now = DateTime.Now;
-                Thread.Sleep(1);
+                Thread.Sleep(deltaMillisecond);
+                _now = _now + deltaMillisecond;
             }
             _frameBeginTimeStamp = _now;
             _oneSecSleepTimes += (_now - _lastFrameEndStamp).TotalMilliseconds;

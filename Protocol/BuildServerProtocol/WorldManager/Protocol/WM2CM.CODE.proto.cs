@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from: CGate.code.proto
-namespace Message.Client.Gate.Protocol.CGate
+// Generated from: WM2CM.CODE.proto
+namespace Message.WorldManager.ClusterManager.Protocol.WM2CM
 {
 }
