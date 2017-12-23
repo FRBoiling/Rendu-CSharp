@@ -284,6 +284,5 @@ __pycache__/
 /Protocol/BuildServerProtocol/ClusterManager/Protocol/CM2B.CODE.proto
 /Protocol/BuildServerProtocol/ClusterManager/Protocol/CM2B.CODE.hpp
 /Protocol/BuildServerProtocol/ClusterManager/Protocol/CM2B.CODE.cs
-*.cs
 /Protocol/BuildServerProtocol/ClusterManager/Protocol/CM2BM.CODE.proto
 /Protocol/BuildServerProtocol/ClusterManager/Protocol/CM2BM.CODE.hpp
