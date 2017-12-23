@@ -56,8 +56,8 @@ namespace DataParserLib
                 case AttributeValueType.FLOAT:
                     ret = (int)(float)_value;
                     break;
-                //case PropertyType.STRING:
-                //case PropertyType.BOOL:
+                case AttributeValueType.STRING:
+                //case AttributeValueType.BOOL:
                 default:
                     ret = (int)_value;
                     break;
@@ -89,8 +89,8 @@ namespace DataParserLib
                 case AttributeValueType.FLOAT:
                     float.TryParse(_value.ToString().Trim(), out ret);
                     break;
-                //case PropertyType.STRING:
-                //case PropertyType.BOOL:
+                case AttributeValueType.STRING:
+                //case AttributeValueType.BOOL:
                 default:
                     ret = (float)_value; 
                     break;

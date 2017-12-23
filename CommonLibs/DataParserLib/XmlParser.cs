@@ -1,6 +1,13 @@
 ﻿using System;
 using System.Xml;
 
+/// <summary>
+/// <idspace id="idspaceId" >
+///     <header id = "headerId" />
+///     <class id="1" name="class1" group="groupA" Attribute1="1001" Attribute2="1" Attribute3="11"/>
+///     <class id="1" name="class2" group="groupA" Attribute1="1001" Attribute2="1" Attribute3="11"/>
+/// </idspace>
+/// </summary>
 namespace DataParserLib
 {
     public class XmlParser
@@ -168,6 +175,7 @@ namespace DataParserLib
                 {
                     string strId = idAttribute.Value;
                     int id = int.Parse(strId);
+                    data.SetId(id);
                     node.Attributes.Remove(idAttribute);
                 }
                 else

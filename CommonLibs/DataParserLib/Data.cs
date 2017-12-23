@@ -57,5 +57,73 @@ namespace DataParserLib
         {
             _group = group;
         }
+
+        public Attribute Get(string key)
+        {
+            Attribute attr;
+            _attributes.TryGetValue(key, out attr);
+            return attr;
+        }
+
+        public int GetInt(string key)
+        {
+            Attribute attr = Get(key);
+            if (attr == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return attr.GetInt();
+            }
+        }
+
+        public bool GetBoolean(string key)
+        {
+            Attribute attr = Get(key);
+            if (attr == null)
+            {
+                return false;
+            }
+            else
+            {
+                if (attr.GetInt()>0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public float GetFloat(string key)
+        {
+            Attribute attr = Get(key);
+            if (attr==null)
+            {
+                return 0.0f;
+            }
+            else
+            {
+                return attr.GetFloat();
+            }
+
+        }
+
+        public string GetString(string key)
+        {
+            Attribute attr = Get(key);
+            if (attr == null)
+            {
+                return string.Empty;
+            }
+            else
+            {
+                return attr.GetString();
+            }
+        }
+
     }
 }
