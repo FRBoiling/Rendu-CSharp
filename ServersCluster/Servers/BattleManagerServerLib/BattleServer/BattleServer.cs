@@ -1,7 +1,7 @@
 ﻿using Engine.Foundation;
 using IOCPLib;
-using Message.Server.Battle.Protocol.B2BM;
-using Message.Server.BattleManager.Protocol.BM2B;
+using Message.Battle.BattleManager.Protocol.B2BM;
+using Message.BattleManager.Battle.Protocol.BM2B;
 using ServerFrameWork;
 using System;
 using System.Collections.Generic;
@@ -45,8 +45,8 @@ namespace BattleManagerServerLib
             }
             else
             {
-                Console.WriteLine("got unsupported packet {0} from {1} {2}-{3}-{4}",
-                    id, ClientTag.ServerType, ClientTag.AreaId, ClientTag.GroupId, ClientTag.SubId);
+                Console.WriteLine("got unsupported packet {0} from {1}",
+                    id, ClientTag.GetServerTagString());
             }
         }
 
@@ -76,15 +76,13 @@ namespace BattleManagerServerLib
         private void OnResponse_Regist(MemoryStream stream)
         {
             MSG_B2BM_REGISTER msg = ProtoBuf.Serializer.Deserialize<MSG_B2BM_REGISTER>(stream);
-            _clientTag.AreaId = (ushort)msg.areaId;
-            _clientTag.GroupId = (ushort)msg.serverId;
-            _clientTag.SubId = (ushort)msg.subId;
-            Console.WriteLine("{0}-{1}-{2}-{3} regist succese", ClientTag.ServerType, ClientTag.AreaId, ClientTag.GroupId, ClientTag.SubId);
+            _clientTag.GroupId = (ushort)msg.GroupId;
+            _clientTag.SubId = (ushort)msg.SubId;
+            Console.WriteLine("{0} regist succese", ClientTag.GetServerTagString());
 
             MSG_BM2B_RETRUN_REGISTER ret = new MSG_BM2B_RETRUN_REGISTER();
-            ret.areaId = msg.areaId;
-            ret.serverId = msg.serverId;
-            ret.subId = msg.subId;
+            ret.GroupId = msg.GroupId;
+            ret.SubId = msg.SubId;
             Send(ret);
         }
     }

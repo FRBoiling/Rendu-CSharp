@@ -1,4 +1,5 @@
 ﻿using ServerFrameWork;
+using TcpLib.TcpSrc;
 
 namespace ClusterManagerServerLib
 {
@@ -7,8 +8,7 @@ namespace ClusterManagerServerLib
         public override void Init(string[] args)
         {
             InitProtocol();
-            InitBattleManagerServer();
-            InitBattleServer();
+            InitServers();
         }
 
         public override void Exit()
@@ -17,13 +17,8 @@ namespace ClusterManagerServerLib
 
         public override void Update()
         {
-            m_BMServer.Update();
-            BMServer1.Update();
-            BMServer2.Update();
-
-            m_BattleServer.Update();
-            BattleServer1.Update();
-            BattleServer2.Update();
+            TcpMgr.Inst.Update();
+            UpdateServers();
         }
 
         public override void ExcuteCommand(string cmd)

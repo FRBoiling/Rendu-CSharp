@@ -9,24 +9,28 @@ namespace TcpLib.TcpSrc
     public partial class Tcp
     {
         private Socket _workSocket = null;
-        private Socket _listenSocket = null;
+        private ushort _listenPort;
 
-        private Socket Listen(ushort port)
+
+        private bool _needListenHeartBeat = true;  //需要监听
+        public bool NeedListenHeartBeat { get => _needListenHeartBeat; set => _needListenHeartBeat = value; }
+
+        public Socket Listen(ushort port, int backLog = 10)
         {
-            _listenSocket = TcpMng.CreateInstance().GetListenSocket(port); 
-            if (_listenSocket == null)
+            _listenPort = port;
+            Socket listenSocket = TcpMgr.Inst.GetListenSocket(port);
+            if (listenSocket == null)
             {
-                Socket socket = null;
-                socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                listenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 IPEndPoint ep = new IPEndPoint(IPAddress.Any, port);
-                socket.Bind(ep);
-                socket.Listen(10);
-                TcpMng.CreateInstance().AddListenSocket(port, socket);
-                return socket;
+                listenSocket.Bind(ep);
+                listenSocket.Listen(backLog);
+                TcpMgr.Inst.AddListenSocket(port, listenSocket);
+                return listenSocket;
             }
             else
             {
-                return _listenSocket;
+                return listenSocket;
             }
         }
 
@@ -53,8 +57,6 @@ namespace TcpLib.TcpSrc
                     Console.WriteLine("connect error:{0}" , e.ToString());
                     return false;
                 }
-             
-
             }
             
             return true;
@@ -79,15 +81,15 @@ namespace TcpLib.TcpSrc
             }
             catch (Exception e)
             {
+                Console.WriteLine(e);
                 OnConnect(false);
-                //Console.WriteLine(e.ToString());
             }
         }     
         
         public bool Accept(ushort port)
         {
             Socket listenr = Listen(port);
-            try
+            try 
             {
                 listenr.BeginAccept(new AsyncCallback(AcceptCallback), listenr);
             }
@@ -104,6 +106,11 @@ namespace TcpLib.TcpSrc
             try
             {  
                 Socket listener = (Socket)ar.AsyncState;
+                if (_needListenHeartBeat)
+                {
+                    TcpMgr.Inst.Listen(_listenPort);
+                }
+
                 Socket handler = listener.EndAccept(ar);
                 Recv(handler);
                 OnAccept(true);
@@ -349,7 +356,6 @@ namespace TcpLib.TcpSrc
             get { return onDisconnect; }
         }
 
-
         private static bool DefaultOnConnect(bool ret)
         {
             Console.WriteLine("default on DefaultOnConnect function called,check it");
@@ -387,7 +393,10 @@ namespace TcpLib.TcpSrc
                     _workSocket = null;
                     _waitStreams.Clear();
                     _sendStreams.Clear();
-                    OnDisconnect();
+                    if (OnDisconnect!=null)
+                    {
+                        TcpMgr.Inst.AddDisconnectExec(OnDisconnect);
+                    }
                 }
             }
         }

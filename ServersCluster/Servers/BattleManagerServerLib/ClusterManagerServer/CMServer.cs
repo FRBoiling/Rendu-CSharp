@@ -1,4 +1,4 @@
-﻿using Message.Server.BattleManager.Protocol.BM2CM;
+﻿using Message.BattleManager.ClusterManager.Protocol.BM2CM;
 using ServerFrameWork;
 using System;
 using System.Collections.Generic;
@@ -37,7 +37,7 @@ namespace BattleManagerServerLib
             else
             {
                 Console.WriteLine("connect failed, connect to {0} ip {4} port {5} again"
-                    , ServerTag.ServerType, ServerTag.AreaId, ServerTag.GroupId, ServerTag.SubId,Ip,Port);
+                    , ServerTag.ServerType, ServerTag.GroupId, ServerTag.SubId,Ip,Port);
             }
         }
 
@@ -69,8 +69,8 @@ namespace BattleManagerServerLib
             }
             else
             {
-                Console.WriteLine("got unsupported packet {0} from {1} {2}-{3}-{4}",
-                    id, ServerTag.ServerType, ServerTag.AreaId, ServerTag.GroupId, ServerTag.SubId);
+                Console.WriteLine("got unsupported packet {0} from {1}",
+                    id, ServerTag.GetServerTagString());
             }
         }
 
@@ -83,9 +83,8 @@ namespace BattleManagerServerLib
             Console.WriteLine("Requst Register to {0}"
                , ServerTag.ServerType);
             MSG_BM2CM_REGISTER requset = new MSG_BM2CM_REGISTER();
-            requset.areaId = _api.ApiTag.AreaId;
-            requset.serverId = _api.ApiTag.GroupId;
-            requset.subId = _api.ApiTag.SubId;
+            requset.GroupId = _api.ApiTag.GroupId;
+            requset.SubId = _api.ApiTag.SubId;
             Send(requset);
         }
 

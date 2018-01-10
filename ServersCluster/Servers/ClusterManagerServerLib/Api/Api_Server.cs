@@ -1,38 +1,35 @@
 ﻿using ClusterManagerServerLib.Server;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TcpLib.TcpSrc;
 
 namespace ClusterManagerServerLib
 {
     public partial class Api
     {
-        BMServer BMServer;
-        void InitBattleManagerServer()
+        private BattleServerMgr _battleServerMgr;
+
+        public BattleServerMgr BattleServerMgr { get => _battleServerMgr; }
+
+        //
+        public ushort listenPortBattle;
+
+        private void InitServers()
         {
-            m_BMServer = new BMServer(this, 8002);
-            m_BMServer.StartListen();
-
-            BMServer1 = new BMServer(this, 8002);
-            BMServer1.StartListen();
-
-            BMServer2 = new BMServer(this, 8002);
-            BMServer2.StartListen();
+            InitBattleServers();
         }
 
-        BattleServer m_BattleServer;
-        BattleServer BattleServer1;
-        BattleServer BattleServer2;
-        void InitBattleServer()
+        private void InitBattleServers()
         {
-            m_BattleServer = new BattleServer(this, 8003);
-            m_BattleServer.StartListen();
-            BattleServer1 = new BattleServer(this, 8003);
-            BattleServer1.StartListen();
-            BattleServer2 = new BattleServer(this, 8003);
-            BattleServer2.StartListen();
+            listenPortBattle = 8505;
+
+            _battleServerMgr = new BattleServerMgr(this);
+            _battleServerMgr.Bind(listenPortBattle,2);
+            _battleServerMgr.Listen(listenPortBattle);
+        }
+
+
+        private void UpdateServers()
+        {
+            _battleServerMgr.UpdateServers();
         }
     }
 }

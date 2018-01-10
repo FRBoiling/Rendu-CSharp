@@ -29,17 +29,24 @@ namespace TcpLib
             _tcp.OnDisconnect = OnDisconnect;
         }
 
-        public void StartListen(ushort port, bool hearbeat = false)
+        public void StartListen(ushort port, bool needListenHeatBeat = false)
         {
-            _tcp.Accept(port);
+            _tcp.NeedListenHeartBeat = needListenHeatBeat;
+            _tcp.Accept(Port);
         }
         public void StartListen(ushort port)
         {
-            _tcp.Accept(port);
+            _tcp.Accept(Port);
         }
+
+        public void StartListen(bool needListen = false)
+        {
+            StartListen(Port, needListen);
+        }
+
         public void StartListen()
         {
-            _tcp.Accept(Port);
+            StartListen(Port);
         }
 
         private bool OnAccpet(bool ret)

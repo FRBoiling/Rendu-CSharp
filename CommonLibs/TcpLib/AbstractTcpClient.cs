@@ -162,7 +162,7 @@ namespace TcpLib
         private bool OnDisconnect()
         {
             DisconnectComplete();
-            Connect();
+            Connect(); 
             return true;
         }
 

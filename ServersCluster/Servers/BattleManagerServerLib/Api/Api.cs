@@ -7,11 +7,10 @@ namespace BattleManagerServerLib
     {
         public override void Init(string[] args)
         {
-            if (args.Length == 3)
+            if (args.Length == 2)
             {
-                ApiTag.AreaId = ushort.Parse(args[0]);
-                ApiTag.GroupId = ushort.Parse(args[1]);
-                ApiTag.SubId = ushort.Parse(args[2]);
+                ApiTag.GroupId = ushort.Parse(args[0]);
+                ApiTag.SubId = ushort.Parse(args[1]);
             }
             else
             {

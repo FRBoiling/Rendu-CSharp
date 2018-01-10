@@ -30,7 +30,7 @@ namespace BattleServerLib
         {
             if (ret)
             {
-                Console.WriteLine("connected to {{0} ip {1} port {2} again", ServerTag.ServerType, Ip, Port);
+                Console.WriteLine("connected to {0} ip {1} port {2} again", ServerTag.ServerType, Ip, Port);
                 RequsetRegister();
             }
             else

@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="Packet.cs" />
     <Compile Include="PacketHead.cs" />
-    <Compile Include="TcpSrc\TcpMng.cs" />
+    <Compile Include="TcpSrc\TcpMgr.cs" />
     <Compile Include="TcpSrc\StateObject.cs" />
     <Compile Include="TcpSrc\Tcp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,6 +55,10 @@
     <ProjectReference Include="..\..\Protocol\ServerProtocol\ServerProtocol.csproj">
       <Project>{94623506-6c6c-4a20-b93f-97bb1fd872de}</Project>
       <Name>ServerProtocol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UtilityLib\UtilityLib.csproj">
+      <Project>{5a8965f5-f0c9-4d46-9706-3281cf3a2331}</Project>
+      <Name>UtilityLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
