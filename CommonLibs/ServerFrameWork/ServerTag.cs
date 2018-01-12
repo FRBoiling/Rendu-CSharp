@@ -42,5 +42,11 @@ namespace ServerFrameWork
             string tag = string.Format("{0}_{1}_{2}", _serverType, _groupId, _subId);
             return tag;
         }
+
+        public string GetKey()
+        {
+            string key = string.Format("{0}_{1}",  _groupId, _subId);
+            return key;
+        }
     }
 }

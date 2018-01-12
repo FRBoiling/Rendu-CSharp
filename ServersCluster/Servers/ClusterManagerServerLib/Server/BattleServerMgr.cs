@@ -10,6 +10,7 @@ namespace ClusterManagerServerLib.Server
         private object AllBattleServersLock = new object();
 
         private Dictionary<string, BattleServer> BattleServers = new Dictionary<string, BattleServer>();
+        private List<BattleServer> removeServers = new List<BattleServer>();
 
         private Api _api;
         public Api Api { get => _api;  }
@@ -51,13 +52,22 @@ namespace ClusterManagerServerLib.Server
                     }
                 }
             }
+            if (removeServers.Count>0)
+            {
+                foreach (var item in removeServers)
+                {
+                    AllBattleServers.Remove(item);
+                }
+                removeServers.Clear();
+            }
         }
 
         public void AddAccpet(BattleServer server)
         {
             if (server == null)
             {
-
+                Console.WriteLine("AddAccpet server failed:server is null");
+                return;
             }
             else
             {
@@ -72,7 +82,7 @@ namespace ClusterManagerServerLib.Server
         {
             if (server == null)
             {
-                Console.WriteLine("distroy the server failed:server is null");
+                Console.WriteLine("RemoveServer server failed:server is null");
                 return;
             }
             else
@@ -82,11 +92,29 @@ namespace ClusterManagerServerLib.Server
                     if (AllBattleServers.Contains(server))
                     {
                         AllBattleServers.Remove(server);
+                        string key = server.GetKey();
+                        BattleServers.Remove(key);
                     }
                 }
             }
         }
 
+        public void AddServer(BattleServer server)
+        {
+            if (server == null)
+            {
+                Console.WriteLine("add server failed: server is null");
+                return;
+            }
+            else
+            {
+                lock (AllBattleServersLock)
+                {
+                    string key = server.GetKey();
+                    BattleServers.Add(key,server);
+                }
+            }
+        }
 
 
     }

@@ -159,7 +159,7 @@ namespace TcpLib.TcpSrc
                 int len = handler.EndReceive(ar, out errorCode);
                 if (len <= 0)
                 {
-                    Console.WriteLine("RecvCallback disconnected!");
+                    Console.WriteLine("RecvCallback warning :len = {0} （len <= 0）",len);
                     Disconnect();
                     return;
                 }
@@ -174,7 +174,7 @@ namespace TcpLib.TcpSrc
                 state.offset = len - (int)transferred.Position;
                 if (state.offset < 0)
                 {
-                    Console.WriteLine("RecvCallback disconnected!");
+                    Console.WriteLine("RecvCallback warning : state.offset = {0} (state.offset < 0)",state.offset);
                     Disconnect();
                     return;
                 }
@@ -185,7 +185,7 @@ namespace TcpLib.TcpSrc
                 }
                 if (size > 65535)
                 {
-                    Console.WriteLine("RecvCallback disconnected!");
+                    Console.WriteLine("RecvCallback warning : size = {0} (size > 65535) ",size);
                     Disconnect(); 
                     return;
                 }
@@ -197,7 +197,7 @@ namespace TcpLib.TcpSrc
             }
             catch (Exception e)
             {
-                Console.WriteLine("recvcallback error:{0}", e.ToString());
+                Console.WriteLine("RecvCallback error:{0}", e.ToString());
                 Disconnect();
             }
             return;

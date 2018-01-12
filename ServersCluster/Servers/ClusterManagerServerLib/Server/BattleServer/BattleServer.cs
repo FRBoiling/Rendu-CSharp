@@ -29,18 +29,21 @@ namespace ClusterManagerServerLib.Server
             InitTcp();
         }
 
+        public string GetKey()
+        {
+            return Tag.GetKey();
+        }
+
         protected override void AccpetComplete()
         {
 
-            Console.WriteLine("{0} switch in"
-                , Tag.ServerType);
+            Console.WriteLine("{0} server connected", Tag.ServerType);
             _manager.AddAccpet(this);
         }
 
         protected override void DisconnectComplete()
         {
-            Console.WriteLine("{0} switch off"
-                , Tag.GetServerTagString());
+            Console.WriteLine("{0} server disconnected", Tag.GetServerTagString());
             _manager.RemoveServer(this);
         }
 
@@ -81,6 +84,7 @@ namespace ClusterManagerServerLib.Server
             MSG_B2CM_REGISTER msg = ProtoBuf.Serializer.Deserialize<MSG_B2CM_REGISTER>(stream);
             _tag.GroupId = (ushort)msg.GroupId;
             _tag.SubId = (ushort)msg.SubId;
+            _manager.AddServer(this);
             Console.WriteLine("{0} regist succese", Tag.GetServerTagString());
         }
 
