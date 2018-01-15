@@ -37,13 +37,13 @@ namespace BattleManagerServerLib
             else
             {
                 Console.WriteLine("connect failed, connect to {0} ip {4} port {5} again"
-                    , ServerTag.Type, ServerTag.GroupId, ServerTag.SubId,Ip,Port);
+                    , ServerTag.Type, ServerTag.GroupId, ServerTag.SubId, Ip, Port);
             }
         }
 
         protected override void DisconnectComplete()
         {
-            Console.WriteLine("switch off from {0}" 
+            Console.WriteLine("switch off from {0}"
                 , ServerTag.Type);
         }
 
@@ -69,8 +69,7 @@ namespace BattleManagerServerLib
             }
             else
             {
-                Console.WriteLine("got unsupported packet {0} from {1}",
-                    id, ServerTag.GetServerTagString());
+                Console.WriteLine("got unsupported packet {0} from {1}", id, ServerTag.GetServerTagString());
             }
         }
 
