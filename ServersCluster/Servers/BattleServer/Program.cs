@@ -10,32 +10,32 @@ namespace BattleServer
         static void Main(string[] args)
         {
             //Api api = new Api();
-            AbstractServer api = new Api();
+            AbstractServer _api = new Api();
             try
             {
-                api.ServerName = "BattleServer";
-                api.Init(args);
+                _api.ApiTag.Type = ServerType.Battle;
+                _api.Init(args);
             }
             catch (Exception e)
             {
-                Console.WriteLine("{0} init failed:{1}", api.ServerName, e.ToString());
-                api.Exit();
+                Console.WriteLine("{0} init failed:{1}", _api.ApiTag.Type, e.ToString());
+                _api.Exit();
                 return;
             }
 
-            Thread thread = new Thread(api.MainLoop);
+            Thread thread = new Thread(_api.MainLoop);
             thread.Start();
 
-            Console.WriteLine("{0} OnReady..", api.ApiTag.GetServerTagString());
+            Console.WriteLine("{0} OnReady..", _api.ApiTag.GetServerTagString());
 
             while (thread.IsAlive)
             {
-                api.ProcessInput();
+                _api.ProcessInput();
                 Thread.Sleep(1000);
             }
 
-            api.Exit();
-            Console.WriteLine("{0} Exit..", api.ServerName);
+            _api.Exit();
+            Console.WriteLine("{0} Exit..", _api.ApiTag.GetServerTagString());
         }
     }
 }

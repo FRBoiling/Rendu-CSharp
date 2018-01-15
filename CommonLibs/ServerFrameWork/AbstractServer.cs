@@ -23,14 +23,6 @@ namespace ServerFrameWork
             get { return _apiTag; }
             set { _apiTag = value; }
         }
-        /// <summary>
-        /// 服务器名称
-        /// </summary>
-        public string ServerName
-        {
-            get { return _apiTag.ServerType; }
-            set { _apiTag.ServerType = value; }
-        }
 
         //private Mode _startMode;
         //public Mode StartMode
@@ -130,7 +122,7 @@ namespace ServerFrameWork
                     if (ServerStopTime < Now)
                     {
                         State = ServerState.Stopped;
-                        Console.WriteLine("{0} stopped!", ServerName);
+                        Console.WriteLine("{0} stopped!", ApiTag.Type.ToString());
                         //LOG.Error("{0} stopped!", ServerName);
                     }
                 }

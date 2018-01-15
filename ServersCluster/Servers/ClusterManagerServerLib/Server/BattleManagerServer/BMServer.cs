@@ -10,36 +10,43 @@ namespace ClusterManagerServerLib.Server
 {
     public class BMServer : AbstractTcpServer
     {
-        ServerTag _clientTag = new ServerTag();
+        ServerTag _tag = new ServerTag();
 
-        public ServerTag ClientTag
+        public ServerTag Tag
         {
-            get { return _clientTag; }
+            get { return _tag; }
         }
 
-        public BMServer(Api server, ushort port)
+        private BattleServerMgr _manager;
+
+        public BMServer(BattleServerMgr manager, ushort port)
             : base(port)
         {
-            _clientTag.ServerType = "BattleManager";
+            _manager = manager;
+            _tag.Type = ServerType.BattleManager;
             BindResponser();
             InitTcp();
         }
 
+        public string GetKey()
+        {
+            return Tag.GetServerKey();
+        }
+
         protected override void AccpetComplete()
         {
-            //Console.WriteLine("{0}-{1}-{2}-{3} switch in"
-            //    , ClientTag.ServerName, ClientTag.AreaId, ClientTag.ServerId, ClientTag.SubId);
-            Console.WriteLine("{0} switch in"
-                , ClientTag.ServerType);
+
+            Console.WriteLine("{0} server connected", Tag.Type);
+            _manager.AddAccpetServer(this);
         }
 
         protected override void DisconnectComplete()
         {
-            Console.WriteLine("{0}-{1}-{2} switch off"
-                , ClientTag.ServerType, ClientTag.GroupId, ClientTag.SubId);
+            Console.WriteLine("{0} server disconnected", Tag.GetServerTagString());
+            _manager.RemoveServer(this);
         }
 
-        public void Update()
+        public override void Update()
         {
             OnProcessProtocal();
         }
@@ -47,12 +54,41 @@ namespace ClusterManagerServerLib.Server
         public delegate void Responseer(MemoryStream stream);
         private Dictionary<uint, Responseer> _responsers = new Dictionary<uint, Responseer>();
 
-        public void AddResponser(uint id, Responseer responser)
+        private void AddResponser(uint id, Responseer responser)
         {
             _responsers.Add(id, responser);
         }
 
-        protected override void Response(uint id, MemoryStream stream)
+        private void OnProcessProtocal()
+        {
+            lock (m_msgQueue)
+            {
+                while (m_msgQueue.Count > 0)
+                {
+                    var msg = m_msgQueue.Dequeue();
+                    m_deal_msgQueue.Enqueue(msg);
+                }
+            }
+            while (m_deal_msgQueue.Count > 0)
+            {
+                var msg = m_deal_msgQueue.Dequeue();
+                OnResponse(msg.Key, msg.Value);
+            }
+        }
+
+        private void OnResponse(uint id, MemoryStream stream)
+        {
+            try
+            {
+                Response(id, stream);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("OnResponse:({0})[Error]{1}", id, e.ToString());
+            }
+        }
+
+        private void Response(uint id, MemoryStream stream)
         {
             Responseer responser = null;
             if (_responsers.TryGetValue(id, out responser))
@@ -61,12 +97,12 @@ namespace ClusterManagerServerLib.Server
             }
             else
             {
-                Console.WriteLine("got unsupported packet {0} from {1}-{2}-{3}",
-                    id, ClientTag.ServerType, ClientTag.GroupId, ClientTag.SubId);
+                Console.WriteLine("got unsupported packet {0} from {1}",
+                    id, Tag.GetServerTagString());
             }
         }
 
-        public void BindResponser()
+        private void BindResponser()
         {
             AddResponser(Id<MSG_BM2CM_REGISTER>.Value, OnResponse_Regist);
         }
@@ -74,10 +110,14 @@ namespace ClusterManagerServerLib.Server
         private void OnResponse_Regist(MemoryStream stream)
         {
             MSG_BM2CM_REGISTER msg = ProtoBuf.Serializer.Deserialize<MSG_BM2CM_REGISTER>(stream);
-            _clientTag.GroupId = (ushort)msg.GroupId;
-            _clientTag.SubId = (ushort)msg.SubId;
-            Console.WriteLine("{0}-{1}-{2} regist succese", ClientTag.ServerType,ClientTag.GroupId,ClientTag.SubId);
+            _tag.GroupId = (ushort)msg.GroupId;
+            _tag.SubId = (ushort)msg.SubId;
+            Key = _tag.GetServerKey();
+            Name = _tag.Type.ToString();
+            if (_manager.AddServer(this))
+            {
+                Console.WriteLine("{0} regist succese", Tag.GetServerTagString());
+            }
         }
-
     }
 }

@@ -24,7 +24,7 @@ namespace BattleManagerServerLib
             : base(port,1024)
         {
             _api = server;
-            _clientTag.ServerType = "Battle";
+            _clientTag.Type = ServerType.Battle ;
             BindResponser();
         }
 

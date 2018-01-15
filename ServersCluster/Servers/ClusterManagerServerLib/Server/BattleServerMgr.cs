@@ -4,119 +4,16 @@ using TcpLib.TcpSrc;
 
 namespace ClusterManagerServerLib.Server
 {
-    public class BattleServerMgr
+    public class BattleServerMgr:AbstractServerMgr
     {
-        private List<BattleServer> AllBattleServers = new List<BattleServer>();
-        private object AllBattleServersLock = new object();
-
-        private Dictionary<string, BattleServer> BattleServers = new Dictionary<string, BattleServer>();
-        private List<BattleServer> removeServers = new List<BattleServer>();
-
-        private Api _api;
-        public Api Api { get => _api;  }
-
-        public BattleServerMgr(Api api)
+        public BattleServerMgr(Api api) : base(api)
         {
-            _api = api;
         }
-
-        public void Bind(ushort port,int backLog)
-        {
-            TcpMgr.Inst.Bind(port,backLog);
-        }
-
-        public void Listen(ushort port)
-        {
-            TcpMgr.Inst.Listen(port,InitServer);
-        }
-
-        public void InitServer(ushort port)
+        protected override void InitServer(ushort port)
         {
             BattleServer battleServer = new BattleServer(this, port);
             battleServer.StartListen(true);
         }
-
-        public void UpdateServers()
-        {
-            lock (AllBattleServersLock)
-            {
-                foreach (var item in AllBattleServers)
-                {
-                    try
-                    {
-                        item.Update();
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.ToString());
-                    }
-                }
-            }
-            if (removeServers.Count>0)
-            {
-                foreach (var item in removeServers)
-                {
-                    AllBattleServers.Remove(item);
-                }
-                removeServers.Clear();
-            }
-        }
-
-        public void AddAccpet(BattleServer server)
-        {
-            if (server == null)
-            {
-                Console.WriteLine("AddAccpet server failed:server is null");
-                return;
-            }
-            else
-            {
-                lock (AllBattleServersLock)
-                {
-                   AllBattleServers.Add(server);
-                }
-            }
-        }
-
-        public void RemoveServer(BattleServer server)
-        {
-            if (server == null)
-            {
-                Console.WriteLine("RemoveServer server failed:server is null");
-                return;
-            }
-            else
-            {
-                lock (AllBattleServersLock)
-                {
-                    if (AllBattleServers.Contains(server))
-                    {
-                        AllBattleServers.Remove(server);
-                        string key = server.GetKey();
-                        BattleServers.Remove(key);
-                    }
-                }
-            }
-        }
-
-        public void AddServer(BattleServer server)
-        {
-            if (server == null)
-            {
-                Console.WriteLine("add server failed: server is null");
-                return;
-            }
-            else
-            {
-                lock (AllBattleServersLock)
-                {
-                    string key = server.GetKey();
-                    BattleServers.Add(key,server);
-                }
-            }
-        }
-
-
     }
 }
  

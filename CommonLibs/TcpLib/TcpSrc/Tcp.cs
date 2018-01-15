@@ -81,7 +81,7 @@ namespace TcpLib.TcpSrc
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                //Console.WriteLine(e);
                 OnConnect(false);
             }
         }     

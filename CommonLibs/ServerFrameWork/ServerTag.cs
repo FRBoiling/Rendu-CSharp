@@ -8,11 +8,11 @@ namespace ServerFrameWork
 {
     public class ServerTag
     {
-        private string _serverType;
-        public string ServerType
+        private ServerType _type;
+        public ServerType Type
         {
-            get { return _serverType; }
-            set { _serverType = value; }
+            get { return _type; }
+            set { _type = value; }
         }
 
         private ushort _groupId = 0;
@@ -37,13 +37,22 @@ namespace ServerFrameWork
             set { _ip = value; }
         }
 
+
+        private int _port = 0;
+
+        public int Port
+        {
+            get { return _port; }
+            set { _port = value; }
+        }
+
         public string GetServerTagString()
         {
-            string tag = string.Format("{0}_{1}_{2}", _serverType, _groupId, _subId);
+            string tag = string.Format("{0}_{1}_{2}", _type.ToString(), _groupId, _subId);
             return tag;
         }
 
-        public string GetKey()
+        public string GetServerKey()
         {
             string key = string.Format("{0}_{1}",  _groupId, _subId);
             return key;

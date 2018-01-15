@@ -23,7 +23,7 @@ namespace BattleServerLib
             : base(ip, port)
         {
             _api = api;
-            _serverTag.ServerType = "BattleManager";
+            _serverTag.Type = ServerType.BattleManager;
             BindResponser();
             InitTcp();
         }
@@ -33,7 +33,7 @@ namespace BattleServerLib
             if (ret)
             {
                 Console.WriteLine("connected to {0}"
-                    , ServerTag.ServerType);
+                    , ServerTag.Type);
                 RequsetRegister();
             }
             else
@@ -46,7 +46,7 @@ namespace BattleServerLib
         protected override void DisconnectComplete()
         {
             Console.WriteLine("switch off from {0}" 
-                , ServerTag.ServerType);
+                , ServerTag.Type);
         }
 
         public void Update()
@@ -79,7 +79,7 @@ namespace BattleServerLib
         public void RequsetRegister()
         {
             Console.WriteLine("Requst Register to {0}"
-               , ServerTag.ServerType);
+               , ServerTag.Type);
             MSG_B2BM_REGISTER requset = new MSG_B2BM_REGISTER();
             requset.GroupId = _api.ApiTag.GroupId;
             requset.SubId = _api.ApiTag.SubId;

@@ -13,12 +13,11 @@ namespace ClusterManagerServer
             AbstractServer api = new Api();
             try
             {
-                api.ServerName = "ClusterManagerServer";
                 api.Init(args);
             }
             catch (Exception e)
             {
-                Console.WriteLine("{0} init failed:{1}", api.ServerName, e.ToString());
+                Console.WriteLine("{0} init failed:{1}", api.ApiTag.GetServerTagString(), e.ToString());
                 api.Exit();
                 return;
             }
@@ -35,7 +34,7 @@ namespace ClusterManagerServer
             }
 
             api.Exit();
-            Console.WriteLine("{0} Exit..", api.ServerName);
+            Console.WriteLine("{0} Exit..", api.ApiTag.GetServerTagString());
         }
     }
 }

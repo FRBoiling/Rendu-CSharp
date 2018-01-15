@@ -13,12 +13,12 @@ namespace WorldServer
             AbstractServer api = new Api();
             try
             {
-                api.ServerName = "WorldServer";
+                api.ApiTag.Type = ServerType.World;
                 api.Init(args);
             }
             catch (Exception e)
             {
-                Console.WriteLine("{0} init failed:{1}", api.ServerName, e.ToString());
+                Console.WriteLine("{0} init failed:{1}", api.ApiTag.Type, e.ToString());
                 api.Exit();
                 return;
             }
@@ -35,7 +35,7 @@ namespace WorldServer
             }
 
             api.Exit();
-            Console.WriteLine("{0} Exit..", api.ServerName);
+            Console.WriteLine("{0} Exit..", api.ApiTag.GetServerTagString());
         }
     }
 }

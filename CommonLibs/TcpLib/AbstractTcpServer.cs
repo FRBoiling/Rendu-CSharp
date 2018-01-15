@@ -11,16 +11,23 @@ namespace TcpLib
     public abstract class AbstractTcpServer
     {
         private Tcp _tcp = new Tcp();
+        string _key = "0_0";
+        public string Key { get => _key; set => _key = value; }
 
-        private ushort _port;
-        public ushort Port
+        string _name = "deafultServer";
+        public string Name { get => _name; set => _name = value; }
+
+
+        private ushort _listenPort;
+        public ushort ListenPort
         {
-            get { return _port; }
+            get { return _listenPort; }
         }
+
 
         public AbstractTcpServer(ushort port)
         {
-            _port = port;
+            _listenPort = port;
         }
         public void InitTcp()
         {
@@ -32,21 +39,21 @@ namespace TcpLib
         public void StartListen(ushort port, bool needListenHeatBeat = false)
         {
             _tcp.NeedListenHeartBeat = needListenHeatBeat;
-            _tcp.Accept(Port);
+            _tcp.Accept(ListenPort);
         }
         public void StartListen(ushort port)
         {
-            _tcp.Accept(Port);
+            _tcp.Accept(ListenPort);
         }
 
         public void StartListen(bool needListen = false)
         {
-            StartListen(Port, needListen);
+            StartListen(ListenPort, needListen);
         }
 
         public void StartListen()
         {
-            StartListen(Port);
+            StartListen(ListenPort);
         }
 
         private bool OnAccpet(bool ret)
@@ -93,36 +100,6 @@ namespace TcpLib
             stream.Seek(offset, SeekOrigin.Begin);
         }
 
-        public void OnProcessProtocal()
-        {
-            lock (m_msgQueue)
-            {
-                while (m_msgQueue.Count > 0)
-                {
-                    var msg = m_msgQueue.Dequeue();
-                    m_deal_msgQueue.Enqueue(msg);
-                }
-            }
-            while (m_deal_msgQueue.Count > 0)
-            {
-                var msg = m_deal_msgQueue.Dequeue();
-                OnResponse(msg.Key, msg.Value);
-            }
-        }
-
-        private void OnResponse(uint id, MemoryStream stream)
-        {
-            try
-            {
-                Response(id,stream);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("OnResponse:({0})[Error]{1}",id,e.ToString());
-            }
-        }
-
-        protected abstract void Response(uint id, MemoryStream stream);
 
         public bool Send<T>(T msg) where T : global::ProtoBuf.IExtensible
         {
@@ -153,5 +130,8 @@ namespace TcpLib
             StartListen();
             return true;
         }
+
+        public abstract void Update();
+
     }
 }

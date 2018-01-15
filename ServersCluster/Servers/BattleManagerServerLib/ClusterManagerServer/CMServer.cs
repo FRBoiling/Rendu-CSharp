@@ -21,7 +21,7 @@ namespace BattleManagerServerLib
             : base(ip, port)
         {
             _api = api;
-            _serverTag.ServerType = "ClusterManager";
+            _serverTag.Type = ServerType.ClusterManager;
             BindResponser();
             InitTcp();
         }
@@ -31,20 +31,20 @@ namespace BattleManagerServerLib
             if (ret)
             {
                 Console.WriteLine("connected to {0}"
-                    , ServerTag.ServerType);
+                    , ServerTag.Type);
                 RequsetRegister();
             }
             else
             {
                 Console.WriteLine("connect failed, connect to {0} ip {4} port {5} again"
-                    , ServerTag.ServerType, ServerTag.GroupId, ServerTag.SubId,Ip,Port);
+                    , ServerTag.Type, ServerTag.GroupId, ServerTag.SubId,Ip,Port);
             }
         }
 
         protected override void DisconnectComplete()
         {
             Console.WriteLine("switch off from {0}" 
-                , ServerTag.ServerType);
+                , ServerTag.Type);
         }
 
         public void Update()
@@ -81,7 +81,7 @@ namespace BattleManagerServerLib
         public void RequsetRegister()
         {
             Console.WriteLine("Requst Register to {0}"
-               , ServerTag.ServerType);
+               , ServerTag.Type);
             MSG_BM2CM_REGISTER requset = new MSG_BM2CM_REGISTER();
             requset.GroupId = _api.ApiTag.GroupId;
             requset.SubId = _api.ApiTag.SubId;
