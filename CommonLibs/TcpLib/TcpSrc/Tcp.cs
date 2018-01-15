@@ -159,7 +159,7 @@ namespace TcpLib.TcpSrc
                 int len = handler.EndReceive(ar, out errorCode);
                 if (len <= 0)
                 {
-                    Console.WriteLine("RecvCallback warning :len = {0} （len <= 0）",len);
+                    Console.WriteLine("RecvCallback warning : len = {0} （len <= 0）",len);
                     Disconnect();
                     return;
                 }

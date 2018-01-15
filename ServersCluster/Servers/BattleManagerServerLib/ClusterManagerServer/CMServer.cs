@@ -47,7 +47,7 @@ namespace BattleManagerServerLib
                 , ServerTag.Type);
         }
 
-        public void Update()
+        public override void Update()
         {
             OnProcessProtocal();
         }

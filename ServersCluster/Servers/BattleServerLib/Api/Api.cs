@@ -29,6 +29,7 @@ namespace BattleServerLib
         public override void Update()
         {
             //m_BMServer.Update();
+            TcpMgr.Inst.Update();
             m_CMServer.Update();
         }
 

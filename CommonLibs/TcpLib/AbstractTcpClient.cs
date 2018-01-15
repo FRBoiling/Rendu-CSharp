@@ -63,13 +63,13 @@ namespace TcpLib
 
         private bool OnConnect(bool ret)
         {
+            ConnectedComplete(ret);
+
             if (ret == true)
             {
-                ConnectedComplete(ret);
             }
             else
             {
-                ConnectedComplete(ret);
                 Connect();
             }
             return ret;
@@ -165,6 +165,8 @@ namespace TcpLib
             Connect(); 
             return true;
         }
+
+        public abstract void Update();
 
     }
 }

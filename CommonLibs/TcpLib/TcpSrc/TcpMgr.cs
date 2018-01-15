@@ -108,7 +108,6 @@ namespace TcpLib.TcpSrc
         }
 
 
-
         public delegate void CallBackDisconnect();
         ConcurrentQueue<Tcp.AsyncDisconnectCallback> _disconnectCallBacks = new ConcurrentQueue<Tcp.AsyncDisconnectCallback>();
         public void AddDisconnectExec(Tcp.AsyncDisconnectCallback callback)

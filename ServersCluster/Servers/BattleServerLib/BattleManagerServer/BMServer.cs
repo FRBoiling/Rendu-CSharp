@@ -32,8 +32,7 @@ namespace BattleServerLib
         {
             if (ret)
             {
-                Console.WriteLine("connected to {0}"
-                    , ServerTag.Type);
+                Console.WriteLine("connected to {0}" , ServerTag.Type);
                 RequsetRegister();
             }
             else
@@ -49,7 +48,7 @@ namespace BattleServerLib
                 , ServerTag.Type);
         }
 
-        public void Update()
+        public override void Update()
         {
             OnProcessProtocal();
         }
