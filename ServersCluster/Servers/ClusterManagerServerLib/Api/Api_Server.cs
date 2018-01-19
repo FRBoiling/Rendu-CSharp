@@ -6,11 +6,15 @@ namespace ClusterManagerServerLib
     public partial class Api
     {
         private BattleServerMgr _battleServerMgr;
-
         public BattleServerMgr BattleServerMgr { get => _battleServerMgr; }
+
+
+        private BMServerMgr _battleManagerServerMgr;
+        public BMServerMgr BattleManagerServerMgr { get => _battleManagerServerMgr; }
 
         //
         public ushort listenPortBattle;
+        public ushort listenPortBattleManager;
 
         private void InitServers()
         {
@@ -26,6 +30,14 @@ namespace ClusterManagerServerLib
             _battleServerMgr.Listen(listenPortBattle);
         }
 
+        private void InitBattleManagerServer()
+        {
+            listenPortBattleManager = 8506;
+
+            _battleManagerServerMgr = new BMServerMgr(this);
+            _battleManagerServerMgr.Bind(listenPortBattle, 2);
+            _battleManagerServerMgr.Listen(listenPortBattle);
+        }
 
         private void UpdateServers()
         {

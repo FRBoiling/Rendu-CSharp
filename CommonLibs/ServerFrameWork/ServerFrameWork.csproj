@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractServer.cs" />
+    <Compile Include="AbstractServerMgr.cs" />
     <Compile Include="FrameControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerType.cs" />

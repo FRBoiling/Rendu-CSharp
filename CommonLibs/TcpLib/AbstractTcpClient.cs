@@ -24,17 +24,30 @@ namespace TcpLib
             get { return _port; }
         }
 
+        AbstractParsePacket _parser;
+
         public AbstractTcpClient(string ip,ushort port)
         {
             _ip = ip;
             _port = port;
+
+            InitPacketPareser();
+            BindResponser();
+            InitTcp();
         }
+
+        protected abstract void BindResponser();
 
         public void InitTcp()
         {
             _tcp.OnConnect = OnConnect;
             _tcp.OnRecv = OnRecv;
             _tcp.OnDisconnect = OnDisconnect;
+        }
+
+        public void InitPacketPareser()
+        {
+            _parser = GetPacketParser();
         }
 
         public void Connect()
@@ -80,74 +93,33 @@ namespace TcpLib
         /// </summary>
         protected abstract void ConnectedComplete(bool ret);
 
-        protected Queue<KeyValuePair<UInt32, MemoryStream>> m_msgQueue = new Queue<KeyValuePair<uint, MemoryStream>>();
-        protected Queue<KeyValuePair<UInt32, MemoryStream>> m_deal_msgQueue = new Queue<KeyValuePair<uint, MemoryStream>>();
+        protected abstract AbstractParsePacket GetPacketParser();
 
         private void OnRecv(MemoryStream stream)
         {
             int offset = 0;
             byte[] buffer = stream.GetBuffer();
-            while ((stream.Length - offset) > sizeof(UInt16))
-            {
-                UInt16 size = BitConverter.ToUInt16(buffer, offset);
-                if (size + PacketHead.Size > stream.Length - offset)
-                {
-                    break;
-                }
-
-                UInt32 msg_id = BitConverter.ToUInt32(buffer, offset + sizeof(UInt16));
-                MemoryStream msg = new MemoryStream(buffer, offset + PacketHead.Size, size, true, true);
-                lock (m_msgQueue)
-                {
-                    m_msgQueue.Enqueue(new KeyValuePair<uint, MemoryStream>(msg_id, msg));
-                }
-                offset += (size + PacketHead.Size);
-            }
+            offset = _parser.UnpackPacket(stream, offset, buffer);
             stream.Seek(offset, SeekOrigin.Begin);
         }
 
-        public void OnProcessProtocal()
+        private void ProcessProtocal()
         {
-            lock (m_msgQueue)
-            {
-                while (m_msgQueue.Count > 0)
-                {
-                    var msg = m_msgQueue.Dequeue();
-                    m_deal_msgQueue.Enqueue(msg);
-                }
-            }
-            while (m_deal_msgQueue.Count > 0)
-            {
-                var msg = m_deal_msgQueue.Dequeue();
-                OnResponse(msg.Key, msg.Value);
-            }
+            _parser.OnProcessProtocal();
         }
 
-        private void OnResponse(uint id, MemoryStream stream)
+        protected void AddProcesser(uint msgId, AbstractParsePacket.Processer processer)
         {
-            try
-            {
-                Response(id, stream);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("OnResponse:({0})[Error]{1}", id, e.ToString());
-            }
+            _parser.AddProcesser(msgId, processer);
         }
-
-        protected abstract void Response(uint id, MemoryStream stream);
 
         public bool Send<T>(T msg) where T : global::ProtoBuf.IExtensible
         {
-            MemoryStream body = new MemoryStream();
-            ProtoBuf.Serializer.Serialize(body, msg);
-
-            MemoryStream head = new MemoryStream(sizeof(ushort) + sizeof(uint));
-            ushort len = (ushort)body.Length;
-            head.Write(BitConverter.GetBytes(len), 0, 2);
-            head.Write(BitConverter.GetBytes(Id<T>.Value), 0, 4);
+            MemoryStream body, head;
+            _parser.PackPacket(msg, out body, out head);
             return Send(head, body);
         }
+
 
         private bool Send(MemoryStream head, MemoryStream body)
         {
@@ -166,7 +138,10 @@ namespace TcpLib
             return true;
         }
 
-        public abstract void Update();
+        public void Update()
+        {
+            ProcessProtocal();
+        }
 
     }
 }

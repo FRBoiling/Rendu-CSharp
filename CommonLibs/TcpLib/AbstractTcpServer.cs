@@ -24,16 +24,28 @@ namespace TcpLib
             get { return _listenPort; }
         }
 
+        AbstractParsePacket _parser;
 
         public AbstractTcpServer(ushort port)
         {
             _listenPort = port;
+            InitPacketPareser();
+            BindResponser();
+            InitTcp();
         }
-        public void InitTcp()
+
+        protected abstract void BindResponser();
+
+        private void InitTcp()
         {
             _tcp.OnAccept = OnAccpet;
             _tcp.OnRecv = OnRecv;
             _tcp.OnDisconnect = OnDisconnect;
+        }
+
+        private void InitPacketPareser()
+        {
+            _parser = GetPacketParser();
         }
 
         public void StartListen(ushort port, bool needListenHeatBeat = false)
@@ -74,42 +86,31 @@ namespace TcpLib
         /// </summary>
         protected abstract void AccpetComplete();
 
-        protected Queue<KeyValuePair<UInt32, MemoryStream>> m_msgQueue = new Queue<KeyValuePair<uint, MemoryStream>>();
-        protected Queue<KeyValuePair<UInt32, MemoryStream>> m_deal_msgQueue = new Queue<KeyValuePair<uint, MemoryStream>>();
+        protected abstract AbstractParsePacket GetPacketParser();
 
         private void OnRecv(MemoryStream stream)
         {
             int offset = 0;
             byte[] buffer = stream.GetBuffer();
-            while ((stream.Length - offset) > sizeof(UInt16))
-            {
-                UInt16 size = BitConverter.ToUInt16(buffer, offset);
-                if (size + PacketHead.Size > stream.Length - offset)
-                {
-                    break;
-                }
-
-                UInt32 msg_id = BitConverter.ToUInt32(buffer, offset + sizeof(UInt16));
-                MemoryStream msg = new MemoryStream(buffer, offset + PacketHead.Size, size, true, true);
-                lock (m_msgQueue)
-                {
-                    m_msgQueue.Enqueue(new KeyValuePair<uint, MemoryStream>(msg_id, msg));
-                }
-                offset += (size + PacketHead.Size);
-            }
+            offset = _parser.UnpackPacket(stream, offset, buffer);
             stream.Seek(offset, SeekOrigin.Begin);
+        }
+
+        private void ProcessProtocal()
+        {
+            _parser.OnProcessProtocal();
+        }
+
+        protected void AddProcesser(uint msgId, AbstractParsePacket.Processer processer)
+        {
+            _parser.AddProcesser(msgId, processer);
         }
 
 
         public bool Send<T>(T msg) where T : global::ProtoBuf.IExtensible
         {
-            MemoryStream body = new MemoryStream();
-            ProtoBuf.Serializer.Serialize(body, msg);
-            
-            MemoryStream head = new MemoryStream(sizeof(ushort) + sizeof(uint));
-            ushort len = (ushort)body.Length;
-            head.Write(BitConverter.GetBytes(len), 0, 2);
-            head.Write(BitConverter.GetBytes(Id<T>.Value), 0, 4);
+            MemoryStream body, head;
+            _parser.PackPacket(msg, out body, out head);
             return Send(head, body);
         }
 
@@ -131,7 +132,10 @@ namespace TcpLib
             return true;
         }
 
-        public abstract void Update();
+        public void Update()
+        {
+            ProcessProtocal();
+        }
 
     }
 }

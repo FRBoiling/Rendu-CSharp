@@ -37,8 +37,8 @@ namespace ServerFrameWork
         private static DateTime _now;
         public static DateTime Now
         {
-            get { return AbstractServer._now; }
-            set { AbstractServer._now = value; }
+            get { return _now; }
+            set { _now = value; }
         }
 
 

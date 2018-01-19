@@ -17,15 +17,13 @@ namespace ClusterManagerServerLib.Server
             get { return _tag; }
         }
 
-        private BattleServerMgr _manager;
+        private BMServerMgr _manager;
 
-        public BMServer(BattleServerMgr manager, ushort port)
+        public BMServer(BMServerMgr manager, ushort port)
             : base(port)
         {
             _manager = manager;
             _tag.Type = ServerType.BattleManager;
-            BindResponser();
-            InitTcp();
         }
 
         public string GetKey()
@@ -46,68 +44,12 @@ namespace ClusterManagerServerLib.Server
             _manager.RemoveServer(this);
         }
 
-        public override void Update()
+        protected override void BindResponser()
         {
-            OnProcessProtocal();
+            AddProcesser(Id<MSG_BM2CM_REGISTER>.Value, OnResponse_Regist);
         }
 
-        public delegate void Responseer(MemoryStream stream);
-        private Dictionary<uint, Responseer> _responsers = new Dictionary<uint, Responseer>();
-
-        private void AddResponser(uint id, Responseer responser)
-        {
-            _responsers.Add(id, responser);
-        }
-
-        private void OnProcessProtocal()
-        {
-            lock (m_msgQueue)
-            {
-                while (m_msgQueue.Count > 0)
-                {
-                    var msg = m_msgQueue.Dequeue();
-                    m_deal_msgQueue.Enqueue(msg);
-                }
-            }
-            while (m_deal_msgQueue.Count > 0)
-            {
-                var msg = m_deal_msgQueue.Dequeue();
-                OnResponse(msg.Key, msg.Value);
-            }
-        }
-
-        private void OnResponse(uint id, MemoryStream stream)
-        {
-            try
-            {
-                Response(id, stream);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("OnResponse:({0})[Error]{1}", id, e.ToString());
-            }
-        }
-
-        private void Response(uint id, MemoryStream stream)
-        {
-            Responseer responser = null;
-            if (_responsers.TryGetValue(id, out responser))
-            {
-                responser(stream);
-            }
-            else
-            {
-                Console.WriteLine("got unsupported packet {0} from {1}",
-                    id, Tag.GetServerTagString());
-            }
-        }
-
-        private void BindResponser()
-        {
-            AddResponser(Id<MSG_BM2CM_REGISTER>.Value, OnResponse_Regist);
-        }
-
-        private void OnResponse_Regist(MemoryStream stream)
+        private void OnResponse_Regist(MemoryStream stream, int uid)
         {
             MSG_BM2CM_REGISTER msg = ProtoBuf.Serializer.Deserialize<MSG_BM2CM_REGISTER>(stream);
             _tag.GroupId = (ushort)msg.GroupId;
@@ -119,5 +61,14 @@ namespace ClusterManagerServerLib.Server
                 Console.WriteLine("{0} regist succese", Tag.GetServerTagString());
             }
         }
+
+        protected override AbstractParsePacket GetPacketParser()
+        {
+            return new Packet1();
+        }
+
+
+
+    
     }
 }

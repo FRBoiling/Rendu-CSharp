@@ -48,33 +48,6 @@ namespace BattleServerLib
                 , ServerTag.Type);
         }
 
-        public override void Update()
-        {
-            OnProcessProtocal();
-        }
-
-        public delegate void Responseer(MemoryStream stream);
-        private Dictionary<uint, Responseer> _responsers = new Dictionary<uint, Responseer>();
-
-        public void AddResponser(uint id, Responseer responser)
-        {
-            _responsers.Add(id, responser);
-        }
-
-        protected override void Response(uint id, MemoryStream stream)
-        {
-            Responseer responser = null;
-            if (_responsers.TryGetValue(id, out responser))
-            {
-                responser(stream);
-            }
-            else
-            {
-                Console.WriteLine("got unsupported packet {0} from {1}",
-                    id, ServerTag.GetServerTagString());
-            }
-        }
-
         public void RequsetRegister()
         {
             Console.WriteLine("Requst Register to {0}"
@@ -85,13 +58,12 @@ namespace BattleServerLib
             Send(requset);
         }
 
-
-        public void BindResponser()
+        protected override void BindResponser()
         {
-            AddResponser(Id<MSG_BM2B_RETRUN_REGISTER>.Value, OnResponse_Regist);
+            AddProcesser(Id<MSG_BM2B_RETRUN_REGISTER>.Value, OnResponse_Regist);
         }
 
-        private void OnResponse_Regist(MemoryStream stream)
+        private void OnResponse_Regist(MemoryStream stream, int uid)
         {
             MSG_BM2B_RETRUN_REGISTER msg = ProtoBuf.Serializer.Deserialize<MSG_BM2B_RETRUN_REGISTER>(stream);
             _serverTag.GroupId = (ushort)msg.GroupId;
@@ -99,7 +71,11 @@ namespace BattleServerLib
             Console.WriteLine("registed success to {0}", ServerTag.GetServerTagString());
         }
 
+        protected override AbstractParsePacket GetPacketParser()
+        {
+            return new Packet1();
+        }
 
-
+   
     }
 }

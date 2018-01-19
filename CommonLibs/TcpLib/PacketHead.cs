@@ -15,7 +15,7 @@ namespace TcpLib
             msg_id = 0;
         }
 
-        public   PacketHead(byte[] packetHead)
+        public PacketHead(byte[] packetHead)
         {
             length = BitConverter.ToUInt16(packetHead, 0);
             msg_id = BitConverter.ToUInt16(packetHead, sizeof(UInt16));

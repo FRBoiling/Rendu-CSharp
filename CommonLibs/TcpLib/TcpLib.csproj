@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractServerMgr.cs" />
+    <Compile Include="Packet2.cs" />
+    <Compile Include="Packet1.cs" />
+    <Compile Include="AbstractParsePacket.cs" />
     <Compile Include="Packet.cs" />
     <Compile Include="PacketHead.cs" />
     <Compile Include="TcpSrc\TcpMgr.cs" />

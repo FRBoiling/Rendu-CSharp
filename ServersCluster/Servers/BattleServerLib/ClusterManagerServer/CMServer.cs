@@ -22,8 +22,6 @@ namespace BattleServerLib
         {
             _api = api;
             _serverTag.Type = ServerType.ClusterManager;
-            BindResponser();
-            InitTcp();
         }
 
         protected override void ConnectedComplete(bool ret)
@@ -45,35 +43,10 @@ namespace BattleServerLib
                 , ServerTag.Type);
         }
 
-        public override void Update()
-        {
-            OnProcessProtocal();
-        }
 
-        public delegate void Responseer(MemoryStream stream);
-        private Dictionary<uint, Responseer> _responsers = new Dictionary<uint, Responseer>();
-
-        public void AddResponser(uint id, Responseer responser)
+        protected override void BindResponser()
         {
-            _responsers.Add(id, responser);
-        }
-
-        protected override void Response(uint id, MemoryStream stream)
-        {
-            Responseer responser = null;
-            if (_responsers.TryGetValue(id, out responser))
-            {
-                responser(stream);
-            }
-            else
-            {
-                Console.WriteLine("got unsupported packet {0} from {1}",
-                    id, ServerTag.GetServerTagString());
-            }
-        }
-
-        public void BindResponser()
-        {
+           
         }
 
         public void RequsetRegister()
@@ -86,6 +59,11 @@ namespace BattleServerLib
             Send(requset);
         }
 
+        protected override AbstractParsePacket GetPacketParser()
+        {
+            return new Packet2();
+        }
 
+    
     }
 }

@@ -47,31 +47,6 @@ namespace BattleManagerServerLib
                 , ServerTag.Type);
         }
 
-        public override void Update()
-        {
-            OnProcessProtocal();
-        }
-
-        public delegate void Responseer(MemoryStream stream);
-        private Dictionary<uint, Responseer> _responsers = new Dictionary<uint, Responseer>();
-
-        public void AddResponser(uint id, Responseer responser)
-        {
-            _responsers.Add(id, responser);
-        }
-
-        protected override void Response(uint id, MemoryStream stream)
-        {
-            Responseer responser = null;
-            if (_responsers.TryGetValue(id, out responser))
-            {
-                responser(stream);
-            }
-            else
-            {
-                Console.WriteLine("got unsupported packet {0} from {1}", id, ServerTag.GetServerTagString());
-            }
-        }
 
         public void BindResponser()
         {
@@ -87,6 +62,9 @@ namespace BattleManagerServerLib
             Send(requset);
         }
 
-
+        protected override AbstractParsePacket GetPacketParser()
+        {
+            return new Packet1();
+        }
     }
 }
