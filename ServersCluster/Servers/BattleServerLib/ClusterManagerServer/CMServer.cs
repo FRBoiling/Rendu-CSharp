@@ -59,7 +59,7 @@ namespace BattleServerLib
             Send(requset);
         }
 
-        protected override AbstractParsePacket GetPacketParser()
+        protected override AbstractParsePacket InitPacketParser()
         {
             return new Packet2();
         }

@@ -47,7 +47,7 @@ namespace TcpLib
 
         public void InitPacketPareser()
         {
-            _parser = GetPacketParser();
+            _parser = InitPacketParser();
         }
 
         public void Connect()
@@ -93,7 +93,7 @@ namespace TcpLib
         /// </summary>
         protected abstract void ConnectedComplete(bool ret);
 
-        protected abstract AbstractParsePacket GetPacketParser();
+        protected abstract AbstractParsePacket InitPacketParser();
 
         private void OnRecv(MemoryStream stream)
         {

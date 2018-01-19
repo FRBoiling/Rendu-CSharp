@@ -62,7 +62,7 @@ namespace ClusterManagerServerLib.Server
             }
         }
 
-        protected override AbstractParsePacket GetPacketParser()
+        protected override AbstractParsePacket InitPacketParser()
         {
             return new Packet1();
         }

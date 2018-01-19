@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using TcpLib.TcpSrc;
+﻿using TcpLib;
 
 namespace ClusterManagerServerLib.Server
 {
     public class BattleServerMgr:AbstractServerMgr
     {
-        public BattleServerMgr(Api api) : base(api)
+
+        private Api _api;
+        public Api Api { get => _api; }
+        public BattleServerMgr(Api api) : base()
         {
+            _api = api;
         }
         protected override void InitServer(ushort port)
         {

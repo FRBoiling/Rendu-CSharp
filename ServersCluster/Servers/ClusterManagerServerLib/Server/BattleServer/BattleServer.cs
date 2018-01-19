@@ -38,7 +38,7 @@ namespace ClusterManagerServerLib.Server
             _manager.RemoveServer(this);
         }
 
-        protected override AbstractParsePacket GetPacketParser()
+        protected override AbstractParsePacket InitPacketParser()
         {
             return new Packet1();   
         }

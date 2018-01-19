@@ -45,7 +45,7 @@ namespace TcpLib
 
         private void InitPacketPareser()
         {
-            _parser = GetPacketParser();
+            _parser = InitPacketParser();
         }
 
         public void StartListen(ushort port, bool needListenHeatBeat = false)
@@ -86,7 +86,7 @@ namespace TcpLib
         /// </summary>
         protected abstract void AccpetComplete();
 
-        protected abstract AbstractParsePacket GetPacketParser();
+        protected abstract AbstractParsePacket InitPacketParser();
 
         private void OnRecv(MemoryStream stream)
         {

@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TcpLib;
 
 namespace ClusterManagerServerLib.Server
 {
     public class BMServerMgr : AbstractServerMgr
     {
-        public BMServerMgr(Api api) : base(api)
+        private Api _api;
+        public Api Api { get => _api; }
+        public BMServerMgr(Api api) : base()
         {
+            _api = api;
         }
 
         protected override void InitServer(ushort port)
