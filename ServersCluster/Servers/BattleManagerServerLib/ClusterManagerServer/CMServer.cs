@@ -22,8 +22,6 @@ namespace BattleManagerServerLib
         {
             _api = api;
             _serverTag.Type = ServerType.ClusterManager;
-            BindResponser();
-            InitTcp();
         }
 
         protected override void ConnectedComplete(bool ret)
@@ -47,9 +45,9 @@ namespace BattleManagerServerLib
                 , ServerTag.Type);
         }
 
-
-        public void BindResponser()
+        protected override void BindResponser()
         {
+            throw new NotImplementedException();
         }
 
         public void RequsetRegister()
@@ -66,5 +64,7 @@ namespace BattleManagerServerLib
         {
             return new Packet1();
         }
+
+   
     }
 }
