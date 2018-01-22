@@ -24,6 +24,11 @@ namespace BattleManagerServerLib
             _serverTag.Type = ServerType.ClusterManager;
         }
 
+        protected override AbstractParsePacket InitPacketParser()
+        {
+            return new Packet1();
+        }
+
         protected override void ConnectedComplete(bool ret)
         {
             if (ret)
@@ -60,10 +65,6 @@ namespace BattleManagerServerLib
             Send(requset);
         }
 
-        protected override AbstractParsePacket InitPacketParser()
-        {
-            return new Packet1();
-        }
 
    
     }
