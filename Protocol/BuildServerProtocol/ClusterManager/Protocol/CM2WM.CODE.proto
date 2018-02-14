@@ -1,1 +1,11 @@
 package Message.ClusterManager.WorldManager.Protocol.CM2WM;
+message MSG_CM2WM_HEARTBEAT {
+	required int32 GroupId =  1;
+	required int32 SubId =  2;
+}
+
+message MSG_CM2WM_RETRUN_REGISTER {
+	required int32 GroupId =  1;
+	required int32 SubId =  2;
+}
+

@@ -10,4 +10,52 @@
 // Generated from: CM2WM.CODE.proto
 namespace Message.ClusterManager.WorldManager.Protocol.CM2WM
 {
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_CM2WM_HEARTBEAT")]
+  public partial class MSG_CM2WM_HEARTBEAT : global::ProtoBuf.IExtensible
+  {
+    public MSG_CM2WM_HEARTBEAT() {}
+    
+    private int _GroupId;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"GroupId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int GroupId
+    {
+      get { return _GroupId; }
+      set { _GroupId = value; }
+    }
+    private int _SubId;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"SubId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int SubId
+    {
+      get { return _SubId; }
+      set { _SubId = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_CM2WM_RETRUN_REGISTER")]
+  public partial class MSG_CM2WM_RETRUN_REGISTER : global::ProtoBuf.IExtensible
+  {
+    public MSG_CM2WM_RETRUN_REGISTER() {}
+    
+    private int _GroupId;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"GroupId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int GroupId
+    {
+      get { return _GroupId; }
+      set { _GroupId = value; }
+    }
+    private int _SubId;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"SubId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int SubId
+    {
+      get { return _SubId; }
+      set { _SubId = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
 }

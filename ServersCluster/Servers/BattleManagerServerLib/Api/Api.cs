@@ -1,5 +1,6 @@
 ﻿using ServerFrameWork;
 using System;
+using TcpLib.TcpSrc;
 
 namespace BattleManagerServerLib
 {
@@ -18,8 +19,8 @@ namespace BattleManagerServerLib
             }
             InitProtocol();
 
-            //InitClusterManagerServer();
-            InitBattleServer();
+            InitClusterManagerServer();
+            //InitBattleServer();
         }
 
         public override void Exit()
@@ -28,8 +29,9 @@ namespace BattleManagerServerLib
 
         public override void Update()
         {
-            //m_CMServer.Update();
-            m_BattleServer.Update();
+            TcpMgr.Inst.Update();
+            m_CMServer.Update();
+            //m_BattleServer.Update();
         }
 
         public override void ExcuteCommand(string cmd)

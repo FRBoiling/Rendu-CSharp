@@ -1,1 +1,11 @@
 package Message.World.WorldManager.Protocol.W2WM;
+message MSG_W2WM_HEARTBEAT {
+	required int32 GroupId =  1;
+	required int32 SubId =  2;
+}
+
+message MSG_W2WM_REGISTER {
+	required int32 GroupId =  1;
+	required int32 SubId =  2;
+}
+

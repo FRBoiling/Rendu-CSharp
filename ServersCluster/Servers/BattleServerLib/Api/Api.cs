@@ -18,8 +18,8 @@ namespace BattleServerLib
             }
             InitProtocol();
 
-            //InitBattleManagerServer();
             InitClusterManagerServer();
+            //InitBattleManagerServer();
         }
 
         public override void Exit()
@@ -28,9 +28,9 @@ namespace BattleServerLib
 
         public override void Update()
         {
-            //m_BMServer.Update();
             TcpMgr.Inst.Update();
             m_CMServer.Update();
+            //m_BMServer.Update();
         }
 
         public override void ExcuteCommand(string cmd)

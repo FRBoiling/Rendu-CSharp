@@ -1,8 +1,6 @@
 ﻿using Message.BattleManager.ClusterManager.Protocol.BM2CM;
 using ServerFrameWork;
 using System;
-using System.Collections.Generic;
-using System.IO;
 using TcpLib;
 
 namespace BattleManagerServerLib
@@ -24,24 +22,24 @@ namespace BattleManagerServerLib
             _serverTag.Type = ServerType.ClusterManager;
         }
 
-        protected override AbstractParsePacket InitPacketParser()
-        {
-            return new Packet1();
-        }
-
         protected override void ConnectedComplete(bool ret)
         {
             if (ret)
             {
-                Console.WriteLine("connected to {0}"
-                    , ServerTag.Type);
+                Console.WriteLine("connected to {0} ip {1} port {2}"
+                    , ServerTag.Type,Ip,Port);
                 RequsetRegister();
             }
             else
             {
-                Console.WriteLine("connect failed, connect to {0} ip {4} port {5} again"
+                Console.WriteLine("connect failed, connect to {0} ip {1} port {2} again"
                     , ServerTag.Type, ServerTag.GroupId, ServerTag.SubId, Ip, Port);
             }
+        }
+
+        protected override AbstractParsePacket InitPacketParser()
+        {
+            return new Packet1();
         }
 
         protected override void DisconnectComplete()
@@ -52,7 +50,7 @@ namespace BattleManagerServerLib
 
         protected override void BindResponser()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void RequsetRegister()

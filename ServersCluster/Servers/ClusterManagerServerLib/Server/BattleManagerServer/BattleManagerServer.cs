@@ -8,7 +8,7 @@ using TcpLib;
 
 namespace ClusterManagerServerLib.Server
 {
-    public class BMServer : AbstractTcpServer
+    public class BattleManagerServer : AbstractTcpServer
     {
         ServerTag _tag = new ServerTag();
 
@@ -17,9 +17,9 @@ namespace ClusterManagerServerLib.Server
             get { return _tag; }
         }
 
-        private BMServerMgr _manager;
+        private BattleManagerServerMgr _manager;
 
-        public BMServer(BMServerMgr manager, ushort port)
+        public BattleManagerServer(BattleManagerServerMgr manager, ushort port)
             : base(port)
         {
             _manager = manager;

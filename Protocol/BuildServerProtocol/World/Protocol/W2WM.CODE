@@ -1,5 +1,18 @@
 package Message.World.WorldManager.Protocol.W2WM;
-module World.WorldManager.Protocol.W2WM 0x43000000;
+module World.WorldManager.Protocol W2WM 0x43000000;
+
 //===================================================================
 //========================World=>WorldManager========================
 //===================================================================
+
+message MSG_W2WM_HEARTBEAT 0x43000001
+{
+	required int32 GroupId = 1;
+	required int32 SubId = 2;
+}
+
+message MSG_W2WM_REGISTER 0x43000002
+{
+	required int32 GroupId = 1;
+	required int32 SubId = 2;
+}
