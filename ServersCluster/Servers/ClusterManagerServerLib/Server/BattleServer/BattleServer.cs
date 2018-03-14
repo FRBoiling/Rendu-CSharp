@@ -1,4 +1,5 @@
 ﻿using Engine.Foundation;
+using LogLib;
 using Message.Battle.ClusterManager.Protocol.B2CM;
 using ServerFrameWork;
 using System;
@@ -28,13 +29,13 @@ namespace ClusterManagerServerLib.Server
 
         protected override void AccpetComplete()
         {
-            Console.WriteLine("{0} server connected", _tag.Type);
+            Log.Info("{0} server connected", _tag.Type);
             _manager.AddAccpetServer(this);
         }
 
         protected override void DisconnectComplete()
         {
-            Console.WriteLine("{0} server disconnected", Tag.GetServerTagString());
+            Log.Info("{0} server disconnected", Tag.GetServerTagString());
             _manager.RemoveServer(this);
         }
 
@@ -56,7 +57,7 @@ namespace ClusterManagerServerLib.Server
             Name = _tag.Type.ToString();
             if (_manager.AddServer(this))
             {
-                Console.WriteLine("{0} regist succese", Tag.GetServerTagString());
+                Log.Info("{0} regist succese", Tag.GetServerTagString());
             }
         }
 
