@@ -22,7 +22,7 @@ namespace BattleServerLib
             //InitBattleManagerServer();
         }
 
-        public override void Exit()
+        public override void ExitServer()
         {
         }
 

@@ -44,7 +44,7 @@
     <Compile Include="FrameControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerType.cs" />
-    <Compile Include="ServerTag.cs" />
+    <Compile Include="ServerInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LogLib\LogLib.csproj">
