@@ -1,4 +1,5 @@
 ﻿using ClusterManagerServerLib;
+using LogLib;
 using ServerFrameWork;
 using System;
 using System.Threading;
@@ -17,7 +18,7 @@ namespace ClusterManagerServer
             }
             catch (Exception e)
             {
-                Console.WriteLine("{0} init failed:{1}", api.ApiTag.GetServerTagString(), e.ToString());
+                Log.Error("{0} init failed:{1}", api.ApiTag.GetServerTagString(), e.ToString());
                 api.Exit();
                 return;
             }
@@ -25,7 +26,7 @@ namespace ClusterManagerServer
             Thread thread = new Thread(api.MainLoop);
             thread.Start();
 
-            Console.WriteLine("{0} OnReady..", api.ApiTag.GetServerTagString());
+            Log.Info("{0} OnReady..", api.ApiTag.GetServerTagString());
 
             while (thread.IsAlive)
             {
@@ -34,7 +35,7 @@ namespace ClusterManagerServer
             }
 
             api.Exit();
-            Console.WriteLine("{0} Exit..", api.ApiTag.GetServerTagString());
+            Log.Info("{0} Exit..", api.ApiTag.GetServerTagString());
         }
     }
 }

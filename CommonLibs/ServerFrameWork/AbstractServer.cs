@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -86,21 +87,38 @@ namespace ServerFrameWork
         /// 初始化
         /// </summary>
         /// <param name="args"></param>
-        public void InitServer(string[] args)
+        public void Init(string[] args)
         {
             //StartMode = Mode.Auto;
             InitLogger();
-            Init(args);
+            InitServer(args);
+        }
+
+        /// <summary>
+        /// 退出
+        /// </summary>
+        public void Exit()
+        {
+
+            ExitServer();
         }
 
         /// <summary>
         /// 初始化LOG系统
         /// </summary>
-        public void InitLogger()
+        private void InitLogger()
         {
-            //var logger = new ServerLogger.ServerLogger("c:/log/");
-            //logger.Init(ServerName, true, true, true, true);
-            //LOG.InitLogger(logger);
+            var logger = new ConsoleLogger();
+            logger.Init(true,@"..\Log\", _apiTag.GetServerTagString());
+#if DEBUG
+            logger.SetPriority(4);
+#else
+            logger.SetPriority(2);
+#endif
+
+            Log.InitLog(logger);
+
+            Log.Info("InitLogger successed");
         }
 
         /// <summary>
@@ -134,23 +152,23 @@ namespace ServerFrameWork
         /// 初始化模块
         /// </summary>
         /// <param name="args"></param>
-        public abstract void Init(string[] args);
+        protected abstract void InitServer(string[] args);
 
         /// <summary>
         /// 退出
         /// </summary>
-        public abstract void Exit();
+        public abstract void ExitServer();
 
         /// <summary>
         /// 更新
         /// </summary>
-        public abstract void Update();
+        protected abstract void Update();
 
 
         /// <summary>
         /// 处理GM命令 没有后台 临时用控制台输入替代
         /// </summary>
-        public Queue<string> _cmdList = new Queue<string>();
+        protected Queue<string> _cmdList = new Queue<string>();
         /// <summary>
         /// 输入
         /// </summary>
@@ -190,7 +208,7 @@ namespace ServerFrameWork
                 }
             }
         }
-        public abstract void ExcuteCommand(string cmd);
+        protected abstract void ExcuteCommand(string cmd);
 
     }
 }

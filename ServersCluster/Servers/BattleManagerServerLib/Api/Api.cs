@@ -6,7 +6,7 @@ namespace BattleManagerServerLib
 {
     public partial class Api:AbstractServer
     {
-        public override void Init(string[] args)
+        protected override void InitServer(string[] args)
         {
             if (args.Length == 2)
             {
@@ -27,14 +27,14 @@ namespace BattleManagerServerLib
         {
         }
 
-        public override void Update()
+        protected override void Update()
         {
             TcpMgr.Inst.Update();
             m_CMServer.Update();
             //m_BattleServer.Update();
         }
 
-        public override void ExcuteCommand(string cmd)
+        protected override void ExcuteCommand(string cmd)
         {
         }
     }

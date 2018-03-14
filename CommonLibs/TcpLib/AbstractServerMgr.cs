@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogLib;
+using System;
 using System.Collections.Generic;
 using TcpLib.TcpSrc;
 
@@ -59,7 +60,7 @@ namespace TcpLib
         {
             if (server == null)
             {
-                Console.WriteLine("AddAccpet server failed:server is null");
+                Log.Error("AddAccpet server failed:server is null");
                 return;
             }
             else
@@ -75,7 +76,7 @@ namespace TcpLib
         {
             if (server == null)
             {
-                Console.WriteLine("RemoveServer server failed:server is null");
+                Log.Error("RemoveServer server failed:server is null");
                 return;
             }
             else
@@ -95,7 +96,7 @@ namespace TcpLib
         {
             if (server == null)
             {
-                Console.WriteLine("add server failed: server is null");
+                Log.Error("add server failed: server is null");
                 return false;
             }
             else
@@ -104,11 +105,12 @@ namespace TcpLib
                 if (_servers.TryGetValue(server.Key, out temp))
                 {
                     _removeServers.Add(server);
-                    Console.WriteLine("repeated regist ! server {0}_{1} already registed", temp.Name, temp.Key);
+                    Log.Warn(" server {0}_{1} repeated add !", temp.Name, temp.Key);
                     return false;
                 }
                 else
                 {
+                    Log.Warn("server {0}_{1} add success ! ", temp.Name, temp.Key);
                     _servers.Add(server.Key, server);
                     return true;
                 }

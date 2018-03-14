@@ -4,22 +4,22 @@ namespace WorldServerLib
 {
     public partial class Api : AbstractServer
     {
-        public override void Init(string[] args)
+        protected override void InitServer(string[] args)
         {
             throw new System.NotImplementedException();
         }
 
-        public override void Exit()
+        public override void ExitServer()
         {
             throw new System.NotImplementedException();
         }
 
-        public override void Update()
+        protected override void Update()
         {
             throw new System.NotImplementedException();
         }
 
-        public override void ExcuteCommand(string cmd)
+        protected override void ExcuteCommand(string cmd)
         {
             throw new System.NotImplementedException();
         }

@@ -65,6 +65,7 @@ namespace DataParserLib
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(e);
+                Console.ForegroundColor = ConsoleColor.Gray;
                 return null;
             }
 
@@ -96,6 +97,7 @@ namespace DataParserLib
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("idspace '{0}' -class '{1}' has more than one attribute named '{2}'.",_idspace,data.Id,attribute.Key);
+                    Console.ForegroundColor = ConsoleColor.Gray;
                 }
             }
         }
@@ -158,6 +160,7 @@ namespace DataParserLib
                 {
                     Console.WriteLine("File '{0}' has more than one header node .", _filename);
                 }
+                Console.ForegroundColor = ConsoleColor.Gray;
                 return false;
             }
             return true;

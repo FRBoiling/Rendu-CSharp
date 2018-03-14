@@ -1,11 +1,17 @@
 ﻿using StackExchange.Redis;
 using System;
+using System.Reflection;
 using System.Text.RegularExpressions;
 
 namespace ServersCluster
 {
     class Program
     {
+        enum type
+        {
+            aaa = 0,
+            bbb=2
+        }
         static void Main(string[] args)
         {
             // 
@@ -18,22 +24,15 @@ namespace ServersCluster
             //Regex reg = new Regex("^[a-zA-Z0-9\u4e00-\u9fa5]");
             Regex reg = new Regex("^[a-zA-Z0-9_\u4e00-\u9fa5]+$");  //只包含字母数字汉字下划线……【98
 
-            string strNihao  = "你好";
-            string strNihao1  = "你hao";
-            string strNihao2  = "你hao";
 
-            if (reg.IsMatch(strNihao2))
-            {
-                Console.WriteLine("------rrrr-------");
-            }
+            string strNow = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
 
-            string result = strNihao1.Substring(strNihao1.LastIndexOf("a")+1, strNihao1.Length - strNihao1.LastIndexOf("a")-1);
+            Console.WriteLine("-------111{0}111------",type.aaa);
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("-------222222------");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("-------333333------");
 
-            string rrr = "{{({0})}}{0}";
-            string rrr1= "{{({0})}}{0}1";
-            rrr = string.Format(rrr, rrr1);
-
-            Console.WriteLine("-------------");
             float x = (float)0.49;
             Console.WriteLine("-------------");
         }

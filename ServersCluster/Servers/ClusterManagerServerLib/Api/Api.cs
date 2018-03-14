@@ -5,7 +5,7 @@ namespace ClusterManagerServerLib
 {
     public partial class Api : AbstractServer
     {
-        public override void Init(string[] args)
+        protected override void InitServer(string[] args)
         {
             ApiTag.Type = ServerType.ClusterManager;
             if (args.Length>=2)
@@ -13,22 +13,21 @@ namespace ClusterManagerServerLib
                 ApiTag.GroupId = ushort.Parse(args[0]);
                 ApiTag.SubId = ushort.Parse(args[1]);
             }
-
             InitProtocol();
             InitServers();
         }
 
-        public override void Exit()
+        public override void ExitServer()
         {
         }
 
-        public override void Update()
+        protected override void Update()
         {
             TcpMgr.Inst.Update();
             UpdateServers();
         }
 
-        public override void ExcuteCommand(string cmd)
+        protected override void ExcuteCommand(string cmd)
         {
         }
     }
