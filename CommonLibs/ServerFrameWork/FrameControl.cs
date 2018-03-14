@@ -202,7 +202,7 @@ namespace ServerFrameWork
             }
             else
             {
-                //从0 开始这里是到9了，正好10秒
+                //从0开始到9，正好10秒
                 _averageFramesPerSecond = _statFrames / _statTimes;
                 _averageSleepTimesPerSecond = _statSleepTimes / _statTimes;
                 Process proc = Process.GetCurrentProcess();

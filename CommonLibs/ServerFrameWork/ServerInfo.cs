@@ -8,6 +8,9 @@ namespace ServerFrameWork
 {
     public class ServerInfo
     {
+        /// <summary>
+        /// 类型
+        /// </summary>
         private ServerType _type;
         public ServerType Type
         {
@@ -15,6 +18,9 @@ namespace ServerFrameWork
             set { _type = value; }
         }
 
+        /// <summary>
+        /// 组号
+        /// </summary>
         private ushort _groupId = 0;
         public ushort GroupId
         {
@@ -22,6 +28,9 @@ namespace ServerFrameWork
             set { _groupId = value; }
         }
 
+        /// <summary>
+        /// 编号
+        /// </summary>
         private ushort _subId = 0;
         public ushort SubId
         {
@@ -29,6 +38,9 @@ namespace ServerFrameWork
             set { _subId = value; }
         }
 
+        /// <summary>
+        /// IP
+        /// </summary>
         private string _ip = "127.0.0.1";
 
         public string Ip
@@ -37,7 +49,9 @@ namespace ServerFrameWork
             set { _ip = value; }
         }
 
-
+        /// <summary>
+        /// 端口
+        /// </summary>
         private int _port = 0;
 
         public int Port
@@ -46,12 +60,20 @@ namespace ServerFrameWork
             set { _port = value; }
         }
 
+        /// <summary>
+        /// 名字
+        /// </summary>
+        /// <returns></returns>
         public string GetServerTagString()
         {
             string tag = string.Format("{0}_{1}_{2}", _type.ToString(), _groupId, _subId);
             return tag;
         }
 
+        /// <summary>
+        /// 完整编号
+        /// </summary>
+        /// <returns></returns>
         public string GetServerKey()
         {
             string key = string.Format("{0}_{1}",  _groupId, _subId);
