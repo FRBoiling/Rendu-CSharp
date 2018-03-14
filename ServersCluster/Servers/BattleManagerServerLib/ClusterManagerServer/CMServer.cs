@@ -7,9 +7,9 @@ namespace BattleManagerServerLib
 {
     public class CMServer : AbstractTcpClient
     {
-        ServerTag _serverTag = new ServerTag();
+        ServerInfo _serverTag = new ServerInfo();
         Api _api = null;
-        public ServerTag ServerTag
+        public ServerInfo ServerTag
         {
             get { return _serverTag; }
             set { _serverTag = value; }
@@ -55,8 +55,7 @@ namespace BattleManagerServerLib
 
         public void RequsetRegister()
         {
-            Console.WriteLine("Requst Register to {0}"
-               , ServerTag.Type);
+            Console.WriteLine("Requst Register to {0}", ServerTag.Type);
             MSG_BM2CM_REGISTER requset = new MSG_BM2CM_REGISTER();
             requset.GroupId = _api.ApiTag.GroupId;
             requset.SubId = _api.ApiTag.SubId;

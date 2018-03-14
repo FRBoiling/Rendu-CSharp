@@ -20,7 +20,6 @@ namespace BattleServerLib
             m_CMServer.Connect();
         }
 
-
         BMServer m_BMServer;
         void InitBattleManagerServer()
         {

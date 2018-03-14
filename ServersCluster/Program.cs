@@ -26,9 +26,12 @@ namespace ServersCluster
             {
                 Console.WriteLine("------rrrr-------");
             }
-          
 
+            string result = strNihao1.Substring(strNihao1.LastIndexOf("a")+1, strNihao1.Length - strNihao1.LastIndexOf("a")-1);
 
+            string rrr = "{{({0})}}{0}";
+            string rrr1= "{{({0})}}{0}1";
+            rrr = string.Format(rrr, rrr1);
 
             Console.WriteLine("-------------");
             float x = (float)0.49;

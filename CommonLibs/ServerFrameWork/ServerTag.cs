@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ServerFrameWork
 {
-    public class ServerTag
+    public class ServerInfo
     {
         private ServerType _type;
         public ServerType Type

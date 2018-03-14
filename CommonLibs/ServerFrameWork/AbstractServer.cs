@@ -17,8 +17,8 @@ namespace ServerFrameWork
     }
     public abstract class AbstractServer
     {
-        ServerTag _apiTag = new ServerTag();
-        public ServerTag ApiTag
+        ServerInfo _apiTag = new ServerInfo();
+        public ServerInfo ApiTag
         {
             get { return _apiTag; }
             set { _apiTag = value; }

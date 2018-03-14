@@ -7,7 +7,7 @@ namespace DataParserLib
         INT,
         FLOAT,
         STRING,
-        //BOOL,
+        BOOL
     }
 
     public class Attribute : ICloneable

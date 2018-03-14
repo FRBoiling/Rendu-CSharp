@@ -7,9 +7,9 @@ namespace BattleServerLib
 {
     public class CMServer : AbstractTcpClient
     {
-        ServerTag _serverTag = new ServerTag();
+        ServerInfo _serverTag = new ServerInfo();
         Api _api = null;
-        public ServerTag ServerTag
+        public ServerInfo ServerTag
         {
             get { return _serverTag; }
             set { _serverTag = value; }

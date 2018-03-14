@@ -13,8 +13,8 @@ namespace BattleServerLib
     {
         Api _api = null;
 
-        ServerTag _serverTag = new ServerTag();
-        public ServerTag ServerTag
+        ServerInfo _serverTag = new ServerInfo();
+        public ServerInfo ServerTag
         {
             get { return _serverTag; }
         }

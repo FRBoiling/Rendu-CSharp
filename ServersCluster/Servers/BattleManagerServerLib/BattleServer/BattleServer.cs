@@ -12,9 +12,9 @@ namespace BattleManagerServerLib
 
     public class BattleServer : IOCPServer
     {
-        ServerTag _clientTag = new ServerTag();
+        ServerInfo _clientTag = new ServerInfo();
         Api _api = null;
-        public ServerTag ClientTag
+        public ServerInfo ClientTag
         {
             get { return _clientTag; }
             set { _clientTag = value; }

@@ -9,9 +9,9 @@ namespace ClusterManagerServerLib.Server
 {
     public class BattleServer : AbstractTcpServer
     {
-        ServerTag _tag = new ServerTag();
+        ServerInfo _tag = new ServerInfo();
 
-        public ServerTag Tag
+        public ServerInfo Tag
         {
             get { return _tag; }
         }
