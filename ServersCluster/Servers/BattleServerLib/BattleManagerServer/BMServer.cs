@@ -11,7 +11,7 @@ namespace BattleServerLib
 {
     public class BMServer : AbstractTcpClient
     {
-        Api _api = null;
+        private Api _api;
 
         ServerInfo _serverTag = new ServerInfo();
         public ServerInfo ServerTag

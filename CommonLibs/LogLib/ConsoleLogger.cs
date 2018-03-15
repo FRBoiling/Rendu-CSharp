@@ -43,6 +43,11 @@ namespace LogLib
             }
         }
 
+        public void SetLogo(string logo)
+        {
+            _logo = logo;
+        }
+
         public void SetPriority(int type =4)
         {
             _curPriority =type;

@@ -1,9 +1,12 @@
-﻿using LogLib;
+﻿using DataParserLib;
+using LogLib;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UtilityLib;
 
 namespace ServerFrameWork
 {
@@ -90,6 +93,8 @@ namespace ServerFrameWork
         public void Init(string[] args)
         {
             //StartMode = Mode.Auto;
+            InitPath();
+            InitXmlData();
             InitLogger();
             InitServer(args);
         }
@@ -104,12 +109,21 @@ namespace ServerFrameWork
         }
 
         /// <summary>
+        /// 初始化路径
+        /// </summary>
+        private void InitPath()
+        {
+            PathExt.InitPath();
+        }
+
+        /// <summary>
         /// 初始化LOG系统
         /// </summary>
         private void InitLogger()
         {
             var logger = new ConsoleLogger();
             logger.Init(true,@"..\Log\", _apiTag.GetServerTagString());
+            logger.SetLogo(_apiTag.GetServerKey());
 #if DEBUG
             logger.SetPriority(4);
 #else
@@ -119,6 +133,18 @@ namespace ServerFrameWork
             Log.InitLog(logger);
 
             Log.Info("InitLogger successed");
+        }
+
+        /// <summary>
+        /// 初始化XML数据
+        /// </summary>
+        private void InitXmlData()
+        {
+            string[] files = Directory.GetFiles(PathExt.FullPathFromData("XML"), "*.xml", SearchOption.AllDirectories);
+            foreach (var file in files)
+            {
+                XmlDataManager.Inst.Parse(file);
+            }
         }
 
         /// <summary>

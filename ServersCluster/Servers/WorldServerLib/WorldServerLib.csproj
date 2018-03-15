@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="protobuf-net, Version=2.0.0.640, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Protocol\Protobuf-net\ProtoGen\protobuf-net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,13 +44,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api.cs" />
+    <Compile Include="Api\Api.cs" />
+    <Compile Include="Api\Api_Init.cs" />
+    <Compile Include="Api\Api_Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servers\WorldManagerServer\WorldManagerServer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\CommonLibs\LogLib\LogLib.csproj">
+      <Project>{a3940522-54f7-45e4-98fd-c0f64550dee8}</Project>
+      <Name>LogLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\CommonLibs\ServerFrameWork\ServerFrameWork.csproj">
       <Project>{47ae13b1-3343-45e5-bcb4-3728995c1e95}</Project>
       <Name>ServerFrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CommonLibs\TcpLib\TcpLib.csproj">
+      <Project>{faeba880-aece-48bf-9510-af712a0bf80c}</Project>
+      <Name>TcpLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CommonLibs\UtilityLib\UtilityLib.csproj">
+      <Project>{5a8965f5-f0c9-4d46-9706-3281cf3a2331}</Project>
+      <Name>UtilityLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Protocol\ServerProtocol\ServerProtocol.csproj">
+      <Project>{94623506-6c6c-4a20-b93f-97bb1fd872de}</Project>
+      <Name>ServerProtocol</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
 ﻿using ServerFrameWork;
+using TcpLib.TcpSrc;
 
 namespace WorldServerLib
 {
@@ -6,7 +7,14 @@ namespace WorldServerLib
     {
         protected override void InitServer(string[] args)
         {
-            throw new System.NotImplementedException();
+            ApiTag.Type = ServerType.World;
+            if (args.Length >= 2)
+            {
+                ApiTag.GroupId = ushort.Parse(args[0]);
+                ApiTag.SubId = ushort.Parse(args[1]);
+            }
+            InitProtocol();
+            InitServers();
         }
 
         public override void ExitServer()
@@ -16,7 +24,8 @@ namespace WorldServerLib
 
         protected override void Update()
         {
-            throw new System.NotImplementedException();
+            TcpMgr.Inst.Update();
+            UpdateServers();
         }
 
         protected override void ExcuteCommand(string cmd)

@@ -14,7 +14,6 @@ namespace WorldServer
             AbstractServer api = new Api();
             try
             {
-                api.ApiTag.Type = ServerType.World;
                 api.Init(args);
             }
             catch (Exception e)
