@@ -22,7 +22,7 @@ namespace ServersCluster
             //Regex regChina = new Regex("^[^\x00-\xFF]");
             //Regex regEnglish = new Regex("^[a-zA-Z]");
             //Regex reg = new Regex("^[a-zA-Z0-9\u4e00-\u9fa5]");
-            Regex reg = new Regex("^[a-zA-Z0-9_\u4e00-\u9fa5]+$");  //只包含字母数字汉字下划线……【98
+            Regex reg = new Regex("^[a-zA-Z0-9_\u4e00-\u9fa5]+$");  //只包含字母数字汉字下划线……
 
             //int a = 2 ^ 4;
 

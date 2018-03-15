@@ -27,7 +27,7 @@ namespace BattleServer
             Thread thread = new Thread(api.MainLoop);
             thread.Start();
 
-            Log.Info("{0} OnReady..", api.ApiTag.GetServerTagString());
+            Log.Info("{0} is ready...", api.ApiTag.GetServerTagString());
 
             while (thread.IsAlive)
             {
@@ -36,7 +36,7 @@ namespace BattleServer
             }
 
             api.Exit();
-            Log.Info("{0} Exit..", api.ApiTag.GetServerTagString());
+            Log.Info("{0} is exit...", api.ApiTag.GetServerTagString());
         }
     }
 }
