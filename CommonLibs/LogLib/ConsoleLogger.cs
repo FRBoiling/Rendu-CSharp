@@ -101,7 +101,7 @@ namespace LogLib
         private string FormatLogString(LogType type, string log)
         {
             _now = DateTime.Now;
-            string info = string.Format("{0}{1}[{2}]{3}", _now.ToString("yyyy-MM-dd HH:mm:ss.fff"), _logo, type, log);
+            string info = string.Format("{0} {1}[{2}]{3}", _now.ToString("yyyy-MM-dd HH:mm:ss.fff"), _logo, type, log);
             return info;
         }
 

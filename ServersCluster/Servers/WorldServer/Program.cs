@@ -10,7 +10,6 @@ namespace WorldServer
     {
         static void Main(string[] args)
         {
-            //Api api = new Api();
             AbstractServer api = new Api();
             try
             {
@@ -18,7 +17,7 @@ namespace WorldServer
             }
             catch (Exception e)
             {
-                Log.Error("{0} init failed:{1}", api.ApiTag.Type, e.ToString());
+                Log.Error("{0} init failed:{1}", api.ApiTag.GetServerTagString(), e.ToString());
                 api.Exit();
                 return;
             }

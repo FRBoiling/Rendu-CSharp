@@ -92,11 +92,17 @@ namespace ServerFrameWork
         /// <param name="args"></param>
         public void Init(string[] args)
         {
+            if (args.Length >= 2)
+            {
+                ApiTag.GroupId = ushort.Parse(args[0]);
+                ApiTag.SubId = ushort.Parse(args[1]);
+            }
+            //log最先初始化
+            InitLogger();
             //StartMode = Mode.Auto;
             InitPath();
             InitXmlData();
-            InitLogger();
-            InitServer(args);
+            InitServer();
         }
 
         /// <summary>
@@ -104,7 +110,6 @@ namespace ServerFrameWork
         /// </summary>
         public void Exit()
         {
-
             ExitServer();
         }
 
@@ -114,6 +119,7 @@ namespace ServerFrameWork
         private void InitPath()
         {
             PathExt.InitPath();
+            Log.Info("InitPath successed");
         }
 
         /// <summary>
@@ -129,9 +135,7 @@ namespace ServerFrameWork
 #else
             logger.SetPriority(2);
 #endif
-
             Log.InitLog(logger);
-
             Log.Info("InitLogger successed");
         }
 
@@ -145,6 +149,7 @@ namespace ServerFrameWork
             {
                 XmlDataManager.Inst.Parse(file);
             }
+            Log.Info("InitXmlData successed");
         }
 
         /// <summary>
@@ -178,7 +183,7 @@ namespace ServerFrameWork
         /// 初始化模块
         /// </summary>
         /// <param name="args"></param>
-        protected abstract void InitServer(string[] args);
+        protected abstract void InitServer();
 
         /// <summary>
         /// 退出

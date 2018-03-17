@@ -10,7 +10,6 @@ namespace BattleServer
     {
         static void Main(string[] args)
         {
-            //Api api = new Api();
             AbstractServer api = new Api();
             try
             {

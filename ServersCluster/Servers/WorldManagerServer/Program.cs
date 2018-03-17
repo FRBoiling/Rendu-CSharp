@@ -10,11 +10,9 @@ namespace WorldManagerServer
     {
         static void Main(string[] args)
         {
-            //Api api = new Api();
             AbstractServer api = new Api();
             try
             {
-                api.ApiTag.Type = ServerType.WorldManager;
                 api.Init(args);
             }
             catch (Exception e)
