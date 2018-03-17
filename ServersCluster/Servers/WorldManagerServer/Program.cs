@@ -13,6 +13,7 @@ namespace WorldManagerServer
             AbstractServer api = new Api();
             try
             {
+                api.ApiTag.Type = ServerType.WorldManager;
                 api.Init(args);
             }
             catch (Exception e)

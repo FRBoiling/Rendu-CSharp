@@ -7,8 +7,6 @@ namespace WorldManagerServerLib
     {
         protected override void InitServer()
         {
-            ApiTag.Type = ServerType.WorldManager;
-
             InitConfig();
             InitProtocol();
             InitServers();
