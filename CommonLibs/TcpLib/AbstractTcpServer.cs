@@ -90,10 +90,8 @@ namespace TcpLib
 
         private void OnRecv(MemoryStream stream)
         {
-            int offset = 0;
-            byte[] buffer = stream.GetBuffer();
-            offset = _parser.UnpackPacket(stream, offset, buffer);
-            stream.Seek(offset, SeekOrigin.Begin);
+           int offset = _parser.UnpackPacket(stream);
+           stream.Seek(offset, SeekOrigin.Begin);
         }
 
         private void ProcessProtocal()

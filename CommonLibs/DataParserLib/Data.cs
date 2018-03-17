@@ -69,6 +69,33 @@ namespace DataParserLib
             }
         }
 
+        public short GetInt16(string key)
+        {
+            Attribute attr = Get(key);
+            if (attr == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return attr.GetInt16();
+            }
+        }
+
+        public ushort GetUInt16(string key)
+        {
+            Attribute attr = Get(key);
+            if (attr == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return attr.GetUInt16();
+            }
+        }
+
+
         public bool GetBoolean(string key)
         {
             Attribute attr = Get(key);

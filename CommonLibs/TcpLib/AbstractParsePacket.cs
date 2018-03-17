@@ -11,7 +11,7 @@ namespace TcpLib
         public delegate void Processer(MemoryStream stream, int uid = 0);
         private Dictionary<uint, Processer> _processers = new Dictionary<uint, Processer>();
 
-        public abstract int UnpackPacket(MemoryStream stream, int offset, byte[] buffer);
+        public abstract int UnpackPacket(MemoryStream stream);
         public abstract void PackPacket<T>(T msg, out MemoryStream head, out MemoryStream body, int uid = 0) where T : ProtoBuf.IExtensible;
         public abstract void OnProcessProtocal();
         public void AddProcesser(uint id, Processer processer)

@@ -51,6 +51,10 @@
     <Compile Include="Servers\WorldManagerServer\WorldManagerServer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\CommonLibs\DataParserLib\DataParserLib.csproj">
+      <Project>{3c6322ad-aa26-434f-ba7e-b4d7924b9bc7}</Project>
+      <Name>DataParserLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\CommonLibs\LogLib\LogLib.csproj">
       <Project>{a3940522-54f7-45e4-98fd-c0f64550dee8}</Project>
       <Name>LogLib</Name>

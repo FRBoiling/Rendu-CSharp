@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using TcpLib.TcpSrc;
+using UtilityLib;
 
 namespace TcpLib
 {
@@ -12,7 +13,7 @@ namespace TcpLib
 
         private Dictionary<string, AbstractTcpServer> _servers = new Dictionary<string, AbstractTcpServer>();
         private List<AbstractTcpServer> _removeServers = new List<AbstractTcpServer>();
-
+      
 
         public AbstractServerMgr()
         {
@@ -105,12 +106,12 @@ namespace TcpLib
                 if (_servers.TryGetValue(server.Key, out temp))
                 {
                     _removeServers.Add(server);
-                    Log.Warn(" server {0}_{1} repeated add !", temp.Name, temp.Key);
+                    Log.Warn("{0}_{1} repeated add !", temp.Name, temp.Key);
                     return false;
                 }
                 else
                 {
-                    Log.Warn("server {0}_{1} add success ! ", temp.Name, temp.Key);
+                    Log.Debug("{0}_{1} add success ! ", server.Name, server.Key);
                     _servers.Add(server.Key, server);
                     return true;
                 }

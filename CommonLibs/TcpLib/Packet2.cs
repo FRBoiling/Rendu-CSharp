@@ -24,32 +24,37 @@ namespace TcpLib
         private Queue<PacketInfo> m_msgQueue = new Queue<PacketInfo>();
         private Queue<PacketInfo> m_deal_msgQueue = new Queue<PacketInfo>();
 
-        public override int UnpackPacket(MemoryStream stream, int offset, byte[] buffer)
+        public override int UnpackPacket(MemoryStream stream)
         {
-            while ((stream.Length - offset) > sizeof(UInt16))
+            byte[] buffer = stream.GetBuffer();
+            int offset = 0;
+            int pos = 0;
+            while (stream.Length > sizeof(UInt16))
             {
                 UInt16 size = BitConverter.ToUInt16(buffer, offset);
-                if (size + PacketInfo.Size > stream.Length - offset)
+                offset += sizeof(UInt16);
+                if (size > stream.Length - offset)
                 {
                     break;
                 }
 
-                UInt32 msg_id = BitConverter.ToUInt32(buffer, offset + 2);
-                Int32 uid = BitConverter.ToInt32(buffer, offset + 6);
+                UInt32 msg_id = BitConverter.ToUInt32(buffer, offset);
+                offset += sizeof(UInt32);
+                Int32 uid = BitConverter.ToInt32(buffer, offset);
+                offset += sizeof(Int32);
 
                 PacketInfo packet = new PacketInfo(msg_id, uid);
 
                 byte[] content = new byte[size];
-                Array.Copy(buffer, offset + PacketInfo.Size, content, 0, size);
-                packet.Msg = new MemoryStream(content, 0, size, true, true);
-
-                //MemoryStream msg = new MemoryStream(buffer, offset + 10, size, true, true);
+                Array.Copy(buffer, offset, content, 0, size);
+                packet.Msg = new MemoryStream(content, offset, size, true, true);
 
                 lock (m_msgQueue)
                 {
                     m_msgQueue.Enqueue(packet);
                 }
-                offset += (size + PacketInfo.Size);
+                offset += size;
+                pos = offset;
             }
 
             return offset;

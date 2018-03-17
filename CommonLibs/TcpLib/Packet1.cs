@@ -11,26 +11,34 @@ namespace TcpLib
         private Queue<KeyValuePair<UInt32, MemoryStream>> m_msgQueue = new Queue<KeyValuePair<uint, MemoryStream>>();
         private Queue<KeyValuePair<UInt32, MemoryStream>> m_deal_msgQueue = new Queue<KeyValuePair<uint, MemoryStream>>();
 
-        public override int UnpackPacket(MemoryStream stream, int offset, byte[] buffer)
+        public override int UnpackPacket(MemoryStream stream)
         {
-            while ((stream.Length - offset) > sizeof(UInt16))
+            byte[] buffer = stream.GetBuffer();
+            int offset = 0;
+            int pos = 0;
+            while (stream.Length > sizeof(UInt16))
             {
                 UInt16 size = BitConverter.ToUInt16(buffer, offset);
-                if (size + PacketHead.Size > stream.Length - offset)
+                offset += sizeof(UInt16);
+                if (size > stream.Length - offset)
                 {
                     break;
                 }
 
-                UInt32 msg_id = BitConverter.ToUInt32(buffer, offset + sizeof(UInt16));
-                MemoryStream msg = new MemoryStream(buffer, offset + PacketHead.Size, size, true, true);
+                UInt32 msg_id = BitConverter.ToUInt32(buffer, offset);
+                offset += sizeof(UInt32);
+                //byte[] content = new byte[size];
+                //Array.Copy(buffer, offset , content, 0, size);
+                MemoryStream msg = new MemoryStream(buffer, offset, size, true, true);
                 lock (m_msgQueue)
                 {
                     m_msgQueue.Enqueue(new KeyValuePair<uint, MemoryStream>(msg_id, msg));
                 }
-                offset += (size + PacketHead.Size);
+                offset += size ;
+                pos = offset;
             }
 
-            return offset;
+            return pos;
         }
 
         public override void PackPacket<T>(T msg, out MemoryStream head, out MemoryStream body, int uid = 0)
@@ -40,8 +48,8 @@ namespace TcpLib
 
             head = new MemoryStream(sizeof(ushort) + sizeof(uint));
             ushort len = (ushort)body.Length;
-            head.Write(BitConverter.GetBytes(len), 0, 2);
-            head.Write(BitConverter.GetBytes(Id<T>.Value), 0, 4);
+            head.Write(BitConverter.GetBytes(len), 0, sizeof(ushort));
+            head.Write(BitConverter.GetBytes(Id<T>.Value), 0, sizeof(uint));
         }
 
         public override void OnProcessProtocal()

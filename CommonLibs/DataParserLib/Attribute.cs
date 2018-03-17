@@ -5,6 +5,7 @@ namespace DataParserLib
     public enum AttributeValueType
     {
         INT,
+        SHORT,
         FLOAT,
         STRING,
         BOOL
@@ -64,6 +65,55 @@ namespace DataParserLib
             }
             return ret;
         }
+
+        /// <summary>
+        /// 取short值
+        /// </summary>
+        /// <returns></returns>
+        public short GetInt16()
+        {
+            short ret = 0;
+            switch (_type)
+            {
+                case AttributeValueType.INT:
+                    short.TryParse(_value.ToString().Trim(), out ret);
+                    break;
+                case AttributeValueType.FLOAT:
+                    ret = (short)(float)_value;
+                    break;
+                case AttributeValueType.STRING:
+                //case AttributeValueType.BOOL:
+                default:
+                    ret = (short)_value;
+                    break;
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// 取UInt16值
+        /// </summary>
+        /// <returns></returns>
+        public ushort GetUInt16()
+        {
+            ushort ret = 0;
+            switch (_type)
+            {
+                case AttributeValueType.INT:
+                    ushort.TryParse(_value.ToString().Trim(), out ret);
+                    break;
+                case AttributeValueType.FLOAT:
+                    ret = (ushort)(float)_value;
+                    break;
+                case AttributeValueType.STRING:
+                //case AttributeValueType.BOOL:
+                default:
+                    ret = (ushort)_value;
+                    break;
+            }
+            return ret;
+        }
+
 
         /// <summary>
         /// 取string值

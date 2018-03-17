@@ -8,7 +8,11 @@
             Message.World.WorldManager.Protocol.W2WM.Api.GenerateId();
         }
 
-      
-      
+        void InitConfig()
+        {
+
+
+        }
+
     }
 }

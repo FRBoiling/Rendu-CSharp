@@ -5,17 +5,9 @@ namespace BattleServerLib
 {
     public partial class Api : AbstractServer
     {
-        protected override void InitServer(string[] args)
+        protected override void InitServer()
         {
-            if (args.Length == 2)
-            {
-                ApiTag.GroupId = ushort.Parse(args[0]);
-                ApiTag.SubId = ushort.Parse(args[1]);
-            }
-            else
-            {
-
-            }
+            ApiTag.Type = ServerType.Battle;
             InitProtocol();
 
             InitClusterManagerServer();

@@ -1,12 +1,17 @@
 ﻿using ServerFrameWork;
+using TcpLib.TcpSrc;
 
 namespace WorldManagerServerLib
 {
     public partial class Api : AbstractServer
     {
-        protected override void InitServer(string[] args)
+        protected override void InitServer()
         {
-            throw new System.NotImplementedException();
+            ApiTag.Type = ServerType.WorldManager;
+
+            InitConfig();
+            InitProtocol();
+            InitServers();
         }
 
         public override void ExitServer()
@@ -16,7 +21,8 @@ namespace WorldManagerServerLib
 
         protected override void Update()
         {
-            throw new System.NotImplementedException();
+            TcpMgr.Inst.Update();
+            UpdateServers();
         }
 
         protected override void ExcuteCommand(string cmd)

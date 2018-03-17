@@ -97,9 +97,7 @@ namespace TcpLib
 
         private void OnRecv(MemoryStream stream)
         {
-            int offset = 0;
-            byte[] buffer = stream.GetBuffer();
-            offset = _parser.UnpackPacket(stream, offset, buffer);
+            int offset = _parser.UnpackPacket(stream);
             stream.Seek(offset, SeekOrigin.Begin);
         }
 
@@ -115,8 +113,8 @@ namespace TcpLib
 
         public bool Send<T>(T msg) where T : global::ProtoBuf.IExtensible
         {
-            MemoryStream body, head;
-            _parser.PackPacket(msg, out body, out head);
+            MemoryStream head,body;
+            _parser.PackPacket(msg, out head, out body);
             return Send(head, body);
         }
 

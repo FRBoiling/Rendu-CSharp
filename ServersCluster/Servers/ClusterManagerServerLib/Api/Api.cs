@@ -5,14 +5,11 @@ namespace ClusterManagerServerLib
 {
     public partial class Api : AbstractServer
     {
-        protected override void InitServer(string[] args)
+        protected override void InitServer()
         {
             ApiTag.Type = ServerType.ClusterManager;
-            if (args.Length>=2)
-            {
-                ApiTag.GroupId = ushort.Parse(args[0]);
-                ApiTag.SubId = ushort.Parse(args[1]);
-            }
+
+            InitConfig();
             InitProtocol();
             InitServers();
         }

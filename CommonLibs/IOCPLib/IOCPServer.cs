@@ -665,7 +665,7 @@ namespace IOCPLib
                             _serverSock = null;
                         }
                     }
-                    catch (SocketException ex)
+                    catch (SocketException e)
                     {
                         //TODO 事件  
                     }

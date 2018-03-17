@@ -3,9 +3,6 @@ using LogLib;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UtilityLib;
 
 namespace ServerFrameWork
@@ -25,7 +22,6 @@ namespace ServerFrameWork
         public ServerInfo ApiTag
         {
             get { return _apiTag; }
-            set { _apiTag = value; }
         }
 
         //private Mode _startMode;

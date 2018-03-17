@@ -11,7 +11,6 @@ namespace TcpLib.TcpSrc
         private Socket _workSocket = null;
         private ushort _listenPort;
 
-
         private bool _needListenHeartBeat = true;  //需要监听
         public bool NeedListenHeartBeat { get => _needListenHeartBeat; set => _needListenHeartBeat = value; }
 
