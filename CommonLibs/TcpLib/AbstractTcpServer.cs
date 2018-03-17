@@ -98,6 +98,7 @@ namespace TcpLib
         {
             _parser.OnProcessProtocal();
         }
+        protected abstract void ProcessLogic();
 
         protected void AddProcesser(uint msgId, AbstractParsePacket.Processer processer)
         {
@@ -130,9 +131,10 @@ namespace TcpLib
             return true;
         }
 
-        public void Update()
+        public void Process()
         {
             ProcessProtocal();
+            ProcessLogic();
         }
 
     }

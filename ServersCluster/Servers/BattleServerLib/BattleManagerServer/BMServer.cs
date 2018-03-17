@@ -76,6 +76,9 @@ namespace BattleServerLib
             return new Packet1();
         }
 
-   
+        protected override void ProcessLogic()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

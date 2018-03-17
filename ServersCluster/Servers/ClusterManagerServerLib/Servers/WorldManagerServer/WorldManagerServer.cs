@@ -73,8 +73,9 @@ namespace ClusterManagerServerLib.Server
             }
         }
 
-
-
-    
+        protected override void ProcessLogic()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

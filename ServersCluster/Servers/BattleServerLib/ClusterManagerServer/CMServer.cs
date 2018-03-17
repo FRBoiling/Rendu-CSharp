@@ -61,7 +61,9 @@ namespace BattleServerLib
             Send(requset);
         }
 
-
-    
+        protected override void ProcessLogic()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -8,7 +8,7 @@ using TcpLib;
 
 namespace WorldServerLib
 {
-    public class WorldManagerServer : AbstractTcpClient
+    public partial class WorldManagerServer : AbstractTcpClient
     {
         private Api _api;
 
@@ -31,7 +31,6 @@ namespace WorldServerLib
         {
             AddProcesser(Id<MSG_WM2W_RETRUN_REGISTER>.Value, OnResponse_Regist);
         }
-
 
         protected override void ConnectedComplete(bool ret)
         {
@@ -58,23 +57,30 @@ namespace WorldServerLib
             return new Packet1();
         }
 
+        protected override void ProcessLogic()
+        {
+        }
+
+
         public void RequsetRegister()
         {
             MSG_W2WM_REGISTER requset = new MSG_W2WM_REGISTER();
             requset.GroupId = _api.ApiTag.GroupId;
             requset.SubId = _api.ApiTag.SubId;
             Send(requset);
-            Log.Info("request register to {0}", Tag.Type);
+            Log.Info("request register to {0}", _tag.Type);
         }
 
         private void OnResponse_Regist(MemoryStream stream, int uid)
         {
             MSG_WM2W_RETRUN_REGISTER msg = ProtoBuf.Serializer.Deserialize<MSG_WM2W_RETRUN_REGISTER>(stream);
-            Tag.GroupId = (ushort)msg.GroupId;
-            Tag.SubId = (ushort)msg.SubId;
-            Tag.Ip = Ip;
-            Tag.Port = Port;
+            //_tag.GroupId = (ushort)msg.GroupId;
+            //_tag.SubId = (ushort)msg.SubId;
+            //_tag.Ip = Ip;
+            //_tag.Port = Port;
             Log.Info("registed success to {0}", Tag.GetServerTagString());
         }
+
+  
     }
 }

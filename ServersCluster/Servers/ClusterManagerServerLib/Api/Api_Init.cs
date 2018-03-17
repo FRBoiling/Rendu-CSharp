@@ -23,7 +23,6 @@ namespace ClusterManagerServerLib
             Message.World.ClusterManager.Protocol.W2CM.Api.GenerateId();
         }
 
-        ushort Port;
 
         void InitConfig()
         {

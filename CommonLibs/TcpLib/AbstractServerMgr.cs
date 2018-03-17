@@ -39,7 +39,7 @@ namespace TcpLib
                 {
                     try
                     {
-                        item.Update();
+                        item.Process();
                     }
                     catch (Exception e)
                     {

@@ -22,7 +22,7 @@ namespace BattleManagerServerLib
         protected override void Update()
         {
             TcpMgr.Inst.Update();
-            m_CMServer.Update();
+            m_CMServer.Process();
             //m_BattleServer.Update();
         }
 

@@ -48,6 +48,7 @@
     <Compile Include="Api\Api_Init.cs" />
     <Compile Include="Api\Api_Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servers\WorldManagerServer\WorldManagerServer_HeartBeat.cs" />
     <Compile Include="Servers\WorldManagerServer\WorldManagerServer.cs" />
   </ItemGroup>
   <ItemGroup>

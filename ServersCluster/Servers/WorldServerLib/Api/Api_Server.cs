@@ -38,7 +38,7 @@ namespace WorldServerLib
 
         private void UpdateServers()
         {
-            _worldManagerServer.Update();
+            _worldManagerServer.Process();
         }
     }
 }

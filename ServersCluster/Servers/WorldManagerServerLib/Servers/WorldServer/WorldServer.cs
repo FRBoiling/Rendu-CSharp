@@ -8,7 +8,7 @@ using TcpLib;
 
 namespace WorldManagerServerLib
 {
-    public class WorldServer : AbstractTcpServer
+    public partial class WorldServer : AbstractTcpServer
     {
         ServerInfo _tag = new ServerInfo();
 
@@ -49,6 +49,12 @@ namespace WorldManagerServerLib
         protected override void BindResponser()
         {
             AddProcesser(Id<MSG_W2WM_REGISTER>.Value, OnResponse_Regist);
+            AddProcesser(Id<MSG_W2WM_HEARTBEAT>.Value, OnResponse_HeartBeat);
+        }
+
+        protected override void ProcessLogic()
+        {
+            
         }
 
         private void OnResponse_Regist(MemoryStream stream,int uid)
@@ -64,7 +70,6 @@ namespace WorldManagerServerLib
             response.SubId = _api.ApiTag.SubId;
             if (_manager.AddServer(this))
             {
-               
                 Log.Info("{0} regist succese", Tag.GetServerTagString());
             }
             else
@@ -73,6 +78,6 @@ namespace WorldManagerServerLib
             }
         }
 
-
+    
     }
 }
