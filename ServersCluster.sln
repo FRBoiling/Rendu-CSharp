@@ -70,6 +70,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleClient", "SimpleClien
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyLib", "SimpleClient\Libs\AssemblyLib\AssemblyLib.csproj", "{486E6984-DC21-4E22-8C64-AE904423DA9A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bin", "Bin", "{843CA0C8-61F0-4D1F-AB6A-70F17BF059D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{66CF9872-7234-475A-A833-5E915739A260}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XML", "XML", "{7CDC0FE6-360E-4AB6-AE00-9BD9E8434F17}"
+	ProjectSection(SolutionItems) = preProject
+		Bin\Data\XML\RedisConfig.xml = Bin\Data\XML\RedisConfig.xml
+		Bin\Data\XML\ServerConfig.xml = Bin\Data\XML\ServerConfig.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Debug", "Debug", "{3F738300-ED33-4558-9862-1FB26AA29EDE}"
+	ProjectSection(SolutionItems) = preProject
+		Bin\Debug\StartServer.bat = Bin\Debug\StartServer.bat
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release", "Release", "{67C86B9F-A126-4A5D-8D30-F1850F62394F}"
+	ProjectSection(SolutionItems) = preProject
+		Bin\Release\StartServer.bat = Bin\Release\StartServer.bat
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -416,6 +436,10 @@ Global
 		{F3ED8797-E136-409D-BE6D-659AA83E7835} = {57F153B5-21FE-4D91-9586-D5CB96BB8B97}
 		{E3282A2A-3DDA-44D5-A88C-3CCA19A49343} = {3124CEF5-C9A3-4DB6-8692-1F00539E74A3}
 		{486E6984-DC21-4E22-8C64-AE904423DA9A} = {3124CEF5-C9A3-4DB6-8692-1F00539E74A3}
+		{66CF9872-7234-475A-A833-5E915739A260} = {843CA0C8-61F0-4D1F-AB6A-70F17BF059D4}
+		{7CDC0FE6-360E-4AB6-AE00-9BD9E8434F17} = {66CF9872-7234-475A-A833-5E915739A260}
+		{3F738300-ED33-4558-9862-1FB26AA29EDE} = {843CA0C8-61F0-4D1F-AB6A-70F17BF059D4}
+		{67C86B9F-A126-4A5D-8D30-F1850F62394F} = {843CA0C8-61F0-4D1F-AB6A-70F17BF059D4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CB6EA2E6-5D6A-4936-9BCA-75F12AA85630}
