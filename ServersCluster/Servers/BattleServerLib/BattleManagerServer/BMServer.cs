@@ -71,10 +71,6 @@ namespace BattleServerLib
             Console.WriteLine("registed success to {0}", ServerTag.GetServerTagString());
         }
 
-        protected override AbstractParsePacket InitPacketParser()
-        {
-            return new Packet1();
-        }
 
         protected override void ProcessLogic()
         {

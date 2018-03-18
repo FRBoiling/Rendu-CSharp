@@ -34,10 +34,7 @@ namespace BattleServerLib
                 Console.WriteLine("connect failed, connect to {0} ip {1} port {2} again", ServerTag.Type, Ip, Port);
             }
         }
-        protected override AbstractParsePacket InitPacketParser()
-        {
-            return new Packet1();
-        }
+
 
         protected override void DisconnectComplete()
         {

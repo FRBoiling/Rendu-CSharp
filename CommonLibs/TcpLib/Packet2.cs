@@ -60,18 +60,7 @@ namespace TcpLib
             return offset;
         }
 
-        public override void PackPacket<T>(T msg, out MemoryStream head, out MemoryStream body, int uid = 0)
-        {
-            body = new MemoryStream();
-            ProtoBuf.Serializer.Serialize(body, msg);
-
-            head = new MemoryStream(sizeof(ushort) + sizeof(uint));
-            ushort len = (ushort)body.Length;
-            head.Write(BitConverter.GetBytes(len), 0, 2);
-            head.Write(BitConverter.GetBytes(Id<T>.Value), 0, 4);
-        }
-
-        public override void OnProcessProtocal()
+        public override void Process()
         {
             lock (m_msgQueue)
             {
@@ -88,5 +77,20 @@ namespace TcpLib
             }
         }
 
+        public override void PackPacket<T>(T msg, out MemoryStream head, out MemoryStream body)
+        {
+            body = new MemoryStream();
+            ProtoBuf.Serializer.Serialize(body, msg);
+
+            head = new MemoryStream(sizeof(ushort) + sizeof(uint));
+            ushort len = (ushort)body.Length;
+            head.Write(BitConverter.GetBytes(len), 0, 2);
+            head.Write(BitConverter.GetBytes(Id<T>.Value), 0, 4);
+        }
+
+        public override void PackPacket<T>(T msg, int uid, out MemoryStream head, out MemoryStream body)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

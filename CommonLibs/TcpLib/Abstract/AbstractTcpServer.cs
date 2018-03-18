@@ -1,16 +1,12 @@
-﻿using Engine.Foundation;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
-using System.Net;
-using System.Net.Sockets;
 using TcpLib.TcpSrc;
 
 namespace TcpLib
 {
-    public abstract class AbstractTcpServer
+    public abstract class AbstractTcpServer : ITcpServer
     {
-        private Tcp _tcp = new Tcp();
+        private ITcp _tcp = new Tcp();
         string _key = "0_0";
         public string Key { get => _key; set => _key = value; }
 
@@ -24,12 +20,13 @@ namespace TcpLib
             get { return _listenPort; }
         }
 
-        AbstractParsePacket _parser;
+        IPacketOperate _packetOperate;
+        IProtocolProcess _protocolProcess;
 
         public AbstractTcpServer(ushort port)
         {
             _listenPort = port;
-            InitPacketPareser();
+            InitParser();
             BindResponser();
             InitTcp();
         }
@@ -41,11 +38,6 @@ namespace TcpLib
             _tcp.OnAccept = OnAccpet;
             _tcp.OnRecv = OnRecv;
             _tcp.OnDisconnect = OnDisconnect;
-        }
-
-        private void InitPacketPareser()
-        {
-            _parser = InitPacketParser();
         }
 
         public void StartListen(ushort port, bool needListenHeatBeat = false)
@@ -86,30 +78,29 @@ namespace TcpLib
         /// </summary>
         protected abstract void AccpetComplete();
 
-        protected abstract AbstractParsePacket InitPacketParser();
 
         private void OnRecv(MemoryStream stream)
         {
-           int offset = _parser.UnpackPacket(stream);
+           int offset = _packetOperate.UnpackPacket(stream);
            stream.Seek(offset, SeekOrigin.Begin);
         }
 
         private void ProcessProtocal()
         {
-            _parser.OnProcessProtocal();
+            _protocolProcess.Process();
         }
         protected abstract void ProcessLogic();
 
-        protected void AddProcesser(uint msgId, AbstractParsePacket.Processer processer)
+        protected void AddProcesser(uint msgId, ProtocolProcessHandler.Processer processer)
         {
-            _parser.AddProcesser(msgId, processer);
+            _protocolProcess.AddProcesser(msgId, processer);
         }
 
 
         public bool Send<T>(T msg) where T : global::ProtoBuf.IExtensible
         {
             MemoryStream body, head;
-            _parser.PackPacket(msg, out body, out head);
+            _packetOperate.PackPacket(msg, out body, out head);
             return Send(head, body);
         }
 
@@ -137,5 +128,17 @@ namespace TcpLib
             ProcessLogic();
         }
 
+        public void InitParser()
+        {
+            Packet1 packet = new Packet1();
+            _packetOperate = packet;
+            _protocolProcess = packet;
+        }
+
+        public void SetParser(AbstractParsePacket packet)
+        {
+            _packetOperate = packet;
+            _protocolProcess = packet;
+        }
     }
 }

@@ -52,11 +52,6 @@ namespace WorldServerLib
             , Tag.GetServerTagString());
         }
 
-        protected override AbstractParsePacket InitPacketParser()
-        {
-            return new Packet1();
-        }
-
         protected override void ProcessLogic()
         {
         }

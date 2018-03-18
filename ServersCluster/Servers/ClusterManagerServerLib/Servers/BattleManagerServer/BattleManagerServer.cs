@@ -62,11 +62,6 @@ namespace ClusterManagerServerLib.Server
             }
         }
 
-        protected override AbstractParsePacket InitPacketParser()
-        {
-            return new Packet1();
-        }
-
         protected override void ProcessLogic()
         {
             throw new NotImplementedException();

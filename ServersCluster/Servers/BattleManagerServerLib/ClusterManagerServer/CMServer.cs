@@ -37,11 +37,6 @@ namespace BattleManagerServerLib
             }
         }
 
-        protected override AbstractParsePacket InitPacketParser()
-        {
-            return new Packet1();
-        }
-
         protected override void DisconnectComplete()
         {
             Console.WriteLine("switch off from {0}"
