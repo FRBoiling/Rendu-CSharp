@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F3ED8797-E136-409D-BE6D-659AA83E7835}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GateServerLib</RootNamespace>
+    <AssemblyName>GateServerLib</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\Api.cs" />
+    <Compile Include="Api\Api_Init.cs" />
+    <Compile Include="Api\Api_Client.cs" />
+    <Compile Include="Api\Api_Server.cs" />
+    <Compile Include="Clients\Client.cs" />
+    <Compile Include="Clients\ClientMgr.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\CommonLibs\DataParserLib\DataParserLib.csproj">
+      <Project>{3c6322ad-aa26-434f-ba7e-b4d7924b9bc7}</Project>
+      <Name>DataParserLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CommonLibs\LogLib\LogLib.csproj">
+      <Project>{a3940522-54f7-45e4-98fd-c0f64550dee8}</Project>
+      <Name>LogLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CommonLibs\ServerFrameWork\ServerFrameWork.csproj">
+      <Project>{47ae13b1-3343-45e5-bcb4-3728995c1e95}</Project>
+      <Name>ServerFrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CommonLibs\TcpLib\TcpLib.csproj">
+      <Project>{faeba880-aece-48bf-9510-af712a0bf80c}</Project>
+      <Name>TcpLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CommonLibs\UtilityLib\UtilityLib.csproj">
+      <Project>{5a8965f5-f0c9-4d46-9706-3281cf3a2331}</Project>
+      <Name>UtilityLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Protocol\ServerProtocol\ServerProtocol.csproj">
+      <Project>{94623506-6c6c-4a20-b93f-97bb1fd872de}</Project>
+      <Name>ServerProtocol</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Servers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
