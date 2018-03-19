@@ -17,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\..\..\Bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;#define ASSEMBLY</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -64,10 +64,6 @@
     <ProjectReference Include="..\AssemblyLib\AssemblyLib.csproj">
       <Project>{486e6984-dc21-4e22-8c64-ae904423da9a}</Project>
       <Name>AssemblyLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ClientLib\ClientLib.csproj">
-      <Project>{d0c97b29-c5ab-4ecb-a3ca-bede79585766}</Project>
-      <Name>ClientLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

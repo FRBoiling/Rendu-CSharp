@@ -1,5 +1,7 @@
 ﻿using AssemblyLib;
+#if !ASSEMBLY
 using ClientLib;
+#endif
 using System.Collections.Generic;
 using System.Reflection;
 
@@ -7,14 +9,20 @@ namespace ApiLib
 {
     public partial class Api
     {
+#if ASSEMBLY
         object objInfo;
+#else
         GateServer server;
- 
+#endif
+
         public bool InitSocket()
         {
-            //return InitSocket_Assembly();
+#if ASSEMBLY
+            return InitSocket_Assembly();
+#else
             server = new GateServer();
             return true;
+#endif
         }
 
         private void Connect2GateServer()
@@ -34,47 +42,67 @@ namespace ApiLib
 
         void InitConnectInfo(string ip, ushort port)
         {
-            //InitConnectInfo_Assembly(ip, port);
+#if ASSEMBLY
+            InitConnectInfo_Assembly(ip, port);
+#else
             server.InitConnectInfo(ip, port);
+#endif
         }
-
 
 
         public void ExitSocket()
         {
-            //ExitSocket_Assembly();
+#if ASSEMBLY
+            ExitSocket_Assembly();
+#else
             server.Exit();
+#endif      
         }
 
         public void ReConnect()
         {
-            //Connect_Assembly();
+#if ASSEMBLY
+            Connect_Assembly();
+#else
             server.ReConnect();
+#endif      
         }
 
 
         void ProcessLogic()
         {
-            //Process_Assembly();
+#if ASSEMBLY
+            Process_Assembly();
+#else
             server.Process();
+#endif      
         }
 
         public object RouteInit(string key)
         {
-            //return RouteInit_Assembly(key);
+#if ASSEMBLY
+            return RouteInit_Assembly(key);
+#else
             return server.RouteInit(key);
+#endif      
         }
 
         public object RouteGet(string key)
         {
-            //return RouteGet_Assembly(key);
+#if ASSEMBLY
+            return RouteGet_Assembly(key);
+#else
             return server.RouteGet(key);
+#endif      
         }
 
         public void RouteSend(string key, object msg)
         {
-            //RouteSend_Assembly(key, msg);
+#if ASSEMBLY
+           RouteSend_Assembly(key, msg);
+#else
             server.RouteSend(key,msg);
+#endif      
         }
 
 
@@ -89,7 +117,6 @@ namespace ApiLib
                 return false;
             }
             return true;
-
         }
 
         void InitConnectInfo_Assembly(string ip, ushort port)
@@ -98,10 +125,8 @@ namespace ApiLib
             {
                 return;
             }
-            //_gateServer = new GateServer(this, ip, port);
-            //_gateServer.Tag.GroupId = groupId;
-            //_gateServer.Tag.SubId = subId;
-            object[] parameters = new object[] { this, ip, port };
+
+            object[] parameters = new object[] { ip, port };
             MethodInfo meth = objInfo.GetType().GetMethod("InitConnectInfo");
             meth.Invoke(objInfo, parameters);
         }
