@@ -31,7 +31,7 @@ namespace WorldServerLib
                     _worldManagerServer = new WorldManagerServer(this, ip, port);
                     _worldManagerServer.Tag.GroupId = groupId;
                     _worldManagerServer.Tag.SubId = subId;
-                    _worldManagerServer.Connect();
+                    _worldManagerServer.ReConnect();
                 }
             }
         }

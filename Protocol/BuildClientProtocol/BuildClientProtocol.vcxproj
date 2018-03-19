@@ -24,8 +24,8 @@
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).code.cs</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).code.cs</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -81,7 +81,7 @@
     </Link>
     <PostBuildEvent>
       <Command>xcopy .\*.cs $(ProjectDir)..\ClientProtocol\ /s /y /d
-xcopy .\*.cs $(ProjectDir)..\ServerProtocol\ /s /y /d</Command>
+ xcopy .\*.cs $(ProjectDir)..\ServerProtocol\ /s /y /d</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -103,7 +103,7 @@ xcopy .\*.cs $(ProjectDir)..\ServerProtocol\ /s /y /d</Command>
     </Link>
     <PostBuildEvent>
       <Command>xcopy .\*.cs $(ProjectDir)..\ClientProtocol\ /s /y /d
-xcopy .\*.cs $(ProjectDir)..\ServerProtocol\ /s /y /d</Command>
+ xcopy .\*.cs $(ProjectDir)..\ServerProtocol\ /s /y /d</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -2,7 +2,7 @@
 <!-- 被2013 sp1 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
 <idspace id="ServerConfig">
 	<class id="1" name="ClusterManager" group="Master" Ip="127.0.0.1" Port="10000"/>
-	<class id="2" name="Gate_1_1" group="Gate" AreaId="1" GroupId="1" SubId="1" Ip="127.0.0.1"/>
+	<class id="2" name="Gate_1_1" group="Gate" AreaId="1" GroupId="1" SubId="1" Ip="127.0.0.1" Port="8201"/>
 	<class id="3" name="Gate_1_2" group="Gate" AreaId="1" GroupId="1" SubId="2" Ip="127.0.0.1"/>
 	<class id="4" name="WorldManager_1_1" group="WorldManager" AreaId="1" GroupId="1" SubId="1" Ip="127.0.0.1" Port="8301"/>
 	<class id="5" name="World_1_1" group="World" AreaId="1" GroupId="1" SubId="1" Ip="127.0.0.1"/>

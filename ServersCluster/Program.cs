@@ -15,6 +15,7 @@ namespace ServersCluster
         }
         static void Main(string[] args)
         {
+            ApiLib.Api api = new ApiLib.Api();
             // 
             //ConfigurationOptions config = new ConfigurationOptions();
             //config.ReconnectRetryPolicy = new ExponentialRetry(1000);

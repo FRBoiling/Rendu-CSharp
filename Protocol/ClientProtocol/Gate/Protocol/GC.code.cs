@@ -7,3 +7,10 @@ namespace Message.Gate.Client.Protocol.GC {
 	}
 
 }
+namespace Gate.Client.Protocol {
+	partial class GC {
+		static public void GenerateId() {
+			Engine.Foundation.Id<Gate.Client.Protocol.GC>.Value = 0x2F000000;
+		}
+	}
+}

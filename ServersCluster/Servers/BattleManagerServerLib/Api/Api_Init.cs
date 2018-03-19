@@ -21,7 +21,7 @@ namespace BattleManagerServerLib
         void InitClusterManagerServer()
         {
             m_CMServer = new CMServer(this,"127.0.0.1", 8502);
-            m_CMServer.Connect();
+            m_CMServer.ReConnect();
         }
 
         BattleServer m_BattleServer;

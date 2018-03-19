@@ -8,7 +8,7 @@ namespace AssemblyLib
     /// <summary>
     /// 反射处理类
     /// </summary>
-    public class AssemblyHandler
+    public partial class AssemblyHandler
     {
         string path = AppDomain.CurrentDomain.SetupInformation.ApplicationBase + @"..\..\..\ThirdLib";
         //D:\NewProject\ProjectX\Bin\Server\Message.ClientProtocol.dll
@@ -88,11 +88,11 @@ namespace AssemblyLib
                     result.Properties = propertieList;
 
                     //类的方法
-                    List<MethodInfo> methods = new List<MethodInfo>();
+                    Dictionary<string ,MethodInfo> methods = new Dictionary<string,MethodInfo>();
                     MethodInfo[] methodInfos = type.GetMethods(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
                     foreach (var item in methodInfos)
                     {
-                        methods.Add(item);
+                        methods.Add(item.Name,item);
                     }
                     result.Methods = methods;
                 }
@@ -100,7 +100,7 @@ namespace AssemblyLib
             return result;
         }
 
-
+  
 
     }
 }

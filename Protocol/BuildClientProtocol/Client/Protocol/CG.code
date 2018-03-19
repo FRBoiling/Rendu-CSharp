@@ -1,5 +1,5 @@
 package Message.Client.Gate.Protocol.CG;
-module Client.Gate.Protocol.CG 0xF2000000;
+module Client.Gate.Protocol CG 0xF2000000;
 
 //===================================================================
 //===========================Client=>Gate============================
@@ -8,4 +8,5 @@ module Client.Gate.Protocol.CG 0xF2000000;
 message MSG_C2G_HEARTBEAT 0xF2000001
 {
 	required int32 UId = 1;
+	repeated int32 UIds = 2;
 }

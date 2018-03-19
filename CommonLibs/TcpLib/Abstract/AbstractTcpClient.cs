@@ -24,7 +24,21 @@ namespace TcpLib
         IPacketOperate _packetOperate;
         IProtocolProcess _protocolProcess;
 
+        public AbstractTcpClient()
+        {
+        }
+
         public AbstractTcpClient(string ip,ushort port)
+        {
+            _ip = ip;
+            _port = port;
+
+            InitParser();
+            BindResponser();
+            InitTcp();
+        }
+
+        public void Init(string ip, ushort port)
         {
             _ip = ip;
             _port = port;
@@ -44,7 +58,7 @@ namespace TcpLib
         }
 
 
-        public void Connect()
+        public void ReConnect()
         {
             Connect(Ip, Port);
         }
@@ -77,7 +91,7 @@ namespace TcpLib
             }
             else
             {
-                Connect();
+                ReConnect();
             }
             return ret;
         }
@@ -126,7 +140,7 @@ namespace TcpLib
         private bool OnDisconnect()
         {
             DisconnectComplete();
-            Connect(); 
+            ReConnect(); 
             return true;
         }
 

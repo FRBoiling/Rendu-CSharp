@@ -132,8 +132,9 @@
             this.textBox_MainShow.Multiline = true;
             this.textBox_MainShow.Name = "textBox_MainShow";
             this.textBox_MainShow.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox_MainShow.Size = new System.Drawing.Size(246, 503);
+            this.textBox_MainShow.Size = new System.Drawing.Size(596, 503);
             this.textBox_MainShow.TabIndex = 6;
+            this.textBox_MainShow.WordWrap = false;
             // 
             // button_MakeProtocol
             // 
@@ -223,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 519);
+            this.ClientSize = new System.Drawing.Size(1230, 519);
             this.Controls.Add(this.groupBox_Login);
             this.Controls.Add(this.groupBox_Protocol);
             this.Controls.Add(this.button_CleanMainShow);

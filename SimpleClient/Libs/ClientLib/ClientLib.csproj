@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0C97B29-C5AB-4ECB-A3CA-BEDE79585766}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClientLib</RootNamespace>
+    <AssemblyName>ClientLib</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\..\Protocol\Protobuf-net\ProtoGen\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GateServer.cs" />
+    <Compile Include="GateServer_Code.cs" />
+    <Compile Include="GateServer_Login_Requset.cs" />
+    <Compile Include="GateServer_Login_Response.cs" />
+    <Compile Include="HostInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ApiLib\ApiLib.csproj">
+      <Project>{14adf46b-3afa-416b-954f-e1d7b118c12a}</Project>
+      <Name>ApiLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CommonLibs\LogLib\LogLib.csproj">
+      <Project>{a3940522-54f7-45e4-98fd-c0f64550dee8}</Project>
+      <Name>LogLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CommonLibs\ServerFrameWork\ServerFrameWork.csproj">
+      <Project>{47ae13b1-3343-45e5-bcb4-3728995c1e95}</Project>
+      <Name>ServerFrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CommonLibs\TcpLib\TcpLib.csproj">
+      <Project>{faeba880-aece-48bf-9510-af712a0bf80c}</Project>
+      <Name>TcpLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CommonLibs\UtilityLib\UtilityLib.csproj">
+      <Project>{5a8965f5-f0c9-4d46-9706-3281cf3a2331}</Project>
+      <Name>UtilityLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Protocol\ClientProtocol\ClientProtocol.csproj">
+      <Project>{105d609b-1a04-40fa-b684-f63e7de0a508}</Project>
+      <Name>ClientProtocol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenerateCodeLib\GenerateCodeLib.csproj">
+      <Project>{8e70ac1c-7db3-40b0-915b-f3b8fbcace88}</Project>
+      <Name>GenerateCodeLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

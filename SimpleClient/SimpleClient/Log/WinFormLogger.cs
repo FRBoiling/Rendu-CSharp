@@ -1,7 +1,9 @@
-﻿using System;
+﻿using LogLib;
+using System;
+using System.Drawing;
 using System.IO;
 
-namespace LogLib
+namespace SimpleClient
 {
     public class WinFormLogger : AbstractLog
     {
@@ -21,10 +23,12 @@ namespace LogLib
         private int writeLength = 0;
         private int flushLength = 0;
         private DateTime _lastLogTime = DateTime.MaxValue;
+        MainForm _winForm;
 
-        public WinFormLogger(bool doWinFormPrint = true)
+        public WinFormLogger(MainForm winForm,bool doWinFormPrint = true)
         {
             _doWinFormPrint = doWinFormPrint;
+            _winForm = winForm;
         }
 
         public void Init( bool filePrint, string logFileName = "", string fileNamePrefix = "")
@@ -95,7 +99,7 @@ namespace LogLib
                 return;
             }
             string info = FormatLogString(type, log);
-            WriteLog(info, GetConsoleColor(type));
+            WriteLog(info, GetColor(type));
         }
 
         private string FormatLogString(LogType type, string log)
@@ -105,7 +109,7 @@ namespace LogLib
             return info;
         }
 
-        private void WriteLog(string info, ConsoleColor color)
+        private void WriteLog(string info, Color color)
         {
             if (_doWinFormPrint)
             {
@@ -118,13 +122,12 @@ namespace LogLib
             }
         }
 
-        MainForm winForm;
 
-        private void WriteWinForm(string info, ConsoleColor color)
+        private void WriteWinForm(string info, Color color)
         {
-            Console.ForegroundColor = color;
-            Console.WriteLine(info);
-            Console.ForegroundColor = ConsoleColor.Gray;
+            //Console.ForegroundColor = color;
+            _winForm.WinFormLog(info, color);
+            //Console.ForegroundColor = ConsoleColor.Gray;
         }
 
         private void WriteFile(string info)
@@ -184,24 +187,24 @@ namespace LogLib
             }
         }
 
-        public ConsoleColor GetConsoleColor(LogType type)
+        public Color GetColor(LogType type)
         {
-            ConsoleColor color = ConsoleColor.Gray;
+            Color color = Color.Gray;
             switch (type)
             {
                 case LogType.WRITE:
                     break;
                 case LogType.ERROR:
-                    color = ConsoleColor.Red;
+                    color = Color.Red;
                     break;
                 case LogType.WARN:
-                    color = ConsoleColor.Yellow;
+                    color = Color.Yellow;
                     break;
                 case LogType.INFO:
-                    color = ConsoleColor.Green;
+                    color = Color.Green;
                     break;
                 case LogType.DEBUG:
-                    color = ConsoleColor.Blue;
+                    color = Color.Blue;
                     break;
                 default:
                     break;
@@ -265,11 +268,11 @@ namespace LogLib
             try
             {
                 string info = FormatLogString(LogType.WRITE, log);
-                Console.WriteLine(info);
+                _winForm.WinFormLog(info);
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.ToString());
+                Log.Write(e.ToString());
             }
         }
     }

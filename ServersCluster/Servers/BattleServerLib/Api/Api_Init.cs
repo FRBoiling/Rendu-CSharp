@@ -17,14 +17,14 @@ namespace BattleServerLib
         void InitClusterManagerServer()
         {
             m_CMServer = new CMServer(this, "127.0.0.1", 8505);
-            m_CMServer.Connect();
+            m_CMServer.ReConnect();
         }
 
         BMServer m_BMServer;
         void InitBattleManagerServer()
         {
             m_BMServer = new BMServer(this,"127.0.0.1", 9999);
-            m_BMServer.Connect();
+            m_BMServer.ReConnect();
         }
 
   

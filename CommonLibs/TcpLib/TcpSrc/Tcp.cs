@@ -244,7 +244,7 @@ namespace TcpLib.TcpSrc
             }
             catch (Exception e)
             {
-                Log.Error("ConnectCallback error:{0}",e.ToString());
+                //Log.Error("ConnectCallback error:{0}",e.ToString());
                 OnConnect(false);
             }
         }
