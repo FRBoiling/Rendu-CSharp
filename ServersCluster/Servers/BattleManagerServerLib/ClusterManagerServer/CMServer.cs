@@ -22,21 +22,16 @@ namespace BattleManagerServerLib
             _serverTag.Type = ServerType.ClusterManager;
         }
 
-        protected override void ConnectedComplete(bool ret)
+        protected override void ConnectedComplete()
         {
-            if (ret)
-            {
                 Console.WriteLine("connected to {0} ip {1} port {2}"
                     , ServerTag.Type,Ip,Port);
                 RequsetRegister();
-            }
-            else
-            {
-                Console.WriteLine("connect failed, connect to {0} ip {1} port {2} again"
-                    , ServerTag.Type, ServerTag.GroupId, ServerTag.SubId, Ip, Port);
-            }
         }
-
+        protected override void ReConnectedComplete()
+        {
+            Console.WriteLine("re connected to {0}", ServerTag.Type);
+        }
         protected override void DisconnectComplete()
         {
             Console.WriteLine("switch off from {0}"

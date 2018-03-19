@@ -32,18 +32,10 @@ namespace WorldServerLib
             AddProcesser(Id<MSG_WM2W_RETRUN_REGISTER>.Value, OnResponse_Regist);
         }
 
-        protected override void ConnectedComplete(bool ret)
+        protected override void ConnectedComplete()
         {
-            if (ret)
-            {
                 Log.Info("connected to {0}", Tag.Type);
                 RequsetRegister();
-            }
-            else
-            {
-                Log.Warn("connect failed, connect to {0} ip {1} port {2} again"
-                    , Tag.GetServerTagString(), Ip, Port);
-            }
         }
 
         protected override void DisconnectComplete()

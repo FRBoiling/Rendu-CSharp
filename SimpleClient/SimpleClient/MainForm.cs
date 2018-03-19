@@ -33,8 +33,7 @@ namespace SimpleClient
             try
             {
                 var logger = new WinFormLogger(this, true);
-                logger.Init(true, @"..\Log\", " ");
-                logger.SetLogo("Client");
+                logger.Init(true, @"..\Log\", "Client");
 #if DEBUG
                 logger.SetPriority(4);
 #else

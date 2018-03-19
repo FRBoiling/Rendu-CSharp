@@ -8,7 +8,7 @@ namespace TcpLib
 {
     public abstract class AbstractTcpClient : ITcpClient
     {
-        bool isConnected = false;
+        bool NeedReConnected = true;
         private ITcp _tcp = new Tcp();
 
         private string _ip;
@@ -86,22 +86,28 @@ namespace TcpLib
 
         private bool OnConnect(bool ret)
         {
-            ConnectedComplete(ret);
             if (ret)
             {
-                isConnected = ret;
+                ConnectedComplete();
+                NeedReConnected = ret;
             }
             else
             {
-                ReConnect();
+                if (NeedReConnected)
+                {
+                    ReConnect();
+                    ReConnectedComplete();
+                }
             }
+
             return ret;
         }
 
         /// <summary>
         /// 已经连接，发包或者信息记录（具体内容需要根据实际具体需求实现）
         /// </summary>
-        protected abstract void ConnectedComplete(bool ret);
+        protected abstract void ConnectedComplete();
+        protected abstract void ReConnectedComplete();
 
         private void OnRecv(MemoryStream stream)
         {
@@ -141,17 +147,16 @@ namespace TcpLib
         protected abstract void DisconnectComplete();
         private bool OnDisconnect()
         {
-            //DisconnectComplete();
-            if (!isConnected)
+            if (NeedReConnected)
             {
                 Log.Info("try to reconnect to server again!");
                 ReConnect();
             }
             else
             {
-
+                DisconnectComplete();
             }
-           
+
             return true;
         }
 
@@ -176,7 +181,7 @@ namespace TcpLib
 
         public void Exit()
         {
-            isConnected = false;
+            NeedReConnected = false;
             _tcp.Disconnect();
         }
     }

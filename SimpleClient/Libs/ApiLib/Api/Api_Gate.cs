@@ -1,4 +1,5 @@
 ﻿using AssemblyLib;
+using ClientLib;
 using System.Collections.Generic;
 using System.Reflection;
 
@@ -7,20 +8,16 @@ namespace ApiLib
     public partial class Api
     {
         object objInfo;
+        GateServer server;
  
         public bool InitSocket()
         {
-            AssemblyHandler handler = new AssemblyHandler();
-            string assemblyName = @"ClientLib.dll";
-            string className = @"ClientLib.GateServer";
-            objInfo = handler.GetCSharpClassObj(assemblyName, className);
-            if (objInfo == null)
-            {
-                return false;
-            }
+            //return InitSocket_Assembly();
+            server = new GateServer();
             return true;
-
         }
+
+
 
         private void Connect2GateServer()
         {
@@ -34,11 +31,16 @@ namespace ApiLib
             ushort port = 8201;
 
             InitConnectInfo(ip,port);
-
-            Connect();
+            ReConnect();
         }
 
         void InitConnectInfo(string ip, ushort port)
+        {
+            //InitConnectInfo_Assembly(ip, port);
+            server.InitConnectInfo(ip, port);
+        }
+
+        void InitConnectInfo_Assembly(string ip, ushort port)
         {
             if (objInfo == null)
             {
@@ -52,17 +54,71 @@ namespace ApiLib
             meth.Invoke(objInfo, parameters);
         }
 
-        void Connect()
+        public void ExitSocket()
+        {
+            //ExitSocket_Assembly();
+            server.Exit();
+        }
+
+        void ReConnect()
+        {
+            //Connect_Assembly();
+            server.ReConnect();
+        }
+
+
+        void ProcessLogic()
+        {
+            //Process_Assembly();
+            server.Process();
+        }
+
+        public object RouteInit(string key)
+        {
+            //return RouteInit_Assembly(key);
+            return server.RouteInit(key);
+        }
+
+        public object RouteGet(string key)
+        {
+            //return RouteGet_Assembly(key);
+            return server.RouteGet(key);
+        }
+
+        public void RouteSend(string key, object msg)
+        {
+            //RouteSend_Assembly(key, msg);
+            server.RouteSend(key,msg);
+        }
+
+
+        public bool InitSocket_Assembly()
+        {
+            AssemblyHandler handler = new AssemblyHandler();
+            string assemblyName = @"ClientLib.dll";
+            string className = @"ClientLib.GateServer";
+            objInfo = handler.GetCSharpClassObj(assemblyName, className);
+            if (objInfo == null)
+            {
+                return false;
+            }
+            return true;
+
+        }
+
+
+        void Connect_Assembly()
         {
             if (objInfo == null)
             {
                 return;
             }
             MethodInfo meth = objInfo.GetType().GetMethod("ReConnect");
-            meth.Invoke(objInfo,null);
+            meth.Invoke(objInfo, null);
         }
 
-        void ProcessLogic()
+
+        void Process_Assembly()
         {
             if (objInfo == null)
             {
@@ -72,7 +128,9 @@ namespace ApiLib
             meth.Invoke(objInfo, null);
         }
 
-        public object RouteInit(string key)
+
+
+        public object RouteInit_Assembly(string key)
         {
             if (objInfo == null)
             {
@@ -83,7 +141,7 @@ namespace ApiLib
             return meth.Invoke(objInfo, parameters);
         }
 
-        public object RouteGet(string key)
+        public object RouteGet_Assembly(string key)
         {
             if (objInfo == null)
             {
@@ -94,19 +152,20 @@ namespace ApiLib
             return meth.Invoke(objInfo, parameters);
         }
 
-        public void RouteSend(string key,object msg)
+
+        public void RouteSend_Assembly(string key, object msg)
         {
             if (objInfo == null)
             {
                 return;
             }
-            object[] parameters = new object[] { key ,msg};
+            object[] parameters = new object[] { key, msg };
             MethodInfo meth = objInfo.GetType().GetMethod("RouteSend");
             meth.Invoke(objInfo, parameters);
         }
 
 
-        public void ExitSocket()
+        public void ExitSocket_Assembly()
         {
             if (objInfo == null)
             {
@@ -115,5 +174,7 @@ namespace ApiLib
             MethodInfo meth = objInfo.GetType().GetMethod("Exit");
             meth.Invoke(objInfo, null);
         }
+
+
     }
 }

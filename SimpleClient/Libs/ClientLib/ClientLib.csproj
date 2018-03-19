@@ -71,10 +71,6 @@
       <Project>{105d609b-1a04-40fa-b684-f63e7de0a508}</Project>
       <Name>ClientProtocol</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ApiLib\ApiLib.csproj">
-      <Project>{14adf46b-3afa-416b-954f-e1d7b118c12a}</Project>
-      <Name>ApiLib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GenerateCodeLib\GenerateCodeLib.csproj">
       <Project>{8e70ac1c-7db3-40b0-915b-f3b8fbcace88}</Project>
       <Name>GenerateCodeLib</Name>

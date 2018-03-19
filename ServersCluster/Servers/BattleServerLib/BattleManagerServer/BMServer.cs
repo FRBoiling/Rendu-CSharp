@@ -28,23 +28,18 @@ namespace BattleServerLib
             InitTcp();
         }
 
-        protected override void ConnectedComplete(bool ret)
+        protected override void ConnectedComplete()
         {
-            if (ret)
-            {
-                Console.WriteLine("connected to {0}" , ServerTag.Type);
-                RequsetRegister();
-            }
-            else
-            {
-                Console.WriteLine("connect failed, connect to {0} ip {1} port {2} again"
-                    , ServerTag.GetServerTagString(), Ip,Port);
-            }
+            Console.WriteLine("connected to {0}", ServerTag.Type);
+            RequsetRegister();
         }
-
+        protected override void ReConnectedComplete()
+        {
+            Console.WriteLine("re connected to {0}", ServerTag.Type);
+        }
         protected override void DisconnectComplete()
         {
-            Console.WriteLine("switch off from {0}" 
+            Console.WriteLine("switch off from {0}"
                 , ServerTag.Type);
         }
 
@@ -76,5 +71,7 @@ namespace BattleServerLib
         {
             throw new NotImplementedException();
         }
+
+   
     }
 }
