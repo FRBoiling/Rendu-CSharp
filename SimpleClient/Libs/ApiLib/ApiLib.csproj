@@ -45,27 +45,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CommonLibs\LogLib\LogLib.csproj">
+    <ProjectReference Include="..\..\..\CommonLibs\LogLib\LogLib.csproj">
       <Project>{a3940522-54f7-45e4-98fd-c0f64550dee8}</Project>
       <Name>LogLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CommonLibs\ServerFrameWork\ServerFrameWork.csproj">
+    <ProjectReference Include="..\..\..\CommonLibs\ServerFrameWork\ServerFrameWork.csproj">
       <Project>{47ae13b1-3343-45e5-bcb4-3728995c1e95}</Project>
       <Name>ServerFrameWork</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CommonLibs\TcpLib\TcpLib.csproj">
+    <ProjectReference Include="..\..\..\CommonLibs\TcpLib\TcpLib.csproj">
       <Project>{faeba880-aece-48bf-9510-af712a0bf80c}</Project>
       <Name>TcpLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CommonLibs\UtilityLib\UtilityLib.csproj">
+    <ProjectReference Include="..\..\..\CommonLibs\UtilityLib\UtilityLib.csproj">
       <Project>{5a8965f5-f0c9-4d46-9706-3281cf3a2331}</Project>
       <Name>UtilityLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Protocol\ClientProtocol\ClientProtocol.csproj">
-      <Project>{105d609b-1a04-40fa-b684-f63e7de0a508}</Project>
-      <Name>ClientProtocol</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SimpleClient\Libs\AssemblyLib\AssemblyLib.csproj">
+    <ProjectReference Include="..\AssemblyLib\AssemblyLib.csproj">
       <Project>{486e6984-dc21-4e22-8c64-ae904423da9a}</Project>
       <Name>AssemblyLib</Name>
     </ProjectReference>

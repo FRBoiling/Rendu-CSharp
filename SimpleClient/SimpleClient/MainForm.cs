@@ -166,7 +166,7 @@ namespace SimpleClient
 
         private void button_Disconnect_Click(object sender, EventArgs e)
         {
-
+            mApi.Exit();
         }
 
         private void button_CleanMainShow_Click(object sender, EventArgs e)
@@ -326,6 +326,7 @@ namespace SimpleClient
             {
                 curProtocolMsgName = comboBox_ProtocolName.SelectedItem.ToString();
                 object msg = mApi.RouteInit(curProtocolMsgName);
+                ClearDataGrid();
                 Parse(msg);
             }
             else
@@ -334,10 +335,14 @@ namespace SimpleClient
             }
         }
 
+        private void ClearDataGrid()
+        {
+            this.dataGridView_Protocol.Rows.Clear();
+        }
+
         private void Parse(object obj)
         {
             Type t = obj.GetType();
-
             foreach (var item in t.GetProperties() )
             {
                 SetDataGridValue(item);

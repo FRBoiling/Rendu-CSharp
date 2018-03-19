@@ -11,5 +11,7 @@ namespace TcpLib
         void InitParser();
         void InitTcp();
 
+        void Exit();
+
     }
 }

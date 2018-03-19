@@ -6,12 +6,11 @@ namespace ApiLib
 {
     public partial class Api
     {
-        AssemblyHandler handler;
         object objInfo;
  
         public bool InitSocket()
         {
-            handler = new AssemblyHandler();
+            AssemblyHandler handler = new AssemblyHandler();
             string assemblyName = @"ClientLib.dll";
             string className = @"ClientLib.GateServer";
             objInfo = handler.GetCSharpClassObj(assemblyName, className);
@@ -29,8 +28,8 @@ namespace ApiLib
             //string ip = server.GetString("Ip");
             //ushort port = server.GetUInt16("Port");
             //ushort subId = server.GetUInt16("SubId");
-            ushort groupId = 1;
-            ushort subId = 1;
+            //ushort groupId = 1;
+            //ushort subId = 1;
             string ip = "127.0.0.1";
             ushort port = 8201;
 
@@ -106,5 +105,15 @@ namespace ApiLib
             meth.Invoke(objInfo, parameters);
         }
 
+
+        public void ExitSocket()
+        {
+            if (objInfo == null)
+            {
+                return;
+            }
+            MethodInfo meth = objInfo.GetType().GetMethod("Exit");
+            meth.Invoke(objInfo, null);
+        }
     }
 }

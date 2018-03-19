@@ -11,5 +11,7 @@ namespace TcpLib
         void StartListen(bool needListen = false);
         void StartListen(ushort port);
         void StartListen(ushort port, bool needListenHeatBeat = false);
+
+        void Exit();
     }
 }

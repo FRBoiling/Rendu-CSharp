@@ -54,7 +54,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ApiLib\ApiLib.csproj">
+    <ProjectReference Include="..\SimpleClient\Libs\ApiLib\ApiLib.csproj">
       <Project>{14adf46b-3afa-416b-954f-e1d7b118c12a}</Project>
       <Name>ApiLib</Name>
     </ProjectReference>

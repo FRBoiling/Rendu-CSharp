@@ -140,5 +140,10 @@ namespace TcpLib
             _packetOperate = packet;
             _protocolProcess = packet;
         }
+
+        public void Exit()
+        {
+            _tcp.Disconnect();
+        }
     }
 }

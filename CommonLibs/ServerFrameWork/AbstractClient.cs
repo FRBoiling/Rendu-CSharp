@@ -78,7 +78,10 @@ namespace ServerFrameWork
         /// </summary>
         public void Exit()
         {
-            ExitClient();
+            if (IsRuning)
+            {
+                ExitClient();
+            }
         }
 
         /// <summary>

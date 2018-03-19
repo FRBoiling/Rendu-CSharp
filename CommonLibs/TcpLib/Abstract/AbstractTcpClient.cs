@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using LogLib;
+using System.IO;
 using System.Threading;
 using TcpLib.TcpSrc;
 
@@ -7,6 +8,7 @@ namespace TcpLib
 {
     public abstract class AbstractTcpClient : ITcpClient
     {
+        bool isConnected = false;
         private ITcp _tcp = new Tcp();
 
         private string _ip;
@@ -85,9 +87,9 @@ namespace TcpLib
         private bool OnConnect(bool ret)
         {
             ConnectedComplete(ret);
-
-            if (ret == true)
+            if (ret)
             {
+                isConnected = ret;
             }
             else
             {
@@ -139,8 +141,17 @@ namespace TcpLib
         protected abstract void DisconnectComplete();
         private bool OnDisconnect()
         {
-            DisconnectComplete();
-            ReConnect(); 
+            //DisconnectComplete();
+            if (!isConnected)
+            {
+                Log.Info("try to reconnect to server again!");
+                ReConnect();
+            }
+            else
+            {
+
+            }
+           
             return true;
         }
 
@@ -163,6 +174,10 @@ namespace TcpLib
             _protocolProcess = packet;
         }
 
- 
+        public void Exit()
+        {
+            isConnected = false;
+            _tcp.Disconnect();
+        }
     }
 }

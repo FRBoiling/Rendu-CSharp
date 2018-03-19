@@ -80,10 +80,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ApiLib\ApiLib.csproj">
-      <Project>{14adf46b-3afa-416b-954f-e1d7b118c12a}</Project>
-      <Name>ApiLib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\CommonLibs\LogLib\LogLib.csproj">
       <Project>{a3940522-54f7-45e4-98fd-c0f64550dee8}</Project>
       <Name>LogLib</Name>
@@ -95,6 +91,10 @@
     <ProjectReference Include="..\..\CommonLibs\UtilityLib\UtilityLib.csproj">
       <Project>{5a8965f5-f0c9-4d46-9706-3281cf3a2331}</Project>
       <Name>UtilityLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\ApiLib\ApiLib.csproj">
+      <Project>{14adf46b-3afa-416b-954f-e1d7b118c12a}</Project>
+      <Name>ApiLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\Libs\AssemblyLib\AssemblyLib.csproj">
       <Project>{486e6984-dc21-4e22-8c64-ae904423da9a}</Project>
