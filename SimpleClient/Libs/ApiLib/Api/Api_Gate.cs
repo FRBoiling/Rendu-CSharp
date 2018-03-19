@@ -17,8 +17,6 @@ namespace ApiLib
             return true;
         }
 
-
-
         private void Connect2GateServer()
         {
             //ushort groupId = server.GetUInt16("GroupId");
@@ -40,19 +38,7 @@ namespace ApiLib
             server.InitConnectInfo(ip, port);
         }
 
-        void InitConnectInfo_Assembly(string ip, ushort port)
-        {
-            if (objInfo == null)
-            {
-                return;
-            }
-            //_gateServer = new GateServer(this, ip, port);
-            //_gateServer.Tag.GroupId = groupId;
-            //_gateServer.Tag.SubId = subId;
-            object[] parameters = new object[] { this,ip,port };
-            MethodInfo meth = objInfo.GetType().GetMethod("InitConnectInfo");
-            meth.Invoke(objInfo, parameters);
-        }
+
 
         public void ExitSocket()
         {
@@ -60,7 +46,7 @@ namespace ApiLib
             server.Exit();
         }
 
-        void ReConnect()
+        public void ReConnect()
         {
             //Connect_Assembly();
             server.ReConnect();
@@ -106,6 +92,19 @@ namespace ApiLib
 
         }
 
+        void InitConnectInfo_Assembly(string ip, ushort port)
+        {
+            if (objInfo == null)
+            {
+                return;
+            }
+            //_gateServer = new GateServer(this, ip, port);
+            //_gateServer.Tag.GroupId = groupId;
+            //_gateServer.Tag.SubId = subId;
+            object[] parameters = new object[] { this, ip, port };
+            MethodInfo meth = objInfo.GetType().GetMethod("InitConnectInfo");
+            meth.Invoke(objInfo, parameters);
+        }
 
         void Connect_Assembly()
         {

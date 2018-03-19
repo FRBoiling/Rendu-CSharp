@@ -8,7 +8,7 @@ namespace TcpLib
 {
     public abstract class AbstractTcpClient : ITcpClient
     {
-        bool NeedReConnected = true;
+        private bool _needReConnected = true;
         private ITcp _tcp = new Tcp();
 
         private string _ip;
@@ -62,6 +62,7 @@ namespace TcpLib
 
         public void ReConnect()
         {
+            _needReConnected = true;
             Connect(Ip, Port);
         }
 
@@ -89,11 +90,11 @@ namespace TcpLib
             if (ret)
             {
                 ConnectedComplete();
-                NeedReConnected = ret;
+                _needReConnected = ret;
             }
             else
             {
-                if (NeedReConnected)
+                if (_needReConnected)
                 {
                     ReConnect();
                     ReConnectedComplete();
@@ -147,7 +148,7 @@ namespace TcpLib
         protected abstract void DisconnectComplete();
         private bool OnDisconnect()
         {
-            if (NeedReConnected)
+            if (_needReConnected)
             {
                 Log.Info("try to reconnect to server again!");
                 ReConnect();
@@ -181,7 +182,7 @@ namespace TcpLib
 
         public void Exit()
         {
-            NeedReConnected = false;
+            _needReConnected = false;
             _tcp.Disconnect();
         }
     }

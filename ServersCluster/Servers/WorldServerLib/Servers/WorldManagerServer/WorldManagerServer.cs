@@ -37,6 +37,10 @@ namespace WorldServerLib
                 Log.Info("connected to {0}", Tag.Type);
                 RequsetRegister();
         }
+        protected override void ReConnectedComplete()
+        {
+            Log.Info("re connected to {0}", Tag.Type);
+        }
 
         protected override void DisconnectComplete()
         {
@@ -68,6 +72,6 @@ namespace WorldServerLib
             Log.Info("registed success to {0}", Tag.GetServerTagString());
         }
 
-  
+   
     }
 }

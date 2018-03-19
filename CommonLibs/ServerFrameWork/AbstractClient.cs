@@ -66,7 +66,6 @@ namespace ServerFrameWork
         /// <param name="args"></param>
         public void Init()
         {
-
             //StartMode = Mode.Auto;
             InitPath();
             InitXmlData();

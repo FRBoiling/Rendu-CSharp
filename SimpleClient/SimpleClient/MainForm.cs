@@ -160,7 +160,9 @@ namespace SimpleClient
 
         private void button_Connect_Click(object sender, EventArgs e)
         {
-
+            workThread = new Thread(ThreadMethod);
+            workThread.Start();
+            mApi.ReConnect();
         }
 
         private void button_Disconnect_Click(object sender, EventArgs e)
