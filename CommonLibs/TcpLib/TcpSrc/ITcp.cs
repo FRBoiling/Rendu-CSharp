@@ -6,6 +6,7 @@ namespace TcpLib.TcpSrc
 {
     public interface ITcp
     {
+        Socket GetWorkSoket();
         bool NeedListenHeartBeat { get; set; }
         TcpAsyncCallBack.AsyncAcceptCallback OnAccept { get; set; }
         TcpAsyncCallBack.AsyncConnectCallback OnConnect { get; set; }

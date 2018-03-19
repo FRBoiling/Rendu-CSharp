@@ -7,6 +7,8 @@ namespace TcpLib
     public abstract class AbstractTcpServer : ITcpServer
     {
         private ITcp _tcp = new Tcp();
+        public ITcp Tcp { get => _tcp; }
+
         string _key = "0_0";
         public string Key { get => _key; set => _key = value; }
 
@@ -19,6 +21,7 @@ namespace TcpLib
         {
             get { return _listenPort; }
         }
+
 
         IPacketOperate _packetOperate;
         IProtocolProcess _protocolProcess;

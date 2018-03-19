@@ -11,7 +11,10 @@ namespace TcpLib.TcpSrc
     {
         private Socket _workSocket = null;
         private ushort _listenPort;
-
+        public Socket GetWorkSoket()
+        {
+            return _workSocket;
+        }
         public TcpAsyncCallBack.AsyncAcceptCallback OnAccept {get; set; }
         public TcpAsyncCallBack.AsyncConnectCallback OnConnect { get; set; }
         public TcpAsyncCallBack.AsyncDisconnectCallback OnDisconnect { get; set; }
@@ -346,7 +349,7 @@ namespace TcpLib.TcpSrc
             }
             catch (Exception e)
             {
-                Log.Error("RecvCallback error:{0}", e.ToString());
+                //Log.Error("RecvCallback error:{0}", e.ToString());
                 Disconnect();
             }
             return;
@@ -379,6 +382,7 @@ namespace TcpLib.TcpSrc
                 Log.Error(e.ToString());
             }
         }
+
 
     }
 }

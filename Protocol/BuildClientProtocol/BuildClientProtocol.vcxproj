@@ -13,7 +13,7 @@
   <ItemGroup>
     <CustomBuild Include="Gate\Protocol\GC.code">
       <FileType>Document</FileType>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).code.cs</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).code.cs</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Protobuf-Net\ProtoGen\generator --code all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>

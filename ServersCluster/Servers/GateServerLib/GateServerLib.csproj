@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="protobuf-net, Version=2.0.0.640, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Protocol\Protobuf-net\ProtoGen\protobuf-net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +48,7 @@
     <Compile Include="Api\Api_Init.cs" />
     <Compile Include="Api\Api_Client.cs" />
     <Compile Include="Api\Api_Server.cs" />
+    <Compile Include="Clients\Client_HeartBeat.cs" />
     <Compile Include="Clients\Client.cs" />
     <Compile Include="Clients\ClientMgr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
