@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{14ADF46B-3AFA-416B-954F-E1D7B118C12A}</ProjectGuid>
+    <ProjectGuid>{4E7D3146-E9D5-4F5E-A6BF-E5E6A2770E59}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ApiLib</RootNamespace>
-    <AssemblyName>ApiLib</AssemblyName>
+    <RootNamespace>ProtocolID</RootNamespace>
+    <AssemblyName>ProtocolID</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -17,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\..\Bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -40,36 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api\Api.cs" />
-    <Compile Include="Api\AssemblyApi.cs" />
-    <Compile Include="Api\IApi.cs" />
+    <Compile Include="Id.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\CommonLibs\LogLib\LogLib.csproj">
-      <Project>{a3940522-54f7-45e4-98fd-c0f64550dee8}</Project>
-      <Name>LogLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\CommonLibs\ServerFrameWork\ServerFrameWork.csproj">
-      <Project>{47ae13b1-3343-45e5-bcb4-3728995c1e95}</Project>
-      <Name>ServerFrameWork</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\CommonLibs\UtilityLib\UtilityLib.csproj">
-      <Project>{5a8965f5-f0c9-4d46-9706-3281cf3a2331}</Project>
-      <Name>UtilityLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AssemblyLib\AssemblyLib.csproj">
-      <Project>{486e6984-dc21-4e22-8c64-ae904423da9a}</Project>
-      <Name>AssemblyLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ClientLib\ClientLib.csproj">
-      <Project>{d0c97b29-c5ab-4ecb-a3ca-bede79585766}</Project>
-      <Name>ClientLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TcpClientLib\TcpClientLib.csproj">
-      <Project>{8f4307e4-5e5c-40f3-862e-1f6801a87673}</Project>
-      <Name>TcpClientLib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

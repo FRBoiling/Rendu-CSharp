@@ -20,13 +20,13 @@ namespace SimpleClient
         public MainForm()
         {
             InitializeComponent();
+            InitLog();
             InitXml();
             InitApi();
         }
 
 
-        //Api mApi;
-        GateServer mApi;
+        IApi mApi;
         Thread workThread;
         string curProtocolMsgName = "";
         string protocolMsgDllName = "ClientProtocol.dll";
@@ -42,6 +42,17 @@ namespace SimpleClient
             }
         }
 
+        public void InitLog()
+        {
+            var logger = new WinFormLogger(this, true);
+            logger.Init(true, @"..\Log\", "Client");
+#if DEBUG
+            logger.SetPriority(4);
+#else
+            logger.SetPriority(2);
+#endif
+            Log.InitLog(logger);
+        }
 
         public void InitApi()
         {
@@ -50,22 +61,11 @@ namespace SimpleClient
             ushort port = data.GetUInt16("GatePort");
 
             //mApi = new Api();
-
-            mApi = new GateServer();
-            mApi.Init(ip, port);
+            mApi = new AssemblyApi();
             try
             {
-                var logger = new WinFormLogger(this, true);
-                logger.Init(true, @"..\Log\", "Client");
-#if DEBUG
-                logger.SetPriority(4);
-#else
-                logger.SetPriority(2);
-#endif
-                Log.InitLog(logger);
-              
+                mApi.Init(ip, port);
                 mApi.ReConnect();
-
                 ////if (LoadProtocol())
                 //{
                 //    mApi.Init();
@@ -105,7 +105,7 @@ namespace SimpleClient
             string code = ParseCode.AssemblyParseDll(protocolMsgDllName, out mAssemblyResult);
 
             //string soure = /*PathExt.workPath + @"\ClientLib\";*/";
-            string sourePath = @"..\..\SimpleClient\Libs\ClientLib\";
+            string sourePath = @"..\..\Libs\ClientLib\";
             string str1 = sourePath + @"GateServer.cs";
             string str2 = sourePath + @"GateServer_Code.cs";
             string str3 = sourePath + @"GateServer_Login_Requset.cs";
@@ -172,6 +172,11 @@ namespace SimpleClient
             }
         }
 
+        private void MainForm_Closing(object sender, FormClosingEventArgs e)
+        {
+            IsWorking = false;
+        }
+
         public void WinFormLog(string log)
         {
             if (textBox_MainShow.InvokeRequired)
@@ -200,6 +205,11 @@ namespace SimpleClient
 
         private void button_Connect_Click(object sender, EventArgs e)
         {
+            if (IsWorking)
+            {
+                Log.Info("already connected!");
+                return;
+            }
             mApi.ReConnect();
             workThread = new Thread(ThreadMethod);
             workThread.Start();
@@ -422,9 +432,6 @@ namespace SimpleClient
 
         }
 
-        private void MainForm_Closing(object sender, FormClosingEventArgs e)
-        {
-            IsWorking = false;
-        }
+
     }
 }

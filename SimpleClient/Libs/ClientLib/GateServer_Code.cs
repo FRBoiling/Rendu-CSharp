@@ -131,7 +131,9 @@ return null;
 }
 public void BindResponse()
 {
-    AddProcesser(Id<MSG_G2C_ENCRYPTKEY>.Value, OnResponse_MSG_G2C_ENCRYPTKEY);
+AddProcesser(Id<MSG_G2C_ENCRYPTKEY>.Value, OnResponse_MSG_G2C_ENCRYPTKEY);
+
+
 }
 public bool RouteSend(string className,object msg)
 {

@@ -28,7 +28,7 @@ namespace GenerateCode
             string code = ParseCode.AssemblyParseDll("ClientProtocol.dll");
 
             //string soure = /*PathExt.workPath + @"\ClientLib\";*/";
-            string sourePath = @"..\..\SimpleClient\Libs\ClientLib\";
+            string sourePath = @"..\..\Libs\ClientLib\";
             string str1 = sourePath + @"GateServer.cs";
             string str2 = sourePath + @"GateServer_Code.cs";
             string str3 = sourePath + @"GateServer_Login_Requset.cs";

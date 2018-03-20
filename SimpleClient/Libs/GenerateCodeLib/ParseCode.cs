@@ -21,7 +21,7 @@ namespace GenerateCodeLib
 
             string strGenerateCode = GenerateCodeModel.GenerateCode(result.ClassTypeList);
             string codeFileName = "GateServer_Code.cs";
-            string codeFileFullName = @"..\..\SimpleClient\Libs\ClientLib\" + codeFileName;
+            string codeFileFullName = @"..\..\Libs\ClientLib\" + codeFileName;
             FileInfo fCodeFileName = new FileInfo(codeFileFullName);
             StreamWriter wResponseRecv = fCodeFileName.CreateText();
             wResponseRecv.WriteLine(strGenerateCode);
@@ -39,7 +39,7 @@ namespace GenerateCodeLib
 
             string strGenerateCode = GenerateCodeModel.GenerateCode(result.ClassTypeList);
             string codeFileName = "GateServer_Code.cs";
-            string codeFileFullName = @"..\..\SimpleClient\Libs\ClientLib\" + codeFileName;
+            string codeFileFullName = @"..\..\Libs\ClientLib\" + codeFileName;
             FileInfo fCodeFileName = new FileInfo(codeFileFullName);
             StreamWriter wResponseRecv = fCodeFileName.CreateText();
             wResponseRecv.WriteLine(strGenerateCode);
@@ -64,12 +64,11 @@ namespace GenerateCodeLib
             paras.ReferencedAssemblies.Add(@"System.dll");
             paras.ReferencedAssemblies.Add(@"System.IO.dll");
             paras.ReferencedAssemblies.Add(@"System.Xml.dll");
-            //paras.ReferencedAssemblies.Add(@"ClientProtocol.dll");
-            paras.ReferencedAssemblies.Add(@"ServerProtocol.dll");
+            paras.ReferencedAssemblies.Add(@"ClientProtocol.dll");
             paras.ReferencedAssemblies.Add(@"protobuf-net.dll");
             paras.ReferencedAssemblies.Add(@"LogLib.dll");
             paras.ReferencedAssemblies.Add(@"ServerFrameWork.dll");
-            paras.ReferencedAssemblies.Add(@"TcpLib.dll");
+            paras.ReferencedAssemblies.Add(@"TcpClientLib.dll");
             paras.ReferencedAssemblies.Add(@"UtilityLib.dll");
             paras.ReferencedAssemblies.Add(@"ApiLib.dll");
             paras.ReferencedAssemblies.Add(@"GenerateCodeLib.dll");

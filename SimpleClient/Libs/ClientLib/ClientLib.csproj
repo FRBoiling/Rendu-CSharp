@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\Bin\Debug\</OutputPath>
+    <OutputPath>..\..\Bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\Bin\Release\</OutputPath>
+    <OutputPath>..\..\Bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -59,21 +59,21 @@
       <Project>{47ae13b1-3343-45e5-bcb4-3728995c1e95}</Project>
       <Name>ServerFrameWork</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\CommonLibs\TcpLib\TcpLib.csproj">
-      <Project>{faeba880-aece-48bf-9510-af712a0bf80c}</Project>
-      <Name>TcpLib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\CommonLibs\UtilityLib\UtilityLib.csproj">
       <Project>{5a8965f5-f0c9-4d46-9706-3281cf3a2331}</Project>
       <Name>UtilityLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Protocol\ServerProtocol\ServerProtocol.csproj">
-      <Project>{94623506-6c6c-4a20-b93f-97bb1fd872de}</Project>
-      <Name>ServerProtocol</Name>
+    <ProjectReference Include="..\..\..\Protocol\ClientProtocol\ClientProtocol.csproj">
+      <Project>{105d609b-1a04-40fa-b684-f63e7de0a508}</Project>
+      <Name>ClientProtocol</Name>
     </ProjectReference>
     <ProjectReference Include="..\GenerateCodeLib\GenerateCodeLib.csproj">
       <Project>{8e70ac1c-7db3-40b0-915b-f3b8fbcace88}</Project>
       <Name>GenerateCodeLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TcpClientLib\TcpClientLib.csproj">
+      <Project>{8f4307e4-5e5c-40f3-862e-1f6801a87673}</Project>
+      <Name>TcpClientLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
