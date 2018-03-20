@@ -64,7 +64,8 @@ namespace GenerateCodeLib
             paras.ReferencedAssemblies.Add(@"System.dll");
             paras.ReferencedAssemblies.Add(@"System.IO.dll");
             paras.ReferencedAssemblies.Add(@"System.Xml.dll");
-            paras.ReferencedAssemblies.Add(@"ClientProtocol.dll");
+            //paras.ReferencedAssemblies.Add(@"ClientProtocol.dll");
+            paras.ReferencedAssemblies.Add(@"ServerProtocol.dll");
             paras.ReferencedAssemblies.Add(@"protobuf-net.dll");
             paras.ReferencedAssemblies.Add(@"LogLib.dll");
             paras.ReferencedAssemblies.Add(@"ServerFrameWork.dll");

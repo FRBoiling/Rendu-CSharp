@@ -45,8 +45,14 @@ namespace SimpleClient
 
         public void InitApi()
         {
+            Data data = XmlDataManager.Inst.GetData("GateList", 1);
+            string ip = data.GetString("GateIp");
+            ushort port = data.GetUInt16("GatePort");
+
             //mApi = new Api();
+
             mApi = new GateServer();
+            mApi.Init(ip, port);
             try
             {
                 var logger = new WinFormLogger(this, true);
@@ -57,15 +63,9 @@ namespace SimpleClient
                 logger.SetPriority(2);
 #endif
                 Log.InitLog(logger);
-
-                Data data = XmlDataManager.Inst.GetData("GateList", 1);
-
-                string ip = data.GetString("GateIp");
-                ushort port = data.GetUInt16("GatePort");
-                Message.Client.Gate.Protocol.CG.Api.GenerateId();
-                Message.Gate.Client.Protocol.GC.Api.GenerateId();
-                mApi.Init(ip, port);
+              
                 mApi.ReConnect();
+
                 ////if (LoadProtocol())
                 //{
                 //    mApi.Init();

@@ -31,30 +31,6 @@ namespace ClientLib
         //}
 
 
-
-        //static string GetPublicKey()
-        //{
-        //    string txt = "AwEAAb6o1PA1tWqffHgpSUJNcDYxBavJ4CARq8Dd7JUdR / MbcwpaRVk2tw / WN3pS8uge0n8kjY5hvi9oJWVwHyXHORGhZYYcBk9DvLL0GfkEsRscL3jhedoAwkC4Cdy + N2pDycuCiNyp6W3oRBKPPk7D4anCSESe0pOpxmxYHjKSvVaP";
-        //    return txt;
-        //}
-        //public void OnResponse_MSG_GC_BLOWFISHKEY(MemoryStream stream)
-        //{
-        //    MSG_GC_BLOWFISHKEY MSG_GC_BLOWFISHKEY = ProtoBuf.Serializer.Deserialize<MSG_GC_BLOWFISHKEY>(stream);
-        //    Parser.Parse(MSG_GC_BLOWFISHKEY);
-        //    //string rsaKey = RSAHelper.DecryptString(MSG_GC_BLOWFISHKEY.BlowfishKey, GetPublicKey());
-        //    ////ProtocolPacket.blowFishInst = new BlowFish(rsaKey);
-
-        //    //if (ProtocolPacket.gettingBlowFishKey)
-        //    //{
-        //    //    //NET.GetProtocol().gettingBlowFishKey = false;
-        //    //    //MSG_CG_RECONNECT_LOGIN login = new MSG_CG_RECONNECT_LOGIN();
-        //    //    //login.token = PLAYER.Token;
-        //    //    //login.uid = PLAYER.CurrentCharacterUid;
-        //    //    //login.accountName = PLAYER.AccountName;
-        //    //    //m_protocol.Send(login);
-        //    //}
-        //}
-
         //List<MSG_GC_CHARACTER_INFO> mCharacterList = new List<MSG_GC_CHARACTER_INFO>();
         //public void OnResponse_MSG_GC_USER_LOGIN(MemoryStream stream)
         //{
