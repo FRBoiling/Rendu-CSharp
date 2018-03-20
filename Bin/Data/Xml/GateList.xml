@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited by Leo (WanXin Games Co., Ltd) -->
+<idspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="GateList">
+	<class id="1" name="1" GateIp="127.0.0.1" GatePort="8201"/>
+</idspace>
