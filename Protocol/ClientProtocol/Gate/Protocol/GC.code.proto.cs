@@ -10,4 +10,21 @@
 // Generated from: GC.code.proto
 namespace Message.Gate.Client.Protocol.GC
 {
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_G2C_ENCRYPTKEY")]
+  public partial class MSG_G2C_ENCRYPTKEY : global::ProtoBuf.IExtensible
+  {
+    public MSG_G2C_ENCRYPTKEY() {}
+    
+    private string _EncryptKey;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"EncryptKey", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string EncryptKey
+    {
+      get { return _EncryptKey; }
+      set { _EncryptKey = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
 }

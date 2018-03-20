@@ -3,3 +3,6 @@ message MSG_C2G_HEARTBEAT {
 	required int32 UId =  1;
 }
 
+message MSG_C2G_GET_ENCRYPTKEY {
+}
+

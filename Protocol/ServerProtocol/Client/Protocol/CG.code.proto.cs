@@ -27,4 +27,14 @@ namespace Message.Client.Gate.Protocol.CG
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_C2G_GET_ENCRYPTKEY")]
+  public partial class MSG_C2G_GET_ENCRYPTKEY : global::ProtoBuf.IExtensible
+  {
+    public MSG_C2G_GET_ENCRYPTKEY() {}
+    
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
 }

@@ -1,5 +1,5 @@
 package Message.BattleManager.Battle.Protocol.BM2B;
-module BattleManager.Battle.Protocol BM2B 0x56000000;
+module BattleManager.Battle.Protocol.BM2B Provider 0x56000000;
 
 //===================================================================
 //======================== battle manager -> battle =================

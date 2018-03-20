@@ -11,10 +11,10 @@ namespace Message.Battle.ClusterManager.Protocol.B2CM {
 	}
 
 }
-namespace Battle.ClusterManager.Protocol {
-	partial class B2CM {
+namespace Battle.ClusterManager.Protocol.B2CM {
+	partial class Provider {
 		static public void GenerateId() {
-			Engine.Foundation.Id<Battle.ClusterManager.Protocol.B2CM>.Value = 0x61000000;
+			Engine.Foundation.Id<Battle.ClusterManager.Protocol.B2CM.Provider>.Value = 0x61000000;
 		}
 	}
 }

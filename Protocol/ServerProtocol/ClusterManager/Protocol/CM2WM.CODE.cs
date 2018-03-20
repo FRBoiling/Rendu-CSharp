@@ -11,10 +11,10 @@ namespace Message.ClusterManager.WorldManager.Protocol.CM2WM {
 	}
 
 }
-namespace ClusterManager.WorldManager.Protocol {
-	partial class CM2WM {
+namespace ClusterManager.WorldManager.Protocol.CM2WM {
+	partial class Provider {
 		static public void GenerateId() {
-			Engine.Foundation.Id<ClusterManager.WorldManager.Protocol.CM2WM>.Value = 0x13000000;
+			Engine.Foundation.Id<ClusterManager.WorldManager.Protocol.CM2WM.Provider>.Value = 0x13000000;
 		}
 	}
 }

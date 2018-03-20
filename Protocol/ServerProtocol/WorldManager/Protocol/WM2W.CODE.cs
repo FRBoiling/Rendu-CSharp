@@ -11,10 +11,10 @@ namespace Message.WorldManager.World.Protocol.WM2W {
 	}
 
 }
-namespace WorldManager.World.Protocol {
-	partial class WM2W {
+namespace WorldManager.World.Protocol.WM2W {
+	partial class Provider {
 		static public void GenerateId() {
-			Engine.Foundation.Id<WorldManager.World.Protocol.WM2W>.Value = 0x34000000;
+			Engine.Foundation.Id<WorldManager.World.Protocol.WM2W.Provider>.Value = 0x34000000;
 		}
 	}
 }

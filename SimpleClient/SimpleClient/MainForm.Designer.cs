@@ -235,6 +235,7 @@
             this.Controls.Add(this.textBox_MainShow);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_Closing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Protocol)).EndInit();
             this.groupBox_Protocol.ResumeLayout(false);

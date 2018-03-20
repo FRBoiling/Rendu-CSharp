@@ -1,10 +1,13 @@
 ﻿using ApiLib;
 using AssemblyLib;
+using ClientLib;
+using DataParserLib;
 using GenerateCodeLib;
 using LogLib;
 using System;
 using System.CodeDom.Compiler;
 using System.Drawing;
+using System.IO;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
@@ -17,18 +20,33 @@ namespace SimpleClient
         public MainForm()
         {
             InitializeComponent();
+            InitXml();
             InitApi();
         }
 
-        Api mApi;
+
+        //Api mApi;
+        GateServer mApi;
         Thread workThread;
         string curProtocolMsgName = "";
         string protocolMsgDllName = "ClientProtocol.dll";
         AssemblyResult mAssemblyResult;
+        object curMsg;
+
+        public void InitXml()
+        {
+            string[] files = Directory.GetFiles(@"..\Data\Xml", "*.xml", SearchOption.AllDirectories);
+            foreach (var file in files)
+            {
+                XmlDataManager.Inst.Parse(file);
+            }
+        }
+
 
         public void InitApi()
         {
-            mApi = new Api();
+            //mApi = new Api();
+            mApi = new GateServer();
             try
             {
                 var logger = new WinFormLogger(this, true);
@@ -38,8 +56,20 @@ namespace SimpleClient
 #else
                 logger.SetPriority(2);
 #endif
-                mApi.InitLogger(logger);
-                mApi.Init();
+                Log.InitLog(logger);
+
+                Data data = XmlDataManager.Inst.GetData("GateList", 1);
+
+                string ip = data.GetString("GateIp");
+                ushort port = data.GetUInt16("GatePort");
+                Message.Client.Gate.Protocol.CG.Api.GenerateId();
+                Message.Gate.Client.Protocol.GC.Api.GenerateId();
+                mApi.Init(ip, port);
+                mApi.ReConnect();
+                ////if (LoadProtocol())
+                //{
+                //    mApi.Init();
+                //}
             }
             catch (Exception e)
             {
@@ -50,22 +80,57 @@ namespace SimpleClient
 
             workThread = new Thread(ThreadMethod);
             workThread.Start();
+
+
+            Log.Info("client is ready...");
         }
 
-
+        bool IsWorking = true;
         void ThreadMethod()
         {
-            Thread thread = new Thread(mApi.MainLoop);
-            thread.Start();
-            Log.Info("client is ready...");
-            while (thread.IsAlive)
+            IsWorking = true;
+          
+            while (IsWorking)
             {
-                mApi.ProcessInput();
-                Thread.Sleep(1000);
+                mApi.Process();
             }
             mApi.Exit();
+
             Log.Info("client is exit...");
         }
+
+
+        private bool LoadProtocol()
+        {
+            string code = ParseCode.AssemblyParseDll(protocolMsgDllName, out mAssemblyResult);
+
+            //string soure = /*PathExt.workPath + @"\ClientLib\";*/";
+            string sourePath = @"..\..\SimpleClient\Libs\ClientLib\";
+            string str1 = sourePath + @"GateServer.cs";
+            string str2 = sourePath + @"GateServer_Code.cs";
+            string str3 = sourePath + @"GateServer_Login_Requset.cs";
+            string str4 = sourePath + @"GateServer_Login_Response.cs";
+            string str5 = sourePath + @"HostInfo.cs";
+
+            string[] files = new string[] { str1, str2, str3, str4, str5 };
+
+            CompilerResults result = ParseCode.DebugRun(files, "ClientLib.dll");
+            if (result.Errors.HasErrors)
+            {
+                Log.Write("编译错误");
+                foreach (CompilerError err in result.Errors)
+                {
+                    Log.Error(err.ErrorText);
+                }
+                return false;
+            }
+            else
+            {
+                Log.Write("编译成功");
+                return true;
+            }
+        }
+
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -130,43 +195,19 @@ namespace SimpleClient
 
         private void button_LoadProtocol_Click(object sender, EventArgs e)
         {
-            string code = ParseCode.AssemblyParseDll(protocolMsgDllName,out mAssemblyResult);
-
-            //string soure = /*PathExt.workPath + @"\ClientLib\";*/";
-            string sourePath = @"..\..\SimpleClient\Libs\ClientLib\";
-            string str1 = sourePath + @"GateServer.cs";
-            string str2 = sourePath + @"GateServer_Code.cs";
-            string str3 = sourePath + @"GateServer_Login_Requset.cs";
-            string str4 = sourePath + @"GateServer_Login_Response.cs";
-            string str5 = sourePath + @"HostInfo.cs";
-
-            string[] files = new string[] { str1, str2, str3, str4, str5 };
-
-            CompilerResults result = ParseCode.DebugRun(files, "ClientLib.dll");
-            if (result.Errors.HasErrors)
-            {
-                Log.Write("编译错误");
-                foreach (CompilerError err in result.Errors)
-                {
-                    Log.Error(err.ErrorText);
-                }
-            }
-            else
-            {
-                Log.Write("编译成功");
-            }
+            LoadProtocol();
         }
 
         private void button_Connect_Click(object sender, EventArgs e)
         {
+            mApi.ReConnect();
             workThread = new Thread(ThreadMethod);
             workThread.Start();
-            mApi.ReConnect();
         }
 
         private void button_Disconnect_Click(object sender, EventArgs e)
         {
-            mApi.Exit();
+            IsWorking = false;
         }
 
         private void button_CleanMainShow_Click(object sender, EventArgs e)
@@ -231,6 +272,8 @@ namespace SimpleClient
                 this.textBox_MainShow.AppendText(strText);
                 this.textBox_MainShow.ScrollToCaret();
             }
+
+            mApi.RouteSend(msg.GetType().Name, msg);
         }
 
         public void SetDateValue(object msg, string dataName, object value)
@@ -325,9 +368,9 @@ namespace SimpleClient
             if (comboBox_ProtocolName.SelectedItem !=null)
             {
                 curProtocolMsgName = comboBox_ProtocolName.SelectedItem.ToString();
-                object msg = mApi.RouteInit(curProtocolMsgName);
+                curMsg = mApi.RouteInit(curProtocolMsgName);
                 ClearDataGrid();
-                Parse(msg);
+                Parse(curMsg);
             }
             else
             {
@@ -377,6 +420,11 @@ namespace SimpleClient
             this.dataGridView_Protocol.Rows[index].Cells[1].Value = property.Name;
             this.dataGridView_Protocol.Columns[1].ReadOnly = true;
 
+        }
+
+        private void MainForm_Closing(object sender, FormClosingEventArgs e)
+        {
+            IsWorking = false;
         }
     }
 }

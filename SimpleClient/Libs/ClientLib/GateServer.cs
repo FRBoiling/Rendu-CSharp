@@ -24,16 +24,10 @@ namespace ClientLib
             _tag.Port = port;
         }
 
-        public void InitConnectInfo(string ip, ushort port)
-        {
-            base.Init(ip,port);
-        }
-
         protected override void BindResponser()
         {
-            Message.Client.Gate.Protocol.CG.Api.GenerateId();
-            Message.Gate.Client.Protocol.GC.Api.GenerateId();
-            
+     
+
             BindResponse_Login();
             BindResponse();
         }

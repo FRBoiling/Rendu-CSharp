@@ -1,6 +1,11 @@
 package Message.Gate.Client.Protocol.GC;
-module Gate.Client.Protocol GC 0x2F000000;
+module Gate.Client.Protocol.GC Provider 0x2F000000;
 
 //===================================================================
 //===========================Gate=>Client============================
 //===================================================================
+
+message MSG_G2C_ENCRYPTKEY 0x2F000010
+{
+	required string EncryptKey = 1;
+}

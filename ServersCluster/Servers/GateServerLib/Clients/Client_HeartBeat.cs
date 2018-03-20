@@ -5,7 +5,7 @@ using TcpLib;
 
 namespace GateServerLib
 {
-    public partial class Client : AbstractTcpServer
+    public partial class Client
     {
 
         private void OnResponse_HeartBeat(MemoryStream stream, int uid)

@@ -7,7 +7,8 @@ namespace GateServerLib
     {
         void InitProtocol()
         {
-
+            Message.Client.Gate.Protocol.CG.Api.GenerateId();
+            Message.Gate.Client.Protocol.GC.Api.GenerateId();
         }
 
         ushort listenport;

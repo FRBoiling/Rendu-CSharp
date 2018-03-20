@@ -1,5 +1,5 @@
 package Message.ClusterManager.BattleManager.Protocol.CM2BM;
-module ClusterManager.BattleManager.Protocol CM2BM 0x15000000;
+module ClusterManager.BattleManager.Protocol.CM2BM Provider 0x15000000;
 
 //===================================================================
 //======================== cluster manager -> battle manager ========

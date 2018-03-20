@@ -1,5 +1,5 @@
 package Message.BattleManager.ClusterManager.Protocol.BM2CM;
-module BattleManager.ClusterManager.Protocol BM2CM 0x51000000;
+module BattleManager.ClusterManager.Protocol.BM2CM Provider 0x51000000;
 
 //===================================================================
 //======================== battle manager -> cluster manager ========

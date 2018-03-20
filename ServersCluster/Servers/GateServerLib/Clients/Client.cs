@@ -2,6 +2,7 @@
 using LogLib;
 using Message.Client.Gate.Protocol.CG;
 using ServerFrameWork;
+using System;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
@@ -29,7 +30,6 @@ namespace GateServerLib
             _api = manager.Api;
         }
 
-
         protected override void AccpetComplete()
         {
             Socket workerSocket = Tcp.GetWorkSoket();
@@ -49,12 +49,13 @@ namespace GateServerLib
 
         protected override void BindResponser()
         {
+            AddProcesser(Id<MSG_C2G_GET_ENCRYPTKEY>.Value, OnResponse_GetEncryptkey);
             AddProcesser(Id<MSG_C2G_HEARTBEAT>.Value, OnResponse_HeartBeat);
         }
 
         protected override void ProcessLogic()
         {
-            
+ 
         }
     
     }

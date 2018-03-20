@@ -1,5 +1,5 @@
 package Message.World.WorldManager.Protocol.W2WM;
-module World.WorldManager.Protocol W2WM 0x43000000;
+module World.WorldManager.Protocol.W2WM Provider 0x43000000;
 
 //===================================================================
 //========================World=>WorldManager========================

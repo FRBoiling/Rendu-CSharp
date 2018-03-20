@@ -1,5 +1,5 @@
 package Message.WorldManager.ClusterManager.Protocol.WM2CM;
-module WorldManager.ClusterManager.Protocol WM2CM 0x31000000;
+module WorldManager.ClusterManager.Protocol.WM2CM Provider 0x31000000;
 
 //===================================================================
 //========================WorldManager=>ClusterManager===============

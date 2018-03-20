@@ -1,5 +1,5 @@
 package Message.WorldManager.World.Protocol.WM2W;
-module WorldManager.World.Protocol WM2W 0x34000000;
+module WorldManager.World.Protocol.WM2W Provider 0x34000000;
 
 //===================================================================
 //========================WorldManager=>World========================

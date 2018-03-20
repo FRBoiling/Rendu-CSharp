@@ -96,8 +96,8 @@ namespace TcpLib
             {
                 if (_needReConnected)
                 {
-                    ReConnect();
                     ReConnectedComplete();
+                    ReConnect();
                 }
             }
 

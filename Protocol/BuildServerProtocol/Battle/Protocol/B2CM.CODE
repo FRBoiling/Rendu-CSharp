@@ -1,5 +1,5 @@
 package Message.Battle.ClusterManager.Protocol.B2CM;
-module Battle.ClusterManager.Protocol B2CM 0x61000000;
+module Battle.ClusterManager.Protocol.B2CM Provider 0x61000000;
 
 //===================================================================
 //======================== Battle -> ClusterManager ================

@@ -17,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\..\..\Bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;#define ASSEMBLY</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;#define ASSEMBLY11</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -41,7 +41,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\Api.cs" />
-    <Compile Include="Api\Api_Gate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,9 +60,17 @@
       <Project>{5a8965f5-f0c9-4d46-9706-3281cf3a2331}</Project>
       <Name>UtilityLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Protocol\ClientProtocol\ClientProtocol.csproj">
+      <Project>{105d609b-1a04-40fa-b684-f63e7de0a508}</Project>
+      <Name>ClientProtocol</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AssemblyLib\AssemblyLib.csproj">
       <Project>{486e6984-dc21-4e22-8c64-ae904423da9a}</Project>
       <Name>AssemblyLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClientLib\ClientLib.csproj">
+      <Project>{d0c97b29-c5ab-4ecb-a3ca-bede79585766}</Project>
+      <Name>ClientLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

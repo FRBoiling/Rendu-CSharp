@@ -21,6 +21,12 @@ namespace ClientLib
 {
 public partial class GateServer
 {
+public void OnResponse_MSG_G2C_ENCRYPTKEY(MemoryStream stream,int uid =0)
+{
+MSG_G2C_ENCRYPTKEY MSG_G2C_ENCRYPTKEY = ProtoBuf.Serializer.Deserialize<MSG_G2C_ENCRYPTKEY>(stream);
+Parser.Parse(MSG_G2C_ENCRYPTKEY);
+}
+
 MSG_C2G_HEARTBEAT msg_MSG_C2G_HEARTBEAT;
 
 public object Init_MSG_C2G_HEARTBEAT()
@@ -36,10 +42,31 @@ public object New_MSG_C2G_HEARTBEAT()
 {
 return msg_MSG_C2G_HEARTBEAT;
 }
-public void OnResponse_MSG_C2G_HEARTBEAT(MemoryStream stream)
+public void OnResponse_MSG_C2G_HEARTBEAT(MemoryStream stream,int uid =0)
 {
 MSG_C2G_HEARTBEAT MSG_C2G_HEARTBEAT = ProtoBuf.Serializer.Deserialize<MSG_C2G_HEARTBEAT>(stream);
 Parser.Parse(MSG_C2G_HEARTBEAT);
+}
+
+MSG_C2G_GET_ENCRYPTKEY msg_MSG_C2G_GET_ENCRYPTKEY;
+
+public object Init_MSG_C2G_GET_ENCRYPTKEY()
+{
+msg_MSG_C2G_GET_ENCRYPTKEY = new MSG_C2G_GET_ENCRYPTKEY();
+return msg_MSG_C2G_GET_ENCRYPTKEY;
+}
+public object Get_MSG_C2G_GET_ENCRYPTKEY()
+{
+return msg_MSG_C2G_GET_ENCRYPTKEY;
+}
+public object New_MSG_C2G_GET_ENCRYPTKEY()
+{
+return msg_MSG_C2G_GET_ENCRYPTKEY;
+}
+public void OnResponse_MSG_C2G_GET_ENCRYPTKEY(MemoryStream stream,int uid =0)
+{
+MSG_C2G_GET_ENCRYPTKEY MSG_C2G_GET_ENCRYPTKEY = ProtoBuf.Serializer.Deserialize<MSG_C2G_GET_ENCRYPTKEY>(stream);
+Parser.Parse(MSG_C2G_GET_ENCRYPTKEY);
 }
 
 public object RouteInit(string className)
@@ -48,6 +75,9 @@ switch (className)
 {
 case "MSG_C2G_HEARTBEAT":
 return Init_MSG_C2G_HEARTBEAT();
+
+case "MSG_C2G_GET_ENCRYPTKEY":
+return Init_MSG_C2G_GET_ENCRYPTKEY();
 
 
 default:
@@ -61,6 +91,9 @@ switch (className)
 case "MSG_C2G_HEARTBEAT":
 return New_MSG_C2G_HEARTBEAT();
 
+case "MSG_C2G_GET_ENCRYPTKEY":
+return New_MSG_C2G_GET_ENCRYPTKEY();
+
 
 default:
 return null;
@@ -72,6 +105,9 @@ switch (className)
 {
 case "MSG_C2G_HEARTBEAT":
 return Get_MSG_C2G_HEARTBEAT();
+
+case "MSG_C2G_GET_ENCRYPTKEY":
+return Get_MSG_C2G_GET_ENCRYPTKEY();
 
 
 default:
@@ -85,6 +121,9 @@ switch (className)
 case "MSG_C2G_HEARTBEAT":
 return typeof(MSG_C2G_HEARTBEAT);
 
+case "MSG_C2G_GET_ENCRYPTKEY":
+return typeof(MSG_C2G_GET_ENCRYPTKEY);
+
 
 default:
 return null;
@@ -92,7 +131,7 @@ return null;
 }
 public void BindResponse()
 {
-
+    AddProcesser(Id<MSG_G2C_ENCRYPTKEY>.Value, OnResponse_MSG_G2C_ENCRYPTKEY);
 }
 public bool RouteSend(string className,object msg)
 {
@@ -100,6 +139,9 @@ switch (className)
 {
 case "MSG_C2G_HEARTBEAT":
 return Send((MSG_C2G_HEARTBEAT)msg);
+
+case "MSG_C2G_GET_ENCRYPTKEY":
+return Send((MSG_C2G_GET_ENCRYPTKEY)msg);
 
 
 default:

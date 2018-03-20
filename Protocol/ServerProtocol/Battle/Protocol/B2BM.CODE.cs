@@ -11,10 +11,10 @@ namespace Message.Battle.BattleManager.Protocol.B2BM {
 	}
 
 }
-namespace Battle.BattleManager.Protocol {
-	partial class B2BM {
+namespace Battle.BattleManager.Protocol.B2BM {
+	partial class Provider {
 		static public void GenerateId() {
-			Engine.Foundation.Id<Battle.BattleManager.Protocol.B2BM>.Value = 0x65000000;
+			Engine.Foundation.Id<Battle.BattleManager.Protocol.B2BM.Provider>.Value = 0x65000000;
 		}
 	}
 }

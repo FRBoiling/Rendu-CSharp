@@ -74,6 +74,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{66CF9872-7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XML", "XML", "{7CDC0FE6-360E-4AB6-AE00-9BD9E8434F17}"
 	ProjectSection(SolutionItems) = preProject
+		Bin\Data\Xml\GateList.xml = Bin\Data\Xml\GateList.xml
 		Bin\Data\XML\RedisConfig.xml = Bin\Data\XML\RedisConfig.xml
 		Bin\Data\XML\ServerConfig.xml = Bin\Data\XML\ServerConfig.xml
 	EndProjectSection
@@ -97,6 +98,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilityLib", "CommonLibs\UtilityLib\UtilityLib.csproj", "{5A8965F5-F0C9-4D46-9706-3281CF3A2331}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiLib", "SimpleClient\Libs\ApiLib\ApiLib.csproj", "{14ADF46B-3AFA-416B-954F-E1D7B118C12A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoLib", "CommonLibs\CryptoLib\CryptoLib.csproj", "{63C87DC2-D8C2-4F54-8DC7-1CEA6637DC2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{2EFC2387-5D2A-45F4-BD82-614D4FA39782}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSAKeyGenerator", "Tools\RSAKeyGenerator\RSAKeyGenerator.csproj", "{3D54B060-27B6-4A80-825B-C0AA1D234D73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -460,6 +467,30 @@ Global
 		{14ADF46B-3AFA-416B-954F-E1D7B118C12A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{14ADF46B-3AFA-416B-954F-E1D7B118C12A}.Release|Win32.ActiveCfg = Release|Any CPU
 		{14ADF46B-3AFA-416B-954F-E1D7B118C12A}.Release|Win32.Build.0 = Release|Any CPU
+		{63C87DC2-D8C2-4F54-8DC7-1CEA6637DC2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C87DC2-D8C2-4F54-8DC7-1CEA6637DC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C87DC2-D8C2-4F54-8DC7-1CEA6637DC2E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{63C87DC2-D8C2-4F54-8DC7-1CEA6637DC2E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{63C87DC2-D8C2-4F54-8DC7-1CEA6637DC2E}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{63C87DC2-D8C2-4F54-8DC7-1CEA6637DC2E}.Debug|Win32.Build.0 = Debug|Any CPU
+		{63C87DC2-D8C2-4F54-8DC7-1CEA6637DC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C87DC2-D8C2-4F54-8DC7-1CEA6637DC2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63C87DC2-D8C2-4F54-8DC7-1CEA6637DC2E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{63C87DC2-D8C2-4F54-8DC7-1CEA6637DC2E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{63C87DC2-D8C2-4F54-8DC7-1CEA6637DC2E}.Release|Win32.ActiveCfg = Release|Any CPU
+		{63C87DC2-D8C2-4F54-8DC7-1CEA6637DC2E}.Release|Win32.Build.0 = Release|Any CPU
+		{3D54B060-27B6-4A80-825B-C0AA1D234D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D54B060-27B6-4A80-825B-C0AA1D234D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D54B060-27B6-4A80-825B-C0AA1D234D73}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3D54B060-27B6-4A80-825B-C0AA1D234D73}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3D54B060-27B6-4A80-825B-C0AA1D234D73}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{3D54B060-27B6-4A80-825B-C0AA1D234D73}.Debug|Win32.Build.0 = Debug|Any CPU
+		{3D54B060-27B6-4A80-825B-C0AA1D234D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D54B060-27B6-4A80-825B-C0AA1D234D73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D54B060-27B6-4A80-825B-C0AA1D234D73}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3D54B060-27B6-4A80-825B-C0AA1D234D73}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3D54B060-27B6-4A80-825B-C0AA1D234D73}.Release|Win32.ActiveCfg = Release|Any CPU
+		{3D54B060-27B6-4A80-825B-C0AA1D234D73}.Release|Win32.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -500,6 +531,8 @@ Global
 		{C1C20637-AFC0-4E29-A215-10E37FF3A8E8} = {3124CEF5-C9A3-4DB6-8692-1F00539E74A3}
 		{5A8965F5-F0C9-4D46-9706-3281CF3A2331} = {BEB26E75-7033-4A75-B1A5-EC56B1F84F4A}
 		{14ADF46B-3AFA-416B-954F-E1D7B118C12A} = {3124CEF5-C9A3-4DB6-8692-1F00539E74A3}
+		{63C87DC2-D8C2-4F54-8DC7-1CEA6637DC2E} = {BEB26E75-7033-4A75-B1A5-EC56B1F84F4A}
+		{3D54B060-27B6-4A80-825B-C0AA1D234D73} = {2EFC2387-5D2A-45F4-BD82-614D4FA39782}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CB6EA2E6-5D6A-4936-9BCA-75F12AA85630}

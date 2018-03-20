@@ -18,7 +18,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\..\Bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
@@ -81,6 +81,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CommonLibs\DataParserLib\DataParserLib.csproj">
+      <Project>{3c6322ad-aa26-434f-ba7e-b4d7924b9bc7}</Project>
+      <Name>DataParserLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\CommonLibs\LogLib\LogLib.csproj">
       <Project>{a3940522-54f7-45e4-98fd-c0f64550dee8}</Project>
       <Name>LogLib</Name>
@@ -89,9 +93,17 @@
       <Project>{47ae13b1-3343-45e5-bcb4-3728995c1e95}</Project>
       <Name>ServerFrameWork</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\CommonLibs\TcpLib\TcpLib.csproj">
+      <Project>{faeba880-aece-48bf-9510-af712a0bf80c}</Project>
+      <Name>TcpLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\CommonLibs\UtilityLib\UtilityLib.csproj">
       <Project>{5a8965f5-f0c9-4d46-9706-3281cf3a2331}</Project>
       <Name>UtilityLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Protocol\ClientProtocol\ClientProtocol.csproj">
+      <Project>{105d609b-1a04-40fa-b684-f63e7de0a508}</Project>
+      <Name>ClientProtocol</Name>
     </ProjectReference>
     <ProjectReference Include="..\Libs\ApiLib\ApiLib.csproj">
       <Project>{14adf46b-3afa-416b-954f-e1d7b118c12a}</Project>
@@ -100,6 +112,10 @@
     <ProjectReference Include="..\Libs\AssemblyLib\AssemblyLib.csproj">
       <Project>{486e6984-dc21-4e22-8c64-ae904423da9a}</Project>
       <Name>AssemblyLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\ClientLib\ClientLib.csproj">
+      <Project>{d0c97b29-c5ab-4ecb-a3ca-bede79585766}</Project>
+      <Name>ClientLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\Libs\GenerateCodeLib\GenerateCodeLib.csproj">
       <Project>{8e70ac1c-7db3-40b0-915b-f3b8fbcace88}</Project>

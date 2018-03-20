@@ -11,10 +11,10 @@ namespace Message.World.ClusterManager.Protocol.W2CM {
 	}
 
 }
-namespace World.ClusterManager.Protocol {
-	partial class W2CM {
+namespace World.ClusterManager.Protocol.W2CM {
+	partial class Provider {
 		static public void GenerateId() {
-			Engine.Foundation.Id<World.ClusterManager.Protocol.W2CM>.Value = 0x41000000;
+			Engine.Foundation.Id<World.ClusterManager.Protocol.W2CM.Provider>.Value = 0x41000000;
 		}
 	}
 }

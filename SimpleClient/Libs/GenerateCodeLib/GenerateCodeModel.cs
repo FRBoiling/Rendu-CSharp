@@ -393,7 +393,7 @@ namespace GenerateCodeLib
         private static string ResponseRecvFunc(string key)
         {
             StringBuilder sb = new StringBuilder();
-            string tempString = string.Format("public void OnResponse_{0}(MemoryStream stream)", key);
+            string tempString = string.Format("public void OnResponse_{0}(MemoryStream stream,int uid =0)", key);
             sb.Append(tempString);
             sb.Append(Environment.NewLine);
             sb.Append("{");
