@@ -120,7 +120,7 @@ namespace ServerFrameWork
         /// <summary>
         /// 设置帧开始点
         /// </summary>
-        public void SetFrameBegin()
+        public DateTime SetFrameBegin()
         {
             _now = DateTime.Now;
             TimeSpan deltaMillisecond = _nextFrameBeginStamp - _now;
@@ -129,9 +129,10 @@ namespace ServerFrameWork
                 Thread.Sleep(deltaMillisecond);
                 _now = _now + deltaMillisecond;
             }
-            _frameBeginTimeStamp = _now;
             _oneSecSleepTimes += (_now - _lastFrameEndStamp).TotalMilliseconds;
             _oneSecFrames++;
+            _frameBeginTimeStamp = _now;
+            return _now;
         }
 
         /// <summary>

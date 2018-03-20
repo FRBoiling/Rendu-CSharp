@@ -10,6 +10,7 @@ using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using UtilityLib;
 
@@ -25,9 +26,7 @@ namespace SimpleClient
             InitApi();
         }
 
-
         IApi mApi;
-        Thread workThread;
         string curProtocolMsgName = "";
         string protocolMsgDllName = "ClientProtocol.dll";
         AssemblyResult mAssemblyResult;
@@ -54,6 +53,7 @@ namespace SimpleClient
             Log.InitLog(logger);
         }
 
+        Thread workThread;
         public void InitApi()
         {
             Data data = XmlDataManager.Inst.GetData("GateList", 1);
@@ -66,10 +66,6 @@ namespace SimpleClient
             {
                 mApi.Init(ip, port);
                 mApi.ReConnect();
-                ////if (LoadProtocol())
-                //{
-                //    mApi.Init();
-                //}
             }
             catch (Exception e)
             {
@@ -86,10 +82,11 @@ namespace SimpleClient
         }
 
         bool IsWorking = true;
+        bool IsClosed = false;
         void ThreadMethod()
         {
             IsWorking = true;
-          
+
             while (IsWorking)
             {
                 mApi.Process();
@@ -144,12 +141,11 @@ namespace SimpleClient
             mAssemblyResult = handler.GetClassName(protocolMsgDllName);
             foreach (var item in mAssemblyResult.ClassTypeList)
             {
-                if (item.Key.Contains("Message")&&item.Key.Contains("MSG_C2G"))
+                if (item.Key.Contains("Message") && item.Key.Contains("MSG_C2G"))
                 {
                     comboBox_ProtocolName.Items.Add(item.Value.Name);
                 }
             }
-
         }
 
         public void WinFormLog(string log, Color color)
@@ -174,8 +170,9 @@ namespace SimpleClient
 
         private void MainForm_Closing(object sender, FormClosingEventArgs e)
         {
-            IsWorking = false;
+            System.Environment.Exit(0);
         }
+
 
         public void WinFormLog(string log)
         {
@@ -218,6 +215,7 @@ namespace SimpleClient
         private void button_Disconnect_Click(object sender, EventArgs e)
         {
             IsWorking = false;
+            IsClosed = false;
         }
 
         private void button_CleanMainShow_Click(object sender, EventArgs e)
@@ -375,7 +373,7 @@ namespace SimpleClient
 
         private void button_MakeProtocol_Click(object sender, EventArgs e)
         {
-            if (comboBox_ProtocolName.SelectedItem !=null)
+            if (comboBox_ProtocolName.SelectedItem != null)
             {
                 curProtocolMsgName = comboBox_ProtocolName.SelectedItem.ToString();
                 curMsg = mApi.RouteInit(curProtocolMsgName);
@@ -396,7 +394,7 @@ namespace SimpleClient
         private void Parse(object obj)
         {
             Type t = obj.GetType();
-            foreach (var item in t.GetProperties() )
+            foreach (var item in t.GetProperties())
             {
                 SetDataGridValue(item);
             }

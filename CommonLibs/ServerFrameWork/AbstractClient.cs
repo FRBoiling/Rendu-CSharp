@@ -124,8 +124,7 @@ namespace ServerFrameWork
             FpsCtrl.Init();
             while (IsRuning)
             {
-                FpsCtrl.SetFrameBegin();
-                Now = DateTime.Now;
+                Now = FpsCtrl.SetFrameBegin();
                 Process();
                 UpdateProccessInput();
                 if (State == ServerState.Stopping)
