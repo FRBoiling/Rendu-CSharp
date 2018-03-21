@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CryptoUtility;
+using System;
 using System.IO;
 using TcpLib.TcpSrc;
 
@@ -84,8 +85,16 @@ namespace TcpLib
 
         private void OnRecv(MemoryStream stream)
         {
-           int offset = _packetOperate.UnpackPacket(stream);
-           stream.Seek(offset, SeekOrigin.Begin);
+            int offset = 0;
+            if (((AbstractParsePacket)_packetOperate).BlowFishHandler == null)
+            {
+                offset = _packetOperate.UnpackPacket(stream);
+            }
+            else
+            {
+                offset = _packetOperate.CryptoUnpackPacket(stream);
+            }
+            stream.Seek(offset, SeekOrigin.Begin);
         }
 
         private void ProcessProtocal()
@@ -103,7 +112,7 @@ namespace TcpLib
         public bool Send<T>(T msg) where T : global::ProtoBuf.IExtensible
         {
             MemoryStream body, head;
-            _packetOperate.PackPacket(msg, out body, out head);
+            _packetOperate.PackPacket(msg, out head, out body);
             return Send(head, body);
         }
 
@@ -142,6 +151,11 @@ namespace TcpLib
         {
             _packetOperate = packet;
             _protocolProcess = packet;
+        }
+
+        public void SetBlowFish(BlowFish blowFish)
+        {
+            ((AbstractParsePacket)_packetOperate).BlowFishHandler = blowFish;
         }
 
         public void Exit()

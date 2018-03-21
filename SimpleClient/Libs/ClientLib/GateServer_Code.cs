@@ -21,12 +21,6 @@ namespace ClientLib
 {
 public partial class GateServer
 {
-public void OnResponse_MSG_G2C_ENCRYPTKEY(MemoryStream stream,int uid =0)
-{
-MSG_G2C_ENCRYPTKEY MSG_G2C_ENCRYPTKEY = ProtoBuf.Serializer.Deserialize<MSG_G2C_ENCRYPTKEY>(stream);
-Parser.Parse(MSG_G2C_ENCRYPTKEY);
-}
-
 MSG_C2G_HEARTBEAT msg_MSG_C2G_HEARTBEAT;
 
 public object Init_MSG_C2G_HEARTBEAT()
@@ -131,8 +125,6 @@ return null;
 }
 public void BindResponse()
 {
-AddProcesser(Id<MSG_G2C_ENCRYPTKEY>.Value, OnResponse_MSG_G2C_ENCRYPTKEY);
-
 
 }
 public bool RouteSend(string className,object msg)

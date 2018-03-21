@@ -9,11 +9,13 @@ namespace ClientLib
             MSG_C2G_HEARTBEAT msg = new MSG_C2G_HEARTBEAT();
             Send(msg);
         }
-        //public void Login_Request_MSG_CG_GET_BLOWFISHKEY()
-        //{
-        //    MSG_CG_GET_BLOWFISHKEY msg = new MSG_CG_GET_BLOWFISHKEY();
-        //    Net.Send(msg);
-        //}
+
+        public void Request_MSG_C2G_GET_ENCRYPTKEY()
+        {
+            MSG_C2G_GET_ENCRYPTKEY msg = new MSG_C2G_GET_ENCRYPTKEY();
+            Send(msg);
+        }
+
         //public void Login_Request_MSG_CG_USER_LOGIN()
         //{
         //    //Protocol.m_isLinkOverTime = false;

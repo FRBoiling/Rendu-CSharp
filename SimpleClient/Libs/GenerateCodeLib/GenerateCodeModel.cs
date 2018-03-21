@@ -22,8 +22,8 @@ namespace GenerateCodeLib
                 //    //    return false;
                 //    //case "MSG_CG_MAP_LOADING_DONE":
                 //    //    return false;
-                //    //case "MSG_CG_GET_BLOWFISHKEY":
-                //    //    return false;
+                case "MSG_G2C_ENCRYPTKEY":
+                    return false;
                 //    //case "MSG_CG_USER_LOGIN":
                 //    //    return false;
                 //    //case "MSG_CG_TO_ZONE":

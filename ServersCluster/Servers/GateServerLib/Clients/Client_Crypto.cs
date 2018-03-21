@@ -35,17 +35,15 @@ namespace GateServerLib
             }
         }
 
-        private BlowFish _blowFish;
-        public BlowFish BlowFish { get => _blowFish; }
 
         private void OnResponse_GetEncryptkey(MemoryStream stream, int uid)
         {
-            Log.Debug("recv get public key {0}", _tag.GetServerTagString());
+            Log.Debug("recv get encrypt key {0}", _tag.GetServerTagString());
             byte[] cipherKey = new byte[8];
             RNGCryptoServiceProvider keyProvider = new RNGCryptoServiceProvider();
             keyProvider.GetBytes(cipherKey);
             string hexKey = BitConverter.ToString(cipherKey).Replace("-", "");
-            _blowFish = new BlowFish(hexKey);
+            SetBlowFish( new BlowFish(hexKey));
             string encryptKey = RSAHelper.EncryptString(hexKey, _privateKey);
             MSG_G2C_ENCRYPTKEY response = new MSG_G2C_ENCRYPTKEY();
             response.EncryptKey = encryptKey;

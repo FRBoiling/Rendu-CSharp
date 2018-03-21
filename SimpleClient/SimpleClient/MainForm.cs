@@ -23,7 +23,7 @@ namespace SimpleClient
             InitializeComponent();
             InitLog();
             InitXml();
-            InitApi();
+
         }
 
         IApi mApi;
@@ -146,6 +146,7 @@ namespace SimpleClient
                     comboBox_ProtocolName.Items.Add(item.Value.Name);
                 }
             }
+            InitApi();
         }
 
         public void WinFormLog(string log, Color color)

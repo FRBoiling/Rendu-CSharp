@@ -92,5 +92,10 @@ namespace TcpLib
         {
             throw new NotImplementedException();
         }
+
+        public override int CryptoUnpackPacket(MemoryStream stream)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

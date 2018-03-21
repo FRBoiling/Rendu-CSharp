@@ -14,14 +14,19 @@ namespace RSAKeyGenerator
         {
             RSAHelper.RSAKey key = RSAHelper.GetRASKey();
 
-            FileStream publicKeyStream = new FileStream(@".\PublicKey.key",FileMode.Create,FileAccess.Write);
+            FileStream publicKeyStream = new FileStream(@"..\..\..\Bin\Data\Key\PublicKey.key",FileMode.Create,FileAccess.Write);
             StreamWriter publicKeyWriter = new StreamWriter(publicKeyStream);
+            publicKeyWriter.Write(key.PublicKey);
+            publicKeyWriter.Close();
+            publicKeyStream.Close();
+            publicKeyStream= new FileStream(@"..\..\..\SimpleClient\Bin\Data\Key\PublicKey.key", FileMode.Create, FileAccess.Write);
+            publicKeyWriter = new StreamWriter(publicKeyStream);
             publicKeyWriter.Write(key.PublicKey);
             publicKeyWriter.Close();
             publicKeyStream.Close();
 
 
-            FileStream privateKeyStream = new FileStream(@".\PrivateKey.key", FileMode.Create, FileAccess.Write);
+            FileStream privateKeyStream = new FileStream(@"..\..\..\Bin\Data\Key\PrivateKey.key", FileMode.Create, FileAccess.Write);
             StreamWriter privateKeyWriter = new StreamWriter(privateKeyStream);
             privateKeyWriter.Write(key.PrivateKey);
             privateKeyWriter.Close();

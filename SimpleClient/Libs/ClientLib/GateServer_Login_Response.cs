@@ -1,3 +1,9 @@
+using CryptoUtility;
+using Engine.Foundation;
+using GenerateCodeLib;
+using LogLib;
+using Message.Gate.Client.Protocol.GC;
+using System;
 using System.IO;
 
 namespace ClientLib
@@ -6,20 +12,46 @@ namespace ClientLib
     {
         public void BindResponse_Login()
         {
+            AddProcesser(Id<MSG_G2C_ENCRYPTKEY>.Value, OnResponse_MSG_G2C_ENCRYPTKEY);
             //Net.AddResponser(Id<MSG_GC_TIME_SYNC>.Value, OnResponse_MSG_GC_TIME_SYNC);
-            //Net.AddResponser(Id<MSG_GC_BLOWFISHKEY>.Value, OnResponse_MSG_GC_BLOWFISHKEY);
             //Net.AddResponser(Id<MSG_GC_USER_LOGIN>.Value, OnResponse_MSG_GC_USER_LOGIN);
             //Net.AddResponser(Id<MSG_GC_ENTER_WORLD>.Value, OnResponse_MSG_GC_ENTER_WORLD);
             //Net.AddResponser(Id<MSG_GC_ENTER_ZONE>.Value, OnResponse_MSG_GC_ENTER_ZONE);
-            //AddProcesser(Id<MSG_G2C_HEARTBEAT>.Value, OnResponse_MSG_GC_HEARTBEAT);
         }
 
-        public void OnResponse_MSG_GC_HEARTBEAT(MemoryStream stream)
+        private static string _publicKey;
+        public string PublicKey { get => _publicKey; }
+
+        static GateServer()
         {
-            //MSG_GC_HEARTBEAT MSG_GC_HEARTBEAT = ProtoBuf.Serializer.Deserialize<MSG_GC_HEARTBEAT>(stream);
-            //Parser.Parse(MSG_GC_HEARTBEAT);
-            //Request_MSG_CG_HEARTBEAT();
+            try
+            {
+                FileStream fsRead = new FileStream(@"..\Data\Key\PublicKey.key", FileMode.Open, FileAccess.Read);
+                StreamReader sr = new StreamReader(fsRead);
+                _publicKey = sr.ReadLine();
+
+                sr.Close();
+                fsRead.Close();
+                Log.Info("PublicKey set success");
+            }
+            catch (Exception e)
+            {
+                Log.Error("PublicKey set error:" + e.ToString());
+            }
         }
+
+
+        public void OnResponse_MSG_G2C_ENCRYPTKEY(MemoryStream stream, int uid = 0)
+        {
+            MSG_G2C_ENCRYPTKEY MSG_G2C_ENCRYPTKEY = ProtoBuf.Serializer.Deserialize<MSG_G2C_ENCRYPTKEY>(stream);
+            Parser.Parse(MSG_G2C_ENCRYPTKEY);
+            string encryptKey = RSAHelper.DecryptString(MSG_G2C_ENCRYPTKEY.EncryptKey, PublicKey);
+
+            SetBlowFish(new BlowFish(encryptKey));
+
+
+        }
+
         //public void OnResponse_MSG_GC_TIME_SYNC(MemoryStream stream)
         //{
         //    MSG_GC_TIME_SYNC MSG_GC_TIME_SYNC = ProtoBuf.Serializer.Deserialize<MSG_GC_TIME_SYNC>(stream);

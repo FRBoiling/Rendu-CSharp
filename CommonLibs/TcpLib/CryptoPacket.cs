@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using Engine.Foundation;
-using Message.Client.Gate.Protocol.CG;
 using ProtoBuf;
 
 namespace TcpLib
 {
-    public class Packet1 : AbstractParsePacket
+    public class CryptoPacke : AbstractParsePacket
     {
         private Queue<KeyValuePair<UInt32, MemoryStream>> m_msgQueue = new Queue<KeyValuePair<uint, MemoryStream>>();
         private Queue<KeyValuePair<UInt32, MemoryStream>> m_deal_msgQueue = new Queue<KeyValuePair<uint, MemoryStream>>();
@@ -55,34 +54,12 @@ namespace TcpLib
                 {
                     break;
                 }
-                UInt16 trueLen = BitConverter.ToUInt16(buffer, offset);
-                offset += sizeof(UInt16);
+
                 UInt32 msg_id = BitConverter.ToUInt32(buffer, offset);
                 offset += sizeof(UInt32);
                 //byte[] content = new byte[size];
                 //Array.Copy(buffer, offset , content, 0, size);
                 MemoryStream msg = new MemoryStream(buffer, offset, size, true, true);
-                MemoryStream trueStream = null;
-                if (msg_id!=Id<MSG_C2G_GET_ENCRYPTKEY>.Value)
-                {
-                    if (size>0)
-                    {
-                        if (BlowFishHandler == null)
-                        {
-                            return -1;
-                        }
-                        trueStream = BlowFishHandler.Decrypt_CBC(msg, 0, size);
-                        trueStream.SetLength(trueLen);
-                    }
-                    else
-                    {
-                        trueStream = msg;
-                    }
-                }
-                else
-                {
-                    trueStream = msg;
-                }
                 lock (m_msgQueue)
                 {
                     m_msgQueue.Enqueue(new KeyValuePair<uint, MemoryStream>(msg_id, msg));

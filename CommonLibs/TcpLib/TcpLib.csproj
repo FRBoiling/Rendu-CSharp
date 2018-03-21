@@ -48,6 +48,7 @@
     <Compile Include="Abstract\IProtocolProcess.cs" />
     <Compile Include="Abstract\IPacketOperate.cs" />
     <Compile Include="Abstract\ITcpClient.cs" />
+    <Compile Include="CryptoPacket.cs" />
     <Compile Include="Packet2.cs" />
     <Compile Include="Packet1.cs" />
     <Compile Include="Abstract\AbstractParsePacket.cs" />
@@ -67,6 +68,10 @@
     <ProjectReference Include="..\..\Protocol\ServerProtocol\ServerProtocol.csproj">
       <Project>{94623506-6c6c-4a20-b93f-97bb1fd872de}</Project>
       <Name>ServerProtocol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CryptoLib\CryptoLib.csproj">
+      <Project>{63c87dc2-d8c2-4f54-8dc7-1cea6637dc2e}</Project>
+      <Name>CryptoLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\LogLib\LogLib.csproj">
       <Project>{a3940522-54f7-45e4-98fd-c0f64550dee8}</Project>

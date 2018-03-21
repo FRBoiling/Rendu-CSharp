@@ -16,10 +16,10 @@ namespace TcpLib
             byte[] buffer = stream.GetBuffer();
             int offset = 0;
             int pos = 0;
-            while (stream.Length > sizeof(UInt16))
+            while (stream.Length > sizeof(ushort))
             {
-                UInt16 size = BitConverter.ToUInt16(buffer, offset);
-                offset += sizeof(UInt16);
+                ushort size = BitConverter.ToUInt16(buffer, offset);
+                offset += sizeof(ushort);
                 if (size > stream.Length - offset)
                 {
                     break;
@@ -66,6 +66,23 @@ namespace TcpLib
             head = new MemoryStream(sizeof(ushort) + sizeof(uint));
             ushort len = (ushort)body.Length;
             head.Write(BitConverter.GetBytes(len), 0, sizeof(ushort));
+            head.Write(BitConverter.GetBytes(Id<T>.Value), 0, sizeof(uint));
+        }
+
+        public override void CryptoPackPacket<T>(T msg, out MemoryStream head, out MemoryStream body)
+        {
+            body = new MemoryStream();
+            ProtoBuf.Serializer.Serialize(body, msg);
+            ushort sourceStreamLen = (ushort)body.Length;
+            if (BlowFishHandler != null && sourceStreamLen>0)
+            {
+                body = BlowFishHandler.Encrypt_CBC(body);
+            }
+
+            head = new MemoryStream(sizeof(ushort) + sizeof(uint));
+            ushort len = (ushort)body.Length;
+            head.Write(BitConverter.GetBytes(len), 0, sizeof(ushort));
+            head.Write(BitConverter.GetBytes(sourceStreamLen), 0, sizeof(ushort));
             head.Write(BitConverter.GetBytes(Id<T>.Value), 0, sizeof(uint));
         }
 

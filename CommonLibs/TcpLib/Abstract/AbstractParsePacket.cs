@@ -1,4 +1,5 @@
-﻿using ProtoBuf;
+﻿using CryptoUtility;
+using ProtoBuf;
 using System;
 using System.IO;
 
@@ -12,7 +13,9 @@ namespace TcpLib
         public abstract void PackPacket<T>(T msg, out MemoryStream head, out MemoryStream body) where T : IExtensible;
         public abstract void PackPacket<T>(T msg, int uid, out MemoryStream head, out MemoryStream body) where T : IExtensible;
         public abstract int UnpackPacket(MemoryStream stream);
-
+        public abstract int CryptoUnpackPacket(MemoryStream stream);
+        
+        public BlowFish BlowFishHandler;
 
         public AbstractParsePacket()
         {
@@ -37,6 +40,5 @@ namespace TcpLib
         }
 
         public abstract void Process();
-
     }
 }

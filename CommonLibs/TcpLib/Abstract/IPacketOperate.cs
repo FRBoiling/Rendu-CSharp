@@ -8,5 +8,6 @@ namespace TcpLib
         void PackPacket<T>(T msg, out MemoryStream head, out MemoryStream body) where T : IExtensible;
         void PackPacket<T>(T msg,int uid, out MemoryStream head, out MemoryStream body) where T : IExtensible;
         int UnpackPacket(MemoryStream stream);
+        int CryptoUnpackPacket(MemoryStream stream);
     }
 }

@@ -1,4 +1,5 @@
-﻿using LogLib;
+﻿using CryptoUtility;
+using LogLib;
 using System.IO;
 using System.Threading;
 using TcpLib.TcpSrc;
@@ -131,7 +132,14 @@ namespace TcpLib
         public bool Send<T>(T msg) where T : global::ProtoBuf.IExtensible
         {
             MemoryStream head,body;
-            _packetOperate.PackPacket(msg, out head, out body);
+            if (((AbstractParsePacket)_packetOperate).BlowFishHandler == null)
+            {
+                _packetOperate.PackPacket(msg, out head, out body);
+            }
+            else
+            {
+                _packetOperate.CryptoPackPacket(msg, out head, out body);
+            }
             return Send(head, body);
         }
 
@@ -178,6 +186,11 @@ namespace TcpLib
         {
             _packetOperate = packet;
             _protocolProcess = packet;
+        }
+
+        public void SetBlowFish(BlowFish blowFish)
+        {
+           ((AbstractParsePacket)_packetOperate).BlowFishHandler = blowFish;
         }
 
         public void Exit()
