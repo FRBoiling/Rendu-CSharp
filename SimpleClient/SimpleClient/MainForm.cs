@@ -82,7 +82,6 @@ namespace SimpleClient
         }
 
         bool IsWorking = true;
-        bool IsClosed = false;
         void ThreadMethod()
         {
             IsWorking = true;
@@ -216,7 +215,6 @@ namespace SimpleClient
         private void button_Disconnect_Click(object sender, EventArgs e)
         {
             IsWorking = false;
-            IsClosed = false;
         }
 
         private void button_CleanMainShow_Click(object sender, EventArgs e)
