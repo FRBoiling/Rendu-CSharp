@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace CryptoUtility
+namespace CryptoLib
 {
     /// <summary>
     /// 非对称RSA加密类 可以参考

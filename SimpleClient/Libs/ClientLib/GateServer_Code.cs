@@ -17,6 +17,7 @@ using Message.Client.Gate.Protocol.CG;
 using Message.Gate.Client.Protocol.GC;
 using Engine.Foundation;
 using GenerateCodeLib;
+using CryptoLib;
 namespace ClientLib
 {
 public partial class GateServer

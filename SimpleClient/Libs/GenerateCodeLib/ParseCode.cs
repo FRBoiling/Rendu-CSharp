@@ -72,6 +72,7 @@ namespace GenerateCodeLib
             paras.ReferencedAssemblies.Add(@"UtilityLib.dll");
             paras.ReferencedAssemblies.Add(@"ApiLib.dll");
             paras.ReferencedAssemblies.Add(@"GenerateCodeLib.dll");
+            paras.ReferencedAssemblies.Add(@"CryptoLib.dll");
 
             paras.GenerateInMemory = false;
             paras.GenerateExecutable = false;
