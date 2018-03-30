@@ -22,57 +22,147 @@ namespace ClientLib
 {
 public partial class GateServer
 {
-MSG_C2G_HEARTBEAT msg_MSG_C2G_HEARTBEAT;
-
-public object Init_MSG_C2G_HEARTBEAT()
+public void OnResponse_MSG_G2C_Heartbeat(MemoryStream stream,int uid =0)
 {
-msg_MSG_C2G_HEARTBEAT = new MSG_C2G_HEARTBEAT();
-return msg_MSG_C2G_HEARTBEAT;
-}
-public object Get_MSG_C2G_HEARTBEAT()
-{
-return msg_MSG_C2G_HEARTBEAT;
-}
-public object New_MSG_C2G_HEARTBEAT()
-{
-return msg_MSG_C2G_HEARTBEAT;
-}
-public void OnResponse_MSG_C2G_HEARTBEAT(MemoryStream stream,int uid =0)
-{
-MSG_C2G_HEARTBEAT MSG_C2G_HEARTBEAT = ProtoBuf.Serializer.Deserialize<MSG_C2G_HEARTBEAT>(stream);
-Parser.Parse(MSG_C2G_HEARTBEAT);
+MSG_G2C_Heartbeat MSG_G2C_Heartbeat = ProtoBuf.Serializer.Deserialize<MSG_G2C_Heartbeat>(stream);
+Parser.Parse(MSG_G2C_Heartbeat);
 }
 
-MSG_C2G_GET_ENCRYPTKEY msg_MSG_C2G_GET_ENCRYPTKEY;
+public void OnResponse_MSG_G2C_EncryptKey(MemoryStream stream,int uid =0)
+{
+MSG_G2C_EncryptKey MSG_G2C_EncryptKey = ProtoBuf.Serializer.Deserialize<MSG_G2C_EncryptKey>(stream);
+Parser.Parse(MSG_G2C_EncryptKey);
+}
 
-public object Init_MSG_C2G_GET_ENCRYPTKEY()
+public void OnResponse_MSG_G2C_Login(MemoryStream stream,int uid =0)
 {
-msg_MSG_C2G_GET_ENCRYPTKEY = new MSG_C2G_GET_ENCRYPTKEY();
-return msg_MSG_C2G_GET_ENCRYPTKEY;
+MSG_G2C_Login MSG_G2C_Login = ProtoBuf.Serializer.Deserialize<MSG_G2C_Login>(stream);
+Parser.Parse(MSG_G2C_Login);
 }
-public object Get_MSG_C2G_GET_ENCRYPTKEY()
+
+public void OnResponse_MSG_G2C_CreateRole(MemoryStream stream,int uid =0)
 {
-return msg_MSG_C2G_GET_ENCRYPTKEY;
+MSG_G2C_CreateRole MSG_G2C_CreateRole = ProtoBuf.Serializer.Deserialize<MSG_G2C_CreateRole>(stream);
+Parser.Parse(MSG_G2C_CreateRole);
 }
-public object New_MSG_C2G_GET_ENCRYPTKEY()
+
+public void OnResponse_Role_BaseInfo(MemoryStream stream,int uid =0)
 {
-return msg_MSG_C2G_GET_ENCRYPTKEY;
+Role_BaseInfo Role_BaseInfo = ProtoBuf.Serializer.Deserialize<Role_BaseInfo>(stream);
+Parser.Parse(Role_BaseInfo);
 }
-public void OnResponse_MSG_C2G_GET_ENCRYPTKEY(MemoryStream stream,int uid =0)
+
+public void OnResponse_Role_Model(MemoryStream stream,int uid =0)
 {
-MSG_C2G_GET_ENCRYPTKEY MSG_C2G_GET_ENCRYPTKEY = ProtoBuf.Serializer.Deserialize<MSG_C2G_GET_ENCRYPTKEY>(stream);
-Parser.Parse(MSG_C2G_GET_ENCRYPTKEY);
+Role_Model Role_Model = ProtoBuf.Serializer.Deserialize<Role_Model>(stream);
+Parser.Parse(Role_Model);
+}
+
+public void OnResponse_Role_Info(MemoryStream stream,int uid =0)
+{
+Role_Info Role_Info = ProtoBuf.Serializer.Deserialize<Role_Info>(stream);
+Parser.Parse(Role_Info);
+}
+
+MSG_C2G_Heartbeat msg_MSG_C2G_Heartbeat;
+
+public object Init_MSG_C2G_Heartbeat()
+{
+msg_MSG_C2G_Heartbeat = new MSG_C2G_Heartbeat();
+return msg_MSG_C2G_Heartbeat;
+}
+public object Get_MSG_C2G_Heartbeat()
+{
+return msg_MSG_C2G_Heartbeat;
+}
+public object New_MSG_C2G_Heartbeat()
+{
+return msg_MSG_C2G_Heartbeat;
+}
+public void OnResponse_MSG_C2G_Heartbeat(MemoryStream stream,int uid =0)
+{
+MSG_C2G_Heartbeat MSG_C2G_Heartbeat = ProtoBuf.Serializer.Deserialize<MSG_C2G_Heartbeat>(stream);
+Parser.Parse(MSG_C2G_Heartbeat);
+}
+
+MSG_C2G_GetEncryptKey msg_MSG_C2G_GetEncryptKey;
+
+public object Init_MSG_C2G_GetEncryptKey()
+{
+msg_MSG_C2G_GetEncryptKey = new MSG_C2G_GetEncryptKey();
+return msg_MSG_C2G_GetEncryptKey;
+}
+public object Get_MSG_C2G_GetEncryptKey()
+{
+return msg_MSG_C2G_GetEncryptKey;
+}
+public object New_MSG_C2G_GetEncryptKey()
+{
+return msg_MSG_C2G_GetEncryptKey;
+}
+public void OnResponse_MSG_C2G_GetEncryptKey(MemoryStream stream,int uid =0)
+{
+MSG_C2G_GetEncryptKey MSG_C2G_GetEncryptKey = ProtoBuf.Serializer.Deserialize<MSG_C2G_GetEncryptKey>(stream);
+Parser.Parse(MSG_C2G_GetEncryptKey);
+}
+
+MSG_C2G_Login msg_MSG_C2G_Login;
+
+public object Init_MSG_C2G_Login()
+{
+msg_MSG_C2G_Login = new MSG_C2G_Login();
+return msg_MSG_C2G_Login;
+}
+public object Get_MSG_C2G_Login()
+{
+return msg_MSG_C2G_Login;
+}
+public object New_MSG_C2G_Login()
+{
+return msg_MSG_C2G_Login;
+}
+public void OnResponse_MSG_C2G_Login(MemoryStream stream,int uid =0)
+{
+MSG_C2G_Login MSG_C2G_Login = ProtoBuf.Serializer.Deserialize<MSG_C2G_Login>(stream);
+Parser.Parse(MSG_C2G_Login);
+}
+
+MSG_C2G_CreateRole msg_MSG_C2G_CreateRole;
+
+public object Init_MSG_C2G_CreateRole()
+{
+msg_MSG_C2G_CreateRole = new MSG_C2G_CreateRole();
+return msg_MSG_C2G_CreateRole;
+}
+public object Get_MSG_C2G_CreateRole()
+{
+return msg_MSG_C2G_CreateRole;
+}
+public object New_MSG_C2G_CreateRole()
+{
+return msg_MSG_C2G_CreateRole;
+}
+public void OnResponse_MSG_C2G_CreateRole(MemoryStream stream,int uid =0)
+{
+MSG_C2G_CreateRole MSG_C2G_CreateRole = ProtoBuf.Serializer.Deserialize<MSG_C2G_CreateRole>(stream);
+Parser.Parse(MSG_C2G_CreateRole);
 }
 
 public object RouteInit(string className)
 {
 switch (className)
 {
-case "MSG_C2G_HEARTBEAT":
-return Init_MSG_C2G_HEARTBEAT();
+case "MSG_C2G_Heartbeat":
+return Init_MSG_C2G_Heartbeat();
 
-case "MSG_C2G_GET_ENCRYPTKEY":
-return Init_MSG_C2G_GET_ENCRYPTKEY();
+case "MSG_C2G_GetEncryptKey":
+return Init_MSG_C2G_GetEncryptKey();
+
+case "MSG_C2G_Login":
+return Init_MSG_C2G_Login();
+
+case "MSG_C2G_CreateRole":
+return Init_MSG_C2G_CreateRole();
 
 
 default:
@@ -83,11 +173,17 @@ public object RouteNew(string className)
 {
 switch (className)
 {
-case "MSG_C2G_HEARTBEAT":
-return New_MSG_C2G_HEARTBEAT();
+case "MSG_C2G_Heartbeat":
+return New_MSG_C2G_Heartbeat();
 
-case "MSG_C2G_GET_ENCRYPTKEY":
-return New_MSG_C2G_GET_ENCRYPTKEY();
+case "MSG_C2G_GetEncryptKey":
+return New_MSG_C2G_GetEncryptKey();
+
+case "MSG_C2G_Login":
+return New_MSG_C2G_Login();
+
+case "MSG_C2G_CreateRole":
+return New_MSG_C2G_CreateRole();
 
 
 default:
@@ -98,11 +194,17 @@ public object RouteGet(string className)
 {
 switch (className)
 {
-case "MSG_C2G_HEARTBEAT":
-return Get_MSG_C2G_HEARTBEAT();
+case "MSG_C2G_Heartbeat":
+return Get_MSG_C2G_Heartbeat();
 
-case "MSG_C2G_GET_ENCRYPTKEY":
-return Get_MSG_C2G_GET_ENCRYPTKEY();
+case "MSG_C2G_GetEncryptKey":
+return Get_MSG_C2G_GetEncryptKey();
+
+case "MSG_C2G_Login":
+return Get_MSG_C2G_Login();
+
+case "MSG_C2G_CreateRole":
+return Get_MSG_C2G_CreateRole();
 
 
 default:
@@ -113,11 +215,17 @@ public object RouteType(string className)
 {
 switch (className)
 {
-case "MSG_C2G_HEARTBEAT":
-return typeof(MSG_C2G_HEARTBEAT);
+case "MSG_C2G_Heartbeat":
+return typeof(MSG_C2G_Heartbeat);
 
-case "MSG_C2G_GET_ENCRYPTKEY":
-return typeof(MSG_C2G_GET_ENCRYPTKEY);
+case "MSG_C2G_GetEncryptKey":
+return typeof(MSG_C2G_GetEncryptKey);
+
+case "MSG_C2G_Login":
+return typeof(MSG_C2G_Login);
+
+case "MSG_C2G_CreateRole":
+return typeof(MSG_C2G_CreateRole);
 
 
 default:
@@ -126,17 +234,37 @@ return null;
 }
 public void BindResponse()
 {
+AddProcesser(Id<MSG_G2C_Heartbeat>.Value, OnResponse_MSG_G2C_Heartbeat);
+
+AddProcesser(Id<MSG_G2C_EncryptKey>.Value, OnResponse_MSG_G2C_EncryptKey);
+
+AddProcesser(Id<MSG_G2C_Login>.Value, OnResponse_MSG_G2C_Login);
+
+AddProcesser(Id<MSG_G2C_CreateRole>.Value, OnResponse_MSG_G2C_CreateRole);
+
+AddProcesser(Id<Role_BaseInfo>.Value, OnResponse_Role_BaseInfo);
+
+AddProcesser(Id<Role_Model>.Value, OnResponse_Role_Model);
+
+AddProcesser(Id<Role_Info>.Value, OnResponse_Role_Info);
+
 
 }
 public bool RouteSend(string className,object msg)
 {
 switch (className)
 {
-case "MSG_C2G_HEARTBEAT":
-return Send((MSG_C2G_HEARTBEAT)msg);
+case "MSG_C2G_Heartbeat":
+return Send((MSG_C2G_Heartbeat)msg);
 
-case "MSG_C2G_GET_ENCRYPTKEY":
-return Send((MSG_C2G_GET_ENCRYPTKEY)msg);
+case "MSG_C2G_GetEncryptKey":
+return Send((MSG_C2G_GetEncryptKey)msg);
+
+case "MSG_C2G_Login":
+return Send((MSG_C2G_Login)msg);
+
+case "MSG_C2G_CreateRole":
+return Send((MSG_C2G_CreateRole)msg);
 
 
 default:

@@ -6,13 +6,13 @@ namespace ClientLib
     {
         public void Request_MSG_CG_HEARTBEAT()
         {
-            MSG_C2G_HEARTBEAT msg = new MSG_C2G_HEARTBEAT();
+            MSG_C2G_Heartbeat msg = new MSG_C2G_Heartbeat();
             Send(msg);
         }
 
         public void Request_MSG_C2G_GET_ENCRYPTKEY()
         {
-            MSG_C2G_GET_ENCRYPTKEY msg = new MSG_C2G_GET_ENCRYPTKEY();
+            MSG_C2G_GetEncryptKey msg = new MSG_C2G_GetEncryptKey();
             Send(msg);
         }
 

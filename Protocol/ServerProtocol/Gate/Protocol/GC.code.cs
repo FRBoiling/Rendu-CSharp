@@ -16,7 +16,7 @@ namespace Message.Gate.Client.Protocol.GC {
 			Engine.Foundation.Id<Message.Gate.Client.Protocol.GC.MSG_G2C_CreateRole>.Value = 0x2F001001;
 			Engine.Foundation.Id<Message.Gate.Client.Protocol.GC.Role_BaseInfo>.Value = 0x2F001050;
 			Engine.Foundation.Id<Message.Gate.Client.Protocol.GC.Role_Model>.Value = 0x2F001051;
-			Engine.Foundation.Id<Message.Gate.Client.Protocol.GC.Role_Info>.Value = 0x2F001053;
+			Engine.Foundation.Id<Message.Gate.Client.Protocol.GC.Role_Info>.Value = 0x2F001052;
 		}
 	}
 

@@ -1,12 +1,7 @@
-﻿using CryptoUtility;
-using GateServerLib.Auth;
+﻿using GateServerLib.Auth;
 using LogLib;
 using Message.Client.Gate.Protocol.CG;
-using Message.Gate.Client.Protocol.GC;
-using System;
 using System.IO;
-using System.Security.Cryptography;
-using TcpLib;
 
 namespace GateServerLib
 {
