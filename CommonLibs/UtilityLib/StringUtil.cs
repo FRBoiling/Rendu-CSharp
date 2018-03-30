@@ -9,8 +9,7 @@ namespace UtilityLib
             string[] separator = new string[] { "||" };
             return str.Split(separator, StringSplitOptions.None);
         }
-
-
+        
         public static string[] GetSplitString(string source, char split)
         {
             char[] separator = new char[] { split };

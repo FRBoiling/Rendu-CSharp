@@ -1,8 +1,21 @@
 package Message.Client.Gate.Protocol.CG;
-message MSG_C2G_HEARTBEAT {
+message MSG_C2G_Heartbeat {
 	required int32 UId =  1;
 }
 
-message MSG_C2G_GET_ENCRYPTKEY {
+message MSG_C2G_GetEncryptKey {
+}
+
+message MSG_C2G_Login {
+	required string Username =  1;
+	required string Password =  2;
+	required string Version =  3;
+	required string Token =  4;
+}
+
+message MSG_C2G_CreateRole {
+	required string Name =  1;
+	required string Sex =  2;
+	required int32 InitModel = 3;
 }
 

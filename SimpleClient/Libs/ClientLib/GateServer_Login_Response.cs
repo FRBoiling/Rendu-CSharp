@@ -12,7 +12,7 @@ namespace ClientLib
     {
         public void BindResponse_Login()
         {
-            AddProcesser(Id<MSG_G2C_ENCRYPTKEY>.Value, OnResponse_MSG_G2C_ENCRYPTKEY);
+            AddProcesser(Id<MSG_G2C_EncryptKey>.Value, OnResponse_MSG_G2C_EncryptKey);
             //Net.AddResponser(Id<MSG_GC_TIME_SYNC>.Value, OnResponse_MSG_GC_TIME_SYNC);
             //Net.AddResponser(Id<MSG_GC_USER_LOGIN>.Value, OnResponse_MSG_GC_USER_LOGIN);
             //Net.AddResponser(Id<MSG_GC_ENTER_WORLD>.Value, OnResponse_MSG_GC_ENTER_WORLD);
@@ -41,11 +41,11 @@ namespace ClientLib
         }
 
 
-        public void OnResponse_MSG_G2C_ENCRYPTKEY(MemoryStream stream, int uid = 0)
+        public void OnResponse_MSG_G2C_EncryptKey(MemoryStream stream, int uid = 0)
         {
-            MSG_G2C_ENCRYPTKEY MSG_G2C_ENCRYPTKEY = ProtoBuf.Serializer.Deserialize<MSG_G2C_ENCRYPTKEY>(stream);
-            Parser.Parse(MSG_G2C_ENCRYPTKEY);
-            string encryptKey = RSAHelper.DecryptString(MSG_G2C_ENCRYPTKEY.EncryptKey, PublicKey);
+            MSG_G2C_EncryptKey MSG_G2C_EncryptKey = ProtoBuf.Serializer.Deserialize<MSG_G2C_EncryptKey>(stream);
+            Parser.Parse(MSG_G2C_EncryptKey);
+            string encryptKey = RSAHelper.DecryptString(MSG_G2C_EncryptKey.EncryptKey, PublicKey);
 
             SetBlowFish(new BlowFish(encryptKey));
 

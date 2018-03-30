@@ -5,11 +5,32 @@ module Client.Gate.Protocol.CG Provider 0xF2000000;
 //===========================Client=>Gate============================
 //===================================================================
 
-message MSG_C2G_HEARTBEAT 0xF2000001
+message MSG_C2G_Heartbeat 0xF2000001
 {
 	required int32 UId = 1;
 }
 
-message MSG_C2G_GET_ENCRYPTKEY 0xF2000010
+message MSG_C2G_GetEncryptKey 0xF2000010
 {
 }
+
+//===================================================================
+//============  Role  ==============0xF2001000 <=> 0xF2001100 =======
+//===================================================================
+
+message MSG_C2G_Login 0xF2001000
+{
+	required string Username = 1;
+	required string Password = 2;	
+
+	required string Version = 3;	
+	required string Token = 4;	
+}
+
+message MSG_C2G_CreateRole 0xF2001001
+{
+	required string Name = 1;
+	required string Sex = 2;
+	required int32 InitModel=3;
+}
+

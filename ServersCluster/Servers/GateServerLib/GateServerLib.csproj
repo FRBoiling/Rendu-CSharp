@@ -48,10 +48,14 @@
     <Compile Include="Api\Api_Init.cs" />
     <Compile Include="Api\Api_Client.cs" />
     <Compile Include="Api\Api_Server.cs" />
+    <Compile Include="Auth\AuthManager.cs" />
+    <Compile Include="Auth\IAuth.cs" />
     <Compile Include="Clients\Client_Crypto.cs" />
     <Compile Include="Clients\Client_HeartBeat.cs" />
     <Compile Include="Clients\Client.cs" />
     <Compile Include="Clients\ClientMgr.cs" />
+    <Compile Include="Clients\Client_CreateRole.cs" />
+    <Compile Include="Clients\Client_Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

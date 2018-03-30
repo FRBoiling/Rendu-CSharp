@@ -5,7 +5,48 @@ module Gate.Client.Protocol.GC Provider 0x2F000000;
 //===========================Gate=>Client============================
 //===================================================================
 
-message MSG_G2C_ENCRYPTKEY 0x2F000010
+message MSG_G2C_Heartbeat 0x2F000001
+{
+	required int32 UId = 1;
+}
+
+message MSG_G2C_EncryptKey 0x2F000010
 {
 	required string EncryptKey = 1;
+}
+
+//===================================================================
+//============  Role  ==============0x2F001000 <=> 0x2F001100 =======
+//===================================================================
+
+message MSG_G2C_Login 0x2F001000
+{
+	required int32 Result = 1;
+	repeated Role_BaseInfo RoleList = 2;
+}
+
+message MSG_G2C_CreateRole 0x2F001001
+{
+	required int32 Result = 1;
+	required Role_BaseInfo Role=2;
+}
+
+message Role_BaseInfo 0x2F001050
+{
+	required int32 Id = 1;
+	required string Name = 2;
+	required int32 Sex = 3;
+	required int32 Level = 4;
+	required Role_Model Model = 5;
+}
+
+message Role_Model 0x2F001051
+{
+	required int32 Head =1;
+	required int32 Body =2;
+}
+
+message Role_Info 0x2F001052
+{
+	required Role_BaseInfo BaseInfo =1;
 }

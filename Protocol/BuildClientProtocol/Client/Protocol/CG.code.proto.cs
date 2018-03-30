@@ -10,10 +10,10 @@
 // Generated from: CG.code.proto
 namespace Message.Client.Gate.Protocol.CG
 {
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_C2G_HEARTBEAT")]
-  public partial class MSG_C2G_HEARTBEAT : global::ProtoBuf.IExtensible
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_C2G_Heartbeat")]
+  public partial class MSG_C2G_Heartbeat : global::ProtoBuf.IExtensible
   {
-    public MSG_C2G_HEARTBEAT() {}
+    public MSG_C2G_Heartbeat() {}
     
     private int _UId;
     [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"UId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
@@ -27,11 +27,80 @@ namespace Message.Client.Gate.Protocol.CG
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_C2G_GET_ENCRYPTKEY")]
-  public partial class MSG_C2G_GET_ENCRYPTKEY : global::ProtoBuf.IExtensible
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_C2G_GetEncryptKey")]
+  public partial class MSG_C2G_GetEncryptKey : global::ProtoBuf.IExtensible
   {
-    public MSG_C2G_GET_ENCRYPTKEY() {}
+    public MSG_C2G_GetEncryptKey() {}
     
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_C2G_Login")]
+  public partial class MSG_C2G_Login : global::ProtoBuf.IExtensible
+  {
+    public MSG_C2G_Login() {}
+    
+    private string _Username;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"Username", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string Username
+    {
+      get { return _Username; }
+      set { _Username = value; }
+    }
+    private string _Password;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"Password", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string Password
+    {
+      get { return _Password; }
+      set { _Password = value; }
+    }
+    private string _Version;
+    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"Version", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string Version
+    {
+      get { return _Version; }
+      set { _Version = value; }
+    }
+    private string _Token;
+    [global::ProtoBuf.ProtoMember(4, IsRequired = true, Name=@"Token", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string Token
+    {
+      get { return _Token; }
+      set { _Token = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_C2G_CreateRole")]
+  public partial class MSG_C2G_CreateRole : global::ProtoBuf.IExtensible
+  {
+    public MSG_C2G_CreateRole() {}
+    
+    private string _Name;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"Name", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string Name
+    {
+      get { return _Name; }
+      set { _Name = value; }
+    }
+    private string _Sex;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"Sex", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string Sex
+    {
+      get { return _Sex; }
+      set { _Sex = value; }
+    }
+    private int _InitModel;
+    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"InitModel", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int InitModel
+    {
+      get { return _InitModel; }
+      set { _InitModel = value; }
+    }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }

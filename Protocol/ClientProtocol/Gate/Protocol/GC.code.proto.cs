@@ -10,10 +10,27 @@
 // Generated from: GC.code.proto
 namespace Message.Gate.Client.Protocol.GC
 {
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_G2C_ENCRYPTKEY")]
-  public partial class MSG_G2C_ENCRYPTKEY : global::ProtoBuf.IExtensible
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_G2C_Heartbeat")]
+  public partial class MSG_G2C_Heartbeat : global::ProtoBuf.IExtensible
   {
-    public MSG_G2C_ENCRYPTKEY() {}
+    public MSG_G2C_Heartbeat() {}
+    
+    private int _UId;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"UId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int UId
+    {
+      get { return _UId; }
+      set { _UId = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_G2C_EncryptKey")]
+  public partial class MSG_G2C_EncryptKey : global::ProtoBuf.IExtensible
+  {
+    public MSG_G2C_EncryptKey() {}
     
     private string _EncryptKey;
     [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"EncryptKey", DataFormat = global::ProtoBuf.DataFormat.Default)]
@@ -21,6 +38,140 @@ namespace Message.Gate.Client.Protocol.GC
     {
       get { return _EncryptKey; }
       set { _EncryptKey = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_G2C_Login")]
+  public partial class MSG_G2C_Login : global::ProtoBuf.IExtensible
+  {
+    public MSG_G2C_Login() {}
+    
+    private int _Result;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"Result", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int Result
+    {
+      get { return _Result; }
+      set { _Result = value; }
+    }
+    private readonly global::System.Collections.Generic.List<Message.Gate.Client.Protocol.GC.Role_BaseInfo> _RoleList = new global::System.Collections.Generic.List<Message.Gate.Client.Protocol.GC.Role_BaseInfo>();
+    [global::ProtoBuf.ProtoMember(2, Name=@"RoleList", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public global::System.Collections.Generic.List<Message.Gate.Client.Protocol.GC.Role_BaseInfo> RoleList
+    {
+      get { return _RoleList; }
+    }
+  
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_G2C_CreateRole")]
+  public partial class MSG_G2C_CreateRole : global::ProtoBuf.IExtensible
+  {
+    public MSG_G2C_CreateRole() {}
+    
+    private int _Result;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"Result", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int Result
+    {
+      get { return _Result; }
+      set { _Result = value; }
+    }
+    private Message.Gate.Client.Protocol.GC.Role_BaseInfo _Role;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"Role", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public Message.Gate.Client.Protocol.GC.Role_BaseInfo Role
+    {
+      get { return _Role; }
+      set { _Role = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Role_BaseInfo")]
+  public partial class Role_BaseInfo : global::ProtoBuf.IExtensible
+  {
+    public Role_BaseInfo() {}
+    
+    private int _Id;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"Id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int Id
+    {
+      get { return _Id; }
+      set { _Id = value; }
+    }
+    private string _Name;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"Name", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string Name
+    {
+      get { return _Name; }
+      set { _Name = value; }
+    }
+    private int _Sex;
+    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"Sex", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int Sex
+    {
+      get { return _Sex; }
+      set { _Sex = value; }
+    }
+    private int _Level;
+    [global::ProtoBuf.ProtoMember(4, IsRequired = true, Name=@"Level", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int Level
+    {
+      get { return _Level; }
+      set { _Level = value; }
+    }
+    private Message.Gate.Client.Protocol.GC.Role_Model _Model;
+    [global::ProtoBuf.ProtoMember(5, IsRequired = true, Name=@"Model", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public Message.Gate.Client.Protocol.GC.Role_Model Model
+    {
+      get { return _Model; }
+      set { _Model = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Role_Model")]
+  public partial class Role_Model : global::ProtoBuf.IExtensible
+  {
+    public Role_Model() {}
+    
+    private int _Head;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"Head", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int Head
+    {
+      get { return _Head; }
+      set { _Head = value; }
+    }
+    private int _Body;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"Body", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int Body
+    {
+      get { return _Body; }
+      set { _Body = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Role_Info")]
+  public partial class Role_Info : global::ProtoBuf.IExtensible
+  {
+    public Role_Info() {}
+    
+    private Message.Gate.Client.Protocol.GC.Role_BaseInfo _BaseInfo;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"BaseInfo", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public Message.Gate.Client.Protocol.GC.Role_BaseInfo BaseInfo
+    {
+      get { return _BaseInfo; }
+      set { _BaseInfo = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)

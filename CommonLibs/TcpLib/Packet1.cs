@@ -63,7 +63,7 @@ namespace TcpLib
                 //Array.Copy(buffer, offset , content, 0, size);
                 MemoryStream msg = new MemoryStream(buffer, offset, size, true, true);
                 MemoryStream trueStream = null;
-                if (msg_id!=Id<MSG_C2G_GET_ENCRYPTKEY>.Value)
+                if (msg_id!=Id<MSG_C2G_GetEncryptKey>.Value)
                 {
                     if (size>0)
                     {

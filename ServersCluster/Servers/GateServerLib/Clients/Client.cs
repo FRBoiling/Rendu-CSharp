@@ -49,8 +49,10 @@ namespace GateServerLib
 
         protected override void BindResponser()
         {
-            AddProcesser(Id<MSG_C2G_GET_ENCRYPTKEY>.Value, OnResponse_GetEncryptkey);
-            AddProcesser(Id<MSG_C2G_HEARTBEAT>.Value, OnResponse_HeartBeat);
+            AddProcesser(Id<MSG_C2G_GetEncryptKey>.Value, OnResponse_GetEncryptkey);
+            AddProcesser(Id<MSG_C2G_Heartbeat>.Value, OnResponse_HeartBeat);
+            AddProcesser(Id<MSG_C2G_Login>.Value, OnResponse_Login);
+            AddProcesser(Id<MSG_C2G_CreateRole>.Value, OnResponse_CreateRole);            
         }
 
         protected override void ProcessLogic()

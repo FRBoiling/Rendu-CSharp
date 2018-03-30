@@ -10,7 +10,7 @@ namespace GateServerLib
 
         private void OnResponse_HeartBeat(MemoryStream stream, int uid)
         {
-            MSG_C2G_HEARTBEAT msg = ProtoBuf.Serializer.Deserialize<MSG_C2G_HEARTBEAT>(stream);
+            MSG_C2G_Heartbeat msg = ProtoBuf.Serializer.Deserialize<MSG_C2G_Heartbeat>(stream);
             Log.Debug("recv heart beat {0}",_tag.Ip);
             //Tag.GroupId = (ushort)msg.GroupId;
             //Tag.SubId = (ushort)msg.SubId;

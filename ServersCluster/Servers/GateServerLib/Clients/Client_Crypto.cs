@@ -45,7 +45,7 @@ namespace GateServerLib
             string hexKey = BitConverter.ToString(cipherKey).Replace("-", "");
             SetBlowFish( new BlowFish(hexKey));
             string encryptKey = RSAHelper.EncryptString(hexKey, _privateKey);
-            MSG_G2C_ENCRYPTKEY response = new MSG_G2C_ENCRYPTKEY();
+            MSG_G2C_EncryptKey response = new MSG_G2C_EncryptKey();
             response.EncryptKey = encryptKey;
             Send(response);
         }

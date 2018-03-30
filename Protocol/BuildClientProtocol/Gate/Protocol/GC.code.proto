@@ -1,5 +1,36 @@
 package Message.Gate.Client.Protocol.GC;
-message MSG_G2C_ENCRYPTKEY {
+message MSG_G2C_Heartbeat {
+	required int32 UId =  1;
+}
+
+message MSG_G2C_EncryptKey {
 	required string EncryptKey =  1;
+}
+
+message MSG_G2C_Login {
+	required int32 Result =  1;
+	repeated Role_BaseInfo RoleList =  2;
+}
+
+message MSG_G2C_CreateRole {
+	required int32 Result =  1;
+	required Role_BaseInfo Role = 2;
+}
+
+message Role_BaseInfo {
+	required int32 Id =  1;
+	required string Name =  2;
+	required int32 Sex =  3;
+	required int32 Level =  4;
+	required Role_Model Model =  5;
+}
+
+message Role_Model {
+	required int32 Head = 1;
+	required int32 Body = 2;
+}
+
+message Role_Info {
+	required Role_BaseInfo BaseInfo = 1;
 }
 
