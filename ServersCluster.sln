@@ -127,6 +127,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Key", "Key", "{FBC6F334-0A7
 		Bin\Data\Key\PublicKey.key = Bin\Data\Key\PublicKey.key
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Key", "Key", "{154A36B1-EFE2-42EA-8C56-486798B8C796}"
+	ProjectSection(SolutionItems) = preProject
+		SimpleClient\Bin\Data\Key\PublicKey.key = SimpleClient\Bin\Data\Key\PublicKey.key
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(Performance) = preSolution
 		HasPerformanceSessions = true
@@ -576,8 +581,12 @@ Global
 		{8F4307E4-5E5C-40F3-862E-1F6801A87673} = {3124CEF5-C9A3-4DB6-8692-1F00539E74A3}
 		{E928D32D-53E7-40B8-9C1F-846A776F2C47} = {7E97F82A-3DEC-48AB-8D32-3EB63D26D1EF}
 		{FBC6F334-0A7B-408B-93A1-C0ADD8DCD0EB} = {66CF9872-7234-475A-A833-5E915739A260}
+		{154A36B1-EFE2-42EA-8C56-486798B8C796} = {99C65FAE-588C-4042-94A9-6EBD1ED04807}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CB6EA2E6-5D6A-4936-9BCA-75F12AA85630}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

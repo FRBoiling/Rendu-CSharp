@@ -1,4 +1,4 @@
-using CryptoUtility;
+using CryptoLib;
 using Engine.Foundation;
 using GenerateCodeLib;
 using LogLib;
@@ -20,7 +20,6 @@ namespace ClientLib
         }
 
         private static string _publicKey;
-        public string PublicKey { get => _publicKey; }
 
         static GateServer()
         {
@@ -41,11 +40,12 @@ namespace ClientLib
         }
 
 
-        public void OnResponse_MSG_G2C_EncryptKey(MemoryStream stream, int uid = 0)
+
+        public void OnResponse_MSG_G2C_ENCRYPTKEY(MemoryStream stream, int uid = 0)
         {
-            MSG_G2C_EncryptKey MSG_G2C_EncryptKey = ProtoBuf.Serializer.Deserialize<MSG_G2C_EncryptKey>(stream);
-            Parser.Parse(MSG_G2C_EncryptKey);
-            string encryptKey = RSAHelper.DecryptString(MSG_G2C_EncryptKey.EncryptKey, PublicKey);
+            MSG_G2C_ENCRYPTKEY MSG_G2C_ENCRYPTKEY = ProtoBuf.Serializer.Deserialize<MSG_G2C_ENCRYPTKEY>(stream);
+            Parser.Parse(MSG_G2C_ENCRYPTKEY);
+            string encryptKey = RSAHelper.DecryptString(MSG_G2C_ENCRYPTKEY.EncryptKey, _publicKey);
 
             SetBlowFish(new BlowFish(encryptKey));
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CryptoUtility
+namespace CryptoLib
 {
     public class BigInteger
     {

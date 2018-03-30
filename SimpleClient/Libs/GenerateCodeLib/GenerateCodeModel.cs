@@ -141,8 +141,8 @@ namespace GenerateCodeLib
             sb.Append(Environment.NewLine);
             sb.Append("using GenerateCodeLib;");
             sb.Append(Environment.NewLine);
-            //sb.Append("using ProtoParserLib;");
-            //sb.Append(Environment.NewLine);
+            sb.Append("using CryptoLib;");
+            sb.Append(Environment.NewLine);
             return sb;
         }
 
