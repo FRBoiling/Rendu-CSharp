@@ -142,7 +142,9 @@ namespace TcpLib
             {
                 return false;
             }
-            return _tcp.Send(head, body);
+            //return _tcp.Send(head, body);
+            return _tcp.Send(body);
+
         }
 
         protected abstract void DisconnectComplete();

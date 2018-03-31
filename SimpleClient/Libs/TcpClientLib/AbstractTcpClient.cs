@@ -140,7 +140,9 @@ namespace TcpLib
             {
                 _packetOperate.CryptoPackPacket(msg, out head, out body);
             }
-            return Send(head, body);
+            //return Send(head, body);
+            return Send(body);
+
         }
 
 
@@ -151,6 +153,15 @@ namespace TcpLib
                 return false;
             }
             return _tcp.Send(head, body);
+        }
+
+        private bool Send(MemoryStream stream)
+        {
+            if (_tcp == null)
+            {
+                return false;
+            }
+            return _tcp.Send(stream);
         }
 
         protected abstract void DisconnectComplete();

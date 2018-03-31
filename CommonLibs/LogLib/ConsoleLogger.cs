@@ -87,7 +87,6 @@ namespace LogLib
             }
         }
 
-
         private void DoLog(LogType type, string log)
         {
             if ((int)type > _curPriority && type != LogType.DEBUG)//类型大于优先级 并且 不是DEBUG的 过滤掉
