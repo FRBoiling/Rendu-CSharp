@@ -31,6 +31,12 @@
     <Filter Include="WorldManager\Protocol">
       <UniqueIdentifier>{3f13c501-0cb2-436a-9076-5fa5e28b1dc7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Gate">
+      <UniqueIdentifier>{68f7faf5-cc41-4f00-9235-be17a6f6c9e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gate\Protocol">
+      <UniqueIdentifier>{4ed3a826-5551-4b52-b5ef-c8bc8baf34fb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="BattleManager\Protocol\BM2CM.CODE">
@@ -66,10 +72,12 @@
     <CustomBuild Include="ClusterManager\Protocol\CM2WM.CODE">
       <Filter>ClusterManager\Protocol</Filter>
     </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="World\Protocol\W2CM.CODE">
-      <Filter>World\Protocol</Filter>
-    </None>
+    <CustomBuild Include="World\Protocol\W2CM.CODE" />
+    <CustomBuild Include="Gate\Protocol\G2WM.CODE">
+      <Filter>Gate\Protocol</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WorldManager\Protocol\WM2G.CODE">
+      <Filter>WorldManager\Protocol</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

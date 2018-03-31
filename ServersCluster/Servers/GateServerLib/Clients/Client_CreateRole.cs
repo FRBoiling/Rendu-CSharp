@@ -1,5 +1,6 @@
 ﻿using LogLib;
 using Message.Client.Gate.Protocol.CG;
+using Message.Gate.WorldManager.Protocol.G2WM;
 using System.IO;
 
 namespace GateServerLib
@@ -13,6 +14,9 @@ namespace GateServerLib
 
             //1 检查名字合法性 包括：屏蔽字，串长，重名等等
             //2 如合法，通过WorldManagerServer获取角色ID
+            MSG_G2WM_CreateRoleId requestMsg = new MSG_G2WM_CreateRoleId();
+            requestMsg.Username = _authMgr.Username;
+            
             //3 收到WorldManagerServer返回ID后。进行创角步骤
         }
 

@@ -16,22 +16,22 @@ message MSG_G2C_EncryptKey 0x2F000010
 }
 
 //===================================================================
-//============  Role  ==============0x2F001000 <=> 0x2F001100 =======
+//============  Role  ==============0x2F000101 <=> 0x2F000199 =======
 //===================================================================
 
-message MSG_G2C_Login 0x2F001000
+message MSG_G2C_Login 0x2F000101
 {
 	required int32 Result = 1;
 	repeated Role_BaseInfo RoleList = 2;
 }
 
-message MSG_G2C_CreateRole 0x2F001001
+message MSG_G2C_CreateRole 0x2F000102
 {
 	required int32 Result = 1;
 	required Role_BaseInfo Role=2;
 }
 
-message Role_BaseInfo 0x2F001050
+message Role_BaseInfo 0x2F000111
 {
 	required int32 Id = 1;
 	required string Name = 2;
@@ -40,13 +40,13 @@ message Role_BaseInfo 0x2F001050
 	required Role_Model Model = 5;
 }
 
-message Role_Model 0x2F001051
+message Role_Model 0x2F000112
 {
 	required int32 Head =1;
 	required int32 Body =2;
 }
 
-message Role_Info 0x2F001052
+message Role_Info 0x2F000121
 {
 	required Role_BaseInfo BaseInfo =1;
 }

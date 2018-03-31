@@ -15,10 +15,10 @@ message MSG_C2G_GetEncryptKey 0xF2000010
 }
 
 //===================================================================
-//============  Role  ==============0xF2001000 <=> 0xF2001100 =======
+//============  Role  ==============0xF2000101 <=> 0xF2000199 =======
 //===================================================================
 
-message MSG_C2G_Login 0xF2001000
+message MSG_C2G_Login 0xF2000101
 {
 	required string Username = 1;
 	required string Password = 2;	
@@ -27,7 +27,7 @@ message MSG_C2G_Login 0xF2001000
 	required string Token = 4;	
 }
 
-message MSG_C2G_CreateRole 0xF2001001
+message MSG_C2G_CreateRole 0xF2000102
 {
 	required string Name = 1;
 	required string Sex = 2;

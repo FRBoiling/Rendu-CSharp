@@ -1,0 +1,9 @@
+package Message.Gate.WorldManager.Protocol.G2WM;
+message MSG_G2WM_Heartbeat {
+	required int32 UId =  1;
+}
+
+message MSG_G2WM_CreateRoleId {
+	required string Username =  1;
+}
+

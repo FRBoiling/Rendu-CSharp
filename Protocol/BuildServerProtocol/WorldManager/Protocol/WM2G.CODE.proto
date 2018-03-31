@@ -1,10 +1,10 @@
-package Message.World.WorldManager.Protocol.W2WM;
-message MSG_W2WM_Heartbeat {
+package Message.WorldManager.Gate.Protocol.WM2G;
+message MSG_WM2G_Heartbeat {
 	required int32 GroupId =  1;
 	required int32 SubId =  2;
 }
 
-message MSG_W2WM_Register {
+message MSG_WM2G_Register {
 	required int32 GroupId =  1;
 	required int32 SubId =  2;
 }

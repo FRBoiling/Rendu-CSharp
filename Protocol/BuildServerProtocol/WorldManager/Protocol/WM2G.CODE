@@ -1,23 +1,23 @@
-package Message.World.WorldManager.Protocol.W2WM;
-module World.WorldManager.Protocol.W2WM Provider 0x43000000;
+package Message.WorldManager.Gate.Protocol.WM2G;
+module WorldManager.Gate.Protocol.WM2G Provider 0x32000000;
 
 //===================================================================
-//========================World=>WorldManager========================
+//===================== WorldManager=>Gate  ========================
 //===================================================================
 
-message MSG_W2WM_Heartbeat 0x43000001
+message MSG_WM2G_Heartbeat 0x32000001
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;
 }
 
-message MSG_W2WM_Register 0x43000002
+message MSG_WM2G_Register 0x32000002
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;
 }
 
 //===================================================================
-//============  Role  ==============0x43000101 <=> 0x43000199 =======
+//============  Role  ==============0x32000101 <=> 0x32000199 =======
 //===================================================================
 

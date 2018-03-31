@@ -61,6 +61,8 @@
     <Compile Include="ClusterManager\Protocol\CM2W.CODE.proto.cs" />
     <Compile Include="ClusterManager\Protocol\CM2WM.CODE.cs" />
     <Compile Include="ClusterManager\Protocol\CM2WM.CODE.proto.cs" />
+    <Compile Include="Gate\Protocol\G2WM.CODE.cs" />
+    <Compile Include="Gate\Protocol\G2WM.CODE.proto.cs" />
     <Compile Include="Gate\Protocol\GC.code.cs" />
     <Compile Include="Gate\Protocol\GC.code.proto.cs" />
     <Compile Include="Id.cs" />
