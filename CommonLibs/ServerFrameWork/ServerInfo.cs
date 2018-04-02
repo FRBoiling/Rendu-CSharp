@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -60,6 +61,9 @@ namespace ServerFrameWork
             set { _port = value; }
         }
 
+        private IPEndPoint _iPEndPoint;
+        public IPEndPoint IPEndPoint { get => _iPEndPoint; set => _iPEndPoint = value; }
+
         /// <summary>
         /// 名字
         /// </summary>
@@ -78,6 +82,11 @@ namespace ServerFrameWork
         {
             string key = string.Format("{0}_{1}",  _groupId, _subId);
             return key;
+        }
+
+        public void SetConnectInfo()
+        {
+
         }
     }
 }

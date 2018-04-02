@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 被2013 sp1 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
 <idspace id="ServerConfig">
-	<class id="1" name="ClusterManager" group="Master" Ip="127.0.0.1" Port="10000"/>
-	<class id="2" name="Gate_1_1" group="Gate" AreaId="1" GroupId="1" SubId="1" Ip="127.0.0.1" Port="8201"/>
-	<class id="3" name="Gate_1_2" group="Gate" AreaId="1" GroupId="1" SubId="2" Ip="127.0.0.1"/>
-	<class id="4" name="WorldManager_1_1" group="WorldManager" AreaId="1" GroupId="1" SubId="1" Ip="127.0.0.1" Port="8301"/>
-	<class id="5" name="World_1_1" group="World" AreaId="1" GroupId="1" SubId="1" Ip="127.0.0.1"/>
-	<class id="6" name="World_1_2" group="World" AreaId="1" GroupId="1" SubId="2" Ip="127.0.0.1"/>
-	<class id="7" name="BattleManger_1_1" group="BattleManger" AreaId="1" GroupId="1" SubId="1" Ip="127.0.0.1"/>
-	<class id="8" name="Battle_1_1" group="Battle" AreaId="1" GroupId="1" SubId="1" Ip="127.0.0.1"/>
-	<class id="9" name="Battle_1_2" group="Battle" AreaId="1" GroupId="1" SubId="2" Ip="127.0.0.1"/>
+	<class id="1" name="ClusterManager" group="Master" LANIp="127.0.0.1" GatePort="12000" WorldManagerPort="13000" WorldPort="14000" BattleManagerPort="15000" BattlePort="16000" NETIp="192.168.10.123" NETPort="10000"/>
+	<class id="2" name="Gate_1_1" group="Gate" AreaId="1" GroupId="1" SubId="1" LANIp="127.0.0.1" NETIp="192.168.10.123" NETPort="8201"/>
+	<class id="3" name="Gate_1_2" group="Gate" AreaId="1" GroupId="1" SubId="2" LANIp="127.0.0.1" NETIp="192.168.10.123" NETPort="8202"/>
+	<class id="4" name="WorldManager_1_1" group="WorldManager" AreaId="1" GroupId="1" SubId="1" LANIp="127.0.0.1" GatePort="10231"/>
+	<class id="5" name="World_1_1" group="World" AreaId="1" GroupId="1" SubId="1" LANIp="127.0.0.1" GatePort="10241"/>
+	<class id="6" name="World_1_2" group="World" AreaId="1" GroupId="1" SubId="2" LANIp="127.0.0.1" GatePort="10242"/>
+	<class id="7" name="BattleManger_1_1" group="BattleManger" AreaId="1" GroupId="1" SubId="1" LANIp="127.0.0.1"/>
+	<class id="8" name="Battle_1_1" group="Battle" AreaId="1" GroupId="1" SubId="1" LANIp="127.0.0.1"/>
+	<class id="9" name="Battle_1_2" group="Battle" AreaId="1" GroupId="1" SubId="2" LANIp="127.0.0.1"/>
 </idspace>

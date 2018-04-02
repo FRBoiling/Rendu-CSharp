@@ -45,9 +45,9 @@ namespace BattleServerLib
 
         public void RequsetRegister()
         {
-            Console.WriteLine("Requst Register to {0}", ServerTag.Type);
+            Console.WriteLine("Requst Register to {0}", ServerTag.GetServerTagString());
 
-            MSG_B2CM_REGISTER requset = new MSG_B2CM_REGISTER();
+            MSG_B2CM_Register requset = new MSG_B2CM_Register();
             requset.GroupId = _api.ApiTag.GroupId;
             requset.SubId = _api.ApiTag.SubId;
             Send(requset);

@@ -1,6 +1,9 @@
 ﻿using CryptoLib;
+using ServerFrameWork;
 using System;
 using System.IO;
+using System.Net;
+using System.Net.Sockets;
 using TcpLib.TcpSrc;
 
 namespace TcpLib
@@ -62,6 +65,24 @@ namespace TcpLib
         public void StartListen()
         {
             StartListen(ListenPort);
+        }
+
+        protected void MarkConnectTag(ServerInfo info)
+        {
+            Socket workerSocket = Tcp.GetWorkSoket();
+            info.IPEndPoint = (IPEndPoint)workerSocket.RemoteEndPoint;
+            IPAddress remote_ip = info.IPEndPoint.Address;//获取远程连接IP 
+            info.Ip = remote_ip.ToString();
+            info.Port = info.IPEndPoint.Port;
+        }
+
+        protected void MarkConnectTag(ClientInfo info)
+        {
+            Socket workerSocket = Tcp.GetWorkSoket();
+            info.IPEndPoint = (IPEndPoint)workerSocket.RemoteEndPoint;
+            IPAddress remote_ip = info.IPEndPoint.Address;//获取远程连接IP 
+            info.Ip = remote_ip.ToString();
+            info.Port = info.IPEndPoint.Port;
         }
 
         private bool OnAccpet(bool ret)

@@ -26,12 +26,12 @@ namespace TcpLib
 
         public void Listen(ushort port)
         {
-            TcpMgr.Inst.Listen(port, InitServer);
+            TcpMgr.Inst.Listen(port, InitListen);
         }
 
-        protected abstract void InitServer(ushort port);
+        protected abstract void InitListen(ushort port);
 
-        public void UpdateServers()
+        public void Process()
         {
             lock (_allServersLock)
             {

@@ -7,13 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from: WM2G.CODE.proto
-namespace Message.WorldManager.Gate.Protocol.WM2G
+// Generated from: G2CM.CODE.proto
+namespace Message.Gate.ClusterManager.Protocol.G2CM
 {
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_WM2G_Heartbeat")]
-  public partial class MSG_WM2G_Heartbeat : global::ProtoBuf.IExtensible
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_W2CM_Heartbeat")]
+  public partial class MSG_W2CM_Heartbeat : global::ProtoBuf.IExtensible
   {
-    public MSG_WM2G_Heartbeat() {}
+    public MSG_W2CM_Heartbeat() {}
     
     private int _GroupId;
     [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"GroupId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
@@ -34,10 +34,10 @@ namespace Message.WorldManager.Gate.Protocol.WM2G
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_WM2G_Register")]
-  public partial class MSG_WM2G_Register : global::ProtoBuf.IExtensible
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_W2CM_Register")]
+  public partial class MSG_W2CM_Register : global::ProtoBuf.IExtensible
   {
-    public MSG_WM2G_Register() {}
+    public MSG_W2CM_Register() {}
     
     private int _GroupId;
     [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"GroupId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]

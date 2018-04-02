@@ -1,11 +1,11 @@
 ﻿using Engine.Foundation;
 using LogLib;
-using Message.BattleManager.ClusterManager.Protocol.BM2CM;
 using Message.WorldManager.ClusterManager.Protocol.WM2CM;
 using ServerFrameWork;
 using System;
-using System.Collections.Generic;
 using System.IO;
+using System.Net;
+using System.Net.Sockets;
 using TcpLib;
 
 namespace ClusterManagerServerLib.Server
@@ -35,8 +35,8 @@ namespace ClusterManagerServerLib.Server
 
         protected override void AccpetComplete()
         {
-
-            Log.Info("{0} server connected", Tag.Type);
+            MarkConnectTag(_tag);
+            Log.Info("{0} server connected", _tag.GetServerTagString());
             _manager.AddAccpetServer(this);
         }
 
@@ -49,12 +49,12 @@ namespace ClusterManagerServerLib.Server
 
         protected override void BindResponser()
         {
-            AddProcesser(Id<MSG_WM2CM_REGISTER>.Value, OnResponse_Regist);
+            AddProcesser(Id<MSG_WM2CM_Register>.Value, OnResponse_Regist);
         }
 
         private void OnResponse_Regist(MemoryStream stream, int uid)
         {
-            MSG_WM2CM_REGISTER msg = ProtoBuf.Serializer.Deserialize<MSG_WM2CM_REGISTER>(stream);
+            MSG_WM2CM_Register msg = ProtoBuf.Serializer.Deserialize<MSG_WM2CM_Register>(stream);
             _tag.GroupId = (ushort)msg.GroupId;
             _tag.SubId = (ushort)msg.SubId;
             Key = _tag.GetServerKey();

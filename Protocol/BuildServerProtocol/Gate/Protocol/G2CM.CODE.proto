@@ -1,10 +1,10 @@
-package Message.WorldManager.ClusterManager.Protocol.WM2CM;
-message MSG_WM2CM_Heartbeat {
+package Message.Gate.ClusterManager.Protocol.G2CM;
+message MSG_W2CM_Heartbeat {
 	required int32 GroupId =  1;
 	required int32 SubId =  2;
 }
 
-message MSG_WM2CM_Register {
+message MSG_W2CM_Register {
 	required int32 GroupId =  1;
 	required int32 SubId =  2;
 }

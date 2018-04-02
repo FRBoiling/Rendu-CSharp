@@ -1,5 +1,8 @@
 ﻿using LogLib;
+using ServerFrameWork;
 using System.IO;
+using System.Net;
+using System.Net.Sockets;
 using System.Threading;
 using TcpLib.TcpSrc;
 
@@ -10,6 +13,12 @@ namespace TcpLib
     {
         private bool _needReConnected = true;
         private ITcp _tcp = new Tcp();
+
+        string _key = "0_0";
+        public string Key { get => _key; set => _key = value; }
+
+        string _name = "deafultServer";
+        public string Name { get => _name; set => _name = value; }
 
         private string _ip;
         public string Ip
@@ -83,6 +92,15 @@ namespace TcpLib
                 //连接
                 Thread.Sleep(1000);
             }
+        }
+
+        protected void MarkConnectTag(ServerInfo info)
+        {
+            Socket workerSocket = _tcp.GetWorkSoket();
+            info.IPEndPoint = (IPEndPoint)workerSocket.RemoteEndPoint;
+            IPAddress remote_ip = info.IPEndPoint.Address;//获取远程连接IP 
+            info.Ip = remote_ip.ToString();
+            info.Port = info.IPEndPoint.Port;
         }
 
         private bool OnConnect(bool ret)

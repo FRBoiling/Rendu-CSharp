@@ -159,8 +159,8 @@ namespace ServerFrameWork
             while (IsRuning)
             {
                 Now = FpsCtrl.SetFrameBegin();
-                Update();
-                UpdateProccessInput();
+                Process();
+                ProccessCmd();
                 if (State == ServerState.Stopping)
                 {
                     if (ServerStopTime < Now)
@@ -186,9 +186,9 @@ namespace ServerFrameWork
         public abstract void ExitServer();
 
         /// <summary>
-        /// 更新
+        /// 执行
         /// </summary>
-        protected abstract void Update();
+        protected abstract void Process();
 
 
         /// <summary>
@@ -198,7 +198,7 @@ namespace ServerFrameWork
         /// <summary>
         /// 输入
         /// </summary>
-        public void ProcessInput()
+        public void CmdInput()
         {
             try
             {
@@ -216,7 +216,7 @@ namespace ServerFrameWork
             }
         }
 
-        private void UpdateProccessInput()
+        private void ProccessCmd()
         {
             lock (_cmdList)
             {
@@ -225,7 +225,7 @@ namespace ServerFrameWork
                     try
                     {
                         string cmd = _cmdList.Dequeue();
-                        ExcuteCommand(cmd);
+                        ExcuteCmd(cmd);
                     }
                     catch (Exception e)
                     {
@@ -234,7 +234,7 @@ namespace ServerFrameWork
                 }
             }
         }
-        protected abstract void ExcuteCommand(string cmd);
+        protected abstract void ExcuteCmd(string cmd);
 
     }
 }

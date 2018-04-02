@@ -18,13 +18,13 @@ namespace ClusterManagerServerLib
         {
         }
 
-        protected override void Update()
+        protected override void Process()
         {
-            TcpMgr.Inst.Update();
-            UpdateServers();
+            TcpMgr.Inst.Process();
+            ServersProcess();
         }
 
-        protected override void ExcuteCommand(string cmd)
+        protected override void ExcuteCmd(string cmd)
         {
         }
     }

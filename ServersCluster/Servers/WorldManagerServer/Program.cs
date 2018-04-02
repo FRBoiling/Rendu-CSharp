@@ -30,7 +30,7 @@ namespace WorldManagerServer
 
             while (thread.IsAlive)
             {
-                api.ProcessInput();
+                api.CmdInput();
                 Thread.Sleep(1000);
             }
 

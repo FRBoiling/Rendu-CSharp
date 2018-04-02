@@ -23,7 +23,7 @@ namespace WorldManagerServerLib
 
         private void UpdateServers()
         {
-            _worldServerMgr.UpdateServers();
+            _worldServerMgr.Process();
         }
     }
 }

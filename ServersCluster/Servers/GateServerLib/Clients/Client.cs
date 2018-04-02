@@ -10,6 +10,9 @@ using TcpLib;
 
 namespace GateServerLib
 {
+    /// <summary>
+    /// 客户端监听 连接保持 类
+    /// </summary>
     public partial class Client : AbstractTcpServer
     {
         ClientInfo _tag = new ClientInfo();
@@ -32,11 +35,7 @@ namespace GateServerLib
 
         protected override void AccpetComplete()
         {
-            Socket workerSocket = Tcp.GetWorkSoket();
-            _tag.IPEndPoint = (IPEndPoint)workerSocket.RemoteEndPoint;
-            IPAddress remote_ip = _tag.IPEndPoint.Address;//获取远程连接IP 
-            _tag.Ip = remote_ip.ToString();
-            _tag.Port = _tag.IPEndPoint.Port;
+            MarkConnectTag(_tag);
             Log.Info("client {0} connected", _tag.GetServerTagString());
             _manager.AddAccpetServer(this);
         }

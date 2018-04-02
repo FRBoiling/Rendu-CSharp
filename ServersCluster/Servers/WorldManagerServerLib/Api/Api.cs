@@ -17,13 +17,13 @@ namespace WorldManagerServerLib
             throw new System.NotImplementedException();
         }
 
-        protected override void Update()
+        protected override void Process()
         {
-            TcpMgr.Inst.Update();
+            TcpMgr.Inst.Process();
             UpdateServers();
         }
 
-        protected override void ExcuteCommand(string cmd)
+        protected override void ExcuteCmd(string cmd)
         {
             throw new System.NotImplementedException();
         }

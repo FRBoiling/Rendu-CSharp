@@ -19,14 +19,14 @@ namespace BattleManagerServerLib
         {
         }
 
-        protected override void Update()
+        protected override void Process()
         {
-            TcpMgr.Inst.Update();
+            TcpMgr.Inst.Process();
             m_CMServer.Process();
             //m_BattleServer.Update();
         }
 
-        protected override void ExcuteCommand(string cmd)
+        protected override void ExcuteCmd(string cmd)
         {
         }
     }

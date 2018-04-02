@@ -4,6 +4,8 @@ using Message.World.WorldManager.Protocol.W2WM;
 using Message.WorldManager.World.Protocol.WM2W;
 using ServerFrameWork;
 using System.IO;
+using System.Net;
+using System.Net.Sockets;
 using TcpLib;
 
 namespace WorldManagerServerLib
@@ -32,7 +34,12 @@ namespace WorldManagerServerLib
 
         protected override void AccpetComplete()
         {
-            Log.Info("{0} server connected", _tag.Type);
+            Socket workerSocket = Tcp.GetWorkSoket();
+            _tag.IPEndPoint = (IPEndPoint)workerSocket.RemoteEndPoint;
+            IPAddress remote_ip = _tag.IPEndPoint.Address;//获取远程连接IP 
+            _tag.Ip = remote_ip.ToString();
+            _tag.Port = _tag.IPEndPoint.Port;
+            Log.Info("{0} server connected", _tag.GetServerTagString());
             _manager.AddAccpetServer(this);
         }
 
@@ -44,8 +51,8 @@ namespace WorldManagerServerLib
 
         protected override void BindResponser()
         {
-            AddProcesser(Id<MSG_W2WM_REGISTER>.Value, OnResponse_Regist);
-            AddProcesser(Id<MSG_W2WM_HEARTBEAT>.Value, OnResponse_HeartBeat);
+            AddProcesser(Id<MSG_W2WM_Register>.Value, OnResponse_Regist);
+            AddProcesser(Id<MSG_W2WM_Heartbeat>.Value, OnResponse_Heartbeat);
         }
 
         protected override void ProcessLogic()
@@ -55,7 +62,7 @@ namespace WorldManagerServerLib
 
         private void OnResponse_Regist(MemoryStream stream,int uid)
         {
-            MSG_W2WM_REGISTER msg = ProtoBuf.Serializer.Deserialize<MSG_W2WM_REGISTER>(stream);
+            MSG_W2WM_Register msg = ProtoBuf.Serializer.Deserialize<MSG_W2WM_Register>(stream);
             _tag.GroupId = (ushort)msg.GroupId;
             _tag.SubId = (ushort)msg.SubId;
             Key = _tag.GetServerKey();

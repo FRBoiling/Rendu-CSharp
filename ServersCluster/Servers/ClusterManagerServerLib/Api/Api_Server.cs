@@ -8,7 +8,6 @@ namespace ClusterManagerServerLib
         private BattleServerMgr _battleServerMgr;
         public BattleServerMgr BattleServerMgr { get => _battleServerMgr; }
 
-
         private BattleManagerServerMgr _battleManagerServerMgr;
         public BattleManagerServerMgr BattleManagerServerMgr { get => _battleManagerServerMgr; }
 
@@ -71,12 +70,12 @@ namespace ClusterManagerServerLib
             _worldManagerServerMgr.Listen(listenPortWorldManager);
         }
 
-        private void UpdateServers()
+        private void ServersProcess()
         {
-            _battleServerMgr.UpdateServers();
-            _battleManagerServerMgr.UpdateServers();
-            _worldServerMgr.UpdateServers();
-            _worldManagerServerMgr.UpdateServers();
+            _battleServerMgr.Process();
+            _battleManagerServerMgr.Process();
+            _worldServerMgr.Process();
+            _worldManagerServerMgr.Process();
         }
     }
 }

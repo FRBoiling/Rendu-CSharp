@@ -11,7 +11,7 @@ namespace ClusterManagerServerLib.Server
             _api = api;
         }
 
-        protected override void InitServer(ushort port)
+        protected override void InitListen(ushort port)
         {
             WorldManagerServer server = new WorldManagerServer(this, port);
             server.StartListen(true);

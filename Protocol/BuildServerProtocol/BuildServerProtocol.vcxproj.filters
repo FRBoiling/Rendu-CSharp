@@ -72,12 +72,17 @@
     <CustomBuild Include="ClusterManager\Protocol\CM2WM.CODE">
       <Filter>ClusterManager\Protocol</Filter>
     </CustomBuild>
-    <CustomBuild Include="World\Protocol\W2CM.CODE" />
     <CustomBuild Include="Gate\Protocol\G2WM.CODE">
       <Filter>Gate\Protocol</Filter>
     </CustomBuild>
     <CustomBuild Include="WorldManager\Protocol\WM2G.CODE">
       <Filter>WorldManager\Protocol</Filter>
+    </CustomBuild>
+    <CustomBuild Include="World\Protocol\W2CM.CODE">
+      <Filter>World\Protocol</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Gate\Protocol\G2CM.CODE">
+      <Filter>Gate\Protocol</Filter>
     </CustomBuild>
   </ItemGroup>
 </Project>

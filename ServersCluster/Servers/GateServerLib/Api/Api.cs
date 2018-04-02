@@ -18,14 +18,14 @@ namespace GateServerLib
             throw new System.NotImplementedException();
         }
 
-        protected override void Update()
+        protected override void Process()
         {
-            TcpMgr.Inst.Update();
-            UpdateServers();
-            UpdateClients();
+            TcpMgr.Inst.Process();
+            ClientsProcess();
+            ServersProcess();
         }
 
-        protected override void ExcuteCommand(string cmd)
+        protected override void ExcuteCmd(string cmd)
         {
             throw new System.NotImplementedException();
         }

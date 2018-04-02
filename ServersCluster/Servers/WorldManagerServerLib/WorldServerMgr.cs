@@ -10,7 +10,7 @@ namespace WorldManagerServerLib
         {
             _api = api;
         }
-        protected override void InitServer(ushort port)
+        protected override void InitListen(ushort port)
         {
             WorldServer server = new WorldServer(this, port);
             server.StartListen(true);

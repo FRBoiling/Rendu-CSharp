@@ -10,13 +10,13 @@ namespace WorldServerLib
 {
     public partial class WorldManagerServer
     {
-        public void HeartBeat()
+        public void Heartbeat()
         {
-            MSG_W2WM_HEARTBEAT requset = new MSG_W2WM_HEARTBEAT();
+            MSG_W2WM_Heartbeat requset = new MSG_W2WM_Heartbeat();
             requset.GroupId = _api.ApiTag.GroupId;
             requset.SubId = _api.ApiTag.SubId;
             Send(requset);
-            Log.Info("HeartBeat to {0}", Tag.GetServerTagString());
+            Log.Info("Heartbeat to {0}", Tag.GetServerTagString());
         }
 
         private void OnResponse_HeartBeat(MemoryStream stream, int uid)

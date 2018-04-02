@@ -2,6 +2,9 @@
 
 namespace GateServerLib
 {
+    /// <summary>
+    /// 游戏客户端 监听管理类  
+    /// </summary>
     public class ClientMgr:AbstractServerMgr
     {
         private Api _api;
@@ -10,7 +13,7 @@ namespace GateServerLib
         {
             _api = api;
         }
-        protected override void InitServer(ushort port)
+        protected override void InitListen(ushort port)
         {
             Client client = new Client(this, port);
             client.StartListen(true);

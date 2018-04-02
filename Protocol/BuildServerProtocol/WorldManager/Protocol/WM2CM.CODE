@@ -5,13 +5,13 @@ module WorldManager.ClusterManager.Protocol.WM2CM Provider 0x31000000;
 //========================WorldManager=>ClusterManager===============
 //===================================================================
 
-message MSG_WM2CM_HEARTBEAT 0x31000001
+message MSG_WM2CM_Heartbeat 0x31000001
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;
 }
 
-message MSG_WM2CM_REGISTER 0x31000002
+message MSG_WM2CM_Register 0x31000002
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;

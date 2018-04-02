@@ -115,7 +115,7 @@ namespace TcpLib.TcpSrc
             _disconnectCallBacks.Enqueue(callback);
         }
 
-        public void Update()
+        public void Process()
         {
             TcpAsyncCallBack.AsyncDisconnectCallback callback;
             while (_disconnectCallBacks.Count>0)

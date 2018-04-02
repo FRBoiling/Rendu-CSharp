@@ -55,7 +55,7 @@ namespace WorldServerLib
 
         public void RequsetRegister()
         {
-            MSG_W2WM_REGISTER requset = new MSG_W2WM_REGISTER();
+            MSG_W2WM_Register requset = new MSG_W2WM_Register();
             requset.GroupId = _api.ApiTag.GroupId;
             requset.SubId = _api.ApiTag.SubId;
             Send(requset);
