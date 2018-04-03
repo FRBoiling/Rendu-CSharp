@@ -5,13 +5,13 @@ module Gate.ClusterManager.Protocol.G2CM Provider 0x21000000;
 //========================World=>ClusterManager======================
 //===================================================================
 
-message MSG_W2CM_Heartbeat 0x21000001
+message MSG_G2CM_Heartbeat 0x21000001
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;
 }
 
-message MSG_W2CM_Register 0x21000002
+message MSG_G2CM_Register 0x21000002
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;

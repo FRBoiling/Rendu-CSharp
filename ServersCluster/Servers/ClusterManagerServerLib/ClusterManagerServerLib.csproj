@@ -47,7 +47,9 @@
     <Compile Include="Api\Api_Server.cs" />
     <Compile Include="Api\Api_Init.cs" />
     <Compile Include="Servers\BattleManagerServer\BattleManagerServer.cs" />
+    <Compile Include="Servers\GateServer\GateServer.cs" />
     <Compile Include="Servers\WorldManagerServerMgr.cs" />
+    <Compile Include="Servers\GateServerMgr.cs" />
     <Compile Include="Servers\WorldServerMgr.cs" />
     <Compile Include="Servers\BattleServer\BattleServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,9 +84,7 @@
       <Name>ServerProtocol</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Servers\GateServer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

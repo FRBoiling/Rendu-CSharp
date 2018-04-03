@@ -70,6 +70,11 @@ namespace TcpLib
         protected void MarkConnectTag(ServerInfo info)
         {
             Socket workerSocket = Tcp.GetWorkSoket();
+            NewMethod(info, workerSocket);
+        }
+
+        private static void NewMethod(ServerInfo info, Socket workerSocket)
+        {
             info.IPEndPoint = (IPEndPoint)workerSocket.RemoteEndPoint;
             IPAddress remote_ip = info.IPEndPoint.Address;//获取远程连接IP 
             info.Ip = remote_ip.ToString();
