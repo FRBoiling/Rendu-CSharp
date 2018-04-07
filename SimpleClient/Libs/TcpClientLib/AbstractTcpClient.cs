@@ -140,9 +140,7 @@ namespace TcpLib
             {
                 _packetOperate.CryptoPackPacket(msg, out head, out body);
             }
-            //return Send(head, body);
-            return Send(body);
-
+            return Send(head, body);
         }
 
 

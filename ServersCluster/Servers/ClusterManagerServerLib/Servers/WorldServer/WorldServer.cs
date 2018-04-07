@@ -1,6 +1,6 @@
 ﻿using Engine.Foundation;
 using LogLib;
-using Message.World.ClusterManager.Protocol.W2CM;
+using Protocol.World.W2CM;
 using ServerFrameWork;
 using System;
 using System.IO;

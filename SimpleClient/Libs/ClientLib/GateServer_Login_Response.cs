@@ -2,7 +2,7 @@ using CryptoLib;
 using Engine.Foundation;
 using GenerateCodeLib;
 using LogLib;
-using Message.Gate.Client.Protocol.GC;
+using Protocol.Gate.G2C;
 using System;
 using System.IO;
 
@@ -41,7 +41,7 @@ namespace ClientLib
 
 
 
-        public void OnResponse_MSG_G2C_ENCRYPTKEY(MemoryStream stream, int uid = 0)
+        public void OnResponse_MSG_G2C_EncryptKey(MemoryStream stream, int uid = 0)
         {
             MSG_G2C_EncryptKey MSG_G2C_EncryptKey = ProtoBuf.Serializer.Deserialize<MSG_G2C_EncryptKey>(stream);
             Parser.Parse(MSG_G2C_EncryptKey);

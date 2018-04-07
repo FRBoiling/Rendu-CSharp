@@ -1,4 +1,4 @@
-package Message.WorldManager.Gate.Protocol.WM2G;
+package Protocol.WorldManager.WM2G;
 message MSG_WM2G_Heartbeat {
 	required int32 GroupId =  1;
 	required int32 SubId =  2;

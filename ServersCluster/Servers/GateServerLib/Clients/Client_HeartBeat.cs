@@ -1,7 +1,6 @@
 ﻿using LogLib;
-using Message.Client.Gate.Protocol.CG;
+using Protocol.Client.C2G;
 using System.IO;
-using TcpLib;
 
 namespace GateServerLib
 {

@@ -1,20 +1,13 @@
 using System;
-namespace Message.World.WorldManager.Protocol.W2WM {
+namespace Protocol.World.W2WM {
 
 	public partial class MSG_W2WM_Heartbeat {}
 	public partial class MSG_W2WM_Register {}
 	public class Api {
 		static public void GenerateId() {
-			Engine.Foundation.Id<Message.World.WorldManager.Protocol.W2WM.MSG_W2WM_Heartbeat>.Value = 0x43000001;
-			Engine.Foundation.Id<Message.World.WorldManager.Protocol.W2WM.MSG_W2WM_Register>.Value = 0x43000002;
+			Engine.Foundation.Id<Protocol.World.W2WM.MSG_W2WM_Heartbeat>.Value = 0x4300001;
+			Engine.Foundation.Id<Protocol.World.W2WM.MSG_W2WM_Register>.Value = 0x4300002;
 		}
 	}
 
-}
-namespace World.WorldManager.Protocol.W2WM {
-	partial class Provider {
-		static public void GenerateId() {
-			Engine.Foundation.Id<World.WorldManager.Protocol.W2WM.Provider>.Value = 0x43000000;
-		}
-	}
 }

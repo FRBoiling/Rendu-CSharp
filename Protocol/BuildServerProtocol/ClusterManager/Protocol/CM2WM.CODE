@@ -1,16 +1,16 @@
-package Message.ClusterManager.WorldManager.Protocol.CM2WM;
-module ClusterManager.WorldManager.Protocol.CM2WM Provider 0x13000000;
+package Protocol.ClusterManager.CM2WM;
+
 //===================================================================
-//========================ClusterManager=>WorldManager===============
+//===============ClusterManager=>WorldManager======0x1300000=========
 //===================================================================
 
-message MSG_CM2WM_HEARTBEAT 0x13000001
+message MSG_CM2WM_HEARTBEAT 0x1300001
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;
 }
 
-message MSG_CM2WM_RETRUN_REGISTER 0x13000002
+message MSG_CM2WM_RETRUN_REGISTER 0x1300002
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;

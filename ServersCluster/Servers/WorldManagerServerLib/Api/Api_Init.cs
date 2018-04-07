@@ -7,8 +7,8 @@ namespace WorldManagerServerLib
     {
         void InitProtocol()
         {
-            Message.World.WorldManager.Protocol.W2WM.Api.GenerateId();
-            Message.WorldManager.World.Protocol.WM2W.Api.GenerateId();
+            Protocol.World.W2WM.Api.GenerateId();
+            Protocol.WorldManager.WM2W.Api.GenerateId();
         }
 
         ushort listenport;

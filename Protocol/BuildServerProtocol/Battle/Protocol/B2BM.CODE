@@ -1,17 +1,16 @@
-package Message.Battle.BattleManager.Protocol.B2BM;
-module Battle.BattleManager.Protocol.B2BM Provider 0x65000000;
+package Protocol.Battle.B2BM;
 
 //===================================================================
-//======================== battle -> battle manager ========
+//======================== battle -> battle manager =====0x6500000===
 //===================================================================
 
-message MSG_B2BM_HEARTBEAT 0x65000001
+message MSG_B2BM_HEARTBEAT 0x6500001
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;
 }
 
-message MSG_B2BM_REGISTER 0x65000002
+message MSG_B2BM_REGISTER 0x6500002
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;

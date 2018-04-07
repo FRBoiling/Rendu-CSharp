@@ -13,8 +13,8 @@
  *└────────────────────────────────────┘*
  ******************************************************************************/
 using System.IO;
-using Message.Client.Gate.Protocol.CG;
-using Message.Gate.Client.Protocol.GC;
+using Protocol.Client.C2G;
+using Protocol.Gate.G2C;
 using Engine.Foundation;
 using GenerateCodeLib;
 using CryptoLib;
@@ -26,12 +26,6 @@ public void OnResponse_MSG_G2C_Heartbeat(MemoryStream stream,int uid =0)
 {
 MSG_G2C_Heartbeat MSG_G2C_Heartbeat = ProtoBuf.Serializer.Deserialize<MSG_G2C_Heartbeat>(stream);
 Parser.Parse(MSG_G2C_Heartbeat);
-}
-
-public void OnResponse_MSG_G2C_EncryptKey(MemoryStream stream,int uid =0)
-{
-MSG_G2C_EncryptKey MSG_G2C_EncryptKey = ProtoBuf.Serializer.Deserialize<MSG_G2C_EncryptKey>(stream);
-Parser.Parse(MSG_G2C_EncryptKey);
 }
 
 public void OnResponse_MSG_G2C_Login(MemoryStream stream,int uid =0)
@@ -235,8 +229,6 @@ return null;
 public void BindResponse()
 {
 AddProcesser(Id<MSG_G2C_Heartbeat>.Value, OnResponse_MSG_G2C_Heartbeat);
-
-AddProcesser(Id<MSG_G2C_EncryptKey>.Value, OnResponse_MSG_G2C_EncryptKey);
 
 AddProcesser(Id<MSG_G2C_Login>.Value, OnResponse_MSG_G2C_Login);
 

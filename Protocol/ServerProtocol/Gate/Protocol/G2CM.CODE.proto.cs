@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 
 // Generated from: G2CM.CODE.proto
-namespace Message.Gate.ClusterManager.Protocol.G2CM
+namespace Protocol.Gate.G2CM
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_G2CM_Heartbeat")]
   public partial class MSG_G2CM_Heartbeat : global::ProtoBuf.IExtensible

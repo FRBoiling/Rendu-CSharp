@@ -140,7 +140,7 @@ namespace SimpleClient
             mAssemblyResult = handler.GetClassName(protocolMsgDllName);
             foreach (var item in mAssemblyResult.ClassTypeList)
             {
-                if (item.Key.Contains("Message") && item.Key.Contains("MSG_C2G"))
+                if (item.Key.Contains("Protocol") && item.Key.Contains("MSG_C2G"))
                 {
                     comboBox_ProtocolName.Items.Add(item.Value.Name);
                 }
@@ -279,8 +279,12 @@ namespace SimpleClient
                 this.textBox_MainShow.AppendText(strText);
                 this.textBox_MainShow.ScrollToCaret();
             }
+            for (int i = 0; i < 1000; i++)
+            {
+                mApi.RouteSend(msg.GetType().Name, msg);
+            }
 
-            mApi.RouteSend(msg.GetType().Name, msg);
+
         }
 
         public void SetDateValue(object msg, string dataName, object value)

@@ -1,18 +1,16 @@
-#ifndef Message_Client_Gate_Protocol_CG_h
-#define Message_Client_Gate_Protocol_CG_h
+#ifndef Protocol_Client_C2G_h
+#define Protocol_Client_C2G_h
 
-namespace Message { namespace Client { namespace Gate { namespace Protocol { namespace CG {
+namespace Protocol { namespace Client { namespace C2G {
 class MSG_C2G_Heartbeat;
 class MSG_C2G_GetEncryptKey;
 class MSG_C2G_Login;
 class MSG_C2G_CreateRole;
-} } } } }
+} } }
 
-const uint32 engine::id<Message::Client::Gate::Protocol::CG::MSG_C2G_Heartbeat>::value = 0xF2000001;
-const uint32 engine::id<Message::Client::Gate::Protocol::CG::MSG_C2G_GetEncryptKey>::value = 0xF2000010;
-const uint32 engine::id<Message::Client::Gate::Protocol::CG::MSG_C2G_Login>::value = 0xF2001000;
-const uint32 engine::id<Message::Client::Gate::Protocol::CG::MSG_C2G_CreateRole>::value = 0xF2001001;
+const uint32 engine::id<Protocol::Client::C2G::MSG_C2G_Heartbeat>::value = 0xF200001;
+const uint32 engine::id<Protocol::Client::C2G::MSG_C2G_GetEncryptKey>::value = 0xF200010;
+const uint32 engine::id<Protocol::Client::C2G::MSG_C2G_Login>::value = 0xF200101;
+const uint32 engine::id<Protocol::Client::C2G::MSG_C2G_CreateRole>::value = 0xF200102;
 
-namespace Client { namespace Gate { namespace Protocol { namespace CG { class Provider; } } } }
-const uint32 engine::id<Client::Gate::Protocol::CG::Provider>::value = 0xF2000000;
 #endif

@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 
 // Generated from: GC.code.proto
-namespace Message.Gate.Client.Protocol.GC
+namespace Protocol.Gate.G2C
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_G2C_Heartbeat")]
   public partial class MSG_G2C_Heartbeat : global::ProtoBuf.IExtensible
@@ -56,9 +56,9 @@ namespace Message.Gate.Client.Protocol.GC
       get { return _Result; }
       set { _Result = value; }
     }
-    private readonly global::System.Collections.Generic.List<Message.Gate.Client.Protocol.GC.Role_BaseInfo> _RoleList = new global::System.Collections.Generic.List<Message.Gate.Client.Protocol.GC.Role_BaseInfo>();
+    private readonly global::System.Collections.Generic.List<Protocol.Gate.G2C.Role_BaseInfo> _RoleList = new global::System.Collections.Generic.List<Protocol.Gate.G2C.Role_BaseInfo>();
     [global::ProtoBuf.ProtoMember(2, Name=@"RoleList", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    public global::System.Collections.Generic.List<Message.Gate.Client.Protocol.GC.Role_BaseInfo> RoleList
+    public global::System.Collections.Generic.List<Protocol.Gate.G2C.Role_BaseInfo> RoleList
     {
       get { return _RoleList; }
     }
@@ -80,9 +80,9 @@ namespace Message.Gate.Client.Protocol.GC
       get { return _Result; }
       set { _Result = value; }
     }
-    private Message.Gate.Client.Protocol.GC.Role_BaseInfo _Role;
+    private Protocol.Gate.G2C.Role_BaseInfo _Role;
     [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"Role", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    public Message.Gate.Client.Protocol.GC.Role_BaseInfo Role
+    public Protocol.Gate.G2C.Role_BaseInfo Role
     {
       get { return _Role; }
       set { _Role = value; }
@@ -125,9 +125,9 @@ namespace Message.Gate.Client.Protocol.GC
       get { return _Level; }
       set { _Level = value; }
     }
-    private Message.Gate.Client.Protocol.GC.Role_Model _Model;
+    private Protocol.Gate.G2C.Role_Model _Model;
     [global::ProtoBuf.ProtoMember(5, IsRequired = true, Name=@"Model", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    public Message.Gate.Client.Protocol.GC.Role_Model Model
+    public Protocol.Gate.G2C.Role_Model Model
     {
       get { return _Model; }
       set { _Model = value; }
@@ -166,9 +166,9 @@ namespace Message.Gate.Client.Protocol.GC
   {
     public Role_Info() {}
     
-    private Message.Gate.Client.Protocol.GC.Role_BaseInfo _BaseInfo;
+    private Protocol.Gate.G2C.Role_BaseInfo _BaseInfo;
     [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"BaseInfo", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    public Message.Gate.Client.Protocol.GC.Role_BaseInfo BaseInfo
+    public Protocol.Gate.G2C.Role_BaseInfo BaseInfo
     {
       get { return _BaseInfo; }
       set { _BaseInfo = value; }

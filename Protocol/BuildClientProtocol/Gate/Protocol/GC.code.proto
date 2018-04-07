@@ -1,4 +1,4 @@
-package Message.Gate.Client.Protocol.GC;
+package Protocol.Gate.G2C;
 message MSG_G2C_Heartbeat {
 	required int32 UId =  1;
 }

@@ -1,7 +1,7 @@
-package Message.ClusterManager.World.Protocol.CM2W;
-module ClusterManager.World.Protocol.CM2W Provider 0x14000000;
+package Protocol.ClusterManager.CM2W;
+
 //===================================================================
-//========================ClusterManager=>World======================
+//========================ClusterManager=>World=====0x1400000=======
 //===================================================================
 
 message MSG_CM2W_HEARTBEAT 0x14000001

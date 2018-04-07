@@ -1,17 +1,16 @@
-package Message.WorldManager.World.Protocol.WM2W;
-module WorldManager.World.Protocol.WM2W Provider 0x34000000;
+package Protocol.WorldManager.WM2W;
 
 //===================================================================
-//========================WorldManager=>World========================
+//====================WorldManager=>World========0x3400000========
 //===================================================================
 
-message MSG_WM2W_HEARTBEAT 0x34000001
+message MSG_WM2W_HEARTBEAT 0x3400001
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;
 }
 
-message MSG_WM2W_RETRUN_REGISTER 0x34000002
+message MSG_WM2W_RETRUN_REGISTER 0x3400002
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;

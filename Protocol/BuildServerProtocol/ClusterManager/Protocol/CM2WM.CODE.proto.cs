@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 
 // Generated from: CM2WM.CODE.proto
-namespace Message.ClusterManager.WorldManager.Protocol.CM2WM
+namespace Protocol.ClusterManager.CM2WM
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_CM2WM_HEARTBEAT")]
   public partial class MSG_CM2WM_HEARTBEAT : global::ProtoBuf.IExtensible

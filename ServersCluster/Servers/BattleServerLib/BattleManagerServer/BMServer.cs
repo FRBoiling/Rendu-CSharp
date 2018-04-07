@@ -1,11 +1,10 @@
 ﻿using ServerFrameWork;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using TcpLib;
 using Engine.Foundation;
-using Message.Battle.BattleManager.Protocol.B2BM;
-using Message.BattleManager.Battle.Protocol.BM2B;
+using Protocol.Battle.B2BM;
+using Protocol.BattleManager.BM2B;
 
 namespace BattleServerLib
 {

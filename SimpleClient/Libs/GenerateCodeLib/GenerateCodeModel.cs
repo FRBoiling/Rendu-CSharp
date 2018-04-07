@@ -22,8 +22,9 @@ namespace GenerateCodeLib
                 //    //    return false;
                 //    //case "MSG_CG_MAP_LOADING_DONE":
                 //    //    return false;
-                case "MSG_G2C_ENCRYPTKEY":
-                    return false;
+                //case "MSG_C2G_GetEncryptKey":
+                //    return false;
+
                 //    //case "MSG_CG_USER_LOGIN":
                 //    //    return false;
                 //    //case "MSG_CG_TO_ZONE":
@@ -35,8 +36,8 @@ namespace GenerateCodeLib
                 //        return false;
                 //    case "MSG_GC_TIME_SYNC":
                 //        return false;
-                //    case "MSG_GC_BLOWFISHKEY":
-                //        return false;
+                case "MSG_G2C_EncryptKey":
+                    return false;
                 //    case "MSG_GC_USER_LOGIN":
                 //        return false;
                 //    case "MSG_GC_ENTER_WORLD":
@@ -133,9 +134,9 @@ namespace GenerateCodeLib
             StringBuilder sb = new StringBuilder();
             sb.Append("using System.IO;");
             sb.Append(Environment.NewLine);
-            sb.Append("using Message.Client.Gate.Protocol.CG;");
+            sb.Append("using Protocol.Client.C2G;");
             sb.Append(Environment.NewLine);
-            sb.Append("using Message.Gate.Client.Protocol.GC;");
+            sb.Append("using Protocol.Gate.G2C;");
             sb.Append(Environment.NewLine);
             sb.Append("using Engine.Foundation;");
             sb.Append(Environment.NewLine);
@@ -201,7 +202,7 @@ namespace GenerateCodeLib
 
             foreach (var item in keys)
             {
-                if (item.Key.Contains("Message") && !item.Key.Contains("+"))
+                if (item.Key.Contains("Protocol") && !item.Key.Contains("+"))
                 {
                     if (CheckLoginMsg(item.Value.Name))
                     {

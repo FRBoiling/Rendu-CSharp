@@ -1,17 +1,16 @@
-package Message.ClusterManager.BattleManager.Protocol.CM2BM;
-module ClusterManager.BattleManager.Protocol.CM2BM Provider 0x15000000;
+package Protocol.ClusterManager.CM2BM;
 
 //===================================================================
-//======================== cluster manager -> battle manager ========
+//============= cluster manager -> battle manager ===0x1500000=====
 //===================================================================
 
-message MSG_CM2BM_HEARTBEAT 0x15000001
+message MSG_CM2BM_HEARTBEAT 0x1500001
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;
 }
 
-message MSG_CM2BM_RETRUN_REGISTER 0x15000002
+message MSG_CM2BM_RETRUN_REGISTER 0x1500002
 {
 	required int32 GroupId = 1;
 	required int32 SubId =2;

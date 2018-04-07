@@ -1,6 +1,6 @@
 ﻿using LogLib;
-using Message.Client.Gate.Protocol.CG;
-using Message.Gate.WorldManager.Protocol.G2WM;
+using Protocol.Client.C2G;
+using Protocol.Gate.G2WM;
 using System.IO;
 
 namespace GateServerLib

@@ -1,6 +1,6 @@
 ﻿using Engine.Foundation;
 using LogLib;
-using Message.Battle.ClusterManager.Protocol.B2CM;
+using Protocol.Battle.B2CM;
 using ServerFrameWork;
 using System;
 using System.IO;

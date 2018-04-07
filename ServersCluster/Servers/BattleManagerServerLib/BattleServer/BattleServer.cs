@@ -1,7 +1,7 @@
 ﻿using Engine.Foundation;
 using IOCPLib;
-using Message.Battle.BattleManager.Protocol.B2BM;
-using Message.BattleManager.Battle.Protocol.BM2B;
+using Protocol.Battle.B2BM;
+using Protocol.BattleManager.BM2B;
 using ServerFrameWork;
 using System;
 using System.Collections.Generic;

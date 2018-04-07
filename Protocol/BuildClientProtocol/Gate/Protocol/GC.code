@@ -1,37 +1,36 @@
-package Message.Gate.Client.Protocol.GC;
-module Gate.Client.Protocol.GC Provider 0x2F000000;
+package Protocol.Gate.G2C;
 
 //===================================================================
-//===========================Gate=>Client============================
+//===========================Gate=>Client========0x2F000000=========
 //===================================================================
 
-message MSG_G2C_Heartbeat 0x2F000001
+message MSG_G2C_Heartbeat 0x2F00001
 {
 	required int32 UId = 1;
 }
 
-message MSG_G2C_EncryptKey 0x2F000010
+message MSG_G2C_EncryptKey 0x2F00010
 {
 	required string EncryptKey = 1;
 }
 
 //===================================================================
-//============  Role  ==============0x2F000101 <=> 0x2F000199 =======
+//============  Role  ==============0x2F00101 <=> 0x2F00199 =======
 //===================================================================
 
-message MSG_G2C_Login 0x2F000101
+message MSG_G2C_Login 0x2F00101
 {
 	required int32 Result = 1;
 	repeated Role_BaseInfo RoleList = 2;
 }
 
-message MSG_G2C_CreateRole 0x2F000102
+message MSG_G2C_CreateRole 0x2F00102
 {
 	required int32 Result = 1;
 	required Role_BaseInfo Role=2;
 }
 
-message Role_BaseInfo 0x2F000111
+message Role_BaseInfo 0x2F00111
 {
 	required int32 Id = 1;
 	required string Name = 2;
@@ -40,13 +39,13 @@ message Role_BaseInfo 0x2F000111
 	required Role_Model Model = 5;
 }
 
-message Role_Model 0x2F000112
+message Role_Model 0x2F00112
 {
 	required int32 Head =1;
 	required int32 Body =2;
 }
 
-message Role_Info 0x2F000121
+message Role_Info 0x2F00121
 {
 	required Role_BaseInfo BaseInfo =1;
 }

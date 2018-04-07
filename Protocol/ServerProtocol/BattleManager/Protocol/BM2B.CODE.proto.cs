@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 
 // Generated from: BM2B.CODE.proto
-namespace Message.BattleManager.Battle.Protocol.BM2B
+namespace Protocol.BattleManager.BM2B
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_BM2B_HEARTBEAT")]
   public partial class MSG_BM2B_HEARTBEAT : global::ProtoBuf.IExtensible

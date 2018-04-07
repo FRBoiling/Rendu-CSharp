@@ -26,8 +26,8 @@ namespace ClientLib
 
         protected override void BindResponser()
         {
-            Message.Client.Gate.Protocol.CG.Api.GenerateId();
-            Message.Gate.Client.Protocol.GC.Api.GenerateId();
+            Protocol.Client.C2G.Api.GenerateId();
+            Protocol.Gate.G2C.Api.GenerateId();
             BindResponse_Login();
             BindResponse();
         }

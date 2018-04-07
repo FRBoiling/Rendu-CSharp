@@ -1,6 +1,6 @@
 ﻿using Engine.Foundation;
 using LogLib;
-using Message.Gate.ClusterManager.Protocol.G2CM;
+using Protocol.Gate.G2CM;
 using ServerFrameWork;
 using System.IO;
 using TcpLib;

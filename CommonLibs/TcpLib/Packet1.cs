@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using Engine.Foundation;
-using Message.Client.Gate.Protocol.CG;
-using ProtoBuf;
+using Protocol.Client;
+using Protocol.Client.C2G;
 
 namespace TcpLib
 {
@@ -116,10 +116,10 @@ namespace TcpLib
             body = new MemoryStream();
             ProtoBuf.Serializer.Serialize(body, msg);
 
-            head = new MemoryStream(sizeof(ushort) + sizeof(uint));
-            ushort len = (ushort)body.Length;
-            head.Write(BitConverter.GetBytes(len), 0, sizeof(ushort));
-            head.Write(BitConverter.GetBytes(Id<T>.Value), 0, sizeof(uint));
+            head = new MemoryStream(sizeof(short) + sizeof(int));
+            short len = (short)body.Length;
+            head.Write(BitConverter.GetBytes(len), 0, sizeof(short));
+            head.Write(BitConverter.GetBytes(Id<T>.Value), 0, sizeof(int));
         }
 
     

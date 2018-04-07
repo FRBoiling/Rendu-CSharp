@@ -1,6 +1,7 @@
-package Message.Client.Gate.Protocol.CG;
+package Protocol.Client.C2G;
 message MSG_C2G_Heartbeat {
 	required int32 UId =  1;
+	required string Username =  2;
 }
 
 message MSG_C2G_GetEncryptKey {

@@ -1,17 +1,16 @@
-package Message.BattleManager.ClusterManager.Protocol.BM2CM;
-module BattleManager.ClusterManager.Protocol.BM2CM Provider 0x51000000;
+package Protocol.BattleManager.BM2CM;
 
 //===================================================================
-//======================== battle manager -> cluster manager ========
+//===============battle manager -> cluster manager ==0x5100000======
 //===================================================================
 
-message MSG_BM2CM_HEARTBEAT 0x51000001
+message MSG_BM2CM_HEARTBEAT 0x5100001
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;
 }
 
-message MSG_BM2CM_REGISTER 0x51000002
+message MSG_BM2CM_REGISTER 0x5100002
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;

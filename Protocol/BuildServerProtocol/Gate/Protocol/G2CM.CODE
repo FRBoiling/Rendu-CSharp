@@ -1,17 +1,16 @@
-package Message.Gate.ClusterManager.Protocol.G2CM;
-module Gate.ClusterManager.Protocol.G2CM Provider 0x21000000;
+package Protocol.Gate.G2CM;
 
 //===================================================================
-//========================World=>ClusterManager======================
+//========================World=>ClusterManager==========0x2100000==
 //===================================================================
 
-message MSG_G2CM_Heartbeat 0x21000001
+message MSG_G2CM_Heartbeat 0x2100001
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;
 }
 
-message MSG_G2CM_Register 0x21000002
+message MSG_G2CM_Register 0x2100002
 {
 	required int32 GroupId = 1;
 	required int32 SubId = 2;

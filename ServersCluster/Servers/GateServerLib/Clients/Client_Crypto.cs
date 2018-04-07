@@ -1,6 +1,6 @@
 ﻿using CryptoLib;
 using LogLib;
-using Message.Gate.Client.Protocol.GC;
+using Protocol.Gate.G2C;
 using System;
 using System.IO;
 using System.Security.Cryptography;

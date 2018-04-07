@@ -1,4 +1,4 @@
-﻿using Message.BattleManager.ClusterManager.Protocol.BM2CM;
+﻿using Protocol.BattleManager.BM2CM;
 using ServerFrameWork;
 using System;
 using TcpLib;

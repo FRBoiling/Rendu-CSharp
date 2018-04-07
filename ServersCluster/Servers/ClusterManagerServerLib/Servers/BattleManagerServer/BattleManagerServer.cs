@@ -1,8 +1,7 @@
 ﻿using Engine.Foundation;
-using Message.BattleManager.ClusterManager.Protocol.BM2CM;
+using Protocol.BattleManager.BM2CM;
 using ServerFrameWork;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using TcpLib;
 

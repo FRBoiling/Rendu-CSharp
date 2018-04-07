@@ -1,20 +1,19 @@
-package Message.Gate.WorldManager.Protocol.G2WM;
-module Gate.WorldManager.Protocol.G2WM Provider 0x23000000;
+package Protocol.Gate.G2WM;
 
 //===================================================================
-//====================== Gate=>WorldManager =========================
+//====================== Gate=>WorldManager =========0x2300000=======
 //===================================================================
 
-message MSG_G2WM_Heartbeat 0x23000001
+message MSG_G2WM_Heartbeat 0x2300001
 {
 	required int32 UId = 1;
 }
 
 //===================================================================
-//============  Role  ==============0x23000101 <=> 0x23000199 =======
+//============  Role  ==============0x2300101 <=> 0x2300199 =======
 //===================================================================
 
-message MSG_G2WM_CreateRoleId 0x23000101
+message MSG_G2WM_CreateRoleId 0x2300101
 {
 	required string Username = 1;
 }

@@ -1,4 +1,4 @@
-package Message.Gate.WorldManager.Protocol.G2WM;
+package Protocol.Gate.G2WM;
 message MSG_G2WM_Heartbeat {
 	required int32 UId =  1;
 }

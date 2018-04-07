@@ -1,5 +1,5 @@
 ﻿using LogLib;
-using Message.World.WorldManager.Protocol.W2WM;
+using Protocol.World.W2WM;
 using System.IO;
 
 namespace WorldManagerServerLib

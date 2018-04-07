@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 
 // Generated from: CG.code.proto
-namespace Message.Client.Gate.Protocol.CG
+namespace Protocol.Client.C2G
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"MSG_C2G_Heartbeat")]
   public partial class MSG_C2G_Heartbeat : global::ProtoBuf.IExtensible
@@ -21,6 +21,13 @@ namespace Message.Client.Gate.Protocol.CG
     {
       get { return _UId; }
       set { _UId = value; }
+    }
+    private string _Username;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"Username", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public string Username
+    {
+      get { return _Username; }
+      set { _Username = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)

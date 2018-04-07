@@ -4,8 +4,8 @@
     {
         void InitProtocol()
         {
-            Message.WorldManager.World.Protocol.WM2W.Api.GenerateId();
-            Message.World.WorldManager.Protocol.W2WM.Api.GenerateId();
+            Protocol.WorldManager.WM2W.Api.GenerateId();
+            Protocol.World.W2WM.Api.GenerateId();
         }
 
         void InitConfig()

@@ -6,11 +6,11 @@ namespace BattleServerLib
     {
         void InitProtocol()
         {
-            Message.Battle.BattleManager.Protocol.B2BM.Api.GenerateId();
-            Message.Battle.ClusterManager.Protocol.B2CM.Api.GenerateId();
+            Protocol.Battle.B2BM.Api.GenerateId();
+            Protocol.Battle.B2CM.Api.GenerateId();
 
-            Message.ClusterManager.Battle.Protocol.CM2B.Api.GenerateId();
-            Message.BattleManager.Battle.Protocol.BM2B.Api.GenerateId();
+            Protocol.ClusterManager.CM2B.Api.GenerateId();
+            Protocol.BattleManager.BM2B.Api.GenerateId();
         }
 
         CMServer m_CMServer;

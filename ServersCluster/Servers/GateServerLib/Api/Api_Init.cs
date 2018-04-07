@@ -7,8 +7,8 @@ namespace GateServerLib
     {
         void InitProtocol()
         {
-            Message.Client.Gate.Protocol.CG.Api.GenerateId();
-            Message.Gate.Client.Protocol.GC.Api.GenerateId();
+            Protocol.Client.C2G.Api.GenerateId();
+            Protocol.Gate.G2C.Api.GenerateId();
         }
 
         void InitConfig()
