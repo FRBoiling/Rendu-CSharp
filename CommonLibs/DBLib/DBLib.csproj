@@ -52,8 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBModel\DBOperateTest.cs" />
     <Compile Include="DBOperater\AbstractDBOperater.cs" />
     <Compile Include="DBOperater\DBManager.cs" />
+    <Compile Include="DBOperater\DBPoxy.cs" />
+    <Compile Include="DBOperater\DBWorkPool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +77,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LogLib\LogLib.csproj">
+      <Project>{a3940522-54f7-45e4-98fd-c0f64550dee8}</Project>
+      <Name>LogLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UtilityLib\UtilityLib.csproj">
       <Project>{5a8965f5-f0c9-4d46-9706-3281cf3a2331}</Project>
       <Name>UtilityLib</Name>

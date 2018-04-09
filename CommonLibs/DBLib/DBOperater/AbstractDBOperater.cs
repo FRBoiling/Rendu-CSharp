@@ -1,46 +1,47 @@
 ﻿using MySql.Data.MySqlClient;
+using System;
 
 namespace DBLib
 {
     public delegate void DBCallback(object msg);
-    public class AbstractDBOperater
+    public abstract class  AbstractDBOperater
     {
-
-        protected MySqlConnection conn;
-        protected MySqlCommand cmd;
-        protected DBCallback m_callback;
-        protected object m_result;
+        DBManager _dBManager;
+        protected MySqlConnection m_Conn;
+        protected MySqlCommand m_Cmd;
+        protected DBCallback m_Callback;
+        protected object m_Result;
         public string ErrorText;
-        protected MySqlDataReader reader;
+        protected MySqlDataReader m_Reader;
 
         internal void Init(DBManager db_manager)
         {
-            dbManager = db_manager;
-            conn = new MySqlConnection(dbManager.ConnStr);
-            cmd = conn.CreateCommand();
-            cmd.Connection = conn;
-            cmd.CommandTimeout = 0;
+            _dBManager = db_manager;
+            m_Conn = new MySqlConnection(_dBManager.ConnStr);
+            m_Cmd = m_Conn.CreateCommand();
+            m_Cmd.Connection = m_Conn;
+            m_Cmd.CommandTimeout = 0;
             try
             {
-                conn.Open();
-                dbManager.ReconnectInfo.Reset();
+                m_Conn.Open();
+                _dBManager.ReconnectInfo.Reset();
             }
             catch (Exception e)
             {
-                dbManager.AddExceptionLog(e.ToString());
-                dbManager.ReconnectInfo.NeedReconnect = true;
+                _dBManager.AddExceptionLog(e.ToString());
+                _dBManager.ReconnectInfo.NeedReconnect = true;
             }
         }
 
         public void OnCall(DBCallback callback)
         {
-            m_callback = callback;
+            m_Callback = callback;
         }
 
         public void PostUpdate()
         {
-            if (m_callback != null)
-                m_callback(m_result);
+            if (m_Callback != null)
+                m_Callback(m_Result);
         }
 
         abstract public bool Execute();
@@ -49,12 +50,12 @@ namespace DBLib
         {
             string logText = string.Empty;
 
-            if (cmd != null)
+            if (m_Cmd != null)
             {
-                logText = "CommandText: " + cmd.CommandText + "\r\n";
-                for (int i = 0; i < cmd.Parameters.Count; i++)
+                logText = "CommandText: " + m_Cmd.CommandText + "\r\n";
+                for (int i = 0; i < m_Cmd.Parameters.Count; i++)
                 {
-                    var item = cmd.Parameters[i];
+                    var item = m_Cmd.Parameters[i];
                     if (item.Value == null)
                     {
                         logText += string.Format("{0}: null; ", item.ParameterName);
@@ -77,7 +78,7 @@ namespace DBLib
 
         public string GetCmd()
         {
-            return cmd.ToString();
+            return m_Cmd.ToString();
         }
     }
 }
