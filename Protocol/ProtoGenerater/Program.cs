@@ -37,6 +37,7 @@ namespace ProtoGenerater
                         if ("package" == key)
                         {
                             packageName = line.Substring(index);
+                            packageName = packageName.Replace(";", "");
                         }
                         else if ("message" == key)
                         {

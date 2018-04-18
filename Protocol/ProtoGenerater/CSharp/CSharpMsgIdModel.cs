@@ -156,7 +156,7 @@ namespace ProtoGenerater.CSharp
             sb.Append(Environment.NewLine);
             foreach (var item in methodValue)
             {
-                sb.Append(SetSpace(spaceCount));
+                sb.Append(SetSpace(1));
                 sb.Append(item.ToString());
             }
             sb.Append(SetSpace(spaceCount));
