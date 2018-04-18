@@ -279,7 +279,7 @@ namespace SimpleClient
                 this.textBox_MainShow.AppendText(strText);
                 this.textBox_MainShow.ScrollToCaret();
             }
-            for (int i = 0; i < 1000; i++)
+            //for (int i = 0; i < 1000; i++)
             {
                 mApi.RouteSend(msg.GetType().Name, msg);
             }
