@@ -22,7 +22,7 @@ namespace ProtoGenerater
             wResponseRecv.WriteLine(strGenerateCode.ToString());
             wResponseRecv.Close();
 
-            string[] files = Directory.GetFiles(@"..\..\..\BuildClientProtocol\", "*.code", SearchOption.AllDirectories);
+            string[] files = Directory.GetFiles(@"..\..\..\", "*.code", SearchOption.AllDirectories);
             StringBuilder protoCode = new StringBuilder();
             string packageName = "Protocol.Client.C2G";
             Dictionary<string, string> dicMsg = new Dictionary<string, string>();
