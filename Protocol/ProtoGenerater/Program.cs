@@ -10,115 +10,124 @@ namespace ProtoGenerater
 {
     class Program
     {
+        public static string InputPath = null;
+        public static string OutputPath = null;
+        public static string Filename = null;
         static void Main(string[] args)
         {
-            CSharpMsgIdModel idModel = new CSharpMsgIdModel();
-            StringBuilder strGenerateCode = idModel.GenerateCode_ID();
-            string codeFileName = "Id.cs";
-            string fileName = "";
-            string codeFileFullName = @"..\..\Bin\CSharp\" + codeFileName;
-            FileInfo fCodeFileName = new FileInfo(codeFileFullName);
-            StreamWriter wResponseRecv = fCodeFileName.CreateText();
-            wResponseRecv.WriteLine(strGenerateCode.ToString());
-            wResponseRecv.Close();
+   
+            //    bool version = false; // --version
+            //    bool help = false; // -h, --help
 
-            string[] files = Directory.GetFiles(@"..\..\..\", "*.code", SearchOption.AllDirectories);
-            StringBuilder protoCode = new StringBuilder();
-            string packageName = "Protocol.Client.C2G";
-            Dictionary<string, string> dicMsg = new Dictionary<string, string>();
+            //1 > --code = all
+            //1 > --input_path = D:\GitHub\ServerCluster-master\Protocol\BuildProtocolTest\
+            //1 > --output_path = D:\GitHub\ServerCluster-master\Protocol\BuildProtocolTest\
+            //1 > --filename = D:\GitHub\ServerCluster-master\Protocol\BuildProtocolTest\Test.Code
 
-            foreach (var file in files)
+            foreach (string arg in args)
             {
-                int index = file.LastIndexOf("\\");
-                codeFileName = file.Substring(index + 1);
-
-                IEnumerable<string> lines = File.ReadAllLines(file);
-
-                protoCode.Clear();
-                dicMsg.Clear();
-
-                foreach (string line in lines)
+                string lhs = arg, rhs = "";
+                int index = arg.IndexOf('=');
+                if (index > 0)
                 {
-                    string strProtoline = "";
+                    lhs = arg.Substring(0, index);
+                    rhs = arg.Substring(index + 1);
+                }
+                //else if (arg.StartsWith("-o"))
+                //{
+                //    lhs = "--descriptor_set_out";
+                //    rhs = arg.Substring(2);
+                //}
+                //else if (arg.StartsWith("-I"))
+                //{
+                //    lhs = "--proto_path";
+                //    rhs = arg.Substring(2);
+                //}
 
-                    if (line.StartsWith("package"))
-                    {
-                        strProtoline = line;
-                        protoCode.Append(strProtoline);
-                        protoCode.Append(Environment.NewLine);
 
-                        index = line.IndexOf(" ");
-                        packageName = line.Substring(index);
-                        packageName = packageName.Replace(" ", "");
-                        packageName = packageName.Replace(";", "");
-                    }
-                    else if (line.StartsWith("message"))
-                    {
-                        strProtoline = line;
-                        var arr = strProtoline.Split(' ');
-                        List<string> strFormat = new List<string>();
-                        if (arr.Length > 2)
+                //if (lhs.StartsWith("+"))
+                //{
+                //    if (options == null) options = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+                //    options[lhs.Substring(1)] = rhs;
+                //    continue;
+                //}
+
+                switch (lhs)
+                {
+                    case "":
+                        break;
+                    case "--code":
+                        break;
+                    case "--input_path":
+                        InputPath = rhs;
+                        break;
+                    case "--output_path":
+                        OutputPath = rhs;
+                        break;
+                    case "--filename":
+                        if (rhs.ToLower().EndsWith(".code".ToLower()))
                         {
-                            foreach (var v in arr)
-                            {
-                                if (v == " ")
-                                {
-                                }
-                                else
-                                {
-                                    strFormat.Add(v);
-                                }
-                            }
-                            if (strFormat.Count == 3)
-                            {
-                                if (arr[0] == "message")
-                                {
-                                    dicMsg.Add(arr[1], arr[2]);
-                                    strProtoline = strProtoline.Replace(arr[2], "");
-                                    protoCode.Append(Environment.NewLine);
-                                    protoCode.Append(strProtoline);
-                                    protoCode.Append(Environment.NewLine);
-                                }
-                            }
-                        }
-                    }
-                    else if (line.StartsWith("//"))
-                    {
-                    }
-                    else
-                    {
-                        strProtoline = line;
-                        if (string.IsNullOrEmpty(strProtoline)||string.IsNullOrWhiteSpace(strProtoline))
-                        {
+                            Filename = rhs;
                         }
                         else
                         {
-                            protoCode.Append(strProtoline);
-                            protoCode.Append(Environment.NewLine);
+                            Console.WriteLine("File type error :{0}  ( mast ends with .code ) ", rhs);
+                            return;
                         }
-                    }
+                        break;
+                    //case "--version":
+                    //    version = true;
+                    //    break;
+                    //case "--package":
+                    //    package = rhs;
+                    //    break;
+                    //case "-h":
+                    //case "--help":
+                    //    help = true;
+                    //    break;
+
+                    //case "--csharp_out":
+                    //    OutPath = rhs;
+                    //    //codegen = CSharpCodeGenerator.Default;
+                    //    exec = true;
+                    //    break;
+                    //case "--java_out":
+                    //    OutPath = rhs;
+                    //    //codegen = CSharpCodeGenerator.Default;
+                    //    exec = true;
+                    //    break;
+                    //case "--cplusplus_out":
+                    //    OutPath = rhs;
+                    //    //codegen = CSharpCodeGenerator.Default;
+                    //    exec = true;
+                    //    break;
+                    //case "--proto_path":
+                    //    importPaths.Add(rhs);
+                    //    break;
+                    //default:
+                    //    if (lhs.StartsWith("-") || !string.IsNullOrWhiteSpace(rhs))
+                    //    {
+                    //        help = true;
+                    //        break;
+                    //    }
+                    //    else
+                    //    {
+                    //        inputFiles.Add(lhs);
+                    //    }
+                    //    break;
+                    default:
+                        break;
                 }
-
-                strGenerateCode = idModel.GenerateCode_GenerateId(packageName, dicMsg);
-                fileName = codeFileName + ".cs";
-                codeFileFullName = @"..\..\Bin\CSharp\" + fileName;
-                fCodeFileName = new FileInfo(codeFileFullName);
-                wResponseRecv = fCodeFileName.CreateText();
-                wResponseRecv.WriteLine(strGenerateCode.ToString());
-                wResponseRecv.Close();
-
-                strGenerateCode = protoCode;
-                fileName = codeFileName + ".proto";
-                codeFileFullName = @"..\..\Bin\ProtoBuf\" + fileName;
-                fCodeFileName = new FileInfo(codeFileFullName);
-                wResponseRecv = fCodeFileName.CreateText();
-                wResponseRecv.WriteLine(strGenerateCode.ToString());
-                wResponseRecv.Close();
+                //生成proto
             }
 
+            CodeFileParser parser = new CodeFileParser();
+            parser.ParsingCodeFile(Filename, OutputPath);
 
+            GeneraterManager.Add(1, new CSharpGenerater());
+            GeneraterManager.Run(parser);
 
-
+            Console.ReadLine();
         }
     }
 }

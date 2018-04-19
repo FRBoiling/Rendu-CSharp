@@ -1,0 +1,20 @@
+package Protocol.TEST.test;
+
+message MSG_TEST_Test1 
+{
+	required int32 testint = 1;
+	required string teststring = 2;
+}
+
+message MSG_TEST_Test2 
+{
+	required int32 testint = 1;
+	required string teststring = 2;
+}
+
+message MSG_TEST_Test3 
+{
+	required int32 testint = 1;
+	required string teststring = 2;
+}
+

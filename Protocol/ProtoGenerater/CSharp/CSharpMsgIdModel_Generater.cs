@@ -35,7 +35,7 @@ namespace ProtoGenerater.CSharp
             List<StringBuilder> attrs = new List<StringBuilder>();
             foreach (var item in dicMessage)
             {
-                StringBuilder sbClassAttrFrame = ClassAttrFrame(GenerateIdKey("Protocol.MsgId." + item.Key).ToString(), GenerateIdValue(item.Value).ToString());
+                StringBuilder sbClassAttrFrame = ClassAttrFrame(GenerateIdKey(item.Key).ToString(), GenerateIdValue(item.Value).ToString());
                 attrs.Add(sbClassAttrFrame);
             }
 

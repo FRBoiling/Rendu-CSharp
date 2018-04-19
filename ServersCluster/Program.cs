@@ -15,6 +15,8 @@ namespace ServersCluster
         }
         static void Main(string[] args)
         {
+            float a = 1 / 3f;
+
             ApiLib.Api api = new ApiLib.Api();
             // 
             //ConfigurationOptions config = new ConfigurationOptions();

@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5EC776F1-E4BA-429D-816E-62E9EC20AC31}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ProtoGenerater</RootNamespace>
-    <AssemblyName>ProtoGenerater</AssemblyName>
+    <ProjectGuid>{A495A46C-C7EF-448E-93D0-B91489E1C6F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProtocolTest</RootNamespace>
+    <AssemblyName>ProtocolTest</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,9 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="protobuf-net">
+      <HintPath>..\Protobuf-net\ProtoGen\protobuf-net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,23 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodeFileParser.cs" />
-    <Compile Include="CSharp\CSharpGenerater.cs" />
-    <Compile Include="CSharp\CSharpMsgIdModel.cs" />
-    <Compile Include="CSharp\CSharpMsgIdModel_Factory.cs" />
-    <Compile Include="CSharp\CSharpMsgIdModel_Generater.cs" />
-    <Compile Include="GeneraterManager.cs" />
-    <Compile Include="ICodeModel.cs" />
-    <Compile Include="IGenerater.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Id.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CPlusPlus\" />
-    <Folder Include="Java\" />
+    <Compile Include="TEST\test_Id.cs" />
+    <Compile Include="TEST\test_Proto.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
