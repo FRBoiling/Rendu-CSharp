@@ -16,7 +16,7 @@ namespace ProtoGenerater
             StringBuilder strGenerateCode = idModel.GenerateCode_ID();
             string codeFileName = "Id.cs";
             string fileName = "";
-            string codeFileFullName = @"..\..\Bin\" + codeFileName;
+            string codeFileFullName = @"..\..\Bin\CSharp\" + codeFileName;
             FileInfo fCodeFileName = new FileInfo(codeFileFullName);
             StreamWriter wResponseRecv = fCodeFileName.CreateText();
             wResponseRecv.WriteLine(strGenerateCode.ToString());
@@ -101,7 +101,7 @@ namespace ProtoGenerater
 
                 strGenerateCode = idModel.GenerateCode_GenerateId(packageName, dicMsg);
                 fileName = codeFileName + ".cs";
-                codeFileFullName = @"..\..\Bin\\" + fileName;
+                codeFileFullName = @"..\..\Bin\CSharp\" + fileName;
                 fCodeFileName = new FileInfo(codeFileFullName);
                 wResponseRecv = fCodeFileName.CreateText();
                 wResponseRecv.WriteLine(strGenerateCode.ToString());
@@ -109,7 +109,7 @@ namespace ProtoGenerater
 
                 strGenerateCode = protoCode;
                 fileName = codeFileName + ".proto";
-                codeFileFullName = @"..\..\Bin\\" + fileName;
+                codeFileFullName = @"..\..\Bin\ProtoBuf\" + fileName;
                 fCodeFileName = new FileInfo(codeFileFullName);
                 wResponseRecv = fCodeFileName.CreateText();
                 wResponseRecv.WriteLine(strGenerateCode.ToString());
