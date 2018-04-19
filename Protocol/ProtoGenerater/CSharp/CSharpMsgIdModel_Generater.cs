@@ -10,7 +10,7 @@ namespace ProtoGenerater.CSharp
     {
         public StringBuilder GenerateCode_ID()
         {
-            StringBuilder IdCs;
+            StringBuilder IdCs=new StringBuilder();
             StringBuilder sbClassCommentsFrame = ClassCommentsFrame();
             StringBuilder sbIncludeHeadFrame = IncludeHeadFrame();
             StringBuilder sbClassAttrFrame = ClassAttrFrame("public static uint", "Value");
@@ -20,7 +20,8 @@ namespace ProtoGenerater.CSharp
             StringBuilder sbClassBodyFrame = ClassBodyFrame("static class Id<T>", attrs,methods);
             StringBuilder sbNameSpaceFrame = NameSpaceFrame("Protocol.MsgId", sbClassBodyFrame);
 
-            IdCs = sbIncludeHeadFrame;
+            IdCs.Append(sbClassCommentsFrame);
+            IdCs.Append(sbIncludeHeadFrame);
             IdCs.Append(sbNameSpaceFrame.ToString());
 
             return IdCs;
@@ -28,7 +29,7 @@ namespace ProtoGenerater.CSharp
 
         public StringBuilder GenerateCode_GenerateId(string packageName, Dictionary<string,string> dicMessage)
         {
-            StringBuilder IdCs;
+            StringBuilder IdCs=new StringBuilder();
             StringBuilder sbClassCommentsFrame = ClassCommentsFrame();
             StringBuilder sbIncludeHeadFrame = IncludeHeadFrame();
    
@@ -46,7 +47,8 @@ namespace ProtoGenerater.CSharp
             StringBuilder sbClassBodyFrame = ClassBodyFrame("class Generater", null, methods);
             StringBuilder sbNameSpaceFrame = NameSpaceFrame(packageName, sbClassBodyFrame);
 
-            IdCs = sbIncludeHeadFrame;
+            IdCs.Append(sbClassCommentsFrame);
+            IdCs.Append(sbIncludeHeadFrame);
             IdCs.Append(sbNameSpaceFrame.ToString());
             return IdCs;
         }

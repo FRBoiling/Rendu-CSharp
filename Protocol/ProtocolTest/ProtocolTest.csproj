@@ -43,10 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Id.cs" />
+    <Compile Include="CSharp\Id.cs" />
+    <Compile Include="CSharp\Protocol\TEST\test_Id.cs" />
+    <Compile Include="CSharp\Protocol\TEST\test_Proto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TEST\test_Id.cs" />
-    <Compile Include="TEST\test_Proto.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

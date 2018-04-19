@@ -21,7 +21,7 @@
   <ItemGroup>
     <CustomBuild Include="Test.Code">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\GitHub\ServerCluster-master\Protocol\ProtoGenerater\bin\Debug\ProtoGenerater --code=all --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\GitHub\ServerCluster-master\Protocol\ProtoGenerater\bin\Debug\ProtoGenerater --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\GitHub\ServerCluster-master\Protocol\ProtoGenerater\bin\Debug\ProtoGenerater</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).code.cs;%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Outputs)</Outputs>
