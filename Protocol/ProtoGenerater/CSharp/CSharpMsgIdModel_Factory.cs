@@ -29,7 +29,7 @@ namespace ProtoGenerater.CSharp
             Console.WriteLine(">>{0}", idFileFullName);
         }
 
-        public void CreateMsgIdClass(string packageName, Dictionary<string, string> keyIdPairs)
+        public void CreateMsgIdClass(string codeName,string packageName, Dictionary<string, string> keyIdPairs)
         {
             StringBuilder msgIdPairsCode = GenerateCode_GenerateId(packageName, keyIdPairs);
 
@@ -40,7 +40,7 @@ namespace ProtoGenerater.CSharp
             {
                 Directory.CreateDirectory(strOutPath);
             }
-            string csFileFullName = strOutPath + "_Id.cs";
+            string csFileFullName = strOutPath + @"\"+ codeName+"Id.cs";
 
             FileInfo fileInfo = new FileInfo(csFileFullName);
             StreamWriter writer = fileInfo.CreateText();
@@ -52,7 +52,7 @@ namespace ProtoGenerater.CSharp
             Console.WriteLine(">>{0}", csFileFullName);
         }
 
-        public void GenerateProto(string packageName,string fileName)
+        public void GenerateProto(string packageName,string importPath)
         {
             string tempPath = packageName.Replace('.', '\\');
             string strOutPath = Program.OutputPath + @"CSharp\" + tempPath;
@@ -60,7 +60,7 @@ namespace ProtoGenerater.CSharp
             {
                 Directory.CreateDirectory(strOutPath);
             }
-            string csFileFullName = strOutPath + "_Proto.cs";
+           // string csFileFullName = strOutPath + "_Proto.cs";
 
             //调用外部程序protogen.exe
             Process p = new Process();
@@ -71,7 +71,7 @@ namespace ProtoGenerater.CSharp
             p.StartInfo.CreateNoWindow = false;
             p.StartInfo.RedirectStandardInput = true;
             p.StartInfo.RedirectStandardOutput = false;
-            p.StartInfo.Arguments = "-i:" + fileName + @" -o:"+ csFileFullName;// -ns:" + Application.StartupPath;
+            p.StartInfo.Arguments = "-I" + importPath + " *.proto"+ @" --csharp_out=" + strOutPath;// -ns:" + Application.StartupPath;
             p.Start();
             p.StandardInput.WriteLine("exit");
 

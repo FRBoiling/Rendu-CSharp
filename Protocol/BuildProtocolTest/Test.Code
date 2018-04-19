@@ -1,4 +1,4 @@
-package Protocol.TEST.test;
+package Protocol.TEST;
 
 message MSG_TEST_Test1 0xff00001
 {

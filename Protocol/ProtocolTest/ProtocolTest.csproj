@@ -44,8 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CSharp\Id.cs" />
-    <Compile Include="CSharp\Protocol\TEST\test_Id.cs" />
-    <Compile Include="CSharp\Protocol\TEST\test_Proto.cs" />
+    <Compile Include="CSharp\Protocol\TEST\Test.cs" />
+    <Compile Include="CSharp\Protocol\TEST\TestId.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

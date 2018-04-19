@@ -15,8 +15,8 @@ namespace ProtoGenerater.CSharp
 
             foreach (var item in parser.GetKeyIdPairs())
             {
-                maker.CreateMsgIdClass(item.Key, item.Value);
-                maker.GenerateProto(item.Key,parser.GetProtoFullFileName());
+                maker.CreateMsgIdClass(parser.GetCodeFileName(),item.Key, item.Value);
+                maker.GenerateProto(item.Key,parser.GetProtoOutPath());
             }
 
         }

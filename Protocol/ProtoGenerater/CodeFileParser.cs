@@ -10,14 +10,15 @@ namespace ProtoGenerater
     public class CodeFileParser
     {
         Dictionary<string, Dictionary<string, string>> keyIds = new Dictionary<string, Dictionary<string, string>>();
-        string protoFile = string.Empty; 
+        string protoPath = string.Empty;
+        string codeName = string.Empty;
 
         public void ParsingCodeFile(string file, string outputPath)
         {
             //string[] files = Directory.GetFiles(@"..\..\..\", "*.code", SearchOption.AllDirectories);
 
             //foreach (var file in files)
-            {
+            //{
                 int index = file.LastIndexOf("\\");
                 string codeFileName = file.Substring(index + 1);
 
@@ -100,6 +101,8 @@ namespace ProtoGenerater
                 //生产.proto文件
                 index = codeFileName.LastIndexOf(".");
                 codeFileName = codeFileName.Substring(0, index);
+                codeName = codeFileName;
+
                 string protoFileName = codeFileName + @".proto";
                 string strOutPath = outputPath + @"Proto\";
                 if (!Directory.Exists(strOutPath))
@@ -115,9 +118,9 @@ namespace ProtoGenerater
                 Console.WriteLine("{0} generate sucess", protoFileName);
                 Console.WriteLine(">>{0}", protoFileFullName);
           
-                protoFile= protoFileFullName;
+                protoPath= strOutPath;
               
-            }
+            //}
         }
 
         public Dictionary<string, Dictionary<string, string>> GetKeyIdPairs()
@@ -125,10 +128,14 @@ namespace ProtoGenerater
             return keyIds;
         }
 
-        public string GetProtoFullFileName()
+        public string GetProtoOutPath()
         {
-            return protoFile;
+            return protoPath;
         }
 
+        public string GetCodeFileName()
+        {
+            return codeName;
+        }
     }
 }
