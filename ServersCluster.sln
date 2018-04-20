@@ -148,6 +148,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientProtocol", "Protocol\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerProtocol", "Protocol\Old\ServerProtocol\ServerProtocol.csproj", "{94623506-6C6C-4A20-B93F-97BB1FD872DE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bin", "Bin", "{1908AAED-B18E-4C46-872B-D5A6B8219EC1}"
+	ProjectSection(SolutionItems) = preProject
+		Protocol\New\ProtoGenerater\bin\Debug\protobuf-net.dll = Protocol\New\ProtoGenerater\bin\Debug\protobuf-net.dll
+		Protocol\New\ProtoGenerater\bin\Debug\protobuf-net.Reflection.dll = Protocol\New\ProtoGenerater\bin\Debug\protobuf-net.Reflection.dll
+		Protocol\New\ProtoGenerater\bin\Debug\protogen.exe = Protocol\New\ProtoGenerater\bin\Debug\protogen.exe
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -812,6 +819,7 @@ Global
 		{D49CB2D4-4689-466A-98FC-FB1C6C02CFF4} = {EDCC4139-69DF-47E4-ACAC-793193FB249A}
 		{105D609B-1A04-40FA-B684-F63E7DE0A508} = {EDCC4139-69DF-47E4-ACAC-793193FB249A}
 		{94623506-6C6C-4A20-B93F-97BB1FD872DE} = {EDCC4139-69DF-47E4-ACAC-793193FB249A}
+		{1908AAED-B18E-4C46-872B-D5A6B8219EC1} = {98E182D5-B8B4-4B14-B59A-DA75248D0A7D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CB6EA2E6-5D6A-4936-9BCA-75F12AA85630}
