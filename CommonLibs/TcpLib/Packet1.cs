@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using Engine.Foundation;
-using Protocol.Client;
 using Protocol.Client.C2G;
 
 namespace TcpLib

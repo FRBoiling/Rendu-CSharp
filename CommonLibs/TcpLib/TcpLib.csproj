@@ -66,7 +66,7 @@
     <Compile Include="Abstract\AbstractTcpServer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Protocol\ServerProtocol\ServerProtocol.csproj">
+    <ProjectReference Include="..\..\Protocol\Old\ServerProtocol\ServerProtocol.csproj">
       <Project>{94623506-6c6c-4a20-b93f-97bb1fd872de}</Project>
       <Name>ServerProtocol</Name>
     </ProjectReference>

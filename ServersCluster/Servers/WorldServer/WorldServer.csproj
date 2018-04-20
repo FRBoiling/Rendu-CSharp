@@ -57,10 +57,6 @@
       <Project>{47ae13b1-3343-45e5-bcb4-3728995c1e95}</Project>
       <Name>ServerFrameWork</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Protocol\ClientProtocol\ClientProtocol.csproj">
-      <Project>{105d609b-1a04-40fa-b684-f63e7de0a508}</Project>
-      <Name>ClientProtocol</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WorldServerLib\WorldServerLib.csproj">
       <Project>{1c117a44-23fb-46e4-8b45-231f4f458c16}</Project>
       <Name>WorldServerLib</Name>

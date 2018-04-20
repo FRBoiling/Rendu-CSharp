@@ -1,0 +1,11 @@
+package Protocol.Battle.B2CM;
+message MSG_B2CM_Heartbeat {
+	required int32 GroupId =  1;
+	required int32 SubId =  2;
+}
+
+message MSG_B2CM_Register {
+	required int32 GroupId =  1;
+	required int32 SubId =  2;
+}
+

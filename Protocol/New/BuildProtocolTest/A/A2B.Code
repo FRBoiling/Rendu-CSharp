@@ -1,0 +1,19 @@
+package Protocol.A.A2B;
+
+message A2BTest1 0xff00001
+{
+	required int32 testint1 = 1;
+	required string teststring1 = 2;
+}
+
+message A2BTest2 0xff00002
+{
+	required int32 testint2 = 1;
+	required string teststring2 = 2;
+}
+
+message A2BTest3 0xff00003
+{
+	required int32 testint3 = 1;
+	required string teststring3 = 2;
+}

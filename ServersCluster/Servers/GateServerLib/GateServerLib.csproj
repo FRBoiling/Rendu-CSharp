@@ -87,7 +87,7 @@
       <Project>{5a8965f5-f0c9-4d46-9706-3281cf3a2331}</Project>
       <Name>UtilityLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Protocol\ServerProtocol\ServerProtocol.csproj">
+    <ProjectReference Include="..\..\..\Protocol\Old\ServerProtocol\ServerProtocol.csproj">
       <Project>{94623506-6c6c-4a20-b93f-97bb1fd872de}</Project>
       <Name>ServerProtocol</Name>
     </ProjectReference>

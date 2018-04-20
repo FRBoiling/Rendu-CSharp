@@ -1,1 +1,0 @@
-protoc.exe --java_out=./ ./CG.code.proto
