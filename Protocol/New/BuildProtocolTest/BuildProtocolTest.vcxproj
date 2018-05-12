@@ -22,7 +22,7 @@
     <CustomBuild Include="A\A2B.Code">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\ProtoGenerater\bin\Debug\ProtoGenerater --input_path=$(ProjectDir) --output_path=$(ProjectDir) --filename=%(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).cs</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).proto</Outputs>
     </CustomBuild>
   </ItemGroup>
   <PropertyGroup Label="Globals">

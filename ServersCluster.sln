@@ -131,6 +131,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{16B0BF96-2F96-40DA-B968-F0014B38CE82}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Old", "Old", "{EDCC4139-69DF-47E4-ACAC-793193FB249A}"
+	ProjectSection(SolutionItems) = preProject
+		Protocol\New\ProtoGenerater\Program.cs = Protocol\New\ProtoGenerater\Program.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "New", "New", "{98E182D5-B8B4-4B14-B59A-DA75248D0A7D}"
 EndProject

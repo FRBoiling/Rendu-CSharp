@@ -72,6 +72,8 @@ namespace ProtoGenerater.CSharp
             p.StartInfo.RedirectStandardInput = true;
             p.StartInfo.RedirectStandardOutput = false;
             p.StartInfo.Arguments = "-I" + importPath + " *.proto"+ @" --csharp_out=" + strOutPath;// -ns:" + Application.StartupPath;
+            Console.WriteLine("{0} {1}", p.StartInfo.FileName, p.StartInfo.Arguments);
+
             p.Start();
             p.StandardInput.WriteLine("exit");
 
