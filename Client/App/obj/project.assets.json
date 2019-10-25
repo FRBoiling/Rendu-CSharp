@@ -1,0 +1,143 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "RDLog": "1.0.0",
+          "Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
+      "RDLog/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/RDLog.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RDLog.dll": {}
+        }
+      },
+      "Rendu/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "RDLog": "1.0.0",
+          "Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rendu.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rendu.dll": {}
+        }
+      },
+      "Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Utils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/Core/Core.csproj",
+      "msbuildProject": "../../Shared/Core/Core.csproj"
+    },
+    "RDLog/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/RDLog/RDLog.csproj",
+      "msbuildProject": "../../Shared/RDLog/RDLog.csproj"
+    },
+    "Rendu/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/Rendu/Rendu.csproj",
+      "msbuildProject": "../../Shared/Rendu/Rendu.csproj"
+    },
+    "Utils/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/Utils/Utils.csproj",
+      "msbuildProject": "../../Shared/Utils/Utils.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "Core >= 1.0.0",
+      "Rendu >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\WanXin\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu\\Client\\App\\Client.App.csproj",
+      "projectName": "Client.App",
+      "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Client\\App\\Client.App.csproj",
+      "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\RenduECS\\Rendu\\Client\\App\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Core\\Core.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Core\\Core.csproj"
+            },
+            "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Rendu\\Rendu.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Rendu\\Rendu.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
+      }
+    }
+  }
+}
