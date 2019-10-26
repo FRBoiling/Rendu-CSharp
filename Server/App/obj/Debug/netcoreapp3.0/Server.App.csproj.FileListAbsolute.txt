@@ -1,0 +1,11 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\netcoreapp3.0\Server.App.exe
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\netcoreapp3.0\Server.App.deps.json
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\netcoreapp3.0\Server.App.runtimeconfig.json
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\netcoreapp3.0\Server.App.runtimeconfig.dev.json
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\netcoreapp3.0\Server.App.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\netcoreapp3.0\Server.App.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\netcoreapp3.0\Server.App.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\netcoreapp3.0\Server.App.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\netcoreapp3.0\Server.App.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\netcoreapp3.0\Server.App.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\netcoreapp3.0\Server.App.pdb
