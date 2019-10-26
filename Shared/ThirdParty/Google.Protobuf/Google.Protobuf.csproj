@@ -35,9 +35,9 @@
     <OutputPath>..\Output</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <OutputPath>..\..\Bin\Shared\</OutputPath>
+    <OutputPath>..\..\..\Bin\Shared\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <OutputPath>..\..\Bin\Shared\</OutputPath>
+    <OutputPath>..\..\..\Bin\Shared\</OutputPath>
   </PropertyGroup>
 </Project>

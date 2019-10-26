@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\WanXin\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\WanXin\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Rendu.166911670.00" t="ExcludeRecursive" />
-    <e p="D:\GitHub\RenduECS\Rendu" t="IncludeFlat">
+    <e p="C:\Users\WanXin\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Rendu.-983104788.00" t="ExcludeRecursive" />
+    <e p="D:\GitHub\RenduECS\Rendu-CSharp" t="IncludeFlat">
       <e p="bin" t="ExcludeRecursive" />
       <e p="Client" t="Include">
         <e p="App" t="IncludeRecursive">
@@ -34,7 +34,6 @@
         </e>
       </e>
       <e p="Shared" t="Include">
-        <e p="bin" t="ExcludeRecursive" />
         <e p="Entitas" t="IncludeRecursive">
           <e p="Collector" t="Include">
             <e p="Collector.cs" t="Include" />

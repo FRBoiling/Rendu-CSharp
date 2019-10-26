@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj",
+    "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Entitas\\Entitas.csproj",
     "projectName": "Entitas",
-    "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj",
-    "outputPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\obj\\",
+    "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Entitas\\Entitas.csproj",
+    "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Entitas\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,10 +1,10 @@
 ﻿{
   "version": "3.6.0",
   "restore": {
-    "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj",
+    "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj",
     "projectName": "Google.Protobuf",
-    "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj",
-    "outputPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\ThirdParty\\Google.Protobuf\\obj\\",
+    "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Google.Protobuf\\Google.Protobuf.csproj",
+    "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Google.Protobuf\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

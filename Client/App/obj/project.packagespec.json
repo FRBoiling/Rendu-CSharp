@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu\\Client\\App\\Client.App.csproj",
+    "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Client\\App\\Client.App.csproj",
     "projectName": "Client.App",
-    "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Client\\App\\Client.App.csproj",
-    "outputPath": "D:\\GitHub\\RenduECS\\Rendu\\Client\\App\\obj\\",
+    "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Client\\App\\Client.App.csproj",
+    "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Client\\App\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -18,14 +18,7 @@
     },
     "frameworks": {
       "netcoreapp3.0": {
-        "projectReferences": {
-          "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Core\\Core.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Core\\Core.csproj"
-          },
-          "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Rendu\\Rendu.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Rendu\\Rendu.csproj"
-          }
-        }
+        "projectReferences": {}
       }
     },
     "warningProperties": {

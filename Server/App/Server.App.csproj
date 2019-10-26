@@ -14,9 +14,4 @@
       <OutputPath>..\..\Bin\Server</OutputPath>
     </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\..\Shared\Core\Core.csproj" />
-      <ProjectReference Include="..\..\Shared\Rendu\Rendu.csproj" />
-    </ItemGroup>
-
 </Project>
