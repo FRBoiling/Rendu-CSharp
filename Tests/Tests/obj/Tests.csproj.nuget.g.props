@@ -12,4 +12,8 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgPostSharp Condition=" '$(PkgPostSharp)' == '' ">C:\Users\WanXin\.nuget\packages\postsharp\4.0.38</PkgPostSharp>
+    <PkgNSpec Condition=" '$(PkgNSpec)' == '' ">C:\Users\WanXin\.nuget\packages\nspec\3.1.0</PkgNSpec>
+  </PropertyGroup>
 </Project>

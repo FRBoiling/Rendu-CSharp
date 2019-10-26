@@ -18,11 +18,7 @@
     },
     "frameworks": {
       "netcoreapp3.0": {
-        "projectReferences": {
-          "D:\\GitHub\\RenduECS\\Rendu\\Shared\\DesperateDevs\\DesperateDevs.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\DesperateDevs\\DesperateDevs.csproj"
-          }
-        }
+        "projectReferences": {}
       }
     },
     "warningProperties": {

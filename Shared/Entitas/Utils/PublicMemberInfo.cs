@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace DesperateDevs.Utils
+namespace Entitas.Utils
 {
     public class PublicMemberInfo
     {

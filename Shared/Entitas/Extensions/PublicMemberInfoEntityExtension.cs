@@ -1,4 +1,4 @@
-using DesperateDevs.Utils;
+using Entitas.Utils;
 
 namespace Entitas
 {

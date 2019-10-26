@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Entitas;
+using NSpec;
 
 internal class describe_Entity : nspec
 {

@@ -4,14 +4,14 @@
     "D:\\GitHub\\RenduECS\\Rendu\\Tests\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\RenduECS\\Rendu\\Shared\\DesperateDevs\\DesperateDevs.csproj": {
+    "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\DesperateDevs\\DesperateDevs.csproj",
-        "projectName": "DesperateDevs",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\DesperateDevs\\DesperateDevs.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj",
+        "projectName": "Entitas",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\DesperateDevs\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -53,14 +53,14 @@
         }
       }
     },
-    "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj": {
+    "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\TestFixtures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj",
-        "projectName": "Entitas",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\TestFixtures.csproj",
+        "projectName": "TestFixtures",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\TestFixtures.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -79,8 +79,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "D:\\GitHub\\RenduECS\\Rendu\\Shared\\DesperateDevs\\DesperateDevs.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\DesperateDevs\\DesperateDevs.csproj"
+              "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj"
               }
             }
           }
@@ -134,6 +134,9 @@
             "projectReferences": {
               "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj": {
                 "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\TestFixtures.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\TestFixtures.csproj"
               }
             }
           }
@@ -146,6 +149,20 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "DesperateDevs.HelloWorld": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "NSpec": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "NSpec.Runner": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

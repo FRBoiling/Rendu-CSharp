@@ -21,6 +21,9 @@
         "projectReferences": {
           "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj": {
             "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj"
+          },
+          "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\TestFixtures.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\TestFixtures.csproj"
           }
         }
       }
@@ -33,6 +36,20 @@
   },
   "frameworks": {
     "netcoreapp3.0": {
+      "dependencies": {
+        "DesperateDevs.HelloWorld": {
+          "target": "Package",
+          "version": "[1.1.0, )"
+        },
+        "NSpec": {
+          "target": "Package",
+          "version": "[3.1.0, )"
+        },
+        "NSpec.Runner": {
+          "target": "Package",
+          "version": "[1.0.0, )"
+        }
+      },
       "imports": [
         "net461",
         "net462",

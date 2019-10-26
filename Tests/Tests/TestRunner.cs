@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Linq;
+using NSpec;
+using NSpec.Domain;
+using NSpec.Domain.Formatters;
 
 namespace Tests
 {

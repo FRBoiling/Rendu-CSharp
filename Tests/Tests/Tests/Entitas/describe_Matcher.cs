@@ -1,4 +1,5 @@
 using Entitas;
+using NSpec;
 
 internal class describe_Matcher : nspec
 {

@@ -12,8 +12,4 @@
       <OutputPath>..\..\Bin\Shared\</OutputPath>
     </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\DesperateDevs\DesperateDevs.csproj" />
-    </ItemGroup>
-
 </Project>

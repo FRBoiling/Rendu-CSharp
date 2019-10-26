@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace DesperateDevs.Utils
+namespace Entitas.Utils
 {
     public static class PublicMemberInfoExtension
     {
