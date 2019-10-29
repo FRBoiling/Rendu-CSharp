@@ -1,0 +1,7 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\DesperateDevs.deps.json
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\DesperateDevs.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\DesperateDevs.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs\obj\Debug\netcoreapp3.0\DesperateDevs.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs\obj\Debug\netcoreapp3.0\DesperateDevs.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs\obj\Debug\netcoreapp3.0\DesperateDevs.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs\obj\Debug\netcoreapp3.0\DesperateDevs.pdb
