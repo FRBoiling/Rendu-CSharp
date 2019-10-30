@@ -1,8 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>netcoreapp3.0</TargetFramework>
     </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj" />
+      <ProjectReference Include="..\..\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\Entitas.CodeGeneration.Plugins.csproj" />
+    </ItemGroup>
 
 </Project>

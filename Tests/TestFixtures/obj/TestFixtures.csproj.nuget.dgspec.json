@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\TestFixtures.csproj": {}
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestFixtures\\TestFixtures.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj": {
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestFixtures\\TestFixtures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj",
-        "projectName": "Entitas",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestFixtures\\TestFixtures.csproj",
+        "projectName": "TestFixtures",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestFixtures\\TestFixtures.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestFixtures\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,59 +30,6 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.0": {
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true
-        }
-      }
-    },
-    "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\TestFixtures.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\TestFixtures.csproj",
-        "projectName": "TestFixtures",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\TestFixtures.csproj",
-        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.0": {
-            "projectReferences": {
-              "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj"
-              }
-            }
           }
         },
         "warningProperties": {

@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {
-      "Entitas/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.0",
-        "compile": {
-          "bin/placeholder/Entitas.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entitas.dll": {}
-        }
-      }
-    }
+    ".NETCoreApp,Version=v3.0": {}
   },
-  "libraries": {
-    "Entitas/1.0.0": {
-      "type": "project",
-      "path": "../../Shared/Entitas/Entitas.csproj",
-      "msbuildProject": "../../Shared/Entitas/Entitas.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": [
-      "Entitas >= 1.0.0"
-    ]
+    ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
     "C:\\Users\\WanXin\\.nuget\\packages\\": {},
@@ -33,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\TestFixtures.csproj",
+      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestFixtures\\TestFixtures.csproj",
       "projectName": "TestFixtures",
-      "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\TestFixtures.csproj",
+      "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestFixtures\\TestFixtures.csproj",
       "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\RenduECS\\Rendu\\Tests\\TestFixtures\\obj\\",
+      "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestFixtures\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -55,11 +36,7 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {
-            "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu\\Shared\\Entitas\\Entitas.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

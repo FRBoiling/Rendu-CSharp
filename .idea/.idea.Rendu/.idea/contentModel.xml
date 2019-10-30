@@ -418,9 +418,51 @@
             </e>
             <e p="WireFormat.cs" t="Include" />
           </e>
+          <e p="Migration" t="IncludeRecursive">
+            <e p="Migration" t="Include">
+              <e p="IMigration.cs" t="Include" />
+              <e p="MigrationFile.cs" t="Include" />
+              <e p="MigrationUtils.cs" t="Include" />
+            </e>
+            <e p="Migration.csproj" t="IncludeRecursive" />
+            <e p="Migrations" t="Include">
+              <e p="M0180.cs" t="Include" />
+              <e p="M0190.cs" t="Include" />
+              <e p="M0220.cs" t="Include" />
+              <e p="M0260.cs" t="Include" />
+              <e p="M0300.cs" t="Include" />
+              <e p="M0320.cs" t="Include" />
+              <e p="M0360_1.cs" t="Include" />
+              <e p="M0360_2.cs" t="Include" />
+              <e p="M0410_1.cs" t="Include" />
+              <e p="M0410_2.cs" t="Include" />
+              <e p="M0410_3.cs" t="Include" />
+              <e p="M0450.cs" t="Include" />
+              <e p="M0472.cs" t="Include" />
+            </e>
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="netcoreapp3.0" t="Include">
+                  <e p="Migration.AssemblyInfo.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
         </e>
       </e>
       <e p="Tests" t="Include">
+        <e p="TestFixtures" t="IncludeRecursive">
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="Class1.cs" t="Include" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netcoreapp3.0" t="Include">
+                <e p="TestFixtures.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="TestFixtures.csproj" t="IncludeRecursive" />
+        </e>
         <e p="TestProject" t="IncludeRecursive">
           <e p="bin" t="ExcludeRecursive" />
           <e p="Fixtures" t="Include">
@@ -436,7 +478,20 @@
             </e>
           </e>
           <e p="TestProject.csproj" t="IncludeRecursive" />
-          <e p="UnitTest.cs" t="Include" />
+          <e p="Tests" t="Include">
+            <e p="Entitas.CodeGeneration" t="Include">
+              <e p="CodeGenerators" t="Include">
+                <e p="TestEntityIndexGenerator.cs" t="Include" />
+              </e>
+              <e p="DataProviders" t="Include">
+                <e p="TestComponentDataProvider.cs" t="Include" />
+                <e p="TestContextDataProvider.cs" t="Include" />
+                <e p="TestEntityIndexDataProvider.cs" t="Include" />
+              </e>
+              <e p="TestCustomEntityIndex.cs" t="Include" />
+            </e>
+          </e>
+          <e p="UintTest.cs" t="Include" />
         </e>
       </e>
       <e p="Tools" t="Include">
@@ -451,33 +506,12 @@
             </e>
           </e>
           <e p="Program.cs" t="Include" />
+          <e p="RDPreferences.cs" t="Include" />
         </e>
       </e>
       <e p="Unity" t="IncludeRecursive">
         <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
         <e p="Assets" t="Include">
-          <e p="Generated" t="Include">
-            <e p="Contexts.cs" t="Include" />
-            <e p="Feature.cs" t="Include" />
-            <e p="Game" t="Include">
-              <e p="Components" t="Include">
-                <e p="GameChannelComponent.cs" t="Include" />
-                <e p="GameDebugMessageComponent.cs" t="Include" />
-              </e>
-              <e p="GameAttribute.cs" t="Include" />
-              <e p="GameComponentsLookup.cs" t="Include" />
-              <e p="GameContext.cs" t="Include" />
-              <e p="GameEntity.cs" t="Include" />
-              <e p="GameMatcher.cs" t="Include" />
-            </e>
-            <e p="Input" t="Include">
-              <e p="InputAttribute.cs" t="Include" />
-              <e p="InputComponentsLookup.cs" t="Include" />
-              <e p="InputContext.cs" t="Include" />
-              <e p="InputEntity.cs" t="Include" />
-              <e p="InputMatcher.cs" t="Include" />
-            </e>
-          </e>
           <e p="Libraries" t="Include">
             <e p="DesperateDevs" t="Include">
               <e p="Compile.cs" t="Include" />
@@ -485,24 +519,6 @@
             <e p="Entitas" t="Include">
               <e p="Entitas.xml" t="Include" />
               <e p="LICENSE.txt" t="Include" />
-            </e>
-            <e p="RdUtils" t="Include">
-              <e p="CircularBuffer.cs" t="Include" />
-              <e p="SocketAsyncEventArgsPool.cs" t="Include" />
-            </e>
-          </e>
-          <e p="Sources" t="Include">
-            <e p="Components" t="Include">
-              <e p="ChannelComponent.cs" t="Include" />
-              <e p="DebugMessageComponent.cs" t="Include" />
-            </e>
-            <e p="GameController.cs" t="Include" />
-            <e p="Systems" t="Include">
-              <e p="CleanupDebugMessageSystem.cs" t="Include" />
-              <e p="DebugMessageSystem.cs" t="Include" />
-              <e p="HelloWorldFeature.cs" t="Include" />
-              <e p="HelloWorldSystem.cs" t="Include" />
-              <e p="LogMouseClickSystem.cs" t="Include" />
             </e>
           </e>
         </e>
