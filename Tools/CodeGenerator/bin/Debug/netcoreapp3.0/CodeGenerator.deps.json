@@ -9,7 +9,8 @@
       "CodeGenerator/1.0.0": {
         "dependencies": {
           "Entitas.CodeGeneration.Attributes": "1.0.0",
-          "Entitas.CodeGeneration.Plugins": "1.0.0"
+          "Entitas.CodeGeneration.Plugins": "1.0.0",
+          "RDGenerationLib": "1.0.0"
         },
         "runtime": {
           "CodeGenerator.dll": {}
@@ -48,6 +49,22 @@
         "runtime": {
           "Entitas.CodeGeneration.Plugins.dll": {}
         }
+      },
+      "Migration/1.0.0": {
+        "runtime": {
+          "Migration.dll": {}
+        }
+      },
+      "RDGenerationLib/1.0.0": {
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0",
+          "Entitas.CodeGeneration.Plugins": "1.0.0",
+          "Migration": "1.0.0"
+        },
+        "runtime": {
+          "RDGenerationLib.dll": {}
+        }
       }
     }
   },
@@ -80,6 +97,16 @@
       "sha512": ""
     },
     "Entitas.CodeGeneration.Plugins/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Migration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RDGenerationLib/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

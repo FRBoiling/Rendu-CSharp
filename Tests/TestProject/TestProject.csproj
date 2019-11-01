@@ -16,4 +16,8 @@
       <ProjectReference Include="..\..\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\Entitas.CodeGeneration.Plugins.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Tests\Entitas" />
+    </ItemGroup>
+
 </Project>

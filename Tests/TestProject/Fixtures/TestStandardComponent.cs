@@ -2,8 +2,7 @@
 
 namespace TestProject.Fixtures
 {
-    public sealed class StandardComponent : IComponent {
+    public sealed class TestStandardComponent : IComponent {
         public string value;
     }
-
 }

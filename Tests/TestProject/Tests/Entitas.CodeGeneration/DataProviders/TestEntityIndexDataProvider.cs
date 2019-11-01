@@ -24,7 +24,7 @@ namespace TestProject
         [Test]
         public void TestEntityIndexDataProvider()
         {
-            var data = getData<EntityIndexComponent, StandardComponent>();
+            var data = getData<TestEntityIndexComponent, TestStandardComponent>();
             Assert.AreEqual(data.Length, 1);
 
             var d = data[0];

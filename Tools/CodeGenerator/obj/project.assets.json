@@ -56,6 +56,32 @@
         "runtime": {
           "bin/placeholder/Entitas.CodeGeneration.Plugins.dll": {}
         }
+      },
+      "Migration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/Migration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Migration.dll": {}
+        }
+      },
+      "RDGenerationLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0",
+          "Entitas.CodeGeneration.Plugins": "1.0.0",
+          "Migration": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RDGenerationLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RDGenerationLib.dll": {}
+        }
       }
     }
   },
@@ -102,12 +128,23 @@
       "type": "project",
       "path": "../../Shared/ThirdParty/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj",
       "msbuildProject": "../../Shared/ThirdParty/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj"
+    },
+    "Migration/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/ThirdParty/Migration/Migration.csproj",
+      "msbuildProject": "../../Shared/ThirdParty/Migration/Migration.csproj"
+    },
+    "RDGenerationLib/1.0.0": {
+      "type": "project",
+      "path": "../RDGenerationLib/RDGenerationLib.csproj",
+      "msbuildProject": "../RDGenerationLib/RDGenerationLib.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "Entitas.CodeGeneration.Attributes >= 1.0.0",
-      "Entitas.CodeGeneration.Plugins >= 1.0.0"
+      "Entitas.CodeGeneration.Plugins >= 1.0.0",
+      "RDGenerationLib >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -145,6 +182,9 @@
             },
             "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
               "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
+            },
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj"
             }
           }
         }

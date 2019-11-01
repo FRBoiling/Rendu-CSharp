@@ -4,7 +4,7 @@ using Entitas.CodeGeneration.Attributes;
 namespace TestProject.Fixtures
 {
 //    [Game, Input]
-    public class EntityIndexComponent : IComponent {
+    public class TestEntityIndexComponent : IComponent {
 
         [EntityIndex]
         public string value;

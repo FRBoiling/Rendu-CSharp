@@ -1,0 +1,17 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\bin\Debug\netcoreapp3.0\DesktopCodeGenerator.exe
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\bin\Debug\netcoreapp3.0\DesktopCodeGenerator.deps.json
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\bin\Debug\netcoreapp3.0\DesktopCodeGenerator.runtimeconfig.json
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\bin\Debug\netcoreapp3.0\DesktopCodeGenerator.runtimeconfig.dev.json
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\bin\Debug\netcoreapp3.0\DesktopCodeGenerator.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\bin\Debug\netcoreapp3.0\DesktopCodeGenerator.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\obj\Debug\netcoreapp3.0\DesktopCodeGenerator.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\obj\Debug\netcoreapp3.0\MainWindow.g.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\obj\Debug\netcoreapp3.0\App.g.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\obj\Debug\netcoreapp3.0\DesktopCodeGenerator_MarkupCompile.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\obj\Debug\netcoreapp3.0\DesktopCodeGenerator_MarkupCompile.lref
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\obj\Debug\netcoreapp3.0\MainWindow.baml
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\obj\Debug\netcoreapp3.0\DesktopCodeGenerator.g.resources
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\obj\Debug\netcoreapp3.0\DesktopCodeGenerator.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\obj\Debug\netcoreapp3.0\DesktopCodeGenerator.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\obj\Debug\netcoreapp3.0\DesktopCodeGenerator.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\DesktopCodeGenerator\obj\Debug\netcoreapp3.0\DesktopCodeGenerator.pdb

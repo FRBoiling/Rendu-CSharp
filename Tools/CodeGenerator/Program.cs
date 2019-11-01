@@ -2,6 +2,7 @@
 using DesperateDevs.CodeGeneration;
 using DesperateDevs.Serialization;
 using Entitas.CodeGeneration.Plugins;
+using Entitas.Migration;
 using Microsoft.CSharp;
 
 namespace CodeGenerator
@@ -10,18 +11,9 @@ namespace CodeGenerator
     {
         static void Main(string[] args)
         {
-            var names = "Entitas.CodeGeneration.Plugins.Contexts = Game";
-            var provider = new ContextDataProvider();
-            provider.Configure(new RDPreferences(names));
-
-            var dataArr = (ContextData[]) provider.GetData();
-            foreach (var  data in dataArr)
-            {
-                string contextName = data.GetContextName();
-            }
+            var contextsMigration = new ContextsMigration();
+            MigrationUtils.WriteFiles(contextsMigration.Migrate("./Generated/")); 
             
-            var generator = new ContextGenerator();
-            var files = generator.Generate(dataArr);
             Console.WriteLine("Hello World!");
         }
     }

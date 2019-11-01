@@ -24,6 +24,9 @@
           },
           "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
             "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
+          },
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj"
           }
         }
       }

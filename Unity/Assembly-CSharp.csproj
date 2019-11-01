@@ -55,7 +55,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Generated\Contexts.cs" />
+     <Compile Include="Assets\Generated\Feature.cs" />
+     <Compile Include="Assets\Generated\Game\Components\GameDebugMessageComponent.cs" />
+     <Compile Include="Assets\Generated\Game\GameAttribute.cs" />
+     <Compile Include="Assets\Generated\Game\GameComponentsLookup.cs" />
+     <Compile Include="Assets\Generated\Game\GameContext.cs" />
+     <Compile Include="Assets\Generated\Game\GameEntity.cs" />
+     <Compile Include="Assets\Generated\Game\GameMatcher.cs" />
+     <Compile Include="Assets\Generated\Input\InputAttribute.cs" />
+     <Compile Include="Assets\Generated\Input\InputComponentsLookup.cs" />
+     <Compile Include="Assets\Generated\Input\InputContext.cs" />
+     <Compile Include="Assets\Generated\Input\InputEntity.cs" />
+     <Compile Include="Assets\Generated\Input\InputMatcher.cs" />
      <Compile Include="Assets\Libraries\DesperateDevs\Compile.cs" />
+     <Compile Include="Assets\Sources\Components\DebugMessageComponent.cs" />
+     <Compile Include="Assets\Sources\Systems\DebugMessageSystem.cs" />
      <None Include="Assets\Libraries\Entitas\Entitas.xml" />
      <None Include="Assets\Libraries\Entitas\LICENSE.txt" />
  <Reference Include="Unity.Timeline.Editor">
