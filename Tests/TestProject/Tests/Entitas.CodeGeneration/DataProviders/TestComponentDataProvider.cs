@@ -1,267 +1,329 @@
 using System;
+using DesperateDevs.Serialization;
 using DesperateDevs.Utils;
 using Entitas.CodeGeneration.Attributes;
 using Entitas.CodeGeneration.Plugins;
 using NUnit.Framework;
+using TestProject.Fixtures;
 
 namespace TestProject
 {
     public partial class Tests
     {
+        ComponentData getData<T>(Preferences preferences = null)
+        {
+            return getMultipleData<T>(preferences)[0];
+        }
+
+        ComponentData[] getMultipleData<T>(Preferences preferences = null)
+        {
+            var provider = new ComponentDataProvider(new Type[] {typeof(T)});
+            if (preferences == null)
+            {
+                preferences = new TestPreferences(
+                    @"Entitas.CodeGeneration.Plugins.Contexts = Game, GameState
+Entitas.CodeGeneration.Plugins.IgnoreNamespaces = false");
+            }
+
+            provider.Configure(preferences);
+
+            return (ComponentData[]) provider.GetData();
+        }
+
         [Test]
         public void TestComponentDataProvider()
         {
-                Type type = null;
-                ComponentData data = null;
+            Type type = null;
+            ComponentData standardData = null;
 
-                before = () =>
-                {
-                    type = typeof(MyNamespaceComponent);
-                    data = getData<MyNamespaceComponent>();
-                };
+            //component
+            {
+                type = typeof(TestStandardComponent);
+                standardData = getData<TestStandardComponent>();
+            }
 
-                it["get data"] = () => { data.should_not_be_null(); };
+            //get data
+            {
+                Assert.IsNotNull(standardData);
+            }
+            //gets full type name
+            {
+                Assert.AreEqual(standardData.GetTypeName().GetType(), typeof(string));
+                Assert.AreEqual(standardData.GetTypeName(), type.ToCompilableString());
+            }
 
-                it["gets full type name"] = () =>
-                {
-                    data.GetTypeName().GetType().should_be(typeof(string));
-                    data.GetTypeName().should_be(type.ToCompilableString());
-                };
+            //gets contexts
+            {
+                var contextNames = standardData.GetContextNames();
+                Assert.AreEqual(contextNames.GetType(), typeof(string[]));
 
-                it["gets contexts"] = () =>
-                {
-                    var contextNames = data.GetContextNames();
-                    contextNames.GetType().should_be(typeof(string[]));
-                    contextNames.Length.should_be(2);
-                    contextNames[0].should_be("Test");
-                    contextNames[1].should_be("Test2");
-                };
+                Assert.AreEqual(contextNames.Length, 2);
+                Assert.AreEqual(contextNames[0], "Test1");
+                Assert.AreEqual(contextNames[1], "Test2");
+            }
 
-                it["sets first context as default when component has no context"] = () =>
-                {
-                    var contextNames = getData<NoContextComponent>().GetContextNames();
-                    contextNames.Length.should_be(1);
-                    contextNames[0].should_be("Game");
-                };
+            //sets first context as default when component has no context
+            {
+                var contextNames = getData<TestNoContextComponent>().GetContextNames();
+                Assert.AreEqual(contextNames.Length, 1);
+                Assert.AreEqual(contextNames[0], "Game");
+            }
 
-                it["gets unique"] = () =>
-                {
-                    data.IsUnique().GetType().should_be(typeof(bool));
-                    data.IsUnique().should_be_false();
+            //gets unique
+            {
+                Assert.AreEqual(standardData.IsUnique().GetType(), typeof(bool));
 
-                    getData<UniqueStandardComponent>().IsUnique().should_be_true();
-                };
+                Assert.AreEqual(standardData.IsUnique(), false);
+                var uniqueData = getData<TestUniqueContextComponent>();
+                Assert.AreEqual(uniqueData.IsUnique(), true);
+            }
 
-                it["gets member data"] = () =>
-                {
-                    data.GetMemberData().GetType().should_be(typeof(MemberData[]));
-                    data.GetMemberData().Length.should_be(1);
-                    data.GetMemberData()[0].type.should_be("string");
-                };
+            //gets member data
+            {
+                Assert.AreEqual(standardData.GetMemberData().GetType(), typeof(MemberData[]));
+                Assert.AreEqual(standardData.GetMemberData().Length, 1);
+                Assert.AreEqual(standardData.GetMemberData()[0], "string");
+            }
+            ;
 
-                it["gets generate component"] = () =>
-                {
-                    data.ShouldGenerateComponent().GetType().should_be(typeof(bool));
-                    data.ShouldGenerateComponent().should_be_false();
-                    data.ContainsKey(ShouldGenerateComponentComponentDataExtension.COMPONENT_OBJECT_TYPE).should_be_false();
-                };
+            //gets generate component
+            {
+                Assert.AreEqual(standardData.ShouldGenerateComponent().GetType(), typeof(bool));
+                Assert.AreEqual(standardData.ShouldGenerateComponent(), false);
 
-                it["gets generate index"] = () =>
-                {
-                    data.ShouldGenerateIndex().GetType().should_be(typeof(bool));
-                    data.ShouldGenerateIndex().should_be_true();
+                Assert.AreEqual(standardData.ContainsKey(ShouldGenerateComponentComponentDataExtension.COMPONENT_OBJECT_TYPE), false);
+            }
 
-                    getData<DontGenerateIndexComponent>().ShouldGenerateIndex().should_be_false();
-                };
+            //gets generate index
+            {
+                Assert.AreEqual(standardData.ShouldGenerateIndex().GetType(), typeof(bool));
+                Assert.AreEqual(standardData.ShouldGenerateIndex(), true);
 
-                it["gets generate methods"] = () =>
-                {
-                    data.ShouldGenerateMethods().GetType().should_be(typeof(bool));
-                    data.ShouldGenerateMethods().should_be_true();
+                Assert.AreEqual(getData<TestUniqueContextComponent>().ShouldGenerateIndex(), false);
+            }
 
-                    getData<DontGenerateMethodsComponent>().ShouldGenerateMethods().should_be_false();
-                };
+            //gets generate methods
+            {
+                Assert.AreEqual(standardData.ShouldGenerateMethods().GetType(), typeof(bool));
+                Assert.AreEqual(standardData.ShouldGenerateMethods(), true);
 
-                it["gets flag prefix"] = () =>
-                {
-                    data.GetFlagPrefix().GetType().should_be(typeof(string));
-                    data.GetFlagPrefix().should_be("is");
+                Assert.AreEqual(getData<TestUniqueContextComponent>().ShouldGenerateMethods(), false);
+            }
+            ;
 
-                    getData<CustomPrefixFlagComponent>().GetFlagPrefix().should_be("My");
-                };
+            //gets flag prefix
+            {
+                Assert.AreEqual(standardData.GetFlagPrefix().GetType(), typeof(string));
+                Assert.AreEqual(standardData.GetFlagPrefix(), "is");
 
-                it["gets is no event"] = () =>
-                {
-                    data.IsEvent().GetType().should_be(typeof(bool));
-                    data.IsEvent().should_be_false();
-                };
+                Assert.AreEqual(getData<TestCustomPrefixFlagComponent>().GetFlagPrefix(), "My");
+            }
+            ;
 
-                it["gets event"] = () => { getData<StandardEventComponent>().IsEvent().should_be_true(); };
+            //gets is no event
+            {
+                Assert.AreEqual(standardData.IsEvent().GetType(), typeof(bool));
+                Assert.AreEqual(standardData.IsEvent(), false);
+            }
+            ;
 
-                it["gets multiple events"] = () =>
-                {
-                    var d = getData<MultipleEventsStandardEventComponent>();
-                    d.IsEvent().should_be_true();
-                    var eventData = d.GetEventData();
-                    eventData.Length.should_be(2);
+            //gets event
+            {
+                Assert.AreEqual(getData<TestEventStandardComponent>().IsEvent(), true);
+            }
+            ;
 
-                    eventData[0].eventTarget.should_be(EventTarget.Any);
-                    eventData[0].eventType.should_be(EventType.Added);
-                    eventData[0].priority.should_be(1);
+            //gets multiple events
+            {
+                var d = getData<TestMultipleEventsStandardComponent>();
+                Assert.AreEqual(d.IsEvent(), true);
+                var eventData = d.GetEventData();
+                Assert.AreEqual(eventData.Length, 2);
 
-                    eventData[1].eventTarget.should_be(EventTarget.Self);
-                    eventData[1].eventType.should_be(EventType.Removed);
-                    eventData[1].priority.should_be(2);
-                };
+                Assert.AreEqual(eventData[0].eventTarget, EventTarget.Any);
+                Assert.AreEqual(eventData[0].eventType, EventType.Added);
+                Assert.AreEqual(eventData[0].priority, 1);
 
-                it["gets event target"] = () =>
-                {
-                    getData<StandardEventComponent>().GetEventData()[0].eventTarget.GetType().should_be(typeof(EventTarget));
-                    getData<StandardEventComponent>().GetEventData()[0].eventTarget.should_be(EventTarget.Any);
-                    getData<StandardEntityEventComponent>().GetEventData()[0].eventTarget.should_be(EventTarget.Self);
-                };
+                Assert.AreEqual(eventData[1].eventTarget, EventTarget.Self);
+                Assert.AreEqual(eventData[1].eventType, EventType.Removed);
+                Assert.AreEqual(eventData[1].priority, 2);
+            }
+            ;
 
-                it["gets event type"] = () =>
-                {
-                    getData<StandardEventComponent>().GetEventData()[0].eventType.GetType().should_be(typeof(EventType));
-                    getData<StandardEventComponent>().GetEventData()[0].eventType.should_be(EventType.Added);
-                    getData<StandardEntityEventComponent>().GetEventData()[0].eventType.should_be(EventType.Removed);
-                };
+            //gets event target
+            {
+                Assert.AreEqual(getData<TestEventStandardComponent>().GetEventData()[0].eventTarget.GetType(), typeof(EventType));
+                Assert.AreEqual(getData<TestEventStandardComponent>().GetEventData()[0].eventTarget, EventTarget.Any);
 
-                it["gets event priority"] = () =>
-                {
-                    getData<StandardEventComponent>().GetEventData()[0].priority.GetType().should_be(typeof(int));
-                    getData<StandardEntityEventComponent>().GetEventData()[0].priority.should_be(1);
-                };
+                Assert.AreEqual(getData<TestEntityEventStandardComponent>().GetEventData()[0].eventTarget, EventTarget.Self);
+            }
+            ;
 
-                it["creates data for event listeners"] = () =>
-                {
-                    var d = getMultipleData<StandardEventComponent>();
-                    d.Length.should_be(2);
-                    d[1].IsEvent().should_be_false();
-                    d[1].GetTypeName().should_be("AnyStandardEventListenerComponent");
-                    d[1].GetMemberData().Length.should_be(1);
-                    d[1].GetMemberData()[0].name.should_be("value");
-                    d[1].GetMemberData()[0].type.should_be("System.Collections.Generic.List<IAnyStandardEventListener>");
-                };
+            //gets event type
+            {
+                Assert.AreEqual(getData<TestEventStandardComponent>().GetEventData()[0].eventType.GetType(), typeof(EventType));
+                Assert.AreEqual(getData<TestEventStandardComponent>().GetEventData()[0].eventType, EventType.Added);
 
-                it["creates data for unique event listeners"] = () =>
-                {
-                    var d = getMultipleData<UniqueEventComponent>();
-                    d.Length.should_be(2);
-                    d[1].IsEvent().should_be_false();
-                    d[1].IsUnique().should_be_false();
-                };
+                Assert.AreEqual(getData<TestEntityEventStandardComponent>().GetEventData()[0].eventType, EventType.Removed);
+            }
+            ;
 
-                it["creates data for event listeners with multiple contexts"] = () =>
-                {
-                    var d = getMultipleData<MultipleContextStandardEventComponent>();
-                    d.Length.should_be(3);
-                    d[1].IsEvent().should_be_false();
-                    d[1].GetTypeName().should_be("TestAnyMultipleContextStandardEventListenerComponent");
-                    d[1].GetMemberData().Length.should_be(1);
-                    d[1].GetMemberData()[0].name.should_be("value");
-                    d[1].GetMemberData()[0].type.should_be("System.Collections.Generic.List<ITestAnyMultipleContextStandardEventListener>");
+            //gets event priority
+            {
+                Assert.AreEqual(getData<TestEventStandardComponent>().GetEventData()[0].priority.GetType(), typeof(int));
+                Assert.AreEqual(getData<TestEventStandardComponent>().GetEventData()[0].priority, 1);
 
-                    d[2].IsEvent().should_be_false();
-                    d[2].GetTypeName().should_be("Test2AnyMultipleContextStandardEventListenerComponent");
-                    d[2].GetMemberData().Length.should_be(1);
-                    d[2].GetMemberData()[0].name.should_be("value");
-                    d[2].GetMemberData()[0].type.should_be("System.Collections.Generic.List<ITest2AnyMultipleContextStandardEventListener>");
-                };
-            };
+                Assert.AreEqual(getData<TestEntityEventStandardComponent>().GetEventData()[0].priority, 1);
+            }
+            ;
+
+            //creates data for event listeners
+            {
+                var d = getMultipleData<TestEventStandardComponent>();
+                Assert.AreEqual(d.Length, 2);
+                Assert.AreEqual(d[1].IsEvent(), false);
+                Assert.AreEqual(d[1].GetTypeName(), "AnyStandardEventListenerComponent");
+                Assert.AreEqual(d[1].GetMemberData().Length, 1);
+                Assert.AreEqual(d[1].GetMemberData()[0].name, "value");
+                Assert.AreEqual(d[1].GetMemberData()[0].type, "System.Collections.Generic.List<IAnyStandardEventListener>");
+            }
+            ;
+
+            //creates data for unique event listeners
+            {
+                var d = getMultipleData<TestUniqueEventComponent>();
+                Assert.AreEqual(d.Length, 2);
+                Assert.AreEqual(d[1].IsEvent(), false);
+                Assert.AreEqual(d[1].IsUnique(), false);
+            }
+            ;
+
+            //creates data for event listeners with multiple contexts
+            {
+                var d = getMultipleData<TestMultipleContextStandardEventComponent>();
+
+                Assert.AreEqual(d.Length, 3);
+                Assert.AreEqual(d[1].IsEvent(), false);
+                Assert.AreEqual(d[1].GetTypeName(), "TestAnyMultipleContextStandardEventListenerComponent");
+
+                Assert.AreEqual(d[1].GetMemberData().Length, 1);
+                Assert.AreEqual(d[1].GetMemberData()[0].name, "value");
+                Assert.AreEqual(d[1].GetMemberData()[0].type, "System.Collections.Generic.List<ITestAnyMultipleContextStandardEventListener>");
+
+                Assert.AreEqual(d[2].IsEvent(), false);
+                Assert.AreEqual(d[2].GetTypeName(), "Test2AnyMultipleContextStandardEventListenerComponent");
+
+                Assert.AreEqual(d[2].GetMemberData().Length, 1);
+                Assert.AreEqual(d[2].GetMemberData()[0].name, "value");
+                Assert.AreEqual(d[2].GetMemberData()[0].type, "System.Collections.Generic.List<ITest2AnyMultipleContextStandardEventListener>");
+            }
+            ;
         }
 
         [Test]
         public void TestNonComponentDataProvider()
         {
-              context["non component"] = () =>
+            //non component
             {
                 Type type = null;
                 ComponentData data = null;
+                type = typeof(TestClassToGenerate);
 
-                before = () =>
+                //get data
                 {
-                    type = typeof(ClassToGenerate);
-                    data = getData<ClassToGenerate>();
-                };
+                    data = getData<TestClassToGenerate>();
+                    Assert.IsNotNull(data);
+                }
 
-                it["get data"] = () => { data.should_not_be_null(); };
-
-                it["gets full type name"] = () =>
+                //gets full type name
                 {
                     // Not the type, but the component that should be generated
                     // See: no namespace
-                    data.GetTypeName().should_be("ClassToGenerateComponent");
-                };
+                    Assert.AreEqual(data.GetTypeName(), "ClassToGenerateComponent");
+                }
 
-                it["gets contexts"] = () =>
+                //gets contexts
                 {
                     var contextNames = data.GetContextNames();
-                    contextNames.Length.should_be(2);
-                    contextNames[0].should_be("Test");
-                    contextNames[1].should_be("Test2");
-                };
+                    Assert.AreEqual(contextNames.Length, 2);
+                    Assert.AreEqual(contextNames[0], "Test1");
+                    Assert.AreEqual(contextNames[1], "Test2");
+                }
 
-                it["gets unique"] = () => { data.IsUnique().should_be_false(); };
-
-                it["gets member data"] = () =>
+                //gets unique
                 {
-                    data.GetMemberData().Length.should_be(1);
-                    data.GetMemberData()[0].type.should_be(type.ToCompilableString());
-                };
+                    Assert.AreEqual(data.IsUnique(), false);
+                }
 
-                it["gets generate component"] = () =>
+                //gets member data 
                 {
-                    data.ShouldGenerateComponent().GetType().should_be(typeof(bool));
-                    data.ShouldGenerateComponent().should_be_true();
-                    data.GetObjectTypeName().should_be(typeof(ClassToGenerate).ToCompilableString());
-                };
+                    Assert.AreEqual(data.GetMemberData().Length, 1);
+                    Assert.AreEqual(data.GetMemberData()[0].type, type.ToCompilableString());
+                }
 
-                it["gets generate index"] = () => { data.ShouldGenerateIndex().should_be_true(); };
-
-                it["gets generate methods"] = () => { data.ShouldGenerateMethods().should_be_true(); };
-
-                it["gets flag prefix"] = () => { data.GetFlagPrefix().should_be("is"); };
-
-                it["gets is no event"] = () => { data.IsEvent().should_be_false(); };
-
-                it["gets event"] = () =>
+                //gets generate component
                 {
-                    getData<EventToGenerate>().GetEventData().Length.should_be(1);
-                    var eventData = getData<EventToGenerate>().GetEventData()[0];
-                    eventData.eventTarget.should_be(EventTarget.Any);
-                    eventData.eventType.should_be(EventType.Added);
-                    eventData.priority.should_be(0);
-                };
+                    Assert.AreEqual(data.ShouldGenerateComponent().GetType(), typeof(bool));
+                    Assert.AreEqual(data.ShouldGenerateComponent(), true);
+                    Assert.AreEqual(data.GetObjectTypeName(), typeof(TestClassToGenerate).ToCompilableString());
+                }
 
-                it["creates data for event listeners"] = () =>
+                //gets generate index
                 {
-                    var d = getMultipleData<EventToGenerate>();
-                    d.Length.should_be(3);
-                    d[1].IsEvent().should_be_false();
-                    d[1].ShouldGenerateComponent().should_be_false();
-                    d[1].GetTypeName().should_be("TestAnyEventToGenerateListenerComponent");
-                    d[1].GetMemberData().Length.should_be(1);
-                    d[1].GetMemberData()[0].name.should_be("value");
-                    d[1].GetMemberData()[0].type.should_be("System.Collections.Generic.List<ITestAnyEventToGenerateListener>");
+                    Assert.AreEqual(data.ShouldGenerateIndex(), true);
+                }
 
-                    d[2].IsEvent().should_be_false();
-                    d[2].ShouldGenerateComponent().should_be_false();
-                    d[2].GetTypeName().should_be("Test2AnyEventToGenerateListenerComponent");
-                    d[2].GetMemberData().Length.should_be(1);
-                    d[2].GetMemberData()[0].name.should_be("value");
-                    d[2].GetMemberData()[0].type.should_be("System.Collections.Generic.List<ITest2AnyEventToGenerateListener>");
-                };
-            };
+                //gets generate methods
+                {
+                    Assert.AreEqual(data.ShouldGenerateMethods(), true);
+                }
+
+                //gets flag prefix"] = () =>
+                {
+                    Assert.AreEqual(data.GetFlagPrefix(), "is");
+                }
+
+                //gets is no event
+                {
+                    Assert.AreEqual(data.IsEvent(), false);
+                }
+
+                //gets event
+                {
+                    Assert.AreEqual(getData<TestEventClassToGenerate>().GetEventData().Length, 1);
+                    var eventData = getData<TestEventClassToGenerate>().GetEventData()[0];
+                    Assert.AreEqual(eventData.eventTarget, EventTarget.Any);
+                    Assert.AreEqual(eventData.eventType, EventType.Added);
+                    Assert.AreEqual(eventData.priority, 0);
+                }
+
+                //creates data for event listeners
+                {
+                    var d = getMultipleData<TestEventClassToGenerate>();
+                    Assert.AreEqual(d.Length, 3);
+                    Assert.AreEqual(d[1].IsEvent(), false);
+                    Assert.AreEqual(d[1].ShouldGenerateComponent(), false);
+                    Assert.AreEqual(d[1].GetTypeName(), "TestAnyEventToGenerateListenerComponent");
+                    Assert.AreEqual(d[1].GetMemberData().Length, 1);
+                    Assert.AreEqual(d[1].GetMemberData()[0].name, "value");
+                    Assert.AreEqual(d[1].GetMemberData()[0].type, "System.Collections.Generic.List<ITestAnyEventToGenerateListener>");
+
+                    Assert.AreEqual(d[2].IsEvent(), false);
+                    Assert.AreEqual(d[2].ShouldGenerateComponent(), false);
+                    Assert.AreEqual(d[2].GetTypeName(), "Test2AnyEventToGenerateListenerComponent");
+                    Assert.AreEqual(d[2].GetMemberData().Length, 1);
+                    Assert.AreEqual(d[2].GetMemberData()[0].name, "value");
+                    Assert.AreEqual(d[2].GetMemberData()[0].type, "System.Collections.Generic.List<ITest2AnyEventToGenerateListener>");
+                }
+            }
         }
 
         [Test]
         public void TestMultipleTypesProvider()
         {
-            context["multiple types"] = () =>
+            //multiple types
             {
-                it["creates data for each type"] = () =>
+                //creates data for each type"] = () =>
                 {
                     var types = new[] {typeof(NameAgeComponent), typeof(Test2ContextComponent)};
                     var provider = new ComponentDataProvider(types);
@@ -269,80 +331,71 @@ namespace TestProject
                         "Entitas.CodeGeneration.Plugins.Contexts = Game, GameState"
                     ));
                     var data = provider.GetData();
-                    data.Length.should_be(types.Length);
-                };
+                    Assert.AreEqual(data.Length, types.Length);
+                }
+                ;
 
-                it["ignores duplicates from non components"] = () =>
+                //ignores duplicates from non components"] = () =>
                 {
-                    var types = new[] {typeof(ClassToGenerate), typeof(ClassToGenerateComponent)};
+                    var types = new[] {typeof(TestClassToGenerate), typeof(ClassToGenerateComponent)};
                     var provider = new ComponentDataProvider(types);
                     provider.Configure(new TestPreferences(
                         "Entitas.CodeGeneration.Plugins.Contexts = Game, GameState"
                     ));
                     var data = provider.GetData();
-                    data.Length.should_be(1);
-                };
-            };
-
+                    Assert.AreEqual(data.Length, 1);
+                }
+            }
         }
 
-        [Test]
-        public void TestConfigureProvider()
-        {
-            context["configure"] = () =>
-            {
-                Type type = null;
-                ComponentData data = null;
-
-                before = () =>
-                {
-                    var preferences = new TestPreferences(
-                        "Entitas.CodeGeneration.Plugins.Contexts = ConfiguredContext" + "\n"
-                    );
-
-                    type = typeof(NoContextComponent);
-                    data = getData<NoContextComponent>(preferences);
-                };
-
-                it["gets default context"] = () =>
-                {
-                    var contextNames = data.GetContextNames();
-                    contextNames.Length.should_be(1);
-                    contextNames[0].should_be("ConfiguredContext");
-                };
-            };
-        }
 
         [Test]
         public void TestMultipleCustomComponentNamesProvider()
         {
-            
-       
-            context["multiple custom component names"] = () =>
+            //multiple custom component names
             {
                 Type type = null;
                 ComponentData data1 = null;
                 ComponentData data2 = null;
 
-                before = () =>
-                {
-                    type = typeof(CustomName);
-                    var data = getMultipleData<CustomName>();
-                    data1 = data[0];
-                    data2 = data[1];
-                };
+                type = typeof(TestCustomName);
+                var data = getMultipleData<TestCustomName>();
+                data1 = data[0];
+                data2 = data[1];
 
-                it["creates data for each custom component name"] = () =>
+                //creates data for each custom component name"] = () =>
                 {
-                    data1.GetObjectTypeName().should_be(type.ToCompilableString());
-                    data2.GetObjectTypeName().should_be(type.ToCompilableString());
+                    Assert.AreEqual(data1.GetObjectTypeName(), type.ToCompilableString());
+                    Assert.AreEqual(data2.GetObjectTypeName(), type.ToCompilableString());
 
-                    data1.GetTypeName().should_be("NewCustomNameComponent1Component");
-                    data2.GetTypeName().should_be("NewCustomNameComponent2Component");
-                };
-            };
+                    Assert.AreEqual(data1.GetTypeName(), "NewCustomNameComponent1Component");
+                    Assert.AreEqual(data2.GetTypeName(), "NewCustomNameComponent2Component");
+                }
+            }
+        }
+
+        [Test]
+        public void TestConfigureProvider()
+        {
+            //configure    
+            {
+                Type type = null;
+                ComponentData data = null;
+
+                var preferences = new TestPreferences(
+                    "Entitas.CodeGeneration.Plugins.Contexts = ConfiguredContext" + "\n"
+                );
+
+                type = typeof(TestNoContextComponent);
+                data = getData<TestNoContextComponent>(preferences);
+
+                //gets default context"] = () =>
+                {
+                    var contextNames = data.GetContextNames();
+                    Assert.AreEqual(contextNames.Length, 1);
+                    Assert.AreEqual(contextNames[0], "ConfiguredContext");
+                }
+            }
         }
     }
-    
 }
-

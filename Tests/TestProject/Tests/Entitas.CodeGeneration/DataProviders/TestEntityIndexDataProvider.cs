@@ -39,7 +39,7 @@ namespace TestProject
 
             Assert.AreEqual(d.GetContextNames().GetType(), typeof(string));
             Assert.AreEqual(d.GetContextNames().Length, 2);
-            Assert.AreEqual(d.GetContextNames()[0], "Test");
+            Assert.AreEqual(d.GetContextNames()[0], "Test1");
             Assert.AreEqual(d.GetContextNames()[1], "Test2");
 
             Assert.AreEqual(d.GetKeyType().GetType(), typeof(string));

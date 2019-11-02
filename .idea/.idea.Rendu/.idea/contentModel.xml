@@ -466,10 +466,13 @@
         <e p="TestProject" t="IncludeRecursive">
           <e p="bin" t="ExcludeRecursive" />
           <e p="Fixtures" t="Include">
+            <e p="TestAttribute.cs" t="Include" />
+            <e p="TestClassToGenerate.cs" t="Include" />
+            <e p="TestComponents.cs" t="Include" />
+            <e p="TestCustomName.cs" t="Include" />
             <e p="TestEntityIndexComponent.cs" t="Include" />
             <e p="TestExtensions.cs" t="Include" />
             <e p="TestPreferences.cs" t="Include" />
-            <e p="TestStandardComponent.cs" t="Include" />
           </e>
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
