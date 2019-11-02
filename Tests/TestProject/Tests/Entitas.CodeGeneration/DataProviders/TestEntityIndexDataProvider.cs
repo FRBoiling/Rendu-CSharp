@@ -24,6 +24,7 @@ namespace TestProject
         [Test]
         public void TestEntityIndexDataProvider()
         {
+//            creates data for single entity index"
             var data = getData<TestEntityIndexComponent, TestStandardComponent>();
             Assert.AreEqual(data.Length, 1);
 
@@ -31,6 +32,7 @@ namespace TestProject
 
             Assert.AreEqual(d.GetEntityIndexType().GetType(), typeof(string));
             Assert.AreEqual(d.GetEntityIndexType(), "Entitas.EntityIndex");
+
             Assert.AreEqual(d.IsCustom().GetType(), typeof(bool));
             Assert.AreEqual(d.IsCustom(), false);
 
@@ -54,5 +56,89 @@ namespace TestProject
             Assert.AreEqual(d.GetHasMultiple().GetType(), typeof(bool));
             Assert.AreEqual(d.GetHasMultiple(), false);
         }
+
+        [Test]
+        public void TestMultipleEntityIndexDataProvider()
+        {
+            //creates data for multiple entity index
+            var data = getData<TestMultipleEntityIndicesComponent, TestStandardComponent>();
+            Assert.AreEqual(data.Length, 2);
+
+            Assert.AreEqual(data[0].GetEntityIndexName(), "MyNamespaceMultipleEntityIndices");
+            Assert.AreEqual(data[0].GetHasMultiple(), true);
+
+            Assert.AreEqual(data[1].GetEntityIndexName(), "MyNamespaceMultipleEntityIndices");
+            Assert.AreEqual(data[1].GetHasMultiple(), true);
+        }
+
+        [Test]
+        public void TestSinglePrimaryEntityIndexDataProvider()
+        {
+            //creates data for single primary entity index
+            var data = getData<TestPrimaryEntityIndexComponent, TestStandardComponent>();
+
+            Assert.AreEqual(data.Length, 1);
+            var d = data[0];
+
+            Assert.AreEqual(d.GetEntityIndexType(), "Entitas.PrimaryEntityIndex");
+            Assert.AreEqual(d.IsCustom(), true);
+            Assert.AreEqual(d.GetEntityIndexName(), "PrimaryEntityIndex");
+            Assert.AreEqual(d.GetContextNames().Length, 1);
+            Assert.AreEqual(d.GetContextNames()[0], "Game");
+            Assert.AreEqual(d.GetKeyType(), "string");
+            Assert.AreEqual(d.GetComponentType(), "PrimaryEntityIndexComponent");
+            Assert.AreEqual(d.GetMemberName(), "value");
+            Assert.AreEqual(d.GetHasMultiple(), false);
+        }
+
+        [Test]
+        public void TestMultiplePrimaryEntityIndexDataProvider()
+        {
+            //creates data for multiple primary entity index
+            {
+                var data = getData<TestMultiplePrimaryEntityIndicesComponent, TestStandardComponent>();
+
+                Assert.AreEqual(data.Length, 2);
+
+                Assert.AreEqual(data[0].GetEntityIndexName(), "MultiplePrimaryEntityIndices");
+                Assert.AreEqual(data[0].GetHasMultiple(), true);
+
+                Assert.AreEqual(data[1].GetEntityIndexName(), "MultiplePrimaryEntityIndices");
+                Assert.AreEqual(data[1].GetHasMultiple(), true);
+            }
+        }
+
+        [Test]
+        public void TestIgnoresAbstractComponentsDataProvider()
+        {
+            //ignores abstract components
+            {
+                var data = getData<TestAbstractEntityIndexComponent, TestStandardComponent>();
+                Assert.AreEqual(data.Length, 0);
+            }
+        }
+
+//        [Test]
+//        public void TestCustomEntityIndexDataProvider()
+//        {
+//            //creates data for custom entity index class
+//            {
+//                var data = getData<CustomEntityIndex, TestStandardComponent>();
+//
+//                data.Length.should_be(1);
+//                var d = data[0];
+//
+//                d.GetEntityIndexType().should_be("MyNamespace.CustomEntityIndex");
+//                d.IsCustom().should_be_true();
+//                d.GetEntityIndexName().should_be("MyNamespaceCustomEntityIndex");
+//                d.GetContextNames().Length.should_be(1);
+//                d.GetContextNames()[0].should_be("Test");
+//
+//                var methods = d.GetCustomMethods();
+//                methods.GetType().should_be(typeof(MethodData[]));
+//                methods.Length.should_be(2);
+//            }
+//
+//        }
     }
 }

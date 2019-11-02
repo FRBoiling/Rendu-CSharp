@@ -84,7 +84,6 @@ Entitas.CodeGeneration.Plugins.IgnoreNamespaces = false");
                 Assert.AreEqual(standardData.GetMemberData().Length, 1);
                 Assert.AreEqual(standardData.GetMemberData()[0], "string");
             }
-            ;
 
             //gets generate component
             {
@@ -109,7 +108,6 @@ Entitas.CodeGeneration.Plugins.IgnoreNamespaces = false");
 
                 Assert.AreEqual(getData<TestUniqueContextComponent>().ShouldGenerateMethods(), false);
             }
-            ;
 
             //gets flag prefix
             {
@@ -118,20 +116,17 @@ Entitas.CodeGeneration.Plugins.IgnoreNamespaces = false");
 
                 Assert.AreEqual(getData<TestCustomPrefixFlagComponent>().GetFlagPrefix(), "My");
             }
-            ;
 
             //gets is no event
             {
                 Assert.AreEqual(standardData.IsEvent().GetType(), typeof(bool));
                 Assert.AreEqual(standardData.IsEvent(), false);
             }
-            ;
 
             //gets event
             {
                 Assert.AreEqual(getData<TestEventStandardComponent>().IsEvent(), true);
             }
-            ;
 
             //gets multiple events
             {

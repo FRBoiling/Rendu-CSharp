@@ -8,6 +8,7 @@ namespace TestProject
         [Test]
         public void TestContextDataProvider()
         {
+            //creates data for each context name
             var names = "Entitas.CodeGeneration.Plugins.Contexts = Input, GameState";
             var provider = new ContextDataProvider();
             provider.Configure(new TestPreferences(names));
