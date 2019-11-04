@@ -10,6 +10,7 @@
         "dependencies": {
           "Entitas.CodeGeneration.Plugins": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.2.0",
+          "Migration": "1.0.0",
           "NUnit3TestAdapter": "3.13.0",
           "NUnit": "3.12.0"
         },
@@ -1042,6 +1043,11 @@
         "runtime": {
           "Entitas.CodeGeneration.Plugins.dll": {}
         }
+      },
+      "Migration/1.0.0": {
+        "runtime": {
+          "Migration.dll": {}
+        }
       }
     }
   },
@@ -1578,6 +1584,11 @@
       "sha512": ""
     },
     "Entitas.CodeGeneration.Plugins/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Migration/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

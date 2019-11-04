@@ -138,7 +138,6 @@ namespace TestProject
 //                methods.GetType().should_be(typeof(MethodData[]));
 //                methods.Length.should_be(2);
 //            }
-//
 //        }
     }
 }

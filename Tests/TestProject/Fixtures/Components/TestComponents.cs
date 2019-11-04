@@ -31,27 +31,27 @@ namespace TestProject.Fixtures
         public string value;
     }
     
-    [Context("Test"), Context("Test2"), Event(EventTarget.Any, EventType.Added, 1), Event(EventTarget.Self, EventType.Removed, 2)]
+    [Context("Test1"), Context("Test2"), Event(EventTarget.Any, EventType.Added, 1), Event(EventTarget.Self, EventType.Removed, 2)]
     public sealed class TestMultipleEventsStandardComponent : IComponent {
         public string value;
     }
     
-    [Context("Test"), Event(EventTarget.Self, EventType.Removed, 1)]
+    [Context("Test1"), Event(EventTarget.Self, EventType.Removed, 1)]
     public sealed class TestEntityEventStandardComponent : IComponent {
         public string value;
     }
 
-    [Context("Test"), Unique, Event(EventTarget.Any)]
+    [Context("Test1"), Unique, Event(EventTarget.Any)]
     public sealed class TestUniqueEventComponent : IComponent {
         public string value;
     }
     
-    [Context("Test"), Context("Test2"), Event(EventTarget.Any)]
+    [Context("Test1"), Context("Test2"), Event(EventTarget.Any)]
     public sealed class TestMultipleContextStandardEventComponent : IComponent {
         public string value;
     }
     
-    [Context("Test"), Context("Test2")]
+    [Context("Test1"), Context("Test2")]
     public sealed class NameAgeComponent : IComponent {
 
         public string name;
@@ -62,13 +62,13 @@ namespace TestProject.Fixtures
         }
     }
     
-    [Context("Test"), Context("Test2")]
+    [Context("Test1"), Context("Test2")]
     public sealed class Test2ContextComponent : IComponent {
         public string value;
     }
     
     [Entitas.CodeGeneration.Attributes.DontGenerate(false)]
-    public sealed class ClassToGenerateComponent : Entitas.IComponent {
+    public sealed class ClassToGenerateComponent : IComponent {
         public TestClassToGenerate value;
     }
 }

@@ -1,11 +1,115 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {}
+    ".NETCoreApp,Version=v3.0": {
+      "System.CodeDom/4.7.0-preview1.19504.10": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.CodeDom.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.CodeDom.dll": {}
+        }
+      },
+      "DesperateDevs/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/DesperateDevs.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.dll": {}
+        }
+      },
+      "Entitas/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/Entitas.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitas.dll": {}
+        }
+      },
+      "Entitas.CodeGeneration.Attributes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/Entitas.CodeGeneration.Attributes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitas.CodeGeneration.Attributes.dll": {}
+        }
+      },
+      "Entitas.CodeGeneration.Plugins/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "DesperateDevs": "1.0.0",
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0",
+          "System.CodeDom": "4.7.0-preview1.19504.10"
+        },
+        "compile": {
+          "bin/placeholder/Entitas.CodeGeneration.Plugins.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitas.CodeGeneration.Plugins.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "System.CodeDom/4.7.0-preview1.19504.10": {
+      "sha512": "P8aqC7abbUkuVINSkKBY2ylH+KmwlWIj8aU7NR5xgkOqdliRgKwLWZ8zylLElBH/jDeV4zSlCTryF1as/1rFPg==",
+      "type": "package",
+      "path": "system.codedom/4.7.0-preview1.19504.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.CodeDom.dll",
+        "lib/net461/System.CodeDom.xml",
+        "lib/netstandard2.0/System.CodeDom.dll",
+        "lib/netstandard2.0/System.CodeDom.xml",
+        "ref/net461/System.CodeDom.dll",
+        "ref/net461/System.CodeDom.xml",
+        "ref/netstandard2.0/System.CodeDom.dll",
+        "ref/netstandard2.0/System.CodeDom.xml",
+        "system.codedom.4.7.0-preview1.19504.10.nupkg.sha512",
+        "system.codedom.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "DesperateDevs/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/ThirdParty/DesperateDevs/DesperateDevs.csproj",
+      "msbuildProject": "../../Shared/ThirdParty/DesperateDevs/DesperateDevs.csproj"
+    },
+    "Entitas/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/ThirdParty/Entitas/Entitas.csproj",
+      "msbuildProject": "../../Shared/ThirdParty/Entitas/Entitas.csproj"
+    },
+    "Entitas.CodeGeneration.Attributes/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/ThirdParty/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj",
+      "msbuildProject": "../../Shared/ThirdParty/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj"
+    },
+    "Entitas.CodeGeneration.Plugins/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/ThirdParty/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj",
+      "msbuildProject": "../../Shared/ThirdParty/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": []
+    ".NETCoreApp,Version=v3.0": [
+      "Entitas >= 1.0.0",
+      "Entitas.CodeGeneration.Attributes >= 1.0.0",
+      "Entitas.CodeGeneration.Plugins >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\WanXin\\.nuget\\packages\\": {},
@@ -36,7 +140,17 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
+            },
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
+            },
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas\\Entitas.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas\\Entitas.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

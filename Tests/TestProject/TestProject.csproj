@@ -6,6 +6,14 @@
         <IsPackable>false</IsPackable>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <OutputPath>..\Bin\</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <OutputPath>..\Bin\</OutputPath>
+    </PropertyGroup>
+
     <ItemGroup>
         <PackageReference Include="nunit" Version="3.12.0" />
         <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
@@ -14,9 +22,12 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\Entitas.CodeGeneration.Plugins.csproj" />
+      <ProjectReference Include="..\..\Shared\ThirdParty\Migration\Migration.csproj" />
+      <ProjectReference Include="..\TestFixtures\TestFixtures.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Fixtures\Systems" />
       <Folder Include="Tests\Entitas" />
     </ItemGroup>
 

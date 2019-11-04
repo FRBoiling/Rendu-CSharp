@@ -1493,6 +1493,31 @@
         "runtime": {
           "bin/placeholder/Entitas.CodeGeneration.Plugins.dll": {}
         }
+      },
+      "Migration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/Migration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Migration.dll": {}
+        }
+      },
+      "TestFixtures/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0",
+          "Entitas.CodeGeneration.Plugins": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TestFixtures.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TestFixtures.dll": {}
+        }
       }
     }
   },
@@ -5337,13 +5362,25 @@
       "type": "project",
       "path": "../../Shared/ThirdParty/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj",
       "msbuildProject": "../../Shared/ThirdParty/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj"
+    },
+    "Migration/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/ThirdParty/Migration/Migration.csproj",
+      "msbuildProject": "../../Shared/ThirdParty/Migration/Migration.csproj"
+    },
+    "TestFixtures/1.0.0": {
+      "type": "project",
+      "path": "../TestFixtures/TestFixtures.csproj",
+      "msbuildProject": "../TestFixtures/TestFixtures.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "Entitas.CodeGeneration.Plugins >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.2.0",
+      "Migration >= 1.0.0",
       "NUnit3TestAdapter >= 3.13.0",
+      "TestFixtures >= 1.0.0",
       "nunit >= 3.12.0"
     ]
   },
@@ -5379,6 +5416,12 @@
           "projectReferences": {
             "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
               "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
+            },
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Migration\\Migration.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Migration\\Migration.csproj"
+            },
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestFixtures\\TestFixtures.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestFixtures\\TestFixtures.csproj"
             }
           }
         }

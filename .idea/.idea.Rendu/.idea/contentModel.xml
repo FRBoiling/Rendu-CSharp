@@ -9,6 +9,7 @@
     <e p="C:\Users\WanXin\.nuget\packages\nunit3testadapter\3.13.0\build\netcoreapp1.0\NUnit3.TestAdapter.pdb" t="Include" />
     <e p="C:\Users\WanXin\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\WanXin\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Rendu.-983104788.00" t="ExcludeRecursive" />
+    <e p="D:\GitHub\RenduECS\bin\Tools\netcoreapp3.0" t="ExcludeRecursive" />
     <e p="D:\GitHub\RenduECS\Rendu-CSharp" t="IncludeFlat">
       <e p="bin" t="ExcludeRecursive" />
       <e p="Client" t="Include">
@@ -205,7 +206,6 @@
             </e>
           </e>
           <e p="Entitas.CodeGeneration.Attributes" t="IncludeRecursive">
-            <e p="bin" t="ExcludeRecursive" />
             <e p="CleanupAttribute.cs" t="Include" />
             <e p="ComponentNameAttribute.cs" t="Include" />
             <e p="ContextAttribute.cs" t="Include" />
@@ -233,7 +233,6 @@
           </e>
           <e p="Entitas.CodeGeneration.Plugins" t="IncludeRecursive">
             <e p="AbstractGenerator.cs" t="Include" />
-            <e p="bin" t="ExcludeRecursive" />
             <e p="CodeGeneratorExtentions.cs" t="Include" />
             <e p="Component" t="Include">
               <e p="CodeGenerators" t="Include">
@@ -451,9 +450,25 @@
         </e>
       </e>
       <e p="Tests" t="Include">
+        <e p="bin" t="ExcludeRecursive" />
         <e p="TestFixtures" t="IncludeRecursive">
-          <e p="bin" t="ExcludeRecursive" />
-          <e p="Class1.cs" t="Include" />
+          <e p="Generated" t="Include">
+            <e p="Contexts.cs" t="Include" />
+            <e p="Test1" t="Include">
+              <e p="Test1Attribute.cs" t="Include" />
+              <e p="Test1ComponentsLookup.cs" t="Include" />
+              <e p="Test1Context.cs" t="Include" />
+              <e p="Test1Entity.cs" t="Include" />
+              <e p="Test1Matcher.cs" t="Include" />
+            </e>
+            <e p="Test2" t="Include">
+              <e p="Test2Attribute.cs" t="Include" />
+              <e p="Test2ComponentsLookup.cs" t="Include" />
+              <e p="Test2Context.cs" t="Include" />
+              <e p="Test2Entity.cs" t="Include" />
+              <e p="Test2Matcher.cs" t="Include" />
+            </e>
+          </e>
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
               <e p="netcoreapp3.0" t="Include">
@@ -464,15 +479,27 @@
           <e p="TestFixtures.csproj" t="IncludeRecursive" />
         </e>
         <e p="TestProject" t="IncludeRecursive">
-          <e p="bin" t="ExcludeRecursive" />
           <e p="Fixtures" t="Include">
-            <e p="TestAttribute.cs" t="Include" />
+            <e p="Components" t="Include">
+              <e p="TestComponents.cs" t="Include" />
+            </e>
+            <e p="Extensions" t="Include">
+              <e p="TestExtensions.cs" t="Include" />
+            </e>
+            <e p="Generation" t="Include">
+              <e p="TestDataGeneration.cs" t="Include" />
+            </e>
+            <e p="Migrations" t="Include">
+              <e p="TestComponentMigration.cs" t="Include" />
+              <e p="TestContextsMigration.cs" t="Include" />
+            </e>
+            <e p="Preferences" t="Include">
+              <e p="TestPreferences.cs" t="Include" />
+            </e>
+            <e p="Systems" t="Include" />
             <e p="TestClassToGenerate.cs" t="Include" />
-            <e p="TestComponents.cs" t="Include" />
             <e p="TestCustomName.cs" t="Include" />
             <e p="TestEntityIndexComponent.cs" t="Include" />
-            <e p="TestExtensions.cs" t="Include" />
-            <e p="TestPreferences.cs" t="Include" />
           </e>
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
@@ -493,6 +520,9 @@
                 <e p="TestContextDataProvider.cs" t="Include" />
                 <e p="TestEntityIndexDataProvider.cs" t="Include" />
               </e>
+              <e p="FileGeneration" t="Include">
+                <e p="TestFileGenerator.cs" t="Include" />
+              </e>
               <e p="TestCustomEntityIndex.cs" t="Include" />
             </e>
           </e>
@@ -501,7 +531,6 @@
       </e>
       <e p="Tools" t="Include">
         <e p="CodeGenerator" t="IncludeRecursive">
-          <e p="bin" t="ExcludeRecursive" />
           <e p="CodeGenerator.csproj" t="IncludeRecursive" />
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
@@ -515,7 +544,6 @@
         <e p="DesktopCodeGenerator" t="IncludeRecursive">
           <e p="App.xaml" t="Include" />
           <e p="App.xaml.cs" t="Include" />
-          <e p="bin" t="ExcludeRecursive" />
           <e p="DesktopCodeGenerator.csproj" t="IncludeRecursive" />
           <e p="MainWindow.xaml" t="Include" />
           <e p="MainWindow.xaml.cs" t="Include" />
@@ -528,7 +556,6 @@
           </e>
         </e>
         <e p="RDGenerationLib" t="IncludeRecursive">
-          <e p="bin" t="ExcludeRecursive" />
           <e p="ContextsMigration.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
