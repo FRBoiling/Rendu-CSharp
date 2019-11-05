@@ -6,20 +6,18 @@
     "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj",
     "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\obj\\",
     "projectStyle": "PackageReference",
-    "crossTargeting": true,
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
-      "net461",
-      "netcoreapp2.2"
+      "netstandard2.0"
     ],
     "sources": {
       "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
-      "netcoreapp2.2": {
+      "netstandard2.0": {
         "projectReferences": {
           "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj": {
             "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj"
@@ -30,30 +28,17 @@
           "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
             "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
           },
-          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas\\Entitas.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas\\Entitas.csproj"
-          },
-          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Migration\\Migration.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Migration\\Migration.csproj"
-          }
-        }
-      },
-      "net461": {
-        "projectReferences": {
-          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj"
-          },
-          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
-          },
-          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.Migration\\Entitas.Migration.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.Migration\\Entitas.Migration.csproj"
           },
           "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas\\Entitas.csproj": {
             "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas\\Entitas.csproj"
           },
-          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Migration\\Migration.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Migration\\Migration.csproj"
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj"
+          },
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
           }
         }
       }
@@ -65,12 +50,12 @@
     }
   },
   "frameworks": {
-    "netcoreapp2.2": {
+    "netstandard2.0": {
       "dependencies": {
-        "Microsoft.NETCore.App": {
+        "NETStandard.Library": {
           "suppressParent": "All",
           "target": "Package",
-          "version": "[2.2.0, )",
+          "version": "[2.0.3, )",
           "autoReferenced": true
         }
       },
@@ -84,7 +69,6 @@
       ],
       "assetTargetFallback": true,
       "warn": true
-    },
-    "net461": {}
+    }
   }
 }

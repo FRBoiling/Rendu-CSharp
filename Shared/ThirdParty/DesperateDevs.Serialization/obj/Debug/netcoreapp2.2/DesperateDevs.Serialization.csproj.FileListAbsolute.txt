@@ -1,9 +1,0 @@
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\DesperateDevs.Serialization.deps.json
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\DesperateDevs.Serialization.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\DesperateDevs.Serialization.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Serialization\obj\Debug\netcoreapp2.2\DesperateDevs.Serialization.csprojAssemblyReference.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Serialization\obj\Debug\netcoreapp2.2\DesperateDevs.Serialization.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Serialization\obj\Debug\netcoreapp2.2\DesperateDevs.Serialization.AssemblyInfo.cs
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Serialization\obj\Debug\netcoreapp2.2\DesperateDevs.Serialization.csproj.CopyComplete
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Serialization\obj\Debug\netcoreapp2.2\DesperateDevs.Serialization.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Serialization\obj\Debug\netcoreapp2.2\DesperateDevs.Serialization.pdb

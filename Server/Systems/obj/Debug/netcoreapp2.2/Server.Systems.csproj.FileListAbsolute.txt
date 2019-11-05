@@ -1,9 +1,0 @@
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\netcoreapp2.2\Server.Systems.deps.json
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\netcoreapp2.2\Server.Systems.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\netcoreapp2.2\Server.Systems.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\Server\Systems\obj\Debug\netcoreapp2.2\Server.Systems.csprojAssemblyReference.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Server\Systems\obj\Debug\netcoreapp2.2\Server.Systems.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Server\Systems\obj\Debug\netcoreapp2.2\Server.Systems.AssemblyInfo.cs
-D:\GitHub\RenduECS\Rendu-CSharp\Server\Systems\obj\Debug\netcoreapp2.2\Server.Systems.csproj.CopyComplete
-D:\GitHub\RenduECS\Rendu-CSharp\Server\Systems\obj\Debug\netcoreapp2.2\Server.Systems.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Server\Systems\obj\Debug\netcoreapp2.2\Server.Systems.pdb

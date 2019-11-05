@@ -1,0 +1,93 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5": {
+      "DesperateDevs.Logging/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "compile": {
+          "bin/placeholder/DesperateDevs.Logging.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Logging.dll": {}
+        }
+      },
+      "DesperateDevs.Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "DesperateDevs.Logging": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Utils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DesperateDevs.Logging/1.0.0": {
+      "type": "project",
+      "path": "../Logging/DesperateDevs.Logging.csproj",
+      "msbuildProject": "../Logging/DesperateDevs.Logging.csproj"
+    },
+    "DesperateDevs.Utils/1.0.0": {
+      "type": "project",
+      "path": "../Utils/DesperateDevs.Utils.csproj",
+      "msbuildProject": "../Utils/DesperateDevs.Utils.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5": [
+      "DesperateDevs.Utils >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\WanXin\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj",
+      "projectName": "DesperateDevs.CodeGeneration",
+      "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj",
+      "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net45"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net45": {
+          "projectReferences": {
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net45": {}
+    }
+  }
+}

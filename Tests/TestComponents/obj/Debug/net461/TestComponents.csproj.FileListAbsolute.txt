@@ -1,7 +1,0 @@
-D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\net461\TestComponents.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\net461\TestComponents.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestComponents\obj\Debug\net461\TestComponents.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestComponents\obj\Debug\net461\TestComponents.AssemblyInfo.cs
-D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestComponents\obj\Debug\net461\TestComponents.csproj.CopyComplete
-D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestComponents\obj\Debug\net461\TestComponents.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestComponents\obj\Debug\net461\TestComponents.pdb

@@ -1,8 +1,0 @@
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\DesperateDevs.Analytics.deps.json
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\DesperateDevs.Analytics.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\DesperateDevs.Analytics.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Analytics\obj\Debug\netcoreapp2.2\DesperateDevs.Analytics.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Analytics\obj\Debug\netcoreapp2.2\DesperateDevs.Analytics.AssemblyInfo.cs
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Analytics\obj\Debug\netcoreapp2.2\DesperateDevs.Analytics.csproj.CopyComplete
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Analytics\obj\Debug\netcoreapp2.2\DesperateDevs.Analytics.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Analytics\obj\Debug\netcoreapp2.2\DesperateDevs.Analytics.pdb

@@ -207,104 +207,9 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
-      },
-      "Components/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "dependencies": {
-          "Entitas": "1.0.0",
-          "Entitas.CodeGeneration.Attributes": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Components.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Components.dll": {}
-        }
-      },
-      "Entitas/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "compile": {
-          "bin/placeholder/Entitas.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entitas.dll": {}
-        }
-      },
-      "Entitas.CodeGeneration.Attributes/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "compile": {
-          "bin/placeholder/Entitas.CodeGeneration.Attributes.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entitas.CodeGeneration.Attributes.dll": {}
-        }
-      },
-      "Generated/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "dependencies": {
-          "Components": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Generated.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Generated.dll": {}
-        }
       }
     },
-    ".NETFramework,Version=v4.6.1": {
-      "Components/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
-        "dependencies": {
-          "Entitas": "1.0.0",
-          "Entitas.CodeGeneration.Attributes": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Components.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Components.dll": {}
-        }
-      },
-      "Entitas/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
-        "compile": {
-          "bin/placeholder/Entitas.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entitas.dll": {}
-        }
-      },
-      "Entitas.CodeGeneration.Attributes/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
-        "compile": {
-          "bin/placeholder/Entitas.CodeGeneration.Attributes.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entitas.CodeGeneration.Attributes.dll": {}
-        }
-      },
-      "Generated/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
-        "dependencies": {
-          "Components": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Generated.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Generated.dll": {}
-        }
-      }
-    }
+    ".NETFramework,Version=v4.6.1": {}
   },
   "libraries": {
     "Microsoft.NETCore.App/2.2.0": {
@@ -775,36 +680,13 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
-    },
-    "Components/1.0.0": {
-      "type": "project",
-      "path": "../../Shared/Components/Components.csproj",
-      "msbuildProject": "../../Shared/Components/Components.csproj"
-    },
-    "Entitas/1.0.0": {
-      "type": "project",
-      "path": "../../Shared/ThirdParty/Entitas/Entitas.csproj",
-      "msbuildProject": "../../Shared/ThirdParty/Entitas/Entitas.csproj"
-    },
-    "Entitas.CodeGeneration.Attributes/1.0.0": {
-      "type": "project",
-      "path": "../../Shared/ThirdParty/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj",
-      "msbuildProject": "../../Shared/ThirdParty/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj"
-    },
-    "Generated/1.0.0": {
-      "type": "project",
-      "path": "../../Shared/Generated/Generated.csproj",
-      "msbuildProject": "../../Shared/Generated/Generated.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "Generated >= 1.0.0",
       "Microsoft.NETCore.App >= 2.2.0"
     ],
-    ".NETFramework,Version=v4.6.1": [
-      "Generated >= 1.0.0"
-    ]
+    ".NETFramework,Version=v4.6.1": []
   },
   "packageFolders": {
     "C:\\Users\\WanXin\\.nuget\\packages\\": {},
@@ -837,18 +719,10 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj"
-            }
-          }
+          "projectReferences": {}
         },
         "net461": {
-          "projectReferences": {
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

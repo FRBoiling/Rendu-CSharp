@@ -32,7 +32,11 @@
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
-      <e p="RdUnity" t="Include" />
+      <e p="RdUnity" t="IncludeRecursive">
+        <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Temp\Bin" t="ExcludeRecursive" />
+      </e>
       <e p="Rendu.sln" t="IncludeFlat" />
       <e p="Server" t="Include">
         <e p="App" t="IncludeRecursive">
@@ -64,14 +68,12 @@
         </e>
       </e>
       <e p="Shared" t="Include">
+        <e p="Bin" t="ExcludeRecursive" />
         <e p="Components" t="IncludeRecursive">
           <e p="Components.csproj" t="IncludeRecursive" />
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
-              <e p="net461" t="Include">
-                <e p="Components.AssemblyInfo.cs" t="Include" />
-              </e>
-              <e p="netcoreapp2.2" t="Include">
+              <e p="net45" t="Include">
                 <e p="Components.AssemblyInfo.cs" t="Include" />
               </e>
             </e>
@@ -79,15 +81,11 @@
           <e p="ServerComponent.cs" t="Include" />
         </e>
         <e p="Generated" t="IncludeRecursive">
-          <e p="Bin" t="ExcludeRecursive" />
           <e p="Contexts.cs" t="Include" />
           <e p="Generated.csproj" t="IncludeRecursive" />
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
-              <e p="net461" t="Include">
-                <e p="Generated.AssemblyInfo.cs" t="Include" />
-              </e>
-              <e p="netcoreapp2.2" t="Include">
+              <e p="net45" t="Include">
                 <e p="Generated.AssemblyInfo.cs" t="Include" />
               </e>
             </e>
@@ -103,18 +101,19 @@
             <e p="ServerMatcher.cs" t="Include" />
           </e>
         </e>
-        <e p="ThirdParty" t="Include">
-          <e p="DesperateDevs.Analytics" t="IncludeRecursive">
+      </e>
+      <e p="ThirdParty" t="Include">
+        <e p="Bin" t="ExcludeRecursive" />
+        <e p="DesperateDevs" t="Include">
+          <e p="Analytics" t="IncludeRecursive">
             <e p="AbstractTrackingHook.cs" t="Include" />
             <e p="AsyncRequestState.cs" t="Include" />
+            <e p="Class1.cs" t="Include" />
             <e p="DesperateDevs.Analytics.csproj" t="IncludeRecursive" />
             <e p="ITrackingHook.cs" t="Include" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
-                <e p="net461" t="Include">
-                  <e p="DesperateDevs.Analytics.AssemblyInfo.cs" t="Include" />
-                </e>
-                <e p="netcoreapp2.2" t="Include">
+                <e p="net45" t="Include">
                   <e p="DesperateDevs.Analytics.AssemblyInfo.cs" t="Include" />
                 </e>
               </e>
@@ -123,11 +122,8 @@
             <e p="TrackingData.cs" t="Include" />
             <e p="UserTrackingData.cs" t="Include" />
           </e>
-          <e p="DesperateDevs.CodeGeneration" t="IncludeRecursive">
-            <e p="CodeGenerator" t="Include">
-              <e p="CodeGeneratorConfig.cs" t="Include" />
-              <e p="CodeGeneratorTrackingHook.cs" t="Include" />
-            </e>
+          <e p="Bin" t="ExcludeRecursive" />
+          <e p="CodeGeneration" t="IncludeRecursive">
             <e p="CodeGeneratorData.cs" t="Include" />
             <e p="CodeGenFile.cs" t="Include" />
             <e p="DesperateDevs.CodeGeneration.csproj" t="IncludeRecursive" />
@@ -142,16 +138,43 @@
             <e p="IPreProcessor.cs" t="Include" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
-                <e p="net461" t="Include">
-                  <e p="DesperateDevs.CodeGeneration.AssemblyInfo.cs" t="Include" />
-                </e>
-                <e p="netcoreapp2.2" t="Include">
+                <e p="net45" t="Include">
                   <e p="DesperateDevs.CodeGeneration.AssemblyInfo.cs" t="Include" />
                 </e>
               </e>
             </e>
           </e>
-          <e p="DesperateDevs.Logging" t="IncludeRecursive">
+          <e p="CodeGeneration.CodeGenerator" t="IncludeRecursive">
+            <e p="CodeGenerator.cs" t="Include" />
+            <e p="CodeGeneratorConfig.cs" t="Include" />
+            <e p="CodeGeneratorTrackingHook.cs" t="Include" />
+            <e p="CodeGeneratorUtil.cs" t="Include" />
+            <e p="DesperateDevs.CodeGeneration.CodeGenerator.csproj" t="IncludeRecursive" />
+            <e p="GeneratorProgress.cs" t="Include" />
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="net45" t="Include">
+                  <e p="DesperateDevs.CodeGeneration.CodeGenerator.AssemblyInfo.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="CodeGeneration.CodeGenerator.Unity.Editor" t="IncludeRecursive">
+            <e p="CodeGeneratorMenuItemPriorities.cs" t="Include" />
+            <e p="CodeGeneratorMenuItems.cs" t="Include" />
+            <e p="CodeGeneratorPreferencesDrawer.cs" t="Include" />
+            <e p="CodeGeneratorPreferencesWindow.cs" t="Include" />
+            <e p="DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj" t="IncludeRecursive" />
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="net45" t="Include">
+                  <e p="DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.AssemblyInfo.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="UnityCodeGenerator.cs" t="Include" />
+          </e>
+          <e p="Logging" t="IncludeRecursive">
             <e p="DesperateDevs.Logging.csproj" t="IncludeRecursive" />
             <e p="fabl.cs" t="Include" />
             <e p="FablAssertException.cs" t="Include" />
@@ -160,26 +183,21 @@
             <e p="LogLevel.cs" t="Include" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
-                <e p="net461" t="Include">
-                  <e p="DesperateDevs.Logging.AssemblyInfo.cs" t="Include" />
-                </e>
-                <e p="netcoreapp2.2" t="Include">
+                <e p="net45" t="Include">
                   <e p="DesperateDevs.Logging.AssemblyInfo.cs" t="Include" />
                 </e>
               </e>
             </e>
           </e>
-          <e p="DesperateDevs.Serialization" t="IncludeRecursive">
+          <e p="Serialization" t="IncludeRecursive">
             <e p="AbstractConfigurableConfig.cs" t="Include" />
+            <e p="ConfigurableConfigExtension.cs" t="Include" />
             <e p="DesperateDevs.Serialization.csproj" t="IncludeRecursive" />
             <e p="IConfigurable.cs" t="Include" />
             <e p="InvalidKeyPropertiesException.cs" t="Include" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
-                <e p="net461" t="Include">
-                  <e p="DesperateDevs.Serialization.AssemblyInfo.cs" t="Include" />
-                </e>
-                <e p="netcoreapp2.2" t="Include">
+                <e p="net45" t="Include">
                   <e p="DesperateDevs.Serialization.AssemblyInfo.cs" t="Include" />
                 </e>
               </e>
@@ -187,7 +205,24 @@
             <e p="Preferences.cs" t="Include" />
             <e p="Properties.cs" t="Include" />
           </e>
-          <e p="DesperateDevs.Utils" t="IncludeRecursive">
+          <e p="Unity.Editor" t="IncludeRecursive">
+            <e p="AbstractPreferencesDrawer.cs" t="Include" />
+            <e p="DesperateDevs.Unity.Editor.csproj" t="IncludeRecursive" />
+            <e p="EditorLayout.cs" t="Include" />
+            <e p="Graph.cs" t="Include" />
+            <e p="IPreferencesDrawer.cs" t="Include" />
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="net45" t="Include">
+                  <e p="DesperateDevs.Unity.Editor.AssemblyInfo.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="PreferencesWindow.cs" t="Include" />
+            <e p="ScriptingDefineSymbols.cs" t="Include" />
+            <e p="Styles.cs" t="Include" />
+          </e>
+          <e p="Utils" t="IncludeRecursive">
             <e p="AppDomainExtension.cs" t="Include" />
             <e p="AssemblyResolver.cs" t="Include" />
             <e p="AttributeInfo.cs" t="Include" />
@@ -196,10 +231,7 @@
             <e p="InterfaceTypeExtension.cs" t="Include" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
-                <e p="net461" t="Include">
-                  <e p="DesperateDevs.Utils.AssemblyInfo.cs" t="Include" />
-                </e>
-                <e p="netcoreapp2.2" t="Include">
+                <e p="net45" t="Include">
                   <e p="DesperateDevs.Utils.AssemblyInfo.cs" t="Include" />
                 </e>
               </e>
@@ -209,257 +241,281 @@
             <e p="SerializationTypeExtension.cs" t="Include" />
             <e p="StringExtension.cs" t="Include" />
           </e>
-          <e p="Entitas" t="IncludeRecursive">
-            <e p="Collector" t="Include">
-              <e p="Collector.cs" t="Include" />
-              <e p="CollectorContextExtension.cs" t="Include" />
-              <e p="CollectorException.cs" t="Include" />
-              <e p="ICollector.cs" t="Include" />
-              <e p="TriggerOnEvent.cs" t="Include" />
-              <e p="TriggerOnEventMatcherExtension.cs" t="Include" />
+        </e>
+        <e p="Entitas" t="IncludeRecursive">
+          <e p="Collector" t="Include">
+            <e p="Collector.cs" t="Include" />
+            <e p="CollectorContextExtension.cs" t="Include" />
+            <e p="CollectorException.cs" t="Include" />
+            <e p="ICollector.cs" t="Include" />
+            <e p="TriggerOnEvent.cs" t="Include" />
+            <e p="TriggerOnEventMatcherExtension.cs" t="Include" />
+          </e>
+          <e p="Context" t="Include">
+            <e p="Context.cs" t="Include" />
+            <e p="ContextEntityChanged.cs" t="Include" />
+            <e p="ContextExtension.cs" t="Include" />
+            <e p="ContextGroupChanged.cs" t="Include" />
+            <e p="Exceptions" t="Include">
+              <e p="ContextDoesNotContainEntityException.cs" t="Include" />
+              <e p="ContextEntityIndexDoesAlreadyExistException.cs" t="Include" />
+              <e p="ContextEntityIndexDoesNotExistException.cs" t="Include" />
+              <e p="ContextInfoException.cs" t="Include" />
+              <e p="ContextStillHasRetainedEntitiesException.cs" t="Include" />
+              <e p="EntityIsNotDestroyedException.cs" t="Include" />
             </e>
-            <e p="Context" t="Include">
-              <e p="Context.cs" t="Include" />
-              <e p="ContextEntityChanged.cs" t="Include" />
-              <e p="ContextExtension.cs" t="Include" />
-              <e p="ContextGroupChanged.cs" t="Include" />
-              <e p="Exceptions" t="Include">
-                <e p="ContextDoesNotContainEntityException.cs" t="Include" />
-                <e p="ContextEntityIndexDoesAlreadyExistException.cs" t="Include" />
-                <e p="ContextEntityIndexDoesNotExistException.cs" t="Include" />
-                <e p="ContextInfoException.cs" t="Include" />
-                <e p="ContextStillHasRetainedEntitiesException.cs" t="Include" />
-                <e p="EntityIsNotDestroyedException.cs" t="Include" />
+            <e p="IContext.cs" t="Include" />
+            <e p="IContexts.cs" t="Include" />
+          </e>
+          <e p="ContextInfo.cs" t="Include" />
+          <e p="Entitas.csproj" t="IncludeRecursive" />
+          <e p="EntitasException.cs" t="Include" />
+          <e p="EntitasResources.cs" t="Include" />
+          <e p="Entity" t="Include">
+            <e p="Entity.cs" t="Include" />
+            <e p="EntityComponentChanged.cs" t="Include" />
+            <e p="EntityComponentReplaced.cs" t="Include" />
+            <e p="EntityEqualityComparer.cs" t="Include" />
+            <e p="EntityEvent.cs" t="Include" />
+            <e p="Exceptions" t="Include">
+              <e p="EntityAlreadyHasComponentException.cs" t="Include" />
+              <e p="EntityDoesNotHaveComponentException.cs" t="Include" />
+              <e p="EntityIsAlreadyRetainedByOwnerException.cs" t="Include" />
+              <e p="EntityIsNotEnabledException.cs" t="Include" />
+              <e p="EntityIsNotRetainedByOwnerException.cs" t="Include" />
+            </e>
+            <e p="IAERC.cs" t="Include" />
+            <e p="IEntity.cs" t="Include" />
+            <e p="SafeAERC.cs" t="Include" />
+            <e p="UnsafeAERC.cs" t="Include" />
+          </e>
+          <e p="EntityIndex" t="Include">
+            <e p="AbstractEntityIndex.cs" t="Include" />
+            <e p="EntityIndex.cs" t="Include" />
+            <e p="EntityIndexException.cs" t="Include" />
+            <e p="IEntityIndex.cs" t="Include" />
+            <e p="PrimaryEntityIndex.cs" t="Include" />
+          </e>
+          <e p="Extensions" t="Include">
+            <e p="CollectionExtension.cs" t="Include" />
+            <e p="EntitasStringExtension.cs" t="Include" />
+            <e p="PublicMemberInfoEntityExtension.cs" t="Include" />
+            <e p="SingleEntityException.cs" t="Include" />
+          </e>
+          <e p="Group" t="Include">
+            <e p="Group.cs" t="Include" />
+            <e p="GroupChanged.cs" t="Include" />
+            <e p="GroupEvent.cs" t="Include" />
+            <e p="GroupExtension.cs" t="Include" />
+            <e p="GroupSingleEntityException.cs" t="Include" />
+            <e p="GroupUpdated.cs" t="Include" />
+            <e p="IGroup.cs" t="Include" />
+          </e>
+          <e p="IComponent.cs" t="Include" />
+          <e p="Matcher" t="Include">
+            <e p="Interfaces" t="Include">
+              <e p="IAllOfMatcher.cs" t="Include" />
+              <e p="IAnyOfMatcher.cs" t="Include" />
+              <e p="ICompoundMatcher.cs" t="Include" />
+              <e p="IMatcher.cs" t="Include" />
+              <e p="INoneOfMatcher.cs" t="Include" />
+            </e>
+            <e p="Matcher.cs" t="Include" />
+            <e p="MatcherEquals.cs" t="Include" />
+            <e p="MatcherException.cs" t="Include" />
+            <e p="MatcherStatic.cs" t="Include" />
+            <e p="MatcherToString.cs" t="Include" />
+          </e>
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="net45" t="Include">
+                <e p="Entitas.AssemblyInfo.cs" t="Include" />
               </e>
-              <e p="IContext.cs" t="Include" />
-              <e p="IContexts.cs" t="Include" />
-            </e>
-            <e p="ContextInfo.cs" t="Include" />
-            <e p="Entitas.csproj" t="IncludeRecursive" />
-            <e p="EntitasException.cs" t="Include" />
-            <e p="EntitasResources.cs" t="Include" />
-            <e p="Entity" t="Include">
-              <e p="Entity.cs" t="Include" />
-              <e p="EntityComponentChanged.cs" t="Include" />
-              <e p="EntityComponentReplaced.cs" t="Include" />
-              <e p="EntityEqualityComparer.cs" t="Include" />
-              <e p="EntityEvent.cs" t="Include" />
-              <e p="Exceptions" t="Include">
-                <e p="EntityAlreadyHasComponentException.cs" t="Include" />
-                <e p="EntityDoesNotHaveComponentException.cs" t="Include" />
-                <e p="EntityIsAlreadyRetainedByOwnerException.cs" t="Include" />
-                <e p="EntityIsNotEnabledException.cs" t="Include" />
-                <e p="EntityIsNotRetainedByOwnerException.cs" t="Include" />
-              </e>
-              <e p="IAERC.cs" t="Include" />
-              <e p="IEntity.cs" t="Include" />
-              <e p="SafeAERC.cs" t="Include" />
-              <e p="UnsafeAERC.cs" t="Include" />
-            </e>
-            <e p="EntityIndex" t="Include">
-              <e p="AbstractEntityIndex.cs" t="Include" />
-              <e p="EntityIndex.cs" t="Include" />
-              <e p="EntityIndexException.cs" t="Include" />
-              <e p="IEntityIndex.cs" t="Include" />
-              <e p="PrimaryEntityIndex.cs" t="Include" />
-            </e>
-            <e p="Extensions" t="Include">
-              <e p="CollectionExtension.cs" t="Include" />
-              <e p="EntitasStringExtension.cs" t="Include" />
-              <e p="PublicMemberInfoEntityExtension.cs" t="Include" />
-              <e p="SingleEntityException.cs" t="Include" />
-            </e>
-            <e p="Group" t="Include">
-              <e p="Group.cs" t="Include" />
-              <e p="GroupChanged.cs" t="Include" />
-              <e p="GroupEvent.cs" t="Include" />
-              <e p="GroupExtension.cs" t="Include" />
-              <e p="GroupSingleEntityException.cs" t="Include" />
-              <e p="GroupUpdated.cs" t="Include" />
-              <e p="IGroup.cs" t="Include" />
-            </e>
-            <e p="IComponent.cs" t="Include" />
-            <e p="Matcher" t="Include">
-              <e p="Interfaces" t="Include">
-                <e p="IAllOfMatcher.cs" t="Include" />
-                <e p="IAnyOfMatcher.cs" t="Include" />
-                <e p="ICompoundMatcher.cs" t="Include" />
-                <e p="IMatcher.cs" t="Include" />
-                <e p="INoneOfMatcher.cs" t="Include" />
-              </e>
-              <e p="Matcher.cs" t="Include" />
-              <e p="MatcherEquals.cs" t="Include" />
-              <e p="MatcherException.cs" t="Include" />
-              <e p="MatcherStatic.cs" t="Include" />
-              <e p="MatcherToString.cs" t="Include" />
-            </e>
-            <e p="obj" t="ExcludeRecursive">
-              <e p="Debug" t="Include">
-                <e p="net461" t="Include">
-                  <e p="Entitas.AssemblyInfo.cs" t="Include" />
-                </e>
-                <e p="netcoreapp2.2" t="Include">
-                  <e p="Entitas.AssemblyInfo.cs" t="Include" />
-                </e>
-              </e>
-            </e>
-            <e p="Systems" t="Include">
-              <e p="Interfaces" t="Include">
-                <e p="ICleanupSystem.cs" t="Include" />
-                <e p="IExecuteSystem.cs" t="Include" />
-                <e p="IInitializeSystem.cs" t="Include" />
-                <e p="IReactiveSystem.cs" t="Include" />
-                <e p="ISystem.cs" t="Include" />
-                <e p="ITearDownSystem.cs" t="Include" />
-              </e>
-              <e p="Job.cs" t="Include" />
-              <e p="JobSystem.cs" t="Include" />
-              <e p="MultiReactiveSystem.cs" t="Include" />
-              <e p="ReactiveSystem.cs" t="Include" />
-              <e p="Systems.cs" t="Include" />
-            </e>
-            <e p="Utils" t="Include">
-              <e p="AttributeInfo.cs" t="Include" />
-              <e p="ObjectPool.cs" t="Include" />
-              <e p="PublicMemberInfo.cs" t="Include" />
-              <e p="PublicMemberInfoExtension.cs" t="Include" />
             </e>
           </e>
-          <e p="Entitas.CodeGeneration.Attributes" t="IncludeRecursive">
-            <e p="CleanupAttribute.cs" t="Include" />
-            <e p="CleanupMode.cs" t="Include" />
-            <e p="ComponentNameAttribute.cs" t="Include" />
-            <e p="ContextAttribute.cs" t="Include" />
-            <e p="CustomComponentNameAttribute.cs" t="Include" />
-            <e p="CustomEntityIndexAttribute.cs" t="Include" />
-            <e p="DontGenerateAttribute.cs" t="Include" />
-            <e p="Entitas.CodeGeneration.Attributes.csproj" t="IncludeRecursive" />
-            <e p="EntityIndex" t="Include">
-              <e p="AbstractEntityIndexAttribute.cs" t="Include" />
-              <e p="EntityIndexAttribute.cs" t="Include" />
-              <e p="EntityIndexGetMethodAttribute.cs" t="Include" />
-              <e p="EntityIndexType.cs" t="Include" />
-              <e p="PrimaryEntityIndexAttribute.cs" t="Include" />
+          <e p="Systems" t="Include">
+            <e p="Interfaces" t="Include">
+              <e p="ICleanupSystem.cs" t="Include" />
+              <e p="IExecuteSystem.cs" t="Include" />
+              <e p="IInitializeSystem.cs" t="Include" />
+              <e p="IReactiveSystem.cs" t="Include" />
+              <e p="ISystem.cs" t="Include" />
+              <e p="ITearDownSystem.cs" t="Include" />
             </e>
-            <e p="EventAttribute.cs" t="Include" />
-            <e p="EventTarget.cs" t="Include" />
-            <e p="EventType.cs" t="Include" />
-            <e p="FlagPrefixAttribute.cs" t="Include" />
-            <e p="obj" t="ExcludeRecursive">
-              <e p="Debug" t="Include">
-                <e p="net461" t="Include">
-                  <e p="Entitas.CodeGeneration.Attributes.AssemblyInfo.cs" t="Include" />
-                </e>
-                <e p="netcoreapp2.2" t="Include">
-                  <e p="Entitas.CodeGeneration.Attributes.AssemblyInfo.cs" t="Include" />
-                </e>
-              </e>
-            </e>
-            <e p="PostConstructorAttribute.cs" t="Include" />
-            <e p="UniqueAttribute.cs" t="Include" />
+            <e p="Job.cs" t="Include" />
+            <e p="JobSystem.cs" t="Include" />
+            <e p="MultiReactiveSystem.cs" t="Include" />
+            <e p="ReactiveSystem.cs" t="Include" />
+            <e p="Systems.cs" t="Include" />
           </e>
-          <e p="Entitas.CodeGeneration.Plugins" t="IncludeRecursive">
-            <e p="AbstractGenerator.cs" t="Include" />
-            <e p="CodeGeneratorExtentions.cs" t="Include" />
-            <e p="Component" t="Include">
-              <e p="CodeGenerators" t="Include">
-                <e p="ComponentContextApiGenerator.cs" t="Include" />
-                <e p="ComponentEntityApiGenerator.cs" t="Include" />
-                <e p="ComponentEntityApiInterfaceGenerator.cs" t="Include" />
-                <e p="ComponentGenerator.cs" t="Include" />
-                <e p="ComponentLookupGenerator.cs" t="Include" />
-                <e p="ComponentMatcherApiGenerator.cs" t="Include" />
-              </e>
-              <e p="ComponentData.cs" t="Include" />
-              <e p="ComponentDataExtension.cs" t="Include" />
-              <e p="DataProviders" t="Include">
-                <e p="ComponentDataProvider.cs" t="Include" />
-                <e p="ComponentDataProviders" t="Include">
-                  <e p="ComponentTypeComponentDataExtension.cs" t="Include" />
-                  <e p="ComponentTypeComponentDataProvider.cs" t="Include" />
-                  <e p="ContextsComponentDataExtension.cs" t="Include" />
-                  <e p="ContextsComponentDataProvider.cs" t="Include" />
-                  <e p="EventComponentDataExtension.cs" t="Include" />
-                  <e p="EventComponentDataProvider.cs" t="Include" />
-                  <e p="FlagPrefixComponentDataExtension.cs" t="Include" />
-                  <e p="FlagPrefixComponentDataProvider.cs" t="Include" />
-                  <e p="IComponentDataProvider.cs" t="Include" />
-                  <e p="IsUniqueComponentDataExtension.cs" t="Include" />
-                  <e p="IsUniqueComponentDataProvider.cs" t="Include" />
-                  <e p="MemberDataComponentDataProvider.cs" t="Include" />
-                  <e p="MemberInfosComponentDataExtension.cs" t="Include" />
-                  <e p="ShouldGenerateComponentComponentDataExtension.cs" t="Include" />
-                  <e p="ShouldGenerateComponentComponentDataProvider.cs" t="Include" />
-                  <e p="ShouldGenerateComponentIndexComponentDataExtension.cs" t="Include" />
-                  <e p="ShouldGenerateComponentIndexComponentDataProvider.cs" t="Include" />
-                  <e p="ShouldGenerateMethodsComponentDataExtension.cs" t="Include" />
-                  <e p="ShouldGenerateMethodsComponentDataProvider.cs" t="Include" />
-                </e>
-              </e>
-            </e>
-            <e p="Configs" t="Include">
-              <e p="AssembliesConfig.cs" t="Include" />
-              <e p="ContextNamesConfig.cs" t="Include" />
-              <e p="IgnoreNamespacesConfig.cs" t="Include" />
-              <e p="TemplateConfigExtension.cs" t="Include" />
-              <e p="TemplatesConfig.cs" t="Include" />
-            </e>
-            <e p="Context" t="Include">
-              <e p="CodeGenerators" t="Include">
-                <e p="ContextAttributeGenerator.cs" t="Include" />
-                <e p="ContextGenerator.cs" t="Include" />
-                <e p="ContextMatcherGenerator.cs" t="Include" />
-                <e p="ContextsGenerator.cs" t="Include" />
-              </e>
-              <e p="ContextData.cs" t="Include" />
-              <e p="DataProviders" t="Include">
-                <e p="ContextDataExtension.cs" t="Include" />
-                <e p="ContextDataProvider.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Data" t="Include">
-              <e p="MemberData.cs" t="Include" />
-              <e p="MethodData.cs" t="Include" />
-            </e>
-            <e p="Entitas.CodeGeneration.Plugins.csproj" t="IncludeRecursive" />
-            <e p="EntitasHook.cs" t="Include" />
-            <e p="Entity" t="Include">
-              <e p="CodeGenerators" t="Include">
-                <e p="EntityGenerator.cs" t="Include" />
-              </e>
-            </e>
-            <e p="EntityIndex" t="Include">
-              <e p="CodeGenerators" t="Include">
-                <e p="EntityIndexGenerator.cs" t="Include" />
-              </e>
-              <e p="DataProviders" t="Include">
-                <e p="EntityIndexDataExtension.cs" t="Include" />
-                <e p="EntityIndexDataProvider.cs" t="Include" />
-              </e>
-              <e p="EntityIndexData.cs" t="Include" />
-            </e>
-            <e p="Events" t="Include">
-              <e p="CodeGenerators" t="Include">
-                <e p="EventEntityApiGenerator.cs" t="Include" />
-                <e p="EventListenerComponentGenerator.cs" t="Include" />
-                <e p="EventListenertInterfaceGenerator.cs" t="Include" />
-                <e p="EventSystemGenerator.cs" t="Include" />
-                <e p="EventSystemsGenerator.cs" t="Include" />
-              </e>
-              <e p="EventData.cs" t="Include" />
-            </e>
-            <e p="obj" t="ExcludeRecursive">
-              <e p="Debug" t="Include">
-                <e p="net461" t="Include">
-                  <e p="Entitas.CodeGeneration.Plugins.AssemblyInfo.cs" t="Include" />
-                </e>
-                <e p="netcoreapp2.2" t="Include">
-                  <e p="Entitas.CodeGeneration.Plugins.AssemblyInfo.cs" t="Include" />
-                </e>
-              </e>
-            </e>
-            <e p="PluginUtil.cs" t="Include" />
+          <e p="Utils" t="Include">
+            <e p="AttributeInfo.cs" t="Include" />
+            <e p="ObjectPool.cs" t="Include" />
+            <e p="PublicMemberInfo.cs" t="Include" />
+            <e p="PublicMemberInfoExtension.cs" t="Include" />
           </e>
+        </e>
+        <e p="Entitas.CodeGeneration.Attributes" t="IncludeRecursive">
+          <e p="CleanupAttribute.cs" t="Include" />
+          <e p="CleanupMode.cs" t="Include" />
+          <e p="ComponentNameAttribute.cs" t="Include" />
+          <e p="ContextAttribute.cs" t="Include" />
+          <e p="CustomComponentNameAttribute.cs" t="Include" />
+          <e p="CustomEntityIndexAttribute.cs" t="Include" />
+          <e p="DontGenerateAttribute.cs" t="Include" />
+          <e p="Entitas.CodeGeneration.Attributes.csproj" t="IncludeRecursive" />
+          <e p="EntityIndex" t="Include">
+            <e p="AbstractEntityIndexAttribute.cs" t="Include" />
+            <e p="EntityIndexAttribute.cs" t="Include" />
+            <e p="EntityIndexGetMethodAttribute.cs" t="Include" />
+            <e p="EntityIndexType.cs" t="Include" />
+            <e p="PrimaryEntityIndexAttribute.cs" t="Include" />
+          </e>
+          <e p="EventAttribute.cs" t="Include" />
+          <e p="EventTarget.cs" t="Include" />
+          <e p="EventType.cs" t="Include" />
+          <e p="FlagPrefixAttribute.cs" t="Include" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="net45" t="Include">
+                <e p="Entitas.CodeGeneration.Attributes.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="PostConstructorAttribute.cs" t="Include" />
+          <e p="UniqueAttribute.cs" t="Include" />
+        </e>
+        <e p="Entitas.CodeGeneration.Plugins" t="IncludeRecursive">
+          <e p="AbstractGenerator.cs" t="Include" />
+          <e p="CodeGeneratorExtentions.cs" t="Include" />
+          <e p="Component" t="Include">
+            <e p="CodeGenerators" t="Include">
+              <e p="ComponentContextApiGenerator.cs" t="Include" />
+              <e p="ComponentEntityApiGenerator.cs" t="Include" />
+              <e p="ComponentEntityApiInterfaceGenerator.cs" t="Include" />
+              <e p="ComponentGenerator.cs" t="Include" />
+              <e p="ComponentLookupGenerator.cs" t="Include" />
+              <e p="ComponentMatcherApiGenerator.cs" t="Include" />
+            </e>
+            <e p="ComponentData.cs" t="Include" />
+            <e p="ComponentDataExtension.cs" t="Include" />
+            <e p="DataProviders" t="Include">
+              <e p="ComponentDataProvider.cs" t="Include" />
+              <e p="ComponentDataProviders" t="Include">
+                <e p="ComponentTypeComponentDataExtension.cs" t="Include" />
+                <e p="ComponentTypeComponentDataProvider.cs" t="Include" />
+                <e p="ContextsComponentDataExtension.cs" t="Include" />
+                <e p="ContextsComponentDataProvider.cs" t="Include" />
+                <e p="EventComponentDataExtension.cs" t="Include" />
+                <e p="EventComponentDataProvider.cs" t="Include" />
+                <e p="FlagPrefixComponentDataExtension.cs" t="Include" />
+                <e p="FlagPrefixComponentDataProvider.cs" t="Include" />
+                <e p="IComponentDataProvider.cs" t="Include" />
+                <e p="IsUniqueComponentDataExtension.cs" t="Include" />
+                <e p="IsUniqueComponentDataProvider.cs" t="Include" />
+                <e p="MemberDataComponentDataProvider.cs" t="Include" />
+                <e p="MemberInfosComponentDataExtension.cs" t="Include" />
+                <e p="ShouldGenerateComponentComponentDataExtension.cs" t="Include" />
+                <e p="ShouldGenerateComponentComponentDataProvider.cs" t="Include" />
+                <e p="ShouldGenerateComponentIndexComponentDataExtension.cs" t="Include" />
+                <e p="ShouldGenerateComponentIndexComponentDataProvider.cs" t="Include" />
+                <e p="ShouldGenerateMethodsComponentDataExtension.cs" t="Include" />
+                <e p="ShouldGenerateMethodsComponentDataProvider.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Configs" t="Include">
+            <e p="AssembliesConfig.cs" t="Include" />
+            <e p="ContextNamesConfig.cs" t="Include" />
+            <e p="IgnoreNamespacesConfig.cs" t="Include" />
+            <e p="TemplateConfigExtension.cs" t="Include" />
+            <e p="TemplatesConfig.cs" t="Include" />
+          </e>
+          <e p="Context" t="Include">
+            <e p="CodeGenerators" t="Include">
+              <e p="ContextAttributeGenerator.cs" t="Include" />
+              <e p="ContextGenerator.cs" t="Include" />
+              <e p="ContextMatcherGenerator.cs" t="Include" />
+              <e p="ContextsGenerator.cs" t="Include" />
+            </e>
+            <e p="ContextData.cs" t="Include" />
+            <e p="DataProviders" t="Include">
+              <e p="ContextDataExtension.cs" t="Include" />
+              <e p="ContextDataProvider.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Data" t="Include">
+            <e p="MemberData.cs" t="Include" />
+            <e p="MethodData.cs" t="Include" />
+          </e>
+          <e p="Entitas.CodeGeneration.Plugins.csproj" t="IncludeRecursive" />
+          <e p="EntitasHook.cs" t="Include" />
+          <e p="Entity" t="Include">
+            <e p="CodeGenerators" t="Include">
+              <e p="EntityGenerator.cs" t="Include" />
+            </e>
+          </e>
+          <e p="EntityIndex" t="Include">
+            <e p="CodeGenerators" t="Include">
+              <e p="EntityIndexGenerator.cs" t="Include" />
+            </e>
+            <e p="DataProviders" t="Include">
+              <e p="EntityIndexDataExtension.cs" t="Include" />
+              <e p="EntityIndexDataProvider.cs" t="Include" />
+            </e>
+            <e p="EntityIndexData.cs" t="Include" />
+          </e>
+          <e p="Events" t="Include">
+            <e p="CodeGenerators" t="Include">
+              <e p="EventEntityApiGenerator.cs" t="Include" />
+              <e p="EventListenerComponentGenerator.cs" t="Include" />
+              <e p="EventListenertInterfaceGenerator.cs" t="Include" />
+              <e p="EventSystemGenerator.cs" t="Include" />
+              <e p="EventSystemsGenerator.cs" t="Include" />
+            </e>
+            <e p="EventData.cs" t="Include" />
+          </e>
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="net45" t="Include">
+                <e p="Entitas.CodeGeneration.Plugins.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="PluginUtil.cs" t="Include" />
+        </e>
+        <e p="Entitas.Migration" t="IncludeRecursive">
+          <e p="Entitas.Migration.csproj" t="IncludeRecursive" />
+          <e p="Migration" t="Include">
+            <e p="IMigration.cs" t="Include" />
+            <e p="MigrationFile.cs" t="Include" />
+            <e p="MigrationUtils.cs" t="Include" />
+          </e>
+          <e p="Migrations" t="Include">
+            <e p="M0180.cs" t="Include" />
+            <e p="M0190.cs" t="Include" />
+            <e p="M0220.cs" t="Include" />
+            <e p="M0260.cs" t="Include" />
+            <e p="M0300.cs" t="Include" />
+            <e p="M0320.cs" t="Include" />
+            <e p="M0360_1.cs" t="Include" />
+            <e p="M0360_2.cs" t="Include" />
+            <e p="M0410_1.cs" t="Include" />
+            <e p="M0410_2.cs" t="Include" />
+            <e p="M0410_3.cs" t="Include" />
+            <e p="M0450.cs" t="Include" />
+            <e p="M0472.cs" t="Include" />
+          </e>
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="net45" t="Include">
+                <e p="Entitas.Migration.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Protobuf" t="Include">
+          <e p="Bin" t="ExcludeRecursive" />
           <e p="Google.Protobuf" t="IncludeRecursive">
             <e p="ByteArray.cs" t="Include" />
             <e p="ByteString.cs" t="Include" />
@@ -497,10 +553,7 @@
             <e p="MessageParser.cs" t="Include" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
-                <e p="net461" t="Include">
-                  <e p="Google.Protobuf.AssemblyInfo.cs" t="Include" />
-                </e>
-                <e p="netcoreapp2.2" t="Include">
+                <e p="net45" t="Include">
                   <e p="Google.Protobuf.AssemblyInfo.cs" t="Include" />
                 </e>
               </e>
@@ -611,42 +664,36 @@
             </e>
             <e p="WireFormat.cs" t="Include" />
           </e>
-          <e p="Migration" t="IncludeRecursive">
-            <e p="Migration" t="Include">
-              <e p="IMigration.cs" t="Include" />
-              <e p="MigrationFile.cs" t="Include" />
-              <e p="MigrationUtils.cs" t="Include" />
-            </e>
-            <e p="Migration.csproj" t="IncludeRecursive" />
-            <e p="Migrations" t="Include">
-              <e p="M0180.cs" t="Include" />
-              <e p="M0190.cs" t="Include" />
-              <e p="M0220.cs" t="Include" />
-              <e p="M0260.cs" t="Include" />
-              <e p="M0300.cs" t="Include" />
-              <e p="M0320.cs" t="Include" />
-              <e p="M0360_1.cs" t="Include" />
-              <e p="M0360_2.cs" t="Include" />
-              <e p="M0410_1.cs" t="Include" />
-              <e p="M0410_2.cs" t="Include" />
-              <e p="M0410_3.cs" t="Include" />
-              <e p="M0450.cs" t="Include" />
-              <e p="M0472.cs" t="Include" />
-            </e>
-            <e p="obj" t="ExcludeRecursive">
-              <e p="Debug" t="Include">
-                <e p="net45" t="Include">
-                  <e p="Migration.AssemblyInfo.cs" t="Include" />
-                </e>
-                <e p="netcoreapp2.2" t="Include">
-                  <e p="Migration.AssemblyInfo.cs" t="Include" />
-                </e>
+        </e>
+      </e>
+      <e p="Tools" t="Include">
+        <e p="CodeGenerator" t="IncludeRecursive">
+          <e p="CodeGenerator.csproj" t="IncludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="CodeGenerator.AssemblyInfo.cs" t="Include" />
               </e>
             </e>
           </e>
+          <e p="Program.cs" t="Include" />
+        </e>
+        <e p="RDGenerationLib" t="IncludeRecursive">
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="RDGenerationLib.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="RdDllLoad.cs" t="Include" />
+          <e p="RdExtensions.cs" t="Include" />
+          <e p="RDGenerationLib.csproj" t="IncludeRecursive" />
+          <e p="RdGenerationMigration.cs" t="Include" />
+          <e p="RdPreferences.cs" t="Include" />
         </e>
       </e>
-      <e p="Tests" t="Include">
+      <e p="UnitTests" t="Include">
         <e p="Bin" t="ExcludeRecursive" />
         <e p="TestComponents" t="IncludeRecursive">
           <e p="NormalClass.cs" t="Include" />
@@ -755,57 +802,6 @@
             <e p="TestLoadDll.cs" t="Include" />
           </e>
           <e p="UintTest.cs" t="Include" />
-        </e>
-      </e>
-      <e p="Tools" t="Include">
-        <e p="CodeGenerator" t="IncludeRecursive">
-          <e p="CodeGenerator.csproj" t="IncludeRecursive" />
-          <e p="obj" t="ExcludeRecursive">
-            <e p="Debug" t="Include">
-              <e p="net461" t="Include">
-                <e p="CodeGenerator.AssemblyInfo.cs" t="Include" />
-              </e>
-              <e p="netcoreapp2.2" t="Include">
-                <e p="CodeGenerator.AssemblyInfo.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-          <e p="Program.cs" t="Include" />
-        </e>
-        <e p="DesperateDevs.Unity.Editor" t="IncludeRecursive">
-          <e p="AbstractPreferencesDrawer.cs" t="Include" />
-          <e p="Bin" t="ExcludeRecursive" />
-          <e p="DesperateDevs.Unity.Editor.csproj" t="IncludeRecursive" />
-          <e p="EditorLayout.cs" t="Include" />
-          <e p="Graph.cs" t="Include" />
-          <e p="IPreferencesDrawer.cs" t="Include" />
-          <e p="obj" t="ExcludeRecursive">
-            <e p="Debug" t="Include">
-              <e p="net461" t="Include">
-                <e p="DesperateDevs.Unity.Editor.AssemblyInfo.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-          <e p="PreferencesWindow.cs" t="Include" />
-          <e p="ScriptingDefineSymbols.cs" t="Include" />
-          <e p="Styles.cs" t="Include" />
-        </e>
-        <e p="RDGenerationLib" t="IncludeRecursive">
-          <e p="obj" t="ExcludeRecursive">
-            <e p="Debug" t="Include">
-              <e p="net461" t="Include">
-                <e p="RDGenerationLib.AssemblyInfo.cs" t="Include" />
-              </e>
-              <e p="netcoreapp2.2" t="Include">
-                <e p="RDGenerationLib.AssemblyInfo.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-          <e p="RdDllLoad.cs" t="Include" />
-          <e p="RdExtensions.cs" t="Include" />
-          <e p="RDGenerationLib.csproj" t="IncludeRecursive" />
-          <e p="RdGenerationMigration.cs" t="Include" />
-          <e p="RdPreferences.cs" t="Include" />
         </e>
       </e>
     </e>

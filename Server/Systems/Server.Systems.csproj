@@ -14,8 +14,4 @@
       <OutputPath>..\..\Bin\Server\</OutputPath>
     </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\..\Shared\Generated\Generated.csproj" />
-    </ItemGroup>
-
 </Project>

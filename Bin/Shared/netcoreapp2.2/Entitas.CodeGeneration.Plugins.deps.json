@@ -10,6 +10,7 @@
         "dependencies": {
           "DesperateDevs.Analytics": "1.0.0",
           "DesperateDevs.CodeGeneration": "1.0.0",
+          "DesperateDevs.CodeGeneration.CodeGenerator": "1.0.0",
           "DesperateDevs.Logging": "1.0.0",
           "DesperateDevs.Serialization": "1.0.0",
           "DesperateDevs.Utils": "1.0.0",
@@ -45,6 +46,14 @@
         },
         "runtime": {
           "DesperateDevs.CodeGeneration.dll": {}
+        }
+      },
+      "DesperateDevs.CodeGeneration.CodeGenerator/1.0.0": {
+        "dependencies": {
+          "DesperateDevs.CodeGeneration": "1.0.0"
+        },
+        "runtime": {
+          "DesperateDevs.CodeGeneration.CodeGenerator.dll": {}
         }
       },
       "DesperateDevs.Logging/1.0.0": {
@@ -99,6 +108,11 @@
       "sha512": ""
     },
     "DesperateDevs.CodeGeneration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DesperateDevs.CodeGeneration.CodeGenerator/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

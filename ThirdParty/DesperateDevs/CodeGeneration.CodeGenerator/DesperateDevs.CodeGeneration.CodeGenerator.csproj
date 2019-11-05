@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net45</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\Bin\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\Bin\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Analytics\DesperateDevs.Analytics.csproj" />
+    <ProjectReference Include="..\CodeGeneration\DesperateDevs.CodeGeneration.csproj" />
+    <ProjectReference Include="..\Serialization\DesperateDevs.Serialization.csproj" />
+    <ProjectReference Include="..\Utils\DesperateDevs.Utils.csproj" />
+  </ItemGroup>
+
+</Project>

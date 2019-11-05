@@ -20,18 +20,10 @@
     },
     "frameworks": {
       "netcoreapp2.2": {
-        "projectReferences": {
-          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj"
-          }
-        }
+        "projectReferences": {}
       },
       "net461": {
-        "projectReferences": {
-          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj"
-          }
-        }
+        "projectReferences": {}
       }
     },
     "warningProperties": {

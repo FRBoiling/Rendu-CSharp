@@ -245,6 +245,19 @@
           "bin/placeholder/DesperateDevs.CodeGeneration.dll": {}
         }
       },
+      "DesperateDevs.CodeGeneration.CodeGenerator/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "DesperateDevs.CodeGeneration": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.CodeGeneration.CodeGenerator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.CodeGeneration.CodeGenerator.dll": {}
+        }
+      },
       "DesperateDevs.Logging/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -329,6 +342,19 @@
         },
         "runtime": {
           "bin/placeholder/DesperateDevs.CodeGeneration.dll": {}
+        }
+      },
+      "DesperateDevs.CodeGeneration.CodeGenerator/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "dependencies": {
+          "DesperateDevs.CodeGeneration": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.CodeGeneration.CodeGenerator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.CodeGeneration.CodeGenerator.dll": {}
         }
       },
       "DesperateDevs.Logging/1.0.0": {
@@ -892,6 +918,11 @@
       "path": "../DesperateDevs.CodeGeneration/DesperateDevs.CodeGeneration.csproj",
       "msbuildProject": "../DesperateDevs.CodeGeneration/DesperateDevs.CodeGeneration.csproj"
     },
+    "DesperateDevs.CodeGeneration.CodeGenerator/1.0.0": {
+      "type": "project",
+      "path": "../DesperateDevs.CodeGeneration.CodeGenerator/DesperateDevs.CodeGeneration.CodeGenerator.csproj",
+      "msbuildProject": "../DesperateDevs.CodeGeneration.CodeGenerator/DesperateDevs.CodeGeneration.CodeGenerator.csproj"
+    },
     "DesperateDevs.Logging/1.0.0": {
       "type": "project",
       "path": "../DesperateDevs.Logging/DesperateDevs.Logging.csproj",
@@ -922,6 +953,7 @@
     ".NETCoreApp,Version=v2.2": [
       "DesperateDevs.Analytics >= 1.0.0",
       "DesperateDevs.CodeGeneration >= 1.0.0",
+      "DesperateDevs.CodeGeneration.CodeGenerator >= 1.0.0",
       "DesperateDevs.Logging >= 1.0.0",
       "DesperateDevs.Serialization >= 1.0.0",
       "DesperateDevs.Utils >= 1.0.0",
@@ -933,6 +965,7 @@
     ".NETFramework,Version=v4.6.1": [
       "DesperateDevs.Analytics >= 1.0.0",
       "DesperateDevs.CodeGeneration >= 1.0.0",
+      "DesperateDevs.CodeGeneration.CodeGenerator >= 1.0.0",
       "DesperateDevs.Logging >= 1.0.0",
       "DesperateDevs.Serialization >= 1.0.0",
       "DesperateDevs.Utils >= 1.0.0",
@@ -975,6 +1008,9 @@
             "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.Analytics\\DesperateDevs.Analytics.csproj": {
               "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.Analytics\\DesperateDevs.Analytics.csproj"
             },
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj"
+            },
             "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
               "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.CodeGeneration\\DesperateDevs.CodeGeneration.csproj"
             },
@@ -999,6 +1035,9 @@
           "projectReferences": {
             "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.Analytics\\DesperateDevs.Analytics.csproj": {
               "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.Analytics\\DesperateDevs.Analytics.csproj"
+            },
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj"
             },
             "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
               "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.CodeGeneration\\DesperateDevs.CodeGeneration.csproj"

@@ -1,6 +1,0 @@
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\net461\Entitas.CodeGeneration.Attributes.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\net461\Entitas.CodeGeneration.Attributes.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\obj\Debug\net461\Entitas.CodeGeneration.Attributes.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\obj\Debug\net461\Entitas.CodeGeneration.Attributes.AssemblyInfo.cs
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\obj\Debug\net461\Entitas.CodeGeneration.Attributes.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\obj\Debug\net461\Entitas.CodeGeneration.Attributes.pdb

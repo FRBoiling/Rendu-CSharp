@@ -1,9 +1,0 @@
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Tools\net461\CodeGenerator.exe.config
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Tools\net461\CodeGenerator.exe
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Tools\net461\CodeGenerator.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\obj\Debug\net461\CodeGenerator.csprojAssemblyReference.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\obj\Debug\net461\CodeGenerator.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\obj\Debug\net461\CodeGenerator.AssemblyInfo.cs
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\obj\Debug\net461\CodeGenerator.csproj.CopyComplete
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\obj\Debug\net461\CodeGenerator.exe
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\obj\Debug\net461\CodeGenerator.pdb

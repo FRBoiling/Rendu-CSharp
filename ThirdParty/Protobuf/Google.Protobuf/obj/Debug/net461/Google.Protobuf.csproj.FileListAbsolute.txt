@@ -1,0 +1,15 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Google.Protobuf\obj\Debug\net461\Google.Protobuf.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Google.Protobuf\obj\Debug\net461\Google.Protobuf.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Google.Protobuf\obj\Debug\net461\Google.Protobuf.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Google.Protobuf\obj\Debug\net461\Google.Protobuf.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Google.Protobuf\obj\Debug\net461\Google.Protobuf.xml
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Google.Protobuf\obj\Debug\net461\Google.Protobuf.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\net461\Google.Protobuf.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\net461\Google.Protobuf.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\net461\Google.Protobuf.xml
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net461\Google.Protobuf.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net461\Google.Protobuf.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net461\Google.Protobuf.dll
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net461\Google.Protobuf.xml
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net461\Google.Protobuf.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net461\Google.Protobuf.csprojAssemblyReference.cache
