@@ -1,0 +1,12 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\net461\NUnit3.TestAdapter.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\net461\NUnit3.TestAdapter.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\net461\nunit.engine.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\net461\nunit.engine.api.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\net461\TestProject.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\net461\TestProject.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\net461\TestProject.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\net461\TestProject.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\net461\TestProject.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\net461\TestProject.csproj.CopyComplete
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\net461\TestProject.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\net461\TestProject.pdb

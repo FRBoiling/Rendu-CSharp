@@ -18,7 +18,7 @@
     <RepositoryUrl>https://github.com/google/protobuf.git</RepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
     <IncludeSource>true</IncludeSource>
-    <TargetFrameworks>net45;netcoreapp3.0</TargetFrameworks>
+    <TargetFrameworks>net461;netcoreapp2.2</TargetFrameworks>
   </PropertyGroup>
   <!-- 
     - Override target frameworks on non-Windows to just .NET Core

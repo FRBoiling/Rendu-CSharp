@@ -14,38 +14,31 @@
           "Server.Systems.dll": {}
         }
       },
+      "Components/1.0.0": {
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0"
+        },
+        "runtime": {
+          "Components.dll": {}
+        }
+      },
+      "Entitas/1.0.0": {
+        "runtime": {
+          "Entitas.dll": {}
+        }
+      },
+      "Entitas.CodeGeneration.Attributes/1.0.0": {
+        "runtime": {
+          "Entitas.CodeGeneration.Attributes.dll": {}
+        }
+      },
       "Generated/1.0.0": {
         "dependencies": {
-          "Entitas": "1.0.0.0",
-          "Entitas.CodeGeneration.Attributes": "1.0.0.0",
-          "Components": "1.0.0.0"
+          "Components": "1.0.0"
         },
         "runtime": {
           "Generated.dll": {}
-        }
-      },
-      "Entitas.Reference/1.0.0.0": {
-        "runtime": {
-          "Entitas.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Entitas.CodeGeneration.Attributes.Reference/1.0.0.0": {
-        "runtime": {
-          "Entitas.CodeGeneration.Attributes.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Components.Reference/1.0.0.0": {
-        "runtime": {
-          "Components.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
         }
       }
     }
@@ -56,23 +49,23 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Generated/1.0.0": {
+    "Components/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Entitas.Reference/1.0.0.0": {
-      "type": "reference",
+    "Entitas/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Entitas.CodeGeneration.Attributes.Reference/1.0.0.0": {
-      "type": "reference",
+    "Entitas.CodeGeneration.Attributes/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Components.Reference/1.0.0.0": {
-      "type": "reference",
+    "Generated/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

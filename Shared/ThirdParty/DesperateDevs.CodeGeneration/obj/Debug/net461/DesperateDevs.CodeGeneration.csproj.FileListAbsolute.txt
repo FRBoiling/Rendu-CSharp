@@ -1,0 +1,8 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\net461\DesperateDevs.CodeGeneration.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\net461\DesperateDevs.CodeGeneration.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.CodeGeneration\obj\Debug\net461\DesperateDevs.CodeGeneration.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.CodeGeneration\obj\Debug\net461\DesperateDevs.CodeGeneration.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.CodeGeneration\obj\Debug\net461\DesperateDevs.CodeGeneration.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.CodeGeneration\obj\Debug\net461\DesperateDevs.CodeGeneration.csproj.CopyComplete
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.CodeGeneration\obj\Debug\net461\DesperateDevs.CodeGeneration.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.CodeGeneration\obj\Debug\net461\DesperateDevs.CodeGeneration.pdb

@@ -1,0 +1,8 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\net461\TestFixtures.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\net461\TestFixtures.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestFixtures\obj\Debug\net461\TestFixtures.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestFixtures\obj\Debug\net461\TestFixtures.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestFixtures\obj\Debug\net461\TestFixtures.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestFixtures\obj\Debug\net461\TestFixtures.csproj.CopyComplete
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestFixtures\obj\Debug\net461\TestFixtures.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestFixtures\obj\Debug\net461\TestFixtures.pdb

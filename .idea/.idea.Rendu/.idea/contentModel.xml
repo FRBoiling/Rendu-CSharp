@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\WanXin\.nuget\packages\microsoft.net.test.sdk\16.2.0\build\netcoreapp1.0" t="Include">
@@ -71,7 +71,7 @@
               <e p="net461" t="Include">
                 <e p="Components.AssemblyInfo.cs" t="Include" />
               </e>
-              <e p="netcoreapp3.0" t="Include">
+              <e p="netcoreapp2.2" t="Include">
                 <e p="Components.AssemblyInfo.cs" t="Include" />
               </e>
             </e>
@@ -87,7 +87,7 @@
               <e p="net461" t="Include">
                 <e p="Generated.AssemblyInfo.cs" t="Include" />
               </e>
-              <e p="netcoreapp3.0" t="Include">
+              <e p="netcoreapp2.2" t="Include">
                 <e p="Generated.AssemblyInfo.cs" t="Include" />
               </e>
             </e>
@@ -497,10 +497,10 @@
             <e p="MessageParser.cs" t="Include" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
-                <e p="net45" t="Include">
+                <e p="net461" t="Include">
                   <e p="Google.Protobuf.AssemblyInfo.cs" t="Include" />
                 </e>
-                <e p="netcoreapp3.0" t="Include">
+                <e p="netcoreapp2.2" t="Include">
                   <e p="Google.Protobuf.AssemblyInfo.cs" t="Include" />
                 </e>
               </e>
@@ -638,7 +638,7 @@
                 <e p="net45" t="Include">
                   <e p="Migration.AssemblyInfo.cs" t="Include" />
                 </e>
-                <e p="netcoreapp3.0" t="Include">
+                <e p="netcoreapp2.2" t="Include">
                   <e p="Migration.AssemblyInfo.cs" t="Include" />
                 </e>
               </e>
@@ -772,23 +772,6 @@
           </e>
           <e p="Program.cs" t="Include" />
         </e>
-        <e p="DesktopCodeGenerator" t="IncludeRecursive">
-          <e p="App.xaml" t="Include" />
-          <e p="App.xaml.cs" t="Include" />
-          <e p="DesktopCodeGenerator.csproj" t="IncludeRecursive" />
-          <e p="MainWindow.xaml" t="Include" />
-          <e p="MainWindow.xaml.cs" t="Include" />
-          <e p="obj" t="ExcludeRecursive">
-            <e p="Debug" t="Include">
-              <e p="net461" t="Include">
-                <e p="DesktopCodeGenerator.AssemblyInfo.cs" t="Include" />
-              </e>
-              <e p="netcoreapp2.2" t="Include">
-                <e p="DesktopCodeGenerator.AssemblyInfo.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-        </e>
         <e p="DesperateDevs.Unity.Editor" t="IncludeRecursive">
           <e p="AbstractPreferencesDrawer.cs" t="Include" />
           <e p="Bin" t="ExcludeRecursive" />
@@ -799,9 +782,6 @@
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
               <e p="net461" t="Include">
-                <e p="DesperateDevs.Unity.Editor.AssemblyInfo.cs" t="Include" />
-              </e>
-              <e p="netcoreapp3.0" t="Include">
                 <e p="DesperateDevs.Unity.Editor.AssemblyInfo.cs" t="Include" />
               </e>
             </e>

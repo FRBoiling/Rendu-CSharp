@@ -1,0 +1,7 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestComponents\bin\Debug\netcoreapp3.0\TestComponents.deps.json
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestComponents\bin\Debug\netcoreapp3.0\TestComponents.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestComponents\bin\Debug\netcoreapp3.0\TestComponents.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestComponents\bin\Debug\netcoreapp3.0\Entitas.CodeGeneration.Attributes.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestComponents\bin\Debug\netcoreapp3.0\Entitas.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestComponents\bin\Debug\netcoreapp3.0\Entitas.CodeGeneration.Attributes.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestComponents\bin\Debug\netcoreapp3.0\Entitas.pdb

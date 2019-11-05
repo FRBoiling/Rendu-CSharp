@@ -1,0 +1,8 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Tools\net461\RDGenerationLib.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Tools\net461\RDGenerationLib.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\net461\RDGenerationLib.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\net461\RDGenerationLib.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\net461\RDGenerationLib.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\net461\RDGenerationLib.csproj.CopyComplete
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\net461\RDGenerationLib.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\net461\RDGenerationLib.pdb

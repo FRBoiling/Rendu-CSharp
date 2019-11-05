@@ -1,0 +1,162 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "TestFixtures/1.0.0": {
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0",
+          "Entitas.CodeGeneration.Plugins": "1.0.0",
+          "TestComponents": "1.0.0"
+        },
+        "runtime": {
+          "TestFixtures.dll": {}
+        }
+      },
+      "System.CodeDom/4.7.0-preview2.19523.17": {
+        "runtime": {
+          "lib/netstandard2.0/System.CodeDom.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.700.19.52317"
+          }
+        }
+      },
+      "DesperateDevs.Analytics/1.0.0": {
+        "dependencies": {
+          "DesperateDevs.Logging": "1.0.0"
+        },
+        "runtime": {
+          "DesperateDevs.Analytics.dll": {}
+        }
+      },
+      "DesperateDevs.CodeGeneration/1.0.0": {
+        "dependencies": {
+          "DesperateDevs.Analytics": "1.0.0",
+          "DesperateDevs.Serialization": "1.0.0",
+          "DesperateDevs.Utils": "1.0.0"
+        },
+        "runtime": {
+          "DesperateDevs.CodeGeneration.dll": {}
+        }
+      },
+      "DesperateDevs.Logging/1.0.0": {
+        "runtime": {
+          "DesperateDevs.Logging.dll": {}
+        }
+      },
+      "DesperateDevs.Serialization/1.0.0": {
+        "dependencies": {
+          "DesperateDevs.Utils": "1.0.0"
+        },
+        "runtime": {
+          "DesperateDevs.Serialization.dll": {}
+        }
+      },
+      "DesperateDevs.Utils/1.0.0": {
+        "dependencies": {
+          "DesperateDevs.Logging": "1.0.0"
+        },
+        "runtime": {
+          "DesperateDevs.Utils.dll": {}
+        }
+      },
+      "Entitas/1.0.0": {
+        "runtime": {
+          "Entitas.dll": {}
+        }
+      },
+      "Entitas.CodeGeneration.Attributes/1.0.0": {
+        "runtime": {
+          "Entitas.CodeGeneration.Attributes.dll": {}
+        }
+      },
+      "Entitas.CodeGeneration.Plugins/1.0.0": {
+        "dependencies": {
+          "DesperateDevs.Analytics": "1.0.0",
+          "DesperateDevs.CodeGeneration": "1.0.0",
+          "DesperateDevs.Logging": "1.0.0",
+          "DesperateDevs.Serialization": "1.0.0",
+          "DesperateDevs.Utils": "1.0.0",
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0",
+          "System.CodeDom": "4.7.0-preview2.19523.17"
+        },
+        "runtime": {
+          "Entitas.CodeGeneration.Plugins.dll": {}
+        }
+      },
+      "TestComponents/1.0.0": {
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0"
+        },
+        "runtime": {
+          "TestComponents.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TestFixtures/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.CodeDom/4.7.0-preview2.19523.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RpcxhO5BxNzn5nUstmB+A1OJxbGAQBEo+yLHZOntRylsdaFUn6XBS2C3Vum6RTPsoxujWFnf5gffZc1WKPdkWA==",
+      "path": "system.codedom/4.7.0-preview2.19523.17",
+      "hashPath": "system.codedom.4.7.0-preview2.19523.17.nupkg.sha512"
+    },
+    "DesperateDevs.Analytics/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DesperateDevs.CodeGeneration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DesperateDevs.Logging/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DesperateDevs.Serialization/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DesperateDevs.Utils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entitas/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entitas.CodeGeneration.Attributes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entitas.CodeGeneration.Plugins/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TestComponents/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

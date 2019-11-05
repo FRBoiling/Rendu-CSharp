@@ -219,7 +219,11 @@
       },
       "Components/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Components.dll": {}
         },
@@ -333,7 +337,7 @@
       },
       "Migration/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
+        "framework": ".NETCoreApp,Version=v2.2",
         "compile": {
           "bin/placeholder/Migration.dll": {}
         },

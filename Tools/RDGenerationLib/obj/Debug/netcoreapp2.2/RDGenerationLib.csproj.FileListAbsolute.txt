@@ -1,0 +1,9 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Tools\netcoreapp2.2\RDGenerationLib.deps.json
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Tools\netcoreapp2.2\RDGenerationLib.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Tools\netcoreapp2.2\RDGenerationLib.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp2.2\RDGenerationLib.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp2.2\RDGenerationLib.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp2.2\RDGenerationLib.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp2.2\RDGenerationLib.csproj.CopyComplete
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp2.2\RDGenerationLib.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp2.2\RDGenerationLib.pdb
