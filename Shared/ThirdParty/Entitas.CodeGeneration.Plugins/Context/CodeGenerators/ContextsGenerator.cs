@@ -1,15 +1,11 @@
 using System.Linq;
 using DesperateDevs.CodeGeneration;
 
-namespace Entitas.CodeGeneration.Plugins {
-
-    public class ContextsGenerator : ICodeGenerator {
-
-        public string name { get { return "Contexts"; } }
-        public int priority { get { return 0; } }
-        public bool runInDryMode { get { return true; } }
-
-        const string TEMPLATE =
+namespace Entitas.CodeGeneration.Plugins
+{
+    public class ContextsGenerator : ICodeGenerator
+    {
+        private const string TEMPLATE =
             @"public partial class Contexts : Entitas.IContexts {
 
     public static Contexts sharedInstance {
@@ -51,18 +47,24 @@ ${contextAssignmentsList}
 }
 ";
 
-        const string CONTEXT_PROPERTY_TEMPLATE = @"    public ${ContextType} ${contextName} { get; set; }";
-        const string CONTEXT_LIST_TEMPLATE = @"${contextName}";
-        const string CONTEXT_ASSIGNMENT_TEMPLATE = @"        ${contextName} = new ${ContextType}();";
+        private const string CONTEXT_PROPERTY_TEMPLATE = @"    public ${ContextType} ${contextName} { get; set; }";
+        private const string CONTEXT_LIST_TEMPLATE = @"${contextName}";
+        private const string CONTEXT_ASSIGNMENT_TEMPLATE = @"        ${contextName} = new ${ContextType}();";
 
-        public CodeGenFile[] Generate(CodeGeneratorData[] data) {
+        public string name => "Contexts";
+        public int priority => 0;
+        public bool runInDryMode => true;
+
+        public CodeGenFile[] Generate(CodeGeneratorData[] data)
+        {
             var contextNames = data
                 .OfType<ContextData>()
                 .Select(d => d.GetContextName())
                 .OrderBy(contextName => contextName)
                 .ToArray();
 
-            return new[] {
+            return new[]
+            {
                 new CodeGenFile(
                     "Contexts.cs",
                     generate(contextNames),
@@ -70,7 +72,8 @@ ${contextAssignmentsList}
             };
         }
 
-        string generate(string[] contextNames) {
+        private string generate(string[] contextNames)
+        {
             var contextPropertiesList = string.Join("\n", contextNames
                 .Select(contextName => CONTEXT_PROPERTY_TEMPLATE.Replace(contextName))
                 .ToArray());

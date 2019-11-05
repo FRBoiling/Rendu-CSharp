@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <TargetFrameworks>net461;netcoreapp2.2</TargetFrameworks>
+        <LangVersion>7.3</LangVersion>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -13,13 +14,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\DesperateDevs\DesperateDevs.csproj" />
+      <ProjectReference Include="..\DesperateDevs.Analytics\DesperateDevs.Analytics.csproj" />
+      <ProjectReference Include="..\DesperateDevs.CodeGeneration\DesperateDevs.CodeGeneration.csproj" />
+      <ProjectReference Include="..\DesperateDevs.Logging\DesperateDevs.Logging.csproj" />
+      <ProjectReference Include="..\DesperateDevs.Serialization\DesperateDevs.Serialization.csproj" />
+      <ProjectReference Include="..\DesperateDevs.Utils\DesperateDevs.Utils.csproj" />
       <ProjectReference Include="..\Entitas.CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj" />
       <ProjectReference Include="..\Entitas\Entitas.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <PackageReference Include="System.CodeDom" Version="4.7.0-preview1.19504.10" />
+    <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.2'">
+      <PackageReference Include="System.CodeDom" Version="4.7.0-preview2.19523.17" />
     </ItemGroup>
 
 </Project>

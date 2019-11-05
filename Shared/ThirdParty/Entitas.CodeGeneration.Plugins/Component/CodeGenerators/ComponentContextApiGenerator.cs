@@ -2,13 +2,11 @@ using System.IO;
 using System.Linq;
 using DesperateDevs.CodeGeneration;
 
-namespace Entitas.CodeGeneration.Plugins {
-
-    public class ComponentContextApiGenerator : AbstractGenerator {
-
-        public override string name { get { return "Component (Context API)"; } }
-
-        const string STANDARD_TEMPLATE =
+namespace Entitas.CodeGeneration.Plugins
+{
+    public class ComponentContextApiGenerator : AbstractGenerator
+    {
+        private const string STANDARD_TEMPLATE =
             @"public partial class ${ContextType} {
 
     public ${EntityType} ${componentName}Entity { get { return GetGroup(${MatcherType}.${ComponentName}).GetSingleEntity(); } }
@@ -40,7 +38,7 @@ namespace Entitas.CodeGeneration.Plugins {
 }
 ";
 
-        const string FLAG_TEMPLATE =
+        private const string FLAG_TEMPLATE =
             @"public partial class ${ContextType} {
 
     public ${EntityType} ${componentName}Entity { get { return GetGroup(${MatcherType}.${ComponentName}).GetSingleEntity(); } }
@@ -61,7 +59,10 @@ namespace Entitas.CodeGeneration.Plugins {
 }
 ";
 
-        public override CodeGenFile[] Generate(CodeGeneratorData[] data) {
+        public override string name => "Component (Context API)";
+
+        public override CodeGenFile[] Generate(CodeGeneratorData[] data)
+        {
             return data
                 .OfType<ComponentData>()
                 .Where(d => d.ShouldGenerateMethods())
@@ -70,13 +71,15 @@ namespace Entitas.CodeGeneration.Plugins {
                 .ToArray();
         }
 
-        CodeGenFile[] generate(ComponentData data) {
+        private CodeGenFile[] generate(ComponentData data)
+        {
             return data.GetContextNames()
                 .Select(contextName => generate(contextName, data))
                 .ToArray();
         }
 
-        CodeGenFile generate(string contextName, ComponentData data) {
+        private CodeGenFile generate(string contextName, ComponentData data)
+        {
             var template = data.GetMemberData().Length == 0
                 ? FLAG_TEMPLATE
                 : STANDARD_TEMPLATE;

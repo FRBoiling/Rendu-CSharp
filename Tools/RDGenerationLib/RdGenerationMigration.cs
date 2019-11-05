@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using DesperateDevs.CodeGeneration;
-using Entitas;
 using Entitas.CodeGeneration.Attributes;
 using Entitas.CodeGeneration.Plugins;
 using Entitas.Migration;
@@ -12,74 +10,50 @@ namespace RDGenerationLib
 {
     public class RdComponentsMigration : IMigration
     {
-        public string version
-        {
-            get { return "0.0.1"; }
-        }
+        private const string CONTEXTS_PREFERENCES = "Entitas.CodeGeneration.Plugins.Contexts = ${contextNames}";
+        private const string COMPONENT_PREFERENCES = "Entitas.CodeGeneration.Plugins.IgnoreNamespaces = true";
 
-        public string workingDirectory
-        {
-            get { return "../../../Shared/Generated"; }
-        }
+        public string version => "0.0.1";
 
-        public string description
-        {
-            get { return "Adding comment class"; }
-        }
+        public string workingDirectory => "../../../Shared/Generated";
 
-        const string CONTEXTS_PREFERENCES = "Entitas.CodeGeneration.Plugins.Contexts = ${contextNames}";
-        const string COMPONENT_PREFERENCES = "Entitas.CodeGeneration.Plugins.IgnoreNamespaces = true";
+        public string description => "Adding comment class";
 
         public MigrationFile[] Migrate(string path)
         {
-            string dllName = "Components";
+            var dllName = "Components";
             var assembly = RdDllLoad.GetComponentsAssembly(path, dllName);
 
-            List<string> contextNameList = new List<string>();
-            List<Type> componentsList = new List<Type>();
+            var contextNameList = new List<string>();
+            var componentsList = new List<Type>();
 
-            foreach (Type type in assembly.GetTypes())
+            foreach (var type in assembly.GetTypes())
             {
-                object[] attributes = type.GetCustomAttributes(typeof(ContextAttribute), false);
+                var attributes = type.GetCustomAttributes(typeof(ContextAttribute), false);
 
                 foreach (var attribute in attributes)
                 {
-                    ContextAttribute contextAttribute = (ContextAttribute) attribute;
-                    if (!contextNameList.Contains(contextAttribute.contextName))
-                    {
-                        contextNameList.Add(contextAttribute.contextName);
-                    }
+                    var contextAttribute = (ContextAttribute) attribute;
+                    if (!contextNameList.Contains(contextAttribute.contextName)) contextNameList.Add(contextAttribute.contextName);
                 }
 
                 var iInterface = type.GetInterface("Entitas.IComponent");
-                if (iInterface == null)
-                {
-                    continue;
-                }
+                if (iInterface == null) continue;
 
-                if (!componentsList.Contains(type))
-                {
-                    componentsList.Add(type);
-                }
+                if (!componentsList.Contains(type)) componentsList.Add(type);
             }
 
             var contextNameStr = string.Empty;
             foreach (var contextName in contextNameList)
-            {
                 if (string.IsNullOrEmpty(contextNameStr))
-                {
                     contextNameStr = contextName;
-                }
                 else
-                {
                     contextNameStr = $"{contextNameStr},{contextName}";
-                }
-            }
 
             var contextsPreferencesStr = CONTEXTS_PREFERENCES.Replace("${contextNames}", contextNameStr);
             var contextsPreferences = new RdPreferences(contextsPreferencesStr);
 /////
-            List<CodeGenFile> codeGenFiles = new List<CodeGenFile>();
+            var codeGenFiles = new List<CodeGenFile>();
             var contextDataProvider = new ContextDataProvider();
             contextDataProvider.Configure(contextsPreferences);
             var contextDataArr = (ContextData[]) contextDataProvider.GetData();

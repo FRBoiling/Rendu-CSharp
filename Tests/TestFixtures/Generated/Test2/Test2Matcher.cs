@@ -1,18 +1,24 @@
-public sealed partial class Test2Matcher {
+using Entitas;
 
-    public static Entitas.IAllOfMatcher<Test2Entity> AllOf(params int[] indices) {
-        return Entitas.Matcher<Test2Entity>.AllOf(indices);
+public sealed partial class Test2Matcher
+{
+    public static IAllOfMatcher<Test2Entity> AllOf(params int[] indices)
+    {
+        return Matcher<Test2Entity>.AllOf(indices);
     }
 
-    public static Entitas.IAllOfMatcher<Test2Entity> AllOf(params Entitas.IMatcher<Test2Entity>[] matchers) {
-          return Entitas.Matcher<Test2Entity>.AllOf(matchers);
+    public static IAllOfMatcher<Test2Entity> AllOf(params IMatcher<Test2Entity>[] matchers)
+    {
+        return Matcher<Test2Entity>.AllOf(matchers);
     }
 
-    public static Entitas.IAnyOfMatcher<Test2Entity> AnyOf(params int[] indices) {
-          return Entitas.Matcher<Test2Entity>.AnyOf(indices);
+    public static IAnyOfMatcher<Test2Entity> AnyOf(params int[] indices)
+    {
+        return Matcher<Test2Entity>.AnyOf(indices);
     }
 
-    public static Entitas.IAnyOfMatcher<Test2Entity> AnyOf(params Entitas.IMatcher<Test2Entity>[] matchers) {
-          return Entitas.Matcher<Test2Entity>.AnyOf(matchers);
+    public static IAnyOfMatcher<Test2Entity> AnyOf(params IMatcher<Test2Entity>[] matchers)
+    {
+        return Matcher<Test2Entity>.AnyOf(matchers);
     }
 }

@@ -1,0 +1,3 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\netcoreapp2.2\Entitas.CodeGeneration.Plugins.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\netcoreapp2.2\Entitas.CodeGeneration.Plugins.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\netcoreapp2.2\Entitas.CodeGeneration.Plugins.AssemblyInfo.cs

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net461;netcoreapp3.0</TargetFrameworks>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Unity3D.UnityEditor" Version="2018.1.6-f1" />
+      <PackageReference Include="Unity3D.UnityEngine" Version="2018.3.5.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Shared\ThirdParty\DesperateDevs.Serialization\DesperateDevs.Serialization.csproj" />
+    </ItemGroup>
+
+</Project>

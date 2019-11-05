@@ -1,0 +1,9 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\DesperateDevs.Utils.deps.json
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\DesperateDevs.Utils.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\DesperateDevs.Utils.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Utils\obj\Debug\netcoreapp2.2\DesperateDevs.Utils.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Utils\obj\Debug\netcoreapp2.2\DesperateDevs.Utils.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Utils\obj\Debug\netcoreapp2.2\DesperateDevs.Utils.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Utils\obj\Debug\netcoreapp2.2\DesperateDevs.Utils.csproj.CopyComplete
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Utils\obj\Debug\netcoreapp2.2\DesperateDevs.Utils.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Utils\obj\Debug\netcoreapp2.2\DesperateDevs.Utils.pdb

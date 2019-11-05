@@ -1,39 +1,45 @@
-public partial class Contexts : Entitas.IContexts {
+using System;
+using System.Linq;
+using Entitas;
+using Entitas.CodeGeneration.Attributes;
 
-    public static Contexts sharedInstance {
-        get {
-            if (_sharedInstance == null) {
-                _sharedInstance = new Contexts();
-            }
+public class Contexts : IContexts
+{
+    private static Contexts _sharedInstance;
+
+    public Contexts()
+    {
+        server = new ServerContext();
+
+        var postConstructors = Enumerable.Where(
+            GetType().GetMethods(),
+            method => Attribute.IsDefined(method, typeof(PostConstructorAttribute))
+        );
+
+        foreach (var postConstructor in postConstructors) postConstructor.Invoke(this, null);
+    }
+
+    public static Contexts sharedInstance
+    {
+        get
+        {
+            if (_sharedInstance == null) _sharedInstance = new Contexts();
 
             return _sharedInstance;
         }
-        set { _sharedInstance = value; }
+        set => _sharedInstance = value;
     }
-
-    static Contexts _sharedInstance;
 
     public ServerContext server { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { server }; } }
-
-    public Contexts() {
-        server = new ServerContext();
-
-        var postConstructors = System.Linq.Enumerable.Where(
-            GetType().GetMethods(),
-            method => System.Attribute.IsDefined(method, typeof(Entitas.CodeGeneration.Attributes.PostConstructorAttribute))
-        );
-
-        foreach (var postConstructor in postConstructors) {
-            postConstructor.Invoke(this, null);
-        }
+    public IContext[] allContexts
+    {
+        get { return new IContext[] {server}; }
     }
 
-    public void Reset() {
+    public void Reset()
+    {
         var contexts = allContexts;
-        for (int i = 0; i < contexts.Length; i++) {
-            contexts[i].Reset();
-        }
+        for (var i = 0; i < contexts.Length; i++) contexts[i].Reset();
     }
 }

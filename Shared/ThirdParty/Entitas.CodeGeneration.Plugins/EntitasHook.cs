@@ -4,15 +4,17 @@ using DesperateDevs.Analytics;
 using DesperateDevs.CodeGeneration.CodeGenerator;
 using DesperateDevs.Utils;
 
-namespace Entitas.CodeGeneration.Plugins {
+namespace Entitas.CodeGeneration.Plugins
+{
+    public class EntitasHook : CodeGeneratorTrackingHook
+    {
+        protected override string name => "entitas";
 
-    public class EntitasHook : CodeGeneratorTrackingHook {
-
-        protected override string name { get { return "entitas"; } }
-
-        protected override TrackingData GetData() {
+        protected override TrackingData GetData()
+        {
             var types = AppDomain.CurrentDomain.GetAllTypes();
-            return new UserTrackingData {
+            return new UserTrackingData
+            {
                 {
                     "x", "v:" + EntitasResources.GetVersion() +
                          ",e:" + (types.Any(type => type.FullName == "DesperateDevs.CodeGeneration.CodeGenerator.CLI.Program") ? "s" : "u") +

@@ -1,4 +1,3 @@
-using System;
 using DesperateDevs.Serialization;
 using Entitas.CodeGeneration.Plugins;
 using NUnit.Framework;
@@ -8,13 +7,11 @@ namespace TestProject
 {
     public partial class Tests
     {
-        EntityIndexData[] getData<T1, T2>(Preferences preferences = null)
+        private EntityIndexData[] getData<T1, T2>(Preferences preferences = null)
         {
-            var provider = new EntityIndexDataProvider(new Type[] {typeof(T1), typeof(T2)});
+            var provider = new EntityIndexDataProvider(new[] {typeof(T1), typeof(T2)});
             if (preferences == null)
-            {
                 preferences = new TestPreferences($@"Entitas.CodeGeneration.Plugins.Contexts = Game, GameState {"\n"} Entitas.CodeGeneration.Plugins.IgnoreNamespaces = false");
-            }
 
             provider.Configure(preferences);
 

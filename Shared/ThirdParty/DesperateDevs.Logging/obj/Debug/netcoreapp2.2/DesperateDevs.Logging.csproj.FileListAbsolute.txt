@@ -1,0 +1,7 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\DesperateDevs.Logging.deps.json
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\DesperateDevs.Logging.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\DesperateDevs.Logging.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Logging\obj\Debug\netcoreapp2.2\DesperateDevs.Logging.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Logging\obj\Debug\netcoreapp2.2\DesperateDevs.Logging.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Logging\obj\Debug\netcoreapp2.2\DesperateDevs.Logging.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Logging\obj\Debug\netcoreapp2.2\DesperateDevs.Logging.pdb

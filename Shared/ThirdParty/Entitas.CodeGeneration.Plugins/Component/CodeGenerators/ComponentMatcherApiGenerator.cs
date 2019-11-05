@@ -2,13 +2,11 @@ using System.IO;
 using System.Linq;
 using DesperateDevs.CodeGeneration;
 
-namespace Entitas.CodeGeneration.Plugins {
-
-    public class ComponentMatcherApiGenerator : AbstractGenerator {
-
-        public override string name { get { return "Component (Matcher API)"; } }
-
-        const string TEMPLATE =
+namespace Entitas.CodeGeneration.Plugins
+{
+    public class ComponentMatcherApiGenerator : AbstractGenerator
+    {
+        private const string TEMPLATE =
             @"public sealed partial class ${MatcherType} {
 
     static Entitas.IMatcher<${EntityType}> _matcher${ComponentName};
@@ -27,7 +25,10 @@ namespace Entitas.CodeGeneration.Plugins {
 }
 ";
 
-        public override CodeGenFile[] Generate(CodeGeneratorData[] data) {
+        public override string name => "Component (Matcher API)";
+
+        public override CodeGenFile[] Generate(CodeGeneratorData[] data)
+        {
             return data
                 .OfType<ComponentData>()
                 .Where(d => d.ShouldGenerateIndex())
@@ -35,13 +36,15 @@ namespace Entitas.CodeGeneration.Plugins {
                 .ToArray();
         }
 
-        CodeGenFile[] generate(ComponentData data) {
+        private CodeGenFile[] generate(ComponentData data)
+        {
             return data.GetContextNames()
                 .Select(context => generate(context, data))
                 .ToArray();
         }
 
-        CodeGenFile generate(string contextName, ComponentData data) {
+        private CodeGenFile generate(string contextName, ComponentData data)
+        {
             var fileContent = TEMPLATE
                 .Replace("${componentNames}", contextName + CodeGeneratorExtentions.LOOKUP + ".componentNames")
                 .Replace(data, contextName);

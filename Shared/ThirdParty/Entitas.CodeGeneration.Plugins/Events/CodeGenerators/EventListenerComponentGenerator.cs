@@ -2,20 +2,21 @@
 using System.Linq;
 using DesperateDevs.CodeGeneration;
 
-namespace Entitas.CodeGeneration.Plugins {
-
-    public class EventListenerComponentGenerator : AbstractGenerator {
-
-        public override string name { get { return "Event (Listener Component)"; } }
-
-        const string TEMPLATE =
+namespace Entitas.CodeGeneration.Plugins
+{
+    public class EventListenerComponentGenerator : AbstractGenerator
+    {
+        private const string TEMPLATE =
             @"[Entitas.CodeGeneration.Attributes.DontGenerate(false)]
 public sealed class ${EventListenerComponent} : Entitas.IComponent {
     public System.Collections.Generic.List<I${EventListener}> value;
 }
 ";
 
-        public override CodeGenFile[] Generate(CodeGeneratorData[] data) {
+        public override string name => "Event (Listener Component)";
+
+        public override CodeGenFile[] Generate(CodeGeneratorData[] data)
+        {
             return data
                 .OfType<ComponentData>()
                 .Where(d => d.IsEvent())
@@ -23,13 +24,15 @@ public sealed class ${EventListenerComponent} : Entitas.IComponent {
                 .ToArray();
         }
 
-        CodeGenFile[] generate(ComponentData data) {
+        private CodeGenFile[] generate(ComponentData data)
+        {
             return data.GetContextNames()
                 .SelectMany(contextName => generate(contextName, data))
                 .ToArray();
         }
 
-        CodeGenFile[] generate(string contextName, ComponentData data) {
+        private CodeGenFile[] generate(string contextName, ComponentData data)
+        {
             return data.GetEventData()
                 .Select(eventData => new CodeGenFile(
                     "Events" + Path.DirectorySeparatorChar +

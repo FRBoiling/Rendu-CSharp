@@ -1,0 +1,6 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\net45\Migration.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\net45\Migration.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Migration\obj\Debug\net45\Migration.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Migration\obj\Debug\net45\Migration.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Migration\obj\Debug\net45\Migration.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Migration\obj\Debug\net45\Migration.pdb

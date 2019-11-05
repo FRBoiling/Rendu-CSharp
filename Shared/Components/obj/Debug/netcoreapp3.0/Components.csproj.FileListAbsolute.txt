@@ -1,6 +1,7 @@
 D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\Components.deps.json
 D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\Components.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\Components.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\Components\obj\Debug\netcoreapp3.0\Components.csprojAssemblyReference.cache
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\Components\obj\Debug\netcoreapp3.0\Components.AssemblyInfoInputs.cache
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\Components\obj\Debug\netcoreapp3.0\Components.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\Components\obj\Debug\netcoreapp3.0\Components.csproj.CopyComplete

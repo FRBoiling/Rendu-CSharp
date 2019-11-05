@@ -1,0 +1,130 @@
+﻿using Google.Protobuf.Collections;
+
+namespace Google.Protobuf.Reflection
+{
+    internal sealed partial class OneofOptions : IMessage<OneofOptions> {
+        private static readonly MessageParser<OneofOptions> _parser = new MessageParser<OneofOptions>(() => new OneofOptions());
+        private UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static MessageParser<OneofOptions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static MessageDescriptor Descriptor {
+            get { return global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor.MessageTypes[13]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        MessageDescriptor IMessage.Descriptor {
+            get { return Descriptor; }
+        }
+
+        internal CustomOptions CustomOptions{ get; private set; } = CustomOptions.Empty;
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public OneofOptions() {
+            OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public OneofOptions(OneofOptions other) : this() {
+            uninterpretedOption_ = other.uninterpretedOption_.Clone();
+            _unknownFields = UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public OneofOptions Clone() {
+            return new OneofOptions(this);
+        }
+
+        /// <summary>Field number for the "uninterpreted_option" field.</summary>
+        public const int UninterpretedOptionFieldNumber = 999;
+        private static readonly FieldCodec<global::Google.Protobuf.Reflection.UninterpretedOption> _repeated_uninterpretedOption_codec
+            = FieldCodec.ForMessage(7994, global::Google.Protobuf.Reflection.UninterpretedOption.Parser);
+        private readonly RepeatedField<global::Google.Protobuf.Reflection.UninterpretedOption> uninterpretedOption_ = new RepeatedField<global::Google.Protobuf.Reflection.UninterpretedOption>();
+        /// <summary>
+        /// The parser stores options it doesn't recognize here. See above.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public RepeatedField<global::Google.Protobuf.Reflection.UninterpretedOption> UninterpretedOption {
+            get { return uninterpretedOption_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+            return Equals(other as OneofOptions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(OneofOptions other) {
+            if (ReferenceEquals(other, null)) {
+                return false;
+            }
+            if (ReferenceEquals(other, this)) {
+                return true;
+            }
+            if(!uninterpretedOption_.Equals(other.uninterpretedOption_)) return false;
+            return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+            int hash = 1;
+            hash ^= uninterpretedOption_.GetHashCode();
+            if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+            }
+            return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+            return JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(CodedOutputStream output) {
+            uninterpretedOption_.WriteTo(output, _repeated_uninterpretedOption_codec);
+            if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+            }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+            int size = 0;
+            size += uninterpretedOption_.CalculateSize(_repeated_uninterpretedOption_codec);
+            if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+            }
+            return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(OneofOptions other) {
+            if (other == null) {
+                return;
+            }
+            uninterpretedOption_.Add(other.uninterpretedOption_);
+            _unknownFields = UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(CodedInputStream input) {
+            uint tag;
+            while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                    default:
+                        CustomOptions = CustomOptions.ReadOrSkipUnknownField(input);
+                        break;
+                    case 7994: {
+                        uninterpretedOption_.AddEntriesFrom(input, _repeated_uninterpretedOption_codec);
+                        break;
+                    }
+                }
+            }
+        }
+
+    }
+}

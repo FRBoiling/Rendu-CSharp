@@ -8,10 +8,9 @@ namespace Entitas
     /// and collects changed entities based on the specified groupEvent.
     public class Collector<TEntity> : ICollector<TEntity> where TEntity : class, IEntity
     {
+        private readonly GroupChanged<TEntity> _addEntityCache;
         private readonly GroupEvent[] _groupEvents;
         private readonly IGroup<TEntity>[] _groups;
-
-        private readonly GroupChanged<TEntity> _addEntityCache;
         private StringBuilder _toStringBuilder;
         private string _toStringCache;
 

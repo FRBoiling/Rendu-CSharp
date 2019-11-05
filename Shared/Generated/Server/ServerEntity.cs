@@ -1,2 +1,5 @@
-public sealed partial class ServerEntity : Entitas.Entity {
+using Entitas;
+
+public sealed class ServerEntity : Entity
+{
 }

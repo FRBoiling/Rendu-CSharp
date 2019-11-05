@@ -2,13 +2,11 @@
 using System.Linq;
 using DesperateDevs.CodeGeneration;
 
-namespace Entitas.CodeGeneration.Plugins {
-
-    public class ComponentEntityApiInterfaceGenerator : AbstractGenerator {
-
-        public override string name { get { return "Component (Entity API Interface)"; } }
-
-        const string STANDARD_TEMPLATE =
+namespace Entitas.CodeGeneration.Plugins
+{
+    public class ComponentEntityApiInterfaceGenerator : AbstractGenerator
+    {
+        private const string STANDARD_TEMPLATE =
             @"public partial interface I${ComponentName}Entity {
 
     ${ComponentType} ${validComponentName} { get; }
@@ -20,15 +18,18 @@ namespace Entitas.CodeGeneration.Plugins {
 }
 ";
 
-        const string FLAG_TEMPLATE =
+        private const string FLAG_TEMPLATE =
             @"public partial interface I${ComponentName}Entity {
     bool ${prefixedComponentName} { get; set; }
 }
 ";
 
-        const string ENTITY_INTERFACE_TEMPLATE = "public partial class ${EntityType} : I${ComponentName}Entity { }\n";
+        private const string ENTITY_INTERFACE_TEMPLATE = "public partial class ${EntityType} : I${ComponentName}Entity { }\n";
 
-        public override CodeGenFile[] Generate(CodeGeneratorData[] data) {
+        public override string name => "Component (Entity API Interface)";
+
+        public override CodeGenFile[] Generate(CodeGeneratorData[] data)
+        {
             return data
                 .OfType<ComponentData>()
                 .Where(d => d.ShouldGenerateMethods())
@@ -37,13 +38,15 @@ namespace Entitas.CodeGeneration.Plugins {
                 .ToArray();
         }
 
-        CodeGenFile[] generate(ComponentData data) {
-            return new[] { generateInterface(data) }
+        private CodeGenFile[] generate(ComponentData data)
+        {
+            return new[] {generateInterface(data)}
                 .Concat(data.GetContextNames().Select(contextName => generateEntityInterface(contextName, data)))
                 .ToArray();
         }
 
-        CodeGenFile generateInterface(ComponentData data) {
+        private CodeGenFile generateInterface(ComponentData data)
+        {
             var template = data.GetMemberData().Length == 0
                 ? FLAG_TEMPLATE
                 : STANDARD_TEMPLATE;
@@ -57,7 +60,8 @@ namespace Entitas.CodeGeneration.Plugins {
             );
         }
 
-        CodeGenFile generateEntityInterface(string contextName, ComponentData data) {
+        private CodeGenFile generateEntityInterface(string contextName, ComponentData data)
+        {
             return new CodeGenFile(
                 contextName + Path.DirectorySeparatorChar +
                 "Components" + Path.DirectorySeparatorChar +

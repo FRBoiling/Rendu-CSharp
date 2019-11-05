@@ -1,5 +1,4 @@
-﻿using System;
-using DesperateDevs.Serialization;
+﻿using DesperateDevs.Serialization;
 using Entitas.CodeGeneration.Plugins;
 
 namespace TestProject.Fixtures.Generation
@@ -13,13 +12,11 @@ namespace TestProject.Fixtures.Generation
 
         public static ComponentData[] getMultipleData<T>(Preferences preferences = null)
         {
-            var provider = new ComponentDataProvider(new Type[] {typeof(T)});
+            var provider = new ComponentDataProvider(new[] {typeof(T)});
             if (preferences == null)
-            {
                 preferences = new TestPreferences(
                     @"Entitas.CodeGeneration.Plugins.Contexts = Test1, Test2
 Entitas.CodeGeneration.Plugins.IgnoreNamespaces = true");
-            }
             provider.Configure(preferences);
 
             return (ComponentData[]) provider.GetData();

@@ -3,20 +3,20 @@ using System.Linq;
 using DesperateDevs.CodeGeneration;
 using DesperateDevs.Utils;
 
-namespace Entitas.CodeGeneration.Plugins {
-
-    public class ComponentGenerator : ICodeGenerator {
-
-        public string name { get { return "Component"; } }
-        public int priority { get { return 0; } }
-        public bool runInDryMode { get { return true; } }
-
-        const string COMPONENT_TEMPLATE =
+namespace Entitas.CodeGeneration.Plugins
+{
+    public class ComponentGenerator : ICodeGenerator
+    {
+        private const string COMPONENT_TEMPLATE =
             @"[Entitas.CodeGeneration.Attributes.DontGenerate(false)]
 public sealed class ${FullComponentName} : Entitas.IComponent {
     public ${Type} value;
 }
 ";
+
+        public string name => "Component";
+        public int priority => 0;
+        public bool runInDryMode => true;
 
         public CodeGenFile[] Generate(CodeGeneratorData[] data)
         {
@@ -27,7 +27,7 @@ public sealed class ${FullComponentName} : Entitas.IComponent {
                 .ToArray();
         }
 
-        CodeGenFile generate(ComponentData data) 
+        private CodeGenFile generate(ComponentData data)
         {
             var fullComponentName = data.GetTypeName().RemoveDots();
             return new CodeGenFile

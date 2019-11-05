@@ -3,13 +3,11 @@ using System.Linq;
 using DesperateDevs.CodeGeneration;
 using DesperateDevs.Utils;
 
-namespace Entitas.CodeGeneration.Plugins {
-
-    public class ComponentEntityApiGenerator : AbstractGenerator {
-
-        public override string name { get { return "Component (Entity API)"; } }
-
-        const string STANDARD_TEMPLATE =
+namespace Entitas.CodeGeneration.Plugins
+{
+    public class ComponentEntityApiGenerator : AbstractGenerator
+    {
+        private const string STANDARD_TEMPLATE =
             @"public partial class ${EntityType} {
 
     public ${ComponentType} ${validComponentName} { get { return (${ComponentType})GetComponent(${Index}); } }
@@ -35,7 +33,7 @@ ${memberAssignmentList}
 }
 ";
 
-        const string FLAG_TEMPLATE =
+        private const string FLAG_TEMPLATE =
             @"public partial class ${EntityType} {
 
     static readonly ${ComponentType} ${componentName}Component = new ${ComponentType}();
@@ -61,7 +59,10 @@ ${memberAssignmentList}
 }
 ";
 
-        public override CodeGenFile[] Generate(CodeGeneratorData[] data) {
+        public override string name => "Component (Entity API)";
+
+        public override CodeGenFile[] Generate(CodeGeneratorData[] data)
+        {
             return data
                 .OfType<ComponentData>()
                 .Where(d => d.ShouldGenerateMethods())
@@ -69,13 +70,15 @@ ${memberAssignmentList}
                 .ToArray();
         }
 
-        CodeGenFile[] generate(ComponentData data) {
+        private CodeGenFile[] generate(ComponentData data)
+        {
             return data.GetContextNames()
                 .Select(contextName => generate(contextName, data))
                 .ToArray();
         }
 
-        CodeGenFile generate(string contextName, ComponentData data) {
+        private CodeGenFile generate(string contextName, ComponentData data)
+        {
             var template = data.GetMemberData().Length == 0
                 ? FLAG_TEMPLATE
                 : STANDARD_TEMPLATE;
@@ -93,7 +96,8 @@ ${memberAssignmentList}
             );
         }
 
-        string getMemberAssignmentList(MemberData[] memberData) {
+        private string getMemberAssignmentList(MemberData[] memberData)
+        {
             return string.Join("\n", memberData
                 .Select(info => "        component." + info.name + " = new" + info.name.UppercaseFirst() + ";")
                 .ToArray()

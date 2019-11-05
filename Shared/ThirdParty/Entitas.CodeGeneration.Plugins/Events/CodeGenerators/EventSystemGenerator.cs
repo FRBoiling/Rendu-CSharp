@@ -3,13 +3,11 @@ using System.Linq;
 using DesperateDevs.CodeGeneration;
 using Entitas.CodeGeneration.Attributes;
 
-namespace Entitas.CodeGeneration.Plugins {
-
-    public class EventSystemGenerator : AbstractGenerator {
-
-        public override string name { get { return "Event (System)"; } }
-
-        const string ANY_TARGET_TEMPLATE =
+namespace Entitas.CodeGeneration.Plugins
+{
+    public class EventSystemGenerator : AbstractGenerator
+    {
+        private const string ANY_TARGET_TEMPLATE =
             @"public sealed class ${Event}EventSystem : Entitas.ReactiveSystem<${EntityType}> {
 
     readonly Entitas.IGroup<${EntityType}> _listeners;
@@ -47,7 +45,7 @@ namespace Entitas.CodeGeneration.Plugins {
 }
 ";
 
-        const string SELF_TARGET_TEMPLATE =
+        private const string SELF_TARGET_TEMPLATE =
             @"public sealed class ${Event}EventSystem : Entitas.ReactiveSystem<${EntityType}> {
 
     readonly System.Collections.Generic.List<I${EventListener}> _listenerBuffer;
@@ -79,7 +77,10 @@ namespace Entitas.CodeGeneration.Plugins {
 }
 ";
 
-        public override CodeGenFile[] Generate(CodeGeneratorData[] data) {
+        public override string name => "Event (System)";
+
+        public override CodeGenFile[] Generate(CodeGeneratorData[] data)
+        {
             return data
                 .OfType<ComponentData>()
                 .Where(d => d.IsEvent())
@@ -87,15 +88,18 @@ namespace Entitas.CodeGeneration.Plugins {
                 .ToArray();
         }
 
-        CodeGenFile[] generate(ComponentData data) {
+        private CodeGenFile[] generate(ComponentData data)
+        {
             return data.GetContextNames()
                 .SelectMany(contextName => generate(contextName, data))
                 .ToArray();
         }
 
-        CodeGenFile[] generate(string contextName, ComponentData data) {
+        private CodeGenFile[] generate(string contextName, ComponentData data)
+        {
             return data.GetEventData()
-                .Select(eventData => {
+                .Select(eventData =>
+                {
                     var methodArgs = data.GetEventMethodArgs(eventData, ", " + (data.GetMemberData().Length == 0
                                                                             ? data.PrefixedComponentName()
                                                                             : getMethodArgs(data.GetMemberData())));
@@ -104,7 +108,8 @@ namespace Entitas.CodeGeneration.Plugins {
                         ? string.Empty
                         : "var component = e." + data.ComponentNameValidLowercaseFirst() + ";";
 
-                    if (eventData.eventType == EventType.Removed) {
+                    if (eventData.eventType == EventType.Removed)
+                    {
                         methodArgs = string.Empty;
                         cachedAccess = string.Empty;
                     }
@@ -130,10 +135,12 @@ namespace Entitas.CodeGeneration.Plugins {
                 }).ToArray();
         }
 
-        string getFilter(ComponentData data, string contextName, EventData eventData) {
+        private string getFilter(ComponentData data, string contextName, EventData eventData)
+        {
             var filter = string.Empty;
-            if (data.GetMemberData().Length == 0) {
-                switch (eventData.eventType) {
+            if (data.GetMemberData().Length == 0)
+                switch (eventData.eventType)
+                {
                     case EventType.Added:
                         filter = "entity." + data.PrefixedComponentName();
                         break;
@@ -141,8 +148,9 @@ namespace Entitas.CodeGeneration.Plugins {
                         filter = "!entity." + data.PrefixedComponentName();
                         break;
                 }
-            } else {
-                switch (eventData.eventType) {
+            else
+                switch (eventData.eventType)
+                {
                     case EventType.Added:
                         filter = "entity.has" + data.ComponentName();
                         break;
@@ -150,16 +158,14 @@ namespace Entitas.CodeGeneration.Plugins {
                         filter = "!entity.has" + data.ComponentName();
                         break;
                 }
-            }
 
-            if (eventData.eventTarget == EventTarget.Self) {
-                filter += " && entity.has" + data.EventListener(contextName, eventData);
-            }
+            if (eventData.eventTarget == EventTarget.Self) filter += " && entity.has" + data.EventListener(contextName, eventData);
 
             return filter;
         }
 
-        string getMethodArgs(MemberData[] memberData) {
+        private string getMethodArgs(MemberData[] memberData)
+        {
             return string.Join(", ", memberData
                 .Select(info => "component." + info.name)
                 .ToArray()

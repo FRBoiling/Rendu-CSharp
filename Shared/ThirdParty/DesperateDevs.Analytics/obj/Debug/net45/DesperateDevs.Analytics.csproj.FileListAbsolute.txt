@@ -1,0 +1,8 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\net45\DesperateDevs.Analytics.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\net45\DesperateDevs.Analytics.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Analytics\obj\Debug\net45\DesperateDevs.Analytics.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Analytics\obj\Debug\net45\DesperateDevs.Analytics.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Analytics\obj\Debug\net45\DesperateDevs.Analytics.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Analytics\obj\Debug\net45\DesperateDevs.Analytics.csproj.CopyComplete
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Analytics\obj\Debug\net45\DesperateDevs.Analytics.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs.Analytics\obj\Debug\net45\DesperateDevs.Analytics.pdb

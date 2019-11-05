@@ -1,2 +1,5 @@
-public sealed partial class Test1Entity : Entitas.Entity {
+using Entitas;
+
+public sealed class Test1Entity : Entity
+{
 }

@@ -1,11 +1,16 @@
-public sealed partial class Test1Matcher {
+using Entitas;
 
-    static Entitas.IMatcher<Test1Entity> _matcherTestNormal;
+public sealed partial class Test1Matcher
+{
+    private static IMatcher<Test1Entity> _matcherTestNormal;
 
-    public static Entitas.IMatcher<Test1Entity> TestNormal {
-        get {
-            if (_matcherTestNormal == null) {
-                var matcher = (Entitas.Matcher<Test1Entity>)Entitas.Matcher<Test1Entity>.AllOf(Test1ComponentsLookup.TestNormal);
+    public static IMatcher<Test1Entity> TestNormal
+    {
+        get
+        {
+            if (_matcherTestNormal == null)
+            {
+                var matcher = (Matcher<Test1Entity>) Matcher<Test1Entity>.AllOf(Test1ComponentsLookup.TestNormal);
                 matcher.componentNames = Test1ComponentsLookup.componentNames;
                 _matcherTestNormal = matcher;
             }

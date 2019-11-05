@@ -4,43 +4,37 @@ using Entitas.CodeGeneration.Attributes;
 namespace TestProject.Fixtures
 {
 //    [Game, Input]
-    public class TestEntityIndexComponent : IComponent {
-
-        [EntityIndex]
-        public string value;
+    public class TestEntityIndexComponent : IComponent
+    {
+        [EntityIndex] public string value;
     }
-    
-    [Context("Test1"),Context("Test2")]
-    public class TestMultipleEntityIndicesComponent : IComponent {
 
-        [EntityIndex]
-        public string value;
+    [Context("Test1")]
+    [Context("Test2")]
+    public class TestMultipleEntityIndicesComponent : IComponent
+    {
+        [EntityIndex] public string value;
 
-        [EntityIndex]
-        public string value2;
+        [EntityIndex] public string value2;
     }
-    
-    public class TestPrimaryEntityIndexComponent : IComponent {
 
-        [PrimaryEntityIndex]
-        public string value;
+    public class TestPrimaryEntityIndexComponent : IComponent
+    {
+        [PrimaryEntityIndex] public string value;
     }
-    
-    public class TestMultiplePrimaryEntityIndicesComponent : IComponent {
 
-        [PrimaryEntityIndex]
-        public string value;
+    public class TestMultiplePrimaryEntityIndicesComponent : IComponent
+    {
+        [PrimaryEntityIndex] public string value;
 
-        [PrimaryEntityIndex]
-        public string value2;
+        [PrimaryEntityIndex] public string value2;
     }
-    
-    public abstract class TestAbstractEntityIndexComponent {
 
-        [EntityIndex]
-        public string value;
+    public abstract class TestAbstractEntityIndexComponent
+    {
+        [EntityIndex] public string value;
     }
-    
+
 //    [CustomEntityIndex(typeof(TestContext))]
 //    public class TestCustomEntityIndex : EntityIndex<TestEntity, IntVector2> {
 //
@@ -76,5 +70,4 @@ namespace TestProject.Fixtures
 //            return GetEntities(position);
 //        }
 //    }
-    
 }

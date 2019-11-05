@@ -1,0 +1,9 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\netcoreapp2.2\Server.App.deps.json
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\netcoreapp2.2\Server.App.runtimeconfig.json
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\netcoreapp2.2\Server.App.runtimeconfig.dev.json
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\netcoreapp2.2\Server.App.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\netcoreapp2.2\Server.App.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\netcoreapp2.2\Server.App.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\netcoreapp2.2\Server.App.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\netcoreapp2.2\Server.App.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\netcoreapp2.2\Server.App.pdb

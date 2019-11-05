@@ -1,5 +1,8 @@
-public sealed class Test1Attribute : Entitas.CodeGeneration.Attributes.ContextAttribute {
+using Entitas.CodeGeneration.Attributes;
 
-    public Test1Attribute() : base("Test1") {
+public sealed class Test1Attribute : ContextAttribute
+{
+    public Test1Attribute() : base("Test1")
+    {
     }
 }

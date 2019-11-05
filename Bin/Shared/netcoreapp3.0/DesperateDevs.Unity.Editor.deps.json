@@ -1,0 +1,97 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "DesperateDevs.Unity.Editor/1.0.0": {
+        "dependencies": {
+          "DesperateDevs.Serialization": "1.0.0",
+          "Unity3D.UnityEditor": "2018.1.6-f1",
+          "Unity3D.UnityEngine": "2018.3.5.1"
+        },
+        "runtime": {
+          "DesperateDevs.Unity.Editor.dll": {}
+        }
+      },
+      "Unity3D.UnityEditor/2018.1.6-f1": {
+        "dependencies": {
+          "Unity3D.UnityEngine": "2018.3.5.1"
+        },
+        "runtime": {
+          "lib/UnityEditor.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Unity3D.UnityEngine/2018.3.5.1": {
+        "runtime": {
+          "lib/UnityEngine.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "DesperateDevs.Logging/1.0.0": {
+        "runtime": {
+          "DesperateDevs.Logging.dll": {}
+        }
+      },
+      "DesperateDevs.Serialization/1.0.0": {
+        "dependencies": {
+          "DesperateDevs.Utils": "1.0.0"
+        },
+        "runtime": {
+          "DesperateDevs.Serialization.dll": {}
+        }
+      },
+      "DesperateDevs.Utils/1.0.0": {
+        "dependencies": {
+          "DesperateDevs.Logging": "1.0.0"
+        },
+        "runtime": {
+          "DesperateDevs.Utils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DesperateDevs.Unity.Editor/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Unity3D.UnityEditor/2018.1.6-f1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aYixowgRUOu9WG8QSJHi8ECeOCGIArJEeTp0NdumuRiR7YS0g81j27HgnxyDMDTVlA6FMLZDzUEJT0cBAWI8Zw==",
+      "path": "unity3d.unityeditor/2018.1.6-f1",
+      "hashPath": "unity3d.unityeditor.2018.1.6-f1.nupkg.sha512"
+    },
+    "Unity3D.UnityEngine/2018.3.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-63ZCYwGdoBCmsJCUI6dodSY+1TrU/7lTDmfF+492Z6nn8my30E3sb5HXLe7qm7MLvBIcKz9TCy114yu5VGycKA==",
+      "path": "unity3d.unityengine/2018.3.5.1",
+      "hashPath": "unity3d.unityengine.2018.3.5.1.nupkg.sha512"
+    },
+    "DesperateDevs.Logging/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DesperateDevs.Serialization/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DesperateDevs.Utils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

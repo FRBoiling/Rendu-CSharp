@@ -1,5 +1,8 @@
-public sealed class ServerAttribute : Entitas.CodeGeneration.Attributes.ContextAttribute {
+using Entitas.CodeGeneration.Attributes;
 
-    public ServerAttribute() : base("Server") {
+public sealed class ServerAttribute : ContextAttribute
+{
+    public ServerAttribute() : base("Server")
+    {
     }
 }

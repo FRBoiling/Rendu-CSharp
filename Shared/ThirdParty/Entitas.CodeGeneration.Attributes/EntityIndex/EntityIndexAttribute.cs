@@ -1,11 +1,12 @@
 ﻿using System;
 
-namespace Entitas.CodeGeneration.Attributes {
-
+namespace Entitas.CodeGeneration.Attributes
+{
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property | AttributeTargets.Class)]
-    public class EntityIndexAttribute : AbstractEntityIndexAttribute {
-
-        public EntityIndexAttribute() : base(EntityIndexType.EntityIndex) {
+    public class EntityIndexAttribute : AbstractEntityIndexAttribute
+    {
+        public EntityIndexAttribute() : base(EntityIndexType.EntityIndex)
+        {
         }
     }
 }

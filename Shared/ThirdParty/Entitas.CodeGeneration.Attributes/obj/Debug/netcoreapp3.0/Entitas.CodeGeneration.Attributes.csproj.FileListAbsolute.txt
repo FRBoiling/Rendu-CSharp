@@ -1,10 +1,3 @@
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\bin\Debug\netcoreapp3.0\Entitas.CodeGeneration.Attributes.deps.json
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\bin\Debug\netcoreapp3.0\Entitas.CodeGeneration.Attributes.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\bin\Debug\netcoreapp3.0\Entitas.CodeGeneration.Attributes.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\Entitas.CodeGeneration.Attributes.deps.json
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\Entitas.CodeGeneration.Attributes.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\Entitas.CodeGeneration.Attributes.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\obj\Debug\netcoreapp3.0\Entitas.CodeGeneration.Attributes.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\obj\Debug\netcoreapp3.0\Entitas.CodeGeneration.Attributes.AssemblyInfo.cs
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\obj\Debug\netcoreapp3.0\Entitas.CodeGeneration.Attributes.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\obj\Debug\netcoreapp3.0\Entitas.CodeGeneration.Attributes.pdb

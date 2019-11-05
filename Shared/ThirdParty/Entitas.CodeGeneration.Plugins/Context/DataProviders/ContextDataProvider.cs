@@ -3,42 +3,32 @@ using System.Linq;
 using DesperateDevs.CodeGeneration;
 using DesperateDevs.Serialization;
 
-namespace Entitas.CodeGeneration.Plugins {
+namespace Entitas.CodeGeneration.Plugins
+{
+    public class ContextDataProvider : IDataProvider, IConfigurable
+    {
+        private readonly ContextNamesConfig _contextNamesConfig = new ContextNamesConfig();
 
-    public class ContextDataProvider : IDataProvider, IConfigurable {
+        public Dictionary<string, string> defaultProperties => _contextNamesConfig.defaultProperties;
 
-        public string name { get { return "Context"; } }
-        public int priority { get { return 0; } }
-        public bool runInDryMode { get { return true; } }
-
-        public Dictionary<string, string> defaultProperties { get { return _contextNamesConfig.defaultProperties; } }
-
-        readonly ContextNamesConfig _contextNamesConfig = new ContextNamesConfig();
-
-        public void Configure(Preferences preferences) {
+        public void Configure(Preferences preferences)
+        {
             _contextNamesConfig.Configure(preferences);
         }
 
-        public CodeGeneratorData[] GetData() {
+        public string name => "Context";
+        public int priority => 0;
+        public bool runInDryMode => true;
+
+        public CodeGeneratorData[] GetData()
+        {
             return _contextNamesConfig.contextNames
-                .Select(contextName => {
+                .Select(contextName =>
+                {
                     var data = new ContextData();
                     data.SetContextName(contextName);
                     return data;
                 }).ToArray();
-        }
-    }
-
-    public static class ContextDataExtension {
-
-        public const string CONTEXT_NAME = "Context.Name";
-
-        public static string GetContextName(this ContextData data) {
-            return (string)data[CONTEXT_NAME];
-        }
-
-        public static void SetContextName(this ContextData data, string contextName) {
-            data[CONTEXT_NAME] = contextName;
         }
     }
 }

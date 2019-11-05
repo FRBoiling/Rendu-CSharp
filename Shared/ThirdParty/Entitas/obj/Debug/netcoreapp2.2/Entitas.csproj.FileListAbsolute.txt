@@ -1,0 +1,7 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\Entitas.deps.json
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\Entitas.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\Entitas.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas\obj\Debug\netcoreapp2.2\Entitas.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas\obj\Debug\netcoreapp2.2\Entitas.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas\obj\Debug\netcoreapp2.2\Entitas.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas\obj\Debug\netcoreapp2.2\Entitas.pdb

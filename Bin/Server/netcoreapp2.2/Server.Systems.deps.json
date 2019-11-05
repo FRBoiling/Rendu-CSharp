@@ -1,0 +1,80 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "Server.Systems/1.0.0": {
+        "dependencies": {
+          "Generated": "1.0.0"
+        },
+        "runtime": {
+          "Server.Systems.dll": {}
+        }
+      },
+      "Generated/1.0.0": {
+        "dependencies": {
+          "Entitas": "1.0.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0.0",
+          "Components": "1.0.0.0"
+        },
+        "runtime": {
+          "Generated.dll": {}
+        }
+      },
+      "Entitas.Reference/1.0.0.0": {
+        "runtime": {
+          "Entitas.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Entitas.CodeGeneration.Attributes.Reference/1.0.0.0": {
+        "runtime": {
+          "Entitas.CodeGeneration.Attributes.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Components.Reference/1.0.0.0": {
+        "runtime": {
+          "Components.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Server.Systems/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Generated/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entitas.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entitas.CodeGeneration.Attributes.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Components.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

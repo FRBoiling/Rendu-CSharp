@@ -8,20 +8,11 @@ namespace TestProject.Fixtures
 {
     public class TestContextsMigration : IMigration
     {
-        public string version
-        {
-            get { return "0.0.1"; }
-        }
+        public string version => "0.0.1";
 
-        public string workingDirectory
-        {
-            get { return "where generated files are located"; }
-        }
+        public string workingDirectory => "where generated files are located";
 
-        public string description
-        {
-            get { return "Adding contexts class"; }
-        }
+        public string description => "Adding contexts class";
 
         public MigrationFile[] Migrate(string path)
         {
@@ -31,7 +22,7 @@ namespace TestProject.Fixtures
 
             var dataArr = (ContextData[]) provider.GetData();
 
-            List<CodeGenFile> codeGenFiles = new List<CodeGenFile>();
+            var codeGenFiles = new List<CodeGenFile>();
 
             var contextsGenerator = new ContextsGenerator();
             var contextsFile = contextsGenerator.Generate(dataArr);
@@ -62,7 +53,7 @@ namespace TestProject.Fixtures
             foreach (var file in codeGenFiles)
             {
                 var fileFullName = Path.Combine(path, file.fileName);
-             
+
                 var migrationFile = new MigrationFile(fileFullName, file.fileContent);
                 migratedFiles.Add(migrationFile);
             }

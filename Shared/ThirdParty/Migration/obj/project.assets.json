@@ -1,11 +1,13 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {}
+    ".NETCoreApp,Version=v3.0": {},
+    ".NETFramework,Version=v4.5": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": []
+    ".NETCoreApp,Version=v3.0": [],
+    ".NETFramework,Version=v4.5": []
   },
   "packageFolders": {
     "C:\\Users\\WanXin\\.nuget\\packages\\": {},
@@ -20,6 +22,7 @@
       "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
       "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Migration\\obj\\",
       "projectStyle": "PackageReference",
+      "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
@@ -28,6 +31,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
+        "net45",
         "netcoreapp3.0"
       ],
       "sources": {
@@ -36,6 +40,9 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "projectReferences": {}
+        },
+        "net45": {
           "projectReferences": {}
         }
       },
@@ -57,7 +64,8 @@
         ],
         "assetTargetFallback": true,
         "warn": true
-      }
+      },
+      "net45": {}
     }
   }
 }

@@ -2,15 +2,11 @@
 using System.Linq;
 using DesperateDevs.CodeGeneration;
 
-namespace Entitas.CodeGeneration.Plugins {
-
-    public class ContextMatcherGenerator : ICodeGenerator {
-
-        public string name { get { return "Context (Matcher API)"; } }
-        public int priority { get { return 0; } }
-        public bool runInDryMode { get { return true; } }
-
-        const string TEMPLATE =
+namespace Entitas.CodeGeneration.Plugins
+{
+    public class ContextMatcherGenerator : ICodeGenerator
+    {
+        private const string TEMPLATE =
             @"public sealed partial class ${MatcherType} {
 
     public static Entitas.IAllOfMatcher<${EntityType}> AllOf(params int[] indices) {
@@ -31,14 +27,20 @@ namespace Entitas.CodeGeneration.Plugins {
 }
 ";
 
-        public CodeGenFile[] Generate(CodeGeneratorData[] data) {
+        public string name => "Context (Matcher API)";
+        public int priority => 0;
+        public bool runInDryMode => true;
+
+        public CodeGenFile[] Generate(CodeGeneratorData[] data)
+        {
             return data
                 .OfType<ContextData>()
                 .Select(generate)
                 .ToArray();
         }
 
-        CodeGenFile generate(ContextData data) {
+        private CodeGenFile generate(ContextData data)
+        {
             var contextName = data.GetContextName();
             return new CodeGenFile(
                 contextName + Path.DirectorySeparatorChar +

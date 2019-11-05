@@ -1,20 +1,22 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace Entitas.Migration {
+namespace Entitas.Migration
+{
+    public class M0320 : IMigration
+    {
+        public string version => "0.32.0";
 
-    public class M0320 : IMigration {
+        public string workingDirectory => "project root";
 
-        public string version { get { return "0.32.0"; } }
+        public string description => "Updates Entitas.properties to use renamed keys and updates calls to pool.CreateSystem<T>()";
 
-        public string workingDirectory { get { return "project root"; } }
-
-        public string description { get { return "Updates Entitas.properties to use renamed keys and updates calls to pool.CreateSystem<T>()"; } }
-
-        public MigrationFile[] Migrate(string path) {
+        public MigrationFile[] Migrate(string path)
+        {
             var properties = MigrationUtils.GetFiles(path, "Entitas.properties");
 
-            for (int i = 0; i < properties.Length; i++) {
+            for (var i = 0; i < properties.Length; i++)
+            {
                 var file = properties[i];
 
                 //Entitas.Unity.VisualDebugging.DefaultInstanceCreatorFolderPath = Assets/Editor/DefaultInstanceCreator/
@@ -31,7 +33,8 @@ namespace Entitas.Migration {
                 .Where(file => Regex.IsMatch(file.fileContent, pattern))
                 .ToArray();
 
-            for (int i = 0; i < sources.Length; i++) {
+            for (var i = 0; i < sources.Length; i++)
+            {
                 var file = sources[i];
 
                 file.fileContent = Regex.Replace(

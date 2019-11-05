@@ -1,22 +1,24 @@
-public sealed partial class ServerContext : Entitas.Context<ServerEntity> {
+using Entitas;
 
+public sealed class ServerContext : Context<ServerEntity>
+{
     public ServerContext()
         : base(
             ServerComponentsLookup.TotalComponents,
             0,
-            new Entitas.ContextInfo(
+            new ContextInfo(
                 "Server",
                 ServerComponentsLookup.componentNames,
                 ServerComponentsLookup.componentTypes
             ),
-            (entity) =>
-
+            entity =>
 #if (ENTITAS_FAST_AND_UNSAFE)
                 new Entitas.UnsafeAERC(),
 #else
-                new Entitas.SafeAERC(entity),
+                new SafeAERC(entity),
 #endif
             () => new ServerEntity()
-        ) {
+        )
+    {
     }
 }

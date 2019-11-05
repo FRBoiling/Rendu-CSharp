@@ -5,7 +5,6 @@
     <AssemblyTitle>Google Protocol Buffers</AssemblyTitle>
     <VersionPrefix>3.6.0</VersionPrefix>
     <Authors>Google Inc.</Authors>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
     <!--<TargetFrameworks>net35</TargetFrameworks>-->
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyOriginatorKeyFile>Google.Protobuf.snk</AssemblyOriginatorKeyFile>
@@ -19,6 +18,7 @@
     <RepositoryUrl>https://github.com/google/protobuf.git</RepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
     <IncludeSource>true</IncludeSource>
+    <TargetFrameworks>net45;netcoreapp3.0</TargetFrameworks>
   </PropertyGroup>
   <!-- 
     - Override target frameworks on non-Windows to just .NET Core

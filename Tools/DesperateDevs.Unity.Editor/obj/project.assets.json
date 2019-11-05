@@ -1,0 +1,299 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Unity3D.UnityEditor/2018.1.6-f1": {
+        "type": "package",
+        "dependencies": {
+          "Unity3D.UnityEngine": "[2018.1.6-f1]"
+        },
+        "compile": {
+          "lib/UnityEditor.dll": {}
+        },
+        "runtime": {
+          "lib/UnityEditor.dll": {}
+        }
+      },
+      "Unity3D.UnityEngine/2018.3.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/UnityEngine.dll": {}
+        },
+        "runtime": {
+          "lib/UnityEngine.dll": {}
+        }
+      },
+      "DesperateDevs.Logging/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/DesperateDevs.Logging.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Logging.dll": {}
+        }
+      },
+      "DesperateDevs.Serialization/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "DesperateDevs.Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.Serialization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Serialization.dll": {}
+        }
+      },
+      "DesperateDevs.Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "DesperateDevs.Logging": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Utils.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1": {
+      "Unity3D.UnityEditor/2018.1.6-f1": {
+        "type": "package",
+        "dependencies": {
+          "Unity3D.UnityEngine": "[2018.1.6-f1]"
+        },
+        "compile": {
+          "lib/UnityEditor.dll": {}
+        },
+        "runtime": {
+          "lib/UnityEditor.dll": {}
+        }
+      },
+      "Unity3D.UnityEngine/2018.3.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/UnityEngine.dll": {}
+        },
+        "runtime": {
+          "lib/UnityEngine.dll": {}
+        }
+      },
+      "DesperateDevs.Logging/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "compile": {
+          "bin/placeholder/DesperateDevs.Logging.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Logging.dll": {}
+        }
+      },
+      "DesperateDevs.Serialization/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "dependencies": {
+          "DesperateDevs.Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.Serialization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Serialization.dll": {}
+        }
+      },
+      "DesperateDevs.Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "dependencies": {
+          "DesperateDevs.Logging": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Utils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Unity3D.UnityEditor/2018.1.6-f1": {
+      "sha512": "aYixowgRUOu9WG8QSJHi8ECeOCGIArJEeTp0NdumuRiR7YS0g81j27HgnxyDMDTVlA6FMLZDzUEJT0cBAWI8Zw==",
+      "type": "package",
+      "path": "unity3d.unityeditor/2018.1.6-f1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/UnityEditor.dll",
+        "lib/UnityEditor.xml",
+        "unity3d.unityeditor.2018.1.6-f1.nupkg.sha512",
+        "unity3d.unityeditor.nuspec"
+      ]
+    },
+    "Unity3D.UnityEngine/2018.3.5.1": {
+      "sha512": "63ZCYwGdoBCmsJCUI6dodSY+1TrU/7lTDmfF+492Z6nn8my30E3sb5HXLe7qm7MLvBIcKz9TCy114yu5VGycKA==",
+      "type": "package",
+      "path": "unity3d.unityengine/2018.3.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/UnityEngine.dll",
+        "lib/UnityEngine.xml",
+        "unity3d.unityengine.2018.3.5.1.nupkg.sha512",
+        "unity3d.unityengine.nuspec"
+      ]
+    },
+    "DesperateDevs.Logging/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/ThirdParty/DesperateDevs.Logging/DesperateDevs.Logging.csproj",
+      "msbuildProject": "../../Shared/ThirdParty/DesperateDevs.Logging/DesperateDevs.Logging.csproj"
+    },
+    "DesperateDevs.Serialization/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/ThirdParty/DesperateDevs.Serialization/DesperateDevs.Serialization.csproj",
+      "msbuildProject": "../../Shared/ThirdParty/DesperateDevs.Serialization/DesperateDevs.Serialization.csproj"
+    },
+    "DesperateDevs.Utils/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/ThirdParty/DesperateDevs.Utils/DesperateDevs.Utils.csproj",
+      "msbuildProject": "../../Shared/ThirdParty/DesperateDevs.Utils/DesperateDevs.Utils.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "DesperateDevs.Serialization >= 1.0.0",
+      "Unity3D.UnityEditor >= 2018.1.6-f1",
+      "Unity3D.UnityEngine >= 2018.3.5.1"
+    ],
+    ".NETFramework,Version=v4.6.1": [
+      "DesperateDevs.Serialization >= 1.0.0",
+      "Unity3D.UnityEditor >= 2018.1.6-f1",
+      "Unity3D.UnityEngine >= 2018.3.5.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\WanXin\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj",
+      "projectName": "DesperateDevs.Unity.Editor",
+      "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj",
+      "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\DesperateDevs.Unity.Editor\\obj\\",
+      "projectStyle": "PackageReference",
+      "crossTargeting": true,
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net461",
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.Serialization\\DesperateDevs.Serialization.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.Serialization\\DesperateDevs.Serialization.csproj"
+            }
+          }
+        },
+        "net461": {
+          "projectReferences": {
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.Serialization\\DesperateDevs.Serialization.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\DesperateDevs.Serialization\\DesperateDevs.Serialization.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "dependencies": {
+          "Unity3D.UnityEditor": {
+            "target": "Package",
+            "version": "[2018.1.6-f1, )"
+          },
+          "Unity3D.UnityEngine": {
+            "target": "Package",
+            "version": "[2018.3.5.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
+      },
+      "net461": {
+        "dependencies": {
+          "Unity3D.UnityEditor": {
+            "target": "Package",
+            "version": "[2018.1.6-f1, )"
+          },
+          "Unity3D.UnityEngine": {
+            "target": "Package",
+            "version": "[2018.3.5.1, )"
+          }
+        }
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: Unity3D.UnityEditor 2018.1.6-f1 requires Unity3D.UnityEngine (= 2018.1.6-f1) but version Unity3D.UnityEngine 2018.3.5.1 was resolved.",
+      "libraryId": "Unity3D.UnityEngine",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.0",
+        ".NETFramework,Version=v4.6.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Unity3D.UnityEditor 2018.1.6-f1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Unity3D.UnityEditor",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Unity3D.UnityEngine 2018.3.5.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Unity3D.UnityEngine",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.0"
+      ]
+    }
+  ]
+}

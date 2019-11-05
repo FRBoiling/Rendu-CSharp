@@ -3,16 +3,6 @@ using System.Collections.Generic;
 
 namespace Entitas
 {
-    public delegate void EntityComponentChanged(
-        IEntity entity, int index, IComponent component
-    );
-
-    public delegate void EntityComponentReplaced(
-        IEntity entity, int index, IComponent previousComponent, IComponent newComponent
-    );
-
-    public delegate void EntityEvent(IEntity entity);
-
     public interface IEntity : IAERC
     {
         int totalComponents { get; }

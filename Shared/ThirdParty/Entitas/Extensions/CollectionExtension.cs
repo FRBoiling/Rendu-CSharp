@@ -12,7 +12,7 @@ namespace Entitas
         {
             if (collection.Count != 1) throw new SingleEntityException(collection.Count);
 
-            return Enumerable.First(collection);
+            return collection.First();
         }
 
         /// Returns the only entity in the collection.
@@ -22,17 +22,7 @@ namespace Entitas
         {
             if (collection.Count != 1) throw new SingleEntityException(collection.Count);
 
-            return Enumerable.First(collection);
-        }
-    }
-
-    public class SingleEntityException : EntitasException
-    {
-        public SingleEntityException(int count) : base(
-            "Expected exactly one entity in collection but found " + count + "!",
-            "Use collection.SingleEntity() only when you are sure that there " +
-            "is exactly one entity.")
-        {
+            return collection.First();
         }
     }
 }

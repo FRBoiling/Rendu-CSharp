@@ -10,20 +10,18 @@ namespace TestProject
 {
     public partial class Tests
     {
-        ComponentData getData<T>(Preferences preferences = null)
+        private ComponentData getData<T>(Preferences preferences = null)
         {
             return getMultipleData<T>(preferences)[0];
         }
 
-        ComponentData[] getMultipleData<T>(Preferences preferences = null)
+        private ComponentData[] getMultipleData<T>(Preferences preferences = null)
         {
-            var provider = new ComponentDataProvider(new Type[] {typeof(T)});
+            var provider = new ComponentDataProvider(new[] {typeof(T)});
             if (preferences == null)
-            {
                 preferences = new TestPreferences(
                     @"Entitas.CodeGeneration.Plugins.Contexts = Game, GameState
 Entitas.CodeGeneration.Plugins.IgnoreNamespaces = false");
-            }
 
             provider.Configure(preferences);
 

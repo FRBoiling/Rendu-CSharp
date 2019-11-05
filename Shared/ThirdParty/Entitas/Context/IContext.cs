@@ -2,10 +2,6 @@
 
 namespace Entitas
 {
-    public delegate void ContextEntityChanged(IContext context, IEntity entity);
-
-    public delegate void ContextGroupChanged(IContext context, IGroup group);
-
     public interface IContext
     {
         int totalComponents { get; }

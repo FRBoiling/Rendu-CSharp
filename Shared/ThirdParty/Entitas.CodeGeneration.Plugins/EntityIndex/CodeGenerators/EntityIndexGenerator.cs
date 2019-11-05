@@ -4,19 +4,11 @@ using DesperateDevs.CodeGeneration;
 using DesperateDevs.Serialization;
 using DesperateDevs.Utils;
 
-namespace Entitas.CodeGeneration.Plugins {
-
-    public class EntityIndexGenerator : ICodeGenerator, IConfigurable {
-
-        public string name { get { return "Entity Index"; } }
-        public int priority { get { return 0; } }
-        public bool runInDryMode { get { return true; } }
-
-        public Dictionary<string, string> defaultProperties { get { return _ignoreNamespacesConfig.defaultProperties; } }
-
-        readonly IgnoreNamespacesConfig _ignoreNamespacesConfig = new IgnoreNamespacesConfig();
-
-        const string CLASS_TEMPLATE =
+namespace Entitas.CodeGeneration.Plugins
+{
+    public class EntityIndexGenerator : ICodeGenerator, IConfigurable
+    {
+        private const string CLASS_TEMPLATE =
             @"public partial class Contexts {
 
 ${indexConstants}
@@ -32,38 +24,41 @@ public static class ContextsExtensions {
 ${getIndices}
 }";
 
-        const string INDEX_CONSTANTS_TEMPLATE = @"    public const string ${IndexName} = ""${IndexName}"";";
+        private const string INDEX_CONSTANTS_TEMPLATE = @"    public const string ${IndexName} = ""${IndexName}"";";
 
-        const string ADD_INDEX_TEMPLATE =
+        private const string ADD_INDEX_TEMPLATE =
             @"        ${contextName}.AddEntityIndex(new ${IndexType}<${ContextName}Entity, ${KeyType}>(
             ${IndexName},
             ${contextName}.GetGroup(${ContextName}Matcher.${Matcher}),
             (e, c) => ((${ComponentType})c).${MemberName}));";
 
-        const string ADD_CUSTOM_INDEX_TEMPLATE =
+        private const string ADD_CUSTOM_INDEX_TEMPLATE =
             @"        ${contextName}.AddEntityIndex(new ${IndexType}(${contextName}));";
 
-        const string GET_INDEX_TEMPLATE =
+        private const string GET_INDEX_TEMPLATE =
             @"    public static System.Collections.Generic.HashSet<${ContextName}Entity> GetEntitiesWith${IndexName}(this ${ContextName}Context context, ${KeyType} ${MemberName}) {
         return ((${IndexType}<${ContextName}Entity, ${KeyType}>)context.GetEntityIndex(Contexts.${IndexName})).GetEntities(${MemberName});
     }";
 
-        const string GET_PRIMARY_INDEX_TEMPLATE =
+        private const string GET_PRIMARY_INDEX_TEMPLATE =
             @"    public static ${ContextName}Entity GetEntityWith${IndexName}(this ${ContextName}Context context, ${KeyType} ${MemberName}) {
         return ((${IndexType}<${ContextName}Entity, ${KeyType}>)context.GetEntityIndex(Contexts.${IndexName})).GetEntity(${MemberName});
     }";
 
-        const string CUSTOM_METHOD_TEMPLATE =
+        private const string CUSTOM_METHOD_TEMPLATE =
             @"    public static ${ReturnType} ${MethodName}(this ${ContextName}Context context, ${methodArgs}) {
         return ((${IndexType})(context.GetEntityIndex(Contexts.${IndexName}))).${MethodName}(${args});
     }
 ";
 
-        public void Configure(Preferences preferences) {
-            _ignoreNamespacesConfig.Configure(preferences);
-        }
+        private readonly IgnoreNamespacesConfig _ignoreNamespacesConfig = new IgnoreNamespacesConfig();
 
-        public CodeGenFile[] Generate(CodeGeneratorData[] data) {
+        public string name => "Entity Index";
+        public int priority => 0;
+        public bool runInDryMode => true;
+
+        public CodeGenFile[] Generate(CodeGeneratorData[] data)
+        {
             var entityIndexData = data
                 .OfType<EntityIndexData>()
                 .OrderBy(d => d.GetEntityIndexName())
@@ -74,8 +69,15 @@ ${getIndices}
                 : generateEntityIndices(entityIndexData);
         }
 
-        CodeGenFile[] generateEntityIndices(EntityIndexData[] data) {
+        public Dictionary<string, string> defaultProperties => _ignoreNamespacesConfig.defaultProperties;
 
+        public void Configure(Preferences preferences)
+        {
+            _ignoreNamespacesConfig.Configure(preferences);
+        }
+
+        private CodeGenFile[] generateEntityIndices(EntityIndexData[] data)
+        {
             var indexConstants = string.Join("\n", data
                 .Select(d => INDEX_CONSTANTS_TEMPLATE
                     .Replace("${IndexName}", d.GetHasMultiple()
@@ -96,7 +98,8 @@ ${getIndices}
                 .Replace("${addIndices}", addIndices)
                 .Replace("${getIndices}", getIndices);
 
-            return new[] {
+            return new[]
+            {
                 new CodeGenFile(
                     "Contexts.cs",
                     fileContent,
@@ -105,27 +108,32 @@ ${getIndices}
             };
         }
 
-        string generateAddMethods(EntityIndexData data) {
+        private string generateAddMethods(EntityIndexData data)
+        {
             return string.Join("\n", data.GetContextNames()
-                .Aggregate(new List<string>(), (addMethods, contextName) => {
+                .Aggregate(new List<string>(), (addMethods, contextName) =>
+                {
                     addMethods.Add(generateAddMethod(data, contextName));
                     return addMethods;
                 }).ToArray());
         }
 
-        string generateAddMethod(EntityIndexData data, string contextName) {
+        private string generateAddMethod(EntityIndexData data, string contextName)
+        {
             return data.IsCustom()
                 ? generateCustomMethods(data)
                 : generateMethods(data, contextName);
         }
 
-        string generateCustomMethods(EntityIndexData data) {
+        private string generateCustomMethods(EntityIndexData data)
+        {
             return ADD_CUSTOM_INDEX_TEMPLATE
                 .Replace("${contextName}", data.GetContextNames()[0].LowercaseFirst())
                 .Replace("${IndexType}", data.GetEntityIndexType());
         }
 
-        string generateMethods(EntityIndexData data, string contextName) {
+        private string generateMethods(EntityIndexData data, string contextName)
+        {
             return ADD_INDEX_TEMPLATE
                 .Replace("${contextName}", contextName.LowercaseFirst())
                 .Replace("${ContextName}", contextName)
@@ -143,23 +151,25 @@ ${getIndices}
                     .AddPrefixIfIsKeyword());
         }
 
-        string generateGetMethods(EntityIndexData data) {
+        private string generateGetMethods(EntityIndexData data)
+        {
             return string.Join("\n\n", data.GetContextNames()
-                .Aggregate(new List<string>(), (getMethods, contextName) => {
+                .Aggregate(new List<string>(), (getMethods, contextName) =>
+                {
                     getMethods.Add(generateGetMethod(data, contextName));
                     return getMethods;
                 }).ToArray());
         }
 
-        string generateGetMethod(EntityIndexData data, string contextName) {
+        private string generateGetMethod(EntityIndexData data, string contextName)
+        {
             var template = "";
-            if (data.GetEntityIndexType() == "Entitas.EntityIndex") {
+            if (data.GetEntityIndexType() == "Entitas.EntityIndex")
                 template = GET_INDEX_TEMPLATE;
-            } else if (data.GetEntityIndexType() == "Entitas.PrimaryEntityIndex") {
+            else if (data.GetEntityIndexType() == "Entitas.PrimaryEntityIndex")
                 template = GET_PRIMARY_INDEX_TEMPLATE;
-            } else {
+            else
                 return getCustomMethods(data);
-            }
 
             return template
                 .Replace("${ContextName}", contextName)
@@ -171,7 +181,8 @@ ${getIndices}
                 .Replace("${MemberName}", data.GetMemberName());
         }
 
-        string getCustomMethods(EntityIndexData data) {
+        private string getCustomMethods(EntityIndexData data)
+        {
             return string.Join("\n", data.GetCustomMethods()
                 .Select(m => CUSTOM_METHOD_TEMPLATE
                     .Replace("${ReturnType}", m.returnType)
