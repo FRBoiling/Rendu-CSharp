@@ -1,0 +1,3 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netstandard2.0\RDGenerationLib.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netstandard2.0\RDGenerationLib.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netstandard2.0\RDGenerationLib.AssemblyInfo.cs

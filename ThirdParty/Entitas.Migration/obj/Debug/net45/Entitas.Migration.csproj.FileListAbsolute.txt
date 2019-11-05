@@ -5,3 +5,10 @@ D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.Migration\obj\Debug\ne
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.Migration\obj\Debug\net45\Entitas.Migration.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.Migration\obj\Debug\net45\Entitas.Migration.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.Migration\obj\Debug\net45\Entitas.Migration.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Bin\net45\Entitas.Migration.dll
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Bin\net45\Entitas.Migration.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Entitas.Migration\obj\Debug\net45\Entitas.Migration.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Entitas.Migration\obj\Debug\net45\Entitas.Migration.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Entitas.Migration\obj\Debug\net45\Entitas.Migration.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Entitas.Migration\obj\Debug\net45\Entitas.Migration.dll
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Entitas.Migration\obj\Debug\net45\Entitas.Migration.pdb

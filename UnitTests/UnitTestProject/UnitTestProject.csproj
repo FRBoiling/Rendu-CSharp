@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+
+        <IsPackable>false</IsPackable>
+
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <OutputPath>..\Bin</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <OutputPath>..\Bin</OutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="nunit" Version="3.12.0" />
+        <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\CodeGeneration.CodeGenerator\DesperateDevs.CodeGeneration.CodeGenerator.csproj" />
+      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\CodeGeneration\DesperateDevs.CodeGeneration.csproj" />
+      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\Serialization\DesperateDevs.Serialization.csproj" />
+      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\Utils\DesperateDevs.Utils.csproj" />
+      <ProjectReference Include="..\..\ThirdParty\Entitas.CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj" />
+      <ProjectReference Include="..\..\ThirdParty\Entitas.CodeGeneration.Plugins\Entitas.CodeGeneration.Plugins.csproj" />
+      <ProjectReference Include="..\..\ThirdParty\Entitas.Migration\Entitas.Migration.csproj" />
+      <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas.csproj" />
+      <ProjectReference Include="..\..\Tools\RDGenerationLib\RDGenerationLib.csproj" />
+      <ProjectReference Include="..\TestComponents\TestComponents.csproj" />
+      <ProjectReference Include="..\TestFixtures\TestFixtures.csproj" />
+    </ItemGroup>
+
+</Project>

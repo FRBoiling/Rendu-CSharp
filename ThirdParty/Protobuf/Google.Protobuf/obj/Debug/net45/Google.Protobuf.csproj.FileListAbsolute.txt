@@ -7,3 +7,12 @@ D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Google.Protobuf\obj\Debug\net4
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Google.Protobuf\obj\Debug\net45\Google.Protobuf.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Google.Protobuf\obj\Debug\net45\Google.Protobuf.xml
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Google.Protobuf\obj\Debug\net45\Google.Protobuf.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Bin\net45\Google.Protobuf.dll
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Bin\net45\Google.Protobuf.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Bin\net45\Google.Protobuf.xml
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net45\Google.Protobuf.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net45\Google.Protobuf.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net45\Google.Protobuf.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net45\Google.Protobuf.dll
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net45\Google.Protobuf.xml
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net45\Google.Protobuf.pdb

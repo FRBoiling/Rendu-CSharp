@@ -1,2 +1,5 @@
 D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestComponents\obj\Debug\netcoreapp2.2\TestComponents.AssemblyInfoInputs.cache
 D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestComponents\obj\Debug\netcoreapp2.2\TestComponents.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\UnitTests\TestComponents\obj\Debug\netcoreapp2.2\TestComponents.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\UnitTests\TestComponents\obj\Debug\netcoreapp2.2\TestComponents.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\UnitTests\TestComponents\obj\Debug\netcoreapp2.2\TestComponents.AssemblyInfo.cs

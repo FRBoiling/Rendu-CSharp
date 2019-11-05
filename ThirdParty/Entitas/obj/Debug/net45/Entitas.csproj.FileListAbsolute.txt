@@ -4,3 +4,9 @@ D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas\obj\Debug\net45\Entita
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas\obj\Debug\net45\Entitas.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas\obj\Debug\net45\Entitas.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas\obj\Debug\net45\Entitas.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Bin\net45\Entitas.dll
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Bin\net45\Entitas.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Entitas\obj\Debug\net45\Entitas.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Entitas\obj\Debug\net45\Entitas.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Entitas\obj\Debug\net45\Entitas.dll
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\Entitas\obj\Debug\net45\Entitas.pdb

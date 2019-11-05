@@ -7,3 +7,4 @@ D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\netcoreapp2.2\Server.App.As
 D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\netcoreapp2.2\Server.App.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\netcoreapp2.2\Server.App.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\netcoreapp2.2\Server.App.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\netcoreapp2.2\Server.App.csprojAssemblyReference.cache

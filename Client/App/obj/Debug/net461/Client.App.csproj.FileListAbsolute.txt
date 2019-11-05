@@ -5,3 +5,4 @@ D:\GitHub\RenduECS\Rendu-CSharp\Client\App\obj\Debug\net461\Client.App.AssemblyI
 D:\GitHub\RenduECS\Rendu-CSharp\Client\App\obj\Debug\net461\Client.App.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Client\App\obj\Debug\net461\Client.App.exe
 D:\GitHub\RenduECS\Rendu-CSharp\Client\App\obj\Debug\net461\Client.App.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Client\App\obj\Debug\net461\Client.App.csprojAssemblyReference.cache

@@ -1,4 +1,4 @@
-﻿namespace TestDatas
+﻿namespace TestComponents
 {
     public class NormalClass
     {

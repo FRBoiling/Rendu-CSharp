@@ -1,0 +1,8 @@
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Bin\net45\DesperateDevs.CodeGeneration.dll
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Bin\net45\DesperateDevs.CodeGeneration.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\CodeGeneration\obj\Debug\net45\DesperateDevs.CodeGeneration.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\CodeGeneration\obj\Debug\net45\DesperateDevs.CodeGeneration.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\CodeGeneration\obj\Debug\net45\DesperateDevs.CodeGeneration.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\CodeGeneration\obj\Debug\net45\DesperateDevs.CodeGeneration.csproj.CopyComplete
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\CodeGeneration\obj\Debug\net45\DesperateDevs.CodeGeneration.dll
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\CodeGeneration\obj\Debug\net45\DesperateDevs.CodeGeneration.pdb

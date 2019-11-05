@@ -26,46 +26,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Components/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "compile": {
-          "bin/placeholder/Components.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Components.dll": {}
-        }
-      },
-      "DesperateDevs.CodeGeneration/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "compile": {
-          "bin/placeholder/DesperateDevs.CodeGeneration.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DesperateDevs.CodeGeneration.dll": {}
-        }
-      },
-      "DesperateDevs.Serialization/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "compile": {
-          "bin/placeholder/DesperateDevs.Serialization.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DesperateDevs.Serialization.dll": {}
-        }
-      },
-      "Entitas/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
-        "compile": {
-          "bin/placeholder/Entitas.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entitas.dll": {}
-        }
-      },
       "Entitas.CodeGeneration.Attributes/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.5",
@@ -78,36 +38,17 @@
       },
       "Entitas.CodeGeneration.Plugins/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
+        "framework": ".NETFramework,Version=v4.5",
         "compile": {
           "bin/placeholder/Entitas.CodeGeneration.Plugins.dll": {}
         },
         "runtime": {
           "bin/placeholder/Entitas.CodeGeneration.Plugins.dll": {}
-        }
-      },
-      "Entitas.Migration/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
-        "compile": {
-          "bin/placeholder/Entitas.Migration.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entitas.Migration.dll": {}
         }
       },
       "RDGenerationLib/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Components": "1.0.0",
-          "DesperateDevs.CodeGeneration": "1.0.0",
-          "DesperateDevs.Serialization": "1.0.0",
-          "Entitas": "1.0.0",
-          "Entitas.CodeGeneration.Attributes": "1.0.0",
-          "Entitas.CodeGeneration.Plugins": "1.0.0",
-          "Entitas.Migration": "1.0.0"
-        },
+        "framework": ".NETFramework,Version=v4.5",
         "compile": {
           "bin/placeholder/RDGenerationLib.dll": {}
         },
@@ -261,26 +202,6 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Components/1.0.0": {
-      "type": "project",
-      "path": "../../Shared/Components/Components.csproj",
-      "msbuildProject": "../../Shared/Components/Components.csproj"
-    },
-    "DesperateDevs.CodeGeneration/1.0.0": {
-      "type": "project",
-      "path": "../../ThirdParty/DesperateDevs/CodeGeneration/DesperateDevs.CodeGeneration.csproj",
-      "msbuildProject": "../../ThirdParty/DesperateDevs/CodeGeneration/DesperateDevs.CodeGeneration.csproj"
-    },
-    "DesperateDevs.Serialization/1.0.0": {
-      "type": "project",
-      "path": "../../ThirdParty/DesperateDevs/Serialization/DesperateDevs.Serialization.csproj",
-      "msbuildProject": "../../ThirdParty/DesperateDevs/Serialization/DesperateDevs.Serialization.csproj"
-    },
-    "Entitas/1.0.0": {
-      "type": "project",
-      "path": "../../Shared/ThirdParty/Entitas/Entitas.csproj",
-      "msbuildProject": "../../Shared/ThirdParty/Entitas/Entitas.csproj"
-    },
     "Entitas.CodeGeneration.Attributes/1.0.0": {
       "type": "project",
       "path": "../../ThirdParty/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj",
@@ -288,13 +209,8 @@
     },
     "Entitas.CodeGeneration.Plugins/1.0.0": {
       "type": "project",
-      "path": "../../Shared/ThirdParty/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj",
-      "msbuildProject": "../../Shared/ThirdParty/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj"
-    },
-    "Entitas.Migration/1.0.0": {
-      "type": "project",
-      "path": "../../Shared/ThirdParty/Entitas.Migration/Entitas.Migration.csproj",
-      "msbuildProject": "../../Shared/ThirdParty/Entitas.Migration/Entitas.Migration.csproj"
+      "path": "../../ThirdParty/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj",
+      "msbuildProject": "../../ThirdParty/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj"
     },
     "RDGenerationLib/1.0.0": {
       "type": "project",
