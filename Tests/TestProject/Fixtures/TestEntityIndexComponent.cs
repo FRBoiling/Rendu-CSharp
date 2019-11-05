@@ -10,7 +10,7 @@ namespace TestProject.Fixtures
         public string value;
     }
     
-    [Test1, Test2]
+    [Context("Test1"),Context("Test2")]
     public class TestMultipleEntityIndicesComponent : IComponent {
 
         [EntityIndex]

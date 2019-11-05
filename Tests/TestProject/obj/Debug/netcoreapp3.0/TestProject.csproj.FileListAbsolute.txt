@@ -93,12 +93,6 @@ D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\bin\Debug\netcoreapp3.0\Entita
 D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\bin\Debug\netcoreapp3.0\DesperateDevs.pdb
 D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\bin\Debug\netcoreapp3.0\Entitas.pdb
 D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\bin\Debug\netcoreapp3.0\Entitas.CodeGeneration.Attributes.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\netcoreapp3.0\TestProject.csprojAssemblyReference.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\netcoreapp3.0\TestProject.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\netcoreapp3.0\TestProject.AssemblyInfo.cs
-D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\netcoreapp3.0\TestProject.csproj.CopyComplete
-D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\netcoreapp3.0\TestProject.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\netcoreapp3.0\TestProject.pdb
 D:\GitHub\RenduECS\Bin\Shared\netcoreapp3.0\NUnit3.TestAdapter.dll
 D:\GitHub\RenduECS\Bin\Shared\netcoreapp3.0\NUnit3.TestAdapter.pdb
 D:\GitHub\RenduECS\Bin\Shared\netcoreapp3.0\nunit.engine.netstandard.dll
@@ -131,3 +125,9 @@ D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\netcoreapp3.0\TestProject.runtimeconfi
 D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\netcoreapp3.0\TestProject.runtimeconfig.dev.json
 D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\netcoreapp3.0\TestProject.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\netcoreapp3.0\TestProject.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\netcoreapp3.0\TestProject.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\netcoreapp3.0\TestProject.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\netcoreapp3.0\TestProject.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\netcoreapp3.0\TestProject.csproj.CopyComplete
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\netcoreapp3.0\TestProject.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestProject\obj\Debug\netcoreapp3.0\TestProject.pdb

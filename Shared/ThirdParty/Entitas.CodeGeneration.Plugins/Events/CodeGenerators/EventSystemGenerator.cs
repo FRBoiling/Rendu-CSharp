@@ -122,7 +122,7 @@ namespace Entitas.CodeGeneration.Plugins {
 
                     return new CodeGenFile(
                         "Events" + Path.DirectorySeparatorChar +
-                        "Systems" + Path.DirectorySeparatorChar +
+                        "Server.Systems" + Path.DirectorySeparatorChar +
                         data.Event(contextName, eventData) + "EventSystem.cs",
                         fileContent,
                         GetType().FullName

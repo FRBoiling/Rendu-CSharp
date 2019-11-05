@@ -82,7 +82,7 @@ Entitas.CodeGeneration.Plugins.IgnoreNamespaces = false");
             {
                 Assert.AreEqual(standardData.GetMemberData().GetType(), typeof(MemberData[]));
                 Assert.AreEqual(standardData.GetMemberData().Length, 1);
-                Assert.AreEqual(standardData.GetMemberData()[0], "string");
+                Assert.AreEqual(standardData.GetMemberData()[0].type, "string");
             }
 
             //gets generate component
@@ -212,7 +212,6 @@ Entitas.CodeGeneration.Plugins.IgnoreNamespaces = false");
                 Assert.AreEqual(d[2].GetMemberData()[0].name, "value");
                 Assert.AreEqual(d[2].GetMemberData()[0].type, "System.Collections.Generic.List<ITest2AnyMultipleContextStandardEventListener>");
             }
-            ;
         }
 
         [Test]

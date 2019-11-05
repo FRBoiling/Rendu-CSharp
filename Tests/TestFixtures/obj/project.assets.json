@@ -56,6 +56,20 @@
         "runtime": {
           "bin/placeholder/Entitas.CodeGeneration.Plugins.dll": {}
         }
+      },
+      "TestComponents/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TestComponents.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TestComponents.dll": {}
+        }
       }
     }
   },
@@ -102,13 +116,19 @@
       "type": "project",
       "path": "../../Shared/ThirdParty/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj",
       "msbuildProject": "../../Shared/ThirdParty/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj"
+    },
+    "TestComponents/1.0.0": {
+      "type": "project",
+      "path": "../TestComponents/TestComponents.csproj",
+      "msbuildProject": "../TestComponents/TestComponents.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "Entitas >= 1.0.0",
       "Entitas.CodeGeneration.Attributes >= 1.0.0",
-      "Entitas.CodeGeneration.Plugins >= 1.0.0"
+      "Entitas.CodeGeneration.Plugins >= 1.0.0",
+      "TestComponents >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -149,6 +169,9 @@
             },
             "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas\\Entitas.csproj": {
               "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas\\Entitas.csproj"
+            },
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestComponents\\TestComponents.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestComponents\\TestComponents.csproj"
             }
           }
         }

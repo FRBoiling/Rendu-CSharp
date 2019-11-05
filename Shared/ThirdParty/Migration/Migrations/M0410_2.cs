@@ -43,7 +43,7 @@ namespace Entitas.Migration {
 
 #else
 
-    public class Feature : Entitas.Systems {
+    public class Feature : Entitas.Server.Systems {
 
         public Feature(string name) {
         }

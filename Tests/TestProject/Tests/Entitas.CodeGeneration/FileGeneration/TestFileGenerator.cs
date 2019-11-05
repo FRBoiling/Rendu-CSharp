@@ -17,7 +17,8 @@ namespace TestProject.FileGeneration
         [Test]
         public void TestComponentFileGenerator()
         {
-            
+            var componentMigration = new TestComponentMigration();
+            MigrationUtils.WriteFiles(componentMigration.Migrate("../../TestFixtures/Generated/")); 
         }
 
     }

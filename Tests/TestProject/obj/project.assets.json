@@ -1448,6 +1448,20 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "Components/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Components.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Components.dll": {}
+        }
+      },
       "DesperateDevs/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
@@ -1504,13 +1518,45 @@
           "bin/placeholder/Migration.dll": {}
         }
       },
+      "RDGenerationLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Components": "1.0.0",
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0",
+          "Entitas.CodeGeneration.Plugins": "1.0.0",
+          "Migration": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RDGenerationLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RDGenerationLib.dll": {}
+        }
+      },
+      "TestComponents/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TestComponents.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TestComponents.dll": {}
+        }
+      },
       "TestFixtures/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
         "dependencies": {
           "Entitas": "1.0.0",
           "Entitas.CodeGeneration.Attributes": "1.0.0",
-          "Entitas.CodeGeneration.Plugins": "1.0.0"
+          "Entitas.CodeGeneration.Plugins": "1.0.0",
+          "TestComponents": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TestFixtures.dll": {}
@@ -5343,6 +5389,11 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
+    "Components/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/Components/Components.csproj",
+      "msbuildProject": "../../Shared/Components/Components.csproj"
+    },
     "DesperateDevs/1.0.0": {
       "type": "project",
       "path": "../../Shared/ThirdParty/DesperateDevs/DesperateDevs.csproj",
@@ -5368,6 +5419,16 @@
       "path": "../../Shared/ThirdParty/Migration/Migration.csproj",
       "msbuildProject": "../../Shared/ThirdParty/Migration/Migration.csproj"
     },
+    "RDGenerationLib/1.0.0": {
+      "type": "project",
+      "path": "../../Tools/RDGenerationLib/RDGenerationLib.csproj",
+      "msbuildProject": "../../Tools/RDGenerationLib/RDGenerationLib.csproj"
+    },
+    "TestComponents/1.0.0": {
+      "type": "project",
+      "path": "../TestComponents/TestComponents.csproj",
+      "msbuildProject": "../TestComponents/TestComponents.csproj"
+    },
     "TestFixtures/1.0.0": {
       "type": "project",
       "path": "../TestFixtures/TestFixtures.csproj",
@@ -5380,6 +5441,7 @@
       "Microsoft.NET.Test.Sdk >= 16.2.0",
       "Migration >= 1.0.0",
       "NUnit3TestAdapter >= 3.13.0",
+      "RDGenerationLib >= 1.0.0",
       "TestFixtures >= 1.0.0",
       "nunit >= 3.12.0"
     ]
@@ -5422,6 +5484,9 @@
             },
             "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestFixtures\\TestFixtures.csproj": {
               "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestFixtures\\TestFixtures.csproj"
+            },
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj"
             }
           }
         }

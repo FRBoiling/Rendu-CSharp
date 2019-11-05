@@ -27,6 +27,9 @@
           },
           "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas\\Entitas.csproj": {
             "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas\\Entitas.csproj"
+          },
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestComponents\\TestComponents.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestComponents\\TestComponents.csproj"
           }
         }
       }

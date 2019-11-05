@@ -19,6 +19,9 @@
     "frameworks": {
       "netcoreapp3.0": {
         "projectReferences": {
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj"
+          },
           "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
             "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
           },

@@ -7,12 +7,12 @@ D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\bin\Debug\netcoreapp3.0\DesperateDevs.pdb
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\bin\Debug\netcoreapp3.0\Entitas.CodeGeneration.Attributes.pdb
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\bin\Debug\netcoreapp3.0\Entitas.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\Entitas.CodeGeneration.Plugins.deps.json
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\Entitas.CodeGeneration.Plugins.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\Entitas.CodeGeneration.Plugins.pdb
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\netcoreapp3.0\Entitas.CodeGeneration.Plugins.csprojAssemblyReference.cache
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\netcoreapp3.0\Entitas.CodeGeneration.Plugins.AssemblyInfoInputs.cache
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\netcoreapp3.0\Entitas.CodeGeneration.Plugins.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\netcoreapp3.0\Entitas.CodeGeneration.Plugins.csproj.CopyComplete
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\netcoreapp3.0\Entitas.CodeGeneration.Plugins.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\netcoreapp3.0\Entitas.CodeGeneration.Plugins.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\Entitas.CodeGeneration.Plugins.deps.json
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\Entitas.CodeGeneration.Plugins.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp3.0\Entitas.CodeGeneration.Plugins.pdb

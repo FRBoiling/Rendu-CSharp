@@ -11,8 +11,7 @@ namespace CodeGenerator
     {
         static void Main(string[] args)
         {
-            var contextsMigration = new ContextsMigration();
-            MigrationUtils.WriteFiles(contextsMigration.Migrate("./Generated/")); 
+
             
             Console.WriteLine("Hello World!");
         }

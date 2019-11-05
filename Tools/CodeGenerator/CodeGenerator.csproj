@@ -6,11 +6,11 @@
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <OutputPath>..\..\..\Bin\Tools\</OutputPath>
+      <OutputPath>..\..\Bin\Tools\</OutputPath>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <OutputPath>..\..\..\Bin\Shared\</OutputPath>
+      <OutputPath>..\..\Bin\Tools\</OutputPath>
     </PropertyGroup>
 
     <ItemGroup>

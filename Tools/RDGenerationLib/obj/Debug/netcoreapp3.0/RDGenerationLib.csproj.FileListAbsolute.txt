@@ -1,6 +1,3 @@
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp3.0\RDGenerationLib.csprojAssemblyReference.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp3.0\RDGenerationLib.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp3.0\RDGenerationLib.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\bin\Debug\netcoreapp3.0\RDGenerationLib.deps.json
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\bin\Debug\netcoreapp3.0\RDGenerationLib.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\bin\Debug\netcoreapp3.0\RDGenerationLib.pdb
@@ -14,6 +11,15 @@ D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\bin\Debug\netcoreapp3.0\En
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\bin\Debug\netcoreapp3.0\Entitas.pdb
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\bin\Debug\netcoreapp3.0\Migration.pdb
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\bin\Debug\netcoreapp3.0\DesperateDevs.pdb
+D:\GitHub\RenduECS\Bin\Tools\netcoreapp3.0\RDGenerationLib.deps.json
+D:\GitHub\RenduECS\Bin\Tools\netcoreapp3.0\RDGenerationLib.dll
+D:\GitHub\RenduECS\Bin\Tools\netcoreapp3.0\RDGenerationLib.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Tools\netcoreapp3.0\RDGenerationLib.deps.json
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Tools\netcoreapp3.0\RDGenerationLib.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Tools\netcoreapp3.0\RDGenerationLib.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp3.0\RDGenerationLib.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp3.0\RDGenerationLib.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp3.0\RDGenerationLib.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp3.0\RDGenerationLib.csproj.CopyComplete
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp3.0\RDGenerationLib.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\RDGenerationLib\obj\Debug\netcoreapp3.0\RDGenerationLib.pdb

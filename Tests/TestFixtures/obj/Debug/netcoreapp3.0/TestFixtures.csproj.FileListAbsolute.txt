@@ -1,0 +1,9 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\netcoreapp3.0\TestFixtures.deps.json
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\netcoreapp3.0\TestFixtures.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\Bin\netcoreapp3.0\TestFixtures.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestFixtures\obj\Debug\netcoreapp3.0\TestFixtures.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestFixtures\obj\Debug\netcoreapp3.0\TestFixtures.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestFixtures\obj\Debug\netcoreapp3.0\TestFixtures.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestFixtures\obj\Debug\netcoreapp3.0\TestFixtures.csproj.CopyComplete
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestFixtures\obj\Debug\netcoreapp3.0\TestFixtures.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Tests\TestFixtures\obj\Debug\netcoreapp3.0\TestFixtures.pdb

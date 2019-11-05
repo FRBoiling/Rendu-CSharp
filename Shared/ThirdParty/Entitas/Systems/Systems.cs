@@ -2,9 +2,9 @@ using System.Collections.Generic;
 
 namespace Entitas
 {
-    /// Systems provide a convenient way to group systems.
+    /// Server.Systems provide a convenient way to group systems.
     /// You can add IInitializeSystem, IExecuteSystem, ICleanupSystem,
-    /// ITearDownSystem, ReactiveSystem and other nested Systems instances.
+    /// ITearDownSystem, ReactiveSystem and other nested Server.Systems instances.
     /// All systems will be initialized and executed based on the order
     /// you added them.
     public class Systems : IInitializeSystem, IExecuteSystem, ICleanupSystem, ITearDownSystem
@@ -15,7 +15,7 @@ namespace Entitas
         protected readonly List<IInitializeSystem> _initializeSystems;
         protected readonly List<ITearDownSystem> _tearDownSystems;
 
-        /// Creates a new Systems instance.
+        /// Creates a new Server.Systems instance.
         public Systems()
         {
             _initializeSystems = new List<IInitializeSystem>();
@@ -25,28 +25,28 @@ namespace Entitas
         }
 
         /// Calls Cleanup() on all ICleanupSystem and other
-        /// nested Systems instances in the order you added them.
+        /// nested Server.Systems instances in the order you added them.
         public virtual void Cleanup()
         {
             for (var i = 0; i < _cleanupSystems.Count; i++) _cleanupSystems[i].Cleanup();
         }
 
         /// Calls Execute() on all IExecuteSystem and other
-        /// nested Systems instances in the order you added them.
+        /// nested Server.Systems instances in the order you added them.
         public virtual void Execute()
         {
             for (var i = 0; i < _executeSystems.Count; i++) _executeSystems[i].Execute();
         }
 
         /// Calls Initialize() on all IInitializeSystem and other
-        /// nested Systems instances in the order you added them.
+        /// nested Server.Systems instances in the order you added them.
         public virtual void Initialize()
         {
             for (var i = 0; i < _initializeSystems.Count; i++) _initializeSystems[i].Initialize();
         }
 
         /// Calls TearDown() on all ITearDownSystem  and other
-        /// nested Systems instances in the order you added them.
+        /// nested Server.Systems instances in the order you added them.
         public virtual void TearDown()
         {
             for (var i = 0; i < _tearDownSystems.Count; i++) _tearDownSystems[i].TearDown();

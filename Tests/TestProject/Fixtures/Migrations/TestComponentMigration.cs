@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using DesperateDevs.CodeGeneration;
 using Entitas.CodeGeneration.Plugins;
 using Entitas.Migration;
+using TestProject.Fixtures.Generation;
 
 namespace TestProject.Fixtures
 {
@@ -20,49 +22,36 @@ namespace TestProject.Fixtures
 
         public string description
         {
-            get { return "Adding contexts class"; }
+            get { return "Adding comment class"; }
         }
 
         public MigrationFile[] Migrate(string path)
         {
-            var names = "Entitas.CodeGeneration.Plugins.Contexts = Test1,Test2";
-            var provider = new ContextDataProvider();
-            provider.Configure(new TestPreferences(names));
+            var names = @"Entitas.CodeGeneration.Plugins.Contexts = Test1,Test2
+Entitas.CodeGeneration.Plugins.IgnoreNamespaces = true";
 
-            var dataArr = (ContextData[]) provider.GetData();
-
+            var dataArr =TestDataGeneration.getMultipleData<TestNormalComponent>(new TestPreferences(names));
+            
             List<CodeGenFile> codeGenFiles = new List<CodeGenFile>();
 
-            var contextsGenerator = new ContextsGenerator();
-            var contextsFile = contextsGenerator.Generate(dataArr);
-            codeGenFiles.AddRange(contextsFile);
-
-            var contextGenerator = new ContextGenerator();
-            var contextFile = contextGenerator.Generate(dataArr);
-            codeGenFiles.AddRange(contextFile);
-
-            var contextAttributeGenerator = new ContextAttributeGenerator();
-            var contextAttributeFile = contextAttributeGenerator.Generate(dataArr);
-            codeGenFiles.AddRange(contextAttributeFile);
-
-            var contextMatcherGenerator = new ContextMatcherGenerator();
-            var contextMatcherFile = contextMatcherGenerator.Generate(dataArr);
-            codeGenFiles.AddRange(contextMatcherFile);
-
-            var entityGenerator = new EntityGenerator();
-            var entityFile = entityGenerator.Generate(dataArr);
-            codeGenFiles.AddRange(entityFile);
+            var componentEntityApiGenerator = new ComponentEntityApiGenerator();
+            var componentsFile = componentEntityApiGenerator.Generate(dataArr);
+            codeGenFiles.AddRange(componentsFile);
+            
+            var componentMatcherApiGenerator = new ComponentMatcherApiGenerator();
+            componentsFile = componentMatcherApiGenerator.Generate(dataArr);
+            codeGenFiles.AddRange(componentsFile);
 
             var componentLookupGenerator = new ComponentLookupGenerator();
             var componentLookupFile = componentLookupGenerator.Generate(dataArr);
             codeGenFiles.AddRange(componentLookupFile);
-
+            
             var migratedFiles = new List<MigrationFile>();
 
             foreach (var file in codeGenFiles)
             {
                 var fileFullName = Path.Combine(path, file.fileName);
-             
+
                 var migrationFile = new MigrationFile(fileFullName, file.fileContent);
                 migratedFiles.Add(migrationFile);
             }

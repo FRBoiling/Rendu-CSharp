@@ -27,6 +27,9 @@
           },
           "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestFixtures\\TestFixtures.csproj": {
             "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tests\\TestFixtures\\TestFixtures.csproj"
+          },
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj"
           }
         }
       }

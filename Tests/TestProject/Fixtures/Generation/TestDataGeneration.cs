@@ -11,14 +11,14 @@ namespace TestProject.Fixtures.Generation
             return getMultipleData<T>(preferences)[0];
         }
 
-        static ComponentData[] getMultipleData<T>(Preferences preferences = null)
+        public static ComponentData[] getMultipleData<T>(Preferences preferences = null)
         {
             var provider = new ComponentDataProvider(new Type[] {typeof(T)});
             if (preferences == null)
             {
                 preferences = new TestPreferences(
-                    @"Entitas.CodeGeneration.Plugins.Contexts = Game, GameState
-Entitas.CodeGeneration.Plugins.IgnoreNamespaces = false");
+                    @"Entitas.CodeGeneration.Plugins.Contexts = Test1, Test2
+Entitas.CodeGeneration.Plugins.IgnoreNamespaces = true");
             }
             provider.Configure(preferences);
 

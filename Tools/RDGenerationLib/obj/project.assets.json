@@ -11,6 +11,20 @@
           "lib/netstandard2.0/System.CodeDom.dll": {}
         }
       },
+      "Components/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Components.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Components.dll": {}
+        }
+      },
       "DesperateDevs/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
@@ -93,6 +107,11 @@
         "version.txt"
       ]
     },
+    "Components/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/Components/Components.csproj",
+      "msbuildProject": "../../Shared/Components/Components.csproj"
+    },
     "DesperateDevs/1.0.0": {
       "type": "project",
       "path": "../../Shared/ThirdParty/DesperateDevs/DesperateDevs.csproj",
@@ -121,6 +140,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
+      "Components >= 1.0.0",
       "Entitas >= 1.0.0",
       "Entitas.CodeGeneration.Attributes >= 1.0.0",
       "Entitas.CodeGeneration.Plugins >= 1.0.0",
@@ -157,6 +177,9 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj"
+            },
             "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
               "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
             },

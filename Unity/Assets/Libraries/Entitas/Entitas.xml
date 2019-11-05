@@ -308,46 +308,46 @@
             Don't use the generated methods like AddXyz() and ReplaceXyz() when
             writing multi-threaded code in Entitas.
         </member>
-        <member name="T:Entitas.Systems">
-            Systems provide a convenient way to group systems.
+        <member name="T:Entitas.Server.Systems">
+            Server.Systems provide a convenient way to group systems.
             You can add IInitializeSystem, IExecuteSystem, ICleanupSystem,
-            ITearDownSystem, ReactiveSystem and other nested Systems instances.
+            ITearDownSystem, ReactiveSystem and other nested Server.Systems instances.
             All systems will be initialized and executed based on the order
             you added them.
         </member>
-        <member name="M:Entitas.Systems.#ctor">
-            Creates a new Systems instance.
+        <member name="M:Entitas.Server.Systems.#ctor">
+            Creates a new Server.Systems instance.
         </member>
-        <member name="M:Entitas.Systems.Add(Entitas.ISystem)">
+        <member name="M:Entitas.Server.Systems.Add(Entitas.ISystem)">
             Adds the system instance to the systems list.
         </member>
-        <member name="M:Entitas.Systems.Initialize">
+        <member name="M:Entitas.Server.Systems.Initialize">
             Calls Initialize() on all IInitializeSystem and other
-            nested Systems instances in the order you added them.
+            nested Server.Systems instances in the order you added them.
         </member>
-        <member name="M:Entitas.Systems.Execute">
+        <member name="M:Entitas.Server.Systems.Execute">
             Calls Execute() on all IExecuteSystem and other
-            nested Systems instances in the order you added them.
+            nested Server.Systems instances in the order you added them.
         </member>
-        <member name="M:Entitas.Systems.Cleanup">
+        <member name="M:Entitas.Server.Systems.Cleanup">
             Calls Cleanup() on all ICleanupSystem and other
-            nested Systems instances in the order you added them.
+            nested Server.Systems instances in the order you added them.
         </member>
-        <member name="M:Entitas.Systems.TearDown">
+        <member name="M:Entitas.Server.Systems.TearDown">
             Calls TearDown() on all ITearDownSystem  and other
-            nested Systems instances in the order you added them.
+            nested Server.Systems instances in the order you added them.
         </member>
-        <member name="M:Entitas.Systems.ActivateReactiveSystems">
-            Activates all ReactiveSystems in the systems list.
+        <member name="M:Entitas.Server.Systems.ActivateReactiveServer.Systems">
+            Activates all ReactiveServer.Systems in the systems list.
         </member>
-        <member name="M:Entitas.Systems.DeactivateReactiveSystems">
-            Deactivates all ReactiveSystems in the systems list.
-            This will also clear all ReactiveSystems.
+        <member name="M:Entitas.Server.Systems.DeactivateReactiveServer.Systems">
+            Deactivates all ReactiveServer.Systems in the systems list.
+            This will also clear all ReactiveServer.Systems.
             This is useful when you want to soft-restart your application and
             want to reuse your existing system instances.
         </member>
-        <member name="M:Entitas.Systems.ClearReactiveSystems">
-            Clears all ReactiveSystems in the systems list.
+        <member name="M:Entitas.Server.Systems.ClearReactiveServer.Systems">
+            Clears all ReactiveServer.Systems in the systems list.
         </member>
         <member name="T:Entitas.ReactiveSystem`1">
             A ReactiveSystem calls Execute(entities) if there were changes based on

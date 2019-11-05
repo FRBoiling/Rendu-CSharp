@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Components/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Components.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Components.dll": {}
+        }
+      },
+      "Entitas/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/Entitas.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitas.dll": {}
+        }
+      },
+      "Entitas.CodeGeneration.Attributes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/Entitas.CodeGeneration.Attributes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitas.CodeGeneration.Attributes.dll": {}
+        }
+      },
+      "Generated/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Components": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Generated.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Generated.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Components/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/Components/Components.csproj",
+      "msbuildProject": "../../Shared/Components/Components.csproj"
+    },
+    "Entitas/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/ThirdParty/Entitas/Entitas.csproj",
+      "msbuildProject": "../../Shared/ThirdParty/Entitas/Entitas.csproj"
+    },
+    "Entitas.CodeGeneration.Attributes/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/ThirdParty/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj",
+      "msbuildProject": "../../Shared/ThirdParty/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj"
+    },
+    "Generated/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/Generated/Generated.csproj",
+      "msbuildProject": "../../Shared/Generated/Generated.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "Generated >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\WanXin\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\Systems\\Server.Systems.csproj",
+      "projectName": "Server.Systems",
+      "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\Systems\\Server.Systems.csproj",
+      "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\Systems\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
+      }
+    }
+  }
+}

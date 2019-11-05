@@ -13,12 +13,6 @@ D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\bin\Debug\netcoreapp3.0\Enti
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\bin\Debug\netcoreapp3.0\Entitas.CodeGeneration.Plugins.pdb
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\bin\Debug\netcoreapp3.0\DesperateDevs.pdb
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\bin\Debug\netcoreapp3.0\Entitas.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\obj\Debug\netcoreapp3.0\CodeGenerator.csprojAssemblyReference.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\obj\Debug\netcoreapp3.0\CodeGenerator.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\obj\Debug\netcoreapp3.0\CodeGenerator.AssemblyInfo.cs
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\obj\Debug\netcoreapp3.0\CodeGenerator.csproj.CopyComplete
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\obj\Debug\netcoreapp3.0\CodeGenerator.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\obj\Debug\netcoreapp3.0\CodeGenerator.pdb
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\bin\Debug\netcoreapp3.0\Migration.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\bin\Debug\netcoreapp3.0\RDGenerationLib.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Tools\CodeGenerator\bin\Debug\netcoreapp3.0\RDGenerationLib.pdb

@@ -2,18 +2,18 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.0</TargetFramework>
-        <RootNamespace>CodeGenerationLib</RootNamespace>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <OutputPath>..\..\..\Bin\Tools\</OutputPath>
+      <OutputPath>..\..\Bin\Tools\</OutputPath>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <OutputPath>..\..\..\Bin\Tools\</OutputPath>
+      <OutputPath>..\..\Bin\Tools\</OutputPath>
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Shared\Components\Components.csproj" />
       <ProjectReference Include="..\..\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj" />
       <ProjectReference Include="..\..\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\Entitas.CodeGeneration.Plugins.csproj" />
       <ProjectReference Include="..\..\Shared\ThirdParty\Entitas\Entitas.csproj" />

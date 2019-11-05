@@ -16,6 +16,14 @@
       <ProjectReference Include="..\..\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj" />
       <ProjectReference Include="..\..\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\Entitas.CodeGeneration.Plugins.csproj" />
       <ProjectReference Include="..\..\Shared\ThirdParty\Entitas\Entitas.csproj" />
+      <ProjectReference Include="..\TestComponents\TestComponents.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Generated" />
+      <Folder Include="Generated\Test1\Components" />
+      <Folder Include="Generated\Test2\Components" />
+      <Folder Include="Systems" />
     </ItemGroup>
 
 </Project>

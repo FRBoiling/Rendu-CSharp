@@ -5,7 +5,7 @@
     <AssemblyTitle>Google Protocol Buffers</AssemblyTitle>
     <VersionPrefix>3.6.0</VersionPrefix>
     <Authors>Google Inc.</Authors>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <!--<TargetFrameworks>net35</TargetFrameworks>-->
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyOriginatorKeyFile>Google.Protobuf.snk</AssemblyOriginatorKeyFile>

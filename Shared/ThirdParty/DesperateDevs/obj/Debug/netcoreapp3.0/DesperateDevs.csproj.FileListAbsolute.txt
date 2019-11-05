@@ -5,4 +5,3 @@ D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs\obj\Debug\netcor
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs\obj\Debug\netcoreapp3.0\DesperateDevs.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs\obj\Debug\netcoreapp3.0\DesperateDevs.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs\obj\Debug\netcoreapp3.0\DesperateDevs.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\DesperateDevs\obj\Debug\netcoreapp3.0\DesperateDevs.csprojAssemblyReference.cache

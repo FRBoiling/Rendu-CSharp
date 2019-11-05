@@ -23,12 +23,12 @@
     <ItemGroup>
       <ProjectReference Include="..\..\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\Entitas.CodeGeneration.Plugins.csproj" />
       <ProjectReference Include="..\..\Shared\ThirdParty\Migration\Migration.csproj" />
+      <ProjectReference Include="..\..\Tools\RDGenerationLib\RDGenerationLib.csproj" />
       <ProjectReference Include="..\TestFixtures\TestFixtures.csproj" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="Fixtures\Systems" />
-      <Folder Include="Tests\Entitas" />
     </ItemGroup>
 
 </Project>

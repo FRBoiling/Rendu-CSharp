@@ -18,7 +18,8 @@ public sealed class ${FullComponentName} : Entitas.IComponent {
 }
 ";
 
-        public CodeGenFile[] Generate(CodeGeneratorData[] data) {
+        public CodeGenFile[] Generate(CodeGeneratorData[] data)
+        {
             return data
                 .OfType<ComponentData>()
                 .Where(d => d.ShouldGenerateComponent())
@@ -26,9 +27,11 @@ public sealed class ${FullComponentName} : Entitas.IComponent {
                 .ToArray();
         }
 
-        CodeGenFile generate(ComponentData data) {
+        CodeGenFile generate(ComponentData data) 
+        {
             var fullComponentName = data.GetTypeName().RemoveDots();
-            return new CodeGenFile(
+            return new CodeGenFile
+            (
                 "Components" + Path.DirectorySeparatorChar +
                 fullComponentName + ".cs",
                 COMPONENT_TEMPLATE
