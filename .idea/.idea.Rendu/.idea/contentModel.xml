@@ -450,10 +450,6 @@
             <e p="DesperateDevs" t="Include">
               <e p="Compile.cs" t="Include" />
             </e>
-            <e p="Entitas" t="Include">
-              <e p="Entitas.xml" t="Include" />
-              <e p="LICENSE.txt" t="Include" />
-            </e>
           </e>
           <e p="Sources" t="Include">
             <e p="Components" t="Include">
