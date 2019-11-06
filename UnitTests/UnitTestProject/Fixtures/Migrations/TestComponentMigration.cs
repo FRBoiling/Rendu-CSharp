@@ -17,8 +17,8 @@ namespace TestProject.Fixtures
 
         public MigrationFile[] Migrate(string path)
         {
-            var names = @"Entitas.CodeGeneration.Plugins.Contexts = Test1,Test2
-Entitas.CodeGeneration.Plugins.IgnoreNamespaces = true";
+            var names = @"Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = Test1,Test2
+Entitas.DesperateDevs.CodeGeneration.Plugins.IgnoreNamespaces = true";
 
             var dataArr = TestDataGeneration.getMultipleData<TestNormalComponent>(new TestPreferences(names));
 

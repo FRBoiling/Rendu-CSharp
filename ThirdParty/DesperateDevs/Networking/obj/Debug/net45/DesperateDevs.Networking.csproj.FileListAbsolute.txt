@@ -1,0 +1,7 @@
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Bin\net45\DesperateDevs.Networking.dll
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Bin\net45\DesperateDevs.Networking.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Networking\obj\Debug\net45\DesperateDevs.Networking.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Networking\obj\Debug\net45\DesperateDevs.Networking.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Networking\obj\Debug\net45\DesperateDevs.Networking.csproj.CopyComplete
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Networking\obj\Debug\net45\DesperateDevs.Networking.dll
+D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Networking\obj\Debug\net45\DesperateDevs.Networking.pdb

@@ -1,0 +1,8 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\Entitas.Unity.Editor\bin\Debug\netstandard2.0\Entitas.Unity.Editor.deps.json
+D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\Entitas.Unity.Editor\bin\Debug\netstandard2.0\Entitas.Unity.Editor.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\Entitas.Unity.Editor\bin\Debug\netstandard2.0\Entitas.Unity.Editor.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\Entitas.Unity.Editor\obj\Debug\netstandard2.0\Entitas.Unity.Editor.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\Entitas.Unity.Editor\obj\Debug\netstandard2.0\Entitas.Unity.Editor.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\Entitas.Unity.Editor\obj\Debug\netstandard2.0\Entitas.Unity.Editor.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\Entitas.Unity.Editor\obj\Debug\netstandard2.0\Entitas.Unity.Editor.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\Entitas.Unity.Editor\obj\Debug\netstandard2.0\Entitas.Unity.Editor.pdb

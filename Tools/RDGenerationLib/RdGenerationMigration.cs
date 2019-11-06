@@ -10,8 +10,8 @@ namespace RDGenerationLib
 {
     public class RdComponentsMigration : IMigration
     {
-        private const string CONTEXTS_PREFERENCES = "Entitas.CodeGeneration.Plugins.Contexts = ${contextNames}";
-        private const string COMPONENT_PREFERENCES = "Entitas.CodeGeneration.Plugins.IgnoreNamespaces = true";
+        private const string CONTEXTS_PREFERENCES = "Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = ${contextNames}";
+        private const string COMPONENT_PREFERENCES = "Entitas.DesperateDevs.CodeGeneration.Plugins.IgnoreNamespaces = true";
 
         public string version => "0.0.1";
 

@@ -20,8 +20,8 @@ namespace TestProject
             var provider = new ComponentDataProvider(new[] {typeof(T)});
             if (preferences == null)
                 preferences = new TestPreferences(
-                    @"Entitas.CodeGeneration.Plugins.Contexts = Game, GameState
-Entitas.CodeGeneration.Plugins.IgnoreNamespaces = false");
+                    @"Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = Game, GameState
+Entitas.DesperateDevs.CodeGeneration.Plugins.IgnoreNamespaces = false");
 
             provider.Configure(preferences);
 
@@ -320,7 +320,7 @@ Entitas.CodeGeneration.Plugins.IgnoreNamespaces = false");
                     var types = new[] {typeof(NameAgeComponent), typeof(Test2ContextComponent)};
                     var provider = new ComponentDataProvider(types);
                     provider.Configure(new TestPreferences(
-                        "Entitas.CodeGeneration.Plugins.Contexts = Game, GameState"
+                        "Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = Game, GameState"
                     ));
                     var data = provider.GetData();
                     Assert.AreEqual(data.Length, types.Length);
@@ -332,7 +332,7 @@ Entitas.CodeGeneration.Plugins.IgnoreNamespaces = false");
                     var types = new[] {typeof(TestClassToGenerate), typeof(ClassToGenerateComponent)};
                     var provider = new ComponentDataProvider(types);
                     provider.Configure(new TestPreferences(
-                        "Entitas.CodeGeneration.Plugins.Contexts = Game, GameState"
+                        "Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = Game, GameState"
                     ));
                     var data = provider.GetData();
                     Assert.AreEqual(data.Length, 1);
@@ -375,7 +375,7 @@ Entitas.CodeGeneration.Plugins.IgnoreNamespaces = false");
                 ComponentData data = null;
 
                 var preferences = new TestPreferences(
-                    "Entitas.CodeGeneration.Plugins.Contexts = ConfiguredContext" + "\n"
+                    "Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = ConfiguredContext" + "\n"
                 );
 
                 type = typeof(TestNoContextComponent);

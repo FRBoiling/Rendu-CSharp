@@ -4,6 +4,626 @@
     "D:\\GitHub\\RenduECS\\Rendu-CSharp\\UnitTests\\UnitTestProject\\UnitTestProject.csproj": {}
   },
   "projects": {
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Plugins\\DesperateDevs.CodeGeneration.Plugins.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Plugins\\DesperateDevs.CodeGeneration.Plugins.csproj",
+        "projectName": "DesperateDevs.CodeGeneration.Plugins",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Plugins\\DesperateDevs.CodeGeneration.Plugins.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Plugins\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net45": {}
+      }
+    },
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\DesperateDevs.CodeGeneration.Unity.Plugins.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\DesperateDevs.CodeGeneration.Unity.Plugins.csproj",
+        "projectName": "DesperateDevs.CodeGeneration.Unity.Plugins",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\DesperateDevs.CodeGeneration.Unity.Plugins.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net45": {}
+      }
+    },
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj",
+        "projectName": "Entitas.CodeGeneration.Attributes",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net45": {}
+      }
+    },
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj",
+        "projectName": "Entitas.CodeGeneration.Plugins",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net45": {}
+      }
+    },
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj",
+        "projectName": "DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net45": {
+          "dependencies": {
+            "Unity3D.UnityEditor": {
+              "target": "Package",
+              "version": "[2018.1.6-f1, )"
+            },
+            "Unity3D.UnityEngine": {
+              "target": "Package",
+              "version": "[2018.3.5.1, )"
+            }
+          }
+        }
+      }
+    },
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj",
+        "projectName": "Entitas.Migration",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net45": {}
+      }
+    },
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj",
+        "projectName": "DesperateDevs.Unity.Editor",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net45": {
+          "dependencies": {
+            "Unity3D.UnityEditor": {
+              "target": "Package",
+              "version": "[2018.1.6-f1, )"
+            },
+            "Unity3D.UnityEngine": {
+              "target": "Package",
+              "version": "[2018.3.5.1, )"
+            }
+          }
+        }
+      }
+    },
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj",
+        "projectName": "Entitas.Unity.Editor",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity.Editor\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\RdUnity\\Assembly-CSharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\RdUnity\\Assembly-CSharp.csproj",
+        "projectName": "Assembly-CSharp",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\RdUnity\\Assembly-CSharp.csproj"
+      },
+      "frameworks": {
+        "net471": {}
+      }
+    },
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\App\\Server.App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\App\\Server.App.csproj",
+        "projectName": "Server.App",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\App\\Server.App.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\App\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45",
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          },
+          "net45": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        },
+        "net45": {}
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\Systems\\Server.Systems.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\Systems\\Server.Systems.csproj",
+        "projectName": "Server.Systems",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\Systems\\Server.Systems.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\Systems\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461",
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          },
+          "net461": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        },
+        "net461": {}
+      }
+    },
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj",
+        "projectName": "Components",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net45": {}
+      }
+    },
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj",
+        "projectName": "Generated",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net45": {}
+      }
+    },
     "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -177,6 +797,48 @@
         "net45": {}
       }
     },
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj",
+        "projectName": "DesperateDevs.Networking",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net45": {}
+      }
+    },
     "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -261,113 +923,14 @@
         "net45": {}
       }
     },
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj",
-        "projectName": "Entitas.CodeGeneration.Attributes",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj",
+        "projectName": "Entitas",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net45"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net45": {
-            "projectReferences": {
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net45": {}
-      }
-    },
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj",
-        "projectName": "Entitas.CodeGeneration.Plugins",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj",
-        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Plugins\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net45"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net45": {
-            "projectReferences": {
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj"
-              },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj"
-              },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj"
-              },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
-              },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
-              },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net45": {}
-      }
-    },
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.Migration\\Entitas.Migration.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.Migration\\Entitas.Migration.csproj",
-        "projectName": "Entitas.Migration",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.Migration\\Entitas.Migration.csproj",
-        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.Migration\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -398,14 +961,14 @@
         "net45": {}
       }
     },
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
-      "version": "1.0.0",
+    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Protobuf\\Google.Protobuf\\Google.Protobuf.csproj": {
+      "version": "3.6.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj",
-        "projectName": "Entitas",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Protobuf\\Google.Protobuf\\Google.Protobuf.csproj",
+        "projectName": "Google.Protobuf",
+        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Protobuf\\Google.Protobuf\\Google.Protobuf.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Protobuf\\Google.Protobuf\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -462,23 +1025,20 @@
         "frameworks": {
           "net45": {
             "projectReferences": {
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj"
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj"
               },
               "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
                 "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj"
               },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
-              },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
-              },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.Migration\\Entitas.Migration.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.Migration\\Entitas.Migration.csproj"
-              },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj"
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
               }
             }
           }
@@ -519,8 +1079,8 @@
         "frameworks": {
           "net45": {
             "projectReferences": {
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
               },
               "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
                 "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj"
@@ -606,11 +1166,59 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Plugins\\DesperateDevs.CodeGeneration.Plugins.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Plugins\\DesperateDevs.CodeGeneration.Plugins.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\DesperateDevs.CodeGeneration.Unity.Plugins.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\DesperateDevs.CodeGeneration.Unity.Plugins.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\RdUnity\\Assembly-CSharp.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\RdUnity\\Assembly-CSharp.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\App\\Server.App.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\App\\Server.App.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\Systems\\Server.Systems.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\Systems\\Server.Systems.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj"
+              },
               "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
                 "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj"
               },
               "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
                 "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj"
               },
               "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
                 "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
@@ -618,17 +1226,11 @@
               "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
                 "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
               },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
-              },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
-              },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.Migration\\Entitas.Migration.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.Migration\\Entitas.Migration.csproj"
-              },
               "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
                 "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Protobuf\\Google.Protobuf\\Google.Protobuf.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Protobuf\\Google.Protobuf\\Google.Protobuf.csproj"
               },
               "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj": {
                 "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj"

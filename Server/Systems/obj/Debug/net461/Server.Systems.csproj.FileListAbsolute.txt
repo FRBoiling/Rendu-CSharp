@@ -1,6 +1,5 @@
 D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\net461\Server.Systems.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Bin\Server\net461\Server.Systems.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\Server\Systems\obj\Debug\net461\Server.Systems.csprojAssemblyReference.cache
 D:\GitHub\RenduECS\Rendu-CSharp\Server\Systems\obj\Debug\net461\Server.Systems.AssemblyInfoInputs.cache
 D:\GitHub\RenduECS\Rendu-CSharp\Server\Systems\obj\Debug\net461\Server.Systems.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Server\Systems\obj\Debug\net461\Server.Systems.dll

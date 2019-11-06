@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ThirdParty\Entitas.CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj" />
+    <ProjectReference Include="..\..\Addons\CodeGeneration\Entitas.CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj" />
     <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas.csproj" />
   </ItemGroup>
 

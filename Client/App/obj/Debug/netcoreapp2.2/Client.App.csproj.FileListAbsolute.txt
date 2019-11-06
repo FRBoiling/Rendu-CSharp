@@ -3,6 +3,7 @@ D:\GitHub\RenduECS\Rendu-CSharp\Bin\Client\netcoreapp2.2\Client.App.runtimeconfi
 D:\GitHub\RenduECS\Rendu-CSharp\Bin\Client\netcoreapp2.2\Client.App.runtimeconfig.dev.json
 D:\GitHub\RenduECS\Rendu-CSharp\Bin\Client\netcoreapp2.2\Client.App.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Bin\Client\netcoreapp2.2\Client.App.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Client\App\obj\Debug\netcoreapp2.2\Client.App.csprojAssemblyReference.cache
 D:\GitHub\RenduECS\Rendu-CSharp\Client\App\obj\Debug\netcoreapp2.2\Client.App.AssemblyInfoInputs.cache
 D:\GitHub\RenduECS\Rendu-CSharp\Client\App\obj\Debug\netcoreapp2.2\Client.App.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Client\App\obj\Debug\netcoreapp2.2\Client.App.dll

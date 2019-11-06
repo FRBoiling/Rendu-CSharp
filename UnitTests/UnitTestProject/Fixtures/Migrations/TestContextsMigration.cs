@@ -16,7 +16,7 @@ namespace TestProject.Fixtures
 
         public MigrationFile[] Migrate(string path)
         {
-            var names = "Entitas.CodeGeneration.Plugins.Contexts = Test1,Test2";
+            var names = "Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = Test1,Test2";
             var provider = new ContextDataProvider();
             provider.Configure(new TestPreferences(names));
 

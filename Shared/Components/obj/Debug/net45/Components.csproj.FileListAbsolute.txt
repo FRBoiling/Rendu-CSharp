@@ -1,8 +1,8 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\Components\obj\Debug\net45\Components.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\Components\obj\Debug\net45\Components.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\Bin\net45\Components.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\Bin\net45\Components.pdb
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\Components\obj\Debug\net45\Components.csprojAssemblyReference.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Components\obj\Debug\net45\Components.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Components\obj\Debug\net45\Components.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\Components\obj\Debug\net45\Components.csproj.CopyComplete
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\Components\obj\Debug\net45\Components.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Shared\Components\obj\Debug\net45\Components.pdb

@@ -15,9 +15,6 @@
       "Entitas.CodeGeneration.Attributes/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "Entitas": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/Entitas.CodeGeneration.Attributes.dll": {}
         },
@@ -35,12 +32,13 @@
     },
     "Entitas.CodeGeneration.Attributes/1.0.0": {
       "type": "project",
-      "path": "../../ThirdParty/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj",
-      "msbuildProject": "../../ThirdParty/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj"
+      "path": "../../Addons/CodeGeneration/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj",
+      "msbuildProject": "../../Addons/CodeGeneration/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.5": [
+      "Entitas >= 1.0.0",
       "Entitas.CodeGeneration.Attributes >= 1.0.0"
     ]
   },
@@ -74,8 +72,11 @@
       "frameworks": {
         "net45": {
           "projectReferences": {
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
+            },
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj"
             }
           }
         }

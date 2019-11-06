@@ -15,8 +15,8 @@ namespace TestProject.Fixtures.Generation
             var provider = new ComponentDataProvider(new[] {typeof(T)});
             if (preferences == null)
                 preferences = new TestPreferences(
-                    @"Entitas.CodeGeneration.Plugins.Contexts = Test1, Test2
-Entitas.CodeGeneration.Plugins.IgnoreNamespaces = true");
+                    @"Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = Test1, Test2
+Entitas.DesperateDevs.CodeGeneration.Plugins.IgnoreNamespaces = true");
             provider.Configure(preferences);
 
             return (ComponentData[]) provider.GetData();

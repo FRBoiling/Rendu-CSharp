@@ -1,8 +1,0 @@
-D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Bin\net45\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.dll
-D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Bin\net45\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\CodeGeneration.CodeGenerator.Unity.Editor\obj\Debug\net45\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csprojAssemblyReference.cache
-D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\CodeGeneration.CodeGenerator.Unity.Editor\obj\Debug\net45\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\CodeGeneration.CodeGenerator.Unity.Editor\obj\Debug\net45\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.AssemblyInfo.cs
-D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\CodeGeneration.CodeGenerator.Unity.Editor\obj\Debug\net45\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj.CopyComplete
-D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\CodeGeneration.CodeGenerator.Unity.Editor\obj\Debug\net45\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.dll
-D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\CodeGeneration.CodeGenerator.Unity.Editor\obj\Debug\net45\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.pdb
