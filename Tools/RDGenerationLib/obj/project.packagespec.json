@@ -19,23 +19,20 @@
     "frameworks": {
       "net45": {
         "projectReferences": {
-          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj"
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
+          },
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
+          },
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj"
           },
           "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
             "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj"
           },
-          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
-          },
-          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
-          },
-          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.Migration\\Entitas.Migration.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas.Migration\\Entitas.Migration.csproj"
-          },
-          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
-            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj"
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
           }
         }
       }

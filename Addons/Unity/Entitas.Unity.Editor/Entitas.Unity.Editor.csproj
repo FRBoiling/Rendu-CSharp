@@ -1,8 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
-        <RootNamespace>Entitas.Unity</RootNamespace>
+        <TargetFramework>net45</TargetFramework>
     </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <OutputPath>..\Bin\</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <OutputPath>..\Bin\</OutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Unity3D.UnityEditor" Version="2018.1.6-f1" />
+      <PackageReference Include="Unity3D.UnityEngine" Version="2018.3.5.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\ThirdParty\DesperateDevs\Serialization\DesperateDevs.Serialization.csproj" />
+      <ProjectReference Include="..\..\..\ThirdParty\Entitas\Entitas.csproj" />
+      <ProjectReference Include="..\DesperateDevs.Unity.Editor\DesperateDevs.Unity.Editor.csproj" />
+    </ItemGroup>
 
 </Project>

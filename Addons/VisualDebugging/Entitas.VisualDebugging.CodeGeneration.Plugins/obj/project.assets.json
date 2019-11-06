@@ -1,0 +1,229 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5": {
+      "DesperateDevs.Analytics/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "DesperateDevs.Logging": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.Analytics.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Analytics.dll": {}
+        }
+      },
+      "DesperateDevs.CodeGeneration/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "DesperateDevs.Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.CodeGeneration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.CodeGeneration.dll": {}
+        }
+      },
+      "DesperateDevs.CodeGeneration.CodeGenerator/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "DesperateDevs.Analytics": "1.0.0",
+          "DesperateDevs.CodeGeneration": "1.0.0",
+          "DesperateDevs.Serialization": "1.0.0",
+          "DesperateDevs.Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.CodeGeneration.CodeGenerator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.CodeGeneration.CodeGenerator.dll": {}
+        }
+      },
+      "DesperateDevs.Logging/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "compile": {
+          "bin/placeholder/DesperateDevs.Logging.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Logging.dll": {}
+        }
+      },
+      "DesperateDevs.Serialization/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "DesperateDevs.Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.Serialization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Serialization.dll": {}
+        }
+      },
+      "DesperateDevs.Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "DesperateDevs.Logging": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Utils.dll": {}
+        }
+      },
+      "Entitas/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "compile": {
+          "bin/placeholder/Entitas.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitas.dll": {}
+        }
+      },
+      "Entitas.CodeGeneration.Attributes/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "compile": {
+          "bin/placeholder/Entitas.CodeGeneration.Attributes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitas.CodeGeneration.Attributes.dll": {}
+        }
+      },
+      "Entitas.CodeGeneration.Plugins/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "DesperateDevs.Analytics": "1.0.0",
+          "DesperateDevs.CodeGeneration": "1.0.0",
+          "DesperateDevs.CodeGeneration.CodeGenerator": "1.0.0",
+          "DesperateDevs.Utils": "1.0.0",
+          "Entitas": "1.0.0",
+          "Entitas.CodeGeneration.Attributes": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Entitas.CodeGeneration.Plugins.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitas.CodeGeneration.Plugins.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DesperateDevs.Analytics/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/DesperateDevs/Analytics/DesperateDevs.Analytics.csproj",
+      "msbuildProject": "../../../ThirdParty/DesperateDevs/Analytics/DesperateDevs.Analytics.csproj"
+    },
+    "DesperateDevs.CodeGeneration/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/DesperateDevs/CodeGeneration/DesperateDevs.CodeGeneration.csproj",
+      "msbuildProject": "../../../ThirdParty/DesperateDevs/CodeGeneration/DesperateDevs.CodeGeneration.csproj"
+    },
+    "DesperateDevs.CodeGeneration.CodeGenerator/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/DesperateDevs/CodeGeneration.CodeGenerator/DesperateDevs.CodeGeneration.CodeGenerator.csproj",
+      "msbuildProject": "../../../ThirdParty/DesperateDevs/CodeGeneration.CodeGenerator/DesperateDevs.CodeGeneration.CodeGenerator.csproj"
+    },
+    "DesperateDevs.Logging/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/DesperateDevs/Logging/DesperateDevs.Logging.csproj",
+      "msbuildProject": "../../../ThirdParty/DesperateDevs/Logging/DesperateDevs.Logging.csproj"
+    },
+    "DesperateDevs.Serialization/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/DesperateDevs/Serialization/DesperateDevs.Serialization.csproj",
+      "msbuildProject": "../../../ThirdParty/DesperateDevs/Serialization/DesperateDevs.Serialization.csproj"
+    },
+    "DesperateDevs.Utils/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/DesperateDevs/Utils/DesperateDevs.Utils.csproj",
+      "msbuildProject": "../../../ThirdParty/DesperateDevs/Utils/DesperateDevs.Utils.csproj"
+    },
+    "Entitas/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/Entitas/Entitas.csproj",
+      "msbuildProject": "../../../ThirdParty/Entitas/Entitas.csproj"
+    },
+    "Entitas.CodeGeneration.Attributes/1.0.0": {
+      "type": "project",
+      "path": "../../CodeGeneration/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj",
+      "msbuildProject": "../../CodeGeneration/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj"
+    },
+    "Entitas.CodeGeneration.Plugins/1.0.0": {
+      "type": "project",
+      "path": "../../CodeGeneration/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj",
+      "msbuildProject": "../../CodeGeneration/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5": [
+      "DesperateDevs.CodeGeneration >= 1.0.0",
+      "DesperateDevs.Utils >= 1.0.0",
+      "Entitas.CodeGeneration.Plugins >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\WanXin\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.CodeGeneration.Plugins\\Entitas.VisualDebugging.CodeGeneration.Plugins.csproj",
+      "projectName": "Entitas.VisualDebugging.CodeGeneration.Plugins",
+      "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.CodeGeneration.Plugins\\Entitas.VisualDebugging.CodeGeneration.Plugins.csproj",
+      "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.CodeGeneration.Plugins\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net45"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net45": {
+          "projectReferences": {
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
+            },
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj"
+            },
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net45": {}
+    }
+  }
+}

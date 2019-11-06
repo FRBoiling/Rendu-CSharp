@@ -355,15 +355,25 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "net45"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "projectReferences": {}
+          "net45": {
+            "projectReferences": {
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
+              },
+              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
+                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -373,25 +383,17 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
+        "net45": {
           "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
+            "Unity3D.UnityEditor": {
               "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
+              "version": "[2018.1.6-f1, )"
+            },
+            "Unity3D.UnityEngine": {
+              "target": "Package",
+              "version": "[2018.3.5.1, )"
             }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true
+          }
         }
       }
     },

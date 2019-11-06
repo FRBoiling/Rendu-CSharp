@@ -36,7 +36,6 @@
             <e p="WriteToDiskPostProcessor.cs" t="Include" />
           </e>
           <e p="DesperateDevs.CodeGeneration.Unity.Plugins" t="IncludeRecursive">
-            <e p="Bin" t="ExcludeRecursive" />
             <e p="DesperateDevs.CodeGeneration.Unity.Plugins.csproj" t="IncludeRecursive" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
@@ -226,6 +225,17 @@
               </e>
             </e>
           </e>
+          <e p="Entitas.Migration.Unity.Editor" t="IncludeRecursive">
+            <e p="Entitas.Migration.Unity.Editor.csproj" t="IncludeRecursive" />
+            <e p="MigrationWindow.cs" t="Include" />
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="net45" t="Include">
+                  <e p="Entitas.Migration.Unity.Editor.AssemblyInfo.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
         </e>
         <e p="Unity" t="Include">
           <e p="Bin" t="ExcludeRecursive" />
@@ -246,19 +256,153 @@
             <e p="ScriptingDefineSymbols.cs" t="Include" />
             <e p="Styles.cs" t="Include" />
           </e>
-          <e p="Entitas.Unity.Editor" t="IncludeRecursive">
-            <e p="Bin" t="ExcludeRecursive" />
-            <e p="Entitas.Unity.Editor.csproj" t="IncludeRecursive" />
+          <e p="Entitas.Unity" t="IncludeRecursive">
+            <e p="Entitas.Unity.csproj" t="IncludeRecursive" />
+            <e p="EntityLink.cs" t="Include" />
+            <e p="EntityLinkExtension.cs" t="Include" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
-                <e p="netstandard2.0" t="Include">
-                  <e p="Entitas.Unity.Editor.AssemblyInfo.cs" t="Include" />
+                <e p="net45" t="Include">
+                  <e p="Entitas.Unity.AssemblyInfo.cs" t="Include" />
                 </e>
               </e>
             </e>
           </e>
+          <e p="Entitas.Unity.Editor" t="IncludeRecursive">
+            <e p="CheckForUpdates.cs" t="Include" />
+            <e p="Entitas.Unity.Editor.csproj" t="IncludeRecursive" />
+            <e p="EntitasFeedback.cs" t="Include" />
+            <e p="EntitasMenuItemPriorities.cs" t="Include" />
+            <e p="EntitasMenuItems.cs" t="Include" />
+            <e p="EntitasPreferencesDrawer.cs" t="Include" />
+            <e p="EntitasPreferencesWindow.cs" t="Include" />
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="net45" t="Include">
+                  <e p="Entitas.Unity.Editor.AssemblyInfo.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="UpdateInfo.cs" t="Include" />
+            <e p="UpdateState.cs" t="Include" />
+          </e>
         </e>
-        <e p="VisualDebugging" t="Include" />
+        <e p="VisualDebugging" t="Include">
+          <e p="Bin" t="ExcludeRecursive" />
+          <e p="Entitas.VisualDebugging.CodeGeneration.Plugins" t="IncludeRecursive">
+            <e p="ContextObserverGenerator.cs" t="Include" />
+            <e p="Entitas.VisualDebugging.CodeGeneration.Plugins.csproj" t="IncludeRecursive" />
+            <e p="FeatureClassGenerator.cs" t="Include" />
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="net45" t="Include">
+                  <e p="Entitas.VisualDebugging.CodeGeneration.Plugins.AssemblyInfo.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Entitas.VisualDebugging.Unity" t="IncludeRecursive">
+            <e p="ContextObserver" t="Include">
+              <e p="ContextObserver.cs" t="Include" />
+              <e p="ContextObserverBehaviour.cs" t="Include" />
+              <e p="ContextObserverExtension.cs" t="Include" />
+            </e>
+            <e p="DebugSystems" t="Include">
+              <e p="DebugSystems.cs" t="Include" />
+              <e p="DebugSystemsBehaviour.cs" t="Include" />
+              <e p="SystemInfo.cs" t="Include" />
+            </e>
+            <e p="Entitas.VisualDebugging.Unity.csproj" t="IncludeRecursive" />
+            <e p="Entity" t="Include">
+              <e p="DontDrawComponentAttribute.cs" t="Include" />
+              <e p="EntityBehaviour.cs" t="Include" />
+            </e>
+            <e p="GameObjectDestroyExtension.cs" t="Include" />
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="net45" t="Include">
+                  <e p="Entitas.VisualDebugging.Unity.AssemblyInfo.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Entitas.VisualDebugging.Unity.Editor" t="IncludeRecursive">
+            <e p="ContextObserver" t="Include">
+              <e p="ContextObserverInspector.cs" t="Include" />
+            </e>
+            <e p="DebugSystems" t="Include">
+              <e p="DebugSystemsInspector.cs" t="Include" />
+            </e>
+            <e p="Entitas.VisualDebugging.Unity.Editor.csproj" t="IncludeRecursive" />
+            <e p="EntitasHierarchyIcon.cs" t="Include" />
+            <e p="EntitasStats.cs" t="Include" />
+            <e p="Entity" t="Include">
+              <e p="DefaultInstanceCreator" t="Include">
+                <e p="DefaultArrayCreator.cs" t="Include" />
+                <e p="DefaultStringCreator.cs" t="Include" />
+                <e p="IDefaultInstanceCreator.cs" t="Include" />
+              </e>
+              <e p="Entity" t="Include">
+                <e p="EntityDrawer.cs" t="Include" />
+                <e p="EntityDrawerState.cs" t="Include" />
+                <e p="EntityInspector.cs" t="Include" />
+              </e>
+              <e p="IComponentDrawer.cs" t="Include" />
+              <e p="TypeDrawer" t="Include">
+                <e p="AnimationCurveTypeDrawer.cs" t="Include" />
+                <e p="ArrayTypeDrawer.cs" t="Include" />
+                <e p="BoolTypeDrawer.cs" t="Include" />
+                <e p="BoundsTypeDrawer.cs" t="Include" />
+                <e p="CharTypeDrawer.cs" t="Include" />
+                <e p="ColorTypeDrawer.cs" t="Include" />
+                <e p="DateTimeTypeDrawer.cs" t="Include" />
+                <e p="DictionaryTypeDrawer.cs" t="Include" />
+                <e p="DoubleTypeDrawer.cs" t="Include" />
+                <e p="EnumTypeDrawer.cs" t="Include" />
+                <e p="FloatTypeDrawer.cs" t="Include" />
+                <e p="HashSetTypeDrawer.cs" t="Include" />
+                <e p="IntTypeDrawer.cs" t="Include" />
+                <e p="ITypeDrawer.cs" t="Include" />
+                <e p="ListTypeDrawer.cs" t="Include" />
+                <e p="RectTypeDrawer.cs" t="Include" />
+                <e p="StringTypeDrawer.cs" t="Include" />
+                <e p="UnityObjectTypeDrawer.cs" t="Include" />
+                <e p="Vector2TypeDrawer.cs" t="Include" />
+                <e p="Vector3TypeDrawer.cs" t="Include" />
+                <e p="Vector4TypeDrawer.cs" t="Include" />
+              </e>
+            </e>
+            <e p="EntityLinkInspector.cs" t="Include" />
+            <e p="Images" t="Include">
+              <e p="EntitasContextErrorHierarchyIcon.png" t="Include" />
+              <e p="EntitasContextErrorHierarchyIcon.png.meta" t="Include" />
+              <e p="EntitasContextHierarchyIcon.png" t="Include" />
+              <e p="EntitasContextHierarchyIcon.png.meta" t="Include" />
+              <e p="EntitasEntityErrorHierarchyIcon.png" t="Include" />
+              <e p="EntitasEntityErrorHierarchyIcon.png.meta" t="Include" />
+              <e p="EntitasEntityHierarchyIcon.png" t="Include" />
+              <e p="EntitasEntityHierarchyIcon.png.meta" t="Include" />
+              <e p="EntitasEntityLinkHierarchyIcon.png" t="Include" />
+              <e p="EntitasEntityLinkHierarchyIcon.png.meta" t="Include" />
+              <e p="EntitasEntityLinkWarnHierarchyIcon.png" t="Include" />
+              <e p="EntitasEntityLinkWarnHierarchyIcon.png.meta" t="Include" />
+              <e p="EntitasSystemsHierarchyIcon.png" t="Include" />
+              <e p="EntitasSystemsHierarchyIcon.png.meta" t="Include" />
+              <e p="EntitasSystemsWarnHierarchyIcon.png" t="Include" />
+              <e p="EntitasSystemsWarnHierarchyIcon.png.meta" t="Include" />
+            </e>
+            <e p="obj" t="ExcludeRecursive">
+              <e p="Debug" t="Include">
+                <e p="net45" t="Include">
+                  <e p="Entitas.VisualDebugging.Unity.Editor.AssemblyInfo.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="VisualDebuggingConfig.cs" t="Include" />
+            <e p="VisualDebuggingEntitasExtension.cs" t="Include" />
+            <e p="VisualDebuggingPreferencesDrawer.cs" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="Bin" t="ExcludeRecursive" />
       <e p="Client" t="Include">

@@ -1,0 +1,60 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.Unity.Editor\\Entitas.VisualDebugging.Unity.Editor.csproj",
+    "projectName": "Entitas.VisualDebugging.Unity.Editor",
+    "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.Unity.Editor\\Entitas.VisualDebugging.Unity.Editor.csproj",
+    "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.Unity.Editor\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "net45"
+    ],
+    "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "net45": {
+        "projectReferences": {
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
+          },
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj"
+          },
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity\\Entitas.Unity.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity\\Entitas.Unity.csproj"
+          },
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.CodeGeneration.Plugins\\Entitas.VisualDebugging.CodeGeneration.Plugins.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.CodeGeneration.Plugins\\Entitas.VisualDebugging.CodeGeneration.Plugins.csproj"
+          },
+          "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.Unity\\Entitas.VisualDebugging.Unity.csproj": {
+            "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.Unity\\Entitas.VisualDebugging.Unity.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "net45": {
+      "dependencies": {
+        "Unity3D.UnityEditor": {
+          "target": "Package",
+          "version": "[2018.1.6-f1, )"
+        },
+        "Unity3D.UnityEngine": {
+          "target": "Package",
+          "version": "[2018.3.5.1, )"
+        }
+      }
+    }
+  }
+}

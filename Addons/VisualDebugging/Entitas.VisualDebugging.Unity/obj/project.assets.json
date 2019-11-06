@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5": {
+      "Unity3D.UnityEngine/2018.3.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/UnityEngine.dll": {}
+        },
+        "runtime": {
+          "lib/UnityEngine.dll": {}
+        }
+      },
+      "Unity3D.UnityEngine.UI/2018.3.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Unity3D.UnityEngine": "[2018.3.5.1]"
+        },
+        "compile": {
+          "lib/UnityEngine.UI.dll": {}
+        },
+        "runtime": {
+          "lib/UnityEngine.UI.dll": {}
+        }
+      },
+      "Entitas/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "compile": {
+          "bin/placeholder/Entitas.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitas.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Unity3D.UnityEngine/2018.3.5.1": {
+      "sha512": "63ZCYwGdoBCmsJCUI6dodSY+1TrU/7lTDmfF+492Z6nn8my30E3sb5HXLe7qm7MLvBIcKz9TCy114yu5VGycKA==",
+      "type": "package",
+      "path": "unity3d.unityengine/2018.3.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/UnityEngine.dll",
+        "lib/UnityEngine.xml",
+        "unity3d.unityengine.2018.3.5.1.nupkg.sha512",
+        "unity3d.unityengine.nuspec"
+      ]
+    },
+    "Unity3D.UnityEngine.UI/2018.3.5.1": {
+      "sha512": "8trOQSsm9mFyICzc6IDxLitAF3M/SOn39wHitHcKa4gXSfJhK5Ri51d40rrqb5UF1I6w2nIDXyWMUP/DZX7YFw==",
+      "type": "package",
+      "path": "unity3d.unityengine.ui/2018.3.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/UnityEngine.UI.dll",
+        "lib/UnityEngine.UI.xml",
+        "unity3d.unityengine.ui.2018.3.5.1.nupkg.sha512",
+        "unity3d.unityengine.ui.nuspec"
+      ]
+    },
+    "Entitas/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/Entitas/Entitas.csproj",
+      "msbuildProject": "../../../ThirdParty/Entitas/Entitas.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5": [
+      "Entitas >= 1.0.0",
+      "Unity3D.UnityEngine >= 2018.3.5.1",
+      "Unity3D.UnityEngine.UI >= 2018.3.5.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\WanXin\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.Unity\\Entitas.VisualDebugging.Unity.csproj",
+      "projectName": "Entitas.VisualDebugging.Unity",
+      "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.Unity\\Entitas.VisualDebugging.Unity.csproj",
+      "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.Unity\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net45"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net45": {
+          "projectReferences": {
+            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
+              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net45": {
+        "dependencies": {
+          "Unity3D.UnityEngine": {
+            "target": "Package",
+            "version": "[2018.3.5.1, )"
+          },
+          "Unity3D.UnityEngine.UI": {
+            "target": "Package",
+            "version": "[2018.3.5.1, )"
+          }
+        }
+      }
+    }
+  }
+}

@@ -14,12 +14,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\CodeGeneration.CodeGenerator\DesperateDevs.CodeGeneration.CodeGenerator.csproj" />
+      <ProjectReference Include="..\..\Addons\CodeGeneration\Entitas.CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj" />
+      <ProjectReference Include="..\..\Addons\CodeGeneration\Entitas.CodeGeneration.Plugins\Entitas.CodeGeneration.Plugins.csproj" />
+      <ProjectReference Include="..\..\Addons\Migration\Entitas.Migration\Entitas.Migration.csproj" />
       <ProjectReference Include="..\..\ThirdParty\DesperateDevs\CodeGeneration\DesperateDevs.CodeGeneration.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\Entitas.CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\Entitas.CodeGeneration.Plugins\Entitas.CodeGeneration.Plugins.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\Entitas.Migration\Entitas.Migration.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas.csproj" />
+      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\Serialization\DesperateDevs.Serialization.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1783,7 +1783,7 @@
       },
       "Entitas.Unity.Editor/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETFramework,Version=v4.5",
         "compile": {
           "bin/placeholder/Entitas.Unity.Editor.dll": {}
         },

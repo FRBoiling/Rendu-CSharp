@@ -4,3 +4,6 @@ D:\GitHub\RenduECS\Rendu-CSharp\Addons\CodeGeneration\DesperateDevs.CodeGenerati
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Unity.Plugins\obj\Debug\net45\DesperateDevs.CodeGeneration.Unity.Plugins.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Unity.Plugins\obj\Debug\net45\DesperateDevs.CodeGeneration.Unity.Plugins.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Unity.Plugins\obj\Debug\net45\DesperateDevs.CodeGeneration.Unity.Plugins.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Addons\CodeGeneration\Bin\net45\DesperateDevs.CodeGeneration.Unity.Plugins.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Addons\CodeGeneration\Bin\net45\DesperateDevs.CodeGeneration.Unity.Plugins.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Unity.Plugins\obj\Debug\net45\DesperateDevs.CodeGeneration.Unity.Plugins.csprojAssemblyReference.cache

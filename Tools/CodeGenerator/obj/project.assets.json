@@ -204,13 +204,13 @@
     },
     "Entitas.CodeGeneration.Attributes/1.0.0": {
       "type": "project",
-      "path": "../../ThirdParty/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj",
-      "msbuildProject": "../../ThirdParty/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj"
+      "path": "../../Addons/CodeGeneration/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj",
+      "msbuildProject": "../../Addons/CodeGeneration/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj"
     },
     "Entitas.CodeGeneration.Plugins/1.0.0": {
       "type": "project",
-      "path": "../../ThirdParty/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj",
-      "msbuildProject": "../../ThirdParty/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj"
+      "path": "../../Addons/CodeGeneration/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj",
+      "msbuildProject": "../../Addons/CodeGeneration/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj"
     },
     "RDGenerationLib/1.0.0": {
       "type": "project",
