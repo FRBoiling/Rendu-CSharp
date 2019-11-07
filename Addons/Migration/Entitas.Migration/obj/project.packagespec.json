@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj",
+    "projectUniqueName": "D:\\GitHub\\RenduEcs\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj",
     "projectName": "Entitas.Migration",
-    "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj",
-    "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\obj\\",
+    "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj",
+    "outputPath": "D:\\GitHub\\RenduEcs\\Addons\\Migration\\Entitas.Migration\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

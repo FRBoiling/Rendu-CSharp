@@ -156,11 +156,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj",
+      "projectUniqueName": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj",
       "projectName": "Entitas.Unity.Editor",
-      "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj",
+      "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj",
       "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity.Editor\\obj\\",
+      "outputPath": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\Entitas.Unity.Editor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -179,14 +179,14 @@
       "frameworks": {
         "net45": {
           "projectReferences": {
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj"
+            "D:\\GitHub\\RenduEcs\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj"
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas.csproj"
             }
           }
         }

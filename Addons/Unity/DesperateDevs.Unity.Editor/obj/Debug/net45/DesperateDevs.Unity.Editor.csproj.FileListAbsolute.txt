@@ -30,3 +30,11 @@ D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\DesperateDevs.Unity.Editor\obj\Debu
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\DesperateDevs.Unity.Editor\obj\Debug\net45\DesperateDevs.Unity.Editor.csproj.CopyComplete
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\DesperateDevs.Unity.Editor\obj\Debug\net45\DesperateDevs.Unity.Editor.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\DesperateDevs.Unity.Editor\obj\Debug\net45\DesperateDevs.Unity.Editor.pdb
+D:\GitHub\RenduECS\Addons\Unity\Bin\net45\DesperateDevs.Unity.Editor.dll
+D:\GitHub\RenduECS\Addons\Unity\Bin\net45\DesperateDevs.Unity.Editor.pdb
+D:\GitHub\RenduECS\Addons\Unity\DesperateDevs.Unity.Editor\obj\Debug\net45\DesperateDevs.Unity.Editor.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Addons\Unity\DesperateDevs.Unity.Editor\obj\Debug\net45\DesperateDevs.Unity.Editor.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Addons\Unity\DesperateDevs.Unity.Editor\obj\Debug\net45\DesperateDevs.Unity.Editor.AssemblyInfo.cs
+D:\GitHub\RenduECS\Addons\Unity\DesperateDevs.Unity.Editor\obj\Debug\net45\DesperateDevs.Unity.Editor.csproj.CopyComplete
+D:\GitHub\RenduECS\Addons\Unity\DesperateDevs.Unity.Editor\obj\Debug\net45\DesperateDevs.Unity.Editor.dll
+D:\GitHub\RenduECS\Addons\Unity\DesperateDevs.Unity.Editor\obj\Debug\net45\DesperateDevs.Unity.Editor.pdb

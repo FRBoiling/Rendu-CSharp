@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj": {}
+    "D:\\GitHub\\RenduEcs\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj": {
+    "D:\\GitHub\\RenduEcs\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduEcs\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj",
         "projectName": "DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj",
+        "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduEcs\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,14 +30,14 @@
         "frameworks": {
           "net45": {
             "projectReferences": {
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj"
+              "D:\\GitHub\\RenduEcs\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj"
               },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj"
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj"
               },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj"
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj"
               }
             }
           }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj": {
+    "D:\\GitHub\\RenduEcs\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj",
         "projectName": "DesperateDevs.Unity.Editor",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj",
+        "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\DesperateDevs.Unity.Editor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -89,11 +89,11 @@
         "frameworks": {
           "net45": {
             "projectReferences": {
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
               },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
               }
             }
           }
@@ -119,14 +119,14 @@
         }
       }
     },
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj": {
+    "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj",
         "projectName": "DesperateDevs.Analytics",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj",
+        "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Analytics\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -145,8 +145,8 @@
         "frameworks": {
           "net45": {
             "projectReferences": {
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj"
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj"
               }
             }
           }
@@ -161,14 +161,14 @@
         "net45": {}
       }
     },
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
+    "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj",
         "projectName": "DesperateDevs.CodeGeneration.CodeGenerator",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj",
+        "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -187,17 +187,17 @@
         "frameworks": {
           "net45": {
             "projectReferences": {
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj"
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj"
               },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj"
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj"
               },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
               },
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
               }
             }
           }
@@ -212,14 +212,14 @@
         "net45": {}
       }
     },
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
+    "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj",
         "projectName": "DesperateDevs.CodeGeneration",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj",
+        "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -238,8 +238,8 @@
         "frameworks": {
           "net45": {
             "projectReferences": {
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
               }
             }
           }
@@ -254,14 +254,14 @@
         "net45": {}
       }
     },
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
+    "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj",
         "projectName": "DesperateDevs.Logging",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj",
+        "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Logging\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -292,14 +292,14 @@
         "net45": {}
       }
     },
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj": {
+    "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj",
         "projectName": "DesperateDevs.Networking",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj",
+        "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Networking\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -318,8 +318,8 @@
         "frameworks": {
           "net45": {
             "projectReferences": {
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj"
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj"
               }
             }
           }
@@ -334,14 +334,14 @@
         "net45": {}
       }
     },
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
+    "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj",
         "projectName": "DesperateDevs.Serialization",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj",
+        "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Serialization\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -360,8 +360,8 @@
         "frameworks": {
           "net45": {
             "projectReferences": {
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
               }
             }
           }
@@ -376,14 +376,14 @@
         "net45": {}
       }
     },
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
+    "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj",
         "projectName": "DesperateDevs.Utils",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj",
+        "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -402,8 +402,8 @@
         "frameworks": {
           "net45": {
             "projectReferences": {
-              "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
-                "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj"
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj"
               }
             }
           }

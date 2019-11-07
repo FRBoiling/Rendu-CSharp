@@ -14,3 +14,11 @@ D:\GitHub\RenduECS\Rendu-CSharp\Addons\CodeGeneration\DesperateDevs.CodeGenerati
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Plugins\obj\Debug\net45\DesperateDevs.CodeGeneration.Plugins.csproj.CopyComplete
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Plugins\obj\Debug\net45\DesperateDevs.CodeGeneration.Plugins.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Plugins\obj\Debug\net45\DesperateDevs.CodeGeneration.Plugins.pdb
+D:\GitHub\RenduECS\Addons\CodeGeneration\Bin\net45\DesperateDevs.CodeGeneration.Plugins.dll
+D:\GitHub\RenduECS\Addons\CodeGeneration\Bin\net45\DesperateDevs.CodeGeneration.Plugins.pdb
+D:\GitHub\RenduECS\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Plugins\obj\Debug\net45\DesperateDevs.CodeGeneration.Plugins.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Plugins\obj\Debug\net45\DesperateDevs.CodeGeneration.Plugins.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Plugins\obj\Debug\net45\DesperateDevs.CodeGeneration.Plugins.AssemblyInfo.cs
+D:\GitHub\RenduECS\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Plugins\obj\Debug\net45\DesperateDevs.CodeGeneration.Plugins.csproj.CopyComplete
+D:\GitHub\RenduECS\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Plugins\obj\Debug\net45\DesperateDevs.CodeGeneration.Plugins.dll
+D:\GitHub\RenduECS\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Plugins\obj\Debug\net45\DesperateDevs.CodeGeneration.Plugins.pdb

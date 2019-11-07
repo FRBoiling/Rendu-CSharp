@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\Systems\\Server.Systems.csproj",
+    "projectUniqueName": "D:\\GitHub\\RenduEcs\\Server\\Systems\\Server.Systems.csproj",
     "projectName": "Server.Systems",
-    "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\Systems\\Server.Systems.csproj",
-    "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\Systems\\obj\\",
+    "projectPath": "D:\\GitHub\\RenduEcs\\Server\\Systems\\Server.Systems.csproj",
+    "outputPath": "D:\\GitHub\\RenduEcs\\Server\\Systems\\obj\\",
     "projectStyle": "PackageReference",
     "crossTargeting": true,
     "fallbackFolders": [

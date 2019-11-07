@@ -25,36 +25,6 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
-      },
-      "Entitas.CodeGeneration.Attributes/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "compile": {
-          "bin/placeholder/Entitas.CodeGeneration.Attributes.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entitas.CodeGeneration.Attributes.dll": {}
-        }
-      },
-      "Entitas.CodeGeneration.Plugins/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "compile": {
-          "bin/placeholder/Entitas.CodeGeneration.Plugins.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entitas.CodeGeneration.Plugins.dll": {}
-        }
-      },
-      "RDGenerationLib/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "compile": {
-          "bin/placeholder/RDGenerationLib.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/RDGenerationLib.dll": {}
-        }
       }
     }
   },
@@ -201,29 +171,11 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
-    },
-    "Entitas.CodeGeneration.Attributes/1.0.0": {
-      "type": "project",
-      "path": "../../Addons/CodeGeneration/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj",
-      "msbuildProject": "../../Addons/CodeGeneration/Entitas.CodeGeneration.Attributes/Entitas.CodeGeneration.Attributes.csproj"
-    },
-    "Entitas.CodeGeneration.Plugins/1.0.0": {
-      "type": "project",
-      "path": "../../Addons/CodeGeneration/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj",
-      "msbuildProject": "../../Addons/CodeGeneration/Entitas.CodeGeneration.Plugins/Entitas.CodeGeneration.Plugins.csproj"
-    },
-    "RDGenerationLib/1.0.0": {
-      "type": "project",
-      "path": "../RDGenerationLib/RDGenerationLib.csproj",
-      "msbuildProject": "../RDGenerationLib/RDGenerationLib.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Entitas.CodeGeneration.Attributes >= 1.0.0",
-      "Entitas.CodeGeneration.Plugins >= 1.0.0",
-      "NETStandard.Library >= 2.0.3",
-      "RDGenerationLib >= 1.0.0"
+      "NETStandard.Library >= 2.0.3"
     ]
   },
   "packageFolders": {
@@ -233,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\CodeGenerator\\CodeGenerator.csproj",
+      "projectUniqueName": "D:\\GitHub\\RenduEcs\\Tools\\CodeGenerator\\CodeGenerator.csproj",
       "projectName": "CodeGenerator",
-      "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\CodeGenerator\\CodeGenerator.csproj",
+      "projectPath": "D:\\GitHub\\RenduEcs\\Tools\\CodeGenerator\\CodeGenerator.csproj",
       "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\CodeGenerator\\obj\\",
+      "outputPath": "D:\\GitHub\\RenduEcs\\Tools\\CodeGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -255,17 +207,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
-            },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\ThirdParty\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
-            },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

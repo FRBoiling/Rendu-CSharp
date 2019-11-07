@@ -6,3 +6,11 @@ D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\Entitas.Unity.Editor\obj\Debug\net4
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\Entitas.Unity.Editor\obj\Debug\net45\Entitas.Unity.Editor.csproj.CopyComplete
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\Entitas.Unity.Editor\obj\Debug\net45\Entitas.Unity.Editor.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\Entitas.Unity.Editor\obj\Debug\net45\Entitas.Unity.Editor.pdb
+D:\GitHub\RenduECS\Addons\Unity\Bin\net45\Entitas.Unity.Editor.dll
+D:\GitHub\RenduECS\Addons\Unity\Bin\net45\Entitas.Unity.Editor.pdb
+D:\GitHub\RenduECS\Addons\Unity\Entitas.Unity.Editor\obj\Debug\net45\Entitas.Unity.Editor.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Addons\Unity\Entitas.Unity.Editor\obj\Debug\net45\Entitas.Unity.Editor.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Addons\Unity\Entitas.Unity.Editor\obj\Debug\net45\Entitas.Unity.Editor.AssemblyInfo.cs
+D:\GitHub\RenduECS\Addons\Unity\Entitas.Unity.Editor\obj\Debug\net45\Entitas.Unity.Editor.csproj.CopyComplete
+D:\GitHub\RenduECS\Addons\Unity\Entitas.Unity.Editor\obj\Debug\net45\Entitas.Unity.Editor.dll
+D:\GitHub\RenduECS\Addons\Unity\Entitas.Unity.Editor\obj\Debug\net45\Entitas.Unity.Editor.pdb

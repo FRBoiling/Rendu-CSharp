@@ -24,3 +24,11 @@ D:\GitHub\RenduECS\Rendu-CSharp\Addons\Migration\Entitas.Migration.Unity.Editor\
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\Migration\Entitas.Migration.Unity.Editor\obj\Debug\net45\Entitas.Migration.Unity.Editor.pdb
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\Migration\Bin\net45\Entitas.Migration.Unity.Editor.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\Migration\Bin\net45\Entitas.Migration.Unity.Editor.pdb
+D:\GitHub\RenduECS\Addons\Migration\Bin\net45\Entitas.Migration.Unity.Editor.dll
+D:\GitHub\RenduECS\Addons\Migration\Bin\net45\Entitas.Migration.Unity.Editor.pdb
+D:\GitHub\RenduECS\Addons\Migration\Entitas.Migration.Unity.Editor\obj\Debug\net45\Entitas.Migration.Unity.Editor.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Addons\Migration\Entitas.Migration.Unity.Editor\obj\Debug\net45\Entitas.Migration.Unity.Editor.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Addons\Migration\Entitas.Migration.Unity.Editor\obj\Debug\net45\Entitas.Migration.Unity.Editor.AssemblyInfo.cs
+D:\GitHub\RenduECS\Addons\Migration\Entitas.Migration.Unity.Editor\obj\Debug\net45\Entitas.Migration.Unity.Editor.csproj.CopyComplete
+D:\GitHub\RenduECS\Addons\Migration\Entitas.Migration.Unity.Editor\obj\Debug\net45\Entitas.Migration.Unity.Editor.dll
+D:\GitHub\RenduECS\Addons\Migration\Entitas.Migration.Unity.Editor\obj\Debug\net45\Entitas.Migration.Unity.Editor.pdb

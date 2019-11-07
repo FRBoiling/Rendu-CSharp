@@ -82,11 +82,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.Unity\\Entitas.VisualDebugging.Unity.csproj",
+      "projectUniqueName": "D:\\GitHub\\RenduEcs\\Addons\\VisualDebugging\\Entitas.VisualDebugging.Unity\\Entitas.VisualDebugging.Unity.csproj",
       "projectName": "Entitas.VisualDebugging.Unity",
-      "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.Unity\\Entitas.VisualDebugging.Unity.csproj",
+      "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\VisualDebugging\\Entitas.VisualDebugging.Unity\\Entitas.VisualDebugging.Unity.csproj",
       "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\VisualDebugging\\Entitas.VisualDebugging.Unity\\obj\\",
+      "outputPath": "D:\\GitHub\\RenduEcs\\Addons\\VisualDebugging\\Entitas.VisualDebugging.Unity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -105,8 +105,8 @@
       "frameworks": {
         "net45": {
           "projectReferences": {
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj"
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas.csproj"
             }
           }
         }

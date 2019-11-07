@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj",
+      "projectUniqueName": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj",
       "projectName": "DesperateDevs.Utils",
-      "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj",
+      "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj",
       "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\obj\\",
+      "outputPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -56,8 +56,8 @@
       "frameworks": {
         "net45": {
           "projectReferences": {
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj"
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj"
             }
           }
         }

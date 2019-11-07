@@ -6137,11 +6137,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\UnitTests\\UnitTestProject\\UnitTestProject.csproj",
+      "projectUniqueName": "D:\\GitHub\\RenduEcs\\UnitTests\\UnitTestProject\\UnitTestProject.csproj",
       "projectName": "UnitTestProject",
-      "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\UnitTests\\UnitTestProject\\UnitTestProject.csproj",
+      "projectPath": "D:\\GitHub\\RenduEcs\\UnitTests\\UnitTestProject\\UnitTestProject.csproj",
       "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\UnitTests\\UnitTestProject\\obj\\",
+      "outputPath": "D:\\GitHub\\RenduEcs\\UnitTests\\UnitTestProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6160,80 +6160,80 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Plugins\\DesperateDevs.CodeGeneration.Plugins.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Plugins\\DesperateDevs.CodeGeneration.Plugins.csproj"
+            "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Plugins\\DesperateDevs.CodeGeneration.Plugins.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Plugins\\DesperateDevs.CodeGeneration.Plugins.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\DesperateDevs.CodeGeneration.Unity.Plugins.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\DesperateDevs.CodeGeneration.Unity.Plugins.csproj"
+            "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\DesperateDevs.CodeGeneration.Unity.Plugins.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\DesperateDevs.CodeGeneration.Unity.Plugins.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
+            "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
+            "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\Entitas.CodeGeneration.Plugins\\Entitas.CodeGeneration.Plugins.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj"
+            "D:\\GitHub\\RenduEcs\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj"
+            "D:\\GitHub\\RenduEcs\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj"
+            "D:\\GitHub\\RenduEcs\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\DesperateDevs.Unity.Editor\\DesperateDevs.Unity.Editor.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj"
+            "D:\\GitHub\\RenduEcs\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\Entitas.Unity.Editor\\Entitas.Unity.Editor.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\RdUnity\\Assembly-CSharp.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\RdUnity\\Assembly-CSharp.csproj"
+            "D:\\GitHub\\RenduEcs\\RdUnity\\Assembly-CSharp.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdUnity\\Assembly-CSharp.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\App\\Server.App.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\App\\Server.App.csproj"
+            "D:\\GitHub\\RenduEcs\\Server\\App\\Server.App.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Server\\App\\Server.App.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\Systems\\Server.Systems.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Server\\Systems\\Server.Systems.csproj"
+            "D:\\GitHub\\RenduEcs\\Server\\Systems\\Server.Systems.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Server\\Systems\\Server.Systems.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj"
+            "D:\\GitHub\\RenduEcs\\Shared\\Components\\Components.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Shared\\Components\\Components.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj"
+            "D:\\GitHub\\RenduEcs\\Shared\\Generated\\Generated.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Shared\\Generated\\Generated.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj"
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Analytics\\DesperateDevs.Analytics.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj"
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj"
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration\\DesperateDevs.CodeGeneration.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj"
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Logging\\DesperateDevs.Logging.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj"
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Networking\\DesperateDevs.Networking.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj"
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Protobuf\\Google.Protobuf\\Google.Protobuf.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Protobuf\\Google.Protobuf\\Google.Protobuf.csproj"
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\Protobuf\\Google.Protobuf\\Google.Protobuf.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Protobuf\\Google.Protobuf\\Google.Protobuf.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Tools\\RDGenerationLib\\RDGenerationLib.csproj"
+            "D:\\GitHub\\RenduEcs\\Tools\\RDGenerationLib\\RDGenerationLib.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Tools\\RDGenerationLib\\RDGenerationLib.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\UnitTests\\TestComponents\\TestComponents.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\UnitTests\\TestComponents\\TestComponents.csproj"
+            "D:\\GitHub\\RenduEcs\\UnitTests\\TestComponents\\TestComponents.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\UnitTests\\TestComponents\\TestComponents.csproj"
             },
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\UnitTests\\TestFixtures\\TestFixtures.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\UnitTests\\TestFixtures\\TestFixtures.csproj"
+            "D:\\GitHub\\RenduEcs\\UnitTests\\TestFixtures\\TestFixtures.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\UnitTests\\TestFixtures\\TestFixtures.csproj"
             }
           }
         }

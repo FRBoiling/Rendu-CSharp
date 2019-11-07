@@ -18,3 +18,9 @@ D:\GitHub\RenduECS\Rendu-CSharp\Addons\Migration\Entitas.Migration\obj\Debug\net
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\Migration\Entitas.Migration\obj\Debug\net45\Entitas.Migration.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\Migration\Entitas.Migration\obj\Debug\net45\Entitas.Migration.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\Migration\Entitas.Migration\obj\Debug\net45\Entitas.Migration.pdb
+D:\GitHub\RenduECS\Addons\Migration\Bin\net45\Entitas.Migration.dll
+D:\GitHub\RenduECS\Addons\Migration\Bin\net45\Entitas.Migration.pdb
+D:\GitHub\RenduECS\Addons\Migration\Entitas.Migration\obj\Debug\net45\Entitas.Migration.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Addons\Migration\Entitas.Migration\obj\Debug\net45\Entitas.Migration.AssemblyInfo.cs
+D:\GitHub\RenduECS\Addons\Migration\Entitas.Migration\obj\Debug\net45\Entitas.Migration.dll
+D:\GitHub\RenduECS\Addons\Migration\Entitas.Migration\obj\Debug\net45\Entitas.Migration.pdb

@@ -4,3 +4,10 @@ D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Logging\obj\Debug\net45
 D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Logging\obj\Debug\net45\DesperateDevs.Logging.AssemblyInfo.cs
 D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Logging\obj\Debug\net45\DesperateDevs.Logging.dll
 D:\GitHub\RenduECS\Rendu-CSharp\ThirdParty\DesperateDevs\Logging\obj\Debug\net45\DesperateDevs.Logging.pdb
+D:\GitHub\RenduECS\ThirdParty\DesperateDevs\Bin\net45\DesperateDevs.Logging.dll
+D:\GitHub\RenduECS\ThirdParty\DesperateDevs\Bin\net45\DesperateDevs.Logging.pdb
+D:\GitHub\RenduECS\ThirdParty\DesperateDevs\Logging\obj\Debug\net45\DesperateDevs.Logging.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\ThirdParty\DesperateDevs\Logging\obj\Debug\net45\DesperateDevs.Logging.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\ThirdParty\DesperateDevs\Logging\obj\Debug\net45\DesperateDevs.Logging.AssemblyInfo.cs
+D:\GitHub\RenduECS\ThirdParty\DesperateDevs\Logging\obj\Debug\net45\DesperateDevs.Logging.dll
+D:\GitHub\RenduECS\ThirdParty\DesperateDevs\Logging\obj\Debug\net45\DesperateDevs.Logging.pdb

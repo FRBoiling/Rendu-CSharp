@@ -12,4 +12,15 @@
       <OutputPath>..\Bin</OutputPath>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Unity3D.UnityEditor" Version="2018.1.6-f1" />
+      <PackageReference Include="Unity3D.UnityEngine" Version="2018.1.6-f1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\ThirdParty\DesperateDevs\CodeGeneration.CodeGenerator\DesperateDevs.CodeGeneration.CodeGenerator.csproj" />
+      <ProjectReference Include="..\..\..\ThirdParty\DesperateDevs\Serialization\DesperateDevs.Serialization.csproj" />
+      <ProjectReference Include="..\..\..\ThirdParty\DesperateDevs\Utils\DesperateDevs.Utils.csproj" />
+    </ItemGroup>
+
 </Project>

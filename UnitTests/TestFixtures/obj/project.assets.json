@@ -67,11 +67,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\UnitTests\\TestFixtures\\TestFixtures.csproj",
+      "projectUniqueName": "D:\\GitHub\\RenduEcs\\UnitTests\\TestFixtures\\TestFixtures.csproj",
       "projectName": "TestFixtures",
-      "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\UnitTests\\TestFixtures\\TestFixtures.csproj",
+      "projectPath": "D:\\GitHub\\RenduEcs\\UnitTests\\TestFixtures\\TestFixtures.csproj",
       "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\UnitTests\\TestFixtures\\obj\\",
+      "outputPath": "D:\\GitHub\\RenduEcs\\UnitTests\\TestFixtures\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -90,8 +90,8 @@
       "frameworks": {
         "net45": {
           "projectReferences": {
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\UnitTests\\TestComponents\\TestComponents.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\UnitTests\\TestComponents\\TestComponents.csproj"
+            "D:\\GitHub\\RenduEcs\\UnitTests\\TestComponents\\TestComponents.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\UnitTests\\TestComponents\\TestComponents.csproj"
             }
           }
         }

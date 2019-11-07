@@ -1,11 +1,174 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.5": {}
+    ".NETFramework,Version=v4.5": {
+      "Unity3D.UnityEditor/2018.1.6-f1": {
+        "type": "package",
+        "dependencies": {
+          "Unity3D.UnityEngine": "[2018.1.6-f1]"
+        },
+        "compile": {
+          "lib/UnityEditor.dll": {}
+        },
+        "runtime": {
+          "lib/UnityEditor.dll": {}
+        }
+      },
+      "Unity3D.UnityEngine/2018.1.6-f1": {
+        "type": "package",
+        "compile": {
+          "lib/UnityEngine.dll": {}
+        },
+        "runtime": {
+          "lib/UnityEngine.dll": {}
+        }
+      },
+      "DesperateDevs.Analytics/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "DesperateDevs.Logging": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.Analytics.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Analytics.dll": {}
+        }
+      },
+      "DesperateDevs.CodeGeneration/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "DesperateDevs.Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.CodeGeneration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.CodeGeneration.dll": {}
+        }
+      },
+      "DesperateDevs.CodeGeneration.CodeGenerator/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "DesperateDevs.Analytics": "1.0.0",
+          "DesperateDevs.CodeGeneration": "1.0.0",
+          "DesperateDevs.Serialization": "1.0.0",
+          "DesperateDevs.Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.CodeGeneration.CodeGenerator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.CodeGeneration.CodeGenerator.dll": {}
+        }
+      },
+      "DesperateDevs.Logging/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "compile": {
+          "bin/placeholder/DesperateDevs.Logging.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Logging.dll": {}
+        }
+      },
+      "DesperateDevs.Serialization/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "DesperateDevs.Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.Serialization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Serialization.dll": {}
+        }
+      },
+      "DesperateDevs.Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "DesperateDevs.Logging": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DesperateDevs.Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DesperateDevs.Utils.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Unity3D.UnityEditor/2018.1.6-f1": {
+      "sha512": "aYixowgRUOu9WG8QSJHi8ECeOCGIArJEeTp0NdumuRiR7YS0g81j27HgnxyDMDTVlA6FMLZDzUEJT0cBAWI8Zw==",
+      "type": "package",
+      "path": "unity3d.unityeditor/2018.1.6-f1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/UnityEditor.dll",
+        "lib/UnityEditor.xml",
+        "unity3d.unityeditor.2018.1.6-f1.nupkg.sha512",
+        "unity3d.unityeditor.nuspec"
+      ]
+    },
+    "Unity3D.UnityEngine/2018.1.6-f1": {
+      "sha512": "Y6JEHZmp/G3x5O6J9ivYH3GMOoPa/suv8qRc0Lz1HICHGeeSlWwx9LR71sgacsTzASCydZhiPIobFDgT6iD8Ug==",
+      "type": "package",
+      "path": "unity3d.unityengine/2018.1.6-f1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/UnityEngine.dll",
+        "lib/UnityEngine.xml",
+        "unity3d.unityengine.2018.1.6-f1.nupkg.sha512",
+        "unity3d.unityengine.nuspec"
+      ]
+    },
+    "DesperateDevs.Analytics/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/DesperateDevs/Analytics/DesperateDevs.Analytics.csproj",
+      "msbuildProject": "../../../ThirdParty/DesperateDevs/Analytics/DesperateDevs.Analytics.csproj"
+    },
+    "DesperateDevs.CodeGeneration/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/DesperateDevs/CodeGeneration/DesperateDevs.CodeGeneration.csproj",
+      "msbuildProject": "../../../ThirdParty/DesperateDevs/CodeGeneration/DesperateDevs.CodeGeneration.csproj"
+    },
+    "DesperateDevs.CodeGeneration.CodeGenerator/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/DesperateDevs/CodeGeneration.CodeGenerator/DesperateDevs.CodeGeneration.CodeGenerator.csproj",
+      "msbuildProject": "../../../ThirdParty/DesperateDevs/CodeGeneration.CodeGenerator/DesperateDevs.CodeGeneration.CodeGenerator.csproj"
+    },
+    "DesperateDevs.Logging/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/DesperateDevs/Logging/DesperateDevs.Logging.csproj",
+      "msbuildProject": "../../../ThirdParty/DesperateDevs/Logging/DesperateDevs.Logging.csproj"
+    },
+    "DesperateDevs.Serialization/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/DesperateDevs/Serialization/DesperateDevs.Serialization.csproj",
+      "msbuildProject": "../../../ThirdParty/DesperateDevs/Serialization/DesperateDevs.Serialization.csproj"
+    },
+    "DesperateDevs.Utils/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/DesperateDevs/Utils/DesperateDevs.Utils.csproj",
+      "msbuildProject": "../../../ThirdParty/DesperateDevs/Utils/DesperateDevs.Utils.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.5": []
+    ".NETFramework,Version=v4.5": [
+      "DesperateDevs.CodeGeneration.CodeGenerator >= 1.0.0",
+      "DesperateDevs.Serialization >= 1.0.0",
+      "DesperateDevs.Utils >= 1.0.0",
+      "Unity3D.UnityEditor >= 2018.1.6-f1",
+      "Unity3D.UnityEngine >= 2018.1.6-f1"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\WanXin\\.nuget\\packages\\": {},
@@ -14,11 +177,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\DesperateDevs.CodeGeneration.Unity.Plugins.csproj",
+      "projectUniqueName": "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\DesperateDevs.CodeGeneration.Unity.Plugins.csproj",
       "projectName": "DesperateDevs.CodeGeneration.Unity.Plugins",
-      "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\DesperateDevs.CodeGeneration.Unity.Plugins.csproj",
+      "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\DesperateDevs.CodeGeneration.Unity.Plugins.csproj",
       "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\obj\\",
+      "outputPath": "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\DesperateDevs.CodeGeneration.Unity.Plugins\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -36,7 +199,17 @@
       },
       "frameworks": {
         "net45": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\CodeGeneration.CodeGenerator\\DesperateDevs.CodeGeneration.CodeGenerator.csproj"
+            },
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Serialization\\DesperateDevs.Serialization.csproj"
+            },
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\DesperateDevs\\Utils\\DesperateDevs.Utils.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -46,7 +219,18 @@
       }
     },
     "frameworks": {
-      "net45": {}
+      "net45": {
+        "dependencies": {
+          "Unity3D.UnityEditor": {
+            "target": "Package",
+            "version": "[2018.1.6-f1, )"
+          },
+          "Unity3D.UnityEngine": {
+            "target": "Package",
+            "version": "[2018.1.6-f1, )"
+          }
+        }
+      }
     }
   }
 }

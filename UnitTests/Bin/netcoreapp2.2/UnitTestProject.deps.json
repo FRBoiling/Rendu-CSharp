@@ -1004,10 +1004,6 @@
         }
       },
       "DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor/1.0.0": {
-        "dependencies": {
-          "UnityEngine": "0.0.0.0",
-          "UnityEditor": "0.0.0.0"
-        },
         "runtime": {
           "DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.dll": {}
         }
@@ -1018,6 +1014,10 @@
         }
       },
       "DesperateDevs.CodeGeneration.Unity.Plugins/1.0.0": {
+        "dependencies": {
+          "UnityEngine": "0.0.0.0",
+          "UnityEditor": "0.0.0.0"
+        },
         "runtime": {
           "DesperateDevs.CodeGeneration.Unity.Plugins.dll": {}
         }

@@ -6,3 +6,11 @@ D:\GitHub\RenduECS\Rendu-CSharp\Addons\VisualDebugging\Entitas.VisualDebugging.U
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\VisualDebugging\Entitas.VisualDebugging.Unity.Editor\obj\Debug\net45\Entitas.VisualDebugging.Unity.Editor.csproj.CopyComplete
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\VisualDebugging\Entitas.VisualDebugging.Unity.Editor\obj\Debug\net45\Entitas.VisualDebugging.Unity.Editor.dll
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\VisualDebugging\Entitas.VisualDebugging.Unity.Editor\obj\Debug\net45\Entitas.VisualDebugging.Unity.Editor.pdb
+D:\GitHub\RenduECS\Addons\VisualDebugging\Bin\net45\Entitas.VisualDebugging.Unity.Editor.dll
+D:\GitHub\RenduECS\Addons\VisualDebugging\Bin\net45\Entitas.VisualDebugging.Unity.Editor.pdb
+D:\GitHub\RenduECS\Addons\VisualDebugging\Entitas.VisualDebugging.Unity.Editor\obj\Debug\net45\Entitas.VisualDebugging.Unity.Editor.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Addons\VisualDebugging\Entitas.VisualDebugging.Unity.Editor\obj\Debug\net45\Entitas.VisualDebugging.Unity.Editor.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Addons\VisualDebugging\Entitas.VisualDebugging.Unity.Editor\obj\Debug\net45\Entitas.VisualDebugging.Unity.Editor.AssemblyInfo.cs
+D:\GitHub\RenduECS\Addons\VisualDebugging\Entitas.VisualDebugging.Unity.Editor\obj\Debug\net45\Entitas.VisualDebugging.Unity.Editor.csproj.CopyComplete
+D:\GitHub\RenduECS\Addons\VisualDebugging\Entitas.VisualDebugging.Unity.Editor\obj\Debug\net45\Entitas.VisualDebugging.Unity.Editor.dll
+D:\GitHub\RenduECS\Addons\VisualDebugging\Entitas.VisualDebugging.Unity.Editor\obj\Debug\net45\Entitas.VisualDebugging.Unity.Editor.pdb

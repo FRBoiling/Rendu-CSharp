@@ -12,11 +12,5 @@
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
       <OutputPath>..\..\Bin\Tools\</OutputPath>
     </PropertyGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\..\Shared\ThirdParty\Entitas.CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj" />
-      <ProjectReference Include="..\..\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\Entitas.CodeGeneration.Plugins.csproj" />
-      <ProjectReference Include="..\RDGenerationLib\RDGenerationLib.csproj" />
-    </ItemGroup>
-
+    
 </Project>

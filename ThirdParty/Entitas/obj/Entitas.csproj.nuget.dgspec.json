@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {}
+    "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj": {
+    "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas.csproj",
         "projectName": "Entitas",
-        "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\Entitas.csproj",
+        "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\ThirdParty\\Entitas\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -67,11 +67,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj",
+      "projectUniqueName": "D:\\GitHub\\RenduEcs\\Shared\\Generated\\Generated.csproj",
       "projectName": "Generated",
-      "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\Generated.csproj",
+      "projectPath": "D:\\GitHub\\RenduEcs\\Shared\\Generated\\Generated.csproj",
       "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Generated\\obj\\",
+      "outputPath": "D:\\GitHub\\RenduEcs\\Shared\\Generated\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -90,8 +90,8 @@
       "frameworks": {
         "net45": {
           "projectReferences": {
-            "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj": {
-              "projectPath": "D:\\GitHub\\RenduECS\\Rendu-CSharp\\Shared\\Components\\Components.csproj"
+            "D:\\GitHub\\RenduEcs\\Shared\\Components\\Components.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Shared\\Components\\Components.csproj"
             }
           }
         }
