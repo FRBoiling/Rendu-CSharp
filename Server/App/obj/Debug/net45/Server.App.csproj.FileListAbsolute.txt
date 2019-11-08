@@ -8,7 +8,6 @@ D:\GitHub\RenduECS\Rendu-CSharp\Server\App\obj\Debug\net45\Server.App.pdb
 D:\GitHub\RenduECS\Bin\Server\net45\Server.App.exe.config
 D:\GitHub\RenduECS\Bin\Server\net45\Server.App.exe
 D:\GitHub\RenduECS\Bin\Server\net45\Server.App.pdb
-D:\GitHub\RenduECS\Server\App\obj\Debug\net45\Server.App.csprojAssemblyReference.cache
 D:\GitHub\RenduECS\Server\App\obj\Debug\net45\Server.App.AssemblyInfoInputs.cache
 D:\GitHub\RenduECS\Server\App\obj\Debug\net45\Server.App.AssemblyInfo.cs
 D:\GitHub\RenduECS\Server\App\obj\Debug\net45\Server.App.exe

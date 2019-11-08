@@ -26,7 +26,7 @@ namespace DesperateDevs.CodeGeneration.CodeGenerator
       CodeGeneratorUtil.configure((ICodeGenerationPlugin[]) enabledInstancesOf2, preferences);
       CodeGeneratorUtil.configure((ICodeGenerationPlugin[]) enabledInstancesOf3, preferences);
       CodeGeneratorUtil.configure((ICodeGenerationPlugin[]) enabledInstancesOf4, preferences);
-      bool trackHooks = true;
+      bool trackHooks = false;
       if (preferences.HasKey("Jenny.TrackHooks"))
         trackHooks = preferences["Jenny.TrackHooks"] == "true";
       return new DesperateDevs.CodeGeneration.CodeGenerator.CodeGenerator(enabledInstancesOf1, enabledInstancesOf2, enabledInstancesOf3, enabledInstancesOf4, trackHooks);

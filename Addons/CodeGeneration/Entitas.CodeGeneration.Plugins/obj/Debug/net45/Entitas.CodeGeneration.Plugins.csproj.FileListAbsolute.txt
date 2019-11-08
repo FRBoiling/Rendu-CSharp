@@ -24,9 +24,9 @@ D:\GitHub\RenduECS\Rendu-CSharp\Addons\CodeGeneration\Entitas.CodeGeneration.Plu
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\CodeGeneration\Entitas.CodeGeneration.Plugins\obj\Debug\net45\Entitas.CodeGeneration.Plugins.pdb
 D:\GitHub\RenduECS\Addons\CodeGeneration\Bin\net45\Entitas.CodeGeneration.Plugins.dll
 D:\GitHub\RenduECS\Addons\CodeGeneration\Bin\net45\Entitas.CodeGeneration.Plugins.pdb
-D:\GitHub\RenduECS\Addons\CodeGeneration\Entitas.CodeGeneration.Plugins\obj\Debug\net45\Entitas.CodeGeneration.Plugins.csprojAssemblyReference.cache
 D:\GitHub\RenduECS\Addons\CodeGeneration\Entitas.CodeGeneration.Plugins\obj\Debug\net45\Entitas.CodeGeneration.Plugins.AssemblyInfoInputs.cache
 D:\GitHub\RenduECS\Addons\CodeGeneration\Entitas.CodeGeneration.Plugins\obj\Debug\net45\Entitas.CodeGeneration.Plugins.AssemblyInfo.cs
 D:\GitHub\RenduECS\Addons\CodeGeneration\Entitas.CodeGeneration.Plugins\obj\Debug\net45\Entitas.CodeGeneration.Plugins.csproj.CopyComplete
 D:\GitHub\RenduECS\Addons\CodeGeneration\Entitas.CodeGeneration.Plugins\obj\Debug\net45\Entitas.CodeGeneration.Plugins.dll
 D:\GitHub\RenduECS\Addons\CodeGeneration\Entitas.CodeGeneration.Plugins\obj\Debug\net45\Entitas.CodeGeneration.Plugins.pdb
+D:\GitHub\RenduECS\Addons\CodeGeneration\Entitas.CodeGeneration.Plugins\obj\Debug\net45\Entitas.CodeGeneration.Plugins.csprojAssemblyReference.cache

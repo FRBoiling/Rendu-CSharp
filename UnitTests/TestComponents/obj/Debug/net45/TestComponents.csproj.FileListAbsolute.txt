@@ -16,7 +16,6 @@ D:\GitHub\RenduECS\Rendu-CSharp\UnitTests\TestComponents\obj\Debug\net45\TestCom
 D:\GitHub\RenduECS\Rendu-CSharp\UnitTests\TestComponents\obj\Debug\net45\TestComponents.pdb
 D:\GitHub\RenduECS\UnitTests\Bin\net45\TestComponents.dll
 D:\GitHub\RenduECS\UnitTests\Bin\net45\TestComponents.pdb
-D:\GitHub\RenduECS\UnitTests\TestComponents\obj\Debug\net45\TestComponents.csprojAssemblyReference.cache
 D:\GitHub\RenduECS\UnitTests\TestComponents\obj\Debug\net45\TestComponents.AssemblyInfoInputs.cache
 D:\GitHub\RenduECS\UnitTests\TestComponents\obj\Debug\net45\TestComponents.AssemblyInfo.cs
 D:\GitHub\RenduECS\UnitTests\TestComponents\obj\Debug\net45\TestComponents.csproj.CopyComplete

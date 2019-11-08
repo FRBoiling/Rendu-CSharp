@@ -7,7 +7,6 @@ D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\Entitas.Unity\obj\Debug\net45\Entit
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\Unity\Entitas.Unity\obj\Debug\net45\Entitas.Unity.pdb
 D:\GitHub\RenduECS\Addons\Unity\Bin\net45\Entitas.Unity.dll
 D:\GitHub\RenduECS\Addons\Unity\Bin\net45\Entitas.Unity.pdb
-D:\GitHub\RenduECS\Addons\Unity\Entitas.Unity\obj\Debug\net45\Entitas.Unity.csprojAssemblyReference.cache
 D:\GitHub\RenduECS\Addons\Unity\Entitas.Unity\obj\Debug\net45\Entitas.Unity.AssemblyInfoInputs.cache
 D:\GitHub\RenduECS\Addons\Unity\Entitas.Unity\obj\Debug\net45\Entitas.Unity.AssemblyInfo.cs
 D:\GitHub\RenduECS\Addons\Unity\Entitas.Unity\obj\Debug\net45\Entitas.Unity.csproj.CopyComplete

@@ -7,9 +7,9 @@ D:\GitHub\RenduECS\Rendu-CSharp\Addons\VisualDebugging\Entitas.VisualDebugging.C
 D:\GitHub\RenduECS\Rendu-CSharp\Addons\VisualDebugging\Entitas.VisualDebugging.CodeGeneration.Plugins\obj\Debug\net45\Entitas.VisualDebugging.CodeGeneration.Plugins.pdb
 D:\GitHub\RenduECS\Addons\VisualDebugging\Bin\net45\Entitas.VisualDebugging.CodeGeneration.Plugins.dll
 D:\GitHub\RenduECS\Addons\VisualDebugging\Bin\net45\Entitas.VisualDebugging.CodeGeneration.Plugins.pdb
-D:\GitHub\RenduECS\Addons\VisualDebugging\Entitas.VisualDebugging.CodeGeneration.Plugins\obj\Debug\net45\Entitas.VisualDebugging.CodeGeneration.Plugins.csprojAssemblyReference.cache
 D:\GitHub\RenduECS\Addons\VisualDebugging\Entitas.VisualDebugging.CodeGeneration.Plugins\obj\Debug\net45\Entitas.VisualDebugging.CodeGeneration.Plugins.AssemblyInfoInputs.cache
 D:\GitHub\RenduECS\Addons\VisualDebugging\Entitas.VisualDebugging.CodeGeneration.Plugins\obj\Debug\net45\Entitas.VisualDebugging.CodeGeneration.Plugins.AssemblyInfo.cs
 D:\GitHub\RenduECS\Addons\VisualDebugging\Entitas.VisualDebugging.CodeGeneration.Plugins\obj\Debug\net45\Entitas.VisualDebugging.CodeGeneration.Plugins.csproj.CopyComplete
 D:\GitHub\RenduECS\Addons\VisualDebugging\Entitas.VisualDebugging.CodeGeneration.Plugins\obj\Debug\net45\Entitas.VisualDebugging.CodeGeneration.Plugins.dll
 D:\GitHub\RenduECS\Addons\VisualDebugging\Entitas.VisualDebugging.CodeGeneration.Plugins\obj\Debug\net45\Entitas.VisualDebugging.CodeGeneration.Plugins.pdb
+D:\GitHub\RenduECS\Addons\VisualDebugging\Entitas.VisualDebugging.CodeGeneration.Plugins\obj\Debug\net45\Entitas.VisualDebugging.CodeGeneration.Plugins.csprojAssemblyReference.cache
