@@ -1,0 +1,40 @@
+using System.IO;
+using Entitas.CodeGeneration.Plugins.Context.DataProviders;
+using Rd.CodeGeneration;
+
+namespace Entitas.CodeGeneration.Plugins.Context.CodeGenerators
+{
+    public class ContextAttributeGenerator : ICodeGenerator
+    {
+        private const string TEMPLATE =
+            @"public sealed class ${ContextName}Attribute : Entitas.CodeGeneration.Entitas.Attributes.ContextAttribute {
+
+    public ${ContextName}Attribute() : base(""${ContextName}"") {
+    }
+}
+";
+
+        public string name => "Context (Attribute)";
+        public int priority => 0;
+        public bool runInDryMode => true;
+
+        public CodeGenFile[] Generate(CodeGeneratorData[] data)
+        {
+            return data
+                .OfType<ContextData>()
+                .Select(generate)
+                .ToArray();
+        }
+
+        private CodeGenFile generate(ContextData data)
+        {
+            var contextName = data.GetContextName();
+            return new CodeGenFile(
+                contextName + Path.DirectorySeparatorChar +
+                contextName + "Attribute.cs",
+                TEMPLATE.Replace(contextName),
+                GetType().FullName
+            );
+        }
+    }
+}

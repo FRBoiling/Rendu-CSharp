@@ -1,0 +1,52 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Plugins\\Plugins.csproj",
+    "projectName": "Plugins",
+    "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Plugins\\Plugins.csproj",
+    "outputPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Plugins\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "net45"
+    ],
+    "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "net45": {
+        "projectReferences": {
+          "D:\\GitHub\\RenduEcs\\RdFixtures\\Analytics\\Rd.Analytics.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Analytics\\Rd.Analytics.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration.CodeGenerator\\Rd.CodeGenerator.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration.CodeGenerator\\Rd.CodeGenerator.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Rd.CodeGeneration.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Rd.CodeGeneration.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\RdFixtures\\Utils\\Rd.Utils.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Utils\\Rd.Utils.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas.CodeGeneration.Attributes\\Entitas.CodeGeneration.Attributes.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "net45": {}
+  }
+}

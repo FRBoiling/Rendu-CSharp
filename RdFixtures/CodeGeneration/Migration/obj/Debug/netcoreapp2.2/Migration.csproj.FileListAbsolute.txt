@@ -1,0 +1,8 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\Migration.deps.json
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\Migration.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\netcoreapp2.2\Migration.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Migration\obj\Debug\netcoreapp2.2\Migration.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Migration\obj\Debug\netcoreapp2.2\Migration.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Migration\obj\Debug\netcoreapp2.2\Migration.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Migration\obj\Debug\netcoreapp2.2\Migration.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Migration\obj\Debug\netcoreapp2.2\Migration.pdb

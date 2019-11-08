@@ -1,0 +1,26 @@
+﻿using System.Collections.Generic;
+using Rd.CodeGeneration;
+using Rd.Plugins.Configs;
+using Rd.Serialization;
+
+namespace Rd.Plugins
+{
+    public abstract class AbstractGenerator : ICodeGenerator, IConfigurable
+    {
+        private readonly IgnoreNamespacesConfig _ignoreNamespacesConfig = new IgnoreNamespacesConfig();
+
+        public abstract string name { get; }
+        public int priority => 0;
+        public bool runInDryMode => true;
+
+        public abstract CodeGenFile[] Generate(CodeGeneratorData[] data);
+
+        public Dictionary<string, string> defaultProperties => _ignoreNamespacesConfig.defaultProperties;
+
+        public void Configure(Preferences preferences)
+        {
+            _ignoreNamespacesConfig.Configure(preferences);
+            CodeGeneratorExtentions.ignoreNamespaces = _ignoreNamespacesConfig.ignoreNamespaces;
+        }
+    }
+}

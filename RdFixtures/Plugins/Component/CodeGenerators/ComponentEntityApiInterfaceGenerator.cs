@@ -1,0 +1,75 @@
+﻿using System.IO;
+using Entitas.CodeGeneration.Plugins.Component.DataProviders.ComponentDataProviders;
+using Entitas.Extensions;
+using Rd.CodeGeneration;
+
+namespace Entitas.CodeGeneration.Plugins.Component.CodeGenerators
+{
+    public class ComponentEntityApiInterfaceGenerator : AbstractGenerator
+    {
+        private const string STANDARD_TEMPLATE =
+            @"public partial interface I${ComponentName}Entity {
+
+    ${ComponentType} ${validComponentName} { get; }
+    bool has${ComponentName} { get; }
+
+    void Add${ComponentName}(${newMethodParameters});
+    void Replace${ComponentName}(${newMethodParameters});
+    void Remove${ComponentName}();
+}
+";
+
+        private const string FLAG_TEMPLATE =
+            @"public partial interface I${ComponentName}Entity {
+    bool ${prefixedComponentName} { get; set; }
+}
+";
+
+        private const string ENTITY_INTERFACE_TEMPLATE = "public partial class ${EntityType} : I${ComponentName}Entity { }\n";
+
+        public override string name => "Component (Entity API Interface)";
+
+        public override CodeGenFile[] Generate(CodeGeneratorData[] data)
+        {
+            return data
+                .OfType<ComponentData>()
+                .Where(d => d.ShouldGenerateMethods())
+                .Where(d => d.GetContextNames().Length > 1)
+                .SelectMany(generate)
+                .ToArray();
+        }
+
+        private CodeGenFile[] generate(ComponentData data)
+        {
+            return new[] {generateInterface(data)}
+                .Concat(data.GetContextNames().Select(contextName => generateEntityInterface(contextName, data)))
+                .ToArray();
+        }
+
+        private CodeGenFile generateInterface(ComponentData data)
+        {
+            var template = data.GetMemberData().Length == 0
+                ? FLAG_TEMPLATE
+                : STANDARD_TEMPLATE;
+
+            return new CodeGenFile(
+                "Components" + Path.DirectorySeparatorChar +
+                "Interfaces" + Path.DirectorySeparatorChar +
+                "I" + data.ComponentName() + "Entity.cs",
+                template.Replace(data, string.Empty),
+                GetType().FullName
+            );
+        }
+
+        private CodeGenFile generateEntityInterface(string contextName, ComponentData data)
+        {
+            return new CodeGenFile(
+                contextName + Path.DirectorySeparatorChar +
+                "Components" + Path.DirectorySeparatorChar +
+                data.ComponentNameWithContext(contextName).AddComponentSuffix() + ".cs",
+                ENTITY_INTERFACE_TEMPLATE.Replace(data, contextName),
+                GetType().FullName
+            );
+        }
+    }
+}

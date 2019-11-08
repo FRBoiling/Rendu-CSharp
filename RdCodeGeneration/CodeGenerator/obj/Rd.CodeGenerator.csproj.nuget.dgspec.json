@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\CodeGenerator\\Rd.CodeGenerator.csproj": {}
+  },
+  "projects": {
+    "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\CodeGeneration\\Rd.CodeGeneration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\CodeGeneration\\Rd.CodeGeneration.csproj",
+        "projectName": "Rd.CodeGeneration",
+        "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\CodeGeneration\\Rd.CodeGeneration.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\CodeGeneration\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Utils\\Rd.Utils.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Utils\\Rd.Utils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\CodeGenerator\\Rd.CodeGenerator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\CodeGenerator\\Rd.CodeGenerator.csproj",
+        "projectName": "Rd.CodeGenerator",
+        "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\CodeGenerator\\Rd.CodeGenerator.csproj",
+        "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\CodeGenerator\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Analytics\\Rd.Analytics.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Analytics\\Rd.Analytics.csproj"
+              },
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\CodeGeneration\\Rd.CodeGeneration.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\CodeGeneration\\Rd.CodeGeneration.csproj"
+              },
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Serialization\\Rd.Serialization.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Serialization\\Rd.Serialization.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

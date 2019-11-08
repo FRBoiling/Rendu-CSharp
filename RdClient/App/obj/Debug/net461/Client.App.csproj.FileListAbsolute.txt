@@ -1,0 +1,8 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Client\net461\Client.App.exe.config
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Client\net461\Client.App.exe
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Client\net461\Client.App.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Client\App\obj\Debug\net461\Client.App.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Client\App\obj\Debug\net461\Client.App.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Client\App\obj\Debug\net461\Client.App.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Client\App\obj\Debug\net461\Client.App.exe
+D:\GitHub\RenduECS\Rendu-CSharp\Client\App\obj\Debug\net461\Client.App.pdb

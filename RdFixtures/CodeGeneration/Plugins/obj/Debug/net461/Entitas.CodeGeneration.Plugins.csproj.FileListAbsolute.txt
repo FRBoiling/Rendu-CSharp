@@ -1,0 +1,8 @@
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\net461\Entitas.CodeGeneration.Plugins.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Bin\Shared\net461\Entitas.CodeGeneration.Plugins.pdb
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\net461\Entitas.CodeGeneration.Plugins.csprojAssemblyReference.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\net461\Entitas.CodeGeneration.Plugins.AssemblyInfoInputs.cache
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\net461\Entitas.CodeGeneration.Plugins.AssemblyInfo.cs
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\net461\Entitas.CodeGeneration.Plugins.csproj.CopyComplete
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\net461\Entitas.CodeGeneration.Plugins.dll
+D:\GitHub\RenduECS\Rendu-CSharp\Shared\ThirdParty\Entitas.CodeGeneration.Plugins\obj\Debug\net461\Entitas.CodeGeneration.Plugins.pdb
