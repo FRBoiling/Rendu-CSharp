@@ -1,18 +1,22 @@
 using System;
+using TestComponents;
 
-public static class Test2ComponentsLookup
+namespace TestFixtures.Generated.Test2
 {
-    public const int TestNormal = 0;
-
-    public const int TotalComponents = 1;
-
-    public static readonly string[] componentNames =
+    public static class Test2ComponentsLookup
     {
-        "TestNormal"
-    };
+        public const int TestNormal = 0;
 
-    public static readonly Type[] componentTypes =
-    {
-        typeof(TestNormalComponent)
-    };
+        public const int TotalComponents = 1;
+
+        public static readonly string[] componentNames =
+        {
+            "TestNormal"
+        };
+
+        public static readonly Type[] componentTypes =
+        {
+            typeof(TestNormalComponent)
+        };
+    }
 }

@@ -1,7 +1,6 @@
 using System.IO;
-using Entitas.Migration.Migration;
 
-namespace Entitas.Migration.Migrations
+namespace Rd.Migration.Migrations
 {
     public class M0410_2 : IMigration
     {
@@ -18,7 +17,7 @@ namespace Entitas.Migration.Migrations
 
 #if (!ENTITAS_DISABLE_VISUAL_DEBUGGING && UNITY_EDITOR)
 
-    public class Feature : Entitas.VisualDebugging.Unity.DebugSystems {
+    public class Feature : Rendu.VisualDebugging.Unity.DebugSystems {
 
         public Feature(string name) : base(name) {
         }

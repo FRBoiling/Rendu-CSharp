@@ -1,8 +1,11 @@
-using Entitas.CodeGeneration.Attributes;
+using Entitas.Attributes;
 
-public sealed class Test1Attribute : ContextAttribute
+namespace TestFixtures.Generated.Test1
 {
-    public Test1Attribute() : base("Test1")
+    public sealed class Test1Attribute : ContextAttribute
     {
+        public Test1Attribute() : base("Test1")
+        {
+        }
     }
 }

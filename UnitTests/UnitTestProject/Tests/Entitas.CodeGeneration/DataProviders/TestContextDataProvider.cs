@@ -1,7 +1,9 @@
-using Entitas.CodeGeneration.Plugins;
 using NUnit.Framework;
+using Rd.Plugins.Context;
+using Rd.Plugins.Context.DataProviders;
+using UnitTestProject.Fixtures.Preferences;
 
-namespace TestProject
+namespace UnitTestProject
 {
     public partial class Tests
     {
@@ -9,7 +11,7 @@ namespace TestProject
         public void TestContextDataProvider()
         {
             //creates data for each context name
-            var names = "Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = Input, GameState";
+            var names = "Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = Input, GameState";
             var provider = new ContextDataProvider();
             provider.Configure(new TestPreferences(names));
 

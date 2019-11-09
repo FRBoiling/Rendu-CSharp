@@ -10,26 +10,26 @@ namespace Rd.Networking
         protected readonly Logger _logger;
         protected readonly Socket _socket;
 
-        public event TcpSocketReceive OnReceived;
-
         protected AbstractTcpSocket(string loggerName)
         {
-            this._logger = fabl.GetLogger(loggerName);
-            this._socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            _logger = fabl.GetLogger(loggerName);
+            _socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         }
+
+        public event TcpSocketReceive OnReceived;
 
         public abstract void Send(byte[] buffer);
 
         protected void send(Socket socket, byte[] buffer)
         {
-            string str = AbstractTcpSocket.keyForEndPoint((IPEndPoint) socket.RemoteEndPoint);
-            this._logger.Debug("Sending " + (object) buffer.Length + " bytes via " + str);
-            socket.BeginSend(buffer, 0, buffer.Length, SocketFlags.None, new AsyncCallback(this.onSent), (object) socket);
+            var str = keyForEndPoint((IPEndPoint) socket.RemoteEndPoint);
+            _logger.Debug("Sending " + buffer.Length + " bytes via " + str);
+            socket.BeginSend(buffer, 0, buffer.Length, SocketFlags.None, onSent, socket);
         }
 
         private void onSent(IAsyncResult ar)
         {
-            Socket asyncState = (Socket) ar.AsyncState;
+            var asyncState = (Socket) ar.AsyncState;
             try
             {
                 asyncState.EndSend(ar);
@@ -41,7 +41,7 @@ namespace Rd.Networking
 
         protected void receive(ReceiveVO receiveVO)
         {
-            receiveVO.socket.BeginReceive(receiveVO.bytes, 0, receiveVO.bytes.Length, SocketFlags.None, new AsyncCallback(this.onReceived), (object) receiveVO);
+            receiveVO.socket.BeginReceive(receiveVO.bytes, 0, receiveVO.bytes.Length, SocketFlags.None, onReceived, receiveVO);
         }
 
         protected abstract void onReceived(IAsyncResult ar);
@@ -50,20 +50,20 @@ namespace Rd.Networking
 
         protected void triggerOnReceived(ReceiveVO receiveVO, int bytesReceived)
         {
-            if (this.OnReceived == null)
+            if (OnReceived == null)
                 return;
-            this.OnReceived(this, receiveVO.socket, AbstractTcpSocket.trimmedBytes(receiveVO.bytes, bytesReceived));
+            OnReceived(this, receiveVO.socket, trimmedBytes(receiveVO.bytes, bytesReceived));
         }
 
         protected static string keyForEndPoint(IPEndPoint endPoint)
         {
-            return endPoint.Address.ToString() + ":" + (object) endPoint.Port;
+            return endPoint.Address + ":" + endPoint.Port;
         }
 
         private static byte[] trimmedBytes(byte[] bytes, int length)
         {
-            byte[] numArray = new byte[length];
-            Array.Copy((Array) bytes, (Array) numArray, length);
+            var numArray = new byte[length];
+            Array.Copy(bytes, numArray, length);
             return numArray;
         }
     }

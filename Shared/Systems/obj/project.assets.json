@@ -25,6 +25,53 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Components/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.Attributes": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Components.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Components.dll": {}
+        }
+      },
+      "Entitas/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entitas.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitas.dll": {}
+        }
+      },
+      "Entitas.Attributes/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entitas.Attributes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitas.Attributes.dll": {}
+        }
+      },
+      "Generated/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Components": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Generated.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Generated.dll": {}
+        }
       }
     }
   },
@@ -171,10 +218,31 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Components/1.0.0": {
+      "type": "project",
+      "path": "../Components/Components.csproj",
+      "msbuildProject": "../Components/Components.csproj"
+    },
+    "Entitas/1.0.0": {
+      "type": "project",
+      "path": "../../ThirdParty/Entitas/Entitas/Entitas.csproj",
+      "msbuildProject": "../../ThirdParty/Entitas/Entitas/Entitas.csproj"
+    },
+    "Entitas.Attributes/1.0.0": {
+      "type": "project",
+      "path": "../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj",
+      "msbuildProject": "../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj"
+    },
+    "Generated/1.0.0": {
+      "type": "project",
+      "path": "../Generated/Generated.csproj",
+      "msbuildProject": "../Generated/Generated.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Generated >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -207,7 +275,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\GitHub\\RenduEcs\\Shared\\Generated\\Generated.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Shared\\Generated\\Generated.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

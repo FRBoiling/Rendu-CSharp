@@ -1,8 +1,11 @@
-using Entitas.CodeGeneration.Attributes;
+using Entitas.Attributes;
 
-public sealed class ServerAttribute : ContextAttribute
+namespace Generated.Server
 {
-    public ServerAttribute() : base("Server")
+    public sealed class ServerAttribute : ContextAttribute
     {
+        public ServerAttribute() : base("Server")
+        {
+        }
     }
 }

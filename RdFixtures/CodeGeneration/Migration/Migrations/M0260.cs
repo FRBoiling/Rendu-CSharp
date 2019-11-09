@@ -1,11 +1,10 @@
 using System.Linq;
-using Entitas.Migration.Migration;
 
-namespace Entitas.Migration.Migrations
+namespace Rd.Migration.Migrations
 {
     public class M0260 : IMigration
     {
-        private const string POOL_PATTERN_1 = @"var poolObserver = new Entitas.Unity.Editor.VisualDebugging.PoolObserver(";
+        private const string POOL_PATTERN_1 = @"var poolObserver = new Rendu.Rendu.Entitas.Unity.Editor.VisualDebugging.PoolObserver(";
         private const string POOL_PATTERN_2 = @"UnityEngine.Object.DontDestroyOnLoad(poolObserver.entitiesContainer);";
 
         private const string COMPONENT_PATTERN = @"throw new SingleEntityException(";

@@ -1,4 +1,4 @@
-﻿using DesperateDevs.Serialization;
+﻿using Rd.Serialization;
 
 namespace RDGenerationLib
 {

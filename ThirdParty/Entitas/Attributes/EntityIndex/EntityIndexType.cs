@@ -1,4 +1,4 @@
-namespace Entitas.CodeGeneration.Attributes.EntityIndex
+namespace Entitas.Attributes.EntityIndex
 {
     public enum EntityIndexType
     {

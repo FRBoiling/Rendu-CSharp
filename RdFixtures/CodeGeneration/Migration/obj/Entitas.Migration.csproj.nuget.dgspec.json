@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\RenduEcs\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj": {}
+    "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Migration\\Entitas.Migration.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\RenduEcs\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj": {
+    "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Migration\\Entitas.Migration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduEcs\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Migration\\Entitas.Migration.csproj",
         "projectName": "Entitas.Migration",
-        "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\Migration\\Entitas.Migration\\Entitas.Migration.csproj",
+        "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Migration\\Entitas.Migration.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduEcs\\Addons\\Migration\\Entitas.Migration\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Migration\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

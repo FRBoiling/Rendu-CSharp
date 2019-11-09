@@ -6,11 +6,3 @@ D:\GitHub\RenduECS\Rendu-CSharp\UnitTests\TestFixtures\obj\Debug\net45\TestFixtu
 D:\GitHub\RenduECS\Rendu-CSharp\UnitTests\TestFixtures\obj\Debug\net45\TestFixtures.csproj.CopyComplete
 D:\GitHub\RenduECS\Rendu-CSharp\UnitTests\TestFixtures\obj\Debug\net45\TestFixtures.dll
 D:\GitHub\RenduECS\Rendu-CSharp\UnitTests\TestFixtures\obj\Debug\net45\TestFixtures.pdb
-D:\GitHub\RenduECS\UnitTests\Bin\net45\TestFixtures.dll
-D:\GitHub\RenduECS\UnitTests\Bin\net45\TestFixtures.pdb
-D:\GitHub\RenduECS\UnitTests\TestFixtures\obj\Debug\net45\TestFixtures.csprojAssemblyReference.cache
-D:\GitHub\RenduECS\UnitTests\TestFixtures\obj\Debug\net45\TestFixtures.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\UnitTests\TestFixtures\obj\Debug\net45\TestFixtures.AssemblyInfo.cs
-D:\GitHub\RenduECS\UnitTests\TestFixtures\obj\Debug\net45\TestFixtures.csproj.CopyComplete
-D:\GitHub\RenduECS\UnitTests\TestFixtures\obj\Debug\net45\TestFixtures.dll
-D:\GitHub\RenduECS\UnitTests\TestFixtures\obj\Debug\net45\TestFixtures.pdb

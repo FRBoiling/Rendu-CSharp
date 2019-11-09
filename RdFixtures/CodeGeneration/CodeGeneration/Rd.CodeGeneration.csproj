@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\RdFixtures\Utils\Rd.Utils.csproj" />
+    <ProjectReference Include="..\..\..\RdFixtures\Utils\Rd.Utils.csproj" />
   </ItemGroup>
 
 </Project>

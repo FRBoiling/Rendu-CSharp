@@ -1,9 +1,12 @@
-using DesperateDevs.Serialization;
-using Entitas.CodeGeneration.Plugins;
 using NUnit.Framework;
-using TestProject.Fixtures;
+using Rd.Plugins.EntityIndex;
+using Rd.Plugins.EntityIndex.DataProviders;
+using Rd.Serialization;
+using UnitTestProject.Fixtures;
+using UnitTestProject.Fixtures.Components;
+using UnitTestProject.Fixtures.Preferences;
 
-namespace TestProject
+namespace UnitTestProject
 {
     public partial class Tests
     {
@@ -11,7 +14,7 @@ namespace TestProject
         {
             var provider = new EntityIndexDataProvider(new[] {typeof(T1), typeof(T2)});
             if (preferences == null)
-                preferences = new TestPreferences($@"Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = Game, GameState {"\n"} Entitas.DesperateDevs.CodeGeneration.Plugins.IgnoreNamespaces = false");
+                preferences = new TestPreferences($@"Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = Game, GameState {"\n"} Entitas.Rd.CodeGeneration.Rd.Plugins.IgnoreNamespaces = false");
 
             provider.Configure(preferences);
 

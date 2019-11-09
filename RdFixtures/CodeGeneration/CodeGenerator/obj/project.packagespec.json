@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj",
+    "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj",
     "projectName": "Rd.CodeGenerator",
-    "projectPath": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj",
-    "outputPath": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGenerator\\obj\\",
+    "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj",
+    "outputPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGenerator\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -19,11 +19,11 @@
     "frameworks": {
       "netstandard2.0": {
         "projectReferences": {
-          "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj": {
-            "projectPath": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj"
-          },
           "D:\\GitHub\\RenduEcs\\RdFixtures\\Analytics\\Rd.Analytics.csproj": {
             "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Analytics\\Rd.Analytics.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj"
           },
           "D:\\GitHub\\RenduEcs\\RdFixtures\\Serialization\\Rd.Serialization.csproj": {
             "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Serialization\\Rd.Serialization.csproj"

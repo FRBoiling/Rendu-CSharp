@@ -1,4 +1,0 @@
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Entitas\obj\Debug\netcoreapp3.0\Entitas.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Entitas\obj\Debug\netcoreapp3.0\Entitas.AssemblyInfo.cs
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Entitas\obj\Debug\netcoreapp3.0\Entitas.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Entitas\obj\Debug\netcoreapp3.0\Entitas.pdb

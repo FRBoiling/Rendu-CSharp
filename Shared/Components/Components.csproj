@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net45</TargetFramework>
+        <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -13,8 +13,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Addons\CodeGeneration\Entitas.CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas.csproj" />
+      <ProjectReference Include="..\..\ThirdParty\Entitas\Attributes\Entitas.Attributes.csproj" />
+      <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas\Entitas.csproj" />
     </ItemGroup>
 
 </Project>

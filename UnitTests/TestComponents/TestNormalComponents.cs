@@ -1,9 +1,12 @@
 ﻿using Entitas;
-using Entitas.CodeGeneration.Attributes;
+using Entitas.Attributes;
 
-[Context("Test1")]
-[Context("Test2")]
-public sealed class TestNormalComponent : IComponent
+namespace TestComponents
 {
-    public string value;
+    [Context("Test1")]
+    [Context("Test2")]
+    public sealed class TestNormalComponent : IComponent
+    {
+        public string value;
+    }
 }

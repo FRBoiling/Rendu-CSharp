@@ -1,0 +1,37 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\Rendu.CodeGeneration.Plugins\\Rendu.CodeGeneration.Plugins.csproj",
+    "projectName": "Rendu.CodeGeneration.Plugins",
+    "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\Rendu.CodeGeneration.Plugins\\Rendu.CodeGeneration.Plugins.csproj",
+    "outputPath": "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\Rendu.CodeGeneration.Plugins\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "net461"
+    ],
+    "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "net461": {
+        "projectReferences": {
+          "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "net461": {}
+  }
+}

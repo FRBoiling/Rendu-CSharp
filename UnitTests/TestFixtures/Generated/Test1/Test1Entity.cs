@@ -1,5 +1,8 @@
-using Entitas;
+using Entitas.Entity;
 
-public sealed class Test1Entity : Entity
+namespace TestFixtures.Generated.Test1
 {
+    public sealed class Test1Entity : Entity
+    {
+    }
 }

@@ -236,8 +236,8 @@
     },
     "Rd.Analytics/1.0.0": {
       "type": "project",
-      "path": "../../RdFixtures/Analytics/Rd.Analytics.csproj",
-      "msbuildProject": "../../RdFixtures/Analytics/Rd.Analytics.csproj"
+      "path": "../../Analytics/Rd.Analytics.csproj",
+      "msbuildProject": "../../Analytics/Rd.Analytics.csproj"
     },
     "Rd.CodeGeneration/1.0.0": {
       "type": "project",
@@ -246,18 +246,18 @@
     },
     "Rd.Logging/1.0.0": {
       "type": "project",
-      "path": "../../RdFixtures/Logging/Rd.Logging.csproj",
-      "msbuildProject": "../../RdFixtures/Logging/Rd.Logging.csproj"
+      "path": "../../Logging/Rd.Logging.csproj",
+      "msbuildProject": "../../Logging/Rd.Logging.csproj"
     },
     "Rd.Serialization/1.0.0": {
       "type": "project",
-      "path": "../../RdFixtures/Serialization/Rd.Serialization.csproj",
-      "msbuildProject": "../../RdFixtures/Serialization/Rd.Serialization.csproj"
+      "path": "../../Serialization/Rd.Serialization.csproj",
+      "msbuildProject": "../../Serialization/Rd.Serialization.csproj"
     },
     "Rd.Utils/1.0.0": {
       "type": "project",
-      "path": "../../RdFixtures/Utils/Rd.Utils.csproj",
-      "msbuildProject": "../../RdFixtures/Utils/Rd.Utils.csproj"
+      "path": "../../Utils/Rd.Utils.csproj",
+      "msbuildProject": "../../Utils/Rd.Utils.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -275,11 +275,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj",
+      "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj",
       "projectName": "Rd.CodeGenerator",
-      "projectPath": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj",
+      "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj",
       "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGenerator\\obj\\",
+      "outputPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -298,11 +298,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj": {
-              "projectPath": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj"
-            },
             "D:\\GitHub\\RenduEcs\\RdFixtures\\Analytics\\Rd.Analytics.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Analytics\\Rd.Analytics.csproj"
+            },
+            "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj"
             },
             "D:\\GitHub\\RenduEcs\\RdFixtures\\Serialization\\Rd.Serialization.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Serialization\\Rd.Serialization.csproj"

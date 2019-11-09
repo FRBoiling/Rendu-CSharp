@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Entitas.Migration.Migration;
 
-namespace Entitas.Migration.Migrations
+namespace Rd.Migration.Migrations
 {
     public class M0360_2 : IMigration
     {
@@ -107,7 +106,7 @@ namespace Entitas.Migration.Migrations
 
             const string filterReplacement =
                 @"    protected override bool Filter(Entity entity) {{
-        // TODO Entitas 0.36.0 Entitas.Migration
+        // TODO Entitas 0.36.0 Rd.Migration
         // ensure was: {0}
         // exclude was: {1}
 
@@ -217,8 +216,8 @@ namespace Entitas.Migration.Migrations
             }
             else
             {
-                fileContent = Regex.Replace(fileContent, setPoolsPattern, match => "// TODO Entitas 0.36.0 Entitas.Migration (constructor)\n    " + match.Value);
-                fileContent = Regex.Replace(fileContent, setPoolPattern, match => "// TODO Entitas 0.36.0 Entitas.Migration (constructor)\n    " + match.Value);
+                fileContent = Regex.Replace(fileContent, setPoolsPattern, match => "// TODO Entitas 0.36.0 Rd.Migration (constructor)\n    " + match.Value);
+                fileContent = Regex.Replace(fileContent, setPoolPattern, match => "// TODO Entitas 0.36.0 Rd.Migration (constructor)\n    " + match.Value);
             }
 
             return fileContent;

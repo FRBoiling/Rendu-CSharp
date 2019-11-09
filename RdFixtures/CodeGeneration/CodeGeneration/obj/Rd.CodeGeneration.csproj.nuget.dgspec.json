@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj": {}
+    "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj": {
+    "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj",
+        "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj",
         "projectName": "Rd.CodeGeneration",
-        "projectPath": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj",
+        "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj",
         "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGeneration\\obj\\",
+        "outputPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGeneration\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

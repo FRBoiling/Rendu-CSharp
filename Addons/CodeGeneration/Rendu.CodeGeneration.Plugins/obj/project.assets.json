@@ -1,0 +1,254 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.1": {
+      "System.CodeDom/4.7.0-preview2.19523.17": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.CodeDom.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.CodeDom.dll": {}
+        }
+      },
+      "Entitas/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entitas.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitas.dll": {}
+        }
+      },
+      "Entitas.Attributes/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entitas.Attributes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitas.Attributes.dll": {}
+        }
+      },
+      "Rd.Analytics/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rd.Logging": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rd.Analytics.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Analytics.dll": {}
+        }
+      },
+      "Rd.CodeGeneration/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rd.Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rd.CodeGeneration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.CodeGeneration.dll": {}
+        }
+      },
+      "Rd.CodeGenerator/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rd.Analytics": "1.0.0",
+          "Rd.CodeGeneration": "1.0.0",
+          "Rd.Serialization": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rd.CodeGenerator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.CodeGenerator.dll": {}
+        }
+      },
+      "Rd.Logging/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Rd.Logging.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Logging.dll": {}
+        }
+      },
+      "Rd.Plugins/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.Attributes": "1.0.0",
+          "Rd.CodeGenerator": "1.0.0",
+          "System.CodeDom": "4.7.0-preview2.19523.17"
+        },
+        "compile": {
+          "bin/placeholder/Rd.Plugins.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Plugins.dll": {}
+        }
+      },
+      "Rd.Serialization/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rd.Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rd.Serialization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Serialization.dll": {}
+        }
+      },
+      "Rd.Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rd.Logging": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rd.Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Utils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "System.CodeDom/4.7.0-preview2.19523.17": {
+      "sha512": "RpcxhO5BxNzn5nUstmB+A1OJxbGAQBEo+yLHZOntRylsdaFUn6XBS2C3Vum6RTPsoxujWFnf5gffZc1WKPdkWA==",
+      "type": "package",
+      "path": "system.codedom/4.7.0-preview2.19523.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.CodeDom.dll",
+        "lib/net461/System.CodeDom.xml",
+        "lib/netstandard2.0/System.CodeDom.dll",
+        "lib/netstandard2.0/System.CodeDom.xml",
+        "ref/net461/System.CodeDom.dll",
+        "ref/net461/System.CodeDom.xml",
+        "ref/netstandard2.0/System.CodeDom.dll",
+        "ref/netstandard2.0/System.CodeDom.xml",
+        "system.codedom.4.7.0-preview2.19523.17.nupkg.sha512",
+        "system.codedom.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Entitas/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/Entitas/Entitas/Entitas.csproj",
+      "msbuildProject": "../../../ThirdParty/Entitas/Entitas/Entitas.csproj"
+    },
+    "Entitas.Attributes/1.0.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj",
+      "msbuildProject": "../../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj"
+    },
+    "Rd.Analytics/1.0.0": {
+      "type": "project",
+      "path": "../../../RdFixtures/Analytics/Rd.Analytics.csproj",
+      "msbuildProject": "../../../RdFixtures/Analytics/Rd.Analytics.csproj"
+    },
+    "Rd.CodeGeneration/1.0.0": {
+      "type": "project",
+      "path": "../../../RdFixtures/CodeGeneration/CodeGeneration/Rd.CodeGeneration.csproj",
+      "msbuildProject": "../../../RdFixtures/CodeGeneration/CodeGeneration/Rd.CodeGeneration.csproj"
+    },
+    "Rd.CodeGenerator/1.0.0": {
+      "type": "project",
+      "path": "../../../RdFixtures/CodeGeneration/CodeGenerator/Rd.CodeGenerator.csproj",
+      "msbuildProject": "../../../RdFixtures/CodeGeneration/CodeGenerator/Rd.CodeGenerator.csproj"
+    },
+    "Rd.Logging/1.0.0": {
+      "type": "project",
+      "path": "../../../RdFixtures/Logging/Rd.Logging.csproj",
+      "msbuildProject": "../../../RdFixtures/Logging/Rd.Logging.csproj"
+    },
+    "Rd.Plugins/1.0.0": {
+      "type": "project",
+      "path": "../../../RdFixtures/CodeGeneration/Plugins/Rd.Plugins.csproj",
+      "msbuildProject": "../../../RdFixtures/CodeGeneration/Plugins/Rd.Plugins.csproj"
+    },
+    "Rd.Serialization/1.0.0": {
+      "type": "project",
+      "path": "../../../RdFixtures/Serialization/Rd.Serialization.csproj",
+      "msbuildProject": "../../../RdFixtures/Serialization/Rd.Serialization.csproj"
+    },
+    "Rd.Utils/1.0.0": {
+      "type": "project",
+      "path": "../../../RdFixtures/Utils/Rd.Utils.csproj",
+      "msbuildProject": "../../../RdFixtures/Utils/Rd.Utils.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.1": [
+      "Rd.Plugins >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\WanXin\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\Rendu.CodeGeneration.Plugins\\Rendu.CodeGeneration.Plugins.csproj",
+      "projectName": "Rendu.CodeGeneration.Plugins",
+      "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\Rendu.CodeGeneration.Plugins\\Rendu.CodeGeneration.Plugins.csproj",
+      "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\Rendu.CodeGeneration.Plugins\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\WanXin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net461"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net461": {
+          "projectReferences": {
+            "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net461": {}
+    }
+  }
+}

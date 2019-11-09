@@ -14,8 +14,8 @@
     </PropertyGroup>
     
     <ItemGroup>
-      <ProjectReference Include="..\..\ThirdParty\Entitas\Attributes\Entitas.Attributes.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas\Entitas.csproj" />
+      <ProjectReference Include="..\..\..\ThirdParty\Entitas\Attributes\Entitas.Attributes.csproj" />
+      <ProjectReference Include="..\..\..\ThirdParty\Entitas\Entitas\Entitas.csproj" />
       <ProjectReference Include="..\CodeGenerator\Rd.CodeGenerator.csproj" />
     </ItemGroup>
     

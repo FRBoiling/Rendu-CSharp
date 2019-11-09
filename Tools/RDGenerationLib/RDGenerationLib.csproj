@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <LangVersion>7.3</LangVersion>
-        <TargetFramework>net45</TargetFramework>
+        <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -14,11 +14,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Addons\CodeGeneration\Entitas.CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj" />
-      <ProjectReference Include="..\..\Addons\CodeGeneration\Entitas.CodeGeneration.Plugins\Entitas.CodeGeneration.Plugins.csproj" />
-      <ProjectReference Include="..\..\Addons\Migration\Entitas.Migration\Entitas.Migration.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\CodeGeneration\DesperateDevs.CodeGeneration.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\Serialization\DesperateDevs.Serialization.csproj" />
+      <ProjectReference Include="..\..\RdFixtures\CodeGeneration\Migration\Rd.Migration.csproj" />
+      <ProjectReference Include="..\..\RdFixtures\CodeGeneration\Plugins\Rd.Plugins.csproj" />
     </ItemGroup>
 
 </Project>

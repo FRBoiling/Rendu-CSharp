@@ -1,24 +1,28 @@
-using Entitas;
+using Entitas.Matcher;
+using Entitas.Matcher.Interfaces;
 
-public sealed partial class Test1Matcher
+namespace TestFixtures.Generated.Test1
 {
-    public static IAllOfMatcher<Test1Entity> AllOf(params int[] indices)
+    public sealed partial class Test1Matcher
     {
-        return Matcher<Test1Entity>.AllOf(indices);
-    }
+        public static IAllOfMatcher<Test1Entity> AllOf(params int[] indices)
+        {
+            return Matcher<Test1Entity>.AllOf(indices);
+        }
 
-    public static IAllOfMatcher<Test1Entity> AllOf(params IMatcher<Test1Entity>[] matchers)
-    {
-        return Matcher<Test1Entity>.AllOf(matchers);
-    }
+        public static IAllOfMatcher<Test1Entity> AllOf(params IMatcher<Test1Entity>[] matchers)
+        {
+            return Matcher<Test1Entity>.AllOf(matchers);
+        }
 
-    public static IAnyOfMatcher<Test1Entity> AnyOf(params int[] indices)
-    {
-        return Matcher<Test1Entity>.AnyOf(indices);
-    }
+        public static IAnyOfMatcher<Test1Entity> AnyOf(params int[] indices)
+        {
+            return Matcher<Test1Entity>.AnyOf(indices);
+        }
 
-    public static IAnyOfMatcher<Test1Entity> AnyOf(params IMatcher<Test1Entity>[] matchers)
-    {
-        return Matcher<Test1Entity>.AnyOf(matchers);
+        public static IAnyOfMatcher<Test1Entity> AnyOf(params IMatcher<Test1Entity>[] matchers)
+        {
+            return Matcher<Test1Entity>.AnyOf(matchers);
+        }
     }
 }

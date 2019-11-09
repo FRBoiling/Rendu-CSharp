@@ -303,18 +303,18 @@
     },
     "Entitas/1.0.0": {
       "type": "project",
-      "path": "../../ThirdParty/Entitas/Entitas/Entitas.csproj",
-      "msbuildProject": "../../ThirdParty/Entitas/Entitas/Entitas.csproj"
+      "path": "../../../ThirdParty/Entitas/Entitas/Entitas.csproj",
+      "msbuildProject": "../../../ThirdParty/Entitas/Entitas/Entitas.csproj"
     },
     "Entitas.Attributes/1.0.0": {
       "type": "project",
-      "path": "../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj",
-      "msbuildProject": "../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj"
+      "path": "../../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj",
+      "msbuildProject": "../../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj"
     },
     "Rd.Analytics/1.0.0": {
       "type": "project",
-      "path": "../../RdFixtures/Analytics/Rd.Analytics.csproj",
-      "msbuildProject": "../../RdFixtures/Analytics/Rd.Analytics.csproj"
+      "path": "../../Analytics/Rd.Analytics.csproj",
+      "msbuildProject": "../../Analytics/Rd.Analytics.csproj"
     },
     "Rd.CodeGeneration/1.0.0": {
       "type": "project",
@@ -328,18 +328,18 @@
     },
     "Rd.Logging/1.0.0": {
       "type": "project",
-      "path": "../../RdFixtures/Logging/Rd.Logging.csproj",
-      "msbuildProject": "../../RdFixtures/Logging/Rd.Logging.csproj"
+      "path": "../../Logging/Rd.Logging.csproj",
+      "msbuildProject": "../../Logging/Rd.Logging.csproj"
     },
     "Rd.Serialization/1.0.0": {
       "type": "project",
-      "path": "../../RdFixtures/Serialization/Rd.Serialization.csproj",
-      "msbuildProject": "../../RdFixtures/Serialization/Rd.Serialization.csproj"
+      "path": "../../Serialization/Rd.Serialization.csproj",
+      "msbuildProject": "../../Serialization/Rd.Serialization.csproj"
     },
     "Rd.Utils/1.0.0": {
       "type": "project",
-      "path": "../../RdFixtures/Utils/Rd.Utils.csproj",
-      "msbuildProject": "../../RdFixtures/Utils/Rd.Utils.csproj"
+      "path": "../../Utils/Rd.Utils.csproj",
+      "msbuildProject": "../../Utils/Rd.Utils.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -358,11 +358,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\Plugins\\Rd.Plugins.csproj",
+      "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj",
       "projectName": "Rd.Plugins",
-      "projectPath": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\Plugins\\Rd.Plugins.csproj",
+      "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj",
       "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\Plugins\\obj\\",
+      "outputPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -381,8 +381,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj": {
-              "projectPath": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj"
+            "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj"
             },
             "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj"

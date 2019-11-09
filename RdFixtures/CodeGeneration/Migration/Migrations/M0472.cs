@@ -1,6 +1,4 @@
-﻿using Entitas.Migration.Migration;
-
-namespace Entitas.Migration.Migrations
+﻿namespace Rd.Migration.Migrations
 {
     public class M0472 : IMigration
     {

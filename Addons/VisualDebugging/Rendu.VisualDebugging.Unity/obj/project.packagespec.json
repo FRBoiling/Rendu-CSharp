@@ -1,0 +1,48 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "D:\\GitHub\\RenduEcs\\Addons\\VisualDebugging\\Rendu.VisualDebugging.Unity\\Rendu.VisualDebugging.Unity.csproj",
+    "projectName": "Rendu.VisualDebugging.Unity",
+    "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\VisualDebugging\\Rendu.VisualDebugging.Unity\\Rendu.VisualDebugging.Unity.csproj",
+    "outputPath": "D:\\GitHub\\RenduEcs\\Addons\\VisualDebugging\\Rendu.VisualDebugging.Unity\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "net461"
+    ],
+    "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "net461": {
+        "projectReferences": {
+          "D:\\GitHub\\RenduEcs\\Addons\\Unity\\Rendu.Entitas.Unity\\Rendu.Entitas.Unity.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\Rendu.Entitas.Unity\\Rendu.Entitas.Unity.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "net461": {
+      "dependencies": {
+        "Unity3D.UnityEditor": {
+          "target": "Package",
+          "version": "[2018.1.6-f1, )"
+        },
+        "Unity3D.UnityEngine": {
+          "target": "Package",
+          "version": "[2018.1.6-f1, )"
+        }
+      }
+    }
+  }
+}

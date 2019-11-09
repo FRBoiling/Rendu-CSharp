@@ -1,8 +1,8 @@
-using DesperateDevs.CodeGeneration;
-using Entitas.CodeGeneration.Plugins;
 using NUnit.Framework;
+using Rd.CodeGeneration;
+using Rd.Plugins.EntityIndex.CodeGenerators;
 
-namespace TestProject
+namespace UnitTestProject
 {
     public partial class Tests
     {

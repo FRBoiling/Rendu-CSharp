@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\Plugins\\Rd.Plugins.csproj",
+    "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj",
     "projectName": "Rd.Plugins",
-    "projectPath": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\Plugins\\Rd.Plugins.csproj",
-    "outputPath": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\Plugins\\obj\\",
+    "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj",
+    "outputPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -19,8 +19,8 @@
     "frameworks": {
       "netstandard2.0": {
         "projectReferences": {
-          "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj": {
-            "projectPath": "D:\\GitHub\\RenduEcs\\RdCodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj"
+          "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj"
           },
           "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj": {
             "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj"

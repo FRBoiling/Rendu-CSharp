@@ -33,7 +33,7 @@ namespace Rd.Utils
         public static T PublicMemberClone<T>(this object obj) where T : new()
         {
             var obj1 = new T();
-            obj.CopyPublicMemberValues((object) obj1);
+            obj.CopyPublicMemberValues(obj1);
             return obj1;
         }
 

@@ -1,6 +1,6 @@
-﻿using Entitas.CodeGeneration.Attributes;
+﻿using Entitas.Attributes;
 
-namespace TestProject.Fixtures
+namespace UnitTestProject.Fixtures
 {
     [Context("Test1")]
     [ComponentName("NewCustomNameComponent1", "NewCustomNameComponent2")]

@@ -22,29 +22,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Plugins\DesperateDevs.CodeGeneration.Plugins.csproj" />
-      <ProjectReference Include="..\..\Addons\CodeGeneration\DesperateDevs.CodeGeneration.Unity.Plugins\DesperateDevs.CodeGeneration.Unity.Plugins.csproj" />
-      <ProjectReference Include="..\..\Addons\CodeGeneration\Entitas.CodeGeneration.Attributes\Entitas.CodeGeneration.Attributes.csproj" />
-      <ProjectReference Include="..\..\Addons\CodeGeneration\Entitas.CodeGeneration.Plugins\Entitas.CodeGeneration.Plugins.csproj" />
-      <ProjectReference Include="..\..\Addons\CodeGenerator\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor\DesperateDevs.CodeGeneration.CodeGenerator.Unity.Editor.csproj" />
-      <ProjectReference Include="..\..\Addons\Migration\Entitas.Migration\Entitas.Migration.csproj" />
-      <ProjectReference Include="..\..\Addons\Unity\DesperateDevs.Unity.Editor\DesperateDevs.Unity.Editor.csproj" />
-      <ProjectReference Include="..\..\Addons\Unity\Entitas.Unity.Editor\Entitas.Unity.Editor.csproj" />
-      <ProjectReference Include="..\..\RdUnity\Assembly-CSharp.csproj" />
-      <ProjectReference Include="..\..\Server\App\Server.App.csproj" />
-      <ProjectReference Include="..\..\Server\Systems\Server.Systems.csproj" />
-      <ProjectReference Include="..\..\Shared\Components\Components.csproj" />
-      <ProjectReference Include="..\..\Shared\Generated\Generated.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\Analytics\DesperateDevs.Analytics.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\CodeGeneration.CodeGenerator\DesperateDevs.CodeGeneration.CodeGenerator.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\CodeGeneration\DesperateDevs.CodeGeneration.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\Logging\DesperateDevs.Logging.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\Networking\DesperateDevs.Networking.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\Serialization\DesperateDevs.Serialization.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\DesperateDevs\Utils\DesperateDevs.Utils.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\Protobuf\Google.Protobuf\Google.Protobuf.csproj" />
-      <ProjectReference Include="..\..\Tools\RDGenerationLib\RDGenerationLib.csproj" />
+      <ProjectReference Include="..\..\RdFixtures\CodeGeneration\Migration\Rd.Migration.csproj" />
+      <ProjectReference Include="..\..\RdFixtures\CodeGeneration\Plugins\Rd.Plugins.csproj" />
       <ProjectReference Include="..\TestComponents\TestComponents.csproj" />
       <ProjectReference Include="..\TestFixtures\TestFixtures.csproj" />
     </ItemGroup>

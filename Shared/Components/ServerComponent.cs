@@ -1,8 +1,11 @@
 ﻿using Entitas;
-using Entitas.CodeGeneration.Attributes;
+using Entitas.Attributes;
 
-[Context("Server")]
-public class ServerComponent : IComponent
+namespace Components
 {
-    private string _serverName;
+    [Context("Server")]
+    public class ServerComponent : IComponent
+    {
+        private string _serverName;
+    }
 }

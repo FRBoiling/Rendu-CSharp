@@ -1,7 +1,8 @@
 ﻿using Entitas;
-using Entitas.CodeGeneration.Attributes;
+using Entitas.Attributes;
+using Entitas.Attributes.EntityIndex;
 
-namespace TestProject.Fixtures
+namespace UnitTestProject.Fixtures
 {
 //    [Game, Input]
     public class TestEntityIndexComponent : IComponent

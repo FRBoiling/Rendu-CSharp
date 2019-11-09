@@ -2,7 +2,7 @@
 using System.Reflection;
 using NUnit.Framework;
 
-namespace TestProject
+namespace UnitTestProject
 {
     public partial class Tests
     {

@@ -1,47 +1,52 @@
 using System;
 using System.Linq;
-using Entitas;
-using Entitas.CodeGeneration.Attributes;
+using Entitas.Attributes;
+using Entitas.Context;
+using TestFixtures.Generated.Test1;
+using TestFixtures.Generated.Test2;
 
-public class Contexts : IContexts
+namespace TestFixtures.Generated
 {
-    private static Contexts _sharedInstance;
-
-    public Contexts()
+    public class Contexts : IContexts
     {
-        test1 = new Test1Context();
-        test2 = new Test2Context();
+        private static Contexts _sharedInstance;
 
-        var postConstructors = Enumerable.Where(
-            GetType().GetMethods(),
-            method => Attribute.IsDefined(method, typeof(PostConstructorAttribute))
-        );
-
-        foreach (var postConstructor in postConstructors) postConstructor.Invoke(this, null);
-    }
-
-    public static Contexts sharedInstance
-    {
-        get
+        public Contexts()
         {
-            if (_sharedInstance == null) _sharedInstance = new Contexts();
+            test1 = new Test1Context();
+            test2 = new Test2Context();
 
-            return _sharedInstance;
+            var postConstructors = Enumerable.Where(
+                GetType().GetMethods(),
+                method => Attribute.IsDefined(method, typeof(PostConstructorAttribute))
+            );
+
+            foreach (var postConstructor in postConstructors) postConstructor.Invoke(this, null);
         }
-        set => _sharedInstance = value;
-    }
 
-    public Test1Context test1 { get; set; }
-    public Test2Context test2 { get; set; }
+        public static Contexts sharedInstance
+        {
+            get
+            {
+                if (_sharedInstance == null) _sharedInstance = new Contexts();
 
-    public IContext[] allContexts
-    {
-        get { return new IContext[] {test1, test2}; }
-    }
+                return _sharedInstance;
+            }
+            set => _sharedInstance = value;
+        }
 
-    public void Reset()
-    {
-        var contexts = allContexts;
-        for (var i = 0; i < contexts.Length; i++) contexts[i].Reset();
+        public Test1Context test1 { get; set; }
+        public Test2Context test2 { get; set; }
+
+        public IContext[] allContexts
+        {
+            get { return new IContext[] {test1, test2}; }
+        }
+
+        public void Reset()
+        {
+            var contexts = allContexts;
+            for (var i = 0; i < contexts.Length; i++) contexts[i].Reset();
+        }
     }
 }

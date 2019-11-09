@@ -1,4 +1,4 @@
-namespace Entitas.Migration.Migration
+namespace Rd.Migration
 {
     public interface IMigration
     {

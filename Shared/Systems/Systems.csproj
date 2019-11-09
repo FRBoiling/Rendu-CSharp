@@ -12,4 +12,8 @@
       <OutputPath>..\Bin\</OutputPath>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Generated\Generated.csproj" />
+    </ItemGroup>
+
 </Project>

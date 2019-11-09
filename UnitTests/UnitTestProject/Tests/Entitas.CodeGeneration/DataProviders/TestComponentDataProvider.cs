@@ -1,12 +1,17 @@
 using System;
-using DesperateDevs.Serialization;
-using DesperateDevs.Utils;
-using Entitas.CodeGeneration.Attributes;
-using Entitas.CodeGeneration.Plugins;
+using Entitas.Attributes;
 using NUnit.Framework;
-using TestProject.Fixtures;
+using Rd.Plugins.Component;
+using Rd.Plugins.Component.DataProviders;
+using Rd.Plugins.Component.DataProviders.ComponentDataProviders;
+using Rd.Plugins.Data;
+using Rd.Serialization;
+using Rd.Utils;
+using UnitTestProject.Fixtures;
+using UnitTestProject.Fixtures.Components;
+using UnitTestProject.Fixtures.Preferences;
 
-namespace TestProject
+namespace UnitTestProject
 {
     public partial class Tests
     {
@@ -20,8 +25,8 @@ namespace TestProject
             var provider = new ComponentDataProvider(new[] {typeof(T)});
             if (preferences == null)
                 preferences = new TestPreferences(
-                    @"Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = Game, GameState
-Entitas.DesperateDevs.CodeGeneration.Plugins.IgnoreNamespaces = false");
+                    @"Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = Game, GameState
+Entitas.Rd.CodeGeneration.Rd.Plugins.IgnoreNamespaces = false");
 
             provider.Configure(preferences);
 
@@ -320,7 +325,7 @@ Entitas.DesperateDevs.CodeGeneration.Plugins.IgnoreNamespaces = false");
                     var types = new[] {typeof(NameAgeComponent), typeof(Test2ContextComponent)};
                     var provider = new ComponentDataProvider(types);
                     provider.Configure(new TestPreferences(
-                        "Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = Game, GameState"
+                        "Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = Game, GameState"
                     ));
                     var data = provider.GetData();
                     Assert.AreEqual(data.Length, types.Length);
@@ -332,7 +337,7 @@ Entitas.DesperateDevs.CodeGeneration.Plugins.IgnoreNamespaces = false");
                     var types = new[] {typeof(TestClassToGenerate), typeof(ClassToGenerateComponent)};
                     var provider = new ComponentDataProvider(types);
                     provider.Configure(new TestPreferences(
-                        "Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = Game, GameState"
+                        "Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = Game, GameState"
                     ));
                     var data = provider.GetData();
                     Assert.AreEqual(data.Length, 1);
@@ -375,7 +380,7 @@ Entitas.DesperateDevs.CodeGeneration.Plugins.IgnoreNamespaces = false");
                 ComponentData data = null;
 
                 var preferences = new TestPreferences(
-                    "Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = ConfiguredContext" + "\n"
+                    "Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = ConfiguredContext" + "\n"
                 );
 
                 type = typeof(TestNoContextComponent);

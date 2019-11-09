@@ -13,8 +13,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\RdFixtures\Analytics\Rd.Analytics.csproj" />
-    <ProjectReference Include="..\..\RdFixtures\Serialization\Rd.Serialization.csproj" />
+    <ProjectReference Include="..\..\..\RdFixtures\Analytics\Rd.Analytics.csproj" />
+    <ProjectReference Include="..\..\..\RdFixtures\Serialization\Rd.Serialization.csproj" />
     <ProjectReference Include="..\CodeGeneration\Rd.CodeGeneration.csproj" />
   </ItemGroup>
 

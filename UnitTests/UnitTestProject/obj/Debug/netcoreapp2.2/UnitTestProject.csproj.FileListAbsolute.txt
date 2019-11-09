@@ -12,17 +12,3 @@ D:\GitHub\RenduECS\Rendu-CSharp\UnitTests\Bin\netcoreapp2.2\UnitTestProject.pdb
 D:\GitHub\RenduECS\Rendu-CSharp\UnitTests\UnitTestProject\obj\Debug\netcoreapp2.2\UnitTestProject.csproj.CopyComplete
 D:\GitHub\RenduECS\Rendu-CSharp\UnitTests\UnitTestProject\obj\Debug\netcoreapp2.2\UnitTestProject.dll
 D:\GitHub\RenduECS\Rendu-CSharp\UnitTests\UnitTestProject\obj\Debug\netcoreapp2.2\UnitTestProject.pdb
-D:\GitHub\RenduECS\UnitTests\Bin\netcoreapp2.2\NUnit3.TestAdapter.dll
-D:\GitHub\RenduECS\UnitTests\Bin\netcoreapp2.2\NUnit3.TestAdapter.pdb
-D:\GitHub\RenduECS\UnitTests\Bin\netcoreapp2.2\nunit.engine.netstandard.dll
-D:\GitHub\RenduECS\UnitTests\Bin\netcoreapp2.2\UnitTestProject.deps.json
-D:\GitHub\RenduECS\UnitTests\Bin\netcoreapp2.2\UnitTestProject.runtimeconfig.json
-D:\GitHub\RenduECS\UnitTests\Bin\netcoreapp2.2\UnitTestProject.runtimeconfig.dev.json
-D:\GitHub\RenduECS\UnitTests\Bin\netcoreapp2.2\UnitTestProject.dll
-D:\GitHub\RenduECS\UnitTests\Bin\netcoreapp2.2\UnitTestProject.pdb
-D:\GitHub\RenduECS\UnitTests\UnitTestProject\obj\Debug\netcoreapp2.2\UnitTestProject.csprojAssemblyReference.cache
-D:\GitHub\RenduECS\UnitTests\UnitTestProject\obj\Debug\netcoreapp2.2\UnitTestProject.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\UnitTests\UnitTestProject\obj\Debug\netcoreapp2.2\UnitTestProject.AssemblyInfo.cs
-D:\GitHub\RenduECS\UnitTests\UnitTestProject\obj\Debug\netcoreapp2.2\UnitTestProject.csproj.CopyComplete
-D:\GitHub\RenduECS\UnitTests\UnitTestProject\obj\Debug\netcoreapp2.2\UnitTestProject.dll
-D:\GitHub\RenduECS\UnitTests\UnitTestProject\obj\Debug\netcoreapp2.2\UnitTestProject.pdb

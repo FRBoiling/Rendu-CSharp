@@ -1,45 +1,49 @@
 using System;
 using System.Linq;
-using Entitas;
-using Entitas.CodeGeneration.Attributes;
+using Entitas.Attributes;
+using Entitas.Context;
+using Generated.Server;
 
-public class Contexts : IContexts
+namespace Generated
 {
-    private static Contexts _sharedInstance;
-
-    public Contexts()
+    public class Contexts : IContexts
     {
-        server = new ServerContext();
+        private static Contexts _sharedInstance;
 
-        var postConstructors = Enumerable.Where(
-            GetType().GetMethods(),
-            method => Attribute.IsDefined(method, typeof(PostConstructorAttribute))
-        );
-
-        foreach (var postConstructor in postConstructors) postConstructor.Invoke(this, null);
-    }
-
-    public static Contexts sharedInstance
-    {
-        get
+        public Contexts()
         {
-            if (_sharedInstance == null) _sharedInstance = new Contexts();
+            server = new ServerContext();
 
-            return _sharedInstance;
+            var postConstructors = Enumerable.Where(
+                GetType().GetMethods(),
+                method => Attribute.IsDefined(method, typeof(PostConstructorAttribute))
+            );
+
+            foreach (var postConstructor in postConstructors) postConstructor.Invoke(this, null);
         }
-        set => _sharedInstance = value;
-    }
 
-    public ServerContext server { get; set; }
+        public static Contexts sharedInstance
+        {
+            get
+            {
+                if (_sharedInstance == null) _sharedInstance = new Contexts();
 
-    public IContext[] allContexts
-    {
-        get { return new IContext[] {server}; }
-    }
+                return _sharedInstance;
+            }
+            set => _sharedInstance = value;
+        }
 
-    public void Reset()
-    {
-        var contexts = allContexts;
-        for (var i = 0; i < contexts.Length; i++) contexts[i].Reset();
+        public ServerContext server { get; set; }
+
+        public IContext[] allContexts
+        {
+            get { return new IContext[] {server}; }
+        }
+
+        public void Reset()
+        {
+            var contexts = allContexts;
+            for (var i = 0; i < contexts.Length; i++) contexts[i].Reset();
+        }
     }
 }

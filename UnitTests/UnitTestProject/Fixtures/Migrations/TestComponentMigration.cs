@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using DesperateDevs.CodeGeneration;
-using Entitas.CodeGeneration.Plugins;
-using Entitas.Migration;
-using TestProject.Fixtures.Generation;
+using Rd.CodeGeneration;
+using Rd.Migration;
+using Rd.Plugins.Component.CodeGenerators;
+using TestComponents;
+using UnitTestProject.Fixtures.Generation;
+using UnitTestProject.Fixtures.Preferences;
 
-namespace TestProject.Fixtures
+namespace UnitTestProject.Fixtures.Migrations
 {
     public class TestComponentMigration : IMigration
     {
@@ -17,8 +19,8 @@ namespace TestProject.Fixtures
 
         public MigrationFile[] Migrate(string path)
         {
-            var names = @"Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = Test1,Test2
-Entitas.DesperateDevs.CodeGeneration.Plugins.IgnoreNamespaces = true";
+            var names = @"Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = Test1,Test2
+Entitas.Rd.CodeGeneration.Rd.Plugins.IgnoreNamespaces = true";
 
             var dataArr = TestDataGeneration.getMultipleData<TestNormalComponent>(new TestPreferences(names));
 

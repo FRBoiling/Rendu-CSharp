@@ -4,8 +4,8 @@ namespace Rd.Networking
 {
     public class ReceiveVO
     {
-        public readonly Socket socket;
         public readonly byte[] bytes;
+        public readonly Socket socket;
 
         public ReceiveVO(Socket socket, byte[] bytes)
         {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Entitas.CodeGeneration.Attributes
+namespace Entitas.Attributes
 {
     [AttributeUsage(AttributeTargets.Method)]
     public class PostConstructorAttribute : Attribute

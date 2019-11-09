@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 
-namespace Entitas.Migration.Migration
+namespace Rd.Migration
 {
     public static class MigrationUtils
     {

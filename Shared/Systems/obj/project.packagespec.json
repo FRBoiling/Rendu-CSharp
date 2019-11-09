@@ -18,7 +18,11 @@
     },
     "frameworks": {
       "netstandard2.0": {
-        "projectReferences": {}
+        "projectReferences": {
+          "D:\\GitHub\\RenduEcs\\Shared\\Generated\\Generated.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\Shared\\Generated\\Generated.csproj"
+          }
+        }
       }
     },
     "warningProperties": {

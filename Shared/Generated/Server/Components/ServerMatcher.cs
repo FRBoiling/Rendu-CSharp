@@ -1,21 +1,25 @@
-using Entitas;
+using Entitas.Matcher;
+using Entitas.Matcher.Interfaces;
 
-public sealed partial class ServerMatcher
+namespace Generated.Server.Components
 {
-    private static IMatcher<ServerEntity> _matcherServer;
-
-    public static IMatcher<ServerEntity> Server
+    public sealed partial class ServerMatcher
     {
-        get
-        {
-            if (_matcherServer == null)
-            {
-                var matcher = (Matcher<ServerEntity>) Matcher<ServerEntity>.AllOf(ServerComponentsLookup.Server);
-                matcher.componentNames = ServerComponentsLookup.componentNames;
-                _matcherServer = matcher;
-            }
+        private static IMatcher<ServerEntity> _matcherServer;
 
-            return _matcherServer;
+        public static IMatcher<ServerEntity> Server
+        {
+            get
+            {
+                if (_matcherServer == null)
+                {
+                    var matcher = (Matcher<ServerEntity>) Matcher<ServerEntity>.AllOf(ServerComponentsLookup.Server);
+                    matcher.componentNames = ServerComponentsLookup.componentNames;
+                    _matcherServer = matcher;
+                }
+
+                return _matcherServer;
+            }
         }
     }
 }

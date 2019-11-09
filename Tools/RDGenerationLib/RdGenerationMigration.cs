@@ -1,17 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using DesperateDevs.CodeGeneration;
-using Entitas.CodeGeneration.Attributes;
-using Entitas.CodeGeneration.Plugins;
-using Entitas.Migration;
+using Entitas.Attributes;
+using Rd.CodeGeneration;
+using Rd.Migration;
+using Rd.Plugins.Component;
+using Rd.Plugins.Component.CodeGenerators;
+using Rd.Plugins.Component.DataProviders;
+using Rd.Plugins.Context;
+using Rd.Plugins.Context.CodeGenerators;
+using Rd.Plugins.Context.DataProviders;
+using Rd.Plugins.Entity.CodeGenerators;
 
 namespace RDGenerationLib
 {
     public class RdComponentsMigration : IMigration
     {
-        private const string CONTEXTS_PREFERENCES = "Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = ${contextNames}";
-        private const string COMPONENT_PREFERENCES = "Entitas.DesperateDevs.CodeGeneration.Plugins.IgnoreNamespaces = true";
+        private const string CONTEXTS_PREFERENCES = "Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = ${contextNames}";
+        private const string COMPONENT_PREFERENCES = "Entitas.Rd.CodeGeneration.Rd.Plugins.IgnoreNamespaces = true";
 
         public string version => "0.0.1";
 

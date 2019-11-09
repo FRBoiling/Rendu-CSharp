@@ -1,0 +1,48 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\Rendu.Entitas.Unity.Editor\\Rendu.Entitas.Unity.Editor.csproj",
+    "projectName": "Rendu.Entitas.Unity.Editor",
+    "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\Rendu.Entitas.Unity.Editor\\Rendu.Entitas.Unity.Editor.csproj",
+    "outputPath": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\Rendu.Entitas.Unity.Editor\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "net461"
+    ],
+    "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "net461": {
+        "projectReferences": {
+          "D:\\GitHub\\RenduEcs\\Addons\\Unity\\Rendu.Unity.Editor\\Rendu.Unity.Editor.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\Unity\\Rendu.Unity.Editor\\Rendu.Unity.Editor.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "net461": {
+      "dependencies": {
+        "Unity3D.UnityEditor": {
+          "target": "Package",
+          "version": "[2018.1.6-f1, )"
+        },
+        "Unity3D.UnityEngine": {
+          "target": "Package",
+          "version": "[2018.1.6-f1, )"
+        }
+      }
+    }
+  }
+}

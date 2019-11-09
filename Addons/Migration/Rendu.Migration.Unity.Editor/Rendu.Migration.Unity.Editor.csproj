@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net461</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <OutputPath>..\Bin</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <OutputPath>..\Bin</OutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Unity3D.UnityEditor" Version="2018.1.6-f1" />
+        <PackageReference Include="Unity3D.UnityEngine" Version="2018.1.6-f1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\RdFixtures\CodeGeneration\Migration\Rd.Migration.csproj" />
+      <ProjectReference Include="..\..\Unity\Rendu.Entitas.Unity.Editor\Rendu.Entitas.Unity.Editor.csproj" />
+    </ItemGroup>
+
+</Project>

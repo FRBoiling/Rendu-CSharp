@@ -1,18 +1,22 @@
 using System;
+using Components;
 
-public static class ServerComponentsLookup
+namespace Generated.Server
 {
-    public const int Server = 0;
-
-    public const int TotalComponents = 1;
-
-    public static readonly string[] componentNames =
+    public static class ServerComponentsLookup
     {
-        "Server"
-    };
+        public const int Server = 0;
 
-    public static readonly Type[] componentTypes =
-    {
-        typeof(ServerComponent)
-    };
+        public const int TotalComponents = 1;
+
+        public static readonly string[] componentNames =
+        {
+            "Server"
+        };
+
+        public static readonly Type[] componentTypes =
+        {
+            typeof(ServerComponent)
+        };
+    }
 }

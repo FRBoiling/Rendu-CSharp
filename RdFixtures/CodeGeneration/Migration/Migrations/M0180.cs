@@ -1,8 +1,7 @@
 using System.Linq;
 using System.Text.RegularExpressions;
-using Entitas.Migration.Migration;
 
-namespace Entitas.Migration.Migrations
+namespace Rd.Migration.Migrations
 {
     public class M0180 : IMigration
     {

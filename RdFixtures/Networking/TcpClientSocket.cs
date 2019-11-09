@@ -6,42 +6,41 @@ namespace Rd.Networking
 {
     public class TcpClientSocket : AbstractTcpSocket
     {
-        public event TcpClientSocket.TcpClientSocketHandler OnConnected;
-
-        public event TcpClientSocket.TcpClientSocketHandler OnDisconnected;
-
-        public bool isConnected
-        {
-            get { return this._socket.Connected; }
-        }
+        public delegate void TcpClientSocketHandler(TcpClientSocket client);
 
         public TcpClientSocket()
             : base(typeof(TcpClientSocket).FullName)
         {
         }
 
+        public bool isConnected => _socket.Connected;
+
+        public event TcpClientSocketHandler OnConnected;
+
+        public event TcpClientSocketHandler OnDisconnected;
+
         public void Connect(IPAddress ipAddress, int port)
         {
-            this._logger.Debug("Client is connecting to " + (object) ipAddress + ":" + (object) port + "...");
-            this._socket.BeginConnect(ipAddress, port, new AsyncCallback(this.onConnected), (object) this._socket);
+            _logger.Debug("Client is connecting to " + ipAddress + ":" + port + "...");
+            _socket.BeginConnect(ipAddress, port, onConnected, _socket);
         }
 
         public override void Send(byte[] buffer)
         {
-            this.send(this._socket, buffer);
+            send(_socket, buffer);
         }
 
         public override void Disconnect()
         {
-            this._logger.Debug("Client is disconnecting...");
-            this._socket.Shutdown(SocketShutdown.Both);
-            this._socket.BeginDisconnect(false, new AsyncCallback(this.onDisconnected), (object) this._socket);
+            _logger.Debug("Client is disconnecting...");
+            _socket.Shutdown(SocketShutdown.Both);
+            _socket.BeginDisconnect(false, onDisconnected, _socket);
         }
 
         private void onConnected(IAsyncResult ar)
         {
-            Socket asyncState = (Socket) ar.AsyncState;
-            bool flag = false;
+            var asyncState = (Socket) ar.AsyncState;
+            var flag = false;
             try
             {
                 asyncState.EndConnect(ar);
@@ -49,22 +48,22 @@ namespace Rd.Networking
             }
             catch (SocketException ex)
             {
-                this._logger.Error(ex.Message);
+                _logger.Error(ex.Message);
             }
 
             if (!flag)
                 return;
-            this._logger.Debug("Client connected to " + AbstractTcpSocket.keyForEndPoint((IPEndPoint) asyncState.RemoteEndPoint));
-            this.receive(new ReceiveVO(asyncState, new byte[asyncState.ReceiveBufferSize]));
-            if (this.OnConnected == null)
+            _logger.Debug("Client connected to " + keyForEndPoint((IPEndPoint) asyncState.RemoteEndPoint));
+            receive(new ReceiveVO(asyncState, new byte[asyncState.ReceiveBufferSize]));
+            if (OnConnected == null)
                 return;
-            this.OnConnected(this);
+            OnConnected(this);
         }
 
         protected override void onReceived(IAsyncResult ar)
         {
-            ReceiveVO asyncState = (ReceiveVO) ar.AsyncState;
-            int bytesReceived = 0;
+            var asyncState = (ReceiveVO) ar.AsyncState;
+            var bytesReceived = 0;
             try
             {
                 bytesReceived = asyncState.socket.EndReceive(ar);
@@ -77,37 +76,35 @@ namespace Rd.Networking
             {
                 if (!asyncState.socket.Connected)
                     return;
-                this.disconnectedByRemote(asyncState.socket);
+                disconnectedByRemote(asyncState.socket);
             }
             else
             {
-                string str = AbstractTcpSocket.keyForEndPoint((IPEndPoint) asyncState.socket.RemoteEndPoint);
-                this._logger.Debug("Client received " + (object) bytesReceived + " bytes from " + str);
-                this.triggerOnReceived(asyncState, bytesReceived);
-                this.receive(asyncState);
+                var str = keyForEndPoint((IPEndPoint) asyncState.socket.RemoteEndPoint);
+                _logger.Debug("Client received " + bytesReceived + " bytes from " + str);
+                triggerOnReceived(asyncState, bytesReceived);
+                receive(asyncState);
             }
         }
 
         private void disconnectedByRemote(Socket client)
         {
             client.Close();
-            this._logger.Info("Client got disconnected by remote");
-            if (this.OnDisconnected == null)
+            _logger.Info("Client got disconnected by remote");
+            if (OnDisconnected == null)
                 return;
-            this.OnDisconnected(this);
+            OnDisconnected(this);
         }
 
         private void onDisconnected(IAsyncResult ar)
         {
-            Socket asyncState = (Socket) ar.AsyncState;
+            var asyncState = (Socket) ar.AsyncState;
             asyncState.EndDisconnect(ar);
             asyncState.Close();
-            this._logger.Debug("Client disconnected");
-            if (this.OnDisconnected == null)
+            _logger.Debug("Client disconnected");
+            if (OnDisconnected == null)
                 return;
-            this.OnDisconnected(this);
+            OnDisconnected(this);
         }
-
-        public delegate void TcpClientSocketHandler(TcpClientSocket client);
     }
 }

@@ -1,5 +1,8 @@
-using Entitas;
+using Entitas.Entity;
 
-public sealed class ServerEntity : Entity
+namespace Generated.Server
 {
+    public sealed class ServerEntity : Entity
+    {
+    }
 }

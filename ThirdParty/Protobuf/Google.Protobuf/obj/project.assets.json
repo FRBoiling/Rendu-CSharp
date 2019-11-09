@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.5": {}
+    ".NETFramework,Version=v4.6.1": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.5": []
+    ".NETFramework,Version=v4.6.1": []
   },
   "packageFolders": {
     "C:\\Users\\WanXin\\.nuget\\packages\\": {},
@@ -28,14 +28,14 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net45"
+        "net461"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net45": {
+        "net461": {
           "projectReferences": {}
         }
       },
@@ -46,7 +46,7 @@
       }
     },
     "frameworks": {
-      "net45": {}
+      "net461": {}
     }
   }
 }

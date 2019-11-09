@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
-using Entitas.Migration.Migration;
 
-namespace Entitas.Migration.Migrations
+namespace Rd.Migration.Migrations
 {
     public class M0410_1 : IMigration
     {
@@ -19,8 +18,8 @@ namespace Entitas.Migration.Migrations
             var migratedFiles = new List<MigrationFile>();
 
             migratedFiles.AddRange(updateNamespace(files, "Entitas.CodeGenerator.Api", "Entitas.CodeGeneration.Attributes"));
-            migratedFiles.AddRange(updateNamespace(files, "Entitas.Unity.Editor.VisualDebugging", "Entitas.VisualDebugging.Unity"));
-            migratedFiles.AddRange(updateNamespace(files, "Entitas.Unity.Editor.Blueprints", "Entitas.Blueprints.Unity"));
+            migratedFiles.AddRange(updateNamespace(files, "Rendu.Rendu.Entitas.Unity.Editor.VisualDebugging", "Rendu.VisualDebugging.Unity"));
+            migratedFiles.AddRange(updateNamespace(files, "Rendu.Rendu.Entitas.Unity.Editor.Blueprints", "Entitas.Blueprints.Unity"));
 
             return migratedFiles.ToArray();
         }

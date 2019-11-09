@@ -1,10 +1,10 @@
-﻿using Entitas.Migration;
-using NUnit.Framework;
-using TestProject.Fixtures;
+﻿using NUnit.Framework;
+using Rd.Migration;
+using UnitTestProject.Fixtures.Migrations;
 
-namespace TestProject.FileGeneration
+namespace UnitTestProject
 {
-    public class Tests
+    public partial class Tests
     {
         [Test]
         public void TestContextsFileGenerator()

@@ -1,10 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using DesperateDevs.CodeGeneration;
-using Entitas.CodeGeneration.Plugins;
-using Entitas.Migration;
+using Rd.CodeGeneration;
+using Rd.Migration;
+using Rd.Plugins.Component.CodeGenerators;
+using Rd.Plugins.Context;
+using Rd.Plugins.Context.CodeGenerators;
+using Rd.Plugins.Context.DataProviders;
+using Rd.Plugins.Entity.CodeGenerators;
+using UnitTestProject.Fixtures.Preferences;
 
-namespace TestProject.Fixtures
+namespace UnitTestProject.Fixtures.Migrations
 {
     public class TestContextsMigration : IMigration
     {
@@ -16,7 +21,7 @@ namespace TestProject.Fixtures
 
         public MigrationFile[] Migrate(string path)
         {
-            var names = "Entitas.DesperateDevs.CodeGeneration.Plugins.Contexts = Test1,Test2";
+            var names = "Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = Test1,Test2";
             var provider = new ContextDataProvider();
             provider.Configure(new TestPreferences(names));
 

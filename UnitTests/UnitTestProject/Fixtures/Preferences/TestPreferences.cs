@@ -1,9 +1,12 @@
-﻿using DesperateDevs.Serialization;
+﻿using Rd.Serialization;
 
-public class TestPreferences : Preferences
+namespace UnitTestProject.Fixtures.Preferences
 {
-    public TestPreferences(string properties, string userPoperties = null)
-        : base(new Properties(properties), new Properties(userPoperties ?? string.Empty))
+    public class TestPreferences : Rd.Serialization.Preferences
     {
+        public TestPreferences(string properties, string userPoperties = null)
+            : base(new Properties(properties), new Properties(userPoperties ?? string.Empty))
+        {
+        }
     }
 }

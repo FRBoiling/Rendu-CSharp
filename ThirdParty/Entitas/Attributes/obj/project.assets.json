@@ -185,9 +185,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Attributes.csproj",
-      "projectName": "Attributes",
-      "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Attributes.csproj",
+      "projectUniqueName": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj",
+      "projectName": "Entitas.Attributes",
+      "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj",
       "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
       "outputPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,8 +1,7 @@
 using System.Linq;
 using System.Text.RegularExpressions;
-using Entitas.Migration.Migration;
 
-namespace Entitas.Migration.Migrations
+namespace Rd.Migration.Migrations
 {
     public class M0320 : IMigration
     {
@@ -20,12 +19,12 @@ namespace Entitas.Migration.Migrations
             {
                 var file = properties[i];
 
-                //Entitas.Unity.Editor.VisualDebugging.DefaultInstanceCreatorFolderPath = Assets/Editor/DefaultInstanceCreator/
-                //Entitas.Unity.Editor.VisualDebugging.TypeDrawerFolderPath = Assets/Editor/TypeDrawer/
+                //Rendu.Rendu.Entitas.Unity.Editor.VisualDebugging.DefaultInstanceCreatorFolderPath = Assets/Editor/DefaultInstanceCreator/
+                //Rendu.Rendu.Entitas.Unity.Editor.VisualDebugging.TypeDrawerFolderPath = Assets/Editor/TypeDrawer/
 
-                file.fileContent = file.fileContent.Replace("Entitas.Unity.Editor.CodeGenerator.GeneratedFolderPath", "Entitas.CodeGenerator.GeneratedFolderPath");
-                file.fileContent = file.fileContent.Replace("Entitas.Unity.Editor.CodeGenerator.Pools", "Entitas.CodeGenerator.Pools");
-                file.fileContent = file.fileContent.Replace("Entitas.Unity.Editor.CodeGenerator.EnabledCodeGenerators", "Entitas.CodeGenerator.EnabledCodeGenerators");
+                file.fileContent = file.fileContent.Replace("Rendu.Rendu.Entitas.Unity.Editor.CodeGenerator.GeneratedFolderPath", "Entitas.CodeGenerator.GeneratedFolderPath");
+                file.fileContent = file.fileContent.Replace("Rendu.Rendu.Entitas.Unity.Editor.CodeGenerator.Pools", "Entitas.CodeGenerator.Pools");
+                file.fileContent = file.fileContent.Replace("Rendu.Rendu.Entitas.Unity.Editor.CodeGenerator.EnabledCodeGenerators", "Entitas.CodeGenerator.EnabledCodeGenerators");
             }
 
             const string pattern = @".CreateSystem<(?<system>\w*)>\(\s*\)";

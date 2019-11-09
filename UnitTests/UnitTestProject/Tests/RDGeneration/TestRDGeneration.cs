@@ -1,16 +1,15 @@
-﻿using Entitas.Migration;
-using NUnit.Framework;
-using RDGenerationLib;
+﻿using NUnit.Framework;
+using Rd.Migration;
 
-namespace TestProject
+namespace UnitTestProject
 {
     public partial class Tests
     {
         [Test]
         public void TestGeneration()
         {
-            var contextsMigration = new RdComponentsMigration();
-            MigrationUtils.WriteFiles(contextsMigration.Migrate("../../../Bin/Shared/netcoreapp3.0"));
+//            var contextsMigration = new RdComponentsMigration();
+//            MigrationUtils.WriteFiles(contextsMigration.Migrate("../../../Bin/Shared/netcoreapp3.0"));
         }
     }
 }
