@@ -1,0 +1,8 @@
+D:\GitHub\RenduEcs\Addons\CodeGeneration\Bin\net461\Rendu.CodeGeneration.Unity.Plugins.dll
+D:\GitHub\RenduEcs\Addons\CodeGeneration\Bin\net461\Rendu.CodeGeneration.Unity.Plugins.pdb
+D:\GitHub\RenduEcs\Addons\CodeGeneration\Rendu.CodeGeneration.Unity.Plugins\obj\Debug\net461\Rendu.CodeGeneration.Unity.Plugins.csprojAssemblyReference.cache
+D:\GitHub\RenduEcs\Addons\CodeGeneration\Rendu.CodeGeneration.Unity.Plugins\obj\Debug\net461\Rendu.CodeGeneration.Unity.Plugins.AssemblyInfoInputs.cache
+D:\GitHub\RenduEcs\Addons\CodeGeneration\Rendu.CodeGeneration.Unity.Plugins\obj\Debug\net461\Rendu.CodeGeneration.Unity.Plugins.AssemblyInfo.cs
+D:\GitHub\RenduEcs\Addons\CodeGeneration\Rendu.CodeGeneration.Unity.Plugins\obj\Debug\net461\Rendu.CodeGeneration.Unity.Plugins.csproj.CopyComplete
+D:\GitHub\RenduEcs\Addons\CodeGeneration\Rendu.CodeGeneration.Unity.Plugins\obj\Debug\net461\Rendu.CodeGeneration.Unity.Plugins.dll
+D:\GitHub\RenduEcs\Addons\CodeGeneration\Rendu.CodeGeneration.Unity.Plugins\obj\Debug\net461\Rendu.CodeGeneration.Unity.Plugins.pdb

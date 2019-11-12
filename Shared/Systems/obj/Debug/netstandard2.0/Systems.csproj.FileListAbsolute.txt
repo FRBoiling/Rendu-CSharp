@@ -1,0 +1,9 @@
+D:\GitHub\RenduEcs\Shared\Bin\netstandard2.0\Systems.deps.json
+D:\GitHub\RenduEcs\Shared\Bin\netstandard2.0\Systems.dll
+D:\GitHub\RenduEcs\Shared\Bin\netstandard2.0\Systems.pdb
+D:\GitHub\RenduEcs\Shared\Systems\obj\Debug\netstandard2.0\Systems.csprojAssemblyReference.cache
+D:\GitHub\RenduEcs\Shared\Systems\obj\Debug\netstandard2.0\Systems.AssemblyInfoInputs.cache
+D:\GitHub\RenduEcs\Shared\Systems\obj\Debug\netstandard2.0\Systems.AssemblyInfo.cs
+D:\GitHub\RenduEcs\Shared\Systems\obj\Debug\netstandard2.0\Systems.csproj.CopyComplete
+D:\GitHub\RenduEcs\Shared\Systems\obj\Debug\netstandard2.0\Systems.dll
+D:\GitHub\RenduEcs\Shared\Systems\obj\Debug\netstandard2.0\Systems.pdb

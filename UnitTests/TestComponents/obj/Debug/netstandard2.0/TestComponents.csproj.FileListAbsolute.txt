@@ -1,0 +1,8 @@
+D:\GitHub\RenduEcs\UnitTests\Bin\netstandard2.0\TestComponents.deps.json
+D:\GitHub\RenduEcs\UnitTests\Bin\netstandard2.0\TestComponents.dll
+D:\GitHub\RenduEcs\UnitTests\Bin\netstandard2.0\TestComponents.pdb
+D:\GitHub\RenduEcs\UnitTests\TestComponents\obj\Debug\netstandard2.0\TestComponents.AssemblyInfoInputs.cache
+D:\GitHub\RenduEcs\UnitTests\TestComponents\obj\Debug\netstandard2.0\TestComponents.AssemblyInfo.cs
+D:\GitHub\RenduEcs\UnitTests\TestComponents\obj\Debug\netstandard2.0\TestComponents.csproj.CopyComplete
+D:\GitHub\RenduEcs\UnitTests\TestComponents\obj\Debug\netstandard2.0\TestComponents.dll
+D:\GitHub\RenduEcs\UnitTests\TestComponents\obj\Debug\netstandard2.0\TestComponents.pdb

@@ -1,0 +1,7 @@
+D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Logging.deps.json
+D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Logging.dll
+D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Logging.pdb
+D:\GitHub\RenduEcs\RdFixtures\Logging\obj\Debug\netstandard2.0\Rd.Logging.AssemblyInfoInputs.cache
+D:\GitHub\RenduEcs\RdFixtures\Logging\obj\Debug\netstandard2.0\Rd.Logging.AssemblyInfo.cs
+D:\GitHub\RenduEcs\RdFixtures\Logging\obj\Debug\netstandard2.0\Rd.Logging.dll
+D:\GitHub\RenduEcs\RdFixtures\Logging\obj\Debug\netstandard2.0\Rd.Logging.pdb

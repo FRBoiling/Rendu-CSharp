@@ -1,0 +1,7 @@
+D:\GitHub\RenduEcs\ThirdParty\Entitas\Bin\netstandard2.0\Entitas.Attributes.deps.json
+D:\GitHub\RenduEcs\ThirdParty\Entitas\Bin\netstandard2.0\Entitas.Attributes.dll
+D:\GitHub\RenduEcs\ThirdParty\Entitas\Bin\netstandard2.0\Entitas.Attributes.pdb
+D:\GitHub\RenduEcs\ThirdParty\Entitas\Attributes\obj\Debug\netstandard2.0\Entitas.Attributes.AssemblyInfoInputs.cache
+D:\GitHub\RenduEcs\ThirdParty\Entitas\Attributes\obj\Debug\netstandard2.0\Entitas.Attributes.AssemblyInfo.cs
+D:\GitHub\RenduEcs\ThirdParty\Entitas\Attributes\obj\Debug\netstandard2.0\Entitas.Attributes.dll
+D:\GitHub\RenduEcs\ThirdParty\Entitas\Attributes\obj\Debug\netstandard2.0\Entitas.Attributes.pdb
