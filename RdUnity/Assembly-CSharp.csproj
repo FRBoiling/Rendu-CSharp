@@ -77,6 +77,8 @@
      <Compile Include="Assets\Sources\Systems\HelloWorldFeature.cs" />
      <Compile Include="Assets\Sources\Systems\HelloWorldSystem.cs" />
      <Compile Include="Assets\Sources\Systems\LogMouseClickSystem.cs" />
+     <None Include="Assets\Librarys\Entitas\LICENSE.txt" />
+     <None Include="Assets\Librarys\Entitas\Entitas.xml" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/GitHub/RenduEcs/RdUnity/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

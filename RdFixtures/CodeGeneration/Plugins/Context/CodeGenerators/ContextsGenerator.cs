@@ -6,15 +6,18 @@ namespace Rd.Plugins.Context.CodeGenerators
 {
     public class ContextsGenerator : ICodeGenerator
     {
-        private const string TEMPLATE =
-            @"public partial class Contexts : Entitas.IContexts {
-
-    public static Contexts sharedInstance {
-        get {
-            if (_sharedInstance == null) {
+        private const string TEMPLATE = 
+            @"using Entitas.Context;
+public partial class Contexts : IContexts 
+{
+    public static Contexts sharedInstance 
+    {
+        get 
+        {
+            if (_sharedInstance == null)
+            {
                 _sharedInstance = new Contexts();
             }
-
             return _sharedInstance;
         }
         set { _sharedInstance = value; }
@@ -24,24 +27,28 @@ namespace Rd.Plugins.Context.CodeGenerators
 
 ${contextPropertiesList}
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { ${contextList} }; } }
+    public IContext[] allContexts { get { return new IContext [] { ${contextList} }; } }
 
-    public Contexts() {
+    public Contexts() 
+    {
 ${contextAssignmentsList}
 
         var postConstructors = System.Linq.Enumerable.Where(
             GetType().GetMethods(),
-            method => System.Attribute.IsDefined(method, typeof(Entitas.CodeGeneration.Entitas.Attributes.PostConstructorAttribute))
+            method => System.Attribute.IsDefined(method, typeof(Entitas.Attributes.PostConstructorAttribute))
         );
 
-        foreach (var postConstructor in postConstructors) {
+        foreach (var postConstructor in postConstructors)
+        {
             postConstructor.Invoke(this, null);
         }
     }
 
-    public void Reset() {
+    public void Reset() 
+    {
         var contexts = allContexts;
-        for (int i = 0; i < contexts.Length; i++) {
+        for (int i = 0; i < contexts.Length; i++) 
+        {
             contexts[i].Reset();
         }
     }

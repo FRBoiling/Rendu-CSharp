@@ -10,7 +10,9 @@ namespace Rd.Plugins.Entity.CodeGenerators
     public class EntityGenerator : ICodeGenerator
     {
         private const string TEMPLATE =
-            @"public sealed partial class ${EntityType} : Entitas.Entity {
+            @"using Entitas.Entity;
+public sealed partial class ${EntityType} : Entity 
+{
 }
 ";
 

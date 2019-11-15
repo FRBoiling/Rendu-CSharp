@@ -25,8 +25,8 @@ namespace UnitTestProject
             var provider = new ComponentDataProvider(new[] {typeof(T)});
             if (preferences == null)
                 preferences = new TestPreferences(
-                    @"Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = Game, GameState
-Entitas.Rd.CodeGeneration.Rd.Plugins.IgnoreNamespaces = false");
+                    @"Rendu.CodeGeneration.Plugins.Contexts = Game, GameState
+Rendu.CodeGeneration.Plugins.IgnoreNamespaces = false");
 
             provider.Configure(preferences);
 
@@ -325,7 +325,7 @@ Entitas.Rd.CodeGeneration.Rd.Plugins.IgnoreNamespaces = false");
                     var types = new[] {typeof(NameAgeComponent), typeof(Test2ContextComponent)};
                     var provider = new ComponentDataProvider(types);
                     provider.Configure(new TestPreferences(
-                        "Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = Game, GameState"
+                        "Entitas.Rendu.CodeGeneration.Plugins.Contexts = Game, GameState"
                     ));
                     var data = provider.GetData();
                     Assert.AreEqual(data.Length, types.Length);
@@ -337,7 +337,7 @@ Entitas.Rd.CodeGeneration.Rd.Plugins.IgnoreNamespaces = false");
                     var types = new[] {typeof(TestClassToGenerate), typeof(ClassToGenerateComponent)};
                     var provider = new ComponentDataProvider(types);
                     provider.Configure(new TestPreferences(
-                        "Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = Game, GameState"
+                        "Entitas.Rendu.CodeGeneration.Plugins.Contexts = Game, GameState"
                     ));
                     var data = provider.GetData();
                     Assert.AreEqual(data.Length, 1);
@@ -380,7 +380,7 @@ Entitas.Rd.CodeGeneration.Rd.Plugins.IgnoreNamespaces = false");
                 ComponentData data = null;
 
                 var preferences = new TestPreferences(
-                    "Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = ConfiguredContext" + "\n"
+                    "Entitas.Rendu.CodeGeneration.Plugins.Contexts = ConfiguredContext" + "\n"
                 );
 
                 type = typeof(TestNoContextComponent);

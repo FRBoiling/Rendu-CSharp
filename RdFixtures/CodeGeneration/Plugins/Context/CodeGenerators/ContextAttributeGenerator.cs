@@ -8,9 +8,11 @@ namespace Rd.Plugins.Context.CodeGenerators
     public class ContextAttributeGenerator : ICodeGenerator
     {
         private const string TEMPLATE =
-            @"public sealed class ${ContextName}Attribute : Entitas.CodeGeneration.Entitas.Attributes.ContextAttribute {
-
-    public ${ContextName}Attribute() : base(""${ContextName}"") {
+            @"using Entitas.Attributes;
+public sealed class ${ContextName}Attribute : ContextAttribute
+{
+    public ${ContextName}Attribute() : base(""${ContextName}"") 
+    {
     }
 }
 ";

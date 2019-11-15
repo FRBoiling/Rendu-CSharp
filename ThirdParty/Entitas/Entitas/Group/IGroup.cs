@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Entitas.Entity;
-using Entitas.Matcher.Interfaces;
+using Entitas.Matcher;
 
 namespace Entitas.Group
 {

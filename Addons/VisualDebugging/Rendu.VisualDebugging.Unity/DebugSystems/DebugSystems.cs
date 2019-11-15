@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using Entitas.Systems;
-using Entitas.Systems.Interfaces;
 using UnityEngine;
 
 namespace Rendu.VisualDebugging.Unity.DebugSystems {
@@ -132,7 +131,7 @@ namespace Rendu.VisualDebugging.Unity.DebugSystems {
             _stopwatch = new Stopwatch();
         }
 
-        public override Entitas.Systems.Systems Add(ISystem system) {
+        public override Systems Add(ISystem system) {
             _systems.Add(system);
 
             SystemInfo childSystemInfo;

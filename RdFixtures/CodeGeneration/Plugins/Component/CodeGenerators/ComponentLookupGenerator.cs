@@ -11,8 +11,8 @@ namespace Rd.Plugins.Component.CodeGenerators
     public class ComponentLookupGenerator : AbstractGenerator
     {
         private const string TEMPLATE =
-            @"public static class ${Lookup} {
-
+            @"public static class ${Lookup} 
+{
 ${componentConstantsList}
 
 ${totalComponentsConstant}
@@ -103,6 +103,7 @@ ${componentTypesList}
 
             var componentTypesList = string.Join(",\n", data
                 .Select(d => COMPONENT_TYPE_TEMPLATE
+//                    .Replace("${ComponentType}", d.GetTypeName())
                     .Replace("${ComponentType}", d.GetTypeName())
                 ).ToArray());
 

@@ -1,4 +1,5 @@
-﻿using Entitas.Entity;
+﻿
+using Entitas.Entity;
 
 namespace Entitas.Group
 {

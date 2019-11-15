@@ -12,18 +12,20 @@ namespace Rd.Plugins.EntityIndex.CodeGenerators
     public class EntityIndexGenerator : ICodeGenerator, IConfigurable
     {
         private const string CLASS_TEMPLATE =
-            @"public partial class Contexts {
+            @"public partial class Contexts 
+{
 
 ${indexConstants}
 
-    [Entitas.CodeGeneration.Entitas.Attributes.PostConstructor]
-    public void InitializeEntityIndices() {
+    [Entitas.Attributes.PostConstructor]
+    public void InitializeEntityIndices() 
+    {
 ${addIndices}
     }
 }
 
-public static class ContextsExtensions {
-
+public static class ContextsExtensions 
+{
 ${getIndices}
 }";
 

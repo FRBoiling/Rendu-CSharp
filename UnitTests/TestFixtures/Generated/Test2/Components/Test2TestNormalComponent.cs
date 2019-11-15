@@ -1,25 +1,20 @@
 using Entitas.Matcher;
-using Entitas.Matcher.Interfaces;
-
-namespace TestFixtures.Generated.Test2.Components
+public sealed partial class Test2Matcher 
 {
-    public sealed partial class Test2Matcher
+
+    static IMatcher<Test2Entity> _matcherTestNormal;
+
+    public static IMatcher<Test2Entity> TestNormal 
     {
-        private static IMatcher<Test2Entity> _matcherTestNormal;
-
-        public static IMatcher<Test2Entity> TestNormal
+        get 
         {
-            get
+            if (_matcherTestNormal == null) 
             {
-                if (_matcherTestNormal == null)
-                {
-                    var matcher = (Matcher<Test2Entity>) Matcher<Test2Entity>.AllOf(Test2ComponentsLookup.TestNormal);
-                    matcher.componentNames = Test2ComponentsLookup.componentNames;
-                    _matcherTestNormal = matcher;
-                }
-
-                return _matcherTestNormal;
+                var matcher = (Matcher<Test2Entity>)Matcher<Test2Entity>.AllOf(Test2ComponentsLookup.TestNormal);
+                matcher.componentNames = Test2ComponentsLookup.componentNames;
+                _matcherTestNormal = matcher;
             }
+            return _matcherTestNormal;
         }
     }
 }

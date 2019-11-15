@@ -1,8 +1,4 @@
 using Entitas.Entity;
-
-namespace TestFixtures.Generated.Test2
+public sealed partial class Test2Entity : Entity 
 {
-    public sealed class Test2Entity : Entity
-    {
-    }
 }

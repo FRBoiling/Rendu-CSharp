@@ -1,5 +1,6 @@
 D:\GitHub\RenduEcs\Addons\CodeGeneration\Bin\net461\Rendu.CodeGeneration.Plugins.dll
 D:\GitHub\RenduEcs\Addons\CodeGeneration\Bin\net461\Rendu.CodeGeneration.Plugins.pdb
+D:\GitHub\RenduEcs\Addons\CodeGeneration\Rendu.CodeGeneration.Plugins\obj\Debug\net461\Rendu.CodeGeneration.Plugins.csprojAssemblyReference.cache
 D:\GitHub\RenduEcs\Addons\CodeGeneration\Rendu.CodeGeneration.Plugins\obj\Debug\net461\Rendu.CodeGeneration.Plugins.AssemblyInfoInputs.cache
 D:\GitHub\RenduEcs\Addons\CodeGeneration\Rendu.CodeGeneration.Plugins\obj\Debug\net461\Rendu.CodeGeneration.Plugins.AssemblyInfo.cs
 D:\GitHub\RenduEcs\Addons\CodeGeneration\Rendu.CodeGeneration.Plugins\obj\Debug\net461\Rendu.CodeGeneration.Plugins.csproj.CopyComplete

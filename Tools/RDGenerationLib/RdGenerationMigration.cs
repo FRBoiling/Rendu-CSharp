@@ -16,8 +16,8 @@ namespace RDGenerationLib
 {
     public class RdComponentsMigration : IMigration
     {
-        private const string CONTEXTS_PREFERENCES = "Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = ${contextNames}";
-        private const string COMPONENT_PREFERENCES = "Entitas.Rd.CodeGeneration.Rd.Plugins.IgnoreNamespaces = true";
+        private const string CONTEXTS_PREFERENCES = "Rendu.CodeGeneration.Plugins.Contexts = ${contextNames}";
+        private const string COMPONENT_PREFERENCES = "Rendu.CodeGeneration.Plugins.IgnoreNamespaces = true";
 
         public string version => "0.0.1";
 

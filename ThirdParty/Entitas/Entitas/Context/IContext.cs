@@ -2,7 +2,7 @@
 using Entitas.Entity;
 using Entitas.EntityIndex;
 using Entitas.Group;
-using Entitas.Matcher.Interfaces;
+using Entitas.Matcher;
 
 namespace Entitas.Context
 {

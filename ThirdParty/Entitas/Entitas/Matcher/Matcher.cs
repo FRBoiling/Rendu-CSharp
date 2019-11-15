@@ -1,5 +1,5 @@
-﻿using Entitas.Entity;
-using Entitas.Matcher.Interfaces;
+﻿
+using Entitas.Entity;
 
 namespace Entitas.Matcher
 {

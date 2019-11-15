@@ -6,7 +6,7 @@ namespace Rd.Plugins.Configs
 {
     public class ContextNamesConfig : AbstractConfigurableConfig
     {
-        private const string CONTEXTS_KEY = "Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts";
+        private const string CONTEXTS_KEY = "Rendu.CodeGeneration.Plugins.Contexts";
 
         public override Dictionary<string, string> defaultProperties =>
             new Dictionary<string, string>

@@ -1,11 +1,9 @@
-﻿using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
-using System.Diagnostics;
-using System.Globalization;
 using System.Linq;
+using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
 using Rd.CodeGeneration;
 using Rd.CodeGenerator;
 using Task = System.Threading.Tasks.Task;
@@ -88,7 +86,7 @@ namespace RDVSIX
 
         public static Preferences GetPreferences()
         {
-//            string propertiesPath = EditorPrefs.GetString("Rd.CodeGeneration.CodeGenerator.Unity.Editor.PropertiesPath",Rd.CodeGenerator.CodeGenerator.defaultPropertiesPath);
+//            string propertiesPath = EditorPrefs.GetString("Rendu.CodeGeneration.Unity.Editor.PropertiesPath",Rd.CodeGenerator.CodeGenerator.defaultPropertiesPath);
             string propertiesPath = "";
             return new Preferences(propertiesPath, Preferences.defaultUserPropertiesPath);
         }
@@ -115,7 +113,7 @@ namespace RDVSIX
             CodeGenFile[] codeGenFileArray2;
             try
             {
-//                codeGenFileArray1 = EditorPrefs.GetBool("Rd.CodeGeneration.CodeGenerator.Unity.Editor.DryRun", true) ? codeGenerator.DryRun() : new CodeGenFile[0];
+//                codeGenFileArray1 = EditorPrefs.GetBool("Rendu.CodeGeneration.Unity.Editor.DryRun", true) ? codeGenerator.DryRun() : new CodeGenFile[0];
                 codeGenFileArray1 =  new CodeGenFile[0];
                 progressOffset = 0.5f;
                 codeGenFileArray2 = codeGenerator.Generate();

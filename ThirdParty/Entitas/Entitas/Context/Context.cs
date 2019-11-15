@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Entitas.Context.Exceptions;
 using Entitas.Entity;
 using Entitas.EntityIndex;
+using Entitas.Exceptions;
 using Entitas.Group;
-using Entitas.Matcher.Interfaces;
+using Entitas.Matcher;
 using Entitas.Utils;
 
 namespace Entitas.Context

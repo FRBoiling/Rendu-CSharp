@@ -9,7 +9,7 @@ namespace Rd.Plugins.Component.CodeGenerators
     public class ComponentGenerator : ICodeGenerator
     {
         private const string COMPONENT_TEMPLATE =
-            @"[Entitas.CodeGeneration.Entitas.Attributes.DontGenerate(false)]
+            @"[Entitas.Attributes.DontGenerate(false)]
 public sealed class ${FullComponentName} : Entitas.IComponent {
     public ${Type} value;
 }

@@ -16,13 +16,13 @@ namespace Rendu.CodeGeneration.Unity.Editor
 {
     public static class UnityCodeGenerator
     {
-        public const string DRY_RUN = "Rd.CodeGeneration.CodeGenerator.Unity.Editor.DryRun";
+        public const string DRY_RUN = "Rendu.CodeGeneration.Unity.Editor.DryRun";
         private static string _propertiesPath;
 
         public static Preferences GetPreferences()
         {
             return new Preferences(
-                EditorPrefs.GetString("Rd.CodeGeneration.CodeGenerator.Unity.Editor.PropertiesPath",
+                EditorPrefs.GetString("Rendu.CodeGeneration.Unity.Editor.PropertiesPath",
                     Rd.CodeGenerator.CodeGenerator.defaultPropertiesPath), Preferences.defaultUserPropertiesPath);
         }
 
@@ -42,7 +42,7 @@ namespace Rendu.CodeGeneration.Unity.Editor
             CodeGenFile[] codeGenFileArray2;
             try
             {
-                codeGenFileArray1 = EditorPrefs.GetBool("Rd.CodeGeneration.CodeGenerator.Unity.Editor.DryRun", true) ? codeGenerator.DryRun() : new CodeGenFile[0];
+                codeGenFileArray1 = EditorPrefs.GetBool("Rendu.CodeGeneration.Unity.Editor.DryRun", true) ? codeGenerator.DryRun() : new CodeGenFile[0];
                 progressOffset = 0.5f;
                 codeGenFileArray2 = codeGenerator.Generate();
             }

@@ -1,7 +1,7 @@
 ﻿using Entitas.Context;
 using Entitas.Entity;
 using Entitas.Group;
-using Entitas.Matcher.Interfaces;
+using Entitas.Matcher;
 
 namespace Entitas.Collector
 {

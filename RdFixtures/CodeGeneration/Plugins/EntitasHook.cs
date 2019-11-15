@@ -19,7 +19,7 @@ namespace Rd.Plugins
                 {
                     "x", "v:" + EntitasResources.GetVersion() +
                          ",e:" + (types.Any(type => type.FullName == "Rd.CodeGeneration.CodeGenerator.CLI.Program") ? "s" : "u") +
-                         ",p:" + (types.Any(type => type.FullName == "DesperateDevs.Roslyn.Rd.CodeGeneration.Rd.Plugins.PluginUtil") ? "1" : "0") +
+                         ",p:" + (types.Any(type => type.FullName == "DesperateDevs.Roslyn.Rendu.CodeGeneration.Plugins.PluginUtil") ? "1" : "0") +
                          ",f:" + _files.Length +
                          ",cp:" + _files.Count(f => f.fileName.EndsWith("Component.cs", StringComparison.OrdinalIgnoreCase)) +
                          ",cx:" + _files.Count(f => f.fileName.EndsWith("Context.cs", StringComparison.OrdinalIgnoreCase)) +

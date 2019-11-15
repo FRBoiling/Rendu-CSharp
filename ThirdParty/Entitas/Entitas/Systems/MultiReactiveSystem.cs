@@ -2,7 +2,6 @@
 using Entitas.Collector;
 using Entitas.Context;
 using Entitas.Entity;
-using Entitas.Systems.Interfaces;
 
 namespace Entitas.Systems
 {

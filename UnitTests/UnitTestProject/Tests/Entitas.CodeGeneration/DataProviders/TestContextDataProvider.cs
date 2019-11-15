@@ -11,14 +11,14 @@ namespace UnitTestProject
         public void TestContextDataProvider()
         {
             //creates data for each context name
-            var names = "Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = Input, GameState";
+            var names = "Rendu.CodeGeneration.Plugins.Contexts = Test1, Test2";
             var provider = new ContextDataProvider();
             provider.Configure(new TestPreferences(names));
 
             var data = (ContextData[]) provider.GetData();
             Assert.AreEqual(data.Length, 2);
-            Assert.AreEqual(data[0].GetContextName(), "Input");
-            Assert.AreEqual(data[1].GetContextName(), "GameState");
+            Assert.AreEqual(data[0].GetContextName(), "Test1");
+            Assert.AreEqual(data[1].GetContextName(), "Test2");
         }
     }
 }

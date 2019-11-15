@@ -9,13 +9,18 @@ namespace Rd.Plugins.Context.CodeGenerators
     public class ContextGenerator : ICodeGenerator
     {
         private const string TEMPLATE =
-            @"public sealed partial class ${ContextType} : Entitas.Context<${EntityType}> {
+            @"using Entitas;
+using Entitas.Context;
+using Entitas.Entity;
+
+public sealed partial class ${ContextType} : Context<${EntityType}> 
+{
 
     public ${ContextType}()
         : base(
             ${Lookup}.TotalComponents,
             0,
-            new Entitas.ContextInfo(
+            new ContextInfo(
                 ""${ContextName}"",
                 ${Lookup}.componentNames,
                 ${Lookup}.componentTypes
@@ -23,12 +28,13 @@ namespace Rd.Plugins.Context.CodeGenerators
             (entity) =>
 
 #if (ENTITAS_FAST_AND_UNSAFE)
-                new Entitas.UnsafeAERC(),
+                new UnsafeAERC(),
 #else
-                new Entitas.SafeAERC(entity),
+                new SafeAERC(entity),
 #endif
             () => new ${EntityType}()
-        ) {
+        ) 
+    {
     }
 }
 ";

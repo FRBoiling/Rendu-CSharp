@@ -16,14 +16,14 @@
             {
                 var file = properties[i];
 
-                file.fileContent = file.fileContent.Replace("Entitas.CodeGeneration.CodeGenerator.SearchPaths", "CodeGenerator.SearchPaths");
-                file.fileContent = file.fileContent.Replace("Entitas.CodeGeneration.CodeGenerator.Plugins", "CodeGenerator.Plugins");
+                file.fileContent = file.fileContent.Replace("Rd.CodeGeneration.CodeGenerator.SearchPaths", "CodeGenerator.SearchPaths");
+                file.fileContent = file.fileContent.Replace("Rd.CodeGeneration.CodeGenerator.Plugins", "CodeGenerator.Plugins");
 
-                file.fileContent = file.fileContent.Replace("Entitas.CodeGeneration.CodeGenerator.DataProviders", "CodeGenerator.DataProviders");
-                file.fileContent = file.fileContent.Replace("Entitas.CodeGeneration.CodeGenerator.CodeGenerators", "CodeGenerator.CodeGenerators");
-                file.fileContent = file.fileContent.Replace("Entitas.CodeGeneration.CodeGenerator.PostProcessors", "CodeGenerator.PostProcessors");
+                file.fileContent = file.fileContent.Replace("Rd.CodeGeneration.CodeGenerator.DataProviders", "CodeGenerator.DataProviders");
+                file.fileContent = file.fileContent.Replace("Rd.CodeGeneration.CodeGenerator.CodeGenerators", "CodeGenerator.CodeGenerators");
+                file.fileContent = file.fileContent.Replace("Rd.CodeGeneration.CodeGenerator.PostProcessors", "CodeGenerator.PostProcessors");
 
-                file.fileContent = file.fileContent.Replace("Entitas.CodeGeneration.CodeGenerator.CLI.Ignore.UnusedKeys", "CodeGenerator.CLI.Ignore.UnusedKeys");
+                file.fileContent = file.fileContent.Replace("Rd.CodeGeneration.CodeGenerator.CLI.Ignore.UnusedKeys", "CodeGenerator.CLI.Ignore.UnusedKeys");
             }
 
             return properties;

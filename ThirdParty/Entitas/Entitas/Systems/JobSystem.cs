@@ -2,7 +2,6 @@
 using System.Threading;
 using Entitas.Entity;
 using Entitas.Group;
-using Entitas.Systems.Interfaces;
 
 namespace Entitas.Systems
 {

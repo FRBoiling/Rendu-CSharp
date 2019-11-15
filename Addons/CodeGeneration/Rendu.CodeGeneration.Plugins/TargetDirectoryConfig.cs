@@ -5,7 +5,7 @@ namespace Rendu.CodeGeneration.Plugins
 {
     public class TargetDirectoryConfig : AbstractConfigurableConfig
     {
-        private const string TARGET_DIRECTORY_KEY = "Rd.CodeGeneration.Rd.Plugins.TargetDirectory";
+        private const string TARGET_DIRECTORY_KEY = "Rendu.CodeGeneration.Plugins.TargetDirectory";
 
         public override Dictionary<string, string> defaultProperties
         {
@@ -14,7 +14,7 @@ namespace Rendu.CodeGeneration.Plugins
                 return new Dictionary<string, string>()
                 {
                     {
-                        "Rd.CodeGeneration.Rd.Plugins.TargetDirectory",
+                        "Rendu.CodeGeneration.Plugins.TargetDirectory",
                         "Assets"
                     }
                 };
@@ -25,7 +25,7 @@ namespace Rendu.CodeGeneration.Plugins
         {
             get
             {
-                return this._preferences["Rd.CodeGeneration.Rd.Plugins.TargetDirectory"].ToSafeDirectory();
+                return this._preferences["Rendu.CodeGeneration.Plugins.TargetDirectory"].ToSafeDirectory();
             }
         }
     }

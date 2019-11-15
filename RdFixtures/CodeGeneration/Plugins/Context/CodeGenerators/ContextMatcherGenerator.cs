@@ -9,22 +9,28 @@ namespace Rd.Plugins.Context.CodeGenerators
     public class ContextMatcherGenerator : ICodeGenerator
     {
         private const string TEMPLATE =
-            @"public sealed partial class ${MatcherType} {
+            @"using Entitas.Matcher;
+public sealed partial class ${MatcherType}
+{
 
-    public static Entitas.IAllOfMatcher<${EntityType}> AllOf(params int[] indices) {
-        return Entitas.Matcher<${EntityType}>.AllOf(indices);
+    public static IAllOfMatcher<${EntityType}> AllOf(params int[] indices) 
+    {
+        return Matcher<${EntityType}>.AllOf(indices);
     }
 
-    public static Entitas.IAllOfMatcher<${EntityType}> AllOf(params Entitas.IMatcher<${EntityType}>[] matchers) {
-          return Entitas.Matcher<${EntityType}>.AllOf(matchers);
+    public static IAllOfMatcher<${EntityType}> AllOf(params IMatcher<${EntityType}>[] matchers) 
+    {
+          return Matcher<${EntityType}>.AllOf(matchers);
     }
 
-    public static Entitas.IAnyOfMatcher<${EntityType}> AnyOf(params int[] indices) {
-          return Entitas.Matcher<${EntityType}>.AnyOf(indices);
+    public static IAnyOfMatcher<${EntityType}> AnyOf(params int[] indices) 
+    {
+          return Matcher<${EntityType}>.AnyOf(indices);
     }
 
-    public static Entitas.IAnyOfMatcher<${EntityType}> AnyOf(params Entitas.IMatcher<${EntityType}>[] matchers) {
-          return Entitas.Matcher<${EntityType}>.AnyOf(matchers);
+    public static IAnyOfMatcher<${EntityType}> AnyOf(params IMatcher<${EntityType}>[] matchers) 
+    {
+          return Matcher<${EntityType}>.AnyOf(matchers);
     }
 }
 ";

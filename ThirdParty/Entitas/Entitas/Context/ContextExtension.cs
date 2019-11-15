@@ -1,6 +1,6 @@
 ﻿using Entitas.Entity;
 using Entitas.Extensions;
-using Entitas.Matcher.Interfaces;
+using Entitas.Matcher;
 
 namespace Entitas.Context
 {

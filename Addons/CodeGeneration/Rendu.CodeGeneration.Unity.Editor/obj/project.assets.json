@@ -164,7 +164,7 @@
       },
       "Rendu.CodeGeneration.Plugins/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
+        "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Rd.Plugins": "1.0.0"
         },

@@ -11,26 +11,30 @@ namespace Rd.Plugins.Component.CodeGenerators
     public class ComponentEntityApiGenerator : AbstractGenerator
     {
         private const string STANDARD_TEMPLATE =
-            @"public partial class ${EntityType} {
+            @"public partial class ${EntityType} 
+{
 
     public ${ComponentType} ${validComponentName} { get { return (${ComponentType})GetComponent(${Index}); } }
     public bool has${ComponentName} { get { return HasComponent(${Index}); } }
 
-    public void Add${ComponentName}(${newMethodParameters}) {
+    public void Add${ComponentName}(${newMethodParameters})
+    {
         var index = ${Index};
         var component = (${ComponentType})CreateComponent(index, typeof(${ComponentType}));
 ${memberAssignmentList}
         AddComponent(index, component);
     }
 
-    public void Replace${ComponentName}(${newMethodParameters}) {
+    public void Replace${ComponentName}(${newMethodParameters}) 
+    {
         var index = ${Index};
         var component = (${ComponentType})CreateComponent(index, typeof(${ComponentType}));
 ${memberAssignmentList}
         ReplaceComponent(index, component);
     }
 
-    public void Remove${ComponentName}() {
+    public void Remove${ComponentName}() 
+    {
         RemoveComponent(${Index});
     }
 }

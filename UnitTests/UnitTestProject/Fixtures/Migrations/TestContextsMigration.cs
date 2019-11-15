@@ -21,7 +21,7 @@ namespace UnitTestProject.Fixtures.Migrations
 
         public MigrationFile[] Migrate(string path)
         {
-            var names = "Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = Test1,Test2";
+            var names = "Rendu.CodeGeneration.Plugins.Contexts = Test1,Test2";
             var provider = new ContextDataProvider();
             provider.Configure(new TestPreferences(names));
 

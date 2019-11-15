@@ -26,8 +26,8 @@ namespace Rendu.CodeGeneration.Unity.Editor
     private Texture2D _headerTexture;
     private ICodeGenerationPlugin[] _instances;
     private CodeGeneratorConfig _codeGeneratorConfig;
-    public const string PROPERTIES_PATH_KEY = "Rd.CodeGeneration.CodeGenerator.Unity.Editor.PropertiesPath";
-    private const string USE_EXTERNAL_CODE_GENERATOR = "Rd.CodeGeneration.CodeGenerator.Unity.Editor.UseExternalCodeGenerator";
+    public const string PROPERTIES_PATH_KEY = "Rendu.CodeGeneration.Unity.Editor.PropertiesPath";
+    private const string USE_EXTERNAL_CODE_GENERATOR = "Rendu.CodeGeneration.Unity.Editor.UseExternalCodeGenerator";
     private bool _useExternalCodeGenerator;
     private bool _doDryRun;
 
@@ -50,8 +50,8 @@ namespace Rendu.CodeGeneration.Unity.Editor
       CodeGeneratorPreferencesDrawer.setTypesAndNames<ICodeGenerator>(this._instances, out this._availableGeneratorTypes, out this._availableGeneratorNames);
       CodeGeneratorPreferencesDrawer.setTypesAndNames<IPostProcessor>(this._instances, out this._availablePostProcessorTypes, out this._availablePostProcessorNames);
       preferences.properties.AddProperties(CodeGeneratorUtil.GetDefaultProperties(this._instances, this._codeGeneratorConfig), false);
-      this._useExternalCodeGenerator = EditorPrefs.GetBool("Rd.CodeGeneration.CodeGenerator.Unity.Editor.UseExternalCodeGenerator");
-      this._doDryRun = EditorPrefs.GetBool("Rd.CodeGeneration.CodeGenerator.Unity.Editor.DryRun", true);
+      this._useExternalCodeGenerator = EditorPrefs.GetBool("Rendu.CodeGeneration.Unity.Editor.UseExternalCodeGenerator");
+      this._doDryRun = EditorPrefs.GetBool("Rendu.CodeGeneration.Unity.Editor.DryRun", true);
     }
 
     public override void DrawHeader(Preferences preferences)
@@ -70,7 +70,7 @@ namespace Rendu.CodeGeneration.Unity.Editor
       string str = EditorLayout.ObjectFieldOpenFilePanel("Properties", preferences.propertiesPath, preferences.propertiesPath, "properties");
       if (!string.IsNullOrEmpty(str))
       {
-        EditorPrefs.SetString("Rd.CodeGeneration.CodeGenerator.Unity.Editor.PropertiesPath", str);
+        EditorPrefs.SetString("Rendu.CodeGeneration.Unity.Editor.PropertiesPath", str);
         EditorWindow.focusedWindow.Close();
         CodeGeneratorPreferencesWindow.OpenPreferences();
       }
@@ -167,7 +167,7 @@ namespace Rendu.CodeGeneration.Unity.Editor
       EditorGUI.BeginChangeCheck();
 //      this._useExternalCodeGenerator = EditorGUILayout.Toggle("Use Jenny Server", this._useExternalCodeGenerator);
       if (EditorGUI.EndChangeCheck())
-        EditorPrefs.SetBool("Rd.CodeGeneration.CodeGenerator.Unity.Editor.UseExternalCodeGenerator", this._useExternalCodeGenerator);
+        EditorPrefs.SetBool("Rendu.CodeGeneration.Unity.Editor.UseExternalCodeGenerator", this._useExternalCodeGenerator);
       if (this._useExternalCodeGenerator)
       {
         this._codeGeneratorConfig.port = EditorGUILayout.IntField("Port", this._codeGeneratorConfig.port);
@@ -178,7 +178,7 @@ namespace Rendu.CodeGeneration.Unity.Editor
         EditorGUI.BeginChangeCheck();
         this._doDryRun = EditorGUILayout.Toggle("Safe Mode (Dry Run first)", this._doDryRun);
         if (EditorGUI.EndChangeCheck())
-          EditorPrefs.SetBool("Rd.CodeGeneration.CodeGenerator.Unity.Editor.DryRun", this._doDryRun);
+          EditorPrefs.SetBool("Rendu.CodeGeneration.Unity.Editor.DryRun", this._doDryRun);
       }
       Color backgroundColor = GUI.backgroundColor;
       GUI.backgroundColor = Color.green;

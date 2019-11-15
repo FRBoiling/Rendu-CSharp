@@ -9,7 +9,8 @@ namespace Rd.Plugins.Component.CodeGenerators
     public class ComponentEntityApiInterfaceGenerator : AbstractGenerator
     {
         private const string STANDARD_TEMPLATE =
-            @"public partial interface I${ComponentName}Entity {
+            @"public partial interface I${ComponentName}Entity 
+{
 
     ${ComponentType} ${validComponentName} { get; }
     bool has${ComponentName} { get; }
@@ -21,7 +22,8 @@ namespace Rd.Plugins.Component.CodeGenerators
 ";
 
         private const string FLAG_TEMPLATE =
-            @"public partial interface I${ComponentName}Entity {
+            @"public partial interface I${ComponentName}Entity 
+{
     bool ${prefixedComponentName} { get; set; }
 }
 ";

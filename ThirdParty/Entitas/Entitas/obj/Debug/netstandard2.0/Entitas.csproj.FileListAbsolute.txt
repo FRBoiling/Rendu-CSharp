@@ -5,3 +5,4 @@ D:\GitHub\RenduEcs\ThirdParty\Entitas\Entitas\obj\Debug\netstandard2.0\Entitas.A
 D:\GitHub\RenduEcs\ThirdParty\Entitas\Entitas\obj\Debug\netstandard2.0\Entitas.AssemblyInfo.cs
 D:\GitHub\RenduEcs\ThirdParty\Entitas\Entitas\obj\Debug\netstandard2.0\Entitas.dll
 D:\GitHub\RenduEcs\ThirdParty\Entitas\Entitas\obj\Debug\netstandard2.0\Entitas.pdb
+D:\GitHub\RenduEcs\ThirdParty\Entitas\Entitas\obj\Debug\netstandard2.0\Entitas.csprojAssemblyReference.cache

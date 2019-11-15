@@ -6,14 +6,11 @@
     </e>
     <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.projectsystem\15.8.243\build\AdditionalFiles\vs-threading.MainThreadAssertingMethods.txt" t="Include" />
     <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.projectsystem\15.8.243\build\AdditionalFiles\vs-threading.MainThreadSwitchingMethods.txt" t="Include" />
-    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.sdk.analyzers\16.3.2\build\AdditionalFiles\BannedSymbols.txt" t="Include" />
-    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.sdk.analyzers\16.3.2\build\AdditionalFiles\vs-threading.LegacyThreadSwitchingMembers.txt" t="Include" />
-    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.sdk.analyzers\16.3.2\build\AdditionalFiles\vs-threading.MainThreadAssertingMethods.txt" t="Include" />
-    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.sdk.analyzers\16.3.2\build\AdditionalFiles\vs-threading.MainThreadSwitchingMethods.txt" t="Include" />
-    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.sdk.analyzers\16.3.2\build\AdditionalFiles\vs-threading.MembersRequiringMainThread.txt" t="Include" />
-    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.threading.analyzers\16.3.13\build" t="Include">
+    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.sdk.analyzers\15.8.33\build\AdditionalFiles\vs-threading.MainThreadAssertingMethods.txt" t="Include" />
+    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.sdk.analyzers\15.8.33\build\AdditionalFiles\vs-threading.MainThreadSwitchingMethods.txt" t="Include" />
+    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.sdk.analyzers\15.8.33\build\AdditionalFiles\vs-threading.MembersRequiringMainThread.txt" t="Include" />
+    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.threading.analyzers\15.8.132\build" t="Include">
       <e p="AdditionalFiles" t="Include">
-        <e p="vs-threading.LegacyThreadSwitchingMembers.txt" t="Include" />
         <e p="vs-threading.MainThreadAssertingMethods.txt" t="Include" />
         <e p="vs-threading.MainThreadSwitchingMethods.txt" t="Include" />
         <e p="vs-threading.MembersRequiringMainThread.txt" t="Include" />
@@ -26,6 +23,7 @@
     <e p="C:\Users\WanXin\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Rendu.-1129441690.00" t="ExcludeRecursive" />
     <e p="D:\GitHub\RenduECS" t="IncludeFlat">
       <e p="Addons" t="Include">
+        <e p="Bin" t="ExcludeRecursive" />
         <e p="CodeGeneration" t="Include">
           <e p="Bin" t="ExcludeRecursive" />
           <e p="Rendu.CodeGeneration.Plugins" t="IncludeRecursive">
@@ -36,7 +34,7 @@
             <e p="NewLinePostProcessor.cs" t="Include" />
             <e p="obj" t="ExcludeRecursive">
               <e p="Debug" t="Include">
-                <e p="net461" t="Include">
+                <e p="netstandard2.0" t="Include">
                   <e p="Rendu.CodeGeneration.Plugins.AssemblyInfo.cs" t="Include" />
                 </e>
               </e>
@@ -95,7 +93,6 @@
           </e>
         </e>
         <e p="RDVSIX" t="IncludeRecursive">
-          <e p="Bin" t="ExcludeRecursive" />
           <e p="EntitasCodeGenerationCommand.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
           <e p="Properties" t="Include">
@@ -550,7 +547,6 @@
         <e p="ServerComponent.cs" t="Include" />
       </e>
       <e p="Shared\Generated" t="IncludeRecursive">
-        <e p="Contexts.cs" t="Include" />
         <e p="Generated.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -558,16 +554,6 @@
               <e p="Generated.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
-        </e>
-        <e p="Server" t="Include">
-          <e p="Components" t="Include">
-            <e p="ServerMatcher.cs" t="Include" />
-          </e>
-          <e p="ServerAttribute.cs" t="Include" />
-          <e p="ServerComponentsLookup.cs" t="Include" />
-          <e p="ServerContext.cs" t="Include" />
-          <e p="ServerEntity.cs" t="Include" />
-          <e p="ServerMatcher.cs" t="Include" />
         </e>
       </e>
       <e p="Shared\Systems" t="IncludeRecursive">
@@ -627,14 +613,6 @@
               <e p="ContextEntityChanged.cs" t="Include" />
               <e p="ContextExtension.cs" t="Include" />
               <e p="ContextGroupChanged.cs" t="Include" />
-              <e p="Exceptions" t="Include">
-                <e p="ContextDoesNotContainEntityException.cs" t="Include" />
-                <e p="ContextEntityIndexDoesAlreadyExistException.cs" t="Include" />
-                <e p="ContextEntityIndexDoesNotExistException.cs" t="Include" />
-                <e p="ContextInfoException.cs" t="Include" />
-                <e p="ContextStillHasRetainedEntitiesException.cs" t="Include" />
-                <e p="EntityIsNotDestroyedException.cs" t="Include" />
-              </e>
               <e p="IContext.cs" t="Include" />
               <e p="IContexts.cs" t="Include" />
             </e>
@@ -648,13 +626,6 @@
               <e p="EntityComponentReplaced.cs" t="Include" />
               <e p="EntityEqualityComparer.cs" t="Include" />
               <e p="EntityEvent.cs" t="Include" />
-              <e p="Exceptions" t="Include">
-                <e p="EntityAlreadyHasComponentException.cs" t="Include" />
-                <e p="EntityDoesNotHaveComponentException.cs" t="Include" />
-                <e p="EntityIsAlreadyRetainedByOwnerException.cs" t="Include" />
-                <e p="EntityIsNotEnabledException.cs" t="Include" />
-                <e p="EntityIsNotRetainedByOwnerException.cs" t="Include" />
-              </e>
               <e p="IAERC.cs" t="Include" />
               <e p="IEntity.cs" t="Include" />
               <e p="SafeAERC.cs" t="Include" />
@@ -666,6 +637,19 @@
               <e p="EntityIndexException.cs" t="Include" />
               <e p="IEntityIndex.cs" t="Include" />
               <e p="PrimaryEntityIndex.cs" t="Include" />
+            </e>
+            <e p="Exceptions" t="Include">
+              <e p="ContextDoesNotContainEntityException.cs" t="Include" />
+              <e p="ContextEntityIndexDoesAlreadyExistException.cs" t="Include" />
+              <e p="ContextEntityIndexDoesNotExistException.cs" t="Include" />
+              <e p="ContextInfoException.cs" t="Include" />
+              <e p="ContextStillHasRetainedEntitiesException.cs" t="Include" />
+              <e p="EntityAlreadyHasComponentException.cs" t="Include" />
+              <e p="EntityDoesNotHaveComponentException.cs" t="Include" />
+              <e p="EntityIsAlreadyRetainedByOwnerException.cs" t="Include" />
+              <e p="EntityIsNotDestroyedException.cs" t="Include" />
+              <e p="EntityIsNotEnabledException.cs" t="Include" />
+              <e p="EntityIsNotRetainedByOwnerException.cs" t="Include" />
             </e>
             <e p="Extensions" t="Include">
               <e p="CollectionExtension.cs" t="Include" />
@@ -684,13 +668,11 @@
             </e>
             <e p="IComponent.cs" t="Include" />
             <e p="Matcher" t="Include">
-              <e p="Interfaces" t="Include">
-                <e p="IAllOfMatcher.cs" t="Include" />
-                <e p="IAnyOfMatcher.cs" t="Include" />
-                <e p="ICompoundMatcher.cs" t="Include" />
-                <e p="IMatcher.cs" t="Include" />
-                <e p="INoneOfMatcher.cs" t="Include" />
-              </e>
+              <e p="IAllOfMatcher.cs" t="Include" />
+              <e p="IAnyOfMatcher.cs" t="Include" />
+              <e p="ICompoundMatcher.cs" t="Include" />
+              <e p="IMatcher.cs" t="Include" />
+              <e p="INoneOfMatcher.cs" t="Include" />
               <e p="Matcher.cs" t="Include" />
               <e p="MatcherEquals.cs" t="Include" />
               <e p="MatcherException.cs" t="Include" />
@@ -705,14 +687,12 @@
               </e>
             </e>
             <e p="Systems" t="Include">
-              <e p="Interfaces" t="Include">
-                <e p="ICleanupSystem.cs" t="Include" />
-                <e p="IExecuteSystem.cs" t="Include" />
-                <e p="IInitializeSystem.cs" t="Include" />
-                <e p="IReactiveSystem.cs" t="Include" />
-                <e p="ISystem.cs" t="Include" />
-                <e p="ITearDownSystem.cs" t="Include" />
-              </e>
+              <e p="ICleanupSystem.cs" t="Include" />
+              <e p="IExecuteSystem.cs" t="Include" />
+              <e p="IInitializeSystem.cs" t="Include" />
+              <e p="IReactiveSystem.cs" t="Include" />
+              <e p="ISystem.cs" t="Include" />
+              <e p="ITearDownSystem.cs" t="Include" />
               <e p="Job.cs" t="Include" />
               <e p="JobSystem.cs" t="Include" />
               <e p="MultiReactiveSystem.cs" t="Include" />

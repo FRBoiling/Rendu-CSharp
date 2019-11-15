@@ -6,7 +6,7 @@ namespace Rd.Plugins.Configs
 {
     public class AssembliesConfig : AbstractConfigurableConfig
     {
-        private const string ASSEMBLIES_KEY = "Entitas.Rd.CodeGeneration.Rd.Plugins.Assemblies";
+        private const string ASSEMBLIES_KEY = "Entitas.Rendu.CodeGeneration.Plugins.Assemblies";
 
         public override Dictionary<string, string> defaultProperties =>
             new Dictionary<string, string>

@@ -14,7 +14,7 @@ namespace UnitTestProject
         {
             var provider = new EntityIndexDataProvider(new[] {typeof(T1), typeof(T2)});
             if (preferences == null)
-                preferences = new TestPreferences($@"Entitas.Rd.CodeGeneration.Rd.Plugins.Contexts = Game, GameState {"\n"} Entitas.Rd.CodeGeneration.Rd.Plugins.IgnoreNamespaces = false");
+                preferences = new TestPreferences($@"Rendu.CodeGeneration.Plugins.Contexts = Game, GameState {"\n"} Rendu.CodeGeneration.Plugins.IgnoreNamespaces = false");
 
             provider.Configure(preferences);
 

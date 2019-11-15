@@ -11,7 +11,7 @@ namespace Rendu.CodeGeneration.Unity.Editor
         {
             CodeGeneratorPreferencesWindow window = EditorWindow.GetWindow<CodeGeneratorPreferencesWindow>(true, "Jenny");
             window.minSize = new Vector2(415f, 366f);
-            window.Initialize(EditorPrefs.GetString("Rd.CodeGeneration.CodeGenerator.Unity.Editor.PropertiesPath", Rd.CodeGenerator.CodeGenerator.defaultPropertiesPath), Preferences.defaultUserPropertiesPath, "Rd.CodeGeneration.CodeGenerator.Unity.Editor.CodeGeneratorPreferencesDrawer");
+            window.Initialize(EditorPrefs.GetString("Rendu.CodeGeneration.Unity.Editor.PropertiesPath", Rd.CodeGenerator.CodeGenerator.defaultPropertiesPath), Preferences.defaultUserPropertiesPath, "Rendu.CodeGeneration.Unity.Editor.CodeGeneratorPreferencesDrawer");
             window.Show();
         }
     }

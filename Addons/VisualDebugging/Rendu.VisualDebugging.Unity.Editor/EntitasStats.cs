@@ -4,7 +4,6 @@ using System.Linq;
 using Entitas;
 using Entitas.Attributes;
 using Entitas.Systems;
-using Entitas.Systems.Interfaces;
 using Rd.Utils;
 using UnityEditor;
 using UnityEngine;

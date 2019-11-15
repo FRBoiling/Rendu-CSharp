@@ -1,6 +1,6 @@
 using System;
 using Entitas.Extensions;
-using Entitas.Systems.Interfaces;
+using Entitas.Systems;
 
 namespace Rendu.VisualDebugging.Unity.DebugSystems {
 

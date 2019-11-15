@@ -5,7 +5,7 @@ namespace Rd.Plugins
 {
     public static class PluginUtil
     {
-        public const string ASSEMBLY_RESOLVER_KEY = "Entitas.Rd.CodeGeneration.Rd.Plugins.AssemblyResolver";
+        public const string ASSEMBLY_RESOLVER_KEY = "Rendu.CodeGeneration.Plugins.AssemblyResolver";
 
         public static AssemblyResolver GetCachedAssemblyResolver(Dictionary<string, object> objectCache, string[] assemblies, string[] basePaths)
         {

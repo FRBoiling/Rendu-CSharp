@@ -6,7 +6,7 @@ namespace Rd.Plugins.Configs
 {
     public class TemplatesConfig : AbstractConfigurableConfig
     {
-        private const string TEMPLATES_KEY = "Entitas.Rd.CodeGeneration.Rd.Plugins.Templates";
+        private const string TEMPLATES_KEY = "Entitas.Rendu.CodeGeneration.Plugins.Templates";
 
         public override Dictionary<string, string> defaultProperties =>
             new Dictionary<string, string>

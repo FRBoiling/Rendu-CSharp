@@ -9,14 +9,17 @@ namespace Rd.Plugins.Component.CodeGenerators
     public class ComponentContextApiGenerator : AbstractGenerator
     {
         private const string STANDARD_TEMPLATE =
-            @"public partial class ${ContextType} {
+            @"public partial class ${ContextType} 
+{
 
     public ${EntityType} ${componentName}Entity { get { return GetGroup(${MatcherType}.${ComponentName}).GetSingleEntity(); } }
     public ${ComponentType} ${validComponentName} { get { return ${componentName}Entity.${componentName}; } }
     public bool has${ComponentName} { get { return ${componentName}Entity != null; } }
 
-    public ${EntityType} Set${ComponentName}(${newMethodParameters}) {
-        if (has${ComponentName}) {
+    public ${EntityType} Set${ComponentName}(${newMethodParameters}) 
+    {
+        if (has${ComponentName})
+        {
             throw new Entitas.EntitasException(""Could not set ${ComponentName}!\n"" + this + "" already has an entity with ${ComponentType}!"",
                 ""You should check if the context already has a ${componentName}Entity before setting it or use context.Replace${ComponentName}()."");
         }
@@ -25,7 +28,8 @@ namespace Rd.Plugins.Component.CodeGenerators
         return entity;
     }
 
-    public void Replace${ComponentName}(${newMethodParameters}) {
+    public void Replace${ComponentName}(${newMethodParameters}) 
+    {
         var entity = ${componentName}Entity;
         if (entity == null) {
             entity = Set${ComponentName}(${newMethodArgs});
@@ -34,25 +38,31 @@ namespace Rd.Plugins.Component.CodeGenerators
         }
     }
 
-    public void Remove${ComponentName}() {
+    public void Remove${ComponentName}() 
+    {
         ${componentName}Entity.Destroy();
     }
 }
 ";
 
         private const string FLAG_TEMPLATE =
-            @"public partial class ${ContextType} {
+            @"public partial class ${ContextType} 
+{
 
     public ${EntityType} ${componentName}Entity { get { return GetGroup(${MatcherType}.${ComponentName}).GetSingleEntity(); } }
 
-    public bool ${prefixedComponentName} {
+    public bool ${prefixedComponentName} 
+    {
         get { return ${componentName}Entity != null; }
         set {
             var entity = ${componentName}Entity;
-            if (value != (entity != null)) {
-                if (value) {
+            if (value != (entity != null)) 
+            {
+                if (value) 
+                {
                     CreateEntity().${prefixedComponentName} = true;
-                } else {
+                } else 
+                {
                     entity.Destroy();
                 }
             }

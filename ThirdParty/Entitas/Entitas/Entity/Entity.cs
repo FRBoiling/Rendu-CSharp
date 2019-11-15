@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Entitas.Entity.Exceptions;
+using Entitas.Exceptions;
 
 namespace Entitas.Entity
 {

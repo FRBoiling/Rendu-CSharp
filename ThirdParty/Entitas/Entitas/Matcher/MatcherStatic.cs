@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Entitas.Matcher.Interfaces;
 
 namespace Entitas.Matcher
 {

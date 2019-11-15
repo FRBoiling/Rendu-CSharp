@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Entitas.Entity.Exceptions;
+using Entitas.Exceptions;
 
 namespace Entitas.Entity
 {

@@ -5,7 +5,7 @@ namespace Rendu.CodeGeneration.Plugins
 {
     public class ProjectPathConfig : AbstractConfigurableConfig
     {
-        private const string PROJECT_PATH_KEY = "Rd.CodeGeneration.Rd.Plugins.ProjectPath";
+        private const string PROJECT_PATH_KEY = "Rendu.CodeGeneration.Plugins.ProjectPath";
 
         public override Dictionary<string, string> defaultProperties
         {
@@ -14,7 +14,7 @@ namespace Rendu.CodeGeneration.Plugins
                 return new Dictionary<string, string>()
                 {
                     {
-                        "Rd.CodeGeneration.Rd.Plugins.ProjectPath",
+                        "Rendu.CodeGeneration.Plugins.ProjectPath",
                         "Assembly-CSharp.csproj"
                     }
                 };
@@ -25,7 +25,7 @@ namespace Rendu.CodeGeneration.Plugins
         {
             get
             {
-                return this._preferences["Rd.CodeGeneration.Rd.Plugins.ProjectPath"];
+                return this._preferences["Rendu.CodeGeneration.Plugins.ProjectPath"];
             }
         }
     }
