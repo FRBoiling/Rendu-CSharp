@@ -104,7 +104,7 @@ ${componentTypesList}
             var componentTypesList = string.Join(",\n", data
                 .Select(d => COMPONENT_TYPE_TEMPLATE
 //                    .Replace("${ComponentType}", d.GetTypeName())
-                    .Replace("${ComponentType}", d.GetTypeName())
+                    .Replace("${ComponentType}", d.GetObjectTypeName())
                 ).ToArray());
 
             var fileContent = TEMPLATE

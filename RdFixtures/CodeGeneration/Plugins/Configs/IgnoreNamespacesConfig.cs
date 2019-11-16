@@ -5,7 +5,7 @@ namespace Rd.Plugins.Configs
 {
     public class IgnoreNamespacesConfig : AbstractConfigurableConfig
     {
-        private const string IGNORE_NAMESPACES_KEY = "Entitas.Rendu.CodeGeneration.Plugins.IgnoreNamespaces";
+        private const string IGNORE_NAMESPACES_KEY = "Rendu.CodeGeneration.Plugins.IgnoreNamespaces";
 
         public override Dictionary<string, string> defaultProperties =>
             new Dictionary<string, string>

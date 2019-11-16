@@ -1,5 +1,3 @@
-using TestComponents;
-
 public static class Test2ComponentsLookup 
 {
     public const int TestNormal = 0;
@@ -11,6 +9,6 @@ public static class Test2ComponentsLookup
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(TestNormalComponent)
+        typeof(TestComponents.TestNormalComponent)
     };
 }

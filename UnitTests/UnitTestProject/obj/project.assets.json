@@ -1757,19 +1757,6 @@
         "runtime": {
           "bin/placeholder/TestComponents.dll": {}
         }
-      },
-      "TestFixtures/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "TestComponents": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/TestFixtures.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TestFixtures.dll": {}
-        }
       }
     }
   },
@@ -5958,11 +5945,6 @@
       "type": "project",
       "path": "../TestComponents/TestComponents.csproj",
       "msbuildProject": "../TestComponents/TestComponents.csproj"
-    },
-    "TestFixtures/1.0.0": {
-      "type": "project",
-      "path": "../TestFixtures/TestFixtures.csproj",
-      "msbuildProject": "../TestFixtures/TestFixtures.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5973,7 +5955,6 @@
       "Rd.Migration >= 1.0.0",
       "Rd.Plugins >= 1.0.0",
       "TestComponents >= 1.0.0",
-      "TestFixtures >= 1.0.0",
       "nunit >= 3.12.0"
     ]
   },
@@ -6015,9 +5996,6 @@
             },
             "D:\\GitHub\\RenduEcs\\UnitTests\\TestComponents\\TestComponents.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\UnitTests\\TestComponents\\TestComponents.csproj"
-            },
-            "D:\\GitHub\\RenduEcs\\UnitTests\\TestFixtures\\TestFixtures.csproj": {
-              "projectPath": "D:\\GitHub\\RenduEcs\\UnitTests\\TestFixtures\\TestFixtures.csproj"
             }
           }
         }

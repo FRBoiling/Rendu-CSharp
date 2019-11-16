@@ -13,7 +13,6 @@
           "Rd.Migration": "1.0.0",
           "Rd.Plugins": "1.0.0",
           "TestComponents": "1.0.0",
-          "TestFixtures": "1.0.0",
           "NUnit": "3.12.0"
         },
         "runtime": {
@@ -1040,14 +1039,6 @@
         "runtime": {
           "TestComponents.dll": {}
         }
-      },
-      "TestFixtures/1.0.0": {
-        "dependencies": {
-          "TestComponents": "1.0.0"
-        },
-        "runtime": {
-          "TestFixtures.dll": {}
-        }
       }
     }
   },
@@ -1598,11 +1589,6 @@
       "sha512": ""
     },
     "TestComponents/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "TestFixtures/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
