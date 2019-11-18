@@ -25,6 +25,12 @@
           "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj": {
             "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj"
           },
+          "D:\\GitHub\\RenduEcs\\RdFixtures\\Rd.CodeFileGeneration\\Rd.CodeFileGeneration.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Rd.CodeFileGeneration\\Rd.CodeFileGeneration.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\Shared\\Components\\Components.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\Shared\\Components\\Components.csproj"
+          },
           "D:\\GitHub\\RenduEcs\\UnitTests\\TestComponents\\TestComponents.csproj": {
             "projectPath": "D:\\GitHub\\RenduEcs\\UnitTests\\TestComponents\\TestComponents.csproj"
           }

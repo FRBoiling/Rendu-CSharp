@@ -8,8 +8,10 @@
     ".NETCoreApp,Version=v2.2": {
       "UnitTestProject/1.0.0": {
         "dependencies": {
+          "Components": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.2.0",
           "NUnit3TestAdapter": "3.13.0",
+          "Rd.CodeFileGeneration": "1.0.0",
           "Rd.Migration": "1.0.0",
           "Rd.Plugins": "1.0.0",
           "TestComponents": "1.0.0",
@@ -958,6 +960,15 @@
           }
         }
       },
+      "Components/1.0.0": {
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.Attributes": "1.0.0"
+        },
+        "runtime": {
+          "Components.dll": {}
+        }
+      },
       "Entitas/1.0.0": {
         "runtime": {
           "Entitas.dll": {}
@@ -974,6 +985,16 @@
         },
         "runtime": {
           "Rd.Analytics.dll": {}
+        }
+      },
+      "Rd.CodeFileGeneration/1.0.0": {
+        "dependencies": {
+          "Rd.CodeGenerator": "1.0.0",
+          "Rd.Migration": "1.0.0",
+          "Rd.Plugins": "1.0.0"
+        },
+        "runtime": {
+          "Rd.CodeFileGeneration.dll": {}
         }
       },
       "Rd.CodeGeneration/1.0.0": {
@@ -1538,6 +1559,11 @@
       "path": "system.xml.xpath.xmldocument/4.3.0",
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     },
+    "Components/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Entitas/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1549,6 +1575,11 @@
       "sha512": ""
     },
     "Rd.Analytics/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Rd.CodeFileGeneration/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

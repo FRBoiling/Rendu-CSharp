@@ -494,6 +494,21 @@
           <e p="TcpServerSocket.cs" t="Include" />
           <e p="TcpSocketReceive.cs" t="Include" />
         </e>
+        <e p="Rd.CodeFileGeneration" t="IncludeRecursive">
+          <e p="Bin" t="ExcludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Rd.CodeFileGeneration.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Rd.CodeFileGeneration.csproj" t="IncludeRecursive" />
+          <e p="RdDllLoad.cs" t="Include" />
+          <e p="RdExtensions.cs" t="Include" />
+          <e p="RdGenerationMigration.cs" t="Include" />
+          <e p="RdPreferences.cs" t="Include" />
+        </e>
         <e p="Serialization" t="IncludeRecursive">
           <e p="AbstractConfigurableConfig.cs" t="Include" />
           <e p="ConfigurableConfigExtension.cs" t="Include" />
@@ -531,41 +546,53 @@
         </e>
       </e>
       <e p="RdServer" t="Include" />
-      <e p="RdShared" t="Include" />
+      <e p="RdShared" t="Include">
+        <e p="Bin" t="ExcludeRecursive" />
+        <e p="Components" t="IncludeRecursive">
+          <e p="Components.csproj" t="IncludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Components.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="ServerComponent.cs" t="Include" />
+        </e>
+        <e p="Generated" t="IncludeRecursive">
+          <e p="Contexts.cs" t="Include" />
+          <e p="Generated.csproj" t="IncludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Generated.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Server" t="Include">
+            <e p="Components" t="Include">
+              <e p="ServerServerComponent.cs" t="Include" />
+            </e>
+            <e p="ServerAttribute.cs" t="Include" />
+            <e p="ServerComponentsLookup.cs" t="Include" />
+            <e p="ServerContext.cs" t="Include" />
+            <e p="ServerEntity.cs" t="Include" />
+            <e p="ServerMatcher.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Systems" t="IncludeRecursive">
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Systems.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Systems.csproj" t="IncludeRecursive" />
+        </e>
+      </e>
       <e p="RdUnity" t="Include" />
       <e p="Rendu.sln" t="IncludeFlat" />
-      <e p="Shared\Bin" t="ExcludeRecursive" />
-      <e p="Shared\Components" t="IncludeRecursive">
-        <e p="Components.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.0" t="Include">
-              <e p="Components.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="ServerComponent.cs" t="Include" />
-      </e>
-      <e p="Shared\Generated" t="IncludeRecursive">
-        <e p="Generated.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.0" t="Include">
-              <e p="Generated.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-      </e>
-      <e p="Shared\Systems" t="IncludeRecursive">
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.0" t="Include">
-              <e p="Systems.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Systems.csproj" t="IncludeRecursive" />
-      </e>
       <e p="ThirdParty" t="Include">
         <e p="Entitas" t="Include">
           <e p="Attributes" t="IncludeRecursive">
@@ -870,20 +897,6 @@
             </e>
           </e>
           <e p="Program.cs" t="Include" />
-        </e>
-        <e p="RDGenerationLib" t="IncludeRecursive">
-          <e p="obj" t="ExcludeRecursive">
-            <e p="Debug" t="Include">
-              <e p="netstandard2.0" t="Include">
-                <e p="RDGenerationLib.AssemblyInfo.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-          <e p="RdDllLoad.cs" t="Include" />
-          <e p="RdExtensions.cs" t="Include" />
-          <e p="RDGenerationLib.csproj" t="IncludeRecursive" />
-          <e p="RdGenerationMigration.cs" t="Include" />
-          <e p="RdPreferences.cs" t="Include" />
         </e>
       </e>
       <e p="UnitTests" t="Include">

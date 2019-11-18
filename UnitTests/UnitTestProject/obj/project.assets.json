@@ -1621,6 +1621,20 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "Components/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.Attributes": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Components.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Components.dll": {}
+        }
+      },
       "Entitas/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1652,6 +1666,21 @@
         },
         "runtime": {
           "bin/placeholder/Rd.Analytics.dll": {}
+        }
+      },
+      "Rd.CodeFileGeneration/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rd.CodeGenerator": "1.0.0",
+          "Rd.Migration": "1.0.0",
+          "Rd.Plugins": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rd.CodeFileGeneration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.CodeFileGeneration.dll": {}
         }
       },
       "Rd.CodeGeneration/1.0.0": {
@@ -5891,6 +5920,11 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
+    "Components/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/Components/Components.csproj",
+      "msbuildProject": "../../Shared/Components/Components.csproj"
+    },
     "Entitas/1.0.0": {
       "type": "project",
       "path": "../../ThirdParty/Entitas/Entitas/Entitas.csproj",
@@ -5905,6 +5939,11 @@
       "type": "project",
       "path": "../../RdFixtures/Analytics/Rd.Analytics.csproj",
       "msbuildProject": "../../RdFixtures/Analytics/Rd.Analytics.csproj"
+    },
+    "Rd.CodeFileGeneration/1.0.0": {
+      "type": "project",
+      "path": "../../RdFixtures/Rd.CodeFileGeneration/Rd.CodeFileGeneration.csproj",
+      "msbuildProject": "../../RdFixtures/Rd.CodeFileGeneration/Rd.CodeFileGeneration.csproj"
     },
     "Rd.CodeGeneration/1.0.0": {
       "type": "project",
@@ -5949,9 +5988,11 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "Components >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "NUnit3TestAdapter >= 3.13.0",
+      "Rd.CodeFileGeneration >= 1.0.0",
       "Rd.Migration >= 1.0.0",
       "Rd.Plugins >= 1.0.0",
       "TestComponents >= 1.0.0",
@@ -5993,6 +6034,12 @@
             },
             "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj"
+            },
+            "D:\\GitHub\\RenduEcs\\RdFixtures\\Rd.CodeFileGeneration\\Rd.CodeFileGeneration.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Rd.CodeFileGeneration\\Rd.CodeFileGeneration.csproj"
+            },
+            "D:\\GitHub\\RenduEcs\\Shared\\Components\\Components.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Shared\\Components\\Components.csproj"
             },
             "D:\\GitHub\\RenduEcs\\UnitTests\\TestComponents\\TestComponents.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\UnitTests\\TestComponents\\TestComponents.csproj"

@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CodeGeneration\CodeGenerator\Rd.CodeGenerator.csproj" />
+      <ProjectReference Include="..\CodeGeneration\Migration\Rd.Migration.csproj" />
+      <ProjectReference Include="..\CodeGeneration\Plugins\Rd.Plugins.csproj" />
+    </ItemGroup>
+
+</Project>

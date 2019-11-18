@@ -1,2 +1,0 @@
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Components\obj\Debug\netcoreapp2.2\Components.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Components\obj\Debug\netcoreapp2.2\Components.AssemblyInfo.cs

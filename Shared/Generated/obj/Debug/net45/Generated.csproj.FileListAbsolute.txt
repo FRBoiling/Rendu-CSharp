@@ -1,8 +1,0 @@
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Bin\net45\Generated.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Bin\net45\Generated.pdb
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Generated\obj\Debug\net45\Generated.csprojAssemblyReference.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Generated\obj\Debug\net45\Generated.AssemblyInfoInputs.cache
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Generated\obj\Debug\net45\Generated.AssemblyInfo.cs
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Generated\obj\Debug\net45\Generated.csproj.CopyComplete
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Generated\obj\Debug\net45\Generated.dll
-D:\GitHub\RenduECS\Rendu-CSharp\Shared\Generated\obj\Debug\net45\Generated.pdb

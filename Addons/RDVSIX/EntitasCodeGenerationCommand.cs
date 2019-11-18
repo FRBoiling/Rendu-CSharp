@@ -4,12 +4,11 @@ using System.ComponentModel.Design;
 using System.Linq;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Rd.CodeGeneration;
-using Rd.CodeGenerator;
 using Task = System.Threading.Tasks.Task;
 using Rd.Logging;
+using Rd.Migration;
 using Rd.Serialization;
-using Rd.Utils;
+using RDGenerationLib;
 
 namespace RDVSIX
 {
@@ -90,6 +89,7 @@ namespace RDVSIX
             string propertiesPath = "";
             return new Preferences(propertiesPath, Preferences.defaultUserPropertiesPath);
         }
+
         /// <summary>
         /// This function is the callback used to execute the command when the menu item is clicked.
         /// See the constructor to see how the menu item is associated with this function using
@@ -99,51 +99,8 @@ namespace RDVSIX
         /// <param name="e">Event args.</param>
         private void Execute(object sender, EventArgs e)
         {
-            ThreadHelper.ThrowIfNotOnUIThread();
-            _logger.Debug("Generating...");
-            Rd.CodeGenerator.CodeGenerator codeGenerator = CodeGeneratorUtil.CodeGeneratorFromPreferences(GetPreferences());
-            float progressOffset = 0.0f;
-            codeGenerator.OnProgress += (GeneratorProgress)((title, info, progress) =>
-            {
-//                if (!EditorUtility.DisplayCancelableProgressBar(title, info, progressOffset + progress / 2f))
-//                    return;
-//                codeGenerator.Cancel();
-            });
-            CodeGenFile[] codeGenFileArray1;
-            CodeGenFile[] codeGenFileArray2;
-            try
-            {
-//                codeGenFileArray1 = EditorPrefs.GetBool("Rendu.CodeGeneration.Unity.Editor.DryRun", true) ? codeGenerator.DryRun() : new CodeGenFile[0];
-                codeGenFileArray1 =  new CodeGenFile[0];
-                progressOffset = 0.5f;
-                codeGenFileArray2 = codeGenerator.Generate();
-            }
-            catch (Exception ex)
-            {
-                codeGenFileArray1 = new CodeGenFile[0];
-                codeGenFileArray2 = new CodeGenFile[0];
-                // Show a message box to prove we were here
-                VsShellUtilities.ShowMessageBox(
-                    this.package,
-                    ex.Message,
-                    "Error",
-                    OLEMSGICON.OLEMSGICON_INFO,
-                    OLEMSGBUTTON.OLEMSGBUTTON_OK,
-                    OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
-            }
-
-//            EditorUtility.ClearProgressBar();
-            _logger.Debug(("Generated " +
-                                (object)((IEnumerable<CodeGenFile>)codeGenFileArray2).Select<CodeGenFile, string>((Func<CodeGenFile, string>)(file => file.fileName))
-                                .Distinct<string>().Count<string>() + " files (" + (object)((IEnumerable<CodeGenFile>)codeGenFileArray1)
-                                .Select<CodeGenFile, string>((Func<CodeGenFile, string>)(file => file.fileContent.ToUnixLineEndings())).Sum<string>((Func<string, int>)(content =>
-                                  content.Split(new char[1]
-                                  {
-                                        '\n'
-                                  }, StringSplitOptions.RemoveEmptyEntries).Length)) + " sloc, " + (object)((IEnumerable<CodeGenFile>)codeGenFileArray2)
-                                .Select<CodeGenFile, string>((Func<CodeGenFile, string>)(file => file.fileContent.ToUnixLineEndings()))
-                                .Sum<string>((Func<string, int>)(content => content.Split('\n').Length)) + " loc)"));
-//            AssetDatabase.Refresh();
+            var contextsMigration = new RdComponentsMigration();
+            MigrationUtils.WriteFiles(contextsMigration.Migrate("./"));
         }
     }
 }

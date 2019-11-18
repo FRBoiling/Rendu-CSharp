@@ -79,17 +79,17 @@
     <Content Include="Resources\ProtocolCodeGenerationCommand.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\RdFixtures\CodeGeneration\CodeGeneration\Rd.CodeGeneration.csproj">
-      <Project>{94280260-24ec-404c-8a09-50586f0b7368}</Project>
-      <Name>Rd.CodeGeneration</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\RdFixtures\CodeGeneration\CodeGenerator\Rd.CodeGenerator.csproj">
-      <Project>{2ed92adc-d2e3-4a41-a86c-d48a44443ed1}</Project>
-      <Name>Rd.CodeGenerator</Name>
+    <ProjectReference Include="..\..\RdFixtures\CodeGeneration\Migration\Rd.Migration.csproj">
+      <Project>{cb479379-472a-4f3c-81af-2022f300a2e9}</Project>
+      <Name>Rd.Migration</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\RdFixtures\Logging\Rd.Logging.csproj">
       <Project>{a5171e7f-1510-47c9-a22e-64118004fa36}</Project>
       <Name>Rd.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RdFixtures\Rd.CodeFileGeneration\Rd.CodeFileGeneration.csproj">
+      <Project>{5a4dead6-604b-4239-b165-e2c390c61cb7}</Project>
+      <Name>Rd.CodeFileGeneration</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\RdFixtures\Serialization\Rd.Serialization.csproj">
       <Project>{41d089b0-3748-47a2-8113-7e7ffafb4d9c}</Project>
@@ -98,10 +98,6 @@
     <ProjectReference Include="..\..\RdFixtures\Utils\Rd.Utils.csproj">
       <Project>{87c649b3-585f-4f60-a8ca-96bd0669adfe}</Project>
       <Name>Rd.Utils</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CodeGeneration\Rendu.CodeGeneration.Plugins\Rendu.CodeGeneration.Plugins.csproj">
-      <Project>{7442f019-feb9-46d7-bbd5-c3f824072947}</Project>
-      <Name>Rendu.CodeGeneration.Plugins</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

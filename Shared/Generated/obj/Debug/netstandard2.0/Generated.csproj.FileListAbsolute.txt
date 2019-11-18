@@ -1,9 +1,0 @@
-D:\GitHub\RenduEcs\Shared\Bin\netstandard2.0\Generated.deps.json
-D:\GitHub\RenduEcs\Shared\Bin\netstandard2.0\Generated.dll
-D:\GitHub\RenduEcs\Shared\Bin\netstandard2.0\Generated.pdb
-D:\GitHub\RenduEcs\Shared\Generated\obj\Debug\netstandard2.0\Generated.csprojAssemblyReference.cache
-D:\GitHub\RenduEcs\Shared\Generated\obj\Debug\netstandard2.0\Generated.AssemblyInfoInputs.cache
-D:\GitHub\RenduEcs\Shared\Generated\obj\Debug\netstandard2.0\Generated.AssemblyInfo.cs
-D:\GitHub\RenduEcs\Shared\Generated\obj\Debug\netstandard2.0\Generated.csproj.CopyComplete
-D:\GitHub\RenduEcs\Shared\Generated\obj\Debug\netstandard2.0\Generated.dll
-D:\GitHub\RenduEcs\Shared\Generated\obj\Debug\netstandard2.0\Generated.pdb
