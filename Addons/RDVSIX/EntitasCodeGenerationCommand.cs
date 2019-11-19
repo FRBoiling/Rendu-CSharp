@@ -82,14 +82,7 @@ namespace RDVSIX
             OleMenuCommandService commandService = await package.GetServiceAsync(typeof(IMenuCommandService)) as OleMenuCommandService;
             Instance = new EntitasCodeGenerationCommand(package, commandService);
         }
-
-        public static Preferences GetPreferences()
-        {
-//            string propertiesPath = EditorPrefs.GetString("Rendu.CodeGeneration.Unity.Editor.PropertiesPath",Rd.CodeGenerator.CodeGenerator.defaultPropertiesPath);
-            string propertiesPath = "";
-            return new Preferences(propertiesPath, Preferences.defaultUserPropertiesPath);
-        }
-
+        
         /// <summary>
         /// This function is the callback used to execute the command when the menu item is clicked.
         /// See the constructor to see how the menu item is associated with this function using
@@ -99,8 +92,11 @@ namespace RDVSIX
         /// <param name="e">Event args.</param>
         private void Execute(object sender, EventArgs e)
         {
+            string componentsDllPath = "./";
+            
             var contextsMigration = new RdComponentsMigration();
-            MigrationUtils.WriteFiles(contextsMigration.Migrate("./"));
+            var migrationFiles = contextsMigration.Migrate(componentsDllPath);
+            MigrationUtils.WriteFiles(migrationFiles);
         }
     }
 }
