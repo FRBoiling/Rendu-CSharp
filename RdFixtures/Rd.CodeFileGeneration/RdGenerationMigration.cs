@@ -21,14 +21,14 @@ namespace RDGenerationLib
 
         public string version => "0.0.1";
 
-        public string workingDirectory => "../../../RdShared/Generated";
+        public string workingDirectory => "../../RdShared/Generated";
 
         public string description => "Adding comment class";
 
+
         public MigrationFile[] Migrate(string path)
         {
-            var dllName = "Components";
-            var assembly = RdDllLoad.GetComponentsAssembly(path, dllName);
+            var assembly = RdDllLoad.GetComponentsAssembly(path, RdDllLoad.DLLNAME);
 
             var contextNameList = new List<string>();
             var componentsList = new List<Type>();

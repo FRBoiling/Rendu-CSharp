@@ -46,10 +46,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="EntitasCodeGenerationCommand.cs" />
+    <Compile Include="EntitasTool\EntitasCodeGenerationCommand.cs" />
+    <Compile Include="Log\VISXLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProtocolCodeGenerationCommand.cs" />
+    <Compile Include="ProtocolTool\ProtocolCodeGenerationCommand.cs" />
     <Compile Include="RDVSIXPackage.cs" />
+    <Compile Include="Utils\ProjectHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="source.extension.vsixmanifest">
@@ -79,9 +81,25 @@
     <Content Include="Resources\ProtocolCodeGenerationCommand.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\RdFixtures\Analytics\Rd.Analytics.csproj">
+      <Project>{80501a0f-496b-4b88-a139-8510d02790ee}</Project>
+      <Name>Rd.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RdFixtures\CodeGeneration\CodeGeneration\Rd.CodeGeneration.csproj">
+      <Project>{94280260-24ec-404c-8a09-50586f0b7368}</Project>
+      <Name>Rd.CodeGeneration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RdFixtures\CodeGeneration\CodeGenerator\Rd.CodeGenerator.csproj">
+      <Project>{2ed92adc-d2e3-4a41-a86c-d48a44443ed1}</Project>
+      <Name>Rd.CodeGenerator</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\RdFixtures\CodeGeneration\Migration\Rd.Migration.csproj">
       <Project>{cb479379-472a-4f3c-81af-2022f300a2e9}</Project>
       <Name>Rd.Migration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RdFixtures\CodeGeneration\Plugins\Rd.Plugins.csproj">
+      <Project>{407b7bd2-178c-40c1-b470-8c68d092ab35}</Project>
+      <Name>Rd.Plugins</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\RdFixtures\Logging\Rd.Logging.csproj">
       <Project>{a5171e7f-1510-47c9-a22e-64118004fa36}</Project>
@@ -98,6 +116,14 @@
     <ProjectReference Include="..\..\RdFixtures\Utils\Rd.Utils.csproj">
       <Project>{87c649b3-585f-4f60-a8ca-96bd0669adfe}</Project>
       <Name>Rd.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\Entitas\Attributes\Entitas.Attributes.csproj">
+      <Project>{28845365-f899-405b-a046-291b6598a45f}</Project>
+      <Name>Entitas.Attributes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas\Entitas.csproj">
+      <Project>{18d42b55-d3e8-4483-8a19-6eb09f83aa79}</Project>
+      <Name>Entitas</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

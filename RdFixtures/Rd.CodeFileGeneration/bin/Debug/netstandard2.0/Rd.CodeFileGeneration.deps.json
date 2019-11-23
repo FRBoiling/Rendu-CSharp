@@ -11,6 +11,7 @@
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Rd.CodeGenerator": "1.0.0",
+          "Rd.Logging": "1.0.0",
           "Rd.Migration": "1.0.0",
           "Rd.Plugins": "1.0.0"
         },

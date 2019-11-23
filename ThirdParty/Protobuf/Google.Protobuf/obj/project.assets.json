@@ -46,7 +46,9 @@
       }
     },
     "frameworks": {
-      "net461": {}
+      "net461": {
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+      }
     }
   }
 }

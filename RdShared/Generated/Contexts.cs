@@ -16,13 +16,13 @@ public partial class Contexts : IContexts
 
     static Contexts _sharedInstance;
 
-    public ServerContext server { get; set; }
 
-    public IContext[] allContexts { get { return new IContext [] { server }; } }
+
+    public IContext[] allContexts { get { return new IContext [] {  }; } }
 
     public Contexts() 
     {
-        server = new ServerContext();
+
 
         var postConstructors = System.Linq.Enumerable.Where(
             GetType().GetMethods(),

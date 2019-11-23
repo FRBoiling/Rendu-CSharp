@@ -2110,6 +2110,22 @@
           "bin/placeholder/Rd.Analytics.dll": {}
         }
       },
+      "Rd.CodeFileGeneration/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rd.CodeGenerator": "1.0.0",
+          "Rd.Logging": "1.0.0",
+          "Rd.Migration": "1.0.0",
+          "Rd.Plugins": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rd.CodeFileGeneration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.CodeFileGeneration.dll": {}
+        }
+      },
       "Rd.CodeGeneration/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -2146,6 +2162,16 @@
         },
         "runtime": {
           "bin/placeholder/Rd.Logging.dll": {}
+        }
+      },
+      "Rd.Migration/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Rd.Migration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Migration.dll": {}
         }
       },
       "Rd.Plugins/1.0.0": {
@@ -2188,19 +2214,6 @@
         },
         "runtime": {
           "bin/placeholder/Rd.Utils.dll": {}
-        }
-      },
-      "Rendu.CodeGeneration.Plugins/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Rd.Plugins": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Rendu.CodeGeneration.Plugins.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Rendu.CodeGeneration.Plugins.dll": {}
         }
       }
     },
@@ -4293,6 +4306,22 @@
           "bin/placeholder/Rd.Analytics.dll": {}
         }
       },
+      "Rd.CodeFileGeneration/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rd.CodeGenerator": "1.0.0",
+          "Rd.Logging": "1.0.0",
+          "Rd.Migration": "1.0.0",
+          "Rd.Plugins": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rd.CodeFileGeneration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.CodeFileGeneration.dll": {}
+        }
+      },
       "Rd.CodeGeneration/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -4329,6 +4358,16 @@
         },
         "runtime": {
           "bin/placeholder/Rd.Logging.dll": {}
+        }
+      },
+      "Rd.Migration/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Rd.Migration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Migration.dll": {}
         }
       },
       "Rd.Plugins/1.0.0": {
@@ -4371,19 +4410,6 @@
         },
         "runtime": {
           "bin/placeholder/Rd.Utils.dll": {}
-        }
-      },
-      "Rendu.CodeGeneration.Plugins/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Rd.Plugins": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Rendu.CodeGeneration.Plugins.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Rendu.CodeGeneration.Plugins.dll": {}
         }
       }
     },
@@ -6476,6 +6502,22 @@
           "bin/placeholder/Rd.Analytics.dll": {}
         }
       },
+      "Rd.CodeFileGeneration/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rd.CodeGenerator": "1.0.0",
+          "Rd.Logging": "1.0.0",
+          "Rd.Migration": "1.0.0",
+          "Rd.Plugins": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rd.CodeFileGeneration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.CodeFileGeneration.dll": {}
+        }
+      },
       "Rd.CodeGeneration/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -6512,6 +6554,16 @@
         },
         "runtime": {
           "bin/placeholder/Rd.Logging.dll": {}
+        }
+      },
+      "Rd.Migration/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Rd.Migration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Migration.dll": {}
         }
       },
       "Rd.Plugins/1.0.0": {
@@ -6554,19 +6606,6 @@
         },
         "runtime": {
           "bin/placeholder/Rd.Utils.dll": {}
-        }
-      },
-      "Rendu.CodeGeneration.Plugins/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Rd.Plugins": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Rendu.CodeGeneration.Plugins.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Rendu.CodeGeneration.Plugins.dll": {}
         }
       }
     },
@@ -8659,6 +8698,22 @@
           "bin/placeholder/Rd.Analytics.dll": {}
         }
       },
+      "Rd.CodeFileGeneration/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rd.CodeGenerator": "1.0.0",
+          "Rd.Logging": "1.0.0",
+          "Rd.Migration": "1.0.0",
+          "Rd.Plugins": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rd.CodeFileGeneration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.CodeFileGeneration.dll": {}
+        }
+      },
       "Rd.CodeGeneration/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -8695,6 +8750,16 @@
         },
         "runtime": {
           "bin/placeholder/Rd.Logging.dll": {}
+        }
+      },
+      "Rd.Migration/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Rd.Migration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Migration.dll": {}
         }
       },
       "Rd.Plugins/1.0.0": {
@@ -8737,19 +8802,6 @@
         },
         "runtime": {
           "bin/placeholder/Rd.Utils.dll": {}
-        }
-      },
-      "Rendu.CodeGeneration.Plugins/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Rd.Plugins": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Rendu.CodeGeneration.Plugins.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Rendu.CodeGeneration.Plugins.dll": {}
         }
       }
     }
@@ -10924,6 +10976,11 @@
       "path": "../../RdFixtures/Analytics/Rd.Analytics.csproj",
       "msbuildProject": "../../RdFixtures/Analytics/Rd.Analytics.csproj"
     },
+    "Rd.CodeFileGeneration/1.0.0": {
+      "type": "project",
+      "path": "../../RdFixtures/Rd.CodeFileGeneration/Rd.CodeFileGeneration.csproj",
+      "msbuildProject": "../../RdFixtures/Rd.CodeFileGeneration/Rd.CodeFileGeneration.csproj"
+    },
     "Rd.CodeGeneration/1.0.0": {
       "type": "project",
       "path": "../../RdFixtures/CodeGeneration/CodeGeneration/Rd.CodeGeneration.csproj",
@@ -10939,6 +10996,11 @@
       "path": "../../RdFixtures/Logging/Rd.Logging.csproj",
       "msbuildProject": "../../RdFixtures/Logging/Rd.Logging.csproj"
     },
+    "Rd.Migration/1.0.0": {
+      "type": "project",
+      "path": "../../RdFixtures/CodeGeneration/Migration/Rd.Migration.csproj",
+      "msbuildProject": "../../RdFixtures/CodeGeneration/Migration/Rd.Migration.csproj"
+    },
     "Rd.Plugins/1.0.0": {
       "type": "project",
       "path": "../../RdFixtures/CodeGeneration/Plugins/Rd.Plugins.csproj",
@@ -10953,23 +11015,23 @@
       "type": "project",
       "path": "../../RdFixtures/Utils/Rd.Utils.csproj",
       "msbuildProject": "../../RdFixtures/Utils/Rd.Utils.csproj"
-    },
-    "Rendu.CodeGeneration.Plugins/1.0.0": {
-      "type": "project",
-      "path": "../CodeGeneration/Rendu.CodeGeneration.Plugins/Rendu.CodeGeneration.Plugins.csproj",
-      "msbuildProject": "../CodeGeneration/Rendu.CodeGeneration.Plugins/Rendu.CodeGeneration.Plugins.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.1": [
+      "Entitas >= 1.0.0",
+      "Entitas.Attributes >= 1.0.0",
       "Microsoft.VSSDK.BuildTools >= 16.3.2099",
       "Microsoft.VisualStudio.SDK >= 15.9.3",
+      "Rd.Analytics >= 1.0.0",
+      "Rd.CodeFileGeneration >= 1.0.0",
       "Rd.CodeGeneration >= 1.0.0",
       "Rd.CodeGenerator >= 1.0.0",
       "Rd.Logging >= 1.0.0",
+      "Rd.Migration >= 1.0.0",
+      "Rd.Plugins >= 1.0.0",
       "Rd.Serialization >= 1.0.0",
-      "Rd.Utils >= 1.0.0",
-      "Rendu.CodeGeneration.Plugins >= 1.0.0"
+      "Rd.Utils >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -10999,8 +11061,8 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\Rendu.CodeGeneration.Plugins\\Rendu.CodeGeneration.Plugins.csproj": {
-              "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\CodeGeneration\\Rendu.CodeGeneration.Plugins\\Rendu.CodeGeneration.Plugins.csproj"
+            "D:\\GitHub\\RenduEcs\\RdFixtures\\Analytics\\Rd.Analytics.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Analytics\\Rd.Analytics.csproj"
             },
             "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGeneration\\Rd.CodeGeneration.csproj"
@@ -11008,14 +11070,29 @@
             "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\CodeGenerator\\Rd.CodeGenerator.csproj"
             },
+            "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Migration\\Rd.Migration.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Migration\\Rd.Migration.csproj"
+            },
+            "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj"
+            },
             "D:\\GitHub\\RenduEcs\\RdFixtures\\Logging\\Rd.Logging.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Logging\\Rd.Logging.csproj"
+            },
+            "D:\\GitHub\\RenduEcs\\RdFixtures\\Rd.CodeFileGeneration\\Rd.CodeFileGeneration.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Rd.CodeFileGeneration\\Rd.CodeFileGeneration.csproj"
             },
             "D:\\GitHub\\RenduEcs\\RdFixtures\\Serialization\\Rd.Serialization.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Serialization\\Rd.Serialization.csproj"
             },
             "D:\\GitHub\\RenduEcs\\RdFixtures\\Utils\\Rd.Utils.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Utils\\Rd.Utils.csproj"
+            },
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj"
+            },
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas\\Entitas.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas\\Entitas.csproj"
             }
           }
         }

@@ -1673,6 +1673,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Rd.CodeGenerator": "1.0.0",
+          "Rd.Logging": "1.0.0",
           "Rd.Migration": "1.0.0",
           "Rd.Plugins": "1.0.0"
         },
@@ -6084,7 +6085,8 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

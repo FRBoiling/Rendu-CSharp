@@ -9,7 +9,6 @@
     ".NETStandard,Version=v2.0/": {
       "Systems/1.0.0": {
         "dependencies": {
-          "Generated": "1.0.0",
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
@@ -20,33 +19,6 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
-        }
-      },
-      "Components/1.0.0": {
-        "dependencies": {
-          "Entitas": "1.0.0",
-          "Entitas.Attributes": "1.0.0"
-        },
-        "runtime": {
-          "Components.dll": {}
-        }
-      },
-      "Entitas/1.0.0": {
-        "runtime": {
-          "Entitas.dll": {}
-        }
-      },
-      "Entitas.Attributes/1.0.0": {
-        "runtime": {
-          "Entitas.Attributes.dll": {}
-        }
-      },
-      "Generated/1.0.0": {
-        "dependencies": {
-          "Components": "1.0.0"
-        },
-        "runtime": {
-          "Generated.dll": {}
         }
       }
     }
@@ -70,26 +42,6 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
-    },
-    "Components/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Entitas/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Entitas.Attributes/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Generated/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

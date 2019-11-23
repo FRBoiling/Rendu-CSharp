@@ -30,7 +30,7 @@
     called "command set" and is used to group different command inside a logically related
     group; your package should define its own command set in order to avoid collisions
     with command ids defined by other packages. -->
-    <Menus>
+    <!--<Menus>
       <Menu guid="guidRDVSIXPackageCmdSet" id="RdToolsMenu" priority="0x0500" type="Menu">
         <Parent guid="guidSHLMainMenu" id="IDG_VS_MM_TOOLSADDINS" />
         <Strings>
@@ -38,7 +38,7 @@
           <CommandName>RdTools</CommandName>  
         </Strings>
       </Menu>
-    </Menus>
+    </Menus>-->
 
     <!-- In this section you can define new menu groups. A menu group is a container for
          other menus or buttons (commands); from a visual point of view you can see the
@@ -46,13 +46,13 @@
          must be a menu. -->
     <Groups>
       <Group guid="guidRDVSIXPackageCmdSet" id="MyMenuGroup" priority="0x0600">
-        <Parent guid="guidRDVSIXPackageCmdSet" id="RdToolsMenu" />
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE" />
       </Group>
       <Group guid="guidRDVSIXPackageCmdSet" id="EntitasCodeGenerationGroup" priority="0x0601">
-        <Parent guid="guidRDVSIXPackageCmdSet" id="RdToolsMenu" />
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE" />
       </Group>
       <Group guid="guidRDVSIXPackageCmdSet" id="ProtocolCodeGenerationGroup" priority="0x0602">
-        <Parent guid="guidRDVSIXPackageCmdSet" id="RdToolsMenu" />
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE" />
       </Group>
     </Groups>
 

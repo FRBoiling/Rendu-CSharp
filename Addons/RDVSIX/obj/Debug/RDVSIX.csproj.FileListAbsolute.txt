@@ -6,7 +6,6 @@ D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\VSCT.read.1.tlog
 D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\VSCT.write.1.tlog
 D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\resources.json
 D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\ctoFiles.json
-D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\_EmptyResource.resources.original
 D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\mergeCto.cache
 D:\GitHub\RenduEcs\Addons\Bin\RDVSIX.dll
 D:\GitHub\RenduEcs\Addons\Bin\RDVSIX.pdb
