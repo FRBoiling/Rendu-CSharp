@@ -12,7 +12,7 @@ using Rd.Plugins.Context.CodeGenerators;
 using Rd.Plugins.Context.DataProviders;
 using Rd.Plugins.Entity.CodeGenerators;
 
-namespace RDGenerationLib
+namespace Rd.CodeFileGeneration
 {
     public class RdComponentsMigration : IMigration
     {

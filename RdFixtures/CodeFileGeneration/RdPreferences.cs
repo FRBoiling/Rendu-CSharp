@@ -1,6 +1,6 @@
 ﻿using Rd.Serialization;
 
-namespace RDGenerationLib
+namespace Rd.CodeFileGeneration
 {
     public class RdPreferences : Preferences
     {

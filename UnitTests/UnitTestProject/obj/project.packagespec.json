@@ -19,14 +19,14 @@
     "frameworks": {
       "netcoreapp2.2": {
         "projectReferences": {
+          "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeFileGeneration\\Rd.CodeFileGeneration.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeFileGeneration\\Rd.CodeFileGeneration.csproj"
+          },
           "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Migration\\Rd.Migration.csproj": {
             "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Migration\\Rd.Migration.csproj"
           },
           "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj": {
             "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj"
-          },
-          "D:\\GitHub\\RenduEcs\\RdFixtures\\Rd.CodeFileGeneration\\Rd.CodeFileGeneration.csproj": {
-            "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Rd.CodeFileGeneration\\Rd.CodeFileGeneration.csproj"
           },
           "D:\\GitHub\\RenduEcs\\Shared\\Components\\Components.csproj": {
             "projectPath": "D:\\GitHub\\RenduEcs\\Shared\\Components\\Components.csproj"

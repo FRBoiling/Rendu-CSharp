@@ -93,12 +93,19 @@
           </e>
         </e>
         <e p="RDVSIX" t="IncludeRecursive">
-          <e p="EntitasCodeGenerationCommand.cs" t="Include" />
+          <e p="EntitasTool" t="Include">
+            <e p="EntitasCodeGenerationCommand.cs" t="Include" />
+          </e>
+          <e p="Log" t="Include">
+            <e p="VISXLogger.cs" t="Include" />
+          </e>
           <e p="obj" t="ExcludeRecursive" />
           <e p="Properties" t="Include">
             <e p="AssemblyInfo.cs" t="Include" />
           </e>
-          <e p="ProtocolCodeGenerationCommand.cs" t="Include" />
+          <e p="ProtocolTool" t="Include">
+            <e p="ProtocolCodeGenerationCommand.cs" t="Include" />
+          </e>
           <e p="RDVSIX.csproj" t="IncludeRecursive" />
           <e p="RDVSIXPackage.cs" t="Include" />
           <e p="RDVSIXPackage.vsct" t="Include" />
@@ -107,6 +114,9 @@
             <e p="ProtocolCodeGenerationCommand.png" t="Include" />
           </e>
           <e p="source.extension.vsixmanifest" t="Include" />
+          <e p="Utils" t="Include">
+            <e p="ProjectHelper.cs" t="Include" />
+          </e>
         </e>
         <e p="Unity" t="Include">
           <e p="Bin" t="ExcludeRecursive" />
@@ -296,6 +306,20 @@
           <e p="UserTrackingData.cs" t="Include" />
         </e>
         <e p="Bin" t="ExcludeRecursive" />
+        <e p="CodeFileGeneration" t="IncludeRecursive">
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Rd.CodeFileGeneration.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Rd.CodeFileGeneration.csproj" t="IncludeRecursive" />
+          <e p="RdDllLoad.cs" t="Include" />
+          <e p="RdExtensions.cs" t="Include" />
+          <e p="RdGenerationMigration.cs" t="Include" />
+          <e p="RdPreferences.cs" t="Include" />
+        </e>
         <e p="CodeGeneration" t="Include">
           <e p="Bin" t="ExcludeRecursive" />
           <e p="CodeGeneration" t="IncludeRecursive">
@@ -493,21 +517,6 @@
           <e p="TcpMessageParser.cs" t="Include" />
           <e p="TcpServerSocket.cs" t="Include" />
           <e p="TcpSocketReceive.cs" t="Include" />
-        </e>
-        <e p="Rd.CodeFileGeneration" t="IncludeRecursive">
-          <e p="Bin" t="ExcludeRecursive" />
-          <e p="obj" t="ExcludeRecursive">
-            <e p="Debug" t="Include">
-              <e p="netstandard2.0" t="Include">
-                <e p="Rd.CodeFileGeneration.AssemblyInfo.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-          <e p="Rd.CodeFileGeneration.csproj" t="IncludeRecursive" />
-          <e p="RdDllLoad.cs" t="Include" />
-          <e p="RdExtensions.cs" t="Include" />
-          <e p="RdGenerationMigration.cs" t="Include" />
-          <e p="RdPreferences.cs" t="Include" />
         </e>
         <e p="Serialization" t="IncludeRecursive">
           <e p="AbstractConfigurableConfig.cs" t="Include" />

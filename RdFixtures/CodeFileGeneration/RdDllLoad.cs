@@ -2,7 +2,7 @@
 using System.IO;
 using System.Reflection;
 
-namespace RDGenerationLib
+namespace Rd.CodeFileGeneration
 {
     public class RdDllLoad
     {

@@ -85,6 +85,10 @@
       <Project>{80501a0f-496b-4b88-a139-8510d02790ee}</Project>
       <Name>Rd.Analytics</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\RdFixtures\CodeFileGeneration\Rd.CodeFileGeneration.csproj">
+      <Project>{5a4dead6-604b-4239-b165-e2c390c61cb7}</Project>
+      <Name>Rd.CodeFileGeneration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\RdFixtures\CodeGeneration\CodeGeneration\Rd.CodeGeneration.csproj">
       <Project>{94280260-24ec-404c-8a09-50586f0b7368}</Project>
       <Name>Rd.CodeGeneration</Name>
@@ -104,10 +108,6 @@
     <ProjectReference Include="..\..\RdFixtures\Logging\Rd.Logging.csproj">
       <Project>{a5171e7f-1510-47c9-a22e-64118004fa36}</Project>
       <Name>Rd.Logging</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\RdFixtures\Rd.CodeFileGeneration\Rd.CodeFileGeneration.csproj">
-      <Project>{5a4dead6-604b-4239-b165-e2c390c61cb7}</Project>
-      <Name>Rd.CodeFileGeneration</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\RdFixtures\Serialization\Rd.Serialization.csproj">
       <Project>{41d089b0-3748-47a2-8113-7e7ffafb4d9c}</Project>

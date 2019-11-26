@@ -91,7 +91,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RDVSIX", "RDVSIX", "{51BF8B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDVSIX", "Addons\RDVSIX\RDVSIX.csproj", "{6F5599DC-B014-4128-933F-CCE65456139E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rd.CodeFileGeneration", "RdFixtures\Rd.CodeFileGeneration\Rd.CodeFileGeneration.csproj", "{5A4DEAD6-604B-4239-B165-E2C390C61CB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rd.CodeFileGeneration", "RdFixtures\CodeFileGeneration\Rd.CodeFileGeneration.csproj", "{5A4DEAD6-604B-4239-B165-E2C390C61CB7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Components", "RdShared\Components\Components.csproj", "{6ED5ACD7-787C-402E-A495-0406C7A88F82}"
 EndProject

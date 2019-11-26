@@ -5943,8 +5943,8 @@
     },
     "Rd.CodeFileGeneration/1.0.0": {
       "type": "project",
-      "path": "../../RdFixtures/Rd.CodeFileGeneration/Rd.CodeFileGeneration.csproj",
-      "msbuildProject": "../../RdFixtures/Rd.CodeFileGeneration/Rd.CodeFileGeneration.csproj"
+      "path": "../../RdFixtures/CodeFileGeneration/Rd.CodeFileGeneration.csproj",
+      "msbuildProject": "../../RdFixtures/CodeFileGeneration/Rd.CodeFileGeneration.csproj"
     },
     "Rd.CodeGeneration/1.0.0": {
       "type": "project",
@@ -6030,14 +6030,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeFileGeneration\\Rd.CodeFileGeneration.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeFileGeneration\\Rd.CodeFileGeneration.csproj"
+            },
             "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Migration\\Rd.Migration.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Migration\\Rd.Migration.csproj"
             },
             "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj"
-            },
-            "D:\\GitHub\\RenduEcs\\RdFixtures\\Rd.CodeFileGeneration\\Rd.CodeFileGeneration.csproj": {
-              "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Rd.CodeFileGeneration\\Rd.CodeFileGeneration.csproj"
             },
             "D:\\GitHub\\RenduEcs\\Shared\\Components\\Components.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\Shared\\Components\\Components.csproj"
@@ -6085,8 +6085,7 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }

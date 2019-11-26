@@ -1,24 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.Design;
-using System.Linq;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Task = System.Threading.Tasks.Task;
 using Rd.Logging;
-using Rd.Migration;
-using Rd.Serialization;
-using RDGenerationLib;
-using System.Reflection;
-using System.IO;
-using EnvDTE;
-using EnvDTE80;
 using System.Runtime.InteropServices;
-using EnvDTE100;
-using Microsoft;
-using Microsoft.VisualStudio;
-using System.Windows.Threading;
-using Microsoft.Internal.VisualStudio.PlatformUI;
 
 namespace RDVSIX
 {

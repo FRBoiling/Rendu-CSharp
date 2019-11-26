@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace RDGenerationLib
+namespace Rd.CodeFileGeneration
 {
     public static class RdExtensions
     {
