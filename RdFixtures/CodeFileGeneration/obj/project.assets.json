@@ -394,9 +394,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeFileGeneration\\CodeFileGeneration.csproj",
-      "projectName": "CodeFileGeneration",
-      "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeFileGeneration\\CodeFileGeneration.csproj",
+      "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeFileGeneration\\Rd.CodeFileGeneration.csproj",
+      "projectName": "Rd.CodeFileGeneration",
+      "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeFileGeneration\\Rd.CodeFileGeneration.csproj",
       "packagesPath": "C:\\Users\\WanXin\\.nuget\\packages\\",
       "outputPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeFileGeneration\\obj\\",
       "projectStyle": "PackageReference",
@@ -457,7 +457,8 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

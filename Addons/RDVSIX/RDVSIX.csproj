@@ -124,6 +124,7 @@
     <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas\Entitas.csproj">
       <Project>{18d42b55-d3e8-4483-8a19-6eb09f83aa79}</Project>
       <Name>Entitas</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

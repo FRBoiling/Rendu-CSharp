@@ -21,14 +21,21 @@ namespace Rd.CodeFileGeneration
 
         public string version => "0.0.1";
 
-        public string workingDirectory => "../../RdShared/Generated";
+        public string workingDirectory => "../Generated";
 
         public string description => "Adding comment class";
 
+        public string WorkingDirectory = string.Empty;
 
         public MigrationFile[] Migrate(string path)
         {
-            var assembly = RdDllLoad.GetComponentsAssembly(path, RdDllLoad.DLLNAME);
+            if (string.IsNullOrEmpty(WorkingDirectory))
+            {
+                return null;
+            }
+            var assembly = RdDllLoad.GetComponentsAssembly(path, RdDllLoad.DLLNAME1);
+            assembly = RdDllLoad.GetComponentsAssembly(path, RdDllLoad.DLLNAME2);
+            assembly = RdDllLoad.GetComponentsAssembly(path, RdDllLoad.DLLNAME);
 
             var contextNameList = new List<string>();
             var componentsList = new List<Type>();
@@ -39,7 +46,7 @@ namespace Rd.CodeFileGeneration
 
                 foreach (var attribute in attributes)
                 {
-                    var contextAttribute = (ContextAttribute) attribute;
+                    var contextAttribute = (ContextAttribute)attribute;
                     if (!contextNameList.Contains(contextAttribute.contextName)) contextNameList.Add(contextAttribute.contextName);
                 }
 
@@ -47,6 +54,11 @@ namespace Rd.CodeFileGeneration
                 if (iInterface == null) continue;
 
                 if (!componentsList.Contains(type)) componentsList.Add(type);
+            }
+
+            if (componentsList.Count == 0)
+            {
+                return null;
             }
 
             var contextNameStr = string.Empty;
@@ -58,11 +70,11 @@ namespace Rd.CodeFileGeneration
 
             var contextsPreferencesStr = CONTEXTS_PREFERENCES.Replace("${contextNames}", contextNameStr);
             var contextsPreferences = new RdPreferences(contextsPreferencesStr);
-/////
+            /////
             var codeGenFiles = new List<CodeGenFile>();
             var contextDataProvider = new ContextDataProvider();
             contextDataProvider.Configure(contextsPreferences);
-            var contextDataArr = (ContextData[]) contextDataProvider.GetData();
+            var contextDataArr = (ContextData[])contextDataProvider.GetData();
 
             var contextsGenerator = new ContextsGenerator();
             var contextsFile = contextsGenerator.Generate(contextDataArr);
@@ -83,12 +95,12 @@ namespace Rd.CodeFileGeneration
             var entityGenerator = new EntityGenerator();
             var entityFile = entityGenerator.Generate(contextDataArr);
             codeGenFiles.AddRange(entityFile);
-/////
+            /////
             var componentsPreferences = new RdPreferences($"{contextsPreferencesStr}{"\n"}{COMPONENT_PREFERENCES}");
 
             var componentDataProvider = new ComponentDataProvider(componentsList.ToArray());
             componentDataProvider.Configure(componentsPreferences);
-            var componentDataArr = (ComponentData[]) componentDataProvider.GetData();
+            var componentDataArr = (ComponentData[])componentDataProvider.GetData();
 
             var componentEntityApiGenerator = new ComponentEntityApiGenerator();
             var componentsFile = componentEntityApiGenerator.Generate(componentDataArr);
@@ -106,7 +118,7 @@ namespace Rd.CodeFileGeneration
 
             foreach (var file in codeGenFiles)
             {
-                var fileFullName = Path.Combine(workingDirectory, file.fileName);
+                var fileFullName = Path.Combine(WorkingDirectory, file.fileName);
 
                 var migrationFile = new MigrationFile(fileFullName, file.fileContent);
                 migratedFiles.Add(migrationFile);

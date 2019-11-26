@@ -1,0 +1,9 @@
+D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Bin\netstandard2.0\Rd.CodeGenerator.deps.json
+D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Bin\netstandard2.0\Rd.CodeGenerator.dll
+D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Bin\netstandard2.0\Rd.CodeGenerator.pdb
+D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\CodeGenerator\obj\Release\netstandard2.0\Rd.CodeGenerator.csprojAssemblyReference.cache
+D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\CodeGenerator\obj\Release\netstandard2.0\Rd.CodeGenerator.AssemblyInfoInputs.cache
+D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\CodeGenerator\obj\Release\netstandard2.0\Rd.CodeGenerator.AssemblyInfo.cs
+D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\CodeGenerator\obj\Release\netstandard2.0\Rd.CodeGenerator.csproj.CopyComplete
+D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\CodeGenerator\obj\Release\netstandard2.0\Rd.CodeGenerator.dll
+D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\CodeGenerator\obj\Release\netstandard2.0\Rd.CodeGenerator.pdb

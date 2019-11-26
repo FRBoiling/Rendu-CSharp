@@ -1,0 +1,8 @@
+D:\GitHub\RenduEcs\Addons\VisualDebugging\Bin\net461\Rendu.VisualDebugging.CodeGeneration.Plugins.dll
+D:\GitHub\RenduEcs\Addons\VisualDebugging\Bin\net461\Rendu.VisualDebugging.CodeGeneration.Plugins.pdb
+D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.CodeGeneration.Plugins\obj\Release\net461\Rendu.VisualDebugging.CodeGeneration.Plugins.csprojAssemblyReference.cache
+D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.CodeGeneration.Plugins\obj\Release\net461\Rendu.VisualDebugging.CodeGeneration.Plugins.AssemblyInfoInputs.cache
+D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.CodeGeneration.Plugins\obj\Release\net461\Rendu.VisualDebugging.CodeGeneration.Plugins.AssemblyInfo.cs
+D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.CodeGeneration.Plugins\obj\Release\net461\Rendu.VisualDebugging.CodeGeneration.Plugins.csproj.CopyComplete
+D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.CodeGeneration.Plugins\obj\Release\net461\Rendu.VisualDebugging.CodeGeneration.Plugins.dll
+D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.CodeGeneration.Plugins\obj\Release\net461\Rendu.VisualDebugging.CodeGeneration.Plugins.pdb

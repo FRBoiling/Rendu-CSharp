@@ -13,7 +13,9 @@ namespace Rd.CodeFileGeneration
             PDBError,
         }
         private readonly static Logger _logger = fabl.GetLogger(typeof (RdDllLoad));
-        public const string DLLNAME = "Components";
+        public const string DLLNAME1 = "Entitas";
+        public const string DLLNAME2 = "Entitas.Attributes";
+        public static string DLLNAME = "Components";
         public const string DLLSUFFIX = ".dll";
         public const string PDBSUFFIX = ".pdb";
         public static Assembly GetComponentsAssembly(string path, string dllName)

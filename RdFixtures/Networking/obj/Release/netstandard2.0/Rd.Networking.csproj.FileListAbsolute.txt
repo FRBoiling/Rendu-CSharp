@@ -1,0 +1,8 @@
+D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Networking.deps.json
+D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Networking.dll
+D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Networking.pdb
+D:\GitHub\RenduEcs\RdFixtures\Networking\obj\Release\netstandard2.0\Rd.Networking.AssemblyInfoInputs.cache
+D:\GitHub\RenduEcs\RdFixtures\Networking\obj\Release\netstandard2.0\Rd.Networking.AssemblyInfo.cs
+D:\GitHub\RenduEcs\RdFixtures\Networking\obj\Release\netstandard2.0\Rd.Networking.csproj.CopyComplete
+D:\GitHub\RenduEcs\RdFixtures\Networking\obj\Release\netstandard2.0\Rd.Networking.dll
+D:\GitHub\RenduEcs\RdFixtures\Networking\obj\Release\netstandard2.0\Rd.Networking.pdb

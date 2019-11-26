@@ -6,3 +6,4 @@ D:\GitHub\RenduEcs\RdShared\Components\obj\Debug\netstandard2.0\Components.Assem
 D:\GitHub\RenduEcs\RdShared\Components\obj\Debug\netstandard2.0\Components.csproj.CopyComplete
 D:\GitHub\RenduEcs\RdShared\Components\obj\Debug\netstandard2.0\Components.dll
 D:\GitHub\RenduEcs\RdShared\Components\obj\Debug\netstandard2.0\Components.pdb
+D:\GitHub\RenduEcs\RdShared\Components\obj\Debug\netstandard2.0\Components.csprojAssemblyReference.cache

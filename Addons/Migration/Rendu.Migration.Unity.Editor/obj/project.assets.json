@@ -386,7 +386,8 @@
             "target": "Package",
             "version": "[2018.1.6-f1, )"
           }
-        }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

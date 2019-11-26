@@ -61,7 +61,8 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -114,7 +115,8 @@
               "target": "Package",
               "version": "[2018.1.6-f1, )"
             }
-          }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -157,7 +159,9 @@
         }
       },
       "frameworks": {
-        "net461": {}
+        "net461": {
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
       }
     },
     "D:\\GitHub\\RenduEcs\\RdFixtures\\Analytics\\Rd.Analytics.csproj": {
@@ -217,7 +221,8 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -278,7 +283,8 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -345,7 +351,8 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -416,7 +423,8 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -473,7 +481,8 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -534,7 +543,8 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -595,7 +605,8 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -652,7 +663,8 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -709,7 +721,8 @@
             "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

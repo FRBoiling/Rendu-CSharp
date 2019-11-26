@@ -1,3 +1,8 @@
+D:\GitHub\RenduEcs\Addons\Bin\RDVSIX.dll
+D:\GitHub\RenduEcs\Addons\Bin\RDVSIX.pdb
+D:\GitHub\RenduEcs\Addons\Bin\RDVSIX.pkgdef
+D:\GitHub\RenduEcs\Addons\Bin\RDVSIX.vsix
+D:\GitHub\RenduEcs\Addons\Bin\extension.vsixmanifest
 D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\RDVSIX.csprojAssemblyReference.cache
 D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\_EmptyResource.resources
 D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\RDVSIX.csproj.GenerateResource.cache
@@ -6,12 +11,8 @@ D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\VSCT.read.1.tlog
 D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\VSCT.write.1.tlog
 D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\resources.json
 D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\ctoFiles.json
+D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\_EmptyResource.resources.original
 D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\mergeCto.cache
-D:\GitHub\RenduEcs\Addons\Bin\RDVSIX.dll
-D:\GitHub\RenduEcs\Addons\Bin\RDVSIX.pdb
-D:\GitHub\RenduEcs\Addons\Bin\RDVSIX.pkgdef
-D:\GitHub\RenduEcs\Addons\Bin\RDVSIX.vsix
-D:\GitHub\RenduEcs\Addons\Bin\extension.vsixmanifest
 D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\RDVSIX.csproj.CopyComplete
 D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\RDVSIX.dll
 D:\GitHub\RenduEcs\Addons\RDVSIX\obj\Debug\RDVSIX.pdb

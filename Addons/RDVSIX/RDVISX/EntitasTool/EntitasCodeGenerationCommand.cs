@@ -1,24 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.Design;
-using System.Linq;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Task = System.Threading.Tasks.Task;
 using Rd.Logging;
 using Rd.Migration;
-using Rd.Serialization;
-using RDGenerationLib;
-using System.Reflection;
 using System.IO;
-using EnvDTE;
-using EnvDTE80;
 using System.Runtime.InteropServices;
-using EnvDTE100;
-using Microsoft;
-using Microsoft.VisualStudio;
 using System.Windows.Threading;
-using Microsoft.Internal.VisualStudio.PlatformUI;
+using Rd.CodeFileGeneration;
 
 namespace RDVSIX
 {
@@ -123,13 +113,19 @@ namespace RDVSIX
             var config = selectedProject.ConfigurationManager.ActiveConfiguration;
 
             var outPutPath = string.Empty;
-
+            var selectedProjectDir = string.Empty;
             if (Path.GetExtension(selectedProject.FullName).Equals(".csproj", StringComparison.OrdinalIgnoreCase))//Path.GetExtension获取扩展名，OrdinalIgnoreCase 使用序号排序规则并忽略被比较字符串的大小写，对字符串进行比较。 
             {
                 var output = (string)selectedProject.ConfigurationManager.ActiveConfiguration.Properties.Item("OutputPath").Value;
-                outPutPath = Path.Combine(Path.GetDirectoryName(selectedProject.FullName), output);
+                selectedProjectDir = Path.GetDirectoryName(selectedProject.FullName);
+                outPutPath = Path.Combine(selectedProjectDir, output);
             }
-          
+            if (string.IsNullOrEmpty(selectedProjectDir))
+            {
+                _logger.Error($"selectedProjectDir is null or empty");
+                return;
+            }
+
             if (string.IsNullOrEmpty(outPutPath))
             {
                 _logger.Error($"outputpath is null or empty");
@@ -153,6 +149,7 @@ namespace RDVSIX
 
             string message = $"entitas component code generator success!";
             var contextsMigration = new RdComponentsMigration();
+            contextsMigration.WorkingDirectory = Path.Combine(selectedProjectDir, contextsMigration.workingDirectory);
             var migrationFiles = contextsMigration.Migrate(outPutPath);
             if (migrationFiles == null || migrationFiles.Length <= 0)
             {
