@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>16.0</MinimumVisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{6F5599DC-B014-4128-933F-CCE65456139E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RDVSIX</RootNamespace>
+    <AssemblyName>RDVSIX</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <GeneratePkgDefFile>true</GeneratePkgDefFile>
+    <UseCodebase>true</UseCodebase>
+    <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
+    <CopyOutputSymbolsToOutputDirectory>true</CopyOutputSymbolsToOutputDirectory>
+    <StartAction>Program</StartAction>
+    <StartProgram Condition="'$(DevEnvDir)' != ''">$(DevEnvDir)devenv.exe</StartProgram>
+    <StartArguments>/rootsuffix Exp</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="EntitasTool\EntitasCodeGenerationCommand.cs" />
+    <Compile Include="Log\VISXLogger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtocolTool\ProtocolCodeGenerationCommand.cs" />
+    <Compile Include="RDVSIXPackage.cs" />
+    <Compile Include="Utils\ProjectHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="source.extension.vsixmanifest">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="15.9.3" />
+    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="16.3.2099" />
+  </ItemGroup>
+  <ItemGroup>
+    <VSCTCompile Include="RDVSIXPackage.vsct">
+      <ResourceName>Menus.ctmenu</ResourceName>
+    </VSCTCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\EntitasCodeGenerationCommand.png" />
+    <Content Include="Resources\ProtocolCodeGenerationCommand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\RdFixtures\Analytics\Rd.Analytics.csproj">
+      <Project>{80501a0f-496b-4b88-a139-8510d02790ee}</Project>
+      <Name>Rd.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RdFixtures\CodeGeneration\CodeGeneration\Rd.CodeGeneration.csproj">
+      <Project>{94280260-24ec-404c-8a09-50586f0b7368}</Project>
+      <Name>Rd.CodeGeneration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RdFixtures\CodeGeneration\CodeGenerator\Rd.CodeGenerator.csproj">
+      <Project>{2ed92adc-d2e3-4a41-a86c-d48a44443ed1}</Project>
+      <Name>Rd.CodeGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RdFixtures\CodeGeneration\Migration\Rd.Migration.csproj">
+      <Project>{cb479379-472a-4f3c-81af-2022f300a2e9}</Project>
+      <Name>Rd.Migration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RdFixtures\CodeGeneration\Plugins\Rd.Plugins.csproj">
+      <Project>{407b7bd2-178c-40c1-b470-8c68d092ab35}</Project>
+      <Name>Rd.Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RdFixtures\Logging\Rd.Logging.csproj">
+      <Project>{a5171e7f-1510-47c9-a22e-64118004fa36}</Project>
+      <Name>Rd.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RdFixtures\Rd.CodeFileGeneration\Rd.CodeFileGeneration.csproj">
+      <Project>{5a4dead6-604b-4239-b165-e2c390c61cb7}</Project>
+      <Name>Rd.CodeFileGeneration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RdFixtures\Serialization\Rd.Serialization.csproj">
+      <Project>{41d089b0-3748-47a2-8113-7e7ffafb4d9c}</Project>
+      <Name>Rd.Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RdFixtures\Utils\Rd.Utils.csproj">
+      <Project>{87c649b3-585f-4f60-a8ca-96bd0669adfe}</Project>
+      <Name>Rd.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ThirdParty\Entitas\Attributes\Entitas.Attributes.csproj">
+      <Project>{28845365-f899-405b-a046-291b6598a45f}</Project>
+      <Name>Entitas.Attributes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\ThirdParty\Entitas\Entitas\Entitas.csproj">
+      <Project>{18d42b55-d3e8-4483-8a19-6eb09f83aa79}</Project>
+      <Name>Entitas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

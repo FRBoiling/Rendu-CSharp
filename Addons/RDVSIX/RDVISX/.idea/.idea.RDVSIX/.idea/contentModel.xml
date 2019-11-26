@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.projectsystem\15.8.243\build\AdditionalFiles\vs-threading.MainThreadAssertingMethods.txt" t="Include" />
+    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.projectsystem\15.8.243\build\AdditionalFiles\vs-threading.MainThreadSwitchingMethods.txt" t="Include" />
+    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.sdk.analyzers\16.3.2\build\AdditionalFiles\BannedSymbols.txt" t="Include" />
+    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.sdk.analyzers\16.3.2\build\AdditionalFiles\vs-threading.LegacyThreadSwitchingMembers.txt" t="Include" />
+    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.sdk.analyzers\16.3.2\build\AdditionalFiles\vs-threading.MainThreadAssertingMethods.txt" t="Include" />
+    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.sdk.analyzers\16.3.2\build\AdditionalFiles\vs-threading.MainThreadSwitchingMethods.txt" t="Include" />
+    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.sdk.analyzers\16.3.2\build\AdditionalFiles\vs-threading.MembersRequiringMainThread.txt" t="Include" />
+    <e p="C:\Users\WanXin\.nuget\packages\microsoft.visualstudio.threading.analyzers\16.3.13\build" t="Include">
+      <e p="AdditionalFiles" t="Include">
+        <e p="vs-threading.LegacyThreadSwitchingMembers.txt" t="Include" />
+        <e p="vs-threading.MainThreadAssertingMethods.txt" t="Include" />
+        <e p="vs-threading.MainThreadSwitchingMethods.txt" t="Include" />
+        <e p="vs-threading.MembersRequiringMainThread.txt" t="Include" />
+      </e>
+    </e>
+    <e p="C:\Users\WanXin\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\WanXin\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_RDVSIX.-1476855705.00" t="ExcludeRecursive" />
+    <e p="D:\GitHub\RenduEcs\Addons\RDVSIX" t="IncludeRecursive">
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="EntitasCodeGenerationCommand.cs" t="Include" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+      </e>
+      <e p="ProtocolCodeGenerationCommand.cs" t="Include" />
+      <e p="RDVSIX.csproj" t="IncludeRecursive" />
+      <e p="RDVSIX.sln" t="IncludeFlat" />
+      <e p="RDVSIXPackage.cs" t="Include" />
+      <e p="RDVSIXPackage.vsct" t="Include" />
+      <e p="Resources" t="Include">
+        <e p="EntitasCodeGenerationCommand.png" t="Include" />
+        <e p="ProtocolCodeGenerationCommand.png" t="Include" />
+      </e>
+      <e p="source.extension.vsixmanifest" t="Include" />
+    </e>
+  </component>
+</project>
