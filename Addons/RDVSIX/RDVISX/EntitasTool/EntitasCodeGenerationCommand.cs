@@ -138,27 +138,30 @@ namespace RDVSIX
             {
                 // 编译项目 true
                 selectedProject.DTE.Solution.SolutionBuild.BuildProject(buildCfg, selectedProject.UniqueName, true);
+
+
+                _logger.Info($"build success:{selectedProject.FullName}");
+
+                string message = $"entitas component code generator success!";
+                var contextsMigration = new RdComponentsMigration();
+                contextsMigration.WorkingDirectory = Path.Combine(selectedProjectDir, contextsMigration.workingDirectory);
+
+                var path = Path.GetDirectoryName(outPutPath);
+                var migrationFiles = contextsMigration.Migrate(outPutPath);
+
+                if (migrationFiles == null || migrationFiles.Length <= 0)
+                {
+                    _logger.Warn($"can not find components in project {selectedProject.FullName}");
+                    return;
+                }
+                MigrationUtils.WriteFiles(migrationFiles);
+                _logger.Info($"{message}");
             }
             catch (Exception ex)
             {
-                _logger.Error(ex.Message);
+                _logger.Error(ex.StackTrace);
                 return;
             }
-
-            _logger.Info($"build success:{selectedProject.FullName}");
-
-            string message = $"entitas component code generator success!";
-            var contextsMigration = new RdComponentsMigration();
-            contextsMigration.WorkingDirectory = Path.Combine(selectedProjectDir, contextsMigration.workingDirectory);
-            var migrationFiles = contextsMigration.Migrate(outPutPath);
-            if (migrationFiles == null || migrationFiles.Length <= 0)
-            {
-                _logger.Warn($"can not find components in project {selectedProject.FullName}");
-                return;
-            }
-            MigrationUtils.WriteFiles(migrationFiles);
-
-            _logger.Info($"{message}");
         }
 
     }

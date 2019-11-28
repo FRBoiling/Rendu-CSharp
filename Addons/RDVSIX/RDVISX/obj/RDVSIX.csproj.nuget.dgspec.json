@@ -68,6 +68,10 @@
       "frameworks": {
         "net461": {
           "dependencies": {
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "target": "Package",
+              "version": "[2.9.3, )"
+            },
             "Microsoft.VSSDK.BuildTools": {
               "target": "Package",
               "version": "[16.3.2099, )"

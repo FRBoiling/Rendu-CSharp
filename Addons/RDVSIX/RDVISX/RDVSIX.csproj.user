@@ -4,4 +4,10 @@
     <StartAction>Program</StartAction>
     <DeployTargetInstanceId />
   </PropertyGroup>
+  <PropertyGroup>
+    <ProjectView>ProjectFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>D:\GitHub\RenduEcs\Addons\RDVSIX\</ReferencePath>
+  </PropertyGroup>
 </Project>

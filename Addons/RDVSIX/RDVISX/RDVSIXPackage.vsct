@@ -72,14 +72,14 @@
         <Parent guid="guidRDVSIXPackageCmdSet" id="EntitasCodeGenerationGroup" />
         <Icon guid="guidImages1" id="bmpPic1" />
         <Strings>
-          <ButtonText>EntitasCodeGeneration</ButtonText>
+          <ButtonText>EntitasCodeGenerator</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidRDVSIXPackageCmdSet" id="cmdidProtocolCodeGenerationCommand" priority="0x0100" type="Button">
         <Parent guid="guidRDVSIXPackageCmdSet" id="ProtocolCodeGenerationGroup" />
         <Icon guid="guidImages1" id="bmpPic1" />
         <Strings>
-          <ButtonText>ProtocolCodeGeneration</ButtonText>
+          <ButtonText>ProtocolCodeGenerator</ButtonText>
         </Strings>
       </Button>
     </Buttons>

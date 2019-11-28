@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using Entitas.Attributes;
 using Rd.CodeGeneration;
+using Rd.Logging;
 using Rd.Migration;
 using Rd.Plugins.Component;
 using Rd.Plugins.Component.CodeGenerators;
@@ -27,20 +29,21 @@ namespace Rd.CodeFileGeneration
 
         public string WorkingDirectory = string.Empty;
 
+        private readonly static Logger _logger = fabl.GetLogger(typeof(RdComponentsMigration));
+
         public MigrationFile[] Migrate(string path)
         {
             if (string.IsNullOrEmpty(WorkingDirectory))
             {
                 return null;
             }
-            var assembly = RdDllLoad.GetComponentsAssembly(path, RdDllLoad.DLLNAME1);
-            assembly = RdDllLoad.GetComponentsAssembly(path, RdDllLoad.DLLNAME2);
-            assembly = RdDllLoad.GetComponentsAssembly(path, RdDllLoad.DLLNAME);
 
+            var dllPath = Path.Combine(path, $"{RdDllLoad.DLLNAME}{RdDllLoad.DLLSUFFIX}");
+            var assembly = Assembly.LoadFrom(dllPath);
             var contextNameList = new List<string>();
             var componentsList = new List<Type>();
-
-            foreach (var type in assembly.GetTypes())
+            var types = assembly.GetTypes();
+            foreach (var type in types)
             {
                 var attributes = type.GetCustomAttributes(typeof(ContextAttribute), false);
 

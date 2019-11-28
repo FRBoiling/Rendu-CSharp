@@ -1,4 +1,5 @@
 ﻿using Rd.Logging;
+using System;
 using System.IO;
 using System.Reflection;
 
@@ -41,6 +42,17 @@ namespace Rd.CodeFileGeneration
             var assembly = Assembly.Load(dllBytes, pdbBytes);
             return assembly;
         }
+
+        public static Assembly LoadFileAssembly(string path, string dllName)
+        {
+            //            byte[] dllBytes = File.ReadAllBytes("./Server.Module.dll");
+            //            byte[] pdbBytes = File.ReadAllBytes("./Server.Module.pdb");
+            var dllPath = Path.Combine(path, $"{dllName}{DLLSUFFIX}");
+            var assembly = Assembly.LoadFile(dllPath);
+            return assembly;
+        }
+
+
 
         public static ErrorCode CheckFileExist(string path,out FileInfo fileInfo)
         {

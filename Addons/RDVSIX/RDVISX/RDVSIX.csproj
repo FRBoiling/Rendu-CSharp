@@ -20,8 +20,8 @@
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <UseCodebase>true</UseCodebase>
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
-    <IncludeDebugSymbolsInVSIXContainer>true</IncludeDebugSymbolsInVSIXContainer>
-    <IncludeDebugSymbolsInLocalVSIXDeployment>true</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
     <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
     <CopyOutputSymbolsToOutputDirectory>true</CopyOutputSymbolsToOutputDirectory>
     <StartAction>Program</StartAction>
@@ -36,6 +36,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CopyVsixExtensionFiles>False</CopyVsixExtensionFiles>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -68,6 +69,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers">
+      <Version>2.9.3</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.SDK" Version="15.9.3" />
     <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="16.3.2099" />
   </ItemGroup>
@@ -77,6 +81,50 @@
     </VSCTCompile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Entitas.Attributes.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Entitas.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Rd.Analytics.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Rd.CodeFileGeneration.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Rd.CodeGeneration.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Rd.CodeGenerator.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Rd.Logging.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Rd.Migration.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Rd.Plugins.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Rd.Serialization.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Rd.Utils.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Resources\EntitasCodeGenerationCommand.png" />
     <Content Include="Resources\ProtocolCodeGenerationCommand.png" />
   </ItemGroup>
@@ -84,6 +132,10 @@
     <ProjectReference Include="..\..\..\RdFixtures\Analytics\Rd.Analytics.csproj">
       <Project>{80501a0f-496b-4b88-a139-8510d02790ee}</Project>
       <Name>Rd.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RdFixtures\CodeFileGeneration\Rd.CodeFileGeneration.csproj">
+      <Project>{5a4dead6-604b-4239-b165-e2c390c61cb7}</Project>
+      <Name>Rd.CodeFileGeneration</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\RdFixtures\CodeGeneration\CodeGeneration\Rd.CodeGeneration.csproj">
       <Project>{94280260-24ec-404c-8a09-50586f0b7368}</Project>
@@ -104,10 +156,6 @@
     <ProjectReference Include="..\..\..\RdFixtures\Logging\Rd.Logging.csproj">
       <Project>{a5171e7f-1510-47c9-a22e-64118004fa36}</Project>
       <Name>Rd.Logging</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\RdFixtures\CodeFileGeneration\Rd.CodeFileGeneration.csproj">
-      <Project>{5a4dead6-604b-4239-b165-e2c390c61cb7}</Project>
-      <Name>Rd.CodeFileGeneration</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\RdFixtures\Serialization\Rd.Serialization.csproj">
       <Project>{41d089b0-3748-47a2-8113-7e7ffafb4d9c}</Project>
