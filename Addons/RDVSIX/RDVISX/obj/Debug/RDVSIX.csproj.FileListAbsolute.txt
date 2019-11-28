@@ -42,15 +42,4 @@ D:\GitHub\RenduEcs\Addons\RDVSIX\RDVISX\obj\Debug\RDVSIX.latest.pkgdef
 D:\GitHub\RenduEcs\Addons\RDVSIX\RDVISX\obj\Debug\extension.vsixmanifest
 D:\GitHub\RenduEcs\Addons\RDVSIX\RDVISX\obj\Debug\files.json
 D:\GitHub\RenduEcs\Addons\RDVSIX\RDVISX\obj\Debug\createTemplateManifests.cache
-D:\GitHub\RenduEcs\Addons\RDVSIX\Bin\Entitas.Attributes.dll
-D:\GitHub\RenduEcs\Addons\RDVSIX\Bin\Entitas.dll
-D:\GitHub\RenduEcs\Addons\RDVSIX\Bin\Rd.Analytics.dll
-D:\GitHub\RenduEcs\Addons\RDVSIX\Bin\Rd.CodeFileGeneration.dll
-D:\GitHub\RenduEcs\Addons\RDVSIX\Bin\Rd.CodeGeneration.dll
-D:\GitHub\RenduEcs\Addons\RDVSIX\Bin\Rd.CodeGenerator.dll
-D:\GitHub\RenduEcs\Addons\RDVSIX\Bin\Rd.Logging.dll
-D:\GitHub\RenduEcs\Addons\RDVSIX\Bin\Rd.Migration.dll
-D:\GitHub\RenduEcs\Addons\RDVSIX\Bin\Rd.Serialization.dll
-D:\GitHub\RenduEcs\Addons\RDVSIX\Bin\Rd.Utils.dll
-D:\GitHub\RenduEcs\Addons\RDVSIX\Bin\Rd.Plugins.dll
 D:\GitHub\RenduEcs\Addons\RDVSIX\RDVISX\obj\Debug\_EmptyResource.resources.original

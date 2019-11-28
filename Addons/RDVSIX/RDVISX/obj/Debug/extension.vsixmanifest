@@ -15,16 +15,5 @@
   </Prerequisites>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.VsPackage" Path="RDVSIX.pkgdef" />
-    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Entitas.dll" AssemblyName="Entitas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Entitas.Attributes.dll" AssemblyName="Entitas.Attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Rd.Analytics.dll" AssemblyName="Rd.Analytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Rd.CodeFileGeneration.dll" AssemblyName="Rd.CodeFileGeneration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Rd.CodeGeneration.dll" AssemblyName="Rd.CodeGeneration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Rd.CodeGenerator.dll" AssemblyName="Rd.CodeGenerator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Rd.Logging.dll" AssemblyName="Rd.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Rd.Migration.dll" AssemblyName="Rd.Migration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Rd.Serialization.dll" AssemblyName="Rd.Serialization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Rd.Utils.dll" AssemblyName="Rd.Utils, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Asset Type="Microsoft.VisualStudio.Assembly" Path="Rd.Plugins.dll" AssemblyName="Rd.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
   </Assets>
 </PackageManifest>
