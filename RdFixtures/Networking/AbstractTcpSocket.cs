@@ -24,10 +24,10 @@ namespace Rd.Networking
         {
             var str = keyForEndPoint((IPEndPoint) socket.RemoteEndPoint);
             _logger.Debug("Sending " + buffer.Length + " bytes via " + str);
-            socket.BeginSend(buffer, 0, buffer.Length, SocketFlags.None, onSent, socket);
+            socket.BeginSend(buffer, 0, buffer.Length, SocketFlags.None, onSend, socket);
         }
 
-        private void onSent(IAsyncResult ar)
+        private void onSend(IAsyncResult ar)
         {
             var asyncState = (Socket) ar.AsyncState;
             try
