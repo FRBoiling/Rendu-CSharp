@@ -162,14 +162,15 @@ namespace RDVSIX
 
                 if (migrationFiles == null || migrationFiles.Length <= 0)
                 {
+                    _logger.Info("generator fail!");
+                    _logger.Info($"已用时间:{(DateTime.Now - startTime).ToString()}");
+                    _logger.Info("========== 已完成 ==========");
                     return;
                 }
                 MigrationUtils.WriteFiles(migrationFiles);
                 _logger.Info("generator success!");
-
                 _logger.Info($"已用时间:{(DateTime.Now - startTime).ToString()}");
                 _logger.Info("========== 已完成 ==========");
-
                 //var exePath = Path.Combine(outPutPath, "CodeGenerator.exe");
                 //RunExeByProcess(exePath,$"entitas {outPutPath} {selectedProjectDir}");
                 //_logger.Info($"build success!");

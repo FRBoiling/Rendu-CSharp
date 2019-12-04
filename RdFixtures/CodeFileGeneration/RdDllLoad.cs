@@ -28,13 +28,13 @@ namespace Rd.CodeFileGeneration
             if (!dllFileInfo.Exists)
             {
                 _logger.Warn($"can not find file {dllFileInfo.FullName}");
-                return Assembly.GetExecutingAssembly();
+                return null;
             }
             FileInfo pdbFileInfo = new FileInfo(pdbPath);
             if (!pdbFileInfo.Exists)
             {
                 _logger.Warn($"can not find file {pdbFileInfo.FullName}");
-                return Assembly.GetExecutingAssembly();
+                return null;
             }
             var dllBytes = File.ReadAllBytes(dllPath);
             var pdbBytes = File.ReadAllBytes(pdbPath);

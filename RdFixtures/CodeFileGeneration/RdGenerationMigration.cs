@@ -40,6 +40,10 @@ namespace Rd.CodeFileGeneration
             }
 
             var assembly = RdDllLoad.GetDllAssembly(path, RdDllLoad.DLLNAME);
+            if (assembly==null)
+            {
+                return null;
+            }
             var contextNameList = new List<string>();
             var componentsList = new List<Type>();
             var types = assembly.GetTypes();
