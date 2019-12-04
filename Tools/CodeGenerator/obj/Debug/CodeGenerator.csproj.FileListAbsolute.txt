@@ -128,3 +128,5 @@ D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Rd.Utils.pdb
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Entitas.Attributes.pdb
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Entitas.pdb
 D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.csproj.CopyComplete
+D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\System.CodeDom.dll
+D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\System.CodeDom.xml

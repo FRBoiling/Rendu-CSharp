@@ -17,6 +17,14 @@ namespace RDVSIX
         private AsyncPackage package;
         DTE2 _dte;
 
+        // vs"输出"窗口标题
+        string winCaption = "输出";
+        // 输出窗口中的一个自定义项的标题
+        string outTitle = "Rendu插件-消息";
+        // 输出窗口添加一个自定义输出项 激活并输出信息
+        EnvDTE.OutputWindowPane webPane = null;
+
+
         private VISXLogger()
         {
             fabl.AddAppender(OnLog);
@@ -24,6 +32,8 @@ namespace RDVSIX
 
         public void Init(AsyncPackage package)
         {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
             this.package = package;
             IVsMonitorSelection monitorSelection = (IVsMonitorSelection)Package.GetGlobalService(typeof(SVsShellMonitorSelection));
             monitorSelection.GetCurrentSelection(out var hierarchyPtr, out var projectItemId, out var mis, out var selectionContainerPtr);
@@ -35,19 +45,6 @@ namespace RDVSIX
 
             var selectedProject = hierarchy.GetSelectedProject(projectItemId);
             _dte = (DTE2)selectedProject.DTE;
-        }
-
-        public void OnLog(Logger logger, LogLevel logLevel, string message)
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-
-
-            // vs"输出"窗口标题
-            string winCaption = "输出";
-
-            // 输出窗口中的一个自定义项的标题
-            string outTitle = "Rendu插件-消息";
 
             // 激活输出窗口
             if (_dte.ActiveWindow.Caption != winCaption)
@@ -55,11 +52,7 @@ namespace RDVSIX
                 _dte.Windows.Item(winCaption).Activate();
             }
 
-
-            // 输出窗口添加一个自定义输出项 激活并输出信息
-            EnvDTE.OutputWindowPane webPane = null;
-
-
+   
             foreach (EnvDTE.OutputWindowPane item in _dte.ToolWindows.OutputWindow.OutputWindowPanes)
             {
                 if (item.Name == outTitle)
@@ -69,22 +62,33 @@ namespace RDVSIX
                 }
             }
 
-
             // 如果该窗口已有,则继续使用之,否则增加
             if (webPane == null)
             {
                 webPane = _dte.ToolWindows.OutputWindow.OutputWindowPanes.Add(outTitle);
             }
 
+        }
 
+        public void Clear()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+            // 如果该窗口已有,则继续使用之,否则增加
+            if (webPane == null)
+            {
+                webPane = _dte.ToolWindows.OutputWindow.OutputWindowPanes.Add(outTitle);
+            }
             // 清空消息 清空以前
-            // if (clear)
-            // webPane.Clear();
-
+            webPane.Clear();
             // 激活
             webPane.Activate();
+        }
 
-
+        public void OnLog(Logger logger, LogLevel logLevel, string message)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+            // 激活
+            webPane.Activate();
             // 输出消息 msg
             webPane.OutputString($"{message}\n");
 

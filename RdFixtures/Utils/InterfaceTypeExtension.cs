@@ -10,5 +10,15 @@ namespace Rd.Utils
                 return type.GetInterface(typeof(T).FullName) != null;
             return false;
         }
+
+        public static bool ImplementsInterface(this Type type,string interfaceName)
+        {
+            if (!type.IsInterface)
+            {
+                var iInterface = type.GetInterface(interfaceName);
+                return iInterface != null;
+            }
+            return false;
+        }
     }
 }

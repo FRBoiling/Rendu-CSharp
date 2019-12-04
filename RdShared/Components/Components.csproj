@@ -1,20 +1,34 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\Bin</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\Bin</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ILRepack.MSBuild.Task" Version="2.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ThirdParty\Entitas\Attributes\Entitas.Attributes.csproj" />
+    <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas\Entitas.csproj" />
+    <ProjectReference Include="..\Consts\Consts.csproj" />
+  </ItemGroup>
+
+  <Target Name="ILRepack" AfterTargets="Build">
+
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+      <WorkingDirectory>$(OutputPath)</WorkingDirectory>
     </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <OutputPath>..\Bin</OutputPath>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <OutputPath>..\Bin</OutputPath>
-    </PropertyGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\..\ThirdParty\Entitas\Attributes\Entitas.Attributes.csproj" />
-      <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas\Entitas.csproj" />
-    </ItemGroup>
+    <ILRepack OutputType="$(OutputType)" MainAssembly="$(AssemblyName).dll" OutputAssembly="$(AssemblyName)_bak.dll" InputAssemblies="$(WorkingDirectory)\*.dll" WilcardInputAssemblies="true" WorkingDirectory="$(WorkingDirectory)" />
+  </Target>
 
 </Project>

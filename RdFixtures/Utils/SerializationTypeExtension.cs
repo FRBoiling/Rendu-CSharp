@@ -153,7 +153,12 @@ namespace Rd.Utils
                 return type.GetElementType().ToCompilableString() + "[" + new string(',', type.GetArrayRank() - 1) + "]";
             if (type.IsNested)
                 return type.FullName.Replace('+', '.');
-            return type.FullName;
+            else
+            {
+                Regex regex = new Regex(@"<[^>]+>|</[^>]+>"); 
+                var fullName = regex.Replace(type.FullName, "");
+                return fullName;
+            }
         }
 
         public static Type ToType(this string typeString)

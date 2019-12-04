@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
+using Entitas;
 using Entitas.Attributes;
 using Rd.CodeGeneration;
 using Rd.Logging;
@@ -13,6 +13,7 @@ using Rd.Plugins.Context;
 using Rd.Plugins.Context.CodeGenerators;
 using Rd.Plugins.Context.DataProviders;
 using Rd.Plugins.Entity.CodeGenerators;
+using Rd.Utils;
 
 namespace Rd.CodeFileGeneration
 {
@@ -38,24 +39,42 @@ namespace Rd.CodeFileGeneration
                 return null;
             }
 
-            var dllPath = Path.Combine(path, $"{RdDllLoad.DLLNAME}{RdDllLoad.DLLSUFFIX}");
-            var assembly = Assembly.LoadFrom(dllPath);
+            var assembly = RdDllLoad.GetDllAssembly(path, RdDllLoad.DLLNAME);
             var contextNameList = new List<string>();
             var componentsList = new List<Type>();
             var types = assembly.GetTypes();
             foreach (var type in types)
             {
-                var attributes = type.GetCustomAttributes(typeof(ContextAttribute), false);
-
-                foreach (var attribute in attributes)
-                {
-                    var contextAttribute = (ContextAttribute)attribute;
-                    if (!contextNameList.Contains(contextAttribute.contextName)) contextNameList.Add(contextAttribute.contextName);
+                //var attributes = type.GetCustomAttributes(typeof(ContextAttribute), false);
+                //foreach (var attribute in attributes)
+                //{
+                //    var contextAttribute = (ContextAttribute)attribute;
+                //    if (!contextNameList.Contains(contextAttribute.contextName)) contextNameList.Add(contextAttribute.contextName);
+                //}
+                var attributesData = type.GetCustomAttributesData();
+                foreach (var attribute in attributesData)
+                { 
+                    if (attribute.AttributeType.Name != typeof(ContextAttribute).Name)
+                    {
+                        continue;
+                    }
+                    foreach (var item in attribute.ConstructorArguments)
+                    {
+                        var contextName =item.Value as string;
+                        if (contextName == null)
+                        {
+                            continue;
+                        }
+                        if (!contextNameList.Contains(contextName)) contextNameList.Add(contextName);
+                    }
                 }
 
-                var iInterface = type.GetInterface("Entitas.IComponent");
-                if (iInterface == null) continue;
 
+                if (!type.ImplementsInterface(typeof(IComponent).Name))
+                {
+                    continue;
+                }
+                
                 if (!componentsList.Contains(type)) componentsList.Add(type);
             }
 
@@ -99,21 +118,24 @@ namespace Rd.CodeFileGeneration
             var entityFile = entityGenerator.Generate(contextDataArr);
             codeGenFiles.AddRange(entityFile);
             /////
-            var componentsPreferences = new RdPreferences($"{contextsPreferencesStr}{"\n"}{COMPONENT_PREFERENCES}");
+            var componentsPreferences = new RdPreferences($"{contextsPreferencesStr}{"\n\t"}{COMPONENT_PREFERENCES}");
 
             var componentDataProvider = new ComponentDataProvider(componentsList.ToArray());
             componentDataProvider.Configure(componentsPreferences);
             var componentDataArr = (ComponentData[])componentDataProvider.GetData();
 
             var componentEntityApiGenerator = new ComponentEntityApiGenerator();
+            componentEntityApiGenerator.Configure(componentsPreferences);
             var componentsFile = componentEntityApiGenerator.Generate(componentDataArr);
             codeGenFiles.AddRange(componentsFile);
 
             var componentMatcherApiGenerator = new ComponentMatcherApiGenerator();
+            componentMatcherApiGenerator.Configure(componentsPreferences);
             componentsFile = componentMatcherApiGenerator.Generate(componentDataArr);
             codeGenFiles.AddRange(componentsFile);
 
             var componentLookupGenerator = new ComponentLookupGenerator();
+            componentLookupGenerator.Configure(componentsPreferences);
             var componentLookupFile = componentLookupGenerator.Generate(componentDataArr);
             codeGenFiles.AddRange(componentLookupFile);
 
@@ -128,6 +150,11 @@ namespace Rd.CodeFileGeneration
             }
 
             return migratedFiles.ToArray();
+        }
+
+        public void SetLoadName(string assemblyName)
+        {
+            RdDllLoad.SetLoadName(assemblyName);
         }
     }
 }

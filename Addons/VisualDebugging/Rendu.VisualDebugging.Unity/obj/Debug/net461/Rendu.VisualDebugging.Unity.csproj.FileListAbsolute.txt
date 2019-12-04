@@ -1,8 +1,8 @@
 D:\GitHub\RenduEcs\Addons\VisualDebugging\Bin\net461\Rendu.VisualDebugging.Unity.dll
 D:\GitHub\RenduEcs\Addons\VisualDebugging\Bin\net461\Rendu.VisualDebugging.Unity.pdb
-D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.Unity\obj\Debug\net461\Rendu.VisualDebugging.Unity.csprojAssemblyReference.cache
 D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.Unity\obj\Debug\net461\Rendu.VisualDebugging.Unity.AssemblyInfoInputs.cache
 D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.Unity\obj\Debug\net461\Rendu.VisualDebugging.Unity.AssemblyInfo.cs
 D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.Unity\obj\Debug\net461\Rendu.VisualDebugging.Unity.csproj.CopyComplete
 D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.Unity\obj\Debug\net461\Rendu.VisualDebugging.Unity.dll
 D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.Unity\obj\Debug\net461\Rendu.VisualDebugging.Unity.pdb
+D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.Unity\obj\Debug\net461\Rendu.VisualDebugging.Unity.csprojAssemblyReference.cache

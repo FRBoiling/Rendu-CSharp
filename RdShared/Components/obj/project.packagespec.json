@@ -19,6 +19,9 @@
     "frameworks": {
       "netstandard2.0": {
         "projectReferences": {
+          "D:\\GitHub\\RenduEcs\\RdShared\\Consts\\Consts.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdShared\\Consts\\Consts.csproj"
+          },
           "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj": {
             "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj"
           },
@@ -37,6 +40,10 @@
   "frameworks": {
     "netstandard2.0": {
       "dependencies": {
+        "ILRepack.MSBuild.Task": {
+          "target": "Package",
+          "version": "[2.0.13, )"
+        },
         "NETStandard.Library": {
           "suppressParent": "All",
           "target": "Package",

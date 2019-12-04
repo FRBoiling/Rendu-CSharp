@@ -12,15 +12,15 @@
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
       <OutputPath>..\Bin\</OutputPath>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.CodeDom" Version="4.6.0" />
+    </ItemGroup>
     
     <ItemGroup>
       <ProjectReference Include="..\..\..\ThirdParty\Entitas\Attributes\Entitas.Attributes.csproj" />
       <ProjectReference Include="..\..\..\ThirdParty\Entitas\Entitas\Entitas.csproj" />
       <ProjectReference Include="..\CodeGenerator\Rd.CodeGenerator.csproj" />
-    </ItemGroup>
-    
-    <ItemGroup>
-      <PackageReference Include="System.CodeDom" Version="4.7.0-preview2.19523.17" />
     </ItemGroup>
     
 </Project>

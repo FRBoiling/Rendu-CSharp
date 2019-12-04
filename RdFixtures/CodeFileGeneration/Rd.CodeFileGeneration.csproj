@@ -14,6 +14,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\ThirdParty\Entitas\Attributes\Entitas.Attributes.csproj" />
+      <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas\Entitas.csproj" />
       <ProjectReference Include="..\CodeGeneration\CodeGenerator\Rd.CodeGenerator.csproj" />
       <ProjectReference Include="..\CodeGeneration\Migration\Rd.Migration.csproj" />
       <ProjectReference Include="..\CodeGeneration\Plugins\Rd.Plugins.csproj" />

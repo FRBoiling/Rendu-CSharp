@@ -21,6 +21,39 @@
           "UnitTestProject.dll": {}
         }
       },
+      "ILRepack.MSBuild.Task/2.0.13": {
+        "dependencies": {
+          "Microsoft.Build.Framework": "15.9.20",
+          "Microsoft.Build.Utilities.Core": "15.9.20"
+        }
+      },
+      "Microsoft.Build.Framework/15.9.20": {
+        "dependencies": {
+          "System.Runtime.Serialization.Primitives": "4.1.1",
+          "System.Threading.Thread": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Build.Framework.dll": {
+            "assemblyVersion": "15.1.0.0",
+            "fileVersion": "15.9.20.62856"
+          }
+        }
+      },
+      "Microsoft.Build.Utilities.Core/15.9.20": {
+        "dependencies": {
+          "Microsoft.Build.Framework": "15.9.20",
+          "Microsoft.Win32.Registry": "4.3.0",
+          "System.Collections.Immutable": "1.5.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.3.0",
+          "System.Text.Encoding.CodePages": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Build.Utilities.Core.dll": {
+            "assemblyVersion": "15.1.0.0",
+            "fileVersion": "15.9.20.62856"
+          }
+        }
+      },
       "Microsoft.CodeCoverage/16.2.0": {
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
@@ -406,11 +439,11 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.CodeDom/4.7.0-preview2.19523.17": {
+      "System.CodeDom/4.6.0": {
         "runtime": {
           "lib/netstandard2.0/System.CodeDom.dll": {
-            "assemblyVersion": "4.0.3.0",
-            "fileVersion": "4.700.19.52317"
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.700.19.46214"
           }
         }
       },
@@ -433,18 +466,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "System.Collections.Immutable/1.2.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0"
-        }
-      },
+      "System.Collections.Immutable/1.5.0": {},
       "System.Collections.NonGeneric/4.3.0": {
         "dependencies": {
           "System.Diagnostics.Debug": "4.3.0",
@@ -728,7 +750,7 @@
       "System.Reflection.Metadata/1.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
-          "System.Collections.Immutable": "1.2.0",
+          "System.Collections.Immutable": "1.5.0",
           "System.Diagnostics.Debug": "4.3.0",
           "System.IO": "4.3.0",
           "System.Linq": "4.3.0",
@@ -815,6 +837,22 @@
       "System.Text.Encoding/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Text.Encoding.CodePages/4.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.6.25519.3"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.6.25519.3"
+          }
         }
       },
       "System.Text.Encoding.Extensions/4.3.0": {
@@ -960,6 +998,22 @@
           }
         }
       },
+      "Components/1.0.0": {
+        "dependencies": {
+          "Consts": "1.0.0",
+          "Entitas": "1.0.0",
+          "Entitas.Attributes": "1.0.0",
+          "ILRepack.MSBuild.Task": "2.0.13"
+        },
+        "runtime": {
+          "Components.dll": {}
+        }
+      },
+      "Consts/1.0.0": {
+        "runtime": {
+          "Consts.dll": {}
+        }
+      },
       "Entitas/1.0.0": {
         "runtime": {
           "Entitas.dll": {}
@@ -980,6 +1034,8 @@
       },
       "Rd.CodeFileGeneration/1.0.0": {
         "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.Attributes": "1.0.0",
           "Rd.CodeGenerator": "1.0.0",
           "Rd.Logging": "1.0.0",
           "Rd.Migration": "1.0.0",
@@ -1022,7 +1078,7 @@
           "Entitas": "1.0.0",
           "Entitas.Attributes": "1.0.0",
           "Rd.CodeGenerator": "1.0.0",
-          "System.CodeDom": "4.7.0-preview2.19523.17"
+          "System.CodeDom": "4.6.0"
         },
         "runtime": {
           "Rd.Plugins.dll": {}
@@ -1060,6 +1116,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "ILRepack.MSBuild.Task/2.0.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gcgC1yjEiaATEfPxGIJ6UzaEAXAGOpvfnyaMRUxHzrybiuPfO6I6jaH5+I6uXqN+FfsuyFKhGFgEzVXg94vptA==",
+      "path": "ilrepack.msbuild.task/2.0.13",
+      "hashPath": "ilrepack.msbuild.task.2.0.13.nupkg.sha512"
+    },
+    "Microsoft.Build.Framework/15.9.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j7KrBtZrD+YQPAu+8K1a0J7HgDf0X18bSnqu5llKXxHZ5Cb1t3eSlEtZPUDFqsv3RCBzByggjIBaxrmdvHxLqA==",
+      "path": "microsoft.build.framework/15.9.20",
+      "hashPath": "microsoft.build.framework.15.9.20.nupkg.sha512"
+    },
+    "Microsoft.Build.Utilities.Core/15.9.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-s5F2IDARivpFJ+RiwOBnCt6Higu88nhDYfaUWwJ2ecBSf83HZsc3E/EjyQIs+4fPAeS5IZsL2ak7gOdxEXubSA==",
+      "path": "microsoft.build.utilities.core/15.9.20",
+      "hashPath": "microsoft.build.utilities.core.15.9.20.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/16.2.0": {
       "type": "package",
@@ -1152,12 +1229,12 @@
       "path": "system.appcontext/4.1.0",
       "hashPath": "system.appcontext.4.1.0.nupkg.sha512"
     },
-    "System.CodeDom/4.7.0-preview2.19523.17": {
+    "System.CodeDom/4.6.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-RpcxhO5BxNzn5nUstmB+A1OJxbGAQBEo+yLHZOntRylsdaFUn6XBS2C3Vum6RTPsoxujWFnf5gffZc1WKPdkWA==",
-      "path": "system.codedom/4.7.0-preview2.19523.17",
-      "hashPath": "system.codedom.4.7.0-preview2.19523.17.nupkg.sha512"
+      "sha512": "sha512-ArWGZOxPhOaJUd4YgvbTxGZDbVDJHPAOQNiJIpbRDPW6v2NT5xkallQv1zpu8Rwwb5Z3iZ1jwWA4gSQuWgR+jw==",
+      "path": "system.codedom/4.6.0",
+      "hashPath": "system.codedom.4.6.0.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -1173,12 +1250,12 @@
       "path": "system.collections.concurrent/4.0.12",
       "hashPath": "system.collections.concurrent.4.0.12.nupkg.sha512"
     },
-    "System.Collections.Immutable/1.2.0": {
+    "System.Collections.Immutable/1.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Cma8cBW6di16ZLibL8LYQ+cLjGzoKxpOTu/faZfDcx94ZjAGq6Nv5RO7+T1YZXqEXTZP9rt1wLVEONVpURtUqw==",
-      "path": "system.collections.immutable/1.2.0",
-      "hashPath": "system.collections.immutable.1.2.0.nupkg.sha512"
+      "sha512": "sha512-EXKiDFsChZW0RjrZ4FYHu9aW6+P4MCgEDCklsVseRfhoO0F+dXeMSsMRAlVXIo06kGJ/zv+2w1a2uc2+kxxSaQ==",
+      "path": "system.collections.immutable/1.5.0",
+      "hashPath": "system.collections.immutable.1.5.0.nupkg.sha512"
     },
     "System.Collections.NonGeneric/4.3.0": {
       "type": "package",
@@ -1460,6 +1537,13 @@
       "path": "system.text.encoding/4.3.0",
       "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
     },
+    "System.Text.Encoding.CodePages/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A==",
+      "path": "system.text.encoding.codepages/4.4.0",
+      "hashPath": "system.text.encoding.codepages.4.4.0.nupkg.sha512"
+    },
     "System.Text.Encoding.Extensions/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1550,6 +1634,16 @@
       "sha512": "sha512-A/uxsWi/Ifzkmd4ArTLISMbfFs6XpRPsXZonrIqyTY70xi8t+mDtvSM5Os0RqyRDobjMBwIDHDL4NOIbkDwf7A==",
       "path": "system.xml.xpath.xmldocument/4.3.0",
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "Components/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Consts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Entitas/1.0.0": {
       "type": "project",

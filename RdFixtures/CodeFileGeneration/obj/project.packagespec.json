@@ -30,6 +30,12 @@
           },
           "D:\\GitHub\\RenduEcs\\RdFixtures\\Logging\\Rd.Logging.csproj": {
             "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Logging\\Rd.Logging.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas\\Entitas.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas\\Entitas.csproj"
           }
         }
       }

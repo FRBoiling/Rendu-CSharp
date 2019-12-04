@@ -287,7 +287,6 @@
           </e>
         </e>
       </e>
-      <e p="Bin" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="RdClient" t="Include" />
       <e p="RdFixtures" t="Include">
@@ -560,7 +559,14 @@
       <e p="RdShared" t="Include">
         <e p="Bin" t="ExcludeRecursive" />
         <e p="Components" t="IncludeRecursive">
+          <e p="App" t="Include">
+            <e p="InfoComponent.cs" t="Include" />
+          </e>
           <e p="Components.csproj" t="IncludeRecursive" />
+          <e p="Components.snk" t="Include" />
+          <e p="Network" t="Include">
+            <e p="TcpComponent.cs" t="Include" />
+          </e>
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
               <e p="netstandard2.0" t="Include">
@@ -568,10 +574,22 @@
               </e>
             </e>
           </e>
-          <e p="ServerComponent.cs" t="Include" />
+        </e>
+        <e p="Consts" t="IncludeRecursive">
+          <e p="AppType.cs" t="Include" />
+          <e p="Bin" t="ExcludeRecursive" />
+          <e p="Class1.cs" t="Include" />
+          <e p="Consts.csproj" t="IncludeRecursive" />
+          <e p="Consts.snk" t="Include" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Consts.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
         </e>
         <e p="Generated" t="IncludeRecursive">
-          <e p="Contexts.cs" t="Include" />
           <e p="Generated.csproj" t="IncludeRecursive" />
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
@@ -579,16 +597,6 @@
                 <e p="Generated.AssemblyInfo.cs" t="Include" />
               </e>
             </e>
-          </e>
-          <e p="Server" t="Include">
-            <e p="Components" t="Include">
-              <e p="ServerServerComponent.cs" t="Include" />
-            </e>
-            <e p="ServerAttribute.cs" t="Include" />
-            <e p="ServerComponentsLookup.cs" t="Include" />
-            <e p="ServerContext.cs" t="Include" />
-            <e p="ServerEntity.cs" t="Include" />
-            <e p="ServerMatcher.cs" t="Include" />
           </e>
         </e>
         <e p="Systems" t="IncludeRecursive">
@@ -615,6 +623,7 @@
             <e p="CustomEntityIndexAttribute.cs" t="Include" />
             <e p="DontGenerateAttribute.cs" t="Include" />
             <e p="Entitas.Attributes.csproj" t="IncludeRecursive" />
+            <e p="Entitas.Attributes.snk" t="Include" />
             <e p="EntityIndex" t="Include">
               <e p="AbstractEntityIndexAttribute.cs" t="Include" />
               <e p="EntityIndexAttribute.cs" t="Include" />
@@ -656,6 +665,7 @@
             </e>
             <e p="ContextInfo.cs" t="Include" />
             <e p="Entitas.csproj" t="IncludeRecursive" />
+            <e p="Entitas.snk" t="Include" />
             <e p="EntitasException.cs" t="Include" />
             <e p="EntitasResources.cs" t="Include" />
             <e p="Entity" t="Include">
@@ -899,15 +909,17 @@
       </e>
       <e p="Tools" t="Include">
         <e p="CodeGenerator" t="IncludeRecursive">
+          <e p="App.config" t="Include" />
+          <e p="Bin" t="ExcludeRecursive" />
           <e p="CodeGenerator.csproj" t="IncludeRecursive" />
-          <e p="obj" t="ExcludeRecursive">
-            <e p="Debug" t="Include">
-              <e p="netstandard2.0" t="Include">
-                <e p="CodeGenerator.AssemblyInfo.cs" t="Include" />
-              </e>
-            </e>
-          </e>
+          <e p="LoadResoureDll.cs" t="Include" />
+          <e p="obj" t="ExcludeRecursive" />
           <e p="Program.cs" t="Include" />
+          <e p="Properties" t="Include">
+            <e p="AssemblyInfo.cs" t="Include" />
+            <e p="Resources.Designer.cs" t="Include" />
+            <e p="Resources.resx" t="Include" />
+          </e>
         </e>
       </e>
       <e p="UnitTests" t="Include">

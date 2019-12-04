@@ -25,7 +25,7 @@
       <ProjectReference Include="..\..\RdFixtures\CodeFileGeneration\Rd.CodeFileGeneration.csproj" />
       <ProjectReference Include="..\..\RdFixtures\CodeGeneration\Migration\Rd.Migration.csproj" />
       <ProjectReference Include="..\..\RdFixtures\CodeGeneration\Plugins\Rd.Plugins.csproj" />
-      <ProjectReference Include="..\..\Shared\Components\Components.csproj" />
+      <ProjectReference Include="..\..\RdShared\Components\Components.csproj" />
       <ProjectReference Include="..\TestComponents\TestComponents.csproj" />
     </ItemGroup>
     

@@ -26,11 +26,31 @@ namespace Rd.Plugins.Component.DataProviders.ComponentDataProviders
 
         public string[] GetContextNames(Type type)
         {
-            return Attribute
-                .GetCustomAttributes(type)
-                .OfType<ContextAttribute>()
-                .Select(attr => attr.contextName)
-                .ToArray();
+            var contextNameList = new List<string>();
+            var attributesData = type.GetCustomAttributesData();
+            foreach (var attribute in attributesData)
+            {
+                if (attribute.AttributeType.Name != typeof(ContextAttribute).Name)
+                {
+                    continue;
+                }
+                foreach (var item in attribute.ConstructorArguments)
+                {
+                    var contextName = item.Value as string;
+                    if (contextName == null)
+                    {
+                        continue;
+                    }
+                    if (!contextNameList.Contains(contextName)) contextNameList.Add(contextName);
+                }
+            }
+            return contextNameList.ToArray();
+
+            //return Attribute
+            //    .GetCustomAttributes(type)
+            //    .OfType<ContextAttribute>()
+            //    .Select(attr => attr.contextName)
+            //    .ToArray();
         }
 
         public string[] GetContextNamesOrDefault(Type type)

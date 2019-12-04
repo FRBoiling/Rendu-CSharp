@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
+using Entitas;
 using Entitas.Attributes;
 using Entitas.Extensions;
 using Rd.CodeGeneration;
@@ -11,6 +11,7 @@ using Rd.Plugins.Configs;
 using Rd.Plugins.Data;
 using Rd.Serialization;
 using Rd.Utils;
+
 
 namespace Rd.Plugins.Component.DataProviders
 {
@@ -78,13 +79,13 @@ namespace Rd.Plugins.Component.DataProviders
                             .GetTypes();
 
             var dataFromComponents = types
-                .Where(type => type.ImplementsInterface<IComponent>())
+                .Where(type => type.ImplementsInterface(typeof(IComponent).Name))
                 .Where(type => !type.IsAbstract)
                 .Select(createDataForComponent)
                 .ToArray();
 
             var dataFromNonComponents = types
-                .Where(type => !type.ImplementsInterface<IComponent>())
+                .Where(type => !type.ImplementsInterface(typeof(IComponent).Name))
                 .Where(type => !type.IsGenericType)
                 .Where(hasContexts)
                 .SelectMany(createDataForNonComponent)
@@ -153,7 +154,10 @@ namespace Rd.Plugins.Component.DataProviders
         private ComponentData createDataForComponent(Type type)
         {
             var data = new ComponentData();
-            foreach (var provider in _dataProviders) provider.Provide(type, data);
+            foreach (var provider in _dataProviders)
+            { 
+                provider.Provide(type, data);
+            }
 
             return data;
         }

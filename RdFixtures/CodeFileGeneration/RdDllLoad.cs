@@ -14,12 +14,11 @@ namespace Rd.CodeFileGeneration
             PDBError,
         }
         private readonly static Logger _logger = fabl.GetLogger(typeof (RdDllLoad));
-        public const string DLLNAME1 = "Entitas";
-        public const string DLLNAME2 = "Entitas.Attributes";
+
         public static string DLLNAME = "Components";
         public const string DLLSUFFIX = ".dll";
         public const string PDBSUFFIX = ".pdb";
-        public static Assembly GetComponentsAssembly(string path, string dllName)
+        public static Assembly GetDllAssembly(string path, string dllName)
         {
 //            byte[] dllBytes = File.ReadAllBytes("./Server.Module.dll");
 //            byte[] pdbBytes = File.ReadAllBytes("./Server.Module.pdb");
@@ -43,15 +42,14 @@ namespace Rd.CodeFileGeneration
             return assembly;
         }
 
-        public static Assembly LoadFileAssembly(string path, string dllName)
+        public static Assembly LoadAssembly(string path, string dllName)
         {
             //            byte[] dllBytes = File.ReadAllBytes("./Server.Module.dll");
             //            byte[] pdbBytes = File.ReadAllBytes("./Server.Module.pdb");
-            var dllPath = Path.Combine(path, $"{dllName}{DLLSUFFIX}");
-            var assembly = Assembly.LoadFile(dllPath);
+            var dllFile = Path.Combine(path, $"{dllName}{DLLSUFFIX}");
+            var assembly = Assembly.LoadFrom(dllFile);
             return assembly;
         }
-
 
 
         public static ErrorCode CheckFileExist(string path,out FileInfo fileInfo)
@@ -76,8 +74,9 @@ namespace Rd.CodeFileGeneration
             return ErrorCode.Success;
         }
 
-
-
-
+        public static void SetLoadName(string assemblyName)
+        {
+            DLLNAME = $"{assemblyName}_bak";
+        }
     }
 }

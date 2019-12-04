@@ -2,6 +2,48 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "ILRepack.MSBuild.Task/2.0.13": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Build.Framework": "15.9.20",
+          "Microsoft.Build.Utilities.Core": "15.9.20"
+        },
+        "build": {
+          "build/_._": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/_._": {}
+        }
+      },
+      "Microsoft.Build.Framework/15.9.20": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.Serialization.Primitives": "4.1.1",
+          "System.Threading.Thread": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Build.Framework.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Build.Framework.dll": {}
+        }
+      },
+      "Microsoft.Build.Utilities.Core/15.9.20": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Build.Framework": "15.9.20",
+          "Microsoft.Win32.Registry": "4.3.0",
+          "System.Collections.Immutable": "1.5.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.3.0",
+          "System.Text.Encoding.CodePages": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Build.Utilities.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Build.Utilities.Core.dll": {}
+        }
+      },
       "Microsoft.CodeCoverage/16.2.0": {
         "type": "package",
         "compile": {
@@ -539,7 +581,7 @@
           "System.Runtime.InteropServices": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/Microsoft.Win32.Registry.dll": {}
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {
@@ -657,7 +699,7 @@
           "lib/netstandard1.6/System.AppContext.dll": {}
         }
       },
-      "System.CodeDom/4.7.0-preview2.19523.17": {
+      "System.CodeDom/4.6.0": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.CodeDom.dll": {}
@@ -698,23 +740,13 @@
           "lib/netstandard1.3/System.Collections.Concurrent.dll": {}
         }
       },
-      "System.Collections.Immutable/1.2.0": {
+      "System.Collections.Immutable/1.5.0": {
         "type": "package",
-        "dependencies": {
-          "System.Collections": "4.0.11",
-          "System.Diagnostics.Debug": "4.0.11",
-          "System.Globalization": "4.0.11",
-          "System.Linq": "4.1.0",
-          "System.Resources.ResourceManager": "4.0.1",
-          "System.Runtime": "4.1.0",
-          "System.Runtime.Extensions": "4.1.0",
-          "System.Threading": "4.0.11"
-        },
         "compile": {
-          "lib/netstandard1.0/System.Collections.Immutable.dll": {}
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/System.Collections.Immutable.dll": {}
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
         }
       },
       "System.Collections.NonGeneric/4.3.0": {
@@ -1395,6 +1427,24 @@
           "ref/netstandard1.3/System.Text.Encoding.dll": {}
         }
       },
+      "System.Text.Encoding.CodePages/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Text.Encoding.Extensions/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1625,14 +1675,26 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Consts": "1.0.0",
           "Entitas": "1.0.0",
-          "Entitas.Attributes": "1.0.0"
+          "Entitas.Attributes": "1.0.0",
+          "ILRepack.MSBuild.Task": "2.0.13"
         },
         "compile": {
           "bin/placeholder/Components.dll": {}
         },
         "runtime": {
           "bin/placeholder/Components.dll": {}
+        }
+      },
+      "Consts/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Consts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Consts.dll": {}
         }
       },
       "Entitas/1.0.0": {
@@ -1672,6 +1734,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Entitas": "1.0.0",
+          "Entitas.Attributes": "1.0.0",
           "Rd.CodeGenerator": "1.0.0",
           "Rd.Logging": "1.0.0",
           "Rd.Migration": "1.0.0",
@@ -1739,7 +1803,7 @@
           "Entitas": "1.0.0",
           "Entitas.Attributes": "1.0.0",
           "Rd.CodeGenerator": "1.0.0",
-          "System.CodeDom": "4.7.0-preview2.19523.17"
+          "System.CodeDom": "4.6.0"
         },
         "compile": {
           "bin/placeholder/Rd.Plugins.dll": {}
@@ -1791,6 +1855,60 @@
     }
   },
   "libraries": {
+    "ILRepack.MSBuild.Task/2.0.13": {
+      "sha512": "gcgC1yjEiaATEfPxGIJ6UzaEAXAGOpvfnyaMRUxHzrybiuPfO6I6jaH5+I6uXqN+FfsuyFKhGFgEzVXg94vptA==",
+      "type": "package",
+      "path": "ilrepack.msbuild.task/2.0.13",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/ILRepack.MSBuild.Task.props",
+        "buildMultiTargeting/ILRepack.MSBuild.Task.props",
+        "ilrepack.msbuild.task.2.0.13.nupkg.sha512",
+        "ilrepack.msbuild.task.nuspec",
+        "tasks/net46/ILRepack.MSBuild.Task.dll",
+        "tasks/netcoreapp2.1/ILRepack.MSBuild.Task.dll",
+        "tasks/netstandard2.0/ILRepack.MSBuild.Task.dll",
+        "tools/ilrepack.exe"
+      ]
+    },
+    "Microsoft.Build.Framework/15.9.20": {
+      "sha512": "j7KrBtZrD+YQPAu+8K1a0J7HgDf0X18bSnqu5llKXxHZ5Cb1t3eSlEtZPUDFqsv3RCBzByggjIBaxrmdvHxLqA==",
+      "type": "package",
+      "path": "microsoft.build.framework/15.9.20",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net46/Microsoft.Build.Framework.dll",
+        "lib/net46/Microsoft.Build.Framework.pdb",
+        "lib/net46/Microsoft.Build.Framework.xml",
+        "lib/netstandard2.0/Microsoft.Build.Framework.dll",
+        "lib/netstandard2.0/Microsoft.Build.Framework.pdb",
+        "lib/netstandard2.0/Microsoft.Build.Framework.xml",
+        "microsoft.build.framework.15.9.20.nupkg.sha512",
+        "microsoft.build.framework.nuspec",
+        "notices/THIRDPARTYNOTICES.txt"
+      ]
+    },
+    "Microsoft.Build.Utilities.Core/15.9.20": {
+      "sha512": "s5F2IDARivpFJ+RiwOBnCt6Higu88nhDYfaUWwJ2ecBSf83HZsc3E/EjyQIs+4fPAeS5IZsL2ak7gOdxEXubSA==",
+      "type": "package",
+      "path": "microsoft.build.utilities.core/15.9.20",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net46/Microsoft.Build.Utilities.Core.dll",
+        "lib/net46/Microsoft.Build.Utilities.Core.pdb",
+        "lib/net46/Microsoft.Build.Utilities.Core.xml",
+        "lib/netstandard2.0/Microsoft.Build.Utilities.Core.dll",
+        "lib/netstandard2.0/Microsoft.Build.Utilities.Core.pdb",
+        "lib/netstandard2.0/Microsoft.Build.Utilities.Core.xml",
+        "microsoft.build.utilities.core.15.9.20.nupkg.sha512",
+        "microsoft.build.utilities.core.nuspec",
+        "notices/THIRDPARTYNOTICES.txt"
+      ]
+    },
     "Microsoft.CodeCoverage/16.2.0": {
       "sha512": "fKiUOhhMP3IN1qM2tDHPWzW4JRbriFkIPiIzKUwMWT+Q+80bycxkLLCvxmVFoeA7gvWegNbTUjaX7mL3MM9XKg==",
       "type": "package",
@@ -2820,10 +2938,10 @@
         "system.appcontext.nuspec"
       ]
     },
-    "System.CodeDom/4.7.0-preview2.19523.17": {
-      "sha512": "RpcxhO5BxNzn5nUstmB+A1OJxbGAQBEo+yLHZOntRylsdaFUn6XBS2C3Vum6RTPsoxujWFnf5gffZc1WKPdkWA==",
+    "System.CodeDom/4.6.0": {
+      "sha512": "ArWGZOxPhOaJUd4YgvbTxGZDbVDJHPAOQNiJIpbRDPW6v2NT5xkallQv1zpu8Rwwb5Z3iZ1jwWA4gSQuWgR+jw==",
       "type": "package",
-      "path": "system.codedom/4.7.0-preview2.19523.17",
+      "path": "system.codedom/4.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2837,7 +2955,7 @@
         "ref/net461/System.CodeDom.xml",
         "ref/netstandard2.0/System.CodeDom.dll",
         "ref/netstandard2.0/System.CodeDom.xml",
-        "system.codedom.4.7.0-preview2.19523.17.nupkg.sha512",
+        "system.codedom.4.6.0.nupkg.sha512",
         "system.codedom.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -2978,21 +3096,27 @@
         "system.collections.concurrent.nuspec"
       ]
     },
-    "System.Collections.Immutable/1.2.0": {
-      "sha512": "Cma8cBW6di16ZLibL8LYQ+cLjGzoKxpOTu/faZfDcx94ZjAGq6Nv5RO7+T1YZXqEXTZP9rt1wLVEONVpURtUqw==",
+    "System.Collections.Immutable/1.5.0": {
+      "sha512": "EXKiDFsChZW0RjrZ4FYHu9aW6+P4MCgEDCklsVseRfhoO0F+dXeMSsMRAlVXIo06kGJ/zv+2w1a2uc2+kxxSaQ==",
       "type": "package",
-      "path": "system.collections.immutable/1.2.0",
+      "path": "system.collections.immutable/1.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/System.Collections.Immutable.dll",
         "lib/netstandard1.0/System.Collections.Immutable.xml",
+        "lib/netstandard1.3/System.Collections.Immutable.dll",
+        "lib/netstandard1.3/System.Collections.Immutable.xml",
+        "lib/netstandard2.0/System.Collections.Immutable.dll",
+        "lib/netstandard2.0/System.Collections.Immutable.xml",
         "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll",
         "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.xml",
-        "system.collections.immutable.1.2.0.nupkg.sha512",
-        "system.collections.immutable.nuspec"
+        "system.collections.immutable.1.5.0.nupkg.sha512",
+        "system.collections.immutable.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Collections.NonGeneric/4.3.0": {
@@ -5205,6 +5329,54 @@
         "system.text.encoding.nuspec"
       ]
     },
+    "System.Text.Encoding.CodePages/4.4.0": {
+      "sha512": "6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A==",
+      "type": "package",
+      "path": "system.text.encoding.codepages/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Text.Encoding.CodePages.dll",
+        "lib/net461/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "ref/netstandard1.3/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/de/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/es/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/fr/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/it/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/ja/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/ko/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/ru/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/zh-hans/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/zh-hant/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "ref/netstandard2.0/System.Text.Encoding.CodePages.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "system.text.encoding.codepages.4.4.0.nupkg.sha512",
+        "system.text.encoding.codepages.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Text.Encoding.Extensions/4.3.0": {
       "sha512": "YVMK0Bt/A43RmwizJoZ22ei2nmrhobgeiYwFzC4YAN+nue8RF6djXDMog0UCn+brerQoYVyaS+ghy9P/MUVcmw==",
       "type": "package",
@@ -5923,8 +6095,13 @@
     },
     "Components/1.0.0": {
       "type": "project",
-      "path": "../../Shared/Components/Components.csproj",
-      "msbuildProject": "../../Shared/Components/Components.csproj"
+      "path": "../../RdShared/Components/Components.csproj",
+      "msbuildProject": "../../RdShared/Components/Components.csproj"
+    },
+    "Consts/1.0.0": {
+      "type": "project",
+      "path": "../../RdShared/Consts/Consts.csproj",
+      "msbuildProject": "../../RdShared/Consts/Consts.csproj"
     },
     "Entitas/1.0.0": {
       "type": "project",
@@ -6039,8 +6216,8 @@
             "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\CodeGeneration\\Plugins\\Rd.Plugins.csproj"
             },
-            "D:\\GitHub\\RenduEcs\\Shared\\Components\\Components.csproj": {
-              "projectPath": "D:\\GitHub\\RenduEcs\\Shared\\Components\\Components.csproj"
+            "D:\\GitHub\\RenduEcs\\RdShared\\Components\\Components.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdShared\\Components\\Components.csproj"
             },
             "D:\\GitHub\\RenduEcs\\UnitTests\\TestComponents\\TestComponents.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\UnitTests\\TestComponents\\TestComponents.csproj"

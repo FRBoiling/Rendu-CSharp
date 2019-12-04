@@ -10,4 +10,7 @@
     <FallbackCulture>zh-CN</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>1 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin D:\GitHub\RenduEcs\RdShared\Bin\netstandard2.0</StartArguments>
+  </PropertyGroup>
 </Project>

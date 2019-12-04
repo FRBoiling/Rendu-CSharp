@@ -21,3 +21,4 @@ D:\GitHub\RenduEcs\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net461\Google.P
 D:\GitHub\RenduEcs\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net461\Google.Protobuf.dll
 D:\GitHub\RenduEcs\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net461\Google.Protobuf.xml
 D:\GitHub\RenduEcs\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net461\Google.Protobuf.pdb
+D:\GitHub\RenduEcs\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\net461\Google.Protobuf.csprojAssemblyReference.cache

@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.6.1": {
-      "System.CodeDom/4.7.0-preview2.19523.17": {
+      "System.CodeDom/4.6.0": {
         "type": "package",
         "frameworkAssemblies": [
           "System",
@@ -124,7 +124,7 @@
           "Entitas": "1.0.0",
           "Entitas.Attributes": "1.0.0",
           "Rd.CodeGenerator": "1.0.0",
-          "System.CodeDom": "4.7.0-preview2.19523.17"
+          "System.CodeDom": "4.6.0"
         },
         "compile": {
           "bin/placeholder/Rd.Plugins.dll": {}
@@ -207,10 +207,10 @@
     }
   },
   "libraries": {
-    "System.CodeDom/4.7.0-preview2.19523.17": {
-      "sha512": "RpcxhO5BxNzn5nUstmB+A1OJxbGAQBEo+yLHZOntRylsdaFUn6XBS2C3Vum6RTPsoxujWFnf5gffZc1WKPdkWA==",
+    "System.CodeDom/4.6.0": {
+      "sha512": "ArWGZOxPhOaJUd4YgvbTxGZDbVDJHPAOQNiJIpbRDPW6v2NT5xkallQv1zpu8Rwwb5Z3iZ1jwWA4gSQuWgR+jw==",
       "type": "package",
-      "path": "system.codedom/4.7.0-preview2.19523.17",
+      "path": "system.codedom/4.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -224,7 +224,7 @@
         "ref/net461/System.CodeDom.xml",
         "ref/netstandard2.0/System.CodeDom.dll",
         "ref/netstandard2.0/System.CodeDom.xml",
-        "system.codedom.4.7.0-preview2.19523.17.nupkg.sha512",
+        "system.codedom.4.6.0.nupkg.sha512",
         "system.codedom.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"

@@ -6,3 +6,4 @@ D:\GitHub\RenduEcs\RdFixtures\Networking\obj\Debug\netstandard2.0\Rd.Networking.
 D:\GitHub\RenduEcs\RdFixtures\Networking\obj\Debug\netstandard2.0\Rd.Networking.csproj.CopyComplete
 D:\GitHub\RenduEcs\RdFixtures\Networking\obj\Debug\netstandard2.0\Rd.Networking.dll
 D:\GitHub\RenduEcs\RdFixtures\Networking\obj\Debug\netstandard2.0\Rd.Networking.pdb
+D:\GitHub\RenduEcs\RdFixtures\Networking\obj\Debug\netstandard2.0\Rd.Networking.csprojAssemblyReference.cache

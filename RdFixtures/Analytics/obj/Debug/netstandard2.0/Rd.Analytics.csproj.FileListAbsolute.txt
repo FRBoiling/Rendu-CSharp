@@ -1,7 +1,6 @@
 D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Analytics.deps.json
 D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Analytics.dll
 D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Analytics.pdb
-D:\GitHub\RenduEcs\RdFixtures\Analytics\obj\Debug\netstandard2.0\Rd.Analytics.csprojAssemblyReference.cache
 D:\GitHub\RenduEcs\RdFixtures\Analytics\obj\Debug\netstandard2.0\Rd.Analytics.AssemblyInfoInputs.cache
 D:\GitHub\RenduEcs\RdFixtures\Analytics\obj\Debug\netstandard2.0\Rd.Analytics.AssemblyInfo.cs
 D:\GitHub\RenduEcs\RdFixtures\Analytics\obj\Debug\netstandard2.0\Rd.Analytics.csproj.CopyComplete

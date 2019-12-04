@@ -103,6 +103,12 @@
               },
               "D:\\GitHub\\RenduEcs\\RdFixtures\\Logging\\Rd.Logging.csproj": {
                 "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Logging\\Rd.Logging.csproj"
+              },
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj"
+              },
+              "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas\\Entitas.csproj": {
+                "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas\\Entitas.csproj"
               }
             }
           }
@@ -380,7 +386,7 @@
             },
             "System.CodeDom": {
               "target": "Package",
-              "version": "[4.7.0-preview2.19523.17, )"
+              "version": "[4.6.0, )"
             }
           },
           "imports": [

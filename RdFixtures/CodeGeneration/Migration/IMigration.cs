@@ -5,7 +5,6 @@ namespace Rd.Migration
         string version { get; }
         string workingDirectory { get; }
         string description { get; }
-
         MigrationFile[] Migrate(string path);
     }
 }

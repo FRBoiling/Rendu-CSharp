@@ -37,6 +37,13 @@ namespace Rd.Plugins
 
         public static string Replace(this string template, string contextName)
         {
+            //var contextName1 = contextName.LowercaseFirst();
+            //var ContextType = contextName.AddContextSuffix();
+            //var EntityType = contextName.AddEntitySuffix();
+            //var MatcherType = contextName.AddMatcherSuffix();
+            //var Lookup = contextName+LOOKUP;
+
+
             return template
                 .Replace("${ContextName}", contextName)
                 .Replace("${contextName}", contextName.LowercaseFirst())
@@ -48,6 +55,17 @@ namespace Rd.Plugins
 
         public static string Replace(this string template, ComponentData data, string contextName)
         {
+            //var ComponentType = data.GetTypeName();
+            //var ComponentName = data.ComponentName();
+            //var componentName = data.ComponentName().LowercaseFirst();
+            //var validComponentName = data.ComponentNameValidLowercaseFirst();
+            //var prefixedComponentName = data.PrefixedComponentName();
+            //var newMethodParameters = GetMethodParameters(data.GetMemberData(), true);
+            //var methodParameters = GetMethodParameters(data.GetMemberData(), false);
+            //var newMethodArgs = GetMethodArgs(data.GetMemberData(), true);
+            //var methodArgs = GetMethodArgs(data.GetMemberData(), false);
+            //var Index = contextName + LOOKUP + "." + data.ComponentName();
+
             return template
                 .Replace(contextName)
                 .Replace("${ComponentType}", data.GetTypeName())
