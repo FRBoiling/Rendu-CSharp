@@ -76,7 +76,8 @@ namespace Rd.CodeFileGeneration
 
         public static void SetLoadName(string assemblyName)
         {
-            DLLNAME = $"{assemblyName}_bak";
+            //这里的名字格式约定需与csproj中的OutputAssembly一致
+            DLLNAME = $"Components_source";
         }
     }
 }

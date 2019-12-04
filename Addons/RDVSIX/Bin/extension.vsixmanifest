@@ -1,6 +1,6 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <Identity Id="RDVSIX.f36e1ebc-14fa-4e34-abf6-12c38d1ed1ec" Version="1.0" Language="en-US" Publisher="Boil" />
+    <Identity Id="RDVSIX.f36e1ebc-14fa-4e34-abf6-12c38d1ed1ec" Version="1.1" Language="en-US" Publisher="Boil" />
     <DisplayName>RDVSIX</DisplayName>
     <Description>Empty VSIX Project.</Description>
   </Metadata>
