@@ -105,10 +105,16 @@ ${memberAssignmentList}
 
         private string getMemberAssignmentList(MemberData[] memberData)
         {
-            return string.Join("\n", memberData
+            //return string.Join("\n", memberData
+            //    .Select(info => "        component." + info.name + " = new" + info.name.UppercaseFirst() + ";")
+            //    .ToArray()
+            //);
+
+            var str = string.Join("\n", memberData
                 .Select(info => "        component." + info.name + " = new" + info.name.UppercaseFirst() + ";")
                 .ToArray()
-            );
+                );
+            return str;
         }
     }
 }

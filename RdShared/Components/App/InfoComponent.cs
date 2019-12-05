@@ -7,8 +7,8 @@ namespace Components
     [Context("App")]
     public class InfoComponent : IComponent
     {
-        private string _name;
-        private AppType _appType;
-        private string _key1;
+        public string _name;
+        public AppType _appType;
+        public string _key1;
     }
 }

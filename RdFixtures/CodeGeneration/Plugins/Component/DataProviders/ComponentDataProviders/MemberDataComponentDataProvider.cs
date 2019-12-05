@@ -9,12 +9,17 @@ namespace Rd.Plugins.Component.DataProviders.ComponentDataProviders
     {
         public void Provide(Type type, ComponentData data)
         {
-            var memberData = type.GetPublicMemberInfos()
+            //var memberData = type.GetPublicMemberInfos()
+            //    .Select(info => new MemberData(
+            //        info.type.ToCompilableString(),
+            //        info.name))
+            //    .ToArray();
+            var publicMemberInfos= type.GetPublicMemberInfos();
+            var memberData = publicMemberInfos
                 .Select(info => new MemberData(
                     info.type.ToCompilableString(),
                     info.name))
                 .ToArray();
-
             data.SetMemberData(memberData);
         }
     }

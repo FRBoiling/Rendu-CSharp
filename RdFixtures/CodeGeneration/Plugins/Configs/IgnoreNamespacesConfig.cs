@@ -10,7 +10,7 @@ namespace Rd.Plugins.Configs
         public override Dictionary<string, string> defaultProperties =>
             new Dictionary<string, string>
             {
-                {IGNORE_NAMESPACES_KEY, "false"}
+                {IGNORE_NAMESPACES_KEY, "true"}
             };
 
         public bool ignoreNamespaces

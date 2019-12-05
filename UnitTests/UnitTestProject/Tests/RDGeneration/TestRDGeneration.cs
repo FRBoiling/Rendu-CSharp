@@ -10,7 +10,10 @@ namespace UnitTestProject
         public void TestGeneration()
         {
             var contextsMigration = new RdComponentsMigration();
-            MigrationUtils.WriteFiles(contextsMigration.Migrate("./"));
+            contextsMigration.WorkingDirectory = "../../TestFixtures/Generated/";
+            RdDllLoad.DLLNAME = "";
+            var files = contextsMigration.Migrate("../Bin");
+            MigrationUtils.WriteFiles(files);
         }
     }
 }

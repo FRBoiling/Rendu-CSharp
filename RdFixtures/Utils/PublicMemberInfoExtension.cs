@@ -6,18 +6,39 @@ namespace Rd.Utils
 {
     public static class PublicMemberInfoExtension
     {
+        //public static List<PublicMemberInfo> GetPublicMemberInfos(this Type type)
+        //{
+        //    var fields = type.GetFields(BindingFlags.Instance | BindingFlags.Public);
+        //    var properties = type.GetProperties(BindingFlags.Instance | BindingFlags.Public);
+        //    var publicMemberInfoList = new List<PublicMemberInfo>(fields.Length + properties.Length);
+        //    for (var index = 0; index < fields.Length; ++index)
+        //        publicMemberInfoList.Add(new PublicMemberInfo(fields[index]));
+        //    for (var index = 0; index < properties.Length; ++index)
+        //    {
+        //        var info = properties[index];
+        //        if (info.CanRead && info.CanWrite && info.GetIndexParameters().Length == 0)
+        //            publicMemberInfoList.Add(new PublicMemberInfo(info));
+        //    }
+
+        //    return publicMemberInfoList;
+        //}
         public static List<PublicMemberInfo> GetPublicMemberInfos(this Type type)
         {
-            var fields = type.GetFields(BindingFlags.Instance | BindingFlags.Public);
-            var properties = type.GetProperties(BindingFlags.Instance | BindingFlags.Public);
-            var publicMemberInfoList = new List<PublicMemberInfo>(fields.Length + properties.Length);
-            for (var index = 0; index < fields.Length; ++index)
-                publicMemberInfoList.Add(new PublicMemberInfo(fields[index]));
-            for (var index = 0; index < properties.Length; ++index)
+            var obj = type.Assembly.CreateInstance(type.FullName);
+        
+            var fields = type.GetRuntimeFields();
+            var properties = type.GetRuntimeProperties();
+            var publicMemberInfoList = new List<PublicMemberInfo>();
+            foreach (var field in fields)
             {
-                var info = properties[index];
-                if (info.CanRead && info.CanWrite && info.GetIndexParameters().Length == 0)
-                    publicMemberInfoList.Add(new PublicMemberInfo(info));
+                publicMemberInfoList.Add(new PublicMemberInfo(field));
+            }
+            foreach (var property in properties)
+            {
+                if (property.CanRead && property.CanWrite && property.GetIndexParameters().Length == 0)
+                {
+                    publicMemberInfoList.Add(new PublicMemberInfo(property));
+                }
             }
 
             return publicMemberInfoList;

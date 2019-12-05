@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\WanXin\.nuget\packages\microsoft.net.test.sdk\16.2.0\build\netcoreapp1.0" t="Include">
@@ -21,10 +21,10 @@
     <e p="C:\Users\WanXin\.nuget\packages\nunit3testadapter\3.13.0\build\netcoreapp1.0\NUnit3.TestAdapter.pdb" t="Include" />
     <e p="C:\Users\WanXin\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\WanXin\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Rendu.-1129441690.00" t="ExcludeRecursive" />
-    <e p="D:\GitHub\RenduECS" t="IncludeFlat">
+    <e p="D:\GitHub\RenduEcs" t="IncludeFlat">
       <e p="Addons" t="Include">
         <e p="CodeGeneration" t="Include">
-          <e p="Bin" t="ExcludeRecursive" />
+          <e p="bin" t="ExcludeRecursive" />
           <e p="Rendu.CodeGeneration.Plugins" t="IncludeRecursive">
             <e p="AddFileHeaderPostProcessor.cs" t="Include" />
             <e p="CleanTargetDirectoryPostProcessor.cs" t="Include" />
@@ -78,7 +78,7 @@
           </e>
         </e>
         <e p="Migration" t="Include">
-          <e p="Bin" t="ExcludeRecursive" />
+          <e p="bin" t="ExcludeRecursive" />
           <e p="Rendu.Migration.Unity.Editor" t="IncludeRecursive">
             <e p="MigrationWindow.cs" t="Include" />
             <e p="obj" t="ExcludeRecursive">
@@ -92,7 +92,7 @@
           </e>
         </e>
         <e p="RDVSIX" t="Include">
-          <e p="Bin" t="ExcludeRecursive" />
+          <e p="bin" t="ExcludeRecursive" />
           <e p="RDVISX" t="IncludeRecursive">
             <e p="EntitasTool" t="Include">
               <e p="EntitasCodeGenerationCommand.cs" t="Include" />
@@ -121,7 +121,7 @@
           </e>
         </e>
         <e p="Unity" t="Include">
-          <e p="Bin" t="ExcludeRecursive" />
+          <e p="bin" t="ExcludeRecursive" />
           <e p="Rendu.Entitas.Unity" t="IncludeRecursive">
             <e p="EntityLink.cs" t="Include" />
             <e p="EntityLinkExtension.cs" t="Include" />
@@ -171,7 +171,7 @@
           </e>
         </e>
         <e p="VisualDebugging" t="Include">
-          <e p="Bin" t="ExcludeRecursive" />
+          <e p="bin" t="ExcludeRecursive" />
           <e p="Rendu.VisualDebugging.CodeGeneration.Plugins" t="IncludeRecursive">
             <e p="ContextObserverGenerator.cs" t="Include" />
             <e p="FeatureClassGenerator.cs" t="Include" />
@@ -306,7 +306,7 @@
           <e p="TrackingData.cs" t="Include" />
           <e p="UserTrackingData.cs" t="Include" />
         </e>
-        <e p="Bin" t="ExcludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
         <e p="CodeFileGeneration" t="IncludeRecursive">
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
@@ -322,7 +322,7 @@
           <e p="RdPreferences.cs" t="Include" />
         </e>
         <e p="CodeGeneration" t="Include">
-          <e p="Bin" t="ExcludeRecursive" />
+          <e p="bin" t="ExcludeRecursive" />
           <e p="CodeGeneration" t="IncludeRecursive">
             <e p="CodeGeneratorData.cs" t="Include" />
             <e p="CodeGenFile.cs" t="Include" />
@@ -557,7 +557,7 @@
       </e>
       <e p="RdServer" t="Include" />
       <e p="RdShared" t="Include">
-        <e p="Bin" t="ExcludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
         <e p="Components" t="IncludeRecursive">
           <e p="App" t="Include">
             <e p="InfoComponent.cs" t="Include" />
@@ -577,7 +577,7 @@
         </e>
         <e p="Consts" t="IncludeRecursive">
           <e p="AppType.cs" t="Include" />
-          <e p="Bin" t="ExcludeRecursive" />
+          <e p="bin" t="ExcludeRecursive" />
           <e p="Class1.cs" t="Include" />
           <e p="Consts.csproj" t="IncludeRecursive" />
           <e p="Consts.snk" t="Include" />
@@ -590,7 +590,28 @@
           </e>
         </e>
         <e p="Generated" t="IncludeRecursive">
+          <e p="App" t="Include">
+            <e p="AppAttribute.cs" t="Include" />
+            <e p="AppComponentsLookup.cs" t="Include" />
+            <e p="AppContext.cs" t="Include" />
+            <e p="AppEntity.cs" t="Include" />
+            <e p="AppMatcher.cs" t="Include" />
+            <e p="Components" t="Include">
+              <e p="AppInfoComponent.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Contexts.cs" t="Include" />
           <e p="Generated.csproj" t="IncludeRecursive" />
+          <e p="Network" t="Include">
+            <e p="Components" t="Include">
+              <e p="NetworkTcpComponent.cs" t="Include" />
+            </e>
+            <e p="NetworkAttribute.cs" t="Include" />
+            <e p="NetworkComponentsLookup.cs" t="Include" />
+            <e p="NetworkContext.cs" t="Include" />
+            <e p="NetworkEntity.cs" t="Include" />
+            <e p="NetworkMatcher.cs" t="Include" />
+          </e>
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
               <e p="netstandard2.0" t="Include">
@@ -645,7 +666,7 @@
             <e p="PostConstructorAttribute.cs" t="Include" />
             <e p="UniqueAttribute.cs" t="Include" />
           </e>
-          <e p="Bin" t="ExcludeRecursive" />
+          <e p="bin" t="ExcludeRecursive" />
           <e p="Entitas" t="IncludeRecursive">
             <e p="Collector" t="Include">
               <e p="Collector.cs" t="Include" />
@@ -756,7 +777,7 @@
           </e>
         </e>
         <e p="Protobuf" t="Include">
-          <e p="Bin" t="ExcludeRecursive" />
+          <e p="bin" t="ExcludeRecursive" />
           <e p="Google.Protobuf" t="IncludeRecursive">
             <e p="ByteArray.cs" t="Include" />
             <e p="ByteString.cs" t="Include" />
@@ -910,10 +931,11 @@
       <e p="Tools" t="Include">
         <e p="CodeGenerator" t="IncludeRecursive">
           <e p="App.config" t="Include" />
-          <e p="Bin" t="ExcludeRecursive" />
+          <e p="bin" t="ExcludeRecursive" />
           <e p="CodeGenerator.csproj" t="IncludeRecursive" />
           <e p="LoadResoureDll.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="Program.cs" t="Include" />
           <e p="Properties" t="Include">
             <e p="AssemblyInfo.cs" t="Include" />
@@ -923,7 +945,7 @@
         </e>
       </e>
       <e p="UnitTests" t="Include">
-        <e p="Bin" t="ExcludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
         <e p="TestComponents" t="IncludeRecursive">
           <e p="NormalClass.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive">
@@ -937,29 +959,6 @@
           <e p="TestNormalComponents.cs" t="Include" />
         </e>
         <e p="TestFixtures" t="IncludeRecursive">
-          <e p="Generated" t="Include">
-            <e p="Contexts.cs" t="Include" />
-            <e p="Test1" t="Include">
-              <e p="Components" t="Include">
-                <e p="Test1TestNormalComponent.cs" t="Include" />
-              </e>
-              <e p="Test1Attribute.cs" t="Include" />
-              <e p="Test1ComponentsLookup.cs" t="Include" />
-              <e p="Test1Context.cs" t="Include" />
-              <e p="Test1Entity.cs" t="Include" />
-              <e p="Test1Matcher.cs" t="Include" />
-            </e>
-            <e p="Test2" t="Include">
-              <e p="Components" t="Include">
-                <e p="Test2TestNormalComponent.cs" t="Include" />
-              </e>
-              <e p="Test2Attribute.cs" t="Include" />
-              <e p="Test2ComponentsLookup.cs" t="Include" />
-              <e p="Test2Context.cs" t="Include" />
-              <e p="Test2Entity.cs" t="Include" />
-              <e p="Test2Matcher.cs" t="Include" />
-            </e>
-          </e>
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
               <e p="netstandard2.0" t="Include">

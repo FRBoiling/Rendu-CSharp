@@ -6,4 +6,3 @@ D:\GitHub\RenduEcs\RdFixtures\Analytics\obj\Debug\netstandard2.0\Rd.Analytics.As
 D:\GitHub\RenduEcs\RdFixtures\Analytics\obj\Debug\netstandard2.0\Rd.Analytics.csproj.CopyComplete
 D:\GitHub\RenduEcs\RdFixtures\Analytics\obj\Debug\netstandard2.0\Rd.Analytics.dll
 D:\GitHub\RenduEcs\RdFixtures\Analytics\obj\Debug\netstandard2.0\Rd.Analytics.pdb
-D:\GitHub\RenduEcs\RdFixtures\Analytics\obj\Debug\netstandard2.0\Rd.Analytics.csprojAssemblyReference.cache

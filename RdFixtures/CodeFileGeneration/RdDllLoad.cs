@@ -13,15 +13,15 @@ namespace Rd.CodeFileGeneration
             DLLError,
             PDBError,
         }
-        private readonly static Logger _logger = fabl.GetLogger(typeof (RdDllLoad));
+        private readonly static Logger _logger = fabl.GetLogger(typeof(RdDllLoad));
 
         public static string DLLNAME = "Components";
         public const string DLLSUFFIX = ".dll";
         public const string PDBSUFFIX = ".pdb";
         public static Assembly GetDllAssembly(string path, string dllName)
         {
-//            byte[] dllBytes = File.ReadAllBytes("./Server.Module.dll");
-//            byte[] pdbBytes = File.ReadAllBytes("./Server.Module.pdb");
+            //            byte[] dllBytes = File.ReadAllBytes("./Server.Module.dll");
+            //            byte[] pdbBytes = File.ReadAllBytes("./Server.Module.pdb");
             var dllPath = Path.Combine(path, $"{dllName}{DLLSUFFIX}");
             var pdbPath = Path.Combine(path, $"{dllName}{PDBSUFFIX}");
             FileInfo dllFileInfo = new FileInfo(dllPath);
@@ -52,7 +52,7 @@ namespace Rd.CodeFileGeneration
         }
 
 
-        public static ErrorCode CheckFileExist(string path,out FileInfo fileInfo)
+        public static ErrorCode CheckFileExist(string path, out FileInfo fileInfo)
         {
             //            byte[] dllBytes = File.ReadAllBytes("./Server.Module.dll");
             //            byte[] pdbBytes = File.ReadAllBytes("./Server.Module.pdb");

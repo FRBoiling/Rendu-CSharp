@@ -9,19 +9,19 @@ namespace Rd.Plugins.Component.CodeGenerators
     public class ComponentMatcherApiGenerator : AbstractGenerator
     {
         private const string TEMPLATE =
-            @"using Entitas.Matcher;
+            @"
 public sealed partial class ${MatcherType} 
 {
 
-    static IMatcher<${EntityType}> _matcher${ComponentName};
+    static Entitas.Matcher.IMatcher<${EntityType}> _matcher${ComponentName};
 
-    public static IMatcher<${EntityType}> ${ComponentName} 
+    public static Entitas.Matcher.IMatcher<${EntityType}> ${ComponentName} 
     {
         get 
         {
             if (_matcher${ComponentName} == null) 
             {
-                var matcher = (Matcher<${EntityType}>)Matcher<${EntityType}>.AllOf(${Index});
+                var matcher = (Entitas.Matcher.Matcher<${EntityType}>)Entitas.Matcher.Matcher<${EntityType}>.AllOf(${Index});
                 matcher.componentNames = ${componentNames};
                 _matcher${ComponentName} = matcher;
             }

@@ -121,7 +121,7 @@ namespace Rd.CodeFileGeneration
             var entityGenerator = new EntityGenerator();
             var entityFile = entityGenerator.Generate(contextDataArr);
             codeGenFiles.AddRange(entityFile);
-            /////
+            ///////
             var componentsPreferences = new RdPreferences($"{contextsPreferencesStr}{"\n\t"}{COMPONENT_PREFERENCES}");
 
             var componentDataProvider = new ComponentDataProvider(componentsList.ToArray());
@@ -130,30 +130,41 @@ namespace Rd.CodeFileGeneration
 
             var componentEntityApiGenerator = new ComponentEntityApiGenerator();
             componentEntityApiGenerator.Configure(componentsPreferences);
-            var componentsFile = componentEntityApiGenerator.Generate(componentDataArr);
-            codeGenFiles.AddRange(componentsFile);
+            var componentEntity = componentEntityApiGenerator.Generate(componentDataArr);
+            codeGenFiles.AddRange(componentEntity);
 
             var componentMatcherApiGenerator = new ComponentMatcherApiGenerator();
             componentMatcherApiGenerator.Configure(componentsPreferences);
-            componentsFile = componentMatcherApiGenerator.Generate(componentDataArr);
-            codeGenFiles.AddRange(componentsFile);
-
+            var componentMatcher = componentMatcherApiGenerator.Generate(componentDataArr);
+            codeGenFiles.AddRange(componentMatcher);
+           
             var componentLookupGenerator = new ComponentLookupGenerator();
             componentLookupGenerator.Configure(componentsPreferences);
             var componentLookupFile = componentLookupGenerator.Generate(componentDataArr);
             codeGenFiles.AddRange(componentLookupFile);
 
-            var migratedFiles = new List<MigrationFile>();
+            var migratedFiles = new Dictionary<string,MigrationFile>();
 
             foreach (var file in codeGenFiles)
             {
                 var fileFullName = Path.Combine(WorkingDirectory, file.fileName);
+                if (!migratedFiles.TryGetValue(fileFullName,out var migrationFile))
+                {
+                    migrationFile = new MigrationFile(fileFullName, file.fileContent);
+                    migratedFiles.Add(fileFullName,migrationFile);
+                }
+                else
+                {
+                    migrationFile.fileContent = $"{migrationFile.fileContent}\n{file.fileContent}";
+                }
 
-                var migrationFile = new MigrationFile(fileFullName, file.fileContent);
-                migratedFiles.Add(migrationFile);
             }
-
-            return migratedFiles.ToArray();
+            var fileList = new List<MigrationFile>();
+            foreach (var item in migratedFiles)
+            {
+                fileList.Add(item.Value);
+            }
+            return fileList.ToArray();
         }
 
         public void SetLoadName(string assemblyName)

@@ -19,11 +19,18 @@ namespace Rd.Migration
             {
                 var fileInfo = new FileInfo(file.fileFullName);
                 if (!fileInfo.Exists)
+                {
                     if (fileInfo.Directory != null && !fileInfo.Directory.Exists)
+                    {
                         Directory.CreateDirectory(fileInfo.Directory.FullName);
+                    }
+                }
+                    
                 Console.WriteLine("Migrating: " + fileInfo.FullName);
                 File.WriteAllText(file.fileFullName, file.fileContent);
+                /////////File.AppendAllText(file.fileFullName, file.fileContent);
             }
         }
+
     }
 }
