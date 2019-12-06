@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
-using Entitas.Systems;
+using Entitas;
 using UnityEngine;
 
 namespace Rendu.VisualDebugging.Unity.DebugSystems {

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Entitas.Systems;
+using Entitas;
 using Rd.Serialization;
 using Rendu.Unity.Editor;
 using Rendu.VisualDebugging.Unity.DebugSystems;

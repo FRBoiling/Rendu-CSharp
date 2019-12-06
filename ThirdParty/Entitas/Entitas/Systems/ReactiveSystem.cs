@@ -3,7 +3,7 @@ using Entitas.Collector;
 using Entitas.Context;
 using Entitas.Entity;
 
-namespace Entitas.Systems
+namespace Entitas
 {
     /// A ReactiveSystem calls Execute(entities) if there were changes based on
     /// the specified Collector and will only pass in changed entities.

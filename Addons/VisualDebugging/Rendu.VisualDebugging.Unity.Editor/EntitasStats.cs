@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using Entitas;
 using Entitas.Attributes;
-using Entitas.Systems;
 using Rd.Utils;
 using UnityEditor;
 using UnityEngine;
 
-namespace Rendu.VisualDebugging.Unity.Editor {
+namespace Rendu.VisualDebugging.Unity.Editor
+{
 
     public static class EntitasStats {
 

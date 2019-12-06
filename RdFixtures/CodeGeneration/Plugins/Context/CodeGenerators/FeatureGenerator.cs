@@ -24,7 +24,7 @@ public class Feature : Rendu.VisualDebugging.Unity.DebugSystems
 }
 
 #elif (!ENTITAS_DISABLE_DEEP_PROFILING && DEVELOPMENT_BUILD)
-public class Feature : Entitas.Systems 
+public class Feature : Entitas 
 {
     System.Collections.Generic.List<string> _initializeSystemNames;
     System.Collections.Generic.List<string> _executeSystemNames;
@@ -42,7 +42,7 @@ public class Feature : Entitas.Systems
         _tearDownSystemNames = new System.Collections.Generic.List<string>();
     }
     
-    public override Entitas.Systems Add(Entitas.ISystem system) 
+    public override Entitas Add(Entitas.ISystem system) 
     {
         var systemName = system.GetType().FullName;
         if (system is Entitas.IInitializeSystem) 
@@ -106,7 +106,7 @@ public class Feature : Entitas.Systems
 }
 
 #else
-public class Feature : Entitas.Systems.ISystem
+public class Feature : Entitas.ISystem
 {
     public Feature(string name)
     {   }

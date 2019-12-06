@@ -1,7 +1,7 @@
 ﻿using System;
 using Entitas.Entity;
 
-namespace Entitas.Systems
+namespace Entitas
 {
     internal class Job<TEntity> where TEntity : class, IEntity
     {

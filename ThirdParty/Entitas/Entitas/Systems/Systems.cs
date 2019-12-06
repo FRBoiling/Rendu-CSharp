@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Entitas.Systems
+namespace Entitas
 {
     /// Server.Systems provide a convenient way to group systems.
     /// You can add IInitializeSystem, IExecuteSystem, ICleanupSystem,

@@ -3,7 +3,7 @@ using System.Threading;
 using Entitas.Entity;
 using Entitas.Group;
 
-namespace Entitas.Systems
+namespace Entitas
 {
     /// A JobSystem calls Execute(entities) with subsets of entities
     /// and distributes the workload over the specified amount of threads.
