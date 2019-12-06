@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<module type="RIDER_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.visualstudio.projectsystem/15.8.243/build/AdditionalFiles/vs-threading.MainThreadAssertingMethods.txt" />
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.visualstudio.projectsystem/15.8.243/build/AdditionalFiles/vs-threading.MainThreadSwitchingMethods.txt" />
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.visualstudio.sdk.analyzers/16.3.2/build/AdditionalFiles/BannedSymbols.txt" />
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.visualstudio.sdk.analyzers/16.3.2/build/AdditionalFiles/vs-threading.LegacyThreadSwitchingMembers.txt" />
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.visualstudio.sdk.analyzers/16.3.2/build/AdditionalFiles/vs-threading.MainThreadAssertingMethods.txt" />
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.visualstudio.sdk.analyzers/16.3.2/build/AdditionalFiles/vs-threading.MainThreadSwitchingMethods.txt" />
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.visualstudio.sdk.analyzers/16.3.2/build/AdditionalFiles/vs-threading.MembersRequiringMainThread.txt" />
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.visualstudio.threading.analyzers/16.3.13/build" />
+    <content url="file://$MODULE_DIR$/../.." />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

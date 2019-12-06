@@ -106,6 +106,10 @@ namespace Rd.CodeFileGeneration
             var contextsFile = contextsGenerator.Generate(contextDataArr);
             codeGenFiles.AddRange(contextsFile);
 
+            var featureGenerator = new FeatureGenerator();
+            var featureFile = featureGenerator.Generate(contextDataArr);
+            codeGenFiles.AddRange(featureFile);
+
             var contextGenerator = new ContextGenerator();
             var contextFile = contextGenerator.Generate(contextDataArr);
             codeGenFiles.AddRange(contextFile);

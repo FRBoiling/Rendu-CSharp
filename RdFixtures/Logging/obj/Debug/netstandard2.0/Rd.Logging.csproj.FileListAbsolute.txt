@@ -5,3 +5,4 @@ D:\GitHub\RenduEcs\RdFixtures\Logging\obj\Debug\netstandard2.0\Rd.Logging.Assemb
 D:\GitHub\RenduEcs\RdFixtures\Logging\obj\Debug\netstandard2.0\Rd.Logging.AssemblyInfo.cs
 D:\GitHub\RenduEcs\RdFixtures\Logging\obj\Debug\netstandard2.0\Rd.Logging.dll
 D:\GitHub\RenduEcs\RdFixtures\Logging\obj\Debug\netstandard2.0\Rd.Logging.pdb
+D:\GitHub\RenduEcs\RdFixtures\Logging\obj\Debug\netstandard2.0\Rd.Logging.csprojAssemblyReference.cache

@@ -19,5 +19,12 @@ namespace UnitTestProject
             var componentMigration = new TestComponentMigration();
             MigrationUtils.WriteFiles(componentMigration.Migrate("../../TestFixtures/Generated/"));
         }
+
+        [Test]
+        public void TestFeatureFileGenerator()
+        {
+            var contextsMigration = new TestFeatureMigration();
+            MigrationUtils.WriteFiles(contextsMigration.Migrate("../../TestFixtures/Generated/"));
+        }
     }
 }

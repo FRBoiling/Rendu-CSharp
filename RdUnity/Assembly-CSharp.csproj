@@ -78,6 +78,9 @@
     <Compile Include="Assets\Generated\Input\InputContext.cs" />
     <Compile Include="Assets\Generated\Input\InputEntity.cs" />
     <Compile Include="Assets\Generated\Input\InputMatcher.cs" />
+    <Compile Include="Assets\Systems\DebugMessageSystem.cs" />
+    <Compile Include="Assets\Systems\GameFeatureSystem.cs" />
+    <Compile Include="Assets\Systems\InitGameContextSystem.cs" />
     <None Include="Assets\Entitas\LICENSE.txt" />
     <None Include="Assets\Entitas\Entitas.xml" />
     <Reference Include="Unity.Timeline.Editor">
