@@ -20,4 +20,3 @@ D:\GitHub\RenduEcs\Addons\RDVSIX\RDVISX\obj\Release\RDVSIX.latest.pkgdef
 D:\GitHub\RenduEcs\Addons\RDVSIX\RDVISX\obj\Release\extension.vsixmanifest
 D:\GitHub\RenduEcs\Addons\RDVSIX\RDVISX\obj\Release\files.json
 D:\GitHub\RenduEcs\Addons\RDVSIX\RDVISX\obj\Release\createTemplateManifests.cache
-D:\GitHub\RenduEcs\Addons\RDVSIX\RDVISX\obj\Release\_EmptyResource.resources.original

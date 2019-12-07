@@ -1,17 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <RootNamespace>Systems</RootNamespace>
-        <TargetFrameworks>net461;netcoreapp2.2</TargetFrameworks>
-        <LangVersion>7.3</LangVersion>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <OutputPath>..\..\Bin\Server\</OutputPath>
-    </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\Bin</OutputPath>
+  </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <OutputPath>..\..\Bin\Server\</OutputPath>
-    </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\Bin</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ThirdParty\Entitas\Attributes\Entitas.Attributes.csproj" />
+    <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas\Entitas.csproj" />
+    <ProjectReference Include="..\Generated\Server.Generated.csproj" />
+  </ItemGroup>
 
 </Project>

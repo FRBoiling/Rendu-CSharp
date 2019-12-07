@@ -106,7 +106,7 @@ public class Feature : Entitas
 }
 
 #else
-public class Feature : Entitas.ISystem
+public class Feature : Entitas.Systems
 {
     public Feature(string name)
     {   }

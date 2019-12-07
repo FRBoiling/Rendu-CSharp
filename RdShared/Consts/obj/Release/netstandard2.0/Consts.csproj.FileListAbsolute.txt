@@ -5,3 +5,4 @@ D:\GitHub\RenduEcs\RdShared\Consts\obj\Release\netstandard2.0\Consts.AssemblyInf
 D:\GitHub\RenduEcs\RdShared\Consts\obj\Release\netstandard2.0\Consts.AssemblyInfo.cs
 D:\GitHub\RenduEcs\RdShared\Consts\obj\Release\netstandard2.0\Consts.dll
 D:\GitHub\RenduEcs\RdShared\Consts\obj\Release\netstandard2.0\Consts.pdb
+D:\GitHub\RenduEcs\RdShared\Consts\obj\Release\netstandard2.0\Consts.csprojAssemblyReference.cache
