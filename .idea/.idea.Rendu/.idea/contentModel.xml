@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\WanXin\.nuget\packages\microsoft.net.test.sdk\16.2.0\build\netcoreapp1.0" t="Include">
@@ -307,6 +307,23 @@
           <e p="UserTrackingData.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Buffer" t="IncludeRecursive">
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="CircularBuffer.cs" t="Include" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Rd.Buffer.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Rd.Buffer.csproj" t="IncludeRecursive" />
+          <e p="RecyclableMemoryStream" t="Include">
+            <e p="Events.cs" t="Include" />
+            <e p="RecyclableMemoryStream.cs" t="Include" />
+            <e p="RecyclableMemoryStreamManager.cs" t="Include" />
+          </e>
+        </e>
         <e p="CodeFileGeneration" t="IncludeRecursive">
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
@@ -439,6 +456,7 @@
                 <e p="ContextGenerator.cs" t="Include" />
                 <e p="ContextMatcherGenerator.cs" t="Include" />
                 <e p="ContextsGenerator.cs" t="Include" />
+                <e p="FeatureGenerator.cs" t="Include" />
               </e>
               <e p="ContextData.cs" t="Include" />
               <e p="DataProviders" t="Include">
@@ -503,8 +521,19 @@
           <e p="Rd.Logging.csproj" t="IncludeRecursive" />
         </e>
         <e p="Networking" t="IncludeRecursive">
-          <e p="AbstractTcpSocket.cs" t="Include" />
-          <e p="IPAddressStringExtension.cs" t="Include" />
+          <e p="AChannel.cs" t="Include" />
+          <e p="AService.cs" t="Include" />
+          <e p="AsyncSocket" t="Include">
+            <e p="AbstractTcpSocket.cs" t="Include" />
+            <e p="IPAddressStringExtension.cs" t="Include" />
+            <e p="ReceiveVO.cs" t="Include" />
+            <e p="TcpClientSocket.cs" t="Include" />
+            <e p="TcpMessageParser.cs" t="Include" />
+            <e p="TcpServerSocket.cs" t="Include" />
+            <e p="TcpSocketReceive.cs" t="Include" />
+          </e>
+          <e p="IOCP" t="Include" />
+          <e p="NetworkType.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
               <e p="netstandard2.0" t="Include">
@@ -513,11 +542,6 @@
             </e>
           </e>
           <e p="Rd.Networking.csproj" t="IncludeRecursive" />
-          <e p="ReceiveVO.cs" t="Include" />
-          <e p="TcpClientSocket.cs" t="Include" />
-          <e p="TcpMessageParser.cs" t="Include" />
-          <e p="TcpServerSocket.cs" t="Include" />
-          <e p="TcpSocketReceive.cs" t="Include" />
         </e>
         <e p="Serialization" t="IncludeRecursive">
           <e p="AbstractConfigurableConfig.cs" t="Include" />
@@ -555,18 +579,116 @@
           <e p="StringExtension.cs" t="Include" />
         </e>
       </e>
-      <e p="RdServer" t="Include" />
-      <e p="RdShared" t="Include">
+      <e p="RdServer" t="Include">
+        <e p="App" t="IncludeRecursive">
+          <e p="AppService.cs" t="Include" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="net461" t="Include">
+                <e p="Server.App.AssemblyInfo.cs" t="Include" />
+              </e>
+              <e p="netcoreapp2.2" t="Include">
+                <e p="Server.App.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Program.cs" t="Include" />
+          <e p="Properties" t="Include">
+            <e p="launchSettings.json" t="Include" />
+          </e>
+          <e p="Server.App.csproj" t="IncludeRecursive" />
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Components" t="IncludeRecursive">
-          <e p="App" t="Include">
-            <e p="InfoComponent.cs" t="Include" />
+          <e p="AppComponents.cs" t="Include" />
+          <e p="ConfigComponents.cs" t="Include" />
+          <e p="NetworkComponents.cs" t="Include" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Server.Components.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
           </e>
+          <e p="Server.Components.csproj" t="IncludeRecursive" />
+        </e>
+        <e p="Generated" t="IncludeRecursive">
+          <e p="App" t="Include">
+            <e p="AppAttribute.cs" t="Include" />
+            <e p="AppComponentsLookup.cs" t="Include" />
+            <e p="AppContext.cs" t="Include" />
+            <e p="AppEntity.cs" t="Include" />
+            <e p="AppMatcher.cs" t="Include" />
+            <e p="Components" t="Include">
+              <e p="AppChannalComponent.cs" t="Include" />
+              <e p="AppInfoComponent.cs" t="Include" />
+            </e>
+          </e>
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="Config" t="Include">
+            <e p="Components" t="Include">
+              <e p="ConfigXmlDataComponent.cs" t="Include" />
+            </e>
+            <e p="ConfigAttribute.cs" t="Include" />
+            <e p="ConfigComponentsLookup.cs" t="Include" />
+            <e p="ConfigContext.cs" t="Include" />
+            <e p="ConfigEntity.cs" t="Include" />
+            <e p="ConfigMatcher.cs" t="Include" />
+          </e>
+          <e p="Contexts.cs" t="Include" />
+          <e p="Feature.cs" t="Include" />
+          <e p="Network" t="Include">
+            <e p="Components" t="Include">
+              <e p="NetworkConnectorComponent.cs" t="Include" />
+              <e p="NetworkListenerComponent.cs" t="Include" />
+              <e p="NetworkServiceComponent.cs" t="Include" />
+            </e>
+            <e p="NetworkAttribute.cs" t="Include" />
+            <e p="NetworkComponentsLookup.cs" t="Include" />
+            <e p="NetworkContext.cs" t="Include" />
+            <e p="NetworkEntity.cs" t="Include" />
+            <e p="NetworkMatcher.cs" t="Include" />
+          </e>
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Server.Generated.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Server.Generated.csproj" t="IncludeRecursive" />
+        </e>
+        <e p="Systems" t="IncludeRecursive">
+          <e p="AppSystems.cs" t="Include" />
+          <e p="FeatureSystems.cs" t="Include" />
+          <e p="NetworkSystems.cs" t="Include" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Server.Systems.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Server.Systems.csproj" t="IncludeRecursive" />
+        </e>
+      </e>
+      <e p="RdShared" t="Include">
+        <e p="AppFrame" t="IncludeRecursive">
+          <e p="AppFrame.csproj" t="IncludeRecursive" />
+          <e p="IService.cs" t="Include" />
+          <e p="MainThreadSynchronizationContext.cs" t="Include" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="AppFrame.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Components" t="IncludeRecursive">
           <e p="Components.csproj" t="IncludeRecursive" />
           <e p="Components.snk" t="Include" />
-          <e p="Network" t="Include">
-            <e p="TcpComponent.cs" t="Include" />
-          </e>
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
               <e p="netstandard2.0" t="Include">
@@ -574,11 +696,13 @@
               </e>
             </e>
           </e>
+          <e p="Test" t="Include">
+            <e p="TestComponents.cs" t="Include" />
+          </e>
         </e>
         <e p="Consts" t="IncludeRecursive">
           <e p="AppType.cs" t="Include" />
           <e p="bin" t="ExcludeRecursive" />
-          <e p="Class1.cs" t="Include" />
           <e p="Consts.csproj" t="IncludeRecursive" />
           <e p="Consts.snk" t="Include" />
           <e p="obj" t="ExcludeRecursive">
@@ -590,28 +714,9 @@
           </e>
         </e>
         <e p="Generated" t="IncludeRecursive">
-          <e p="App" t="Include">
-            <e p="AppAttribute.cs" t="Include" />
-            <e p="AppComponentsLookup.cs" t="Include" />
-            <e p="AppContext.cs" t="Include" />
-            <e p="AppEntity.cs" t="Include" />
-            <e p="AppMatcher.cs" t="Include" />
-            <e p="Components" t="Include">
-              <e p="AppInfoComponent.cs" t="Include" />
-            </e>
-          </e>
           <e p="Contexts.cs" t="Include" />
+          <e p="Feature.cs" t="Include" />
           <e p="Generated.csproj" t="IncludeRecursive" />
-          <e p="Network" t="Include">
-            <e p="Components" t="Include">
-              <e p="NetworkTcpComponent.cs" t="Include" />
-            </e>
-            <e p="NetworkAttribute.cs" t="Include" />
-            <e p="NetworkComponentsLookup.cs" t="Include" />
-            <e p="NetworkContext.cs" t="Include" />
-            <e p="NetworkEntity.cs" t="Include" />
-            <e p="NetworkMatcher.cs" t="Include" />
-          </e>
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
               <e p="netstandard2.0" t="Include">
@@ -619,8 +724,23 @@
               </e>
             </e>
           </e>
+          <e p="Test" t="Include">
+            <e p="Components" t="Include">
+              <e p="TestDestroyComponent.cs" t="Include" />
+              <e p="TestNameComponent.cs" t="Include" />
+              <e p="TestNormalComponent.cs" t="Include" />
+              <e p="TestPlayerComponent.cs" t="Include" />
+              <e p="TestUniqueComponent.cs" t="Include" />
+            </e>
+            <e p="TestAttribute.cs" t="Include" />
+            <e p="TestComponentsLookup.cs" t="Include" />
+            <e p="TestContext.cs" t="Include" />
+            <e p="TestEntity.cs" t="Include" />
+            <e p="TestMatcher.cs" t="Include" />
+          </e>
         </e>
         <e p="Systems" t="IncludeRecursive">
+          <e p="Class1.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
               <e p="netstandard2.0" t="Include">
@@ -631,7 +751,66 @@
           <e p="Systems.csproj" t="IncludeRecursive" />
         </e>
       </e>
-      <e p="RdUnity" t="Include" />
+      <e p="RdUnity" t="IncludeRecursive">
+        <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+        <e p="Assets" t="Include">
+          <e p="Components" t="Include">
+            <e p="DebugMessageComponent.cs" t="Include" />
+            <e p="MouseClickComponent.cs" t="Include" />
+            <e p="TestComponents.cs" t="Include" />
+          </e>
+          <e p="Controller" t="Include">
+            <e p="GameController.cs" t="Include" />
+          </e>
+          <e p="DesperateDevs" t="Include">
+            <e p="Compile.cs" t="Include" />
+          </e>
+          <e p="Entitas" t="Include">
+            <e p="Entitas.xml" t="Include" />
+            <e p="LICENSE.txt" t="Include" />
+          </e>
+          <e p="Generated" t="Include">
+            <e p="Contexts.cs" t="Include" />
+            <e p="Feature.cs" t="Include" />
+            <e p="Game" t="Include">
+              <e p="Components" t="Include">
+                <e p="GameChannelComponent.cs" t="Include" />
+                <e p="GameDebugMessageComponent.cs" t="Include" />
+                <e p="GameMouseClickComponent.cs" t="Include" />
+              </e>
+              <e p="GameAttribute.cs" t="Include" />
+              <e p="GameComponentsLookup.cs" t="Include" />
+              <e p="GameContext.cs" t="Include" />
+              <e p="GameEntity.cs" t="Include" />
+              <e p="GameMatcher.cs" t="Include" />
+            </e>
+            <e p="Test" t="Include">
+              <e p="Components" t="Include">
+                <e p="TestDestroyComponent.cs" t="Include" />
+                <e p="TestNameComponent.cs" t="Include" />
+                <e p="TestNormalComponent.cs" t="Include" />
+                <e p="TestPlayerComponent.cs" t="Include" />
+                <e p="TestUniqueComponent.cs" t="Include" />
+              </e>
+              <e p="TestAttribute.cs" t="Include" />
+              <e p="TestComponentsLookup.cs" t="Include" />
+              <e p="TestContext.cs" t="Include" />
+              <e p="TestEntity.cs" t="Include" />
+              <e p="TestMatcher.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Systems" t="Include">
+            <e p="Game" t="Include">
+              <e p="DebugMessageSystem.cs" t="Include" />
+              <e p="GameContextInitSystem.cs" t="Include" />
+              <e p="GameFeatureSystem.cs" t="Include" />
+              <e p="MouseClickSystem.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Temp\bin" t="ExcludeRecursive" />
+      </e>
       <e p="Rendu.sln" t="IncludeFlat" />
       <e p="ThirdParty" t="Include">
         <e p="Entitas" t="Include">
@@ -982,6 +1161,7 @@
             <e p="Migrations" t="Include">
               <e p="TestComponentMigration.cs" t="Include" />
               <e p="TestContextsMigration.cs" t="Include" />
+              <e p="TestFeatureMigration.cs" t="Include" />
             </e>
             <e p="Preferences" t="Include">
               <e p="TestPreferences.cs" t="Include" />
@@ -1006,6 +1186,7 @@
                 <e p="TestComponentDataProvider.cs" t="Include" />
                 <e p="TestContextDataProvider.cs" t="Include" />
                 <e p="TestEntityIndexDataProvider.cs" t="Include" />
+                <e p="TestSystemDataProvider.cs" t="Include" />
               </e>
               <e p="FileGeneration" t="Include">
                 <e p="TestFileGenerator.cs" t="Include" />

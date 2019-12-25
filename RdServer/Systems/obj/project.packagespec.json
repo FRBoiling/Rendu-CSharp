@@ -1,29 +1,37 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\GitHub\\RenduEcs\\Server\\Systems\\Server.Systems.csproj",
+    "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdServer\\Systems\\Server.Systems.csproj",
     "projectName": "Server.Systems",
-    "projectPath": "D:\\GitHub\\RenduEcs\\Server\\Systems\\Server.Systems.csproj",
-    "outputPath": "D:\\GitHub\\RenduEcs\\Server\\Systems\\obj\\",
+    "projectPath": "D:\\GitHub\\RenduEcs\\RdServer\\Systems\\Server.Systems.csproj",
+    "outputPath": "D:\\GitHub\\RenduEcs\\RdServer\\Systems\\obj\\",
     "projectStyle": "PackageReference",
-    "crossTargeting": true,
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
-      "net461",
-      "netcoreapp2.2"
+      "netstandard2.0"
     ],
     "sources": {
       "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
-      "netcoreapp2.2": {
-        "projectReferences": {}
-      },
-      "net461": {
-        "projectReferences": {}
+      "netstandard2.0": {
+        "projectReferences": {
+          "D:\\GitHub\\RenduEcs\\RdServer\\Generated\\Server.Generated.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdServer\\Generated\\Server.Generated.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\RdShared\\AppFrame\\AppFrame.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdShared\\AppFrame\\AppFrame.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas\\Entitas.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas\\Entitas.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -33,12 +41,12 @@
     }
   },
   "frameworks": {
-    "netcoreapp2.2": {
+    "netstandard2.0": {
       "dependencies": {
-        "Microsoft.NETCore.App": {
+        "NETStandard.Library": {
           "suppressParent": "All",
           "target": "Package",
-          "version": "[2.2.0, )",
+          "version": "[2.0.3, )",
           "autoReferenced": true
         }
       },
@@ -52,7 +60,6 @@
       ],
       "assetTargetFallback": true,
       "warn": true
-    },
-    "net461": {}
+    }
   }
 }

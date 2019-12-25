@@ -1,4 +1,4 @@
-namespace Rd.Plugins.Data
+namespace Rd.Plugins
 {
     public class MethodData
     {

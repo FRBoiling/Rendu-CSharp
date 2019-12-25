@@ -2,11 +2,9 @@ using System.IO;
 using System.Linq;
 using Entitas.Extensions;
 using Rd.CodeGeneration;
-using Rd.Plugins.Component.DataProviders.ComponentDataProviders;
-using Rd.Plugins.Data;
 using Rd.Utils;
 
-namespace Rd.Plugins.Component.CodeGenerators
+namespace Rd.Plugins
 {
     public class ComponentEntityApiGenerator : AbstractGenerator
     {

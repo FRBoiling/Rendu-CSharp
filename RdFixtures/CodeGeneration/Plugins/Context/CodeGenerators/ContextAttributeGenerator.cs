@@ -1,9 +1,8 @@
 using System.IO;
 using System.Linq;
 using Rd.CodeGeneration;
-using Rd.Plugins.Context.DataProviders;
 
-namespace Rd.Plugins.Context.CodeGenerators
+namespace Rd.Plugins
 {
     public class ContextAttributeGenerator : ICodeGenerator
     {

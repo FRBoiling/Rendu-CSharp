@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Rd.CodeGeneration;
-using Rd.Plugins.Configs;
 using Rd.Serialization;
 
-namespace Rd.Plugins.Context.DataProviders
+namespace Rd.Plugins
 {
     public class ContextDataProvider : IDataProvider, IConfigurable
     {

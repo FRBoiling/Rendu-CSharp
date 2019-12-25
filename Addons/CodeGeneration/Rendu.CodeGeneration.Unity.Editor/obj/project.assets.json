@@ -69,6 +69,16 @@
           "bin/placeholder/Rd.Analytics.dll": {}
         }
       },
+      "Rd.Buffer/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Rd.Buffer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Buffer.dll": {}
+        }
+      },
       "Rd.CodeGeneration/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -111,6 +121,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Rd.Buffer": "1.0.0",
           "Rd.Logging": "1.0.0"
         },
         "compile": {
@@ -302,6 +313,11 @@
       "path": "../../../RdFixtures/Analytics/Rd.Analytics.csproj",
       "msbuildProject": "../../../RdFixtures/Analytics/Rd.Analytics.csproj"
     },
+    "Rd.Buffer/1.0.0": {
+      "type": "project",
+      "path": "../../../RdFixtures/Buffer/Rd.Buffer.csproj",
+      "msbuildProject": "../../../RdFixtures/Buffer/Rd.Buffer.csproj"
+    },
     "Rd.CodeGeneration/1.0.0": {
       "type": "project",
       "path": "../../../RdFixtures/CodeGeneration/CodeGeneration/Rd.CodeGeneration.csproj",
@@ -431,8 +447,7 @@
             "target": "Package",
             "version": "[2018.1.6-f1, )"
           }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
       }
     }
   }

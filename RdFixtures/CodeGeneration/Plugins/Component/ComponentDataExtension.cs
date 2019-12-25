@@ -1,7 +1,7 @@
 ﻿using Entitas.Extensions;
 using Rd.Utils;
 
-namespace Rd.Plugins.Component
+namespace Rd.Plugins
 {
     public static class ComponentDataExtension
     {

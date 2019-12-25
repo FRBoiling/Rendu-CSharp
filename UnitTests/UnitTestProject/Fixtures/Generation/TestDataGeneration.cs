@@ -1,5 +1,4 @@
-﻿using Rd.Plugins.Component;
-using Rd.Plugins.Component.DataProviders;
+﻿using Rd.Plugins;
 using UnitTestProject.Fixtures.Preferences;
 
 namespace UnitTestProject.Fixtures.Generation

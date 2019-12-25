@@ -1,7 +1,7 @@
 ﻿using System;
 using Rd.Utils;
 
-namespace Rd.Plugins.Component.DataProviders.ComponentDataProviders
+namespace Rd.Plugins
 {
     public class ComponentTypeComponentDataProvider : IComponentDataProvider
     {

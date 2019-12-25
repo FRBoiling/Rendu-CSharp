@@ -2,9 +2,8 @@ using System.IO;
 using System.Linq;
 using Entitas.Extensions;
 using Rd.CodeGeneration;
-using Rd.Plugins.Context.DataProviders;
 
-namespace Rd.Plugins.Context.CodeGenerators
+namespace Rd.Plugins
 {
     public class ContextGenerator : ICodeGenerator
     {

@@ -1,6 +1,4 @@
-﻿using Rd.Plugins.Data;
-
-namespace Rd.Plugins.Component.DataProviders.ComponentDataProviders
+﻿namespace Rd.Plugins
 {
     public static class MemberInfosComponentDataExtension
     {

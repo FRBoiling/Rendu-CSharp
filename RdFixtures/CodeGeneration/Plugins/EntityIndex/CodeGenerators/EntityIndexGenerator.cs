@@ -1,13 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using Rd.CodeGeneration;
-using Rd.Plugins.Component;
-using Rd.Plugins.Configs;
-using Rd.Plugins.EntityIndex.DataProviders;
 using Rd.Serialization;
 using Rd.Utils;
 
-namespace Rd.Plugins.EntityIndex.CodeGenerators
+namespace Rd.Plugins
 {
     public class EntityIndexGenerator : ICodeGenerator, IConfigurable
     {
@@ -64,10 +61,16 @@ ${getIndices}
 
         public CodeGenFile[] Generate(CodeGeneratorData[] data)
         {
+            //var entityIndexData = data
+            //    .OfType<EntityIndexData>()
+            //    .OrderBy(d => d.GetEntityIndexName())
+            //    .ToArray();
+           
             var entityIndexData = data
                 .OfType<EntityIndexData>()
                 .OrderBy(d => d.GetEntityIndexName())
                 .ToArray();
+
 
             return entityIndexData.Length == 0
                 ? new CodeGenFile[0]

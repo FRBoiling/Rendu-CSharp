@@ -1,4 +1,4 @@
-﻿namespace Rd.Plugins.Context.DataProviders
+﻿namespace Rd.Plugins
 {
     public static class ContextDataExtension
     {

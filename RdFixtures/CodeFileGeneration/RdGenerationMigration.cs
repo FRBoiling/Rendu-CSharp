@@ -6,13 +6,7 @@ using Entitas.Attributes;
 using Rd.CodeGeneration;
 using Rd.Logging;
 using Rd.Migration;
-using Rd.Plugins.Component;
-using Rd.Plugins.Component.CodeGenerators;
-using Rd.Plugins.Component.DataProviders;
-using Rd.Plugins.Context;
-using Rd.Plugins.Context.CodeGenerators;
-using Rd.Plugins.Context.DataProviders;
-using Rd.Plugins.Entity.CodeGenerators;
+using Rd.Plugins;
 using Rd.Utils;
 
 namespace Rd.CodeFileGeneration
@@ -39,13 +33,15 @@ namespace Rd.CodeFileGeneration
                 return null;
             }
 
+
             var assembly = RdDllLoad.GetDllAssembly(path, RdDllLoad.DLLNAME);
-            if (assembly==null)
+            if (assembly == null)
             {
                 return null;
             }
             var contextNameList = new List<string>();
             var componentsList = new List<Type>();
+            var structList = new List<Type>();
             var types = assembly.GetTypes();
             foreach (var type in types)
             {
@@ -57,14 +53,14 @@ namespace Rd.CodeFileGeneration
                 //}
                 var attributesData = type.GetCustomAttributesData();
                 foreach (var attribute in attributesData)
-                { 
+                {
                     if (attribute.AttributeType.Name != typeof(ContextAttribute).Name)
                     {
                         continue;
                     }
                     foreach (var item in attribute.ConstructorArguments)
                     {
-                        var contextName =item.Value as string;
+                        var contextName = item.Value as string;
                         if (contextName == null)
                         {
                             continue;
@@ -76,9 +72,10 @@ namespace Rd.CodeFileGeneration
 
                 if (!type.ImplementsInterface(typeof(IComponent).Name))
                 {
+                    if (!structList.Contains(type)) structList.Add(type);
                     continue;
                 }
-                
+
                 if (!componentsList.Contains(type)) componentsList.Add(type);
             }
 
@@ -125,12 +122,24 @@ namespace Rd.CodeFileGeneration
             var entityGenerator = new EntityGenerator();
             var entityFile = entityGenerator.Generate(contextDataArr);
             codeGenFiles.AddRange(entityFile);
+
+            
             ///////
             var componentsPreferences = new RdPreferences($"{contextsPreferencesStr}{"\n\t"}{COMPONENT_PREFERENCES}");
 
             var componentDataProvider = new ComponentDataProvider(componentsList.ToArray());
             componentDataProvider.Configure(componentsPreferences);
             var componentDataArr = (ComponentData[])componentDataProvider.GetData();
+
+            //var componentEntityApiInterfaceGenerator = new ComponentEntityApiInterfaceGenerator();
+            //componentEntityApiInterfaceGenerator.Configure(componentsPreferences);
+            //var componentEntityApiInterface = componentEntityApiInterfaceGenerator.Generate(componentDataArr);
+            //codeGenFiles.AddRange(componentEntityApiInterface);
+                                 
+            var componentContextApiGenerator = new ComponentContextApiGenerator();
+            componentContextApiGenerator.Configure(componentsPreferences);
+            var componentContext = componentContextApiGenerator.Generate(componentDataArr);
+            codeGenFiles.AddRange(componentContext);
 
             var componentEntityApiGenerator = new ComponentEntityApiGenerator();
             componentEntityApiGenerator.Configure(componentsPreferences);
@@ -141,21 +150,31 @@ namespace Rd.CodeFileGeneration
             componentMatcherApiGenerator.Configure(componentsPreferences);
             var componentMatcher = componentMatcherApiGenerator.Generate(componentDataArr);
             codeGenFiles.AddRange(componentMatcher);
-           
+
             var componentLookupGenerator = new ComponentLookupGenerator();
             componentLookupGenerator.Configure(componentsPreferences);
             var componentLookupFile = componentLookupGenerator.Generate(componentDataArr);
             codeGenFiles.AddRange(componentLookupFile);
 
-            var migratedFiles = new Dictionary<string,MigrationFile>();
+            /////
+            var entityIndexProvider = new EntityIndexDataProvider(componentsList.ToArray());
+            entityIndexProvider.Configure(componentsPreferences);
+            var entityIndexDateArr = (EntityIndexData[])entityIndexProvider.GetData();
+
+            var entityIndexGenerator = new EntityIndexGenerator();
+            entityIndexGenerator.Configure(componentsPreferences);
+            var entityIndexFile = entityIndexGenerator.Generate(entityIndexDateArr);
+            codeGenFiles.AddRange(entityIndexFile);
+
+            var migratedFiles = new Dictionary<string, MigrationFile>();
 
             foreach (var file in codeGenFiles)
             {
                 var fileFullName = Path.Combine(WorkingDirectory, file.fileName);
-                if (!migratedFiles.TryGetValue(fileFullName,out var migrationFile))
+                if (!migratedFiles.TryGetValue(fileFullName, out var migrationFile))
                 {
                     migrationFile = new MigrationFile(fileFullName, file.fileContent);
-                    migratedFiles.Add(fileFullName,migrationFile);
+                    migratedFiles.Add(fileFullName, migrationFile);
                 }
                 else
                 {

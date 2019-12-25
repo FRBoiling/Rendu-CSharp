@@ -1,6 +1,5 @@
 ﻿using Entitas;
 using Entitas.Attributes;
-using Entitas.Attributes.EntityIndex;
 
 namespace UnitTestProject.Fixtures
 {

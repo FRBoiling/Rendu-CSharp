@@ -1,6 +1,6 @@
 ﻿using Rd.CodeGeneration;
 
-namespace Rd.Plugins.Context
+namespace Rd.Plugins
 {
     public class ContextData : CodeGeneratorData
     {

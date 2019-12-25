@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Entitas.Attributes;
-using Rd.Plugins.Configs;
 using Rd.Serialization;
 
-namespace Rd.Plugins.Component.DataProviders.ComponentDataProviders
+namespace Rd.Plugins
 {
     public class ContextsComponentDataProvider : IComponentDataProvider, IConfigurable
     {
@@ -26,6 +24,13 @@ namespace Rd.Plugins.Component.DataProviders.ComponentDataProviders
 
         public string[] GetContextNames(Type type)
         {
+            //return Attribute
+            //    .GetCustomAttributes(type)
+            //    .OfType<ContextAttribute>()
+            //    .Select(attr => attr.contextName)
+            //    .ToArray();
+
+
             var contextNameList = new List<string>();
             var attributesData = type.GetCustomAttributesData();
             foreach (var attribute in attributesData)
@@ -45,18 +50,12 @@ namespace Rd.Plugins.Component.DataProviders.ComponentDataProviders
                 }
             }
             return contextNameList.ToArray();
-
-            //return Attribute
-            //    .GetCustomAttributes(type)
-            //    .OfType<ContextAttribute>()
-            //    .Select(attr => attr.contextName)
-            //    .ToArray();
         }
 
         public string[] GetContextNamesOrDefault(Type type)
         {
             var contextNames = GetContextNames(type);
-            if (contextNames.Length == 0) contextNames = new[] {_contextNamesConfig.contextNames[0]};
+            if (contextNames.Length == 0) contextNames = new[] { _contextNamesConfig.contextNames[0] };
 
             return contextNames;
         }

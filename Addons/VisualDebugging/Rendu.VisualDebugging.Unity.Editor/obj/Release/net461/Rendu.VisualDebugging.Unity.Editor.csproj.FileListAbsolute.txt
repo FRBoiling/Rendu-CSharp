@@ -1,8 +1,0 @@
-D:\GitHub\RenduEcs\Addons\VisualDebugging\Bin\net461\Rendu.VisualDebugging.Unity.Editor.dll
-D:\GitHub\RenduEcs\Addons\VisualDebugging\Bin\net461\Rendu.VisualDebugging.Unity.Editor.pdb
-D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.Unity.Editor\obj\Release\net461\Rendu.VisualDebugging.Unity.Editor.csprojAssemblyReference.cache
-D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.Unity.Editor\obj\Release\net461\Rendu.VisualDebugging.Unity.Editor.AssemblyInfoInputs.cache
-D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.Unity.Editor\obj\Release\net461\Rendu.VisualDebugging.Unity.Editor.AssemblyInfo.cs
-D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.Unity.Editor\obj\Release\net461\Rendu.VisualDebugging.Unity.Editor.csproj.CopyComplete
-D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.Unity.Editor\obj\Release\net461\Rendu.VisualDebugging.Unity.Editor.dll
-D:\GitHub\RenduEcs\Addons\VisualDebugging\Rendu.VisualDebugging.Unity.Editor\obj\Release\net461\Rendu.VisualDebugging.Unity.Editor.pdb

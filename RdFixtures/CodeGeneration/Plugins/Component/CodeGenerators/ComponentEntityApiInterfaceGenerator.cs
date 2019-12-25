@@ -2,9 +2,8 @@
 using System.Linq;
 using Entitas.Extensions;
 using Rd.CodeGeneration;
-using Rd.Plugins.Component.DataProviders.ComponentDataProviders;
 
-namespace Rd.Plugins.Component.CodeGenerators
+namespace Rd.Plugins
 {
     public class ComponentEntityApiInterfaceGenerator : AbstractGenerator
     {

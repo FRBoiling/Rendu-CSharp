@@ -1,0 +1,66 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdServer\\Components\\Server.Components.csproj",
+    "projectName": "Server.Components",
+    "projectPath": "D:\\GitHub\\RenduEcs\\RdServer\\Components\\Server.Components.csproj",
+    "outputPath": "D:\\GitHub\\RenduEcs\\RdServer\\Components\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netstandard2.0"
+    ],
+    "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netstandard2.0": {
+        "projectReferences": {
+          "D:\\GitHub\\RenduEcs\\RdFixtures\\Buffer\\Rd.Buffer.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Buffer\\Rd.Buffer.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas\\Entitas.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas\\Entitas.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netstandard2.0": {
+      "dependencies": {
+        "ILRepack.MSBuild.Task": {
+          "target": "Package",
+          "version": "[2.0.13, )"
+        },
+        "NETStandard.Library": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.0.3, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

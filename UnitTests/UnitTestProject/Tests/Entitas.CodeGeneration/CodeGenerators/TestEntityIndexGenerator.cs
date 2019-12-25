@@ -1,6 +1,6 @@
 using NUnit.Framework;
 using Rd.CodeGeneration;
-using Rd.Plugins.EntityIndex.CodeGenerators;
+using Rd.Plugins;
 
 namespace UnitTestProject
 {

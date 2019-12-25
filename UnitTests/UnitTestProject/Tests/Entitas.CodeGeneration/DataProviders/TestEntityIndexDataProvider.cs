@@ -1,6 +1,5 @@
 using NUnit.Framework;
-using Rd.Plugins.EntityIndex;
-using Rd.Plugins.EntityIndex.DataProviders;
+using Rd.Plugins;
 using Rd.Serialization;
 using UnitTestProject.Fixtures;
 using UnitTestProject.Fixtures.Components;
@@ -31,7 +30,7 @@ namespace UnitTestProject
             var d = data[0];
 
             Assert.AreEqual(d.GetEntityIndexType().GetType(), typeof(string));
-            Assert.AreEqual(d.GetEntityIndexType(), "Entitas.EntityIndex");
+            Assert.AreEqual(d.GetEntityIndexType(), "Entitas");
 
             Assert.AreEqual(d.IsCustom().GetType(), typeof(bool));
             Assert.AreEqual(d.IsCustom(), false);

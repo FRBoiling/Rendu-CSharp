@@ -1,11 +1,8 @@
 ﻿using System.IO;
 using System.Linq;
 using Rd.CodeGeneration;
-using Rd.Plugins.Component;
-using Rd.Plugins.Component.DataProviders.ComponentDataProviders;
-using Rd.Plugins.Data;
 
-namespace Rd.Plugins.Events.CodeGenerators
+namespace Rd.Plugins
 {
     public class EventListenertInterfaceGenerator : AbstractGenerator
     {

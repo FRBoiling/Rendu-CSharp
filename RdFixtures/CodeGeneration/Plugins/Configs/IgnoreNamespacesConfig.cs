@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Rd.Serialization;
 
-namespace Rd.Plugins.Configs
+namespace Rd.Plugins
 {
     public class IgnoreNamespacesConfig : AbstractConfigurableConfig
     {

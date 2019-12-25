@@ -2,10 +2,8 @@
 using System.Linq;
 using Entitas.Extensions;
 using Rd.CodeGeneration;
-using Rd.Plugins.Component;
-using Rd.Plugins.Component.DataProviders.ComponentDataProviders;
 
-namespace Rd.Plugins.Events.CodeGenerators
+namespace Rd.Plugins
 {
     public class EventListenerComponentGenerator : AbstractGenerator
     {

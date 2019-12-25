@@ -2,10 +2,6 @@
 using System.CodeDom.Compiler;
 using Entitas.Attributes;
 using Entitas.Extensions;
-using Rd.Plugins.Component;
-using Rd.Plugins.Component.DataProviders.ComponentDataProviders;
-using Rd.Plugins.Data;
-using Rd.Plugins.Events;
 using Rd.Utils;
 
 namespace Rd.Plugins

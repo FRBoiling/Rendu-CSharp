@@ -9,11 +9,11 @@
     ".NETStandard,Version=v2.0/": {
       "Server.Components/1.0.0": {
         "dependencies": {
-          "Consts": "1.0.0",
           "Entitas": "1.0.0",
           "Entitas.Attributes": "1.0.0",
           "ILRepack.MSBuild.Task": "2.0.13",
-          "NETStandard.Library": "2.0.3"
+          "NETStandard.Library": "2.0.3",
+          "Rd.Buffer": "1.0.0"
         },
         "runtime": {
           "Server.Components.dll": {}
@@ -245,11 +245,6 @@
           }
         }
       },
-      "Consts/1.0.0": {
-        "runtime": {
-          "Consts.dll": {}
-        }
-      },
       "Entitas/1.0.0": {
         "runtime": {
           "Entitas.dll": {}
@@ -258,6 +253,11 @@
       "Entitas.Attributes/1.0.0": {
         "runtime": {
           "Entitas.Attributes.dll": {}
+        }
+      },
+      "Rd.Buffer/1.0.0": {
+        "runtime": {
+          "Rd.Buffer.dll": {}
         }
       }
     }
@@ -457,17 +457,17 @@
       "path": "system.threading.thread/4.0.0",
       "hashPath": "system.threading.thread.4.0.0.nupkg.sha512"
     },
-    "Consts/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Entitas/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Entitas.Attributes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Rd.Buffer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,4 +1,4 @@
-﻿namespace Entitas.EntityIndex
+﻿namespace Entitas
 {
     public interface IEntityIndex
     {

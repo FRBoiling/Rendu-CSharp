@@ -1,6 +1,6 @@
 ﻿using Rd.CodeGeneration;
 
-namespace Rd.Plugins.Component
+namespace Rd.Plugins
 {
     public class ComponentData : CodeGeneratorData
     {

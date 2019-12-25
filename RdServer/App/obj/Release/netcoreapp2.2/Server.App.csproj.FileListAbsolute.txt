@@ -1,3 +1,0 @@
-D:\GitHub\RenduEcs\RdServer\App\obj\Release\netcoreapp2.2\Server.App.csprojAssemblyReference.cache
-D:\GitHub\RenduEcs\RdServer\App\obj\Release\netcoreapp2.2\Server.App.AssemblyInfoInputs.cache
-D:\GitHub\RenduEcs\RdServer\App\obj\Release\netcoreapp2.2\Server.App.AssemblyInfo.cs

@@ -1,17 +1,17 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\GitHub\\RenduEcs\\Server\\App\\Server.App.csproj",
+    "projectUniqueName": "D:\\GitHub\\RenduEcs\\RdServer\\App\\Server.App.csproj",
     "projectName": "Server.App",
-    "projectPath": "D:\\GitHub\\RenduEcs\\Server\\App\\Server.App.csproj",
-    "outputPath": "D:\\GitHub\\RenduEcs\\Server\\App\\obj\\",
+    "projectPath": "D:\\GitHub\\RenduEcs\\RdServer\\App\\Server.App.csproj",
+    "outputPath": "D:\\GitHub\\RenduEcs\\RdServer\\App\\obj\\",
     "projectStyle": "PackageReference",
     "crossTargeting": true,
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
-      "net45",
+      "net461",
       "netcoreapp2.2"
     ],
     "sources": {
@@ -20,10 +20,30 @@
     },
     "frameworks": {
       "netcoreapp2.2": {
-        "projectReferences": {}
+        "projectReferences": {
+          "D:\\GitHub\\RenduEcs\\RdServer\\Generated\\Server.Generated.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdServer\\Generated\\Server.Generated.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\RdServer\\Systems\\Server.Systems.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdServer\\Systems\\Server.Systems.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\RdShared\\AppFrame\\AppFrame.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdShared\\AppFrame\\AppFrame.csproj"
+          }
+        }
       },
-      "net45": {
-        "projectReferences": {}
+      "net461": {
+        "projectReferences": {
+          "D:\\GitHub\\RenduEcs\\RdServer\\Generated\\Server.Generated.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdServer\\Generated\\Server.Generated.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\RdServer\\Systems\\Server.Systems.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdServer\\Systems\\Server.Systems.csproj"
+          },
+          "D:\\GitHub\\RenduEcs\\RdShared\\AppFrame\\AppFrame.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdShared\\AppFrame\\AppFrame.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -53,7 +73,7 @@
       "assetTargetFallback": true,
       "warn": true
     },
-    "net45": {}
+    "net461": {}
   },
   "runtimes": {
     "win7-x86": {

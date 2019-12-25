@@ -1,4 +1,4 @@
-namespace Entitas.Attributes.EntityIndex
+namespace Entitas.Attributes
 {
     public enum EntityIndexType
     {

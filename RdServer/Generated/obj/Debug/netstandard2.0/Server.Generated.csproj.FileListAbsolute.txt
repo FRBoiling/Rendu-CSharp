@@ -1,0 +1,17 @@
+D:\GitHub\RenduEcs\RdServer\Generated\bin\Debug\netstandard2.0\Server.Generated.deps.json
+D:\GitHub\RenduEcs\RdServer\Generated\bin\Debug\netstandard2.0\Server.Generated.dll
+D:\GitHub\RenduEcs\RdServer\Generated\bin\Debug\netstandard2.0\Server.Generated.pdb
+D:\GitHub\RenduEcs\RdServer\Generated\bin\Debug\netstandard2.0\Entitas.Attributes.dll
+D:\GitHub\RenduEcs\RdServer\Generated\bin\Debug\netstandard2.0\Entitas.dll
+D:\GitHub\RenduEcs\RdServer\Generated\bin\Debug\netstandard2.0\Rd.Buffer.dll
+D:\GitHub\RenduEcs\RdServer\Generated\bin\Debug\netstandard2.0\Server.Components.dll
+D:\GitHub\RenduEcs\RdServer\Generated\bin\Debug\netstandard2.0\Server.Components.pdb
+D:\GitHub\RenduEcs\RdServer\Generated\bin\Debug\netstandard2.0\Entitas.pdb
+D:\GitHub\RenduEcs\RdServer\Generated\bin\Debug\netstandard2.0\Entitas.Attributes.pdb
+D:\GitHub\RenduEcs\RdServer\Generated\bin\Debug\netstandard2.0\Rd.Buffer.pdb
+D:\GitHub\RenduEcs\RdServer\Generated\obj\Debug\netstandard2.0\Server.Generated.csprojAssemblyReference.cache
+D:\GitHub\RenduEcs\RdServer\Generated\obj\Debug\netstandard2.0\Server.Generated.AssemblyInfoInputs.cache
+D:\GitHub\RenduEcs\RdServer\Generated\obj\Debug\netstandard2.0\Server.Generated.AssemblyInfo.cs
+D:\GitHub\RenduEcs\RdServer\Generated\obj\Debug\netstandard2.0\Server.Generated.csproj.CopyComplete
+D:\GitHub\RenduEcs\RdServer\Generated\obj\Debug\netstandard2.0\Server.Generated.dll
+D:\GitHub\RenduEcs\RdServer\Generated\obj\Debug\netstandard2.0\Server.Generated.pdb

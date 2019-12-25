@@ -1,9 +1,6 @@
 ﻿using Rd.CodeGeneration;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Rd.Plugins.Context.CodeGenerators
+namespace Rd.Plugins
 {
     public class FeatureGenerator : ICodeGenerator, ICodeGenerationPlugin
     {

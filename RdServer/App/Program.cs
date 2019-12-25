@@ -1,6 +1,4 @@
-﻿using AppFrame;
-
-namespace Server
+﻿namespace Server
 {
     internal class Program
     {

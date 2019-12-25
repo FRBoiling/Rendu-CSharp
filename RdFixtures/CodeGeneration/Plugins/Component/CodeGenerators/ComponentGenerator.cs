@@ -1,10 +1,9 @@
 using System.IO;
 using System.Linq;
 using Rd.CodeGeneration;
-using Rd.Plugins.Component.DataProviders.ComponentDataProviders;
 using Rd.Utils;
 
-namespace Rd.Plugins.Component.CodeGenerators
+namespace Rd.Plugins
 {
     public class ComponentGenerator : ICodeGenerator
     {

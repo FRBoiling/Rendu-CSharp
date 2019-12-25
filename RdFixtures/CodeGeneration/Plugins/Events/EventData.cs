@@ -1,6 +1,6 @@
 ﻿using Entitas.Attributes;
 
-namespace Rd.Plugins.Events
+namespace Rd.Plugins
 {
     public class EventData
     {

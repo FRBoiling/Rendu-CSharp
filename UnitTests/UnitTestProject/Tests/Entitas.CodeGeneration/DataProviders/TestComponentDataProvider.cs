@@ -1,13 +1,8 @@
 using System;
 using Entitas.Attributes;
 using NUnit.Framework;
-using Rd.Plugins.Component;
-using Rd.Plugins.Component.DataProviders;
-using Rd.Plugins.Component.DataProviders.ComponentDataProviders;
-using Rd.Plugins.Data;
+using Rd.Plugins;
 using Rd.Serialization;
-using Rd.Utils;
-using UnitTestProject.Fixtures;
 using UnitTestProject.Fixtures.Components;
 using UnitTestProject.Fixtures.Preferences;
 

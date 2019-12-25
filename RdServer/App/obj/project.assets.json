@@ -544,16 +544,6 @@
           "bin/placeholder/AppFrame.dll": {}
         }
       },
-      "Consts/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/Consts.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Consts.dll": {}
-        }
-      },
       "Entitas/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -574,14 +564,24 @@
           "bin/placeholder/Entitas.Attributes.dll": {}
         }
       },
+      "Rd.Buffer/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Rd.Buffer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Buffer.dll": {}
+        }
+      },
       "Server.Components/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Consts": "1.0.0",
           "Entitas": "1.0.0",
           "Entitas.Attributes": "1.0.0",
-          "ILRepack.MSBuild.Task": "2.0.13"
+          "ILRepack.MSBuild.Task": "2.0.13",
+          "Rd.Buffer": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Server.Components.dll": {}
@@ -607,6 +607,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "AppFrame": "1.0.0",
           "Entitas": "1.0.0",
           "Entitas.Attributes": "1.0.0",
           "Server.Generated": "1.0.0"
@@ -1390,16 +1391,6 @@
           "bin/placeholder/AppFrame.dll": {}
         }
       },
-      "Consts/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/Consts.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Consts.dll": {}
-        }
-      },
       "Entitas/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1420,14 +1411,24 @@
           "bin/placeholder/Entitas.Attributes.dll": {}
         }
       },
+      "Rd.Buffer/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Rd.Buffer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Buffer.dll": {}
+        }
+      },
       "Server.Components/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Consts": "1.0.0",
           "Entitas": "1.0.0",
           "Entitas.Attributes": "1.0.0",
-          "ILRepack.MSBuild.Task": "2.0.13"
+          "ILRepack.MSBuild.Task": "2.0.13",
+          "Rd.Buffer": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Server.Components.dll": {}
@@ -1453,6 +1454,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "AppFrame": "1.0.0",
           "Entitas": "1.0.0",
           "Entitas.Attributes": "1.0.0",
           "Server.Generated": "1.0.0"
@@ -1558,16 +1560,6 @@
           "bin/placeholder/AppFrame.dll": {}
         }
       },
-      "Consts/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/Consts.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Consts.dll": {}
-        }
-      },
       "Entitas/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1588,14 +1580,24 @@
           "bin/placeholder/Entitas.Attributes.dll": {}
         }
       },
+      "Rd.Buffer/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Rd.Buffer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Buffer.dll": {}
+        }
+      },
       "Server.Components/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Consts": "1.0.0",
           "Entitas": "1.0.0",
           "Entitas.Attributes": "1.0.0",
-          "ILRepack.MSBuild.Task": "2.0.13"
+          "ILRepack.MSBuild.Task": "2.0.13",
+          "Rd.Buffer": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Server.Components.dll": {}
@@ -1621,6 +1623,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "AppFrame": "1.0.0",
           "Entitas": "1.0.0",
           "Entitas.Attributes": "1.0.0",
           "Server.Generated": "1.0.0"
@@ -1703,7 +1706,7 @@
           "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {}
         },
         "runtime": {
-          "runtimes/win/lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {}
+          "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {}
         }
       },
       "AppFrame/1.0.0": {
@@ -1714,16 +1717,6 @@
         },
         "runtime": {
           "bin/placeholder/AppFrame.dll": {}
-        }
-      },
-      "Consts/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/Consts.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Consts.dll": {}
         }
       },
       "Entitas/1.0.0": {
@@ -1746,14 +1739,24 @@
           "bin/placeholder/Entitas.Attributes.dll": {}
         }
       },
+      "Rd.Buffer/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Rd.Buffer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Buffer.dll": {}
+        }
+      },
       "Server.Components/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Consts": "1.0.0",
           "Entitas": "1.0.0",
           "Entitas.Attributes": "1.0.0",
-          "ILRepack.MSBuild.Task": "2.0.13"
+          "ILRepack.MSBuild.Task": "2.0.13",
+          "Rd.Buffer": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Server.Components.dll": {}
@@ -1779,6 +1782,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "AppFrame": "1.0.0",
           "Entitas": "1.0.0",
           "Entitas.Attributes": "1.0.0",
           "Server.Generated": "1.0.0"
@@ -3850,11 +3854,6 @@
       "path": "../../RdShared/AppFrame/AppFrame.csproj",
       "msbuildProject": "../../RdShared/AppFrame/AppFrame.csproj"
     },
-    "Consts/1.0.0": {
-      "type": "project",
-      "path": "../../RdShared/Consts/Consts.csproj",
-      "msbuildProject": "../../RdShared/Consts/Consts.csproj"
-    },
     "Entitas/1.0.0": {
       "type": "project",
       "path": "../../ThirdParty/Entitas/Entitas/Entitas.csproj",
@@ -3864,6 +3863,11 @@
       "type": "project",
       "path": "../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj",
       "msbuildProject": "../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj"
+    },
+    "Rd.Buffer/1.0.0": {
+      "type": "project",
+      "path": "../../RdFixtures/Buffer/Rd.Buffer.csproj",
+      "msbuildProject": "../../RdFixtures/Buffer/Rd.Buffer.csproj"
     },
     "Server.Components/1.0.0": {
       "type": "project",
@@ -3976,12 +3980,9 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "warn": true
       },
-      "net461": {
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
-      }
+      "net461": {}
     },
     "runtimes": {
       "win7-x86": {

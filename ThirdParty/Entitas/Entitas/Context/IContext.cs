@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Entitas.Entity;
-using Entitas.EntityIndex;
+using Entitas;
 using Entitas.Group;
 using Entitas.Matcher;
 

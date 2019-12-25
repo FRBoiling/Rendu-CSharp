@@ -16,15 +16,17 @@ public partial class Contexts : IContexts
 
     static Contexts _sharedInstance;
 
-    public GateContext gate { get; set; }
-    public ZoneContext zone { get; set; }
+    public AppContext app { get; set; }
+    public ConfigContext config { get; set; }
+    public NetworkContext network { get; set; }
 
-    public IContext[] allContexts { get { return new IContext [] { gate, zone }; } }
+    public IContext[] allContexts { get { return new IContext [] { app, config, network }; } }
 
     public Contexts() 
     {
-        gate = new GateContext();
-        zone = new ZoneContext();
+        app = new AppContext();
+        config = new ConfigContext();
+        network = new NetworkContext();
 
         var postConstructors = System.Linq.Enumerable.Where(
             GetType().GetMethods(),

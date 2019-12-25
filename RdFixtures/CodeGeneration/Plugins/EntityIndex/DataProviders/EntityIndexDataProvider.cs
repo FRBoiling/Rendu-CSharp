@@ -4,18 +4,13 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using Entitas.Attributes;
-using Entitas.Attributes.EntityIndex;
 using Entitas.Extensions;
 using Rd.CodeGeneration;
 using Rd.CodeGenerator;
-using Rd.Plugins.Component;
-using Rd.Plugins.Component.DataProviders.ComponentDataProviders;
-using Rd.Plugins.Configs;
-using Rd.Plugins.Data;
 using Rd.Serialization;
 using Rd.Utils;
 
-namespace Rd.Plugins.EntityIndex.DataProviders
+namespace Rd.Plugins
 {
     public class EntityIndexDataProvider : IDataProvider, IConfigurable, ICachable, IDoctor
     {
@@ -61,18 +56,72 @@ namespace Rd.Plugins.EntityIndex.DataProviders
                             .GetCachedAssemblyResolver(objectCache, _assembliesConfig.assemblies, _codeGeneratorConfig.searchPaths)
                             .GetTypes();
 
+            //var entityIndexData = types
+            //    .Where(type => !type.IsAbstract)
+            //    .Where(type => type.ImplementsInterface<IComponent>())
+            //    .ToDictionary(
+            //        type => type,
+            //        type => type.GetPublicMemberInfos())
+            //    .Where(kv => kv.Value.Any(info => info.attributes.Any(attr => attr.attribute is AbstractEntityIndexAttribute)))
+            //    .SelectMany(kv => createEntityIndexData(kv.Key, kv.Value));
+
+            //var customEntityIndexData = types
+            //    .Where(type => !type.IsAbstract)
+            //    .Where(type => Attribute.IsDefined(type, typeof(CustomEntityIndexAttribute)))
+            //    .Select(createCustomEntityIndexData);
+
             var entityIndexData = types
                 .Where(type => !type.IsAbstract)
-                .Where(type => type.ImplementsInterface<IComponent>())
+                .Where(type => type.ImplementsInterface(typeof(IComponent).Name))
                 .ToDictionary(
                     type => type,
                     type => type.GetPublicMemberInfos())
-                .Where(kv => kv.Value.Any(info => info.attributes.Any(attr => attr.attribute is AbstractEntityIndexAttribute)))
+                .Where(kv => kv.Value.Any(info => info.attributes.Any(attr => CheckAttributeBaseType(attr.attribute.GetType()))))
                 .SelectMany(kv => createEntityIndexData(kv.Key, kv.Value));
+            //foreach (var kv in b)
+            //{
+            //    foreach (var info in kv.Value)
+            //    {
+            //        foreach (var attr in info.attributes)
+            //        {
+            //            var a = attr.attribute;
+            //            var a1 = a.GetType().BaseType.Name == "AbstractEntityIndexAttribute";
+
+            //        }
+            //    }
+            //}
+            //var a = types
+            //    .Where(type => !type.IsAbstract);
+            //foreach (var type in a)
+            //{
+            //  bool b=  Attribute.IsDefined(type, typeof(CustomEntityIndexAttribute));
+            //}
 
             var customEntityIndexData = types
                 .Where(type => !type.IsAbstract)
-                .Where(type => Attribute.IsDefined(type, typeof(CustomEntityIndexAttribute)))
+                //.Where(type => Attribute.IsDefined(type, typeof(CustomEntityIndexAttribute)))
+                .Where(type =>
+                    {
+                        var customEntityIndexAttributeList = new List<string>();
+                        var attributesData = type.GetCustomAttributesData();
+                        foreach (var attr in attributesData)
+                        {
+                            if (attr.AttributeType.Name == typeof(CustomEntityIndexAttribute).Name)
+                            {
+                                foreach (var item in attr.ConstructorArguments)
+                                {
+                                    var customEntityIndexAttribute = item.Value as string;
+                                    if (customEntityIndexAttribute == null)
+                                    {
+                                        continue;
+                                    }
+                                    if (!customEntityIndexAttributeList.Contains(customEntityIndexAttribute)) customEntityIndexAttributeList.Add(customEntityIndexAttribute);
+                                }
+                            }
+                        }
+                        return customEntityIndexAttributeList.Count() > 0;
+                    }
+                )
                 .Select(createCustomEntityIndexData);
 
             return entityIndexData
@@ -105,44 +154,108 @@ namespace Rd.Plugins.EntityIndex.DataProviders
             return false;
         }
 
+        private bool CheckAttributeBaseType(Type type)
+        {
+            if (type.BaseType.Name == "AbstractEntityIndexAttribute")
+            {
+                return true;
+            }
+            return false;
+        }
+
+
         private EntityIndexData[] createEntityIndexData(Type type, List<PublicMemberInfo> infos)
         {
-            var hasMultiple = infos.Count(i => i.attributes.Count(attr => attr.attribute is AbstractEntityIndexAttribute) == 1) > 1;
-            return infos
-                .Where(i => i.attributes.Count(attr => attr.attribute is AbstractEntityIndexAttribute) == 1)
-                .Select(info =>
-                {
-                    var data = new EntityIndexData();
-                    var attribute = (AbstractEntityIndexAttribute) info.attributes.Single(attr => attr.attribute is AbstractEntityIndexAttribute).attribute;
+            //var hasMultiple = infos.Count(i => i.attributes.Count(attr => attr.attribute is AbstractEntityIndexAttribute) == 1) > 1;
+            var hasMultiple = infos.Count(i => i.attributes.Count(attr => CheckAttributeBaseType(attr.attribute.GetType())) == 1) > 1;
+            //var aaa = 0;
+            //foreach (var i in infos)
+            //{
+            //    foreach (var attr in i.attributes)
+            //    {
+            //        if (CheckAttributeBaseType(attr.attribute.GetType()))
+            //        {
+            //            aaa++;
+            //        }
+            //    }
+            //}
+            //var entityIndexDataArr = infos
+            //.Where(i => i.attributes.Count(attr => attr.attribute is AbstractEntityIndexAttribute) == 1)
+            var entityIndexDataArr = infos.Where(i => i.attributes.Count(attr => CheckAttributeBaseType(attr.attribute.GetType())) == 1)
+                 .Select(info =>
+                 {
+                     var data = new EntityIndexData();
+                     var attributeType = info.attributes.Single(attr => CheckAttributeBaseType(attr.attribute.GetType())).attribute.GetType();
 
-                    data.SetEntityIndexType(getEntityIndexType(attribute));
-                    data.IsCustom(false);
-                    data.SetEntityIndexName(type.ToCompilableString().ToComponentName(_ignoreNamespacesConfig.ignoreNamespaces));
-                    data.SetKeyType(info.type.ToCompilableString());
-                    data.SetComponentType(type.ToCompilableString());
-                    data.SetMemberName(info.name);
-                    data.SetHasMultiple(hasMultiple);
-                    data.SetContextNames(_contextsComponentDataProvider.GetContextNamesOrDefault(type));
+                     data.SetEntityIndexType(getEntityIndexType(attributeType));
+                     data.IsCustom(false);
+                     data.SetEntityIndexName(type.ToCompilableString().ToComponentName(_ignoreNamespacesConfig.ignoreNamespaces));
+                     data.SetKeyType(info.type.ToCompilableString());
+                     data.SetComponentType(type.ToCompilableString());
+                     data.SetMemberName(info.name);
+                     data.SetHasMultiple(hasMultiple);
+                     data.SetContextNames(_contextsComponentDataProvider.GetContextNamesOrDefault(type));
 
-                    return data;
-                }).ToArray();
+                     return data;
+                 }).ToArray();
+            return entityIndexDataArr;
         }
 
         private EntityIndexData createCustomEntityIndexData(Type type)
         {
             var data = new EntityIndexData();
 
-            var attribute = (CustomEntityIndexAttribute) type.GetCustomAttributes(typeof(CustomEntityIndexAttribute), false)[0];
+            var customEntityIndexAttributeList = new List<string>();
+            var attributesData = type.GetCustomAttributesData();
+            foreach (var attr in attributesData)
+            {
+                if (attr.AttributeType.Name == typeof(CustomEntityIndexAttribute).Name)
+                {
+                    foreach (var item in attr.ConstructorArguments)
+                    {
+                        var customEntityIndexAttribute = item.Value as string;
+                        if (customEntityIndexAttribute == null)
+                        {
+                            continue;
+                        }
+                        if (!customEntityIndexAttributeList.Contains(customEntityIndexAttribute)) customEntityIndexAttributeList.Add(customEntityIndexAttribute);
+                    }
+                }
+            }
+
+            //var attribute = (CustomEntityIndexAttribute)type.GetCustomAttributes(typeof(CustomEntityIndexAttribute), false)[0];
 
             data.SetEntityIndexType(type.ToCompilableString());
             data.IsCustom(true);
             data.SetEntityIndexName(type.ToCompilableString().RemoveDots());
             data.SetHasMultiple(false);
-            data.SetContextNames(new[] {attribute.contextType.ToCompilableString().ShortTypeName().RemoveContextSuffix()});
+            //data.SetContextNames(new[] { attribute.contextType.ToCompilableString().ShortTypeName().RemoveContextSuffix() });
+            data.SetContextNames(customEntityIndexAttributeList.ToArray());
 
             var getMethods = type
                 .GetMethods(BindingFlags.Public | BindingFlags.Instance)
-                .Where(method => Attribute.IsDefined(method, typeof(EntityIndexGetMethodAttribute)))
+                //.Where(method => Attribute.IsDefined(method, typeof(EntityIndexGetMethodAttribute)))
+                .Where(method =>
+                {
+                    var entityIndexGetMethodAttributeList = new List<string>();
+                    var attrsData = method.GetCustomAttributesData();
+                    foreach (var attr in attrsData)
+                    {
+                        if (attr.AttributeType.Name == typeof(EntityIndexGetMethodAttribute).Name)
+                        {
+                            foreach (var item in attr.ConstructorArguments)
+                            {
+                                var entityIndexGetMethodAttribute = item.Value as string;
+                                if (entityIndexGetMethodAttribute == null)
+                                {
+                                    continue;
+                                }
+                                if (!entityIndexGetMethodAttributeList.Contains(entityIndexGetMethodAttribute)) entityIndexGetMethodAttributeList.Add(entityIndexGetMethodAttribute);
+                            }
+                        }
+                    }
+                    return entityIndexGetMethodAttributeList.Count > 0;
+                })
                 .Select(method => new MethodData(
                     method.ReturnType.ToCompilableString(),
                     method.Name,
@@ -161,11 +274,23 @@ namespace Rd.Plugins.EntityIndex.DataProviders
             switch (attribute.entityIndexType)
             {
                 case EntityIndexType.EntityIndex:
-                    return "Entitas.EntityIndex";
+                    return "Entitas";
                 case EntityIndexType.PrimaryEntityIndex:
                     return "Entitas.PrimaryEntityIndex";
                 default:
                     throw new Exception("Unhandled EntityIndexType: " + attribute.entityIndexType);
+            }
+        }
+        private string getEntityIndexType(Type type)
+        {
+            switch (type.Name)
+            {
+                case "EntityIndexAttribute":
+                    return "Entitas.EntityIndex";
+                case "PrimaryEntityIndexAttribute":
+                    return "Entitas.PrimaryEntityIndex";
+                default:
+                    throw new Exception("Unhandled EntityIndexType: " + type.Name);
             }
         }
     }

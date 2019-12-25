@@ -1,6 +1,5 @@
 using NUnit.Framework;
-using Rd.Plugins.Context;
-using Rd.Plugins.Context.DataProviders;
+using Rd.Plugins;
 using UnitTestProject.Fixtures.Preferences;
 
 namespace UnitTestProject

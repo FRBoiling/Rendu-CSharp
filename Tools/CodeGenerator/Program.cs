@@ -1,5 +1,4 @@
-﻿using LegendTool;
-using Rd.CodeFileGeneration;
+﻿using Rd.CodeFileGeneration;
 using Rd.Logging;
 using Rd.Migration;
 using System;

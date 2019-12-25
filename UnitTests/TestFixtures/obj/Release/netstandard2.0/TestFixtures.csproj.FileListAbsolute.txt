@@ -1,9 +1,0 @@
-D:\GitHub\RenduEcs\UnitTests\Bin\netstandard2.0\TestFixtures.deps.json
-D:\GitHub\RenduEcs\UnitTests\Bin\netstandard2.0\TestFixtures.dll
-D:\GitHub\RenduEcs\UnitTests\Bin\netstandard2.0\TestFixtures.pdb
-D:\GitHub\RenduEcs\UnitTests\TestFixtures\obj\Release\netstandard2.0\TestFixtures.csprojAssemblyReference.cache
-D:\GitHub\RenduEcs\UnitTests\TestFixtures\obj\Release\netstandard2.0\TestFixtures.AssemblyInfoInputs.cache
-D:\GitHub\RenduEcs\UnitTests\TestFixtures\obj\Release\netstandard2.0\TestFixtures.AssemblyInfo.cs
-D:\GitHub\RenduEcs\UnitTests\TestFixtures\obj\Release\netstandard2.0\TestFixtures.csproj.CopyComplete
-D:\GitHub\RenduEcs\UnitTests\TestFixtures\obj\Release\netstandard2.0\TestFixtures.dll
-D:\GitHub\RenduEcs\UnitTests\TestFixtures\obj\Release\netstandard2.0\TestFixtures.pdb

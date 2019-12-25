@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Entitas.Entity;
-using Entitas.EntityIndex;
+using Entitas;
 using Entitas.Exceptions;
 using Entitas.Group;
 using Entitas.Matcher;
@@ -165,7 +165,7 @@ namespace Entitas.Context
 
         /// Determines whether the context has the specified entity.
         public bool HasEntity(TEntity entity)
-        {
+        { 
             return _entities.Contains(entity);
         }
 
@@ -177,7 +177,6 @@ namespace Entitas.Context
                 _entitiesCache = new TEntity[_entities.Count];
                 _entities.CopyTo(_entitiesCache);
             }
-
             return _entitiesCache;
         }
 

@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Linq;
 
-namespace Rd.Plugins.Configs
+namespace Rd.Plugins
 {
     public static class TemplateConfigExtension
     {

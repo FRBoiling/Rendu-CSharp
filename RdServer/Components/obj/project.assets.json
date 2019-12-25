@@ -358,16 +358,6 @@
           "lib/netstandard1.3/System.Threading.Thread.dll": {}
         }
       },
-      "Consts/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/Consts.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Consts.dll": {}
-        }
-      },
       "Entitas/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -386,6 +376,16 @@
         },
         "runtime": {
           "bin/placeholder/Entitas.Attributes.dll": {}
+        }
+      },
+      "Rd.Buffer/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Rd.Buffer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Buffer.dll": {}
         }
       }
     }
@@ -1846,11 +1846,6 @@
         "system.threading.thread.nuspec"
       ]
     },
-    "Consts/1.0.0": {
-      "type": "project",
-      "path": "../../RdShared/Consts/Consts.csproj",
-      "msbuildProject": "../../RdShared/Consts/Consts.csproj"
-    },
     "Entitas/1.0.0": {
       "type": "project",
       "path": "../../ThirdParty/Entitas/Entitas/Entitas.csproj",
@@ -1860,15 +1855,20 @@
       "type": "project",
       "path": "../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj",
       "msbuildProject": "../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj"
+    },
+    "Rd.Buffer/1.0.0": {
+      "type": "project",
+      "path": "../../RdFixtures/Buffer/Rd.Buffer.csproj",
+      "msbuildProject": "../../RdFixtures/Buffer/Rd.Buffer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Consts >= 1.0.0",
       "Entitas >= 1.0.0",
       "Entitas.Attributes >= 1.0.0",
       "ILRepack.MSBuild.Task >= 2.0.13",
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "Rd.Buffer >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1901,8 +1901,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\GitHub\\RenduEcs\\RdShared\\Consts\\Consts.csproj": {
-              "projectPath": "D:\\GitHub\\RenduEcs\\RdShared\\Consts\\Consts.csproj"
+            "D:\\GitHub\\RenduEcs\\RdFixtures\\Buffer\\Rd.Buffer.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Buffer\\Rd.Buffer.csproj"
             },
             "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj"
@@ -1942,8 +1942,7 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }

@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "Server.Systems/1.0.0": {
         "dependencies": {
+          "AppFrame": "1.0.0",
           "Entitas": "1.0.0",
           "Entitas.Attributes": "1.0.0",
           "NETStandard.Library": "2.0.3",
@@ -244,9 +245,9 @@
           }
         }
       },
-      "Consts/1.0.0": {
+      "AppFrame/1.0.0": {
         "runtime": {
-          "Consts.dll": {}
+          "AppFrame.dll": {}
         }
       },
       "Entitas/1.0.0": {
@@ -259,12 +260,17 @@
           "Entitas.Attributes.dll": {}
         }
       },
+      "Rd.Buffer/1.0.0": {
+        "runtime": {
+          "Rd.Buffer.dll": {}
+        }
+      },
       "Server.Components/1.0.0": {
         "dependencies": {
-          "Consts": "1.0.0",
           "Entitas": "1.0.0",
           "Entitas.Attributes": "1.0.0",
-          "ILRepack.MSBuild.Task": "2.0.13"
+          "ILRepack.MSBuild.Task": "2.0.13",
+          "Rd.Buffer": "1.0.0"
         },
         "runtime": {
           "Server.Components.dll": {}
@@ -475,7 +481,7 @@
       "path": "system.threading.thread/4.0.0",
       "hashPath": "system.threading.thread.4.0.0.nupkg.sha512"
     },
-    "Consts/1.0.0": {
+    "AppFrame/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -486,6 +492,11 @@
       "sha512": ""
     },
     "Entitas.Attributes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Rd.Buffer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

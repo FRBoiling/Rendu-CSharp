@@ -8,17 +8,20 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int DebugMessage = 0;
-    public const int MouseClick = 1;
+    public const int Channel = 0;
+    public const int DebugMessage = 1;
+    public const int MouseClick = 2;
 
-    public const int TotalComponents = 2;
+    public const int TotalComponents = 3;
 
     public static readonly string[] componentNames = {
+        "Channel",
         "DebugMessage",
         "MouseClick"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(ChannelComponent),
         typeof(DebugMessageComponent),
         typeof(MouseClickComponent)
     };

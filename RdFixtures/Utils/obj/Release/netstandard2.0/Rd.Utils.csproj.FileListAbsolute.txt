@@ -1,9 +1,0 @@
-D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Utils.deps.json
-D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Utils.dll
-D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Utils.pdb
-D:\GitHub\RenduEcs\RdFixtures\Utils\obj\Release\netstandard2.0\Rd.Utils.csprojAssemblyReference.cache
-D:\GitHub\RenduEcs\RdFixtures\Utils\obj\Release\netstandard2.0\Rd.Utils.AssemblyInfoInputs.cache
-D:\GitHub\RenduEcs\RdFixtures\Utils\obj\Release\netstandard2.0\Rd.Utils.AssemblyInfo.cs
-D:\GitHub\RenduEcs\RdFixtures\Utils\obj\Release\netstandard2.0\Rd.Utils.csproj.CopyComplete
-D:\GitHub\RenduEcs\RdFixtures\Utils\obj\Release\netstandard2.0\Rd.Utils.dll
-D:\GitHub\RenduEcs\RdFixtures\Utils\obj\Release\netstandard2.0\Rd.Utils.pdb

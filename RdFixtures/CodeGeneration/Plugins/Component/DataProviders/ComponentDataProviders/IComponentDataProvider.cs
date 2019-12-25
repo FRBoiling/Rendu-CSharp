@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Rd.Plugins.Component.DataProviders.ComponentDataProviders
+namespace Rd.Plugins
 {
     public interface IComponentDataProvider
     {

@@ -26,6 +26,16 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Rd.Buffer/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Rd.Buffer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Buffer.dll": {}
+        }
+      },
       "Rd.Logging/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -182,6 +192,11 @@
         "netstandard.library.nuspec"
       ]
     },
+    "Rd.Buffer/1.0.0": {
+      "type": "project",
+      "path": "../Buffer/Rd.Buffer.csproj",
+      "msbuildProject": "../Buffer/Rd.Buffer.csproj"
+    },
     "Rd.Logging/1.0.0": {
       "type": "project",
       "path": "../Logging/Rd.Logging.csproj",
@@ -191,6 +206,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
+      "Rd.Buffer >= 1.0.0",
       "Rd.Logging >= 1.0.0"
     ]
   },
@@ -224,6 +240,9 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
+            "D:\\GitHub\\RenduEcs\\RdFixtures\\Buffer\\Rd.Buffer.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Buffer\\Rd.Buffer.csproj"
+            },
             "D:\\GitHub\\RenduEcs\\RdFixtures\\Logging\\Rd.Logging.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Logging\\Rd.Logging.csproj"
             }
@@ -255,8 +274,7 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }

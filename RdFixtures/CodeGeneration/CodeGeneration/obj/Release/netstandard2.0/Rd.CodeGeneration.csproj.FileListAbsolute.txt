@@ -1,9 +1,0 @@
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Bin\netstandard2.0\Rd.CodeGeneration.deps.json
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Bin\netstandard2.0\Rd.CodeGeneration.dll
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Bin\netstandard2.0\Rd.CodeGeneration.pdb
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\CodeGeneration\obj\Release\netstandard2.0\Rd.CodeGeneration.AssemblyInfoInputs.cache
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\CodeGeneration\obj\Release\netstandard2.0\Rd.CodeGeneration.AssemblyInfo.cs
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\CodeGeneration\obj\Release\netstandard2.0\Rd.CodeGeneration.csproj.CopyComplete
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\CodeGeneration\obj\Release\netstandard2.0\Rd.CodeGeneration.dll
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\CodeGeneration\obj\Release\netstandard2.0\Rd.CodeGeneration.pdb
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\CodeGeneration\obj\Release\netstandard2.0\Rd.CodeGeneration.csprojAssemblyReference.cache

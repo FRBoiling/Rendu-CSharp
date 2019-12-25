@@ -19,6 +19,9 @@
     "frameworks": {
       "netstandard2.0": {
         "projectReferences": {
+          "D:\\GitHub\\RenduEcs\\RdFixtures\\Buffer\\Rd.Buffer.csproj": {
+            "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Buffer\\Rd.Buffer.csproj"
+          },
           "D:\\GitHub\\RenduEcs\\RdFixtures\\Logging\\Rd.Logging.csproj": {
             "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Logging\\Rd.Logging.csproj"
           }

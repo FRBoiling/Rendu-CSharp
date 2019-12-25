@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Rd.CodeGeneration;
-using Rd.Plugins.Configs;
 using Rd.Serialization;
 
 namespace Rd.Plugins

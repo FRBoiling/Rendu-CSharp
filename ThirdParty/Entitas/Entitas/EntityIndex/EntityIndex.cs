@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Entitas.Entity;
 using Entitas.Group;
 
-namespace Entitas.EntityIndex
+namespace Entitas
 {
     public class EntityIndex<TEntity, TKey> : AbstractEntityIndex<TEntity, TKey> where TEntity : class, IEntity
     {

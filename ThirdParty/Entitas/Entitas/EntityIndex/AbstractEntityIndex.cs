@@ -2,7 +2,7 @@
 using Entitas.Entity;
 using Entitas.Group;
 
-namespace Entitas.EntityIndex
+namespace Entitas
 {
     public abstract class AbstractEntityIndex<TEntity, TKey> : IEntityIndex where TEntity : class, IEntity
     {

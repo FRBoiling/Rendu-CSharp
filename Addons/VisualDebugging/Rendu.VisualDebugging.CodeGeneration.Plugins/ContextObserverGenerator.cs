@@ -2,8 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Rd.CodeGeneration;
-using Rd.Plugins.Context;
-using Rd.Plugins.Context.DataProviders;
+using Rd.Plugins;
 using Rd.Utils;
 
 namespace Rendu.VisualDebugging.CodeGeneration.Plugins

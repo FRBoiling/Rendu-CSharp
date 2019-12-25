@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Linq;
-using Entitas.Attributes;
 
-namespace Rd.Plugins.Component.DataProviders.ComponentDataProviders
+namespace Rd.Plugins
 {
     public class ShouldGenerateMethodsComponentDataProvider : IComponentDataProvider
     {
@@ -10,7 +9,8 @@ namespace Rd.Plugins.Component.DataProviders.ComponentDataProviders
         {
             var generate = !Attribute
                 .GetCustomAttributes(type)
-                .OfType<DontGenerateAttribute>()
+                //.OfType<DontGenerateAttribute>()
+                .Where(attr=>attr.GetType().Name == "DontGenerateAttribute")
                 .Any();
 
             data.ShouldGenerateMethods(generate);

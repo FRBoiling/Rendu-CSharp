@@ -13,6 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\RdShared\AppFrame\AppFrame.csproj" />
     <ProjectReference Include="..\..\ThirdParty\Entitas\Attributes\Entitas.Attributes.csproj" />
     <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas\Entitas.csproj" />
     <ProjectReference Include="..\Generated\Server.Generated.csproj" />

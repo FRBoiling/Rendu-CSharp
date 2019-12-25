@@ -1,6 +1,6 @@
 using System;
 
-namespace Entitas.Attributes.EntityIndex
+namespace Entitas.Attributes
 {
     public abstract class AbstractEntityIndexAttribute : Attribute
     {

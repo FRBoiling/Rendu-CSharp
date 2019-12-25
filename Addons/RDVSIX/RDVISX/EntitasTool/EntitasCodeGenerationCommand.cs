@@ -9,7 +9,6 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Threading;
 using Rd.CodeFileGeneration;
-using System.CodeDom.Compiler;
 
 namespace RDVSIX
 {
@@ -146,6 +145,7 @@ namespace RDVSIX
             try
             {
                 // 编译项目 true
+                selectedProject.DTE.Solution.SolutionBuild.Clean(true);
                 selectedProject.DTE.Solution.SolutionBuild.BuildProject(buildCfg, selectedProject.UniqueName, true);
 
                 var contextsMigration = new RdComponentsMigration();

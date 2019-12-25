@@ -1,9 +1,3 @@
-D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.csprojAssemblyReference.cache
-D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.exe.config
-D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.Properties.Resources.resources
-D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.csproj.GenerateResource.cache
-D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.exe
-D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.pdb
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\CodeGenerator.exe.config
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\CodeGenerator.exe
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\CodeGenerator.pdb
@@ -115,6 +109,8 @@ D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Rd.Networking.dll
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Rd.Plugins.dll
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Rd.Serialization.dll
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Rd.Utils.dll
+D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\System.CodeDom.dll
+D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Rd.Buffer.dll
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Rd.Analytics.pdb
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Rd.CodeFileGeneration.pdb
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Rd.CodeGeneration.pdb
@@ -127,6 +123,12 @@ D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Rd.Serialization.pdb
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Rd.Utils.pdb
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Entitas.Attributes.pdb
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Entitas.pdb
-D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.csproj.CopyComplete
-D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\System.CodeDom.dll
 D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\System.CodeDom.xml
+D:\GitHub\RenduEcs\Tools\CodeGenerator\bin\Debug\Rd.Buffer.pdb
+D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.csprojAssemblyReference.cache
+D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.exe.config
+D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.Properties.Resources.resources
+D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.csproj.GenerateResource.cache
+D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.csproj.CopyComplete
+D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.exe
+D:\GitHub\RenduEcs\Tools\CodeGenerator\obj\Debug\CodeGenerator.pdb

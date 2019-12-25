@@ -1,6 +1,4 @@
-﻿using Rd.Plugins.Data;
-
-namespace Rd.Plugins.EntityIndex.DataProviders
+﻿namespace Rd.Plugins
 {
     public static class EntityIndexDataExtension
     {

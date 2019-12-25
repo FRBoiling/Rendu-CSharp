@@ -6,14 +6,11 @@ using Entitas.Attributes;
 using Entitas.Extensions;
 using Rd.CodeGeneration;
 using Rd.CodeGenerator;
-using Rd.Plugins.Component.DataProviders.ComponentDataProviders;
-using Rd.Plugins.Configs;
-using Rd.Plugins.Data;
 using Rd.Serialization;
 using Rd.Utils;
 
 
-namespace Rd.Plugins.Component.DataProviders
+namespace Rd.Plugins
 {
     public class ComponentDataProvider : IDataProvider, IConfigurable, ICachable, IDoctor
     {
@@ -91,6 +88,7 @@ namespace Rd.Plugins.Component.DataProviders
                 .SelectMany(createDataForNonComponent)
                 .ToArray();
 
+
             var mergedData = merge(dataFromNonComponents, dataFromComponents);
 
             var dataFromEvents = mergedData
@@ -99,6 +97,15 @@ namespace Rd.Plugins.Component.DataProviders
                 .ToArray();
 
             return merge(dataFromEvents, mergedData);
+
+
+            //var dataFromNonComponents = types
+            //    .Where(type => !type.ImplementsInterface(typeof(IComponent).Name));
+            ////    .Where(type => !type.IsGenericType)
+            ////    .Where(hasContexts)
+            ////    .SelectMany(createDataForNonComponent)
+            ////    .ToArray();
+            //return null;
         }
 
         public Diagnosis Diagnose()
@@ -210,14 +217,42 @@ namespace Rd.Plugins.Component.DataProviders
 
         private string[] getComponentNames(Type type)
         {
-            var attr = Attribute
-                .GetCustomAttributes(type)
-                .OfType<ComponentNameAttribute>()
-                .SingleOrDefault();
+            //var attr = Attribute
+            //    .GetCustomAttributes(type)
+            //    .OfType<ComponentNameAttribute>()
+            //    .SingleOrDefault();
 
-            if (attr == null) return new[] {type.ToCompilableString().ShortTypeName().AddComponentSuffix()};
+            //if (attr == null) return new[] {type.ToCompilableString().ShortTypeName().AddComponentSuffix()};
 
-            return attr.componentNames;
+            //return attr.componentNames;
+
+
+            var componentNames = new List<string>();
+            var attributesData = type.GetCustomAttributesData();
+            foreach (var attribute in attributesData)
+            {
+                if (attribute.AttributeType.Name != typeof(ComponentNameAttribute).Name)
+                {
+                    continue;
+                }
+                foreach (var item in attribute.ConstructorArguments)
+                {
+                    var index = item.Value as string;
+                    if (index == null)
+                    {
+                        continue;
+                    }
+                    if (!componentNames.Contains(index)) componentNames.Add(index);
+                }
+            }
+            if (componentNames.Count == 0)
+            {
+                return new[] { type.ToCompilableString().ShortTypeName().AddComponentSuffix() }; ;
+            }
+            else
+            {
+                return componentNames.ToArray();
+            }
         }
     }
 }

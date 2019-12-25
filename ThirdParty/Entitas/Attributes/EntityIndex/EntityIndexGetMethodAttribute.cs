@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Entitas.Attributes.EntityIndex
+namespace Entitas.Attributes
 {
     [AttributeUsage(AttributeTargets.Method)]
     public class EntityIndexGetMethodAttribute : Attribute

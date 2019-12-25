@@ -2,9 +2,7 @@
 using System.IO;
 using Rd.CodeGeneration;
 using Rd.Migration;
-using Rd.Plugins.Component.CodeGenerators;
 using TestComponents;
-using UnitTestProject.Fixtures.Generation;
 using UnitTestProject.Fixtures.Preferences;
 
 namespace UnitTestProject.Fixtures.Migrations

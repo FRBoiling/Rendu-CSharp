@@ -2,7 +2,7 @@
 using Rd.Serialization;
 using Rd.Utils;
 
-namespace Rd.Plugins.Configs
+namespace Rd.Plugins
 {
     public class AssembliesConfig : AbstractConfigurableConfig
     {

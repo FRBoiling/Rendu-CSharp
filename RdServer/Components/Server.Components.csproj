@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\RdShared\Consts\Consts.csproj" />
+    <ProjectReference Include="..\..\RdFixtures\Buffer\Rd.Buffer.csproj" />
     <ProjectReference Include="..\..\ThirdParty\Entitas\Attributes\Entitas.Attributes.csproj" />
     <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas\Entitas.csproj" />
   </ItemGroup>
@@ -28,7 +28,7 @@
       <WorkingDirectory>$(OutputPath)</WorkingDirectory>
     </PropertyGroup>
 
-    <ILRepack OutputType="$(OutputType)" MainAssembly="$(AssemblyName).dll" OutputAssembly="Components_source.dll" InputAssemblies="$(WorkingDirectory)\*.dll" WilcardInputAssemblies="true" WorkingDirectory="$(WorkingDirectory)" />
+    <ILRepack OutputType="$(OutputType)" MainAssembly="$(AssemblyName).dll" OutputAssembly="Components_source.dll" InputAssemblies="$(OutputPath)\*.dll" WilcardInputAssemblies="true" WorkingDirectory="$(OutputPath)" />
   </Target>
 
 

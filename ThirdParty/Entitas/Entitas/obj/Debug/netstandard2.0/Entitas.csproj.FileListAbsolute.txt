@@ -1,8 +1,8 @@
 D:\GitHub\RenduEcs\ThirdParty\Entitas\Bin\netstandard2.0\Entitas.deps.json
 D:\GitHub\RenduEcs\ThirdParty\Entitas\Bin\netstandard2.0\Entitas.dll
 D:\GitHub\RenduEcs\ThirdParty\Entitas\Bin\netstandard2.0\Entitas.pdb
+D:\GitHub\RenduEcs\ThirdParty\Entitas\Entitas\obj\Debug\netstandard2.0\Entitas.csprojAssemblyReference.cache
 D:\GitHub\RenduEcs\ThirdParty\Entitas\Entitas\obj\Debug\netstandard2.0\Entitas.AssemblyInfoInputs.cache
 D:\GitHub\RenduEcs\ThirdParty\Entitas\Entitas\obj\Debug\netstandard2.0\Entitas.AssemblyInfo.cs
 D:\GitHub\RenduEcs\ThirdParty\Entitas\Entitas\obj\Debug\netstandard2.0\Entitas.dll
 D:\GitHub\RenduEcs\ThirdParty\Entitas\Entitas\obj\Debug\netstandard2.0\Entitas.pdb
-D:\GitHub\RenduEcs\ThirdParty\Entitas\Entitas\obj\Debug\netstandard2.0\Entitas.csprojAssemblyReference.cache

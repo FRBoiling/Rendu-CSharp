@@ -2,11 +2,7 @@
 using System.IO;
 using Rd.CodeGeneration;
 using Rd.Migration;
-using Rd.Plugins.Component.CodeGenerators;
-using Rd.Plugins.Context;
-using Rd.Plugins.Context.CodeGenerators;
-using Rd.Plugins.Context.DataProviders;
-using Rd.Plugins.Entity.CodeGenerators;
+using Rd.Plugins;
 using UnitTestProject.Fixtures.Preferences;
 
 namespace UnitTestProject.Fixtures.Migrations

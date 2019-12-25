@@ -13,7 +13,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Buffer\Rd.Buffer.csproj" />
       <ProjectReference Include="..\Logging\Rd.Logging.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="IOCP\" />
     </ItemGroup>
 
 </Project>
