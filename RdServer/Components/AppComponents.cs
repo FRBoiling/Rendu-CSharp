@@ -16,8 +16,12 @@ namespace Server
     public class InfoComponent : IComponent
     {
         public AppType AppType;
-        public int MainKey;
-        public int SubKey;
+    }
+
+    [Context("Session")]
+    [FlagPrefix("flag")]
+    public class DestoryComponent : IComponent
+    {
     }
 
 }

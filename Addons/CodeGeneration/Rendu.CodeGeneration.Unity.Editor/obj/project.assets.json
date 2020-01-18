@@ -56,6 +56,16 @@
           "bin/placeholder/Entitas.Attributes.dll": {}
         }
       },
+      "Google.Protobuf/3.6.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Google.Protobuf.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Google.Protobuf.dll": {}
+        }
+      },
       "Rd.Analytics/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -107,6 +117,19 @@
           "bin/placeholder/Rd.CodeGenerator.dll": {}
         }
       },
+      "Rd.Helper/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Google.Protobuf": "3.6.0"
+        },
+        "compile": {
+          "bin/placeholder/Rd.Helper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Helper.dll": {}
+        }
+      },
       "Rd.Logging/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -121,7 +144,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Entitas": "1.0.0",
+          "Google.Protobuf": "3.6.0",
           "Rd.Buffer": "1.0.0",
+          "Rd.Helper": "1.0.0",
           "Rd.Logging": "1.0.0"
         },
         "compile": {
@@ -308,6 +334,11 @@
       "path": "../../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj",
       "msbuildProject": "../../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj"
     },
+    "Google.Protobuf/3.6.0": {
+      "type": "project",
+      "path": "../../../ThirdParty/Protobuf/Google.Protobuf/Google.Protobuf.csproj",
+      "msbuildProject": "../../../ThirdParty/Protobuf/Google.Protobuf/Google.Protobuf.csproj"
+    },
     "Rd.Analytics/1.0.0": {
       "type": "project",
       "path": "../../../RdFixtures/Analytics/Rd.Analytics.csproj",
@@ -327,6 +358,11 @@
       "type": "project",
       "path": "../../../RdFixtures/CodeGeneration/CodeGenerator/Rd.CodeGenerator.csproj",
       "msbuildProject": "../../../RdFixtures/CodeGeneration/CodeGenerator/Rd.CodeGenerator.csproj"
+    },
+    "Rd.Helper/1.0.0": {
+      "type": "project",
+      "path": "../../../RdFixtures/Helper/Rd.Helper.csproj",
+      "msbuildProject": "../../../RdFixtures/Helper/Rd.Helper.csproj"
     },
     "Rd.Logging/1.0.0": {
       "type": "project",
@@ -447,7 +483,8 @@
             "target": "Package",
             "version": "[2018.1.6-f1, )"
           }
-        }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,59 +1,28 @@
 ﻿using Entitas;
 using Entitas.Attributes;
 using Microsoft.IO;
+using Rd.Networking;
+using Rd.Networking.IOCP;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 
 namespace Server
 {
-    public enum ChannelType
-    {
-        Listener,
-        Connector
-    }
-
-    public enum NetworkType
-    {
-        Default,
-        TCP,
-        Http,
-    }
-
     [Context("Network")]
-    public class ConnectorComponent : IComponent
+    public class NetworkComponent : IComponent
     {
-        public IPEndPoint RemoteEndPoint;
-        public bool Reconnect;
-    }
-
-    [Context("Network")]
-    public class ListenerComponent : IComponent                                                     
-    {
-        public IPEndPoint LocalEndPoint;
-        public bool Relisten;
-    }
-
-    [Context("Network")]
-    public class ServiceComponent : IComponent
-    {
-        public NetworkType ProtocolType;
+        [EntityIndex]
+        public NetworkType NetworkType;
         public ChannelType ChannelType;
-
-        public RecyclableMemoryStreamManager MemoryStreamManager;
-
-        public SocketAsyncEventArgs EventArgs;
-
-        public HashSet<long> NeedStartSendChannel;
-
-        public Socket Socket;
+        public SessionType SessionType;
+        public IPEndPoint IpEndPoint;
     }
 
-    [Unique]
-    public class ChannalComponent : IComponent
+    [Context("Network")]
+    public class NetworkService : IComponent
     {
-        public Socket Socket;
+        public AService Service;
     }
-
 
 }

@@ -1,24 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <OutputType>Exe</OutputType>
-        <RootNamespace>Server</RootNamespace>
-        <TargetFrameworks>net461;netcoreapp2.2</TargetFrameworks>
-        <LangVersion>7.3</LangVersion>
-    </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>App</AssemblyName>
+    <RootNamespace>Server</RootNamespace>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <OutputPath>..\Bin</OutputPath>
-    </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\Bin</OutputPath>
+  </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <OutputPath>..\Bin</OutputPath>
-    </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\Bin</OutputPath>
+  </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\..\RdShared\AppFrame\AppFrame.csproj" />
-      <ProjectReference Include="..\Generated\Server.Generated.csproj" />
-      <ProjectReference Include="..\Systems\Server.Systems.csproj" />
-    </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RdShared\AppFrame\AppFrame.csproj" />
+    <ProjectReference Include="..\Generated\Server.Generated.csproj" />
+    <ProjectReference Include="..\Systems\Server.Systems.csproj" />
+  </ItemGroup>
 
 </Project>

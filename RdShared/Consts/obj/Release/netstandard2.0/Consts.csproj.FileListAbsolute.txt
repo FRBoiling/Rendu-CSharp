@@ -1,7 +1,0 @@
-D:\GitHub\RenduEcs\RdShared\Consts\bin\Release\netstandard2.0\Consts.deps.json
-D:\GitHub\RenduEcs\RdShared\Consts\bin\Release\netstandard2.0\Consts.dll
-D:\GitHub\RenduEcs\RdShared\Consts\bin\Release\netstandard2.0\Consts.pdb
-D:\GitHub\RenduEcs\RdShared\Consts\obj\Release\netstandard2.0\Consts.AssemblyInfoInputs.cache
-D:\GitHub\RenduEcs\RdShared\Consts\obj\Release\netstandard2.0\Consts.AssemblyInfo.cs
-D:\GitHub\RenduEcs\RdShared\Consts\obj\Release\netstandard2.0\Consts.dll
-D:\GitHub\RenduEcs\RdShared\Consts\obj\Release\netstandard2.0\Consts.pdb

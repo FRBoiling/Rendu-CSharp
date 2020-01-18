@@ -13,7 +13,8 @@
           "Entitas.Attributes": "1.0.0",
           "ILRepack.MSBuild.Task": "2.0.13",
           "NETStandard.Library": "2.0.3",
-          "Rd.Buffer": "1.0.0"
+          "Rd.Buffer": "1.0.0",
+          "Rd.Networking": "1.0.0"
         },
         "runtime": {
           "Server.Components.dll": {}
@@ -255,9 +256,39 @@
           "Entitas.Attributes.dll": {}
         }
       },
+      "Google.Protobuf/3.6.0": {
+        "runtime": {
+          "Google.Protobuf.dll": {}
+        }
+      },
       "Rd.Buffer/1.0.0": {
         "runtime": {
           "Rd.Buffer.dll": {}
+        }
+      },
+      "Rd.Helper/1.0.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.6.0"
+        },
+        "runtime": {
+          "Rd.Helper.dll": {}
+        }
+      },
+      "Rd.Logging/1.0.0": {
+        "runtime": {
+          "Rd.Logging.dll": {}
+        }
+      },
+      "Rd.Networking/1.0.0": {
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Google.Protobuf": "3.6.0",
+          "Rd.Buffer": "1.0.0",
+          "Rd.Helper": "1.0.0",
+          "Rd.Logging": "1.0.0"
+        },
+        "runtime": {
+          "Rd.Networking.dll": {}
         }
       }
     }
@@ -467,7 +498,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Google.Protobuf/3.6.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Rd.Buffer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Rd.Helper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Rd.Logging/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Rd.Networking/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

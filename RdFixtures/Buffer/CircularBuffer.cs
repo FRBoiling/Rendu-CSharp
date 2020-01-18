@@ -22,7 +22,6 @@ namespace Rd.Buffer
         {
             AddLast();
         }
-
         public override long Length
         {
             get

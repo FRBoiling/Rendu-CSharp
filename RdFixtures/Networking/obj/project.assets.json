@@ -26,6 +26,26 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Entitas/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entitas.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitas.dll": {}
+        }
+      },
+      "Google.Protobuf/3.6.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Google.Protobuf.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Google.Protobuf.dll": {}
+        }
+      },
       "Rd.Buffer/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -34,6 +54,19 @@
         },
         "runtime": {
           "bin/placeholder/Rd.Buffer.dll": {}
+        }
+      },
+      "Rd.Helper/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Google.Protobuf": "3.6.0"
+        },
+        "compile": {
+          "bin/placeholder/Rd.Helper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Helper.dll": {}
         }
       },
       "Rd.Logging/1.0.0": {
@@ -192,10 +225,25 @@
         "netstandard.library.nuspec"
       ]
     },
+    "Entitas/1.0.0": {
+      "type": "project",
+      "path": "../../ThirdParty/Entitas/Entitas/Entitas.csproj",
+      "msbuildProject": "../../ThirdParty/Entitas/Entitas/Entitas.csproj"
+    },
+    "Google.Protobuf/3.6.0": {
+      "type": "project",
+      "path": "../../ThirdParty/Protobuf/Google.Protobuf/Google.Protobuf.csproj",
+      "msbuildProject": "../../ThirdParty/Protobuf/Google.Protobuf/Google.Protobuf.csproj"
+    },
     "Rd.Buffer/1.0.0": {
       "type": "project",
       "path": "../Buffer/Rd.Buffer.csproj",
       "msbuildProject": "../Buffer/Rd.Buffer.csproj"
+    },
+    "Rd.Helper/1.0.0": {
+      "type": "project",
+      "path": "../Helper/Rd.Helper.csproj",
+      "msbuildProject": "../Helper/Rd.Helper.csproj"
     },
     "Rd.Logging/1.0.0": {
       "type": "project",
@@ -205,8 +253,11 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Entitas >= 1.0.0",
+      "Google.Protobuf >= 3.6.0",
       "NETStandard.Library >= 2.0.3",
       "Rd.Buffer >= 1.0.0",
+      "Rd.Helper >= 1.0.0",
       "Rd.Logging >= 1.0.0"
     ]
   },
@@ -243,8 +294,17 @@
             "D:\\GitHub\\RenduEcs\\RdFixtures\\Buffer\\Rd.Buffer.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Buffer\\Rd.Buffer.csproj"
             },
+            "D:\\GitHub\\RenduEcs\\RdFixtures\\Helper\\Rd.Helper.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Helper\\Rd.Helper.csproj"
+            },
             "D:\\GitHub\\RenduEcs\\RdFixtures\\Logging\\Rd.Logging.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Logging\\Rd.Logging.csproj"
+            },
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas\\Entitas.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Entitas\\Entitas.csproj"
+            },
+            "D:\\GitHub\\RenduEcs\\ThirdParty\\Protobuf\\Google.Protobuf\\Google.Protobuf.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Protobuf\\Google.Protobuf\\Google.Protobuf.csproj"
             }
           }
         }
@@ -274,7 +334,8 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

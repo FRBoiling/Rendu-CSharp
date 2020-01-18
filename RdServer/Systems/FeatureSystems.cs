@@ -6,6 +6,11 @@
         {
             Add(new AppContextInitSystem(contexts));
             Add(new AppInfoInitSystem(contexts,appType,mainKey,subKey));
+            Add(new NetworkReactiveSystem(contexts));
+            Add(new NetworkSystems(contexts));
+            Add(new SessionChannelReactiveSystem(contexts));
+            Add(new SessionSystems(contexts));
+
             switch (appType)
             {
                 case AppType.Default:

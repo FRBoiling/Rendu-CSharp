@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 
@@ -6,15 +7,18 @@ namespace Rd.Networking.IOCP
 {
     public enum ChannelType
     {
-        Listener,
-        Connector
+        Accept,
+        Connect
     }
 
     public abstract class AChannel
     {
+        public long Id;
         public ChannelType ChannelType { get; }
 
         public AService Service { get; private set; }
+
+        public bool IsDisposed { get; set; }
 
         public IPEndPoint RemoteAddress { get; protected set; }
         public IPEndPoint LocalAddress { get; protected set; }
@@ -28,7 +32,7 @@ namespace Rd.Networking.IOCP
         }
 
         public int Error { get; set; }
-
+        public object LastRecvTime { get; set; }
 
         private Action<AChannel, int> errorCallback;
 
@@ -59,13 +63,21 @@ namespace Rd.Networking.IOCP
 
         public abstract void Start();
 
-        //public override void Dispose()
-        //{
-        //    if (this.IsDisposed)
-        //    {
-        //        return;
-        //    }
-        //    this.Service.Remove(this.Id);
-        //}
+        public virtual void Dispose()
+        {
+            if (IsDisposed)
+            {
+                return;
+            }
+            IsDisposed = true;
+
+            this.Service.Remove(Id);
+        }
+
+        public override string ToString()
+        {
+            return $"channel {Id} {ChannelType.ToString()} (local:{LocalAddress}  remote:{RemoteAddress})";
+        }
+
     }
 }

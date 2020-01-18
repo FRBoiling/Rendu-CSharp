@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\RdFixtures\Buffer\Rd.Buffer.csproj" />
+    <ProjectReference Include="..\..\RdFixtures\Networking\Rd.Networking.csproj" />
     <ProjectReference Include="..\..\ThirdParty\Entitas\Attributes\Entitas.Attributes.csproj" />
     <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas\Entitas.csproj" />
   </ItemGroup>

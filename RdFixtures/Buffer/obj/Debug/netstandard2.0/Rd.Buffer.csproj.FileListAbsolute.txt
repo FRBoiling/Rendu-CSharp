@@ -5,4 +5,3 @@ D:\GitHub\RenduEcs\RdFixtures\Buffer\obj\Debug\netstandard2.0\Rd.Buffer.Assembly
 D:\GitHub\RenduEcs\RdFixtures\Buffer\obj\Debug\netstandard2.0\Rd.Buffer.AssemblyInfo.cs
 D:\GitHub\RenduEcs\RdFixtures\Buffer\obj\Debug\netstandard2.0\Rd.Buffer.dll
 D:\GitHub\RenduEcs\RdFixtures\Buffer\obj\Debug\netstandard2.0\Rd.Buffer.pdb
-D:\GitHub\RenduEcs\RdFixtures\Buffer\obj\Debug\netstandard2.0\Rd.Buffer.csprojAssemblyReference.cache

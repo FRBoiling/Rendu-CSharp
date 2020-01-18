@@ -7,6 +7,7 @@ namespace Components
     public class NormalComponent : IComponent
     {
         public int Value;
+        private int Value11;
     }
 
     [Context("Test")]

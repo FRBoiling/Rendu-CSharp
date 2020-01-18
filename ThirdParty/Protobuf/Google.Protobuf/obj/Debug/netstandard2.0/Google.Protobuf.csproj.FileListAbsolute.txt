@@ -1,0 +1,9 @@
+D:\GitHub\RenduEcs\ThirdParty\Protobuf\Bin\netstandard2.0\Google.Protobuf.deps.json
+D:\GitHub\RenduEcs\ThirdParty\Protobuf\Bin\netstandard2.0\Google.Protobuf.dll
+D:\GitHub\RenduEcs\ThirdParty\Protobuf\Bin\netstandard2.0\Google.Protobuf.pdb
+D:\GitHub\RenduEcs\ThirdParty\Protobuf\Bin\netstandard2.0\Google.Protobuf.xml
+D:\GitHub\RenduEcs\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\netstandard2.0\Google.Protobuf.AssemblyInfoInputs.cache
+D:\GitHub\RenduEcs\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\netstandard2.0\Google.Protobuf.AssemblyInfo.cs
+D:\GitHub\RenduEcs\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\netstandard2.0\Google.Protobuf.dll
+D:\GitHub\RenduEcs\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\netstandard2.0\Google.Protobuf.xml
+D:\GitHub\RenduEcs\ThirdParty\Protobuf\Google.Protobuf\obj\Debug\netstandard2.0\Google.Protobuf.pdb

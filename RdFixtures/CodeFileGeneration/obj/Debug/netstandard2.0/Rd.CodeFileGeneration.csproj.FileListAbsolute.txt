@@ -27,12 +27,3 @@ D:\GitHub\RenduEcs\RdFixtures\Rd.CodeFileGeneration\obj\Debug\netstandard2.0\Rd.
 D:\GitHub\RenduEcs\RdFixtures\Rd.CodeFileGeneration\obj\Debug\netstandard2.0\Rd.CodeFileGeneration.csproj.CopyComplete
 D:\GitHub\RenduEcs\RdFixtures\Rd.CodeFileGeneration\obj\Debug\netstandard2.0\Rd.CodeFileGeneration.dll
 D:\GitHub\RenduEcs\RdFixtures\Rd.CodeFileGeneration\obj\Debug\netstandard2.0\Rd.CodeFileGeneration.pdb
-D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.CodeFileGeneration.deps.json
-D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.CodeFileGeneration.dll
-D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.CodeFileGeneration.pdb
-D:\GitHub\RenduEcs\RdFixtures\CodeFileGeneration\obj\Debug\netstandard2.0\Rd.CodeFileGeneration.csprojAssemblyReference.cache
-D:\GitHub\RenduEcs\RdFixtures\CodeFileGeneration\obj\Debug\netstandard2.0\Rd.CodeFileGeneration.AssemblyInfoInputs.cache
-D:\GitHub\RenduEcs\RdFixtures\CodeFileGeneration\obj\Debug\netstandard2.0\Rd.CodeFileGeneration.AssemblyInfo.cs
-D:\GitHub\RenduEcs\RdFixtures\CodeFileGeneration\obj\Debug\netstandard2.0\Rd.CodeFileGeneration.csproj.CopyComplete
-D:\GitHub\RenduEcs\RdFixtures\CodeFileGeneration\obj\Debug\netstandard2.0\Rd.CodeFileGeneration.dll
-D:\GitHub\RenduEcs\RdFixtures\CodeFileGeneration\obj\Debug\netstandard2.0\Rd.CodeFileGeneration.pdb

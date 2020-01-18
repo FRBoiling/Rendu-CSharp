@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using AppFrame;
 using Entitas;
 
@@ -25,6 +26,8 @@ namespace Server
                 return;
             }
 
+            SynchronizationContext.SetSynchronizationContext(MainThreadSynchronizationContext.Inst);
+
             // 获取当前的环境组Contexts，里面有game环境和input环境
             var contexts = Contexts.sharedInstance;
 
@@ -47,6 +50,7 @@ namespace Server
         {
             while (isRun)
             {
+                MainThreadSynchronizationContext.Inst.Update();
                 // 执行系统集中的所有Execute方法
                 _systems.Execute();
 

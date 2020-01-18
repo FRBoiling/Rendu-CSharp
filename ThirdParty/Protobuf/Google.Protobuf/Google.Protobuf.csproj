@@ -19,8 +19,10 @@
     <IncludeSymbols>true</IncludeSymbols>
     <IncludeSource>true</IncludeSource>
     <LangVersion>7.3</LangVersion>
-    <TargetFramework>net461</TargetFramework>
-  </PropertyGroup>
+    <!--<TargetFramework>net461</TargetFramework>-->
+    <!--<TargetFramework>netcoreapp3.0</TargetFramework>-->
+    <TargetFramework>netstandard2.0</TargetFramework>
+ </PropertyGroup>
   <!-- 
     - Override target frameworks on non-Windows to just .NET Core
     - Doing this conditionally in the initial PropertyGroup confuses

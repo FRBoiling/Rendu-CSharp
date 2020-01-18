@@ -4,23 +4,19 @@ public partial class AppEntity
     public Server.InfoComponent info { get { return (Server.InfoComponent)GetComponent(AppComponentsLookup.Info); } }
     public bool hasInfo { get { return HasComponent(AppComponentsLookup.Info); } }
 
-    public void AddInfo(Server.AppType newAppType, int newMainKey, int newSubKey)
+    public void AddInfo(Server.AppType newAppType)
     {
         var index = AppComponentsLookup.Info;
         var component = (Server.InfoComponent)CreateComponent(index, typeof(Server.InfoComponent));
         component.AppType = newAppType;
-        component.MainKey = newMainKey;
-        component.SubKey = newSubKey;
         AddComponent(index, component);
     }
 
-    public void ReplaceInfo(Server.AppType newAppType, int newMainKey, int newSubKey) 
+    public void ReplaceInfo(Server.AppType newAppType) 
     {
         var index = AppComponentsLookup.Info;
         var component = (Server.InfoComponent)CreateComponent(index, typeof(Server.InfoComponent));
         component.AppType = newAppType;
-        component.MainKey = newMainKey;
-        component.SubKey = newSubKey;
         ReplaceComponent(index, component);
     }
 

@@ -1,7 +1,0 @@
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Bin\netstandard2.0\Rd.Migration.deps.json
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Bin\netstandard2.0\Rd.Migration.dll
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Bin\netstandard2.0\Rd.Migration.pdb
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Migration\obj\Debug\netstandard2.0\Rd.Migration.AssemblyInfoInputs.cache
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Migration\obj\Debug\netstandard2.0\Rd.Migration.AssemblyInfo.cs
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Migration\obj\Debug\netstandard2.0\Rd.Migration.dll
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Migration\obj\Debug\netstandard2.0\Rd.Migration.pdb

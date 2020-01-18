@@ -1,8 +1,0 @@
-D:\GitHub\RenduEcs\Addons\Unity\Bin\net461\Rendu.Entitas.Unity.Editor.dll
-D:\GitHub\RenduEcs\Addons\Unity\Bin\net461\Rendu.Entitas.Unity.Editor.pdb
-D:\GitHub\RenduEcs\Addons\Unity\Rendu.Entitas.Unity.Editor\obj\Debug\net461\Rendu.Entitas.Unity.Editor.csprojAssemblyReference.cache
-D:\GitHub\RenduEcs\Addons\Unity\Rendu.Entitas.Unity.Editor\obj\Debug\net461\Rendu.Entitas.Unity.Editor.AssemblyInfoInputs.cache
-D:\GitHub\RenduEcs\Addons\Unity\Rendu.Entitas.Unity.Editor\obj\Debug\net461\Rendu.Entitas.Unity.Editor.AssemblyInfo.cs
-D:\GitHub\RenduEcs\Addons\Unity\Rendu.Entitas.Unity.Editor\obj\Debug\net461\Rendu.Entitas.Unity.Editor.csproj.CopyComplete
-D:\GitHub\RenduEcs\Addons\Unity\Rendu.Entitas.Unity.Editor\obj\Debug\net461\Rendu.Entitas.Unity.Editor.dll
-D:\GitHub\RenduEcs\Addons\Unity\Rendu.Entitas.Unity.Editor\obj\Debug\net461\Rendu.Entitas.Unity.Editor.pdb

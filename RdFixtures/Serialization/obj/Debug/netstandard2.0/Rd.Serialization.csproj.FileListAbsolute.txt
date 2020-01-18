@@ -1,9 +1,0 @@
-D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Serialization.deps.json
-D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Serialization.dll
-D:\GitHub\RenduEcs\RdFixtures\Bin\netstandard2.0\Rd.Serialization.pdb
-D:\GitHub\RenduEcs\RdFixtures\Serialization\obj\Debug\netstandard2.0\Rd.Serialization.csprojAssemblyReference.cache
-D:\GitHub\RenduEcs\RdFixtures\Serialization\obj\Debug\netstandard2.0\Rd.Serialization.AssemblyInfoInputs.cache
-D:\GitHub\RenduEcs\RdFixtures\Serialization\obj\Debug\netstandard2.0\Rd.Serialization.AssemblyInfo.cs
-D:\GitHub\RenduEcs\RdFixtures\Serialization\obj\Debug\netstandard2.0\Rd.Serialization.csproj.CopyComplete
-D:\GitHub\RenduEcs\RdFixtures\Serialization\obj\Debug\netstandard2.0\Rd.Serialization.dll
-D:\GitHub\RenduEcs\RdFixtures\Serialization\obj\Debug\netstandard2.0\Rd.Serialization.pdb

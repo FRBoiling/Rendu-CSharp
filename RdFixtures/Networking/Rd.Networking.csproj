@@ -13,12 +13,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\ThirdParty\Entitas\Entitas\Entitas.csproj" />
+      <ProjectReference Include="..\..\ThirdParty\Protobuf\Google.Protobuf\Google.Protobuf.csproj" />
       <ProjectReference Include="..\Buffer\Rd.Buffer.csproj" />
+      <ProjectReference Include="..\Helper\Rd.Helper.csproj" />
       <ProjectReference Include="..\Logging\Rd.Logging.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="IOCP\" />
     </ItemGroup>
 
 </Project>

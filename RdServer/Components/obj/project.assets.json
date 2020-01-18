@@ -378,6 +378,16 @@
           "bin/placeholder/Entitas.Attributes.dll": {}
         }
       },
+      "Google.Protobuf/3.6.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Google.Protobuf.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Google.Protobuf.dll": {}
+        }
+      },
       "Rd.Buffer/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -386,6 +396,46 @@
         },
         "runtime": {
           "bin/placeholder/Rd.Buffer.dll": {}
+        }
+      },
+      "Rd.Helper/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Google.Protobuf": "3.6.0"
+        },
+        "compile": {
+          "bin/placeholder/Rd.Helper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Helper.dll": {}
+        }
+      },
+      "Rd.Logging/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Rd.Logging.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Logging.dll": {}
+        }
+      },
+      "Rd.Networking/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Entitas": "1.0.0",
+          "Google.Protobuf": "3.6.0",
+          "Rd.Buffer": "1.0.0",
+          "Rd.Helper": "1.0.0",
+          "Rd.Logging": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rd.Networking.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rd.Networking.dll": {}
         }
       }
     }
@@ -1856,10 +1906,30 @@
       "path": "../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj",
       "msbuildProject": "../../ThirdParty/Entitas/Attributes/Entitas.Attributes.csproj"
     },
+    "Google.Protobuf/3.6.0": {
+      "type": "project",
+      "path": "../../ThirdParty/Protobuf/Google.Protobuf/Google.Protobuf.csproj",
+      "msbuildProject": "../../ThirdParty/Protobuf/Google.Protobuf/Google.Protobuf.csproj"
+    },
     "Rd.Buffer/1.0.0": {
       "type": "project",
       "path": "../../RdFixtures/Buffer/Rd.Buffer.csproj",
       "msbuildProject": "../../RdFixtures/Buffer/Rd.Buffer.csproj"
+    },
+    "Rd.Helper/1.0.0": {
+      "type": "project",
+      "path": "../../RdFixtures/Helper/Rd.Helper.csproj",
+      "msbuildProject": "../../RdFixtures/Helper/Rd.Helper.csproj"
+    },
+    "Rd.Logging/1.0.0": {
+      "type": "project",
+      "path": "../../RdFixtures/Logging/Rd.Logging.csproj",
+      "msbuildProject": "../../RdFixtures/Logging/Rd.Logging.csproj"
+    },
+    "Rd.Networking/1.0.0": {
+      "type": "project",
+      "path": "../../RdFixtures/Networking/Rd.Networking.csproj",
+      "msbuildProject": "../../RdFixtures/Networking/Rd.Networking.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1868,7 +1938,8 @@
       "Entitas.Attributes >= 1.0.0",
       "ILRepack.MSBuild.Task >= 2.0.13",
       "NETStandard.Library >= 2.0.3",
-      "Rd.Buffer >= 1.0.0"
+      "Rd.Buffer >= 1.0.0",
+      "Rd.Networking >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1903,6 +1974,9 @@
           "projectReferences": {
             "D:\\GitHub\\RenduEcs\\RdFixtures\\Buffer\\Rd.Buffer.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Buffer\\Rd.Buffer.csproj"
+            },
+            "D:\\GitHub\\RenduEcs\\RdFixtures\\Networking\\Rd.Networking.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Networking\\Rd.Networking.csproj"
             },
             "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\ThirdParty\\Entitas\\Attributes\\Entitas.Attributes.csproj"
@@ -1942,7 +2016,8 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

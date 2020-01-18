@@ -1,0 +1,7 @@
+D:\GitHub\RenduEcs\RdFixtures\Buffer\bin\Release\netstandard2.0\Rd.Buffer.deps.json
+D:\GitHub\RenduEcs\RdFixtures\Buffer\bin\Release\netstandard2.0\Rd.Buffer.dll
+D:\GitHub\RenduEcs\RdFixtures\Buffer\bin\Release\netstandard2.0\Rd.Buffer.pdb
+D:\GitHub\RenduEcs\RdFixtures\Buffer\obj\Release\netstandard2.0\Rd.Buffer.AssemblyInfoInputs.cache
+D:\GitHub\RenduEcs\RdFixtures\Buffer\obj\Release\netstandard2.0\Rd.Buffer.AssemblyInfo.cs
+D:\GitHub\RenduEcs\RdFixtures\Buffer\obj\Release\netstandard2.0\Rd.Buffer.dll
+D:\GitHub\RenduEcs\RdFixtures\Buffer\obj\Release\netstandard2.0\Rd.Buffer.pdb

@@ -13,8 +13,10 @@ namespace Server
             _context = contexts.app;
         }
 
+
         public void Initialize()
         {
+            _context.CreateEntity();
             _context.CreateEntity();
         }
     }
@@ -36,10 +38,10 @@ namespace Server
 
         public void Initialize()
         {
-            foreach (var e in _contexts.app.GetEntities())
-            {
-                e.ReplaceInfo(_appType,_mainKey,_subKey);
-            }
+            //foreach (var e in _contexts.app.GetEntities())
+            //{
+            //    e.ReplaceInfo(_appType,_mainKey,_subKey);
+            //}
         }
     }
 }

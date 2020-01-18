@@ -1,9 +1,0 @@
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Bin\netstandard2.0\Rd.Plugins.deps.json
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Bin\netstandard2.0\Rd.Plugins.dll
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Bin\netstandard2.0\Rd.Plugins.pdb
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Plugins\obj\Debug\netstandard2.0\Rd.Plugins.csprojAssemblyReference.cache
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Plugins\obj\Debug\netstandard2.0\Rd.Plugins.AssemblyInfoInputs.cache
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Plugins\obj\Debug\netstandard2.0\Rd.Plugins.AssemblyInfo.cs
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Plugins\obj\Debug\netstandard2.0\Rd.Plugins.csproj.CopyComplete
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Plugins\obj\Debug\netstandard2.0\Rd.Plugins.dll
-D:\GitHub\RenduEcs\RdFixtures\CodeGeneration\Plugins\obj\Debug\netstandard2.0\Rd.Plugins.pdb

@@ -1,0 +1,12 @@
+D:\GitHub\RenduEcs\RdFixtures\Helper\bin\Debug\netstandard2.0\Rd.Helper.deps.json
+D:\GitHub\RenduEcs\RdFixtures\Helper\bin\Debug\netstandard2.0\Rd.Helper.dll
+D:\GitHub\RenduEcs\RdFixtures\Helper\bin\Debug\netstandard2.0\Rd.Helper.pdb
+D:\GitHub\RenduEcs\RdFixtures\Helper\bin\Debug\netstandard2.0\Google.Protobuf.dll
+D:\GitHub\RenduEcs\RdFixtures\Helper\bin\Debug\netstandard2.0\Google.Protobuf.pdb
+D:\GitHub\RenduEcs\RdFixtures\Helper\bin\Debug\netstandard2.0\Google.Protobuf.xml
+D:\GitHub\RenduEcs\RdFixtures\Helper\obj\Debug\netstandard2.0\Rd.Helper.csprojAssemblyReference.cache
+D:\GitHub\RenduEcs\RdFixtures\Helper\obj\Debug\netstandard2.0\Rd.Helper.AssemblyInfoInputs.cache
+D:\GitHub\RenduEcs\RdFixtures\Helper\obj\Debug\netstandard2.0\Rd.Helper.AssemblyInfo.cs
+D:\GitHub\RenduEcs\RdFixtures\Helper\obj\Debug\netstandard2.0\Rd.Helper.csproj.CopyComplete
+D:\GitHub\RenduEcs\RdFixtures\Helper\obj\Debug\netstandard2.0\Rd.Helper.dll
+D:\GitHub\RenduEcs\RdFixtures\Helper\obj\Debug\netstandard2.0\Rd.Helper.pdb

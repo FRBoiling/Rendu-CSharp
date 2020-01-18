@@ -1,10 +1,10 @@
+D:\GitHub\RenduEcs\RdServer\Bin\net461\Server.App.exe.config
+D:\GitHub\RenduEcs\RdServer\Bin\net461\Server.App.exe
+D:\GitHub\RenduEcs\RdServer\Bin\net461\Server.App.pdb
 D:\GitHub\RenduEcs\RdServer\App\obj\Debug\net461\Server.App.csprojAssemblyReference.cache
 D:\GitHub\RenduEcs\RdServer\App\obj\Debug\net461\Server.App.exe.config
 D:\GitHub\RenduEcs\RdServer\App\obj\Debug\net461\Server.App.AssemblyInfoInputs.cache
 D:\GitHub\RenduEcs\RdServer\App\obj\Debug\net461\Server.App.AssemblyInfo.cs
-D:\GitHub\RenduEcs\RdServer\Bin\net461\Server.App.exe.config
-D:\GitHub\RenduEcs\RdServer\Bin\net461\Server.App.exe
-D:\GitHub\RenduEcs\RdServer\Bin\net461\Server.App.pdb
 D:\GitHub\RenduEcs\RdServer\App\obj\Debug\net461\Server.App.csproj.CopyComplete
 D:\GitHub\RenduEcs\RdServer\App\obj\Debug\net461\Server.App.exe
 D:\GitHub\RenduEcs\RdServer\App\obj\Debug\net461\Server.App.pdb

@@ -31,7 +31,10 @@ namespace Rd.Utils
             var publicMemberInfoList = new List<PublicMemberInfo>();
             foreach (var field in fields)
             {
-                publicMemberInfoList.Add(new PublicMemberInfo(field));
+                if (field.IsPublic)
+                {
+                    publicMemberInfoList.Add(new PublicMemberInfo(field));
+                }
             }
             foreach (var property in properties)
             {
