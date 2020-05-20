@@ -1,0 +1,13 @@
+D:\GitHub\RenduEcs\Addons\ProtobufCodeGeneration\Rendu.ProtobufCodeGeneration.Plugins\bin\Debug\netstandard2.0\Rendu.ProtobufCodeGeneration.Plugins.deps.json
+D:\GitHub\RenduEcs\Addons\ProtobufCodeGeneration\Rendu.ProtobufCodeGeneration.Plugins\bin\Debug\netstandard2.0\Rendu.ProtobufCodeGeneration.Plugins.dll
+D:\GitHub\RenduEcs\Addons\ProtobufCodeGeneration\Rendu.ProtobufCodeGeneration.Plugins\bin\Debug\netstandard2.0\Rendu.ProtobufCodeGeneration.Plugins.pdb
+D:\GitHub\RenduEcs\Addons\ProtobufCodeGeneration\Rendu.ProtobufCodeGeneration.Plugins\bin\Debug\netstandard2.0\Rd.Logging.dll
+D:\GitHub\RenduEcs\Addons\ProtobufCodeGeneration\Rendu.ProtobufCodeGeneration.Plugins\bin\Debug\netstandard2.0\Rd.Utils.dll
+D:\GitHub\RenduEcs\Addons\ProtobufCodeGeneration\Rendu.ProtobufCodeGeneration.Plugins\bin\Debug\netstandard2.0\Rd.Utils.pdb
+D:\GitHub\RenduEcs\Addons\ProtobufCodeGeneration\Rendu.ProtobufCodeGeneration.Plugins\bin\Debug\netstandard2.0\Rd.Logging.pdb
+D:\GitHub\RenduEcs\Addons\ProtobufCodeGeneration\Rendu.ProtobufCodeGeneration.Plugins\obj\Debug\netstandard2.0\Rendu.ProtobufCodeGeneration.Plugins.AssemblyInfoInputs.cache
+D:\GitHub\RenduEcs\Addons\ProtobufCodeGeneration\Rendu.ProtobufCodeGeneration.Plugins\obj\Debug\netstandard2.0\Rendu.ProtobufCodeGeneration.Plugins.AssemblyInfo.cs
+D:\GitHub\RenduEcs\Addons\ProtobufCodeGeneration\Rendu.ProtobufCodeGeneration.Plugins\obj\Debug\netstandard2.0\Rendu.ProtobufCodeGeneration.Plugins.csproj.CopyComplete
+D:\GitHub\RenduEcs\Addons\ProtobufCodeGeneration\Rendu.ProtobufCodeGeneration.Plugins\obj\Debug\netstandard2.0\Rendu.ProtobufCodeGeneration.Plugins.dll
+D:\GitHub\RenduEcs\Addons\ProtobufCodeGeneration\Rendu.ProtobufCodeGeneration.Plugins\obj\Debug\netstandard2.0\Rendu.ProtobufCodeGeneration.Plugins.pdb
+D:\GitHub\RenduEcs\Addons\ProtobufCodeGeneration\Rendu.ProtobufCodeGeneration.Plugins\obj\Debug\netstandard2.0\Rendu.ProtobufCodeGeneration.Plugins.csprojAssemblyReference.cache

@@ -1,8 +1,14 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using Rd.Logging;
+using Rd.Utils;
+using Rendu.ProtobufCodeGeneration.Plugins;
 using System;
 using System.ComponentModel.Design;
 using System.Globalization;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Windows.Threading;
 using Task = System.Threading.Tasks.Task;
 
 namespace RDVSIX
@@ -12,6 +18,7 @@ namespace RDVSIX
     /// </summary>
     internal sealed class ProtocolCodeGenerationCommand
     {
+        private static readonly Logger _logger = fabl.GetLogger(typeof(ProtocolCodeGenerationCommand).FullName);
         /// <summary>
         /// Command ID.
         /// </summary>
@@ -85,18 +92,75 @@ namespace RDVSIX
         /// <param name="e">Event args.</param>
         private void Execute(object sender, EventArgs e)
         {
+            var startTime = DateTime.Now;
+            Dispatcher.CurrentDispatcher.VerifyAccess();
             ThreadHelper.ThrowIfNotOnUIThread();
-            string message = string.Format(CultureInfo.CurrentCulture, "Inside {0}.MenuItemCallback()", this.GetType().FullName);
-            string title = "ProtocolCodeGenerationCommand";
 
-            // Show a message box to prove we were here
-            VsShellUtilities.ShowMessageBox(
-                this.package,
-                message,
-                title,
-                OLEMSGICON.OLEMSGICON_INFO,
-                OLEMSGBUTTON.OLEMSGBUTTON_OK,
-                OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
+            VISXLogger.Inst.Init(package);
+            VISXLogger.Inst.Clear();
+
+            IVsMonitorSelection monitorSelection = (IVsMonitorSelection)Package.GetGlobalService(typeof(SVsShellMonitorSelection));
+            monitorSelection.GetCurrentSelection(out var hierarchyPtr, out var projectItemId, out var mis, out var selectionContainerPtr);
+
+            var hierarchy = Marshal.GetTypedObjectForIUnknown(hierarchyPtr, typeof(IVsHierarchy)) as IVsHierarchy;
+            if (hierarchy == null)
+            {
+                _logger.Error($"hierarchy is null");
+                return;
+            }
+            _logger.Info(@"begin to execute protocol code generator");
+
+            var selectedProject = hierarchy.GetSelectedProject(projectItemId);
+
+            var assemblyName = (string)selectedProject.Properties.Item("AssemblyName").Value;
+            var config = selectedProject.ConfigurationManager.ActiveConfiguration;
+
+            var outPutPath = string.Empty;
+            var selectedProjectDir = string.Empty;
+            if (Path.GetExtension(selectedProject.FullName).Equals(".csproj", StringComparison.OrdinalIgnoreCase))//Path.GetExtension获取扩展名，OrdinalIgnoreCase 使用序号排序规则并忽略被比较字符串的大小写，对字符串进行比较。 
+            {
+                var output = (string)selectedProject.ConfigurationManager.ActiveConfiguration.Properties.Item("OutputPath").Value;
+                selectedProjectDir = Path.GetDirectoryName(selectedProject.FullName);
+                outPutPath = Path.Combine(selectedProjectDir, output);
+            }
+            if (string.IsNullOrEmpty(selectedProjectDir))
+            {
+                _logger.Error($"selectedProjectDir is null or empty");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(outPutPath))
+            {
+                _logger.Error($"outputpath is null or empty");
+                return;
+            }
+
+            _logger.Info($"begin to build project: {selectedProject.FullName}");
+            _logger.Info($"please wait ...");
+
+            try
+            {
+                ////调用外部程序protoc.exe
+                //CmdProcessUtil.RunCmdProcess($@"dotnet.exe", $@"{FolderManager.Inst.CurrentDirectory}\{ConstData.PROTOCOLGENERATOR} {FolderManager.Inst.CodeFilesDir}", FolderManager.Inst.CurrentDirectory);
+
+                FolderManager.Inst.Init(Environment.CurrentDirectory);
+
+                var inputDir = selectedProjectDir;
+                //            var inputDir = @"D:\GitHub\EcsProject\Protocol\Code";
+                if (!FolderManager.Inst.InitWorkFileDir(inputDir))
+                {
+                    throw new Exception($@"generator fail ,check directory {inputDir}");
+                }
+                GeneratorManager.Inst.Run();
+                _logger.Info("generator success!");
+                _logger.Info($"已用时间:{(DateTime.Now - startTime).ToString()}");
+                _logger.Info("========== 已完成 ==========");
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex.Message);
+                //_logger.Error(ex.StackTrace);
+            }
         }
     }
 }

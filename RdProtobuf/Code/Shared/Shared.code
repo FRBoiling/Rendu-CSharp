@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package protocol.message;
+
+option csharp_namespace = "Server.Message";
+
+import "Model.proto";
+
+message MSG_Server_Register_Request 0xf00001
+{
+	 Server_Tag Tag =1;
+}
+
+message MSG_Server_Register_Response 0xf00002
+{
+	 int32 Result =1;
+	 Server_Tag Tag =2;
+}
+
+message MSG_Server_Connect_Command 0xf00003
+{
+	 Server_Tag Tag = 1;
+	 Connect_Info Info= 2;
+	 int32 ConnectType = 4;
+}
+
+message MSG_Heartbeat_Ping 0xf00004
+{
+}
+
+message MSG_Heartbeat_Pong 0xf00005
+{
+}

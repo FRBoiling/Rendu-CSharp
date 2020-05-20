@@ -35,7 +35,7 @@ namespace Server
                     object message;
                     try
                     {
-                        object instance = OpcodeTypeComponent.Instance.GetInstance(opcode);
+                        //object instance = OpcodeTypeComponent.Instance.GetInstance(opcode);
                         //var instance ="";
                         message = channel.Service.Packer.DeserializeFrom(instance, memoryStream);
 

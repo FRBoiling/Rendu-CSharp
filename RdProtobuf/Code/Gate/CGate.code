@@ -1,0 +1,13 @@
+message Server1
+{
+	 int32 ServerType= 1;  
+	 int32 AreaId = 2;
+	 int32 SubId = 3;
+}
+
+message Server2
+{
+	 int32 ServerType= 1;  
+	 int32 AreaId = 2;
+	 int32 SubId = 3;
+}

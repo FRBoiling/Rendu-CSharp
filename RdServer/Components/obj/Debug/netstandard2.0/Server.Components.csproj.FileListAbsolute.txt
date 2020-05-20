@@ -1,9 +1,0 @@
-D:\GitHub\RenduEcs\RdServer\Bin\netstandard2.0\Server.Components.deps.json
-D:\GitHub\RenduEcs\RdServer\Bin\netstandard2.0\Server.Components.dll
-D:\GitHub\RenduEcs\RdServer\Bin\netstandard2.0\Server.Components.pdb
-D:\GitHub\RenduEcs\RdServer\Components\obj\Debug\netstandard2.0\Server.Components.csprojAssemblyReference.cache
-D:\GitHub\RenduEcs\RdServer\Components\obj\Debug\netstandard2.0\Server.Components.AssemblyInfoInputs.cache
-D:\GitHub\RenduEcs\RdServer\Components\obj\Debug\netstandard2.0\Server.Components.AssemblyInfo.cs
-D:\GitHub\RenduEcs\RdServer\Components\obj\Debug\netstandard2.0\Server.Components.csproj.CopyComplete
-D:\GitHub\RenduEcs\RdServer\Components\obj\Debug\netstandard2.0\Server.Components.dll
-D:\GitHub\RenduEcs\RdServer\Components\obj\Debug\netstandard2.0\Server.Components.pdb

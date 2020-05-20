@@ -2253,6 +2253,19 @@
         "runtime": {
           "bin/placeholder/Rd.Utils.dll": {}
         }
+      },
+      "Rendu.ProtobufCodeGeneration.Plugins/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rd.Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rendu.ProtobufCodeGeneration.Plugins.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rendu.ProtobufCodeGeneration.Plugins.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.6.1/win": {
@@ -4486,6 +4499,19 @@
         },
         "runtime": {
           "bin/placeholder/Rd.Utils.dll": {}
+        }
+      },
+      "Rendu.ProtobufCodeGeneration.Plugins/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rd.Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rendu.ProtobufCodeGeneration.Plugins.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rendu.ProtobufCodeGeneration.Plugins.dll": {}
         }
       }
     },
@@ -6721,6 +6747,19 @@
         "runtime": {
           "bin/placeholder/Rd.Utils.dll": {}
         }
+      },
+      "Rendu.ProtobufCodeGeneration.Plugins/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rd.Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rendu.ProtobufCodeGeneration.Plugins.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rendu.ProtobufCodeGeneration.Plugins.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.6.1/win-x86": {
@@ -8954,6 +8993,19 @@
         },
         "runtime": {
           "bin/placeholder/Rd.Utils.dll": {}
+        }
+      },
+      "Rendu.ProtobufCodeGeneration.Plugins/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rd.Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rendu.ProtobufCodeGeneration.Plugins.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rendu.ProtobufCodeGeneration.Plugins.dll": {}
         }
       }
     }
@@ -11347,6 +11399,11 @@
       "type": "project",
       "path": "../../../RdFixtures/Utils/Rd.Utils.csproj",
       "msbuildProject": "../../../RdFixtures/Utils/Rd.Utils.csproj"
+    },
+    "Rendu.ProtobufCodeGeneration.Plugins/1.0.0": {
+      "type": "project",
+      "path": "../../ProtobufCodeGeneration/Rendu.ProtobufCodeGeneration.Plugins/Rendu.ProtobufCodeGeneration.Plugins.csproj",
+      "msbuildProject": "../../ProtobufCodeGeneration/Rendu.ProtobufCodeGeneration.Plugins/Rendu.ProtobufCodeGeneration.Plugins.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11365,6 +11422,7 @@
       "Rd.Plugins >= 1.0.0",
       "Rd.Serialization >= 1.0.0",
       "Rd.Utils >= 1.0.0",
+      "Rendu.ProtobufCodeGeneration.Plugins >= 1.0.0",
       "System.CodeDom >= 4.6.0"
     ]
   },
@@ -11395,6 +11453,9 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
+            "D:\\GitHub\\RenduEcs\\Addons\\ProtobufCodeGeneration\\Rendu.ProtobufCodeGeneration.Plugins\\Rendu.ProtobufCodeGeneration.Plugins.csproj": {
+              "projectPath": "D:\\GitHub\\RenduEcs\\Addons\\ProtobufCodeGeneration\\Rendu.ProtobufCodeGeneration.Plugins\\Rendu.ProtobufCodeGeneration.Plugins.csproj"
+            },
             "D:\\GitHub\\RenduEcs\\RdFixtures\\Analytics\\Rd.Analytics.csproj": {
               "projectPath": "D:\\GitHub\\RenduEcs\\RdFixtures\\Analytics\\Rd.Analytics.csproj"
             },

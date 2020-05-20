@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package protocol.message;
+
+option csharp_namespace = "Client.Message";
+
+message Server_Tag
+{
+	 int32 ServerType= 1;  
+	 int32 AreaId = 2;
+	 int32 SubId = 3;
+}
+
+message Connect_Info
+{
+	 string Ip = 2;
+     int32 Port = 1;
+}
